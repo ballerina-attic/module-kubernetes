@@ -2,7 +2,7 @@ import ballerina/http;
 import ballerina/io;
 
 public type KubernetesConnector object {
-    public string clusterIp;
+    public string masterURL;
     public string namespace;
     public http:Client client;
     public function getNodes();
@@ -28,7 +28,7 @@ function KubernetesConnector::getNodes() {
 
 function KubernetesConnector::getEndpoints() {
     endpoint http:Client httpClient = self.client;
-    string requestPath = "/namespaces/" + self.namespace +"/endpoints/";
+    string requestPath = "/namespaces/" + self.namespace + "/endpoints/";
 
     var response = httpClient->get(requestPath);
     match response {

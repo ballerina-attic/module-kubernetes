@@ -1,12 +1,29 @@
 import ballerina/http;
 import ballerina/config;
 
-public type KubernetesConnectorConfiguration record {
-    string clusterIp;
-    string namespace;
+public type BasicAuthConfig record {
     string username;
     string password;
+    !...
+};
+
+public type OAuthConfig record {
     string accessToken;
+    !...
+};
+
+public type MutualSSLConfig record {
+    string keystorePath;
+    string keystorePassword;
+    !...
+};
+
+public type KubernetesConnectorConfiguration record {
+    string masterURL;
+    string namespace;
+    BasicAuthConfig basicAuthConfig;
+    OAuthConfig oauthConfig;
+    MutualSSLConfig sslConfig;
     string trustStorePath;
     string trustStorePassword;
     http:ClientEndpointConfig clientConfig;
@@ -21,9 +38,9 @@ public type Client object {
 };
 
 function Client::init(KubernetesConnectorConfiguration config) {
-    self.k8sconnector.clusterIp = config.clusterIp;
+    self.k8sconnector.masterURL = config.masterURL;
 
-    config.clientConfig.url = "https://" + config.clusterIp + "/api/v1/";
+    config.clientConfig.url = config.masterURL + "/api/v1/";
 
     if (config.namespace.length() <= 0) {
         config.namespace = "default";
@@ -40,19 +57,62 @@ function Client::init(KubernetesConnectorConfiguration config) {
         };
     }
     http:AuthConfig authConfig = {};
-    if (config.accessToken.length() > 0){
-        authConfig = {
-            scheme: http:OAUTH2,
-            accessToken: config.accessToken
-        };
-    } else {
+    //match (config.authConfig){
+    //    BasicAuthConfig authconfig => {
+    //        authConfig =
+    //        {
+    //            scheme: http:BASIC_AUTH,
+    //            username: authConfig.username,
+    //            password: authConfig.password
+    //        };
+    //    }
+    //    OAuthConfig authconfig => {
+    //        authConfig = {
+    //            scheme: http:OAUTH2,
+    //            accessToken: authConfig.accessToken
+    //        };
+    //
+    //    }
+    //    MutualSSLConfig authconfig => {
+    //        config.clientConfig.secureSocket = {
+    //            keyStore: {
+    //                path: <string> authConfig.keystorePath,
+    //                password: <string>authConfig.keystorePassword
+    //            }
+    //        };
+    //    }
+    //}
+    if (config.basicAuthConfig.username.length() > 0){
         authConfig =
         {
             scheme: http:BASIC_AUTH,
-            username: config.username,
-            password: config.password
+            username: config.basicAuthConfig.username,
+            password: config.basicAuthConfig.password
         };
+    } else if (config.oauthConfig.accessToken.length() > 0){
+        authConfig = {
+            scheme: http:OAUTH2,
+            accessToken: config.oauthConfig.accessToken
+        };
+    } else {
+        config.clientConfig.secureSocket = {
+            trustStore: {
+                path: config.trustStorePath,
+                password: config.trustStorePassword
+            },
+            keyStore: {
+                path: config.sslConfig.keystorePath,
+                password: config.sslConfig.keystorePassword
+            },
+            protocol: { name: "TLS" },
+            ciphers: ["TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA"]
+        };
+        //config.clientConfig.secureSocket.keyStore = {
+        //    path: authConfig.keystorePath,
+        //    password: authConfig.keystorePassword
+        //};
     }
+
     config.clientConfig.auth = authConfig;
     self.k8sconnector.client.init(config.clientConfig);
 }
