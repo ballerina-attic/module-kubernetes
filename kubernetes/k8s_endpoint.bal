@@ -22,10 +22,15 @@ public type Client object {
 
 function Client::init(KubernetesConnectorConfiguration config) {
     self.k8sconnector.clusterIp = config.clusterIp;
-    if (config.namespace.length() < 0){
+
+    config.clientConfig.url = "https://" + config.clusterIp + "/api/v1/";
+
+    if (config.namespace.length() <= 0) {
         config.namespace = "default";
     }
-    config.clientConfig.url = "https://" + config.clusterIp + "/api/v1/namespaces/" + config.namespace;
+
+    self.k8sconnector.namespace = config.namespace;
+
     if (config.trustStorePassword.length() > 0 && config.trustStorePath.length() > 0){
         config.clientConfig.secureSocket = {
             trustStore: {

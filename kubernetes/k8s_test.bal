@@ -1,10 +1,11 @@
 import ballerina/test;
 
 endpoint Client k8sClient {
-    clusterIp: "35.188.69.248",
-    username: "admin",
-    password: "Y32PV6umuJFfE4E5",
-    trustStorePath: "truststore/keystore.p12",
+    clusterIp: config:getAsString("cluster_ip"),
+    username: config:getAsString("username"),
+    password: config:getAsString("password"),
+    namespace: "default",
+    trustStorePath: "kubernetes/truststore/keystore.p12",
     trustStorePassword: "ballerina"
 };
 
