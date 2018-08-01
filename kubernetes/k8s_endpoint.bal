@@ -40,7 +40,7 @@ public type Client object {
 function Client::init(KubernetesConnectorConfiguration config) {
     self.k8sconnector.masterURL = config.masterURL;
 
-    config.clientConfig.url = config.masterURL + "/api/v1/";
+    config.clientConfig.url = config.masterURL;
 
     if (config.namespace.length() <= 0) {
         config.namespace = "default";
