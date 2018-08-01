@@ -27,70 +27,29 @@ endpoint kubernetes:Client k8sEndpoint {
 };
 
 function main(string... args) {
-    //var details = k8sEndpoint->getNodes();
-    //io:println(details);
+    //create Deployment object
+    kubernetes:Deployment deployment = new;
 
-    var endpoints = k8sEndpoint->getEndpoints();
-    io:println(endpoints);
-
-    kubernetes:DeploymentConfiguration deploymentConfiguration = {
-        apiVersion: "extensions/v1beta1",
-        name: "hello-world-k8s-deployment"
-
+    deployment.metadata = {
+        name: "nginx-deployment",
+        labels: { "app": "nginx" }
     };
-
-    json deployment = {
-        "apiVersion": "extensions/v1beta1",
-        "kind": "Deployment",
-        "metadata": {
-            "annotations": {},
-            "finalizers": [],
-            "labels": {
-                "app": "hello_world_k8s"
-            },
-            "name": "hello-world-k8s-deployment",
-            "ownerReferences": []
-        },
-        "spec": {
-            "replicas": 1,
-            "template": {
-                "metadata": {
-                    "annotations": {},
-                    "finalizers": [],
-                    "labels": {
-                        "app": "hello_world_k8s"
-                    },
-                    "ownerReferences": []
-                },
-                "spec": {
-                    "containers": [
-                        {
-                            "args": [],
-                            "command": [],
-                            "env": [],
-                            "envFrom": [],
-                            "image": "hello_world_k8s_config:latest",
-                            "imagePullPolicy": "IfNotPresent",
-                            "name": "hello-world-k8s-deployment",
-                            "ports": [
-                                {
-                                    "containerPort": 9090,
-                                    "protocol": "TCP"
-                                }
-                            ],
-                            "volumeMounts": []
-                        }
-                    ],
-                    "hostAliases": [],
-                    "imagePullSecrets": [],
-                    "initContainers": [],
-                    "nodeSelector": {},
-                    "tolerations": [],
-                    "volumes": []
-                }
-            }
-        }
+    kubernetes:Container nginxContainer = {
+        name: "nginx",
+        image: "nginx:1.7.9",
+        ports: [{
+            name: "http-frontend", containerPort: 80, protocol: "TCP"
+        }]
     };
-    var response = k8sEndpoint->createDeployment(deployment);
+    deployment.addContainer(nginxContainer);
+    deployment.setReplicaCount(3);
+    deployment.addMatchLabels("app", "nginx");
+
+    //Add deployment object to holder
+    kubernetes:K8SHolder holder = new;
+    holder.addDeployment(deployment);
+
+    //Deploy k8s holder
+    var response = k8sEndpoint->apply(holder);
     io:println(response);
 }

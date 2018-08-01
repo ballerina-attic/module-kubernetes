@@ -8,8 +8,8 @@ public type KubernetesConnector object {
     public function getNodes();
     public function getEndpoints();
     public function createDeployment(json deployment);
+    public function apply(K8SHolder holder);
 };
-
 
 public type DeploymentConfiguration record {
     string apiVersion;
@@ -77,5 +77,11 @@ function KubernetesConnector::createDeployment(json deployment) {
             }
         }
         error err => io:println(err);
+    }
+}
+
+function KubernetesConnector::apply(K8SHolder holder) {
+    foreach deplyoment in holder.deployments  {
+        self.createDeployment(deplyoment.toJSON());
     }
 }
