@@ -14,16 +14,29 @@ public type Deployment object {
     public ObjectMeta metadata;
     public DeploymentSpec spec;
 
-    public function addContainer(Container container) {
+    public function build() returns (Deployment) {
+        //TODO: Do validation here.
+        return self;
+    }
+
+    public function addContainer(Container container) returns (Deployment) {
         self.spec.containers[lengthof spec.containers] = container;
+        return self;
     }
 
-    public function setReplicaCount(int count) {
+    public function setReplicaCount(int count) returns (Deployment) {
         self.spec.replicas = count;
+        return self;
     }
 
-    public function addMatchLabels(string key, string value) {
+    public function setMetaData(ObjectMeta pmetadata) returns (Deployment) {
+        self.metadata = pmetadata;
+        return self;
+    }
+
+    public function addMatchLabels(string key, string value) returns (Deployment) {
         self.spec.selector[key] = value;
+        return self;
     }
 
     public function toJSON() returns (json) {
@@ -34,14 +47,14 @@ public type Deployment object {
             "spec": {
                 "replicas": self.spec.replicas,
                 "selector": {
-                    "matchLabels": check <json> self.spec.selector
+                    "matchLabels": check <json>self.spec.selector
                 },
                 "template": {
                     "metadata": {
-                        "labels":check <json> self.metadata.labels
+                        "labels": check <json>self.metadata.labels
                     },
                     "spec": {
-                        "containers":check <json> self.spec.containers
+                        "containers": check <json>self.spec.containers
                     }
                 }
             }

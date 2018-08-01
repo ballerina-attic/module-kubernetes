@@ -29,21 +29,16 @@ endpoint kubernetes:Client k8sEndpoint {
 function main(string... args) {
     //create Deployment object
     kubernetes:Deployment deployment = new;
-
-    deployment.metadata = {
-        name: "nginx-deployment",
-        labels: { "app": "nginx" }
-    };
-    kubernetes:Container nginxContainer = {
-        name: "nginx",
-        image: "nginx:1.7.9",
-        ports: [{
-            name: "http-frontend", containerPort: 80, protocol: "TCP"
-        }]
-    };
-    deployment.addContainer(nginxContainer);
-    deployment.setReplicaCount(3);
-    deployment.addMatchLabels("app", "nginx");
+    deployment = deployment.setMetaData({
+            name: "nginx-deployment",
+            labels: { "app": "nginx" }
+        }).addContainer({
+            name: "nginx",
+            image: "nginx:1.7.9",
+            ports: [{
+                name: "http-frontend", containerPort: 80, protocol: "TCP"
+            }]
+        }).setReplicaCount(3).addMatchLabels("app", "nginx");
 
     //Add deployment object to holder
     kubernetes:K8SHolder holder = new;
