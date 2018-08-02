@@ -8,25 +8,9 @@ public type KubernetesConnector object {
     public function getNodes();
     public function getEndpoints();
     public function createDeployment(json deployment);
+    public function createService(json serviceJSON);
     public function apply(K8SHolder holder);
 };
-
-public type DeploymentConfiguration record {
-    string apiVersion;
-    string name;
-    map labels;
-    int replicas;
-    boolean enableLiveness;
-    int livenessPort;
-    int initialDelaySeconds;
-    int periodSeconds;
-    string imagePullPolicy;
-    string image;
-    map env;
-    string[] imagePullSecrets;
-
-};
-
 
 function KubernetesConnector::getNodes() {
     endpoint http:Client httpClient = self.client;
@@ -80,8 +64,29 @@ function KubernetesConnector::createDeployment(json deployment) {
     }
 }
 
+function KubernetesConnector::createService(json serviceJSON) {
+    endpoint http:Client httpClient = self.client;
+    string requestPath = "/api/" + serviceJSON.apiVersion.toString() + "/namespaces/" + self.namespace + "/services/";
+
+    var response = httpClient->post(requestPath, serviceJSON);
+    match response {
+        http:Response httpResponse => {
+            var jsonPayload = httpResponse.getJsonPayload();
+            match jsonPayload {
+                json payload => io:println(payload);
+                error err => io:println(err);
+            }
+        }
+        error err => io:println(err);
+    }
+}
+
 function KubernetesConnector::apply(K8SHolder holder) {
     foreach deplyoment in holder.deployments  {
         self.createDeployment(deplyoment.toJSON());
+    }
+
+    foreach serviceDef in holder.services  {
+        self.createService(serviceDef.toJSON());
     }
 }

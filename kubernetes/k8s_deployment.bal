@@ -1,13 +1,3 @@
-import ballerina/time;
-
-public type K8SHolder object {
-    Deployment[] deployments;
-
-    public function addDeployment(Deployment deployment) {
-        self.deployments[lengthof deployments] = deployment;
-    }
-};
-
 public type Deployment object {
     public string apiVersion = "apps/v1";
     private string kind = "Deployment";
@@ -65,6 +55,9 @@ public type Deployment object {
 
 public type ObjectMeta record {
     map labels;
+    map annotations;
+    string[] finalizers;
+    string[] ownerReferences;
     string name;
     string namespace = "default";
 };
@@ -75,7 +68,7 @@ public type DeploymentSpec record {
     Container[] containers;
 };
 
-public type Port record{
+public type ContainerPort record{
     string name;
     int containerPort;
     string protocol;
@@ -85,7 +78,8 @@ public type Port record{
 public type Container record {
     string image;
     string name;
-    Port[] ports;
+    ContainerPort[] ports;
 };
+
 
 
