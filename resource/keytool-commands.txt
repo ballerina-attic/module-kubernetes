@@ -1,0 +1,8 @@
+# Import trust cert into truststore
+keytool -import -alias cluster-k8 -file cert.crt -keystore cluster-trustore.jks
+
+# Convert JKS to P12 keystore
+keytool -importkeystore -srckeystore cluster-trustore.jks   -srcstoretype JKS -deststoretype PKCS12 -destkeystore keystore.p12
+
+# Create a keystore using private key and public cert
+openssl pkcs12 -export -in client.crt -inkey client.key -certfile client.crt -out testkeystore.p12

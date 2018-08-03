@@ -2,28 +2,15 @@ import ballerina/io;
 import ballerina/config;
 import wso2/kubernetes;
 
-//endpoint kubernetes:Client k8sEndpoint {
-//    masterURL: config:getAsString("masterURL"),
-//    basicAuthConfig: { username: config:getAsString("username"), password: config:getAsString("password") },
-//    namespace: "default",
-//    trustStorePath: "kubernetes/truststore/keystore.p12",
-//    trustStorePassword: "ballerina"
-//};
-
-
 endpoint kubernetes:Client k8sEndpoint {
-    masterURL: config:getAsString("masterURL"),
-    //basicAuthConfig: {
-    //    username: config:getAsString("username"),
-    //    password: config:getAsString("password")
-    //},
-    sslConfig: {
-        keystorePassword: "ballerina",
-        keystorePath: "/Users/anuruddha/workspace/ballerinax/package-kubernetes/resource/testkeystore.p12"
+    masterURL: config:getAsString("gke.masterURL"),
+    basicAuthConfig: {
+        username: config:getAsString("gke.username"),
+        password: config:getAsString("gke.password")
     },
     namespace: "default",
-    trustStorePath: "/Users/anuruddha/workspace/ballerinax/package-kubernetes/resource/keystore.p12",
-    trustStorePassword: "ballerina"
+    trustStorePath: config:getAsString("trustStorePath"),
+    trustStorePassword: config:getAsString("trustStorePassword")
 };
 
 function main(string... args) {
@@ -41,7 +28,7 @@ function main(string... args) {
                 name: "http-frontend", containerPort: 80, protocol: "TCP"
             }]
         })
-    .setReplicaCount(3)
+    .setReplicaCount(2)
     .addMatchLabels("app", "nginx");
     io:println(deployment.toJSON());
 
