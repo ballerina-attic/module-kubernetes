@@ -1,18 +1,14 @@
 import ballerina/test;
 
 endpoint Client k8sClient {
-    masterURL: config:getAsString("masterURL"),
-    //basicAuthConfig: {
-    //    username: config:getAsString("username"),
-    //    password: config:getAsString("password")
-    //},
+    masterURL: config:getAsString("minikube.masterURL"),
     sslConfig: {
-        keystorePassword: "ballerina",
-        keystorePath: "/Users/anuruddha/workspace/ballerinax/package-kubernetes/resource/testkeystore.p12"
+        keystorePath: config:getAsString("minikube.sslkeyStorePath"),
+        keystorePassword: config:getAsString("minikube.sslkeyStorePassword")
     },
     namespace: "default",
-    trustStorePath: "/Users/anuruddha/workspace/ballerinax/package-kubernetes/resource/keystore.p12",
-    trustStorePassword: "ballerina"
+    trustStorePath: config:getAsString("trustStorePath"),
+    trustStorePassword: config:getAsString("trustStorePassword")
 };
 
 @test:Config
