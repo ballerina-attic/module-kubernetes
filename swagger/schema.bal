@@ -1,6 +1,6 @@
 import ballerina/time;
 
-public type io_k8s_apimachinery_pkg_api_resource_Quantity record{};
+public type io_k8s_apimachinery_pkg_api_resource_Quantity object {};
 
 public type io_k8s_api_autoscaling_v2beta1_ResourceMetricSource record {
     string name,
@@ -484,8 +484,8 @@ public type io_k8s_api_rbac_v1beta1_ClusterRoleBindingList record {
     io_k8s_apimachinery_pkg_apis_meta_v1_ListMeta metadata,
 };
 
-public type io_k8s_apimachinery_pkg_apis_meta_v1_Initializer record {
-    string name,
+public type io_k8s_apimachinery_pkg_apis_meta_v1_Initializer object {
+    string name;
 };
 
 public type io_k8s_api_extensions_v1beta1_DeploymentCondition record {
@@ -800,23 +800,23 @@ public type io_k8s_api_core_v1_ContainerStateTerminated record {
     time:Time startedAt,
 };
 
-public type io_k8s_apimachinery_pkg_apis_meta_v1_ObjectMeta record {
-    any annotations,
-    string clusterName,
-    time:Time creationTimestamp,
-    int deletionGracePeriodSeconds,
-    time:Time deletionTimestamp,
-    string[] finalizers,
-    string generateName,
-    int generation,
-    io_k8s_apimachinery_pkg_apis_meta_v1_Initializers initializers,
-    any labels,
-    string name,
-    string namespace,
-    io_k8s_apimachinery_pkg_apis_meta_v1_OwnerReference[] ownerReferences,
-    string resourceVersion,
-    string selfLink,
-    string uid,
+public type io_k8s_apimachinery_pkg_apis_meta_v1_ObjectMeta object {
+    map annotations;
+    string clusterName;
+    time:Time? creationTimestamp;
+    int deletionGracePeriodSeconds;
+    time:Time? deletionTimestamp;
+    string[] finalizers;
+    string generateName;
+    int generation;
+    io_k8s_apimachinery_pkg_apis_meta_v1_Initializers initializers;
+    map labels;
+    string name;
+    string namespace;
+    io_k8s_apimachinery_pkg_apis_meta_v1_OwnerReference[] ownerReferences;
+    string resourceVersion;
+    string selfLink;
+    string uid;
 };
 
 public type io_k8s_api_extensions_v1beta1_DaemonSetCondition record {
@@ -1189,12 +1189,12 @@ public type io_k8s_api_core_v1_GlusterfsVolumeSource record {
     boolean readOnly,
 };
 
-public type io_k8s_api_apps_v1_Deployment record {
-    string apiVersion,
-    string kind,
-    io_k8s_apimachinery_pkg_apis_meta_v1_ObjectMeta metadata,
-    io_k8s_api_apps_v1_DeploymentSpec spec,
-    io_k8s_api_apps_v1_DeploymentStatus status,
+public type io_k8s_api_apps_v1_Deployment object {
+    public string apiVersion;
+    public string kind;
+    public io_k8s_apimachinery_pkg_apis_meta_v1_ObjectMeta? metadata;
+    public io_k8s_api_apps_v1_DeploymentSpec? spec;
+    public io_k8s_api_apps_v1_DeploymentStatus? status;
 };
 
 public type io_k8s_api_rbac_v1beta1_Role record {
@@ -1290,7 +1290,7 @@ public type io_k8s_api_core_v1_ResourceQuota record {
     io_k8s_api_core_v1_ResourceQuotaStatus status,
 };
 
-public type io_k8s_apimachinery_pkg_apis_meta_v1_Initializers record {
+public type io_k8s_apimachinery_pkg_apis_meta_v1_Initializers object {
     io_k8s_apimachinery_pkg_apis_meta_v1_Initializer[] pending,
     io_k8s_apimachinery_pkg_apis_meta_v1_Status result,
 };
@@ -1420,15 +1420,15 @@ public type io_k8s_apimachinery_pkg_apis_meta_v1_ServerAddressByClientCIDR recor
     string serverAddress,
 };
 
-public type io_k8s_apimachinery_pkg_apis_meta_v1_Status record {
-    string apiVersion,
-    int code,
-    io_k8s_apimachinery_pkg_apis_meta_v1_StatusDetails details,
-    string kind,
-    string message,
-    io_k8s_apimachinery_pkg_apis_meta_v1_ListMeta metadata,
-    string reason,
-    string status,
+public type io_k8s_apimachinery_pkg_apis_meta_v1_Status object {
+    string apiVersion;
+    int code;
+    io_k8s_apimachinery_pkg_apis_meta_v1_StatusDetails details;
+    string kind;
+    string message;
+    io_k8s_apimachinery_pkg_apis_meta_v1_ListMeta metadata;
+    string reason;
+    string status;
 };
 
 public type io_k8s_api_autoscaling_v2beta1_MetricSpec record {
