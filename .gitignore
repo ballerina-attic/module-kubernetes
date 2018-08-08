@@ -25,7 +25,12 @@ target/
 
 #mac OS
 *.DS_Store
+
+# IDEA Files
 .idea/
+*.iml
+*.ipr
+*.iws
 
 #ballerina
 *.balx

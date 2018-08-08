@@ -49,7 +49,7 @@ public type SpecBuilder object {
     public function end() returns DeploymentBuilder {
         match (parentBuilder) {
             GenericBuilder vv => {
-                return check <DeploymentBuilder> vv;
+                return check <DeploymentBuilder>vv;
             }
             () v => {
                 error e = {};
@@ -84,7 +84,7 @@ public type MetadataBuilder object {
     public function end() returns DeploymentBuilder {
         match (parentBuilder) {
             GenericBuilder vv => {
-                return check <DeploymentBuilder> vv;
+                return check <DeploymentBuilder>vv;
             }
             () v => {
                 error e = {};
@@ -112,18 +112,46 @@ public type GenericObject object {
 };
 
 function main(string...args) {
-    DeploymentBuilder deployment = new;
+    //DeploymentBuilder deployment = new;
+    //
+    //DeploymentBuilder deployment2 = new;
+    //
+    //var v = <io_k8s_api_apps_v1_Deployment> deployment
+    //.withMetaData()
+    //.setName("hello")
+    //.end()
+    //.withSpec()
+    //.setReplicas(1)
+    //.end()
+    //.build();
+    //
+    //io:println(v);
 
-    var v = <io_k8s_api_apps_v1_Deployment> deployment
-    .withMetaData()
-    .setName("hello")
-    .end()
-    .withSpec()
-    .setReplicas(1)
-    .end()
-    .build();
-
-    io:println(v);
+    //DeploymentBuilderAppsV1  de = new;
+    //io_k8s_api_apps_v1_Deployment dep=  check<io_k8s_api_apps_v1_Deployment>de
+    //.withMetadata()
+    //    .addLabel("app","sss")
+    //    .setName("MyDeployment")
+    //.end()
+    //.withSpec()
+    //    .withTemplate()
+    //        .withSpec()
+    //            .withContainer()
+    //                .setImage("abc:1.0")
+    //                .withContainerPort()
+    //                    .setPort(9090)
+    //                    .setName("http")
+    //                .end()
+    //                .withContainerPort()
+    //                    .setPort(9090)
+    //                    .setName("http")
+    //                .end()
+    //            .end()
+    //        .end()
+    //    .end()
+    //.end()
+    //.build();
+    //io:println(<json>dep);
 
     //MetadataBuilder v = deployment.withMetaData();
     //v = v.setName("hello");

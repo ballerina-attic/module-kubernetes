@@ -805,9 +805,9 @@ public type io_k8s_api_core_v1_ContainerStateTerminated object {
 public type io_k8s_apimachinery_pkg_apis_meta_v1_ObjectMeta object {
     public map annotations;
     public string clusterName;
-    public time:Time?? creationTimestamp;
+    public time:Time? creationTimestamp;
     public int deletionGracePeriodSeconds;
-    public time:Time?? deletionTimestamp;
+    public time:Time? deletionTimestamp;
     public string[] finalizers;
     public string generateName;
     public int generation;
