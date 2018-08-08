@@ -127,30 +127,30 @@ function main(string...args) {
     //
     //io:println(v);
 
-    //DeploymentBuilderAppsV1  de = new;
-    //io_k8s_api_apps_v1_Deployment dep=  check<io_k8s_api_apps_v1_Deployment>de
-    //.withMetadata()
-    //    .addLabel("app","sss")
-    //    .setName("MyDeployment")
-    //.end()
-    //.withSpec()
-    //    .withTemplate()
-    //        .withSpec()
-    //            .withContainer()
-    //                .setImage("abc:1.0")
-    //                .withContainerPort()
-    //                    .setPort(9090)
-    //                    .setName("http")
-    //                .end()
-    //                .withContainerPort()
-    //                    .setPort(9090)
-    //                    .setName("http")
-    //                .end()
-    //            .end()
-    //        .end()
-    //    .end()
-    //.end()
-    //.build();
+    DeploymentBuilderAppsV1  de = new;
+    io_k8s_api_apps_v1_Deployment dep=  check<io_k8s_api_apps_v1_Deployment>de
+    .withMetadata()
+        .addLabel("app","sss")
+        .setName("MyDeployment")
+    .end()
+    .withSpec()
+        .withTemplate()
+            .withSpec()
+                .withContainer()
+                    .setImage("abc:1.0")
+                    .withContainerPort()
+                        .setContainerPort(9090)
+                        .setName("http")
+                    .end()
+                    .withContainerPort()
+                        .setContainerPort(9093)
+                        .setName("https")
+                    .end()
+                .end()
+            .end()
+        .end()
+    .end()
+    .build();
     //io:println(<json>dep);
 
     //MetadataBuilder v = deployment.withMetaData();

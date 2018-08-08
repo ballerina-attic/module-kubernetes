@@ -1,8 +1,11 @@
 public type QuantityBuilderApiResource object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_api_resource_Quantity io_k8s_apimachinery_pkg_api_resource_quantity;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_api_resource_quantity = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_api_resource_Quantity) {
         return self.io_k8s_apimachinery_pkg_api_resource_quantity;
@@ -18,12 +21,15 @@ public type QuantityBuilderApiResource object {
 };
 
 public type ResourceMetricSourceBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ResourceMetricSource io_k8s_api_autoscaling_v2beta1_resourcemetricsource;
     public QuantityBuilderApiResource? targetAverageValueBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_resourcemetricsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_ResourceMetricSource) {
         return self.io_k8s_api_autoscaling_v2beta1_resourcemetricsource;
@@ -32,7 +38,8 @@ public type ResourceMetricSourceBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withTargetAverageValue() returns QuantityBuilderApiResource {
-        self.targetAverageValueBuilder = new QuantityBuilderApiResource(self);
+        self.targetAverageValueBuilder = new QuantityBuilderApiResource();
+        self.targetAverageValueBuilder.init(self);
         match (self.targetAverageValueBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -57,7 +64,7 @@ public type ResourceMetricSourceBuilderAutoscalingV2beta1 object {
 };
 
 public type CSIPersistentVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_CSIPersistentVolumeSource io_k8s_api_core_v1_csipersistentvolumesource;
     public SecretReferenceBuilderCoreV1? controllerPublishSecretRefBuilder;
 
@@ -65,8 +72,11 @@ public type CSIPersistentVolumeSourceBuilderCoreV1 object {
 
     public SecretReferenceBuilderCoreV1? nodeStageSecretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_csipersistentvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_CSIPersistentVolumeSource) {
         return self.io_k8s_api_core_v1_csipersistentvolumesource;
@@ -75,7 +85,8 @@ public type CSIPersistentVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withControllerPublishSecretRef() returns SecretReferenceBuilderCoreV1 {
-        self.controllerPublishSecretRefBuilder = new SecretReferenceBuilderCoreV1(self);
+        self.controllerPublishSecretRefBuilder = new SecretReferenceBuilderCoreV1();
+        self.controllerPublishSecretRefBuilder.init(self);
         match (self.controllerPublishSecretRefBuilder) {
             SecretReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -87,7 +98,8 @@ public type CSIPersistentVolumeSourceBuilderCoreV1 object {
         }
     }
     public function withNodePublishSecretRef() returns SecretReferenceBuilderCoreV1 {
-        self.nodePublishSecretRefBuilder = new SecretReferenceBuilderCoreV1(self);
+        self.nodePublishSecretRefBuilder = new SecretReferenceBuilderCoreV1();
+        self.nodePublishSecretRefBuilder.init(self);
         match (self.nodePublishSecretRefBuilder) {
             SecretReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -99,7 +111,8 @@ public type CSIPersistentVolumeSourceBuilderCoreV1 object {
         }
     }
     public function withNodeStageSecretRef() returns SecretReferenceBuilderCoreV1 {
-        self.nodeStageSecretRefBuilder = new SecretReferenceBuilderCoreV1(self);
+        self.nodeStageSecretRefBuilder = new SecretReferenceBuilderCoreV1();
+        self.nodeStageSecretRefBuilder.init(self);
         match (self.nodeStageSecretRefBuilder) {
             SecretReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -138,7 +151,7 @@ public type CSIPersistentVolumeSourceBuilderCoreV1 object {
 };
 
 public type APIServiceBuilderApiregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIService
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservice;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
@@ -147,8 +160,11 @@ public type APIServiceBuilderApiregistrationV1beta1 object {
 
     public APIServiceStatusBuilderApiregistrationV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservice = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIService) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservice;
@@ -157,7 +173,8 @@ public type APIServiceBuilderApiregistrationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -169,7 +186,8 @@ public type APIServiceBuilderApiregistrationV1beta1 object {
         }
     }
     public function withSpec() returns APIServiceSpecBuilderApiregistrationV1beta1 {
-        self.specBuilder = new APIServiceSpecBuilderApiregistrationV1beta1(self);
+        self.specBuilder = new APIServiceSpecBuilderApiregistrationV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             APIServiceSpecBuilderApiregistrationV1beta1 builder => {
                 return builder;
@@ -181,7 +199,8 @@ public type APIServiceBuilderApiregistrationV1beta1 object {
         }
     }
     public function withStatus() returns APIServiceStatusBuilderApiregistrationV1beta1 {
-        self.statusBuilder = new APIServiceStatusBuilderApiregistrationV1beta1(self);
+        self.statusBuilder = new APIServiceStatusBuilderApiregistrationV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             APIServiceStatusBuilderApiregistrationV1beta1 builder => {
                 return builder;
@@ -205,10 +224,13 @@ public type APIServiceBuilderApiregistrationV1beta1 object {
 };
 
 public type PersistentVolumeClaimConditionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeClaimCondition io_k8s_api_core_v1_persistentvolumeclaimcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_persistentvolumeclaimcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PersistentVolumeClaimCondition) {
         return self.io_k8s_api_core_v1_persistentvolumeclaimcondition;
@@ -250,15 +272,18 @@ public type PersistentVolumeClaimConditionBuilderCoreV1 object {
 };
 
 public type CustomResourceSubresourcesBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceSubresources
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcesubresources;
     public CustomResourceSubresourceScaleBuilderApiextensionsV1beta1? scaleBuilder;
 
     public CustomResourceSubresourceStatusBuilderApiextensionsV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcesubresources = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceSubresources) {
@@ -268,7 +293,8 @@ public type CustomResourceSubresourcesBuilderApiextensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withScale() returns CustomResourceSubresourceScaleBuilderApiextensionsV1beta1 {
-        self.scaleBuilder = new CustomResourceSubresourceScaleBuilderApiextensionsV1beta1(self);
+        self.scaleBuilder = new CustomResourceSubresourceScaleBuilderApiextensionsV1beta1();
+        self.scaleBuilder.init(self);
         match (self.scaleBuilder) {
             CustomResourceSubresourceScaleBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -280,7 +306,8 @@ public type CustomResourceSubresourcesBuilderApiextensionsV1beta1 object {
         }
     }
     public function withStatus() returns CustomResourceSubresourceStatusBuilderApiextensionsV1beta1 {
-        self.statusBuilder = new CustomResourceSubresourceStatusBuilderApiextensionsV1beta1(self);
+        self.statusBuilder = new CustomResourceSubresourceStatusBuilderApiextensionsV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             CustomResourceSubresourceStatusBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -294,14 +321,17 @@ public type CustomResourceSubresourcesBuilderApiextensionsV1beta1 object {
 };
 
 public type PodSecurityPolicyListBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_PodSecurityPolicyList io_k8s_api_policy_v1beta1_podsecuritypolicylist;
     public PodSecurityPolicyBuilderPolicyV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_podsecuritypolicylist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_PodSecurityPolicyList) {
         return self.io_k8s_api_policy_v1beta1_podsecuritypolicylist;
@@ -310,7 +340,8 @@ public type PodSecurityPolicyListBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -322,7 +353,8 @@ public type PodSecurityPolicyListBuilderPolicyV1beta1 object {
         }
     }
     public function withItems() returns PodSecurityPolicyBuilderPolicyV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new PodSecurityPolicyBuilderPolicyV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new PodSecurityPolicyBuilderPolicyV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -338,7 +370,7 @@ public type PodSecurityPolicyListBuilderPolicyV1beta1 object {
 };
 
 public type LocalSubjectAccessReviewBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_LocalSubjectAccessReview
     io_k8s_api_authorization_v1beta1_localsubjectaccessreview;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
@@ -347,8 +379,11 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1beta1 object {
 
     public SubjectAccessReviewStatusBuilderAuthorizationV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_localsubjectaccessreview = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_LocalSubjectAccessReview) {
         return self.io_k8s_api_authorization_v1beta1_localsubjectaccessreview;
@@ -357,7 +392,8 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -369,7 +405,8 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1beta1 object {
         }
     }
     public function withSpec() returns SubjectAccessReviewSpecBuilderAuthorizationV1beta1 {
-        self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1beta1(self);
+        self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             SubjectAccessReviewSpecBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -381,7 +418,8 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1beta1 object {
         }
     }
     public function withStatus() returns SubjectAccessReviewStatusBuilderAuthorizationV1beta1 {
-        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1beta1(self);
+        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             SubjectAccessReviewStatusBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -405,7 +443,7 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1beta1 object {
 };
 
 public type VolumeAttachmentBuilderStorageV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_VolumeAttachment io_k8s_api_storage_v1beta1_volumeattachment;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -413,8 +451,11 @@ public type VolumeAttachmentBuilderStorageV1beta1 object {
 
     public VolumeAttachmentStatusBuilderStorageV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_storage_v1beta1_volumeattachment = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_storage_v1beta1_VolumeAttachment) {
         return self.io_k8s_api_storage_v1beta1_volumeattachment;
@@ -423,7 +464,8 @@ public type VolumeAttachmentBuilderStorageV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -435,7 +477,8 @@ public type VolumeAttachmentBuilderStorageV1beta1 object {
         }
     }
     public function withSpec() returns VolumeAttachmentSpecBuilderStorageV1beta1 {
-        self.specBuilder = new VolumeAttachmentSpecBuilderStorageV1beta1(self);
+        self.specBuilder = new VolumeAttachmentSpecBuilderStorageV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             VolumeAttachmentSpecBuilderStorageV1beta1 builder => {
                 return builder;
@@ -447,7 +490,8 @@ public type VolumeAttachmentBuilderStorageV1beta1 object {
         }
     }
     public function withStatus() returns VolumeAttachmentStatusBuilderStorageV1beta1 {
-        self.statusBuilder = new VolumeAttachmentStatusBuilderStorageV1beta1(self);
+        self.statusBuilder = new VolumeAttachmentStatusBuilderStorageV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             VolumeAttachmentStatusBuilderStorageV1beta1 builder => {
                 return builder;
@@ -471,12 +515,15 @@ public type VolumeAttachmentBuilderStorageV1beta1 object {
 };
 
 public type RBDPersistentVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_RBDPersistentVolumeSource io_k8s_api_core_v1_rbdpersistentvolumesource;
     public SecretReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_rbdpersistentvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_RBDPersistentVolumeSource) {
         return self.io_k8s_api_core_v1_rbdpersistentvolumesource;
@@ -485,7 +532,8 @@ public type RBDPersistentVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns SecretReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new SecretReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new SecretReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             SecretReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -539,14 +587,17 @@ public type RBDPersistentVolumeSourceBuilderCoreV1 object {
 };
 
 public type ControllerRevisionListBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_ControllerRevisionList io_k8s_api_apps_v1_controllerrevisionlist;
     public ControllerRevisionBuilderAppsV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_controllerrevisionlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_ControllerRevisionList) {
         return self.io_k8s_api_apps_v1_controllerrevisionlist;
@@ -555,7 +606,8 @@ public type ControllerRevisionListBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -567,7 +619,8 @@ public type ControllerRevisionListBuilderAppsV1 object {
         }
     }
     public function withItems() returns ControllerRevisionBuilderAppsV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -583,7 +636,7 @@ public type ControllerRevisionListBuilderAppsV1 object {
 };
 
 public type DeploymentBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_Deployment io_k8s_api_apps_v1beta2_deployment;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -591,8 +644,11 @@ public type DeploymentBuilderAppsV1beta2 object {
 
     public DeploymentStatusBuilderAppsV1beta2? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_deployment = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_Deployment) {
         return self.io_k8s_api_apps_v1beta2_deployment;
@@ -601,7 +657,8 @@ public type DeploymentBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -613,7 +670,8 @@ public type DeploymentBuilderAppsV1beta2 object {
         }
     }
     public function withSpec() returns DeploymentSpecBuilderAppsV1beta2 {
-        self.specBuilder = new DeploymentSpecBuilderAppsV1beta2(self);
+        self.specBuilder = new DeploymentSpecBuilderAppsV1beta2();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             DeploymentSpecBuilderAppsV1beta2 builder => {
                 return builder;
@@ -625,7 +683,8 @@ public type DeploymentBuilderAppsV1beta2 object {
         }
     }
     public function withStatus() returns DeploymentStatusBuilderAppsV1beta2 {
-        self.statusBuilder = new DeploymentStatusBuilderAppsV1beta2(self);
+        self.statusBuilder = new DeploymentStatusBuilderAppsV1beta2();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             DeploymentStatusBuilderAppsV1beta2 builder => {
                 return builder;
@@ -649,13 +708,16 @@ public type DeploymentBuilderAppsV1beta2 object {
 };
 
 public type APIServiceStatusBuilderApiregistrationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIServiceStatus
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicestatus;
     public APIServiceConditionBuilderApiregistrationV1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIServiceStatus) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicestatus;
@@ -664,13 +726,14 @@ public type APIServiceStatusBuilderApiregistrationV1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns APIServiceConditionBuilderApiregistrationV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new APIServiceConditionBuilderApiregistrationV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new APIServiceConditionBuilderApiregistrationV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 };
 
 public type ExternalMetricStatusBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ExternalMetricStatus io_k8s_api_autoscaling_v2beta1_externalmetricstatus;
     public QuantityBuilderApiResource? currentAverageValueBuilder;
 
@@ -678,8 +741,11 @@ public type ExternalMetricStatusBuilderAutoscalingV2beta1 object {
 
     public LabelSelectorBuilderMetaV1? metricSelectorBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_externalmetricstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_ExternalMetricStatus) {
         return self.io_k8s_api_autoscaling_v2beta1_externalmetricstatus;
@@ -688,7 +754,8 @@ public type ExternalMetricStatusBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withCurrentAverageValue() returns QuantityBuilderApiResource {
-        self.currentAverageValueBuilder = new QuantityBuilderApiResource(self);
+        self.currentAverageValueBuilder = new QuantityBuilderApiResource();
+        self.currentAverageValueBuilder.init(self);
         match (self.currentAverageValueBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -700,7 +767,8 @@ public type ExternalMetricStatusBuilderAutoscalingV2beta1 object {
         }
     }
     public function withCurrentValue() returns QuantityBuilderApiResource {
-        self.currentValueBuilder = new QuantityBuilderApiResource(self);
+        self.currentValueBuilder = new QuantityBuilderApiResource();
+        self.currentValueBuilder.init(self);
         match (self.currentValueBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -712,7 +780,8 @@ public type ExternalMetricStatusBuilderAutoscalingV2beta1 object {
         }
     }
     public function withMetricSelector() returns LabelSelectorBuilderMetaV1 {
-        self.metricSelectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.metricSelectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.metricSelectorBuilder.init(self);
         match (self.metricSelectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -731,10 +800,13 @@ public type ExternalMetricStatusBuilderAutoscalingV2beta1 object {
 };
 
 public type ScaleSpecBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ScaleSpec io_k8s_api_apps_v1beta2_scalespec;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_scalespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_ScaleSpec) {
         return self.io_k8s_api_apps_v1beta2_scalespec;
@@ -750,7 +822,7 @@ public type ScaleSpecBuilderAppsV1beta2 object {
 };
 
 public type ExternalMetricSourceBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ExternalMetricSource io_k8s_api_autoscaling_v2beta1_externalmetricsource;
     public LabelSelectorBuilderMetaV1? metricSelectorBuilder;
 
@@ -758,8 +830,11 @@ public type ExternalMetricSourceBuilderAutoscalingV2beta1 object {
 
     public QuantityBuilderApiResource? targetValueBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_externalmetricsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_ExternalMetricSource) {
         return self.io_k8s_api_autoscaling_v2beta1_externalmetricsource;
@@ -768,7 +843,8 @@ public type ExternalMetricSourceBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withMetricSelector() returns LabelSelectorBuilderMetaV1 {
-        self.metricSelectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.metricSelectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.metricSelectorBuilder.init(self);
         match (self.metricSelectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -780,7 +856,8 @@ public type ExternalMetricSourceBuilderAutoscalingV2beta1 object {
         }
     }
     public function withTargetAverageValue() returns QuantityBuilderApiResource {
-        self.targetAverageValueBuilder = new QuantityBuilderApiResource(self);
+        self.targetAverageValueBuilder = new QuantityBuilderApiResource();
+        self.targetAverageValueBuilder.init(self);
         match (self.targetAverageValueBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -792,7 +869,8 @@ public type ExternalMetricSourceBuilderAutoscalingV2beta1 object {
         }
     }
     public function withTargetValue() returns QuantityBuilderApiResource {
-        self.targetValueBuilder = new QuantityBuilderApiResource(self);
+        self.targetValueBuilder = new QuantityBuilderApiResource();
+        self.targetValueBuilder.init(self);
         match (self.targetValueBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -811,14 +889,17 @@ public type ExternalMetricSourceBuilderAutoscalingV2beta1 object {
 };
 
 public type DeploymentListBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DeploymentList io_k8s_api_apps_v1_deploymentlist;
     public DeploymentBuilderAppsV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_deploymentlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DeploymentList) {
         return self.io_k8s_api_apps_v1_deploymentlist;
@@ -827,7 +908,8 @@ public type DeploymentListBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -839,7 +921,8 @@ public type DeploymentListBuilderAppsV1 object {
         }
     }
     public function withItems() returns DeploymentBuilderAppsV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -855,12 +938,15 @@ public type DeploymentListBuilderAppsV1 object {
 };
 
 public type ReplicaSetStatusBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ReplicaSetStatus io_k8s_api_apps_v1beta2_replicasetstatus;
     public ReplicaSetConditionBuilderAppsV1beta2[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_replicasetstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_ReplicaSetStatus) {
         return self.io_k8s_api_apps_v1beta2_replicasetstatus;
@@ -869,7 +955,8 @@ public type ReplicaSetStatusBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns ReplicaSetConditionBuilderAppsV1beta2 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicaSetConditionBuilderAppsV1beta2(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicaSetConditionBuilderAppsV1beta2();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -900,14 +987,17 @@ public type ReplicaSetStatusBuilderAppsV1beta2 object {
 };
 
 public type ObjectMetricSourceBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ObjectMetricSource io_k8s_api_autoscaling_v2beta1_objectmetricsource;
     public CrossVersionObjectReferenceBuilderAutoscalingV2beta1? targetBuilder;
 
     public QuantityBuilderApiResource? targetValueBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_objectmetricsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_ObjectMetricSource) {
         return self.io_k8s_api_autoscaling_v2beta1_objectmetricsource;
@@ -916,7 +1006,8 @@ public type ObjectMetricSourceBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withTarget() returns CrossVersionObjectReferenceBuilderAutoscalingV2beta1 {
-        self.targetBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV2beta1(self);
+        self.targetBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV2beta1();
+        self.targetBuilder.init(self);
         match (self.targetBuilder) {
             CrossVersionObjectReferenceBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -928,7 +1019,8 @@ public type ObjectMetricSourceBuilderAutoscalingV2beta1 object {
         }
     }
     public function withTargetValue() returns QuantityBuilderApiResource {
-        self.targetValueBuilder = new QuantityBuilderApiResource(self);
+        self.targetValueBuilder = new QuantityBuilderApiResource();
+        self.targetValueBuilder.init(self);
         match (self.targetValueBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -947,12 +1039,15 @@ public type ObjectMetricSourceBuilderAutoscalingV2beta1 object {
 };
 
 public type ResourceMetricStatusBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ResourceMetricStatus io_k8s_api_autoscaling_v2beta1_resourcemetricstatus;
     public QuantityBuilderApiResource? currentAverageValueBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_resourcemetricstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_ResourceMetricStatus) {
         return self.io_k8s_api_autoscaling_v2beta1_resourcemetricstatus;
@@ -961,7 +1056,8 @@ public type ResourceMetricStatusBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withCurrentAverageValue() returns QuantityBuilderApiResource {
-        self.currentAverageValueBuilder = new QuantityBuilderApiResource(self);
+        self.currentAverageValueBuilder = new QuantityBuilderApiResource();
+        self.currentAverageValueBuilder.init(self);
         match (self.currentAverageValueBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -986,10 +1082,13 @@ public type ResourceMetricStatusBuilderAutoscalingV2beta1 object {
 };
 
 public type ReplicaSetConditionBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_ReplicaSetCondition io_k8s_api_apps_v1_replicasetcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_replicasetcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_ReplicaSetCondition) {
         return self.io_k8s_api_apps_v1_replicasetcondition;
@@ -1025,7 +1124,7 @@ public type ReplicaSetConditionBuilderAppsV1 object {
 };
 
 public type DaemonSetBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DaemonSet io_k8s_api_apps_v1_daemonset;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -1033,8 +1132,11 @@ public type DaemonSetBuilderAppsV1 object {
 
     public DaemonSetStatusBuilderAppsV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_daemonset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DaemonSet) {
         return self.io_k8s_api_apps_v1_daemonset;
@@ -1043,7 +1145,8 @@ public type DaemonSetBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -1055,7 +1158,8 @@ public type DaemonSetBuilderAppsV1 object {
         }
     }
     public function withSpec() returns DaemonSetSpecBuilderAppsV1 {
-        self.specBuilder = new DaemonSetSpecBuilderAppsV1(self);
+        self.specBuilder = new DaemonSetSpecBuilderAppsV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             DaemonSetSpecBuilderAppsV1 builder => {
                 return builder;
@@ -1067,7 +1171,8 @@ public type DaemonSetBuilderAppsV1 object {
         }
     }
     public function withStatus() returns DaemonSetStatusBuilderAppsV1 {
-        self.statusBuilder = new DaemonSetStatusBuilderAppsV1(self);
+        self.statusBuilder = new DaemonSetStatusBuilderAppsV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             DaemonSetStatusBuilderAppsV1 builder => {
                 return builder;
@@ -1091,10 +1196,13 @@ public type DaemonSetBuilderAppsV1 object {
 };
 
 public type VolumeDeviceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_VolumeDevice io_k8s_api_core_v1_volumedevice;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_volumedevice = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_VolumeDevice) {
         return self.io_k8s_api_core_v1_volumedevice;
@@ -1115,10 +1223,13 @@ public type VolumeDeviceBuilderCoreV1 object {
 };
 
 public type SubjectBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_Subject io_k8s_api_rbac_v1_subject;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_subject = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_Subject) {
         return self.io_k8s_api_rbac_v1_subject;
@@ -1149,15 +1260,18 @@ public type SubjectBuilderRbacV1 object {
 };
 
 public type APIServiceListBuilderApiregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIServiceList
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicelist;
     public APIServiceBuilderApiregistrationV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIServiceList) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicelist;
@@ -1166,7 +1280,8 @@ public type APIServiceListBuilderApiregistrationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -1178,7 +1293,8 @@ public type APIServiceListBuilderApiregistrationV1beta1 object {
         }
     }
     public function withItems() returns APIServiceBuilderApiregistrationV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new APIServiceBuilderApiregistrationV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new APIServiceBuilderApiregistrationV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -1194,10 +1310,13 @@ public type APIServiceListBuilderApiregistrationV1beta1 object {
 };
 
 public type PatchBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_Patch io_k8s_apimachinery_pkg_apis_meta_v1_patch;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_patch = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_Patch) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_patch;
@@ -1208,15 +1327,18 @@ public type PatchBuilderMetaV1 object {
 };
 
 public type SubjectRulesReviewStatusBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SubjectRulesReviewStatus
     io_k8s_api_authorization_v1beta1_subjectrulesreviewstatus;
     public NonResourceRuleBuilderAuthorizationV1beta1[] nonResourceRulesBuilder;
 
     public ResourceRuleBuilderAuthorizationV1beta1[] resourceRulesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_subjectrulesreviewstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_SubjectRulesReviewStatus) {
         return self.io_k8s_api_authorization_v1beta1_subjectrulesreviewstatus;
@@ -1226,11 +1348,13 @@ public type SubjectRulesReviewStatusBuilderAuthorizationV1beta1 object {
     }
     public function withNonResourceRules() returns NonResourceRuleBuilderAuthorizationV1beta1 {
         self.nonResourceRulesBuilder[lengthof nonResourceRulesBuilder] = new NonResourceRuleBuilderAuthorizationV1beta1(
-                                                                             self);
+        );
+        self.nonResourceRulesBuilder[(lengthof nonResourceRulesBuilder)].init(self);
         return self.nonResourceRulesBuilder[(lengthof nonResourceRulesBuilder) - 1];
     }
     public function withResourceRules() returns ResourceRuleBuilderAuthorizationV1beta1 {
-        self.resourceRulesBuilder[lengthof resourceRulesBuilder] = new ResourceRuleBuilderAuthorizationV1beta1(self);
+        self.resourceRulesBuilder[lengthof resourceRulesBuilder] = new ResourceRuleBuilderAuthorizationV1beta1();
+        self.resourceRulesBuilder[(lengthof resourceRulesBuilder)].init(self);
         return self.resourceRulesBuilder[(lengthof resourceRulesBuilder) - 1];
     }
 
@@ -1247,10 +1371,13 @@ public type SubjectRulesReviewStatusBuilderAuthorizationV1beta1 object {
 };
 
 public type DeploymentConditionBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DeploymentCondition io_k8s_api_apps_v1_deploymentcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_deploymentcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DeploymentCondition) {
         return self.io_k8s_api_apps_v1_deploymentcondition;
@@ -1291,12 +1418,15 @@ public type DeploymentConditionBuilderAppsV1 object {
 };
 
 public type VolumeAttachmentSpecBuilderStorageV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_VolumeAttachmentSpec io_k8s_api_storage_v1beta1_volumeattachmentspec;
     public VolumeAttachmentSourceBuilderStorageV1beta1? sourceBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_storage_v1beta1_volumeattachmentspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_storage_v1beta1_VolumeAttachmentSpec) {
         return self.io_k8s_api_storage_v1beta1_volumeattachmentspec;
@@ -1305,7 +1435,8 @@ public type VolumeAttachmentSpecBuilderStorageV1beta1 object {
         return self.fluentBuilder;
     }
     public function withSource() returns VolumeAttachmentSourceBuilderStorageV1beta1 {
-        self.sourceBuilder = new VolumeAttachmentSourceBuilderStorageV1beta1(self);
+        self.sourceBuilder = new VolumeAttachmentSourceBuilderStorageV1beta1();
+        self.sourceBuilder.init(self);
         match (self.sourceBuilder) {
             VolumeAttachmentSourceBuilderStorageV1beta1 builder => {
                 return builder;
@@ -1329,11 +1460,14 @@ public type VolumeAttachmentSpecBuilderStorageV1beta1 object {
 };
 
 public type SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SelfSubjectRulesReviewSpec
     io_k8s_api_authorization_v1beta1_selfsubjectrulesreviewspec;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_selfsubjectrulesreviewspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_SelfSubjectRulesReviewSpec) {
         return self.io_k8s_api_authorization_v1beta1_selfsubjectrulesreviewspec;
@@ -1349,14 +1483,17 @@ public type SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1 object {
 };
 
 public type ObjectMetricStatusBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ObjectMetricStatus io_k8s_api_autoscaling_v2beta1_objectmetricstatus;
     public QuantityBuilderApiResource? currentValueBuilder;
 
     public CrossVersionObjectReferenceBuilderAutoscalingV2beta1? targetBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_objectmetricstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_ObjectMetricStatus) {
         return self.io_k8s_api_autoscaling_v2beta1_objectmetricstatus;
@@ -1365,7 +1502,8 @@ public type ObjectMetricStatusBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withCurrentValue() returns QuantityBuilderApiResource {
-        self.currentValueBuilder = new QuantityBuilderApiResource(self);
+        self.currentValueBuilder = new QuantityBuilderApiResource();
+        self.currentValueBuilder.init(self);
         match (self.currentValueBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -1377,7 +1515,8 @@ public type ObjectMetricStatusBuilderAutoscalingV2beta1 object {
         }
     }
     public function withTarget() returns CrossVersionObjectReferenceBuilderAutoscalingV2beta1 {
-        self.targetBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV2beta1(self);
+        self.targetBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV2beta1();
+        self.targetBuilder.init(self);
         match (self.targetBuilder) {
             CrossVersionObjectReferenceBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -1396,14 +1535,17 @@ public type ObjectMetricStatusBuilderAutoscalingV2beta1 object {
 };
 
 public type ControllerRevisionListBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ControllerRevisionList io_k8s_api_apps_v1beta2_controllerrevisionlist;
     public ControllerRevisionBuilderAppsV1beta2[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_controllerrevisionlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_ControllerRevisionList) {
         return self.io_k8s_api_apps_v1beta2_controllerrevisionlist;
@@ -1412,7 +1554,8 @@ public type ControllerRevisionListBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -1424,7 +1567,8 @@ public type ControllerRevisionListBuilderAppsV1beta2 object {
         }
     }
     public function withItems() returns ControllerRevisionBuilderAppsV1beta2 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1beta2(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1beta2();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -1440,7 +1584,7 @@ public type ControllerRevisionListBuilderAppsV1beta2 object {
 };
 
 public type ScaleBuilderAutoscalingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_Scale io_k8s_api_autoscaling_v1_scale;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -1448,8 +1592,11 @@ public type ScaleBuilderAutoscalingV1 object {
 
     public ScaleStatusBuilderAutoscalingV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v1_scale = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v1_Scale) {
         return self.io_k8s_api_autoscaling_v1_scale;
@@ -1458,7 +1605,8 @@ public type ScaleBuilderAutoscalingV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -1470,7 +1618,8 @@ public type ScaleBuilderAutoscalingV1 object {
         }
     }
     public function withSpec() returns ScaleSpecBuilderAutoscalingV1 {
-        self.specBuilder = new ScaleSpecBuilderAutoscalingV1(self);
+        self.specBuilder = new ScaleSpecBuilderAutoscalingV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             ScaleSpecBuilderAutoscalingV1 builder => {
                 return builder;
@@ -1482,7 +1631,8 @@ public type ScaleBuilderAutoscalingV1 object {
         }
     }
     public function withStatus() returns ScaleStatusBuilderAutoscalingV1 {
-        self.statusBuilder = new ScaleStatusBuilderAutoscalingV1(self);
+        self.statusBuilder = new ScaleStatusBuilderAutoscalingV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             ScaleStatusBuilderAutoscalingV1 builder => {
                 return builder;
@@ -1506,13 +1656,16 @@ public type ScaleBuilderAutoscalingV1 object {
 };
 
 public type JSONSchemaPropsOrStringArrayBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_JSONSchemaPropsOrStringArray
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_jsonschemapropsorstringarray;
     public JSONSchemaPropsBuilderApiextensionsV1beta1? SchemaBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_jsonschemapropsorstringarray = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_JSONSchemaPropsOrStringArray) {
@@ -1522,7 +1675,8 @@ public type JSONSchemaPropsOrStringArrayBuilderApiextensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withSchema() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
-        self.SchemaBuilder = new JSONSchemaPropsBuilderApiextensionsV1beta1(self);
+        self.SchemaBuilder = new JSONSchemaPropsBuilderApiextensionsV1beta1();
+        self.SchemaBuilder.init(self);
         match (self.SchemaBuilder) {
             JSONSchemaPropsBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -1548,7 +1702,7 @@ public type JSONSchemaPropsOrStringArrayBuilderApiextensionsV1beta1 object {
 };
 
 public type ScaleBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_Scale io_k8s_api_extensions_v1beta1_scale;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -1556,8 +1710,11 @@ public type ScaleBuilderExtensionsV1beta1 object {
 
     public ScaleStatusBuilderExtensionsV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_scale = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_Scale) {
         return self.io_k8s_api_extensions_v1beta1_scale;
@@ -1566,7 +1723,8 @@ public type ScaleBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -1578,7 +1736,8 @@ public type ScaleBuilderExtensionsV1beta1 object {
         }
     }
     public function withSpec() returns ScaleSpecBuilderExtensionsV1beta1 {
-        self.specBuilder = new ScaleSpecBuilderExtensionsV1beta1(self);
+        self.specBuilder = new ScaleSpecBuilderExtensionsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             ScaleSpecBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -1590,7 +1749,8 @@ public type ScaleBuilderExtensionsV1beta1 object {
         }
     }
     public function withStatus() returns ScaleStatusBuilderExtensionsV1beta1 {
-        self.statusBuilder = new ScaleStatusBuilderExtensionsV1beta1(self);
+        self.statusBuilder = new ScaleStatusBuilderExtensionsV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             ScaleStatusBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -1614,10 +1774,13 @@ public type ScaleBuilderExtensionsV1beta1 object {
 };
 
 public type StatefulSetConditionBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_StatefulSetCondition io_k8s_api_apps_v1beta1_statefulsetcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_statefulsetcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_StatefulSetCondition) {
         return self.io_k8s_api_apps_v1beta1_statefulsetcondition;
@@ -1654,14 +1817,17 @@ public type StatefulSetConditionBuilderAppsV1beta1 object {
 };
 
 public type ControllerRevisionBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ControllerRevision io_k8s_api_apps_v1beta2_controllerrevision;
     public RawExtensionBuilderPkgRuntime? dataBuilder;
 
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_controllerrevision = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_ControllerRevision) {
         return self.io_k8s_api_apps_v1beta2_controllerrevision;
@@ -1670,7 +1836,8 @@ public type ControllerRevisionBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withData() returns RawExtensionBuilderPkgRuntime {
-        self.dataBuilder = new RawExtensionBuilderPkgRuntime(self);
+        self.dataBuilder = new RawExtensionBuilderPkgRuntime();
+        self.dataBuilder.init(self);
         match (self.dataBuilder) {
             RawExtensionBuilderPkgRuntime builder => {
                 return builder;
@@ -1682,7 +1849,8 @@ public type ControllerRevisionBuilderAppsV1beta2 object {
         }
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -1711,15 +1879,18 @@ public type ControllerRevisionBuilderAppsV1beta2 object {
 };
 
 public type MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_MutatingWebhookConfiguration
     io_k8s_api_admissionregistration_v1beta1_mutatingwebhookconfiguration;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public WebhookBuilderAdmissionregistrationV1beta1[] webhooksBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_admissionregistration_v1beta1_mutatingwebhookconfiguration = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_admissionregistration_v1beta1_MutatingWebhookConfiguration) {
         return self.io_k8s_api_admissionregistration_v1beta1_mutatingwebhookconfiguration;
@@ -1728,7 +1899,8 @@ public type MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 obje
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -1740,7 +1912,8 @@ public type MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 obje
         }
     }
     public function withWebhooks() returns WebhookBuilderAdmissionregistrationV1beta1 {
-        self.webhooksBuilder[lengthof webhooksBuilder] = new WebhookBuilderAdmissionregistrationV1beta1(self);
+        self.webhooksBuilder[lengthof webhooksBuilder] = new WebhookBuilderAdmissionregistrationV1beta1();
+        self.webhooksBuilder[(lengthof webhooksBuilder)].init(self);
         return self.webhooksBuilder[(lengthof webhooksBuilder) - 1];
     }
 
@@ -1757,14 +1930,17 @@ public type MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 obje
 };
 
 public type RoleListBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_RoleList io_k8s_api_rbac_v1_rolelist;
     public RoleBuilderRbacV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_rolelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_RoleList) {
         return self.io_k8s_api_rbac_v1_rolelist;
@@ -1773,7 +1949,8 @@ public type RoleListBuilderRbacV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -1785,7 +1962,8 @@ public type RoleListBuilderRbacV1 object {
         }
     }
     public function withItems() returns RoleBuilderRbacV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new RoleBuilderRbacV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new RoleBuilderRbacV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -1801,7 +1979,7 @@ public type RoleListBuilderRbacV1 object {
 };
 
 public type ReplicationControllerBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ReplicationController io_k8s_api_core_v1_replicationcontroller;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -1809,8 +1987,11 @@ public type ReplicationControllerBuilderCoreV1 object {
 
     public ReplicationControllerStatusBuilderCoreV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_replicationcontroller = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ReplicationController) {
         return self.io_k8s_api_core_v1_replicationcontroller;
@@ -1819,7 +2000,8 @@ public type ReplicationControllerBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -1831,7 +2013,8 @@ public type ReplicationControllerBuilderCoreV1 object {
         }
     }
     public function withSpec() returns ReplicationControllerSpecBuilderCoreV1 {
-        self.specBuilder = new ReplicationControllerSpecBuilderCoreV1(self);
+        self.specBuilder = new ReplicationControllerSpecBuilderCoreV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             ReplicationControllerSpecBuilderCoreV1 builder => {
                 return builder;
@@ -1843,7 +2026,8 @@ public type ReplicationControllerBuilderCoreV1 object {
         }
     }
     public function withStatus() returns ReplicationControllerStatusBuilderCoreV1 {
-        self.statusBuilder = new ReplicationControllerStatusBuilderCoreV1(self);
+        self.statusBuilder = new ReplicationControllerStatusBuilderCoreV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             ReplicationControllerStatusBuilderCoreV1 builder => {
                 return builder;
@@ -1867,14 +2051,17 @@ public type ReplicationControllerBuilderCoreV1 object {
 };
 
 public type SubjectRulesReviewStatusBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SubjectRulesReviewStatus io_k8s_api_authorization_v1_subjectrulesreviewstatus;
     public NonResourceRuleBuilderAuthorizationV1[] nonResourceRulesBuilder;
 
     public ResourceRuleBuilderAuthorizationV1[] resourceRulesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_subjectrulesreviewstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_SubjectRulesReviewStatus) {
         return self.io_k8s_api_authorization_v1_subjectrulesreviewstatus;
@@ -1883,12 +2070,13 @@ public type SubjectRulesReviewStatusBuilderAuthorizationV1 object {
         return self.fluentBuilder;
     }
     public function withNonResourceRules() returns NonResourceRuleBuilderAuthorizationV1 {
-        self.nonResourceRulesBuilder[lengthof nonResourceRulesBuilder] = new NonResourceRuleBuilderAuthorizationV1(self)
-        ;
+        self.nonResourceRulesBuilder[lengthof nonResourceRulesBuilder] = new NonResourceRuleBuilderAuthorizationV1();
+        self.nonResourceRulesBuilder[(lengthof nonResourceRulesBuilder)].init(self);
         return self.nonResourceRulesBuilder[(lengthof nonResourceRulesBuilder) - 1];
     }
     public function withResourceRules() returns ResourceRuleBuilderAuthorizationV1 {
-        self.resourceRulesBuilder[lengthof resourceRulesBuilder] = new ResourceRuleBuilderAuthorizationV1(self);
+        self.resourceRulesBuilder[lengthof resourceRulesBuilder] = new ResourceRuleBuilderAuthorizationV1();
+        self.resourceRulesBuilder[(lengthof resourceRulesBuilder)].init(self);
         return self.resourceRulesBuilder[(lengthof resourceRulesBuilder) - 1];
     }
 
@@ -1905,10 +2093,13 @@ public type SubjectRulesReviewStatusBuilderAuthorizationV1 object {
 };
 
 public type HostAliasBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_HostAlias io_k8s_api_core_v1_hostalias;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_hostalias = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_HostAlias) {
         return self.io_k8s_api_core_v1_hostalias;
@@ -1933,7 +2124,7 @@ public type HostAliasBuilderCoreV1 object {
 };
 
 public type PodSpecBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodSpec io_k8s_api_core_v1_podspec;
     public AffinityBuilderCoreV1? affinityBuilder;
 
@@ -1953,8 +2144,11 @@ public type PodSpecBuilderCoreV1 object {
 
     public VolumeBuilderCoreV1[] volumesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodSpec) {
         return self.io_k8s_api_core_v1_podspec;
@@ -1963,7 +2157,8 @@ public type PodSpecBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withAffinity() returns AffinityBuilderCoreV1 {
-        self.affinityBuilder = new AffinityBuilderCoreV1(self);
+        self.affinityBuilder = new AffinityBuilderCoreV1();
+        self.affinityBuilder.init(self);
         match (self.affinityBuilder) {
             AffinityBuilderCoreV1 builder => {
                 return builder;
@@ -1975,7 +2170,8 @@ public type PodSpecBuilderCoreV1 object {
         }
     }
     public function withDnsConfig() returns PodDNSConfigBuilderCoreV1 {
-        self.dnsConfigBuilder = new PodDNSConfigBuilderCoreV1(self);
+        self.dnsConfigBuilder = new PodDNSConfigBuilderCoreV1();
+        self.dnsConfigBuilder.init(self);
         match (self.dnsConfigBuilder) {
             PodDNSConfigBuilderCoreV1 builder => {
                 return builder;
@@ -1987,7 +2183,8 @@ public type PodSpecBuilderCoreV1 object {
         }
     }
     public function withSecurityContext() returns PodSecurityContextBuilderCoreV1 {
-        self.securityContextBuilder = new PodSecurityContextBuilderCoreV1(self);
+        self.securityContextBuilder = new PodSecurityContextBuilderCoreV1();
+        self.securityContextBuilder.init(self);
         match (self.securityContextBuilder) {
             PodSecurityContextBuilderCoreV1 builder => {
                 return builder;
@@ -1999,27 +2196,33 @@ public type PodSpecBuilderCoreV1 object {
         }
     }
     public function withContainers() returns ContainerBuilderCoreV1 {
-        self.containersBuilder[lengthof containersBuilder] = new ContainerBuilderCoreV1(self);
+        self.containersBuilder[lengthof containersBuilder] = new ContainerBuilderCoreV1();
+        self.containersBuilder[(lengthof containersBuilder)].init(self);
         return self.containersBuilder[(lengthof containersBuilder) - 1];
     }
     public function withHostAliases() returns HostAliasBuilderCoreV1 {
-        self.hostAliasesBuilder[lengthof hostAliasesBuilder] = new HostAliasBuilderCoreV1(self);
+        self.hostAliasesBuilder[lengthof hostAliasesBuilder] = new HostAliasBuilderCoreV1();
+        self.hostAliasesBuilder[(lengthof hostAliasesBuilder)].init(self);
         return self.hostAliasesBuilder[(lengthof hostAliasesBuilder) - 1];
     }
     public function withImagePullSecrets() returns LocalObjectReferenceBuilderCoreV1 {
-        self.imagePullSecretsBuilder[lengthof imagePullSecretsBuilder] = new LocalObjectReferenceBuilderCoreV1(self);
+        self.imagePullSecretsBuilder[lengthof imagePullSecretsBuilder] = new LocalObjectReferenceBuilderCoreV1();
+        self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder)].init(self);
         return self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder) - 1];
     }
     public function withInitContainers() returns ContainerBuilderCoreV1 {
-        self.initContainersBuilder[lengthof initContainersBuilder] = new ContainerBuilderCoreV1(self);
+        self.initContainersBuilder[lengthof initContainersBuilder] = new ContainerBuilderCoreV1();
+        self.initContainersBuilder[(lengthof initContainersBuilder)].init(self);
         return self.initContainersBuilder[(lengthof initContainersBuilder) - 1];
     }
     public function withTolerations() returns TolerationBuilderCoreV1 {
-        self.tolerationsBuilder[lengthof tolerationsBuilder] = new TolerationBuilderCoreV1(self);
+        self.tolerationsBuilder[lengthof tolerationsBuilder] = new TolerationBuilderCoreV1();
+        self.tolerationsBuilder[(lengthof tolerationsBuilder)].init(self);
         return self.tolerationsBuilder[(lengthof tolerationsBuilder) - 1];
     }
     public function withVolumes() returns VolumeBuilderCoreV1 {
-        self.volumesBuilder[lengthof volumesBuilder] = new VolumeBuilderCoreV1(self);
+        self.volumesBuilder[lengthof volumesBuilder] = new VolumeBuilderCoreV1();
+        self.volumesBuilder[(lengthof volumesBuilder)].init(self);
         return self.volumesBuilder[(lengthof volumesBuilder) - 1];
     }
 
@@ -2117,12 +2320,15 @@ public type PodSpecBuilderCoreV1 object {
 };
 
 public type StatefulSetStatusBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_StatefulSetStatus io_k8s_api_apps_v1beta2_statefulsetstatus;
     public StatefulSetConditionBuilderAppsV1beta2[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_statefulsetstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_StatefulSetStatus) {
         return self.io_k8s_api_apps_v1beta2_statefulsetstatus;
@@ -2131,7 +2337,8 @@ public type StatefulSetStatusBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns StatefulSetConditionBuilderAppsV1beta2 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new StatefulSetConditionBuilderAppsV1beta2(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new StatefulSetConditionBuilderAppsV1beta2();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -2177,10 +2384,13 @@ public type StatefulSetStatusBuilderAppsV1beta2 object {
 };
 
 public type AzureFilePersistentVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_AzureFilePersistentVolumeSource io_k8s_api_core_v1_azurefilepersistentvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_azurefilepersistentvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_AzureFilePersistentVolumeSource) {
         return self.io_k8s_api_core_v1_azurefilepersistentvolumesource;
@@ -2211,12 +2421,15 @@ public type AzureFilePersistentVolumeSourceBuilderCoreV1 object {
 };
 
 public type DaemonSetStatusBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DaemonSetStatus io_k8s_api_apps_v1_daemonsetstatus;
     public DaemonSetConditionBuilderAppsV1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_daemonsetstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DaemonSetStatus) {
         return self.io_k8s_api_apps_v1_daemonsetstatus;
@@ -2225,7 +2438,8 @@ public type DaemonSetStatusBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns DaemonSetConditionBuilderAppsV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new DaemonSetConditionBuilderAppsV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new DaemonSetConditionBuilderAppsV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -2276,7 +2490,7 @@ public type DaemonSetStatusBuilderAppsV1 object {
 };
 
 public type MetricStatusBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_MetricStatus io_k8s_api_autoscaling_v2beta1_metricstatus;
     public ExternalMetricStatusBuilderAutoscalingV2beta1? externalBuilder;
 
@@ -2286,8 +2500,11 @@ public type MetricStatusBuilderAutoscalingV2beta1 object {
 
     public ResourceMetricStatusBuilderAutoscalingV2beta1? _resourceBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_metricstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_MetricStatus) {
         return self.io_k8s_api_autoscaling_v2beta1_metricstatus;
@@ -2296,7 +2513,8 @@ public type MetricStatusBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withExternal() returns ExternalMetricStatusBuilderAutoscalingV2beta1 {
-        self.externalBuilder = new ExternalMetricStatusBuilderAutoscalingV2beta1(self);
+        self.externalBuilder = new ExternalMetricStatusBuilderAutoscalingV2beta1();
+        self.externalBuilder.init(self);
         match (self.externalBuilder) {
             ExternalMetricStatusBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -2308,7 +2526,8 @@ public type MetricStatusBuilderAutoscalingV2beta1 object {
         }
     }
     public function with_object() returns ObjectMetricStatusBuilderAutoscalingV2beta1 {
-        self._objectBuilder = new ObjectMetricStatusBuilderAutoscalingV2beta1(self);
+        self._objectBuilder = new ObjectMetricStatusBuilderAutoscalingV2beta1();
+        self._objectBuilder.init(self);
         match (self._objectBuilder) {
             ObjectMetricStatusBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -2320,7 +2539,8 @@ public type MetricStatusBuilderAutoscalingV2beta1 object {
         }
     }
     public function withPods() returns PodsMetricStatusBuilderAutoscalingV2beta1 {
-        self.podsBuilder = new PodsMetricStatusBuilderAutoscalingV2beta1(self);
+        self.podsBuilder = new PodsMetricStatusBuilderAutoscalingV2beta1();
+        self.podsBuilder.init(self);
         match (self.podsBuilder) {
             PodsMetricStatusBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -2332,7 +2552,8 @@ public type MetricStatusBuilderAutoscalingV2beta1 object {
         }
     }
     public function with_resource() returns ResourceMetricStatusBuilderAutoscalingV2beta1 {
-        self._resourceBuilder = new ResourceMetricStatusBuilderAutoscalingV2beta1(self);
+        self._resourceBuilder = new ResourceMetricStatusBuilderAutoscalingV2beta1();
+        self._resourceBuilder.init(self);
         match (self._resourceBuilder) {
             ResourceMetricStatusBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -2351,10 +2572,13 @@ public type MetricStatusBuilderAutoscalingV2beta1 object {
 };
 
 public type VolumeMountBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_VolumeMount io_k8s_api_core_v1_volumemount;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_volumemount = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_VolumeMount) {
         return self.io_k8s_api_core_v1_volumemount;
@@ -2390,12 +2614,15 @@ public type VolumeMountBuilderCoreV1 object {
 };
 
 public type DeploymentStatusBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DeploymentStatus io_k8s_api_apps_v1beta2_deploymentstatus;
     public DeploymentConditionBuilderAppsV1beta2[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_deploymentstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DeploymentStatus) {
         return self.io_k8s_api_apps_v1beta2_deploymentstatus;
@@ -2404,7 +2631,8 @@ public type DeploymentStatusBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns DeploymentConditionBuilderAppsV1beta2 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderAppsV1beta2(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderAppsV1beta2();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -2445,13 +2673,16 @@ public type DeploymentStatusBuilderAppsV1beta2 object {
 };
 
 public type APIServiceSpecBuilderApiregistrationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIServiceSpec
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicespec;
     public ServiceReferenceBuilderApiregistrationV1? serviceReferenceBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIServiceSpec) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicespec;
@@ -2460,7 +2691,8 @@ public type APIServiceSpecBuilderApiregistrationV1 object {
         return self.fluentBuilder;
     }
     public function withServiceReference() returns ServiceReferenceBuilderApiregistrationV1 {
-        self.serviceReferenceBuilder = new ServiceReferenceBuilderApiregistrationV1(self);
+        self.serviceReferenceBuilder = new ServiceReferenceBuilderApiregistrationV1();
+        self.serviceReferenceBuilder.init(self);
         match (self.serviceReferenceBuilder) {
             ServiceReferenceBuilderApiregistrationV1 builder => {
                 return builder;
@@ -2508,12 +2740,15 @@ public type APIServiceSpecBuilderApiregistrationV1 object {
 };
 
 public type APIGroupListBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_APIGroupList io_k8s_apimachinery_pkg_apis_meta_v1_apigrouplist;
     public APIGroupBuilderMetaV1[] groupsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_apigrouplist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_APIGroupList) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_apigrouplist;
@@ -2522,7 +2757,8 @@ public type APIGroupListBuilderMetaV1 object {
         return self.fluentBuilder;
     }
     public function withGroups() returns APIGroupBuilderMetaV1 {
-        self.groupsBuilder[lengthof groupsBuilder] = new APIGroupBuilderMetaV1(self);
+        self.groupsBuilder[lengthof groupsBuilder] = new APIGroupBuilderMetaV1();
+        self.groupsBuilder[(lengthof groupsBuilder)].init(self);
         return self.groupsBuilder[(lengthof groupsBuilder) - 1];
     }
 
@@ -2538,12 +2774,15 @@ public type APIGroupListBuilderMetaV1 object {
 };
 
 public type DaemonSetUpdateStrategyBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DaemonSetUpdateStrategy io_k8s_api_apps_v1beta2_daemonsetupdatestrategy;
     public RollingUpdateDaemonSetBuilderAppsV1beta2? rollingUpdateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_daemonsetupdatestrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DaemonSetUpdateStrategy) {
         return self.io_k8s_api_apps_v1beta2_daemonsetupdatestrategy;
@@ -2552,7 +2791,8 @@ public type DaemonSetUpdateStrategyBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withRollingUpdate() returns RollingUpdateDaemonSetBuilderAppsV1beta2 {
-        self.rollingUpdateBuilder = new RollingUpdateDaemonSetBuilderAppsV1beta2(self);
+        self.rollingUpdateBuilder = new RollingUpdateDaemonSetBuilderAppsV1beta2();
+        self.rollingUpdateBuilder.init(self);
         match (self.rollingUpdateBuilder) {
             RollingUpdateDaemonSetBuilderAppsV1beta2 builder => {
                 return builder;
@@ -2571,12 +2811,15 @@ public type DaemonSetUpdateStrategyBuilderAppsV1beta2 object {
 };
 
 public type EmptyDirVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EmptyDirVolumeSource io_k8s_api_core_v1_emptydirvolumesource;
     public QuantityBuilderApiResource? sizeLimitBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_emptydirvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EmptyDirVolumeSource) {
         return self.io_k8s_api_core_v1_emptydirvolumesource;
@@ -2585,7 +2828,8 @@ public type EmptyDirVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSizeLimit() returns QuantityBuilderApiResource {
-        self.sizeLimitBuilder = new QuantityBuilderApiResource(self);
+        self.sizeLimitBuilder = new QuantityBuilderApiResource();
+        self.sizeLimitBuilder.init(self);
         match (self.sizeLimitBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -2604,7 +2848,7 @@ public type EmptyDirVolumeSourceBuilderCoreV1 object {
 };
 
 public type EndpointSubsetBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EndpointSubset io_k8s_api_core_v1_endpointsubset;
     public EndpointAddressBuilderCoreV1[] addressesBuilder;
 
@@ -2612,8 +2856,11 @@ public type EndpointSubsetBuilderCoreV1 object {
 
     public EndpointPortBuilderCoreV1[] portsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_endpointsubset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EndpointSubset) {
         return self.io_k8s_api_core_v1_endpointsubset;
@@ -2622,24 +2869,30 @@ public type EndpointSubsetBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withAddresses() returns EndpointAddressBuilderCoreV1 {
-        self.addressesBuilder[lengthof addressesBuilder] = new EndpointAddressBuilderCoreV1(self);
+        self.addressesBuilder[lengthof addressesBuilder] = new EndpointAddressBuilderCoreV1();
+        self.addressesBuilder[(lengthof addressesBuilder)].init(self);
         return self.addressesBuilder[(lengthof addressesBuilder) - 1];
     }
     public function withNotReadyAddresses() returns EndpointAddressBuilderCoreV1 {
-        self.notReadyAddressesBuilder[lengthof notReadyAddressesBuilder] = new EndpointAddressBuilderCoreV1(self);
+        self.notReadyAddressesBuilder[lengthof notReadyAddressesBuilder] = new EndpointAddressBuilderCoreV1();
+        self.notReadyAddressesBuilder[(lengthof notReadyAddressesBuilder)].init(self);
         return self.notReadyAddressesBuilder[(lengthof notReadyAddressesBuilder) - 1];
     }
     public function withPorts() returns EndpointPortBuilderCoreV1 {
-        self.portsBuilder[lengthof portsBuilder] = new EndpointPortBuilderCoreV1(self);
+        self.portsBuilder[lengthof portsBuilder] = new EndpointPortBuilderCoreV1();
+        self.portsBuilder[(lengthof portsBuilder)].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
 };
 
 public type AWSElasticBlockStoreVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_AWSElasticBlockStoreVolumeSource io_k8s_api_core_v1_awselasticblockstorevolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_awselasticblockstorevolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_AWSElasticBlockStoreVolumeSource) {
         return self.io_k8s_api_core_v1_awselasticblockstorevolumesource;
@@ -2670,10 +2923,13 @@ public type AWSElasticBlockStoreVolumeSourceBuilderCoreV1 object {
 };
 
 public type ResourceRequirementsBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ResourceRequirements io_k8s_api_core_v1_resourcerequirements;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_resourcerequirements = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ResourceRequirements) {
         return self.io_k8s_api_core_v1_resourcerequirements;
@@ -2694,7 +2950,7 @@ public type ResourceRequirementsBuilderCoreV1 object {
 };
 
 public type SubjectAccessReviewBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SubjectAccessReview io_k8s_api_authorization_v1beta1_subjectaccessreview;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -2702,8 +2958,11 @@ public type SubjectAccessReviewBuilderAuthorizationV1beta1 object {
 
     public SubjectAccessReviewStatusBuilderAuthorizationV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_subjectaccessreview = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_SubjectAccessReview) {
         return self.io_k8s_api_authorization_v1beta1_subjectaccessreview;
@@ -2712,7 +2971,8 @@ public type SubjectAccessReviewBuilderAuthorizationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -2724,7 +2984,8 @@ public type SubjectAccessReviewBuilderAuthorizationV1beta1 object {
         }
     }
     public function withSpec() returns SubjectAccessReviewSpecBuilderAuthorizationV1beta1 {
-        self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1beta1(self);
+        self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             SubjectAccessReviewSpecBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -2736,7 +2997,8 @@ public type SubjectAccessReviewBuilderAuthorizationV1beta1 object {
         }
     }
     public function withStatus() returns SubjectAccessReviewStatusBuilderAuthorizationV1beta1 {
-        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1beta1(self);
+        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             SubjectAccessReviewStatusBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -2760,14 +3022,17 @@ public type SubjectAccessReviewBuilderAuthorizationV1beta1 object {
 };
 
 public type DaemonSetListBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DaemonSetList io_k8s_api_apps_v1_daemonsetlist;
     public DaemonSetBuilderAppsV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_daemonsetlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DaemonSetList) {
         return self.io_k8s_api_apps_v1_daemonsetlist;
@@ -2776,7 +3041,8 @@ public type DaemonSetListBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -2788,7 +3054,8 @@ public type DaemonSetListBuilderAppsV1 object {
         }
     }
     public function withItems() returns DaemonSetBuilderAppsV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderAppsV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderAppsV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -2804,7 +3071,7 @@ public type DaemonSetListBuilderAppsV1 object {
 };
 
 public type NetworkPolicySpecBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_NetworkPolicySpec io_k8s_api_extensions_v1beta1_networkpolicyspec;
     public NetworkPolicyEgressRuleBuilderExtensionsV1beta1[] egressBuilder;
 
@@ -2812,8 +3079,11 @@ public type NetworkPolicySpecBuilderExtensionsV1beta1 object {
 
     public LabelSelectorBuilderMetaV1? podSelectorBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_networkpolicyspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_NetworkPolicySpec) {
         return self.io_k8s_api_extensions_v1beta1_networkpolicyspec;
@@ -2822,7 +3092,8 @@ public type NetworkPolicySpecBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withPodSelector() returns LabelSelectorBuilderMetaV1 {
-        self.podSelectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.podSelectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.podSelectorBuilder.init(self);
         match (self.podSelectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -2834,11 +3105,13 @@ public type NetworkPolicySpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withEgress() returns NetworkPolicyEgressRuleBuilderExtensionsV1beta1 {
-        self.egressBuilder[lengthof egressBuilder] = new NetworkPolicyEgressRuleBuilderExtensionsV1beta1(self);
+        self.egressBuilder[lengthof egressBuilder] = new NetworkPolicyEgressRuleBuilderExtensionsV1beta1();
+        self.egressBuilder[(lengthof egressBuilder)].init(self);
         return self.egressBuilder[(lengthof egressBuilder) - 1];
     }
     public function withIngress() returns NetworkPolicyIngressRuleBuilderExtensionsV1beta1 {
-        self.ingressBuilder[lengthof ingressBuilder] = new NetworkPolicyIngressRuleBuilderExtensionsV1beta1(self);
+        self.ingressBuilder[lengthof ingressBuilder] = new NetworkPolicyIngressRuleBuilderExtensionsV1beta1();
+        self.ingressBuilder[(lengthof ingressBuilder)].init(self);
         return self.ingressBuilder[(lengthof ingressBuilder) - 1];
     }
 
@@ -2854,12 +3127,15 @@ public type NetworkPolicySpecBuilderExtensionsV1beta1 object {
 };
 
 public type StatusDetailsBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_StatusDetails io_k8s_apimachinery_pkg_apis_meta_v1_statusdetails;
     public StatusCauseBuilderMetaV1[] causesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_statusdetails = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_StatusDetails) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_statusdetails;
@@ -2868,7 +3144,8 @@ public type StatusDetailsBuilderMetaV1 object {
         return self.fluentBuilder;
     }
     public function withCauses() returns StatusCauseBuilderMetaV1 {
-        self.causesBuilder[lengthof causesBuilder] = new StatusCauseBuilderMetaV1(self);
+        self.causesBuilder[lengthof causesBuilder] = new StatusCauseBuilderMetaV1();
+        self.causesBuilder[(lengthof causesBuilder)].init(self);
         return self.causesBuilder[(lengthof causesBuilder) - 1];
     }
 
@@ -2899,10 +3176,13 @@ public type StatusDetailsBuilderMetaV1 object {
 };
 
 public type ClientIPConfigBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ClientIPConfig io_k8s_api_core_v1_clientipconfig;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_clientipconfig = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ClientIPConfig) {
         return self.io_k8s_api_core_v1_clientipconfig;
@@ -2918,7 +3198,7 @@ public type ClientIPConfigBuilderCoreV1 object {
 };
 
 public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_PodSecurityPolicySpec io_k8s_api_policy_v1beta1_podsecuritypolicyspec;
     public AllowedFlexVolumeBuilderPolicyV1beta1[] allowedFlexVolumesBuilder;
 
@@ -2934,8 +3214,11 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
 
     public SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1? supplementalGroupsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_podsecuritypolicyspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_PodSecurityPolicySpec) {
         return self.io_k8s_api_policy_v1beta1_podsecuritypolicyspec;
@@ -2944,7 +3227,8 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withFsGroup() returns FSGroupStrategyOptionsBuilderPolicyV1beta1 {
-        self.fsGroupBuilder = new FSGroupStrategyOptionsBuilderPolicyV1beta1(self);
+        self.fsGroupBuilder = new FSGroupStrategyOptionsBuilderPolicyV1beta1();
+        self.fsGroupBuilder.init(self);
         match (self.fsGroupBuilder) {
             FSGroupStrategyOptionsBuilderPolicyV1beta1 builder => {
                 return builder;
@@ -2956,7 +3240,8 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
         }
     }
     public function withRunAsUser() returns RunAsUserStrategyOptionsBuilderPolicyV1beta1 {
-        self.runAsUserBuilder = new RunAsUserStrategyOptionsBuilderPolicyV1beta1(self);
+        self.runAsUserBuilder = new RunAsUserStrategyOptionsBuilderPolicyV1beta1();
+        self.runAsUserBuilder.init(self);
         match (self.runAsUserBuilder) {
             RunAsUserStrategyOptionsBuilderPolicyV1beta1 builder => {
                 return builder;
@@ -2968,7 +3253,8 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
         }
     }
     public function withSeLinux() returns SELinuxStrategyOptionsBuilderPolicyV1beta1 {
-        self.seLinuxBuilder = new SELinuxStrategyOptionsBuilderPolicyV1beta1(self);
+        self.seLinuxBuilder = new SELinuxStrategyOptionsBuilderPolicyV1beta1();
+        self.seLinuxBuilder.init(self);
         match (self.seLinuxBuilder) {
             SELinuxStrategyOptionsBuilderPolicyV1beta1 builder => {
                 return builder;
@@ -2980,7 +3266,8 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
         }
     }
     public function withSupplementalGroups() returns SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 {
-        self.supplementalGroupsBuilder = new SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1(self);
+        self.supplementalGroupsBuilder = new SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1();
+        self.supplementalGroupsBuilder.init(self);
         match (self.supplementalGroupsBuilder) {
             SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 builder => {
                 return builder;
@@ -2992,16 +3279,19 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
         }
     }
     public function withAllowedFlexVolumes() returns AllowedFlexVolumeBuilderPolicyV1beta1 {
-        self.allowedFlexVolumesBuilder[lengthof allowedFlexVolumesBuilder] = new AllowedFlexVolumeBuilderPolicyV1beta1(
-                                                                                 self);
+        self.allowedFlexVolumesBuilder[lengthof allowedFlexVolumesBuilder] = new AllowedFlexVolumeBuilderPolicyV1beta1()
+        ;
+        self.allowedFlexVolumesBuilder[(lengthof allowedFlexVolumesBuilder)].init(self);
         return self.allowedFlexVolumesBuilder[(lengthof allowedFlexVolumesBuilder) - 1];
     }
     public function withAllowedHostPaths() returns AllowedHostPathBuilderPolicyV1beta1 {
-        self.allowedHostPathsBuilder[lengthof allowedHostPathsBuilder] = new AllowedHostPathBuilderPolicyV1beta1(self);
+        self.allowedHostPathsBuilder[lengthof allowedHostPathsBuilder] = new AllowedHostPathBuilderPolicyV1beta1();
+        self.allowedHostPathsBuilder[(lengthof allowedHostPathsBuilder)].init(self);
         return self.allowedHostPathsBuilder[(lengthof allowedHostPathsBuilder) - 1];
     }
     public function withHostPorts() returns HostPortRangeBuilderPolicyV1beta1 {
-        self.hostPortsBuilder[lengthof hostPortsBuilder] = new HostPortRangeBuilderPolicyV1beta1(self);
+        self.hostPortsBuilder[lengthof hostPortsBuilder] = new HostPortRangeBuilderPolicyV1beta1();
+        self.hostPortsBuilder[(lengthof hostPortsBuilder)].init(self);
         return self.hostPortsBuilder[(lengthof hostPortsBuilder) - 1];
     }
 
@@ -3089,14 +3379,17 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
 };
 
 public type ClusterRoleBindingListBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_ClusterRoleBindingList io_k8s_api_rbac_v1beta1_clusterrolebindinglist;
     public ClusterRoleBindingBuilderRbacV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_clusterrolebindinglist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_ClusterRoleBindingList) {
         return self.io_k8s_api_rbac_v1beta1_clusterrolebindinglist;
@@ -3105,7 +3398,8 @@ public type ClusterRoleBindingListBuilderRbacV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -3117,7 +3411,8 @@ public type ClusterRoleBindingListBuilderRbacV1beta1 object {
         }
     }
     public function withItems() returns ClusterRoleBindingBuilderRbacV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBindingBuilderRbacV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBindingBuilderRbacV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -3133,10 +3428,13 @@ public type ClusterRoleBindingListBuilderRbacV1beta1 object {
 };
 
 public type InitializerBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_Initializer io_k8s_apimachinery_pkg_apis_meta_v1_initializer;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_initializer = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_Initializer) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_initializer;
@@ -3152,10 +3450,13 @@ public type InitializerBuilderMetaV1 object {
 };
 
 public type DeploymentConditionBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DeploymentCondition io_k8s_api_extensions_v1beta1_deploymentcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_deploymentcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DeploymentCondition) {
         return self.io_k8s_api_extensions_v1beta1_deploymentcondition;
@@ -3198,12 +3499,15 @@ public type DeploymentConditionBuilderExtensionsV1beta1 object {
 };
 
 public type ServiceStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ServiceStatus io_k8s_api_core_v1_servicestatus;
     public LoadBalancerStatusBuilderCoreV1? loadBalancerBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_servicestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ServiceStatus) {
         return self.io_k8s_api_core_v1_servicestatus;
@@ -3212,7 +3516,8 @@ public type ServiceStatusBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withLoadBalancer() returns LoadBalancerStatusBuilderCoreV1 {
-        self.loadBalancerBuilder = new LoadBalancerStatusBuilderCoreV1(self);
+        self.loadBalancerBuilder = new LoadBalancerStatusBuilderCoreV1();
+        self.loadBalancerBuilder.init(self);
         match (self.loadBalancerBuilder) {
             LoadBalancerStatusBuilderCoreV1 builder => {
                 return builder;
@@ -3226,7 +3531,7 @@ public type ServiceStatusBuilderCoreV1 object {
 };
 
 public type ScaleBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_Scale io_k8s_api_apps_v1beta2_scale;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -3234,8 +3539,11 @@ public type ScaleBuilderAppsV1beta2 object {
 
     public ScaleStatusBuilderAppsV1beta2? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_scale = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_Scale) {
         return self.io_k8s_api_apps_v1beta2_scale;
@@ -3244,7 +3552,8 @@ public type ScaleBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -3256,7 +3565,8 @@ public type ScaleBuilderAppsV1beta2 object {
         }
     }
     public function withSpec() returns ScaleSpecBuilderAppsV1beta2 {
-        self.specBuilder = new ScaleSpecBuilderAppsV1beta2(self);
+        self.specBuilder = new ScaleSpecBuilderAppsV1beta2();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             ScaleSpecBuilderAppsV1beta2 builder => {
                 return builder;
@@ -3268,7 +3578,8 @@ public type ScaleBuilderAppsV1beta2 object {
         }
     }
     public function withStatus() returns ScaleStatusBuilderAppsV1beta2 {
-        self.statusBuilder = new ScaleStatusBuilderAppsV1beta2(self);
+        self.statusBuilder = new ScaleStatusBuilderAppsV1beta2();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             ScaleStatusBuilderAppsV1beta2 builder => {
                 return builder;
@@ -3292,14 +3603,17 @@ public type ScaleBuilderAppsV1beta2 object {
 };
 
 public type JobListBuilderBatchV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1_JobList io_k8s_api_batch_v1_joblist;
     public JobBuilderBatchV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_batch_v1_joblist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_batch_v1_JobList) {
         return self.io_k8s_api_batch_v1_joblist;
@@ -3308,7 +3622,8 @@ public type JobListBuilderBatchV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -3320,7 +3635,8 @@ public type JobListBuilderBatchV1 object {
         }
     }
     public function withItems() returns JobBuilderBatchV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new JobBuilderBatchV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new JobBuilderBatchV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -3336,15 +3652,18 @@ public type JobListBuilderBatchV1 object {
 };
 
 public type SubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SubjectAccessReviewSpec
     io_k8s_api_authorization_v1beta1_subjectaccessreviewspec;
     public NonResourceAttributesBuilderAuthorizationV1beta1? nonResourceAttributesBuilder;
 
     public ResourceAttributesBuilderAuthorizationV1beta1? resourceAttributesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_subjectaccessreviewspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_SubjectAccessReviewSpec) {
         return self.io_k8s_api_authorization_v1beta1_subjectaccessreviewspec;
@@ -3353,7 +3672,8 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withNonResourceAttributes() returns NonResourceAttributesBuilderAuthorizationV1beta1 {
-        self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1beta1(self);
+        self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1beta1();
+        self.nonResourceAttributesBuilder.init(self);
         match (self.nonResourceAttributesBuilder) {
             NonResourceAttributesBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -3365,7 +3685,8 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
         }
     }
     public function withResourceAttributes() returns ResourceAttributesBuilderAuthorizationV1beta1 {
-        self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1beta1(self);
+        self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1beta1();
+        self.resourceAttributesBuilder.init(self);
         match (self.resourceAttributesBuilder) {
             ResourceAttributesBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -3404,10 +3725,13 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
 };
 
 public type ResourceRuleBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_ResourceRule io_k8s_api_authorization_v1beta1_resourcerule;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_resourcerule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_ResourceRule) {
         return self.io_k8s_api_authorization_v1beta1_resourcerule;
@@ -3458,12 +3782,15 @@ public type ResourceRuleBuilderAuthorizationV1beta1 object {
 };
 
 public type APIResourceListBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_APIResourceList io_k8s_apimachinery_pkg_apis_meta_v1_apiresourcelist;
     public APIResourceBuilderMetaV1[] resourcesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_apiresourcelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_APIResourceList) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_apiresourcelist;
@@ -3472,7 +3799,8 @@ public type APIResourceListBuilderMetaV1 object {
         return self.fluentBuilder;
     }
     public function withResources() returns APIResourceBuilderMetaV1 {
-        self.resourcesBuilder[lengthof resourcesBuilder] = new APIResourceBuilderMetaV1(self);
+        self.resourcesBuilder[lengthof resourcesBuilder] = new APIResourceBuilderMetaV1();
+        self.resourcesBuilder[(lengthof resourcesBuilder)].init(self);
         return self.resourcesBuilder[(lengthof resourcesBuilder) - 1];
     }
 
@@ -3493,7 +3821,7 @@ public type APIResourceListBuilderMetaV1 object {
 };
 
 public type ScaleBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_Scale io_k8s_api_apps_v1beta1_scale;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -3501,8 +3829,11 @@ public type ScaleBuilderAppsV1beta1 object {
 
     public ScaleStatusBuilderAppsV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_scale = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_Scale) {
         return self.io_k8s_api_apps_v1beta1_scale;
@@ -3511,7 +3842,8 @@ public type ScaleBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -3523,7 +3855,8 @@ public type ScaleBuilderAppsV1beta1 object {
         }
     }
     public function withSpec() returns ScaleSpecBuilderAppsV1beta1 {
-        self.specBuilder = new ScaleSpecBuilderAppsV1beta1(self);
+        self.specBuilder = new ScaleSpecBuilderAppsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             ScaleSpecBuilderAppsV1beta1 builder => {
                 return builder;
@@ -3535,7 +3868,8 @@ public type ScaleBuilderAppsV1beta1 object {
         }
     }
     public function withStatus() returns ScaleStatusBuilderAppsV1beta1 {
-        self.statusBuilder = new ScaleStatusBuilderAppsV1beta1(self);
+        self.statusBuilder = new ScaleStatusBuilderAppsV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             ScaleStatusBuilderAppsV1beta1 builder => {
                 return builder;
@@ -3559,10 +3893,13 @@ public type ScaleBuilderAppsV1beta1 object {
 };
 
 public type ResourceAttributesBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_ResourceAttributes io_k8s_api_authorization_v1beta1_resourceattributes;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_resourceattributes = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_ResourceAttributes) {
         return self.io_k8s_api_authorization_v1beta1_resourceattributes;
@@ -3608,7 +3945,7 @@ public type ResourceAttributesBuilderAuthorizationV1beta1 object {
 };
 
 public type StatefulSetBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_StatefulSet io_k8s_api_apps_v1beta2_statefulset;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -3616,8 +3953,11 @@ public type StatefulSetBuilderAppsV1beta2 object {
 
     public StatefulSetStatusBuilderAppsV1beta2? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_statefulset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_StatefulSet) {
         return self.io_k8s_api_apps_v1beta2_statefulset;
@@ -3626,7 +3966,8 @@ public type StatefulSetBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -3638,7 +3979,8 @@ public type StatefulSetBuilderAppsV1beta2 object {
         }
     }
     public function withSpec() returns StatefulSetSpecBuilderAppsV1beta2 {
-        self.specBuilder = new StatefulSetSpecBuilderAppsV1beta2(self);
+        self.specBuilder = new StatefulSetSpecBuilderAppsV1beta2();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             StatefulSetSpecBuilderAppsV1beta2 builder => {
                 return builder;
@@ -3650,7 +3992,8 @@ public type StatefulSetBuilderAppsV1beta2 object {
         }
     }
     public function withStatus() returns StatefulSetStatusBuilderAppsV1beta2 {
-        self.statusBuilder = new StatefulSetStatusBuilderAppsV1beta2(self);
+        self.statusBuilder = new StatefulSetStatusBuilderAppsV1beta2();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             StatefulSetStatusBuilderAppsV1beta2 builder => {
                 return builder;
@@ -3674,7 +4017,7 @@ public type StatefulSetBuilderAppsV1beta2 object {
 };
 
 public type CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionSpec
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionspec;
     public CustomResourceDefinitionNamesBuilderApiextensionsV1beta1? namesBuilder;
@@ -3683,8 +4026,11 @@ public type CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 object {
 
     public CustomResourceValidationBuilderApiextensionsV1beta1? validationBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionSpec) {
@@ -3694,7 +4040,8 @@ public type CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withNames() returns CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 {
-        self.namesBuilder = new CustomResourceDefinitionNamesBuilderApiextensionsV1beta1(self);
+        self.namesBuilder = new CustomResourceDefinitionNamesBuilderApiextensionsV1beta1();
+        self.namesBuilder.init(self);
         match (self.namesBuilder) {
             CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -3706,7 +4053,8 @@ public type CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 object {
         }
     }
     public function withSubresources() returns CustomResourceSubresourcesBuilderApiextensionsV1beta1 {
-        self.subresourcesBuilder = new CustomResourceSubresourcesBuilderApiextensionsV1beta1(self);
+        self.subresourcesBuilder = new CustomResourceSubresourcesBuilderApiextensionsV1beta1();
+        self.subresourcesBuilder.init(self);
         match (self.subresourcesBuilder) {
             CustomResourceSubresourcesBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -3718,7 +4066,8 @@ public type CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 object {
         }
     }
     public function withValidation() returns CustomResourceValidationBuilderApiextensionsV1beta1 {
-        self.validationBuilder = new CustomResourceValidationBuilderApiextensionsV1beta1(self);
+        self.validationBuilder = new CustomResourceValidationBuilderApiextensionsV1beta1();
+        self.validationBuilder.init(self);
         match (self.validationBuilder) {
             CustomResourceValidationBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -3750,10 +4099,13 @@ public type CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 object {
 };
 
 public type ConfigMapKeySelectorBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ConfigMapKeySelector io_k8s_api_core_v1_configmapkeyselector;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_configmapkeyselector = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ConfigMapKeySelector) {
         return self.io_k8s_api_core_v1_configmapkeyselector;
@@ -3779,10 +4131,13 @@ public type ConfigMapKeySelectorBuilderCoreV1 object {
 };
 
 public type VolumeAttachmentSourceBuilderStorageV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_VolumeAttachmentSource io_k8s_api_storage_v1beta1_volumeattachmentsource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_storage_v1beta1_volumeattachmentsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_storage_v1beta1_VolumeAttachmentSource) {
         return self.io_k8s_api_storage_v1beta1_volumeattachmentsource;
@@ -3799,12 +4154,15 @@ public type VolumeAttachmentSourceBuilderStorageV1beta1 object {
 };
 
 public type ScaleIOPersistentVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ScaleIOPersistentVolumeSource io_k8s_api_core_v1_scaleiopersistentvolumesource;
     public SecretReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_scaleiopersistentvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ScaleIOPersistentVolumeSource) {
         return self.io_k8s_api_core_v1_scaleiopersistentvolumesource;
@@ -3813,7 +4171,8 @@ public type ScaleIOPersistentVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns SecretReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new SecretReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new SecretReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             SecretReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -3872,14 +4231,17 @@ public type ScaleIOPersistentVolumeSourceBuilderCoreV1 object {
 };
 
 public type StatefulSetListBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_StatefulSetList io_k8s_api_apps_v1beta2_statefulsetlist;
     public StatefulSetBuilderAppsV1beta2[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_statefulsetlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_StatefulSetList) {
         return self.io_k8s_api_apps_v1beta2_statefulsetlist;
@@ -3888,7 +4250,8 @@ public type StatefulSetListBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -3900,7 +4263,8 @@ public type StatefulSetListBuilderAppsV1beta2 object {
         }
     }
     public function withItems() returns StatefulSetBuilderAppsV1beta2 {
-        self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1beta2(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1beta2();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -3916,10 +4280,13 @@ public type StatefulSetListBuilderAppsV1beta2 object {
 };
 
 public type APIResourceBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_APIResource io_k8s_apimachinery_pkg_apis_meta_v1_apiresource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_apiresource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_APIResource) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_apiresource;
@@ -3990,10 +4357,13 @@ public type APIResourceBuilderMetaV1 object {
 };
 
 public type RollingUpdateDeploymentBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_RollingUpdateDeployment io_k8s_api_extensions_v1beta1_rollingupdatedeployment;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_rollingupdatedeployment = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_RollingUpdateDeployment) {
         return self.io_k8s_api_extensions_v1beta1_rollingupdatedeployment;
@@ -4015,12 +4385,15 @@ public type RollingUpdateDeploymentBuilderExtensionsV1beta1 object {
 };
 
 public type StatefulSetStatusBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_StatefulSetStatus io_k8s_api_apps_v1_statefulsetstatus;
     public StatefulSetConditionBuilderAppsV1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_statefulsetstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_StatefulSetStatus) {
         return self.io_k8s_api_apps_v1_statefulsetstatus;
@@ -4029,7 +4402,8 @@ public type StatefulSetStatusBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns StatefulSetConditionBuilderAppsV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new StatefulSetConditionBuilderAppsV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new StatefulSetConditionBuilderAppsV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -4075,14 +4449,17 @@ public type StatefulSetStatusBuilderAppsV1 object {
 };
 
 public type PodDisruptionBudgetListBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_PodDisruptionBudgetList io_k8s_api_policy_v1beta1_poddisruptionbudgetlist;
     public PodDisruptionBudgetBuilderPolicyV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_poddisruptionbudgetlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_PodDisruptionBudgetList) {
         return self.io_k8s_api_policy_v1beta1_poddisruptionbudgetlist;
@@ -4091,7 +4468,8 @@ public type PodDisruptionBudgetListBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -4103,7 +4481,8 @@ public type PodDisruptionBudgetListBuilderPolicyV1beta1 object {
         }
     }
     public function withItems() returns PodDisruptionBudgetBuilderPolicyV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new PodDisruptionBudgetBuilderPolicyV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new PodDisruptionBudgetBuilderPolicyV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -4119,14 +4498,17 @@ public type PodDisruptionBudgetListBuilderPolicyV1beta1 object {
 };
 
 public type NodeSpecBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeSpec io_k8s_api_core_v1_nodespec;
     public NodeConfigSourceBuilderCoreV1? configSourceBuilder;
 
     public TaintBuilderCoreV1[] taintsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeSpec) {
         return self.io_k8s_api_core_v1_nodespec;
@@ -4135,7 +4517,8 @@ public type NodeSpecBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withConfigSource() returns NodeConfigSourceBuilderCoreV1 {
-        self.configSourceBuilder = new NodeConfigSourceBuilderCoreV1(self);
+        self.configSourceBuilder = new NodeConfigSourceBuilderCoreV1();
+        self.configSourceBuilder.init(self);
         match (self.configSourceBuilder) {
             NodeConfigSourceBuilderCoreV1 builder => {
                 return builder;
@@ -4147,7 +4530,8 @@ public type NodeSpecBuilderCoreV1 object {
         }
     }
     public function withTaints() returns TaintBuilderCoreV1 {
-        self.taintsBuilder[lengthof taintsBuilder] = new TaintBuilderCoreV1(self);
+        self.taintsBuilder[lengthof taintsBuilder] = new TaintBuilderCoreV1();
+        self.taintsBuilder[(lengthof taintsBuilder)].init(self);
         return self.taintsBuilder[(lengthof taintsBuilder) - 1];
     }
 
@@ -4173,13 +4557,16 @@ public type NodeSpecBuilderCoreV1 object {
 };
 
 public type SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_SupplementalGroupsStrategyOptions
     io_k8s_api_policy_v1beta1_supplementalgroupsstrategyoptions;
     public IDRangeBuilderPolicyV1beta1[] rangesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_supplementalgroupsstrategyoptions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_SupplementalGroupsStrategyOptions) {
         return self.io_k8s_api_policy_v1beta1_supplementalgroupsstrategyoptions;
@@ -4188,7 +4575,8 @@ public type SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRanges() returns IDRangeBuilderPolicyV1beta1 {
-        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderPolicyV1beta1(self);
+        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderPolicyV1beta1();
+        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -4199,12 +4587,15 @@ public type SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 object {
 };
 
 public type EnvVarBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EnvVar io_k8s_api_core_v1_envvar;
     public EnvVarSourceBuilderCoreV1? valueFromBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_envvar = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EnvVar) {
         return self.io_k8s_api_core_v1_envvar;
@@ -4213,7 +4604,8 @@ public type EnvVarBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withValueFrom() returns EnvVarSourceBuilderCoreV1 {
-        self.valueFromBuilder = new EnvVarSourceBuilderCoreV1(self);
+        self.valueFromBuilder = new EnvVarSourceBuilderCoreV1();
+        self.valueFromBuilder.init(self);
         match (self.valueFromBuilder) {
             EnvVarSourceBuilderCoreV1 builder => {
                 return builder;
@@ -4237,11 +4629,14 @@ public type EnvVarBuilderCoreV1 object {
 };
 
 public type CustomResourceDefinitionConditionBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionCondition
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitioncondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitioncondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionCondition) {
@@ -4284,10 +4679,13 @@ public type CustomResourceDefinitionConditionBuilderApiextensionsV1beta1 object 
 };
 
 public type ScaleStatusBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ScaleStatus io_k8s_api_apps_v1beta2_scalestatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_scalestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_ScaleStatus) {
         return self.io_k8s_api_apps_v1beta2_scalestatus;
@@ -4313,12 +4711,15 @@ public type ScaleStatusBuilderAppsV1beta2 object {
 };
 
 public type APIVersionsBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_APIVersions io_k8s_apimachinery_pkg_apis_meta_v1_apiversions;
     public ServerAddressByClientCIDRBuilderMetaV1[] serverAddressByClientCIDRsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_apiversions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_APIVersions) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_apiversions;
@@ -4328,7 +4729,8 @@ public type APIVersionsBuilderMetaV1 object {
     }
     public function withServerAddressByClientCIDRs() returns ServerAddressByClientCIDRBuilderMetaV1 {
         self.serverAddressByClientCIDRsBuilder[lengthof serverAddressByClientCIDRsBuilder] = new
-        ServerAddressByClientCIDRBuilderMetaV1(self);
+        ServerAddressByClientCIDRBuilderMetaV1();
+        self.serverAddressByClientCIDRsBuilder[(lengthof serverAddressByClientCIDRsBuilder)].init(self);
         return self.serverAddressByClientCIDRsBuilder[(lengthof serverAddressByClientCIDRsBuilder) - 1];
     }
 
@@ -4354,10 +4756,13 @@ public type APIVersionsBuilderMetaV1 object {
 };
 
 public type RollingUpdateDeploymentBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_RollingUpdateDeployment io_k8s_api_apps_v1_rollingupdatedeployment;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_rollingupdatedeployment = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_RollingUpdateDeployment) {
         return self.io_k8s_api_apps_v1_rollingupdatedeployment;
@@ -4378,12 +4783,15 @@ public type RollingUpdateDeploymentBuilderAppsV1 object {
 };
 
 public type StatefulSetUpdateStrategyBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_StatefulSetUpdateStrategy io_k8s_api_apps_v1_statefulsetupdatestrategy;
     public RollingUpdateStatefulSetStrategyBuilderAppsV1? rollingUpdateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_statefulsetupdatestrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_StatefulSetUpdateStrategy) {
         return self.io_k8s_api_apps_v1_statefulsetupdatestrategy;
@@ -4392,7 +4800,8 @@ public type StatefulSetUpdateStrategyBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withRollingUpdate() returns RollingUpdateStatefulSetStrategyBuilderAppsV1 {
-        self.rollingUpdateBuilder = new RollingUpdateStatefulSetStrategyBuilderAppsV1(self);
+        self.rollingUpdateBuilder = new RollingUpdateStatefulSetStrategyBuilderAppsV1();
+        self.rollingUpdateBuilder.init(self);
         match (self.rollingUpdateBuilder) {
             RollingUpdateStatefulSetStrategyBuilderAppsV1 builder => {
                 return builder;
@@ -4411,12 +4820,15 @@ public type StatefulSetUpdateStrategyBuilderAppsV1 object {
 };
 
 public type DaemonSetStatusBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DaemonSetStatus io_k8s_api_extensions_v1beta1_daemonsetstatus;
     public DaemonSetConditionBuilderExtensionsV1beta1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_daemonsetstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DaemonSetStatus) {
         return self.io_k8s_api_extensions_v1beta1_daemonsetstatus;
@@ -4425,7 +4837,8 @@ public type DaemonSetStatusBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns DaemonSetConditionBuilderExtensionsV1beta1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new DaemonSetConditionBuilderExtensionsV1beta1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new DaemonSetConditionBuilderExtensionsV1beta1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -4479,12 +4892,15 @@ public type DaemonSetStatusBuilderExtensionsV1beta1 object {
 };
 
 public type DaemonSetUpdateStrategyBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DaemonSetUpdateStrategy io_k8s_api_extensions_v1beta1_daemonsetupdatestrategy;
     public RollingUpdateDaemonSetBuilderExtensionsV1beta1? rollingUpdateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_daemonsetupdatestrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DaemonSetUpdateStrategy) {
         return self.io_k8s_api_extensions_v1beta1_daemonsetupdatestrategy;
@@ -4493,7 +4909,8 @@ public type DaemonSetUpdateStrategyBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRollingUpdate() returns RollingUpdateDaemonSetBuilderExtensionsV1beta1 {
-        self.rollingUpdateBuilder = new RollingUpdateDaemonSetBuilderExtensionsV1beta1(self);
+        self.rollingUpdateBuilder = new RollingUpdateDaemonSetBuilderExtensionsV1beta1();
+        self.rollingUpdateBuilder.init(self);
         match (self.rollingUpdateBuilder) {
             RollingUpdateDaemonSetBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -4512,10 +4929,13 @@ public type DaemonSetUpdateStrategyBuilderExtensionsV1beta1 object {
 };
 
 public type ContainerStateWaitingBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ContainerStateWaiting io_k8s_api_core_v1_containerstatewaiting;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_containerstatewaiting = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ContainerStateWaiting) {
         return self.io_k8s_api_core_v1_containerstatewaiting;
@@ -4536,10 +4956,13 @@ public type ContainerStateWaitingBuilderCoreV1 object {
 };
 
 public type AttachedVolumeBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_AttachedVolume io_k8s_api_core_v1_attachedvolume;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_attachedvolume = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_AttachedVolume) {
         return self.io_k8s_api_core_v1_attachedvolume;
@@ -4560,7 +4983,7 @@ public type AttachedVolumeBuilderCoreV1 object {
 };
 
 public type IngressBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_Ingress io_k8s_api_extensions_v1beta1_ingress;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -4568,8 +4991,11 @@ public type IngressBuilderExtensionsV1beta1 object {
 
     public IngressStatusBuilderExtensionsV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_ingress = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_Ingress) {
         return self.io_k8s_api_extensions_v1beta1_ingress;
@@ -4578,7 +5004,8 @@ public type IngressBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -4590,7 +5017,8 @@ public type IngressBuilderExtensionsV1beta1 object {
         }
     }
     public function withSpec() returns IngressSpecBuilderExtensionsV1beta1 {
-        self.specBuilder = new IngressSpecBuilderExtensionsV1beta1(self);
+        self.specBuilder = new IngressSpecBuilderExtensionsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             IngressSpecBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -4602,7 +5030,8 @@ public type IngressBuilderExtensionsV1beta1 object {
         }
     }
     public function withStatus() returns IngressStatusBuilderExtensionsV1beta1 {
-        self.statusBuilder = new IngressStatusBuilderExtensionsV1beta1(self);
+        self.statusBuilder = new IngressStatusBuilderExtensionsV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             IngressStatusBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -4626,7 +5055,7 @@ public type IngressBuilderExtensionsV1beta1 object {
 };
 
 public type SelfSubjectRulesReviewBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SelfSubjectRulesReview
     io_k8s_api_authorization_v1beta1_selfsubjectrulesreview;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
@@ -4635,8 +5064,11 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1beta1 object {
 
     public SubjectRulesReviewStatusBuilderAuthorizationV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_selfsubjectrulesreview = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_SelfSubjectRulesReview) {
         return self.io_k8s_api_authorization_v1beta1_selfsubjectrulesreview;
@@ -4645,7 +5077,8 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -4657,7 +5090,8 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1beta1 object {
         }
     }
     public function withSpec() returns SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1 {
-        self.specBuilder = new SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1(self);
+        self.specBuilder = new SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -4669,7 +5103,8 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1beta1 object {
         }
     }
     public function withStatus() returns SubjectRulesReviewStatusBuilderAuthorizationV1beta1 {
-        self.statusBuilder = new SubjectRulesReviewStatusBuilderAuthorizationV1beta1(self);
+        self.statusBuilder = new SubjectRulesReviewStatusBuilderAuthorizationV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             SubjectRulesReviewStatusBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -4693,11 +5128,14 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1beta1 object {
 };
 
 public type CertificateSigningRequestConditionBuilderCertificatesV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_certificates_v1beta1_CertificateSigningRequestCondition
     io_k8s_api_certificates_v1beta1_certificatesigningrequestcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_certificates_v1beta1_certificatesigningrequestcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_certificates_v1beta1_CertificateSigningRequestCondition) {
         return self.io_k8s_api_certificates_v1beta1_certificatesigningrequestcondition;
@@ -4729,12 +5167,15 @@ public type CertificateSigningRequestConditionBuilderCertificatesV1beta1 object 
 };
 
 public type WatchEventBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_WatchEvent io_k8s_apimachinery_pkg_apis_meta_v1_watchevent;
     public RawExtensionBuilderPkgRuntime? _objectBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_watchevent = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_WatchEvent) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_watchevent;
@@ -4743,7 +5184,8 @@ public type WatchEventBuilderMetaV1 object {
         return self.fluentBuilder;
     }
     public function with_object() returns RawExtensionBuilderPkgRuntime {
-        self._objectBuilder = new RawExtensionBuilderPkgRuntime(self);
+        self._objectBuilder = new RawExtensionBuilderPkgRuntime();
+        self._objectBuilder.init(self);
         match (self._objectBuilder) {
             RawExtensionBuilderPkgRuntime builder => {
                 return builder;
@@ -4762,10 +5204,13 @@ public type WatchEventBuilderMetaV1 object {
 };
 
 public type HostPathVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_HostPathVolumeSource io_k8s_api_core_v1_hostpathvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_hostpathvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_HostPathVolumeSource) {
         return self.io_k8s_api_core_v1_hostpathvolumesource;
@@ -4786,7 +5231,7 @@ public type HostPathVolumeSourceBuilderCoreV1 object {
 };
 
 public type SelfSubjectRulesReviewBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SelfSubjectRulesReview io_k8s_api_authorization_v1_selfsubjectrulesreview;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -4794,8 +5239,11 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1 object {
 
     public SubjectRulesReviewStatusBuilderAuthorizationV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_selfsubjectrulesreview = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_SelfSubjectRulesReview) {
         return self.io_k8s_api_authorization_v1_selfsubjectrulesreview;
@@ -4804,7 +5252,8 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -4816,7 +5265,8 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1 object {
         }
     }
     public function withSpec() returns SelfSubjectRulesReviewSpecBuilderAuthorizationV1 {
-        self.specBuilder = new SelfSubjectRulesReviewSpecBuilderAuthorizationV1(self);
+        self.specBuilder = new SelfSubjectRulesReviewSpecBuilderAuthorizationV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             SelfSubjectRulesReviewSpecBuilderAuthorizationV1 builder => {
                 return builder;
@@ -4828,7 +5278,8 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1 object {
         }
     }
     public function withStatus() returns SubjectRulesReviewStatusBuilderAuthorizationV1 {
-        self.statusBuilder = new SubjectRulesReviewStatusBuilderAuthorizationV1(self);
+        self.statusBuilder = new SubjectRulesReviewStatusBuilderAuthorizationV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             SubjectRulesReviewStatusBuilderAuthorizationV1 builder => {
                 return builder;
@@ -4852,15 +5303,18 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1 object {
 };
 
 public type MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_MutatingWebhookConfigurationList
     io_k8s_api_admissionregistration_v1beta1_mutatingwebhookconfigurationlist;
     public MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_admissionregistration_v1beta1_mutatingwebhookconfigurationlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_admissionregistration_v1beta1_MutatingWebhookConfigurationList) {
         return self.io_k8s_api_admissionregistration_v1beta1_mutatingwebhookconfigurationlist;
@@ -4869,7 +5323,8 @@ public type MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -4881,8 +5336,9 @@ public type MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 
         }
     }
     public function withItems() returns MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1(
-                                                       self);
+        self.itemsBuilder[lengthof itemsBuilder] = new MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1()
+        ;
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -4900,7 +5356,7 @@ public type MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 
 };
 
 public type CronJobBuilderBatchV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1beta1_CronJob io_k8s_api_batch_v1beta1_cronjob;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -4908,8 +5364,11 @@ public type CronJobBuilderBatchV1beta1 object {
 
     public CronJobStatusBuilderBatchV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_batch_v1beta1_cronjob = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_batch_v1beta1_CronJob) {
         return self.io_k8s_api_batch_v1beta1_cronjob;
@@ -4918,7 +5377,8 @@ public type CronJobBuilderBatchV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -4930,7 +5390,8 @@ public type CronJobBuilderBatchV1beta1 object {
         }
     }
     public function withSpec() returns CronJobSpecBuilderBatchV1beta1 {
-        self.specBuilder = new CronJobSpecBuilderBatchV1beta1(self);
+        self.specBuilder = new CronJobSpecBuilderBatchV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             CronJobSpecBuilderBatchV1beta1 builder => {
                 return builder;
@@ -4942,7 +5403,8 @@ public type CronJobBuilderBatchV1beta1 object {
         }
     }
     public function withStatus() returns CronJobStatusBuilderBatchV1beta1 {
-        self.statusBuilder = new CronJobStatusBuilderBatchV1beta1(self);
+        self.statusBuilder = new CronJobStatusBuilderBatchV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             CronJobStatusBuilderBatchV1beta1 builder => {
                 return builder;
@@ -4966,10 +5428,13 @@ public type CronJobBuilderBatchV1beta1 object {
 };
 
 public type ContainerPortBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ContainerPort io_k8s_api_core_v1_containerport;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_containerport = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ContainerPort) {
         return self.io_k8s_api_core_v1_containerport;
@@ -5005,14 +5470,17 @@ public type ContainerPortBuilderCoreV1 object {
 };
 
 public type NetworkPolicyListBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_NetworkPolicyList io_k8s_api_extensions_v1beta1_networkpolicylist;
     public NetworkPolicyBuilderExtensionsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_networkpolicylist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_NetworkPolicyList) {
         return self.io_k8s_api_extensions_v1beta1_networkpolicylist;
@@ -5021,7 +5489,8 @@ public type NetworkPolicyListBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -5033,7 +5502,8 @@ public type NetworkPolicyListBuilderExtensionsV1beta1 object {
         }
     }
     public function withItems() returns NetworkPolicyBuilderExtensionsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new NetworkPolicyBuilderExtensionsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new NetworkPolicyBuilderExtensionsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -5049,10 +5519,13 @@ public type NetworkPolicyListBuilderExtensionsV1beta1 object {
 };
 
 public type ContainerStateTerminatedBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ContainerStateTerminated io_k8s_api_core_v1_containerstateterminated;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_containerstateterminated = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ContainerStateTerminated) {
         return self.io_k8s_api_core_v1_containerstateterminated;
@@ -5098,14 +5571,17 @@ public type ContainerStateTerminatedBuilderCoreV1 object {
 };
 
 public type ObjectMetaBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_ObjectMeta io_k8s_apimachinery_pkg_apis_meta_v1_objectmeta;
     public InitializersBuilderMetaV1? initializersBuilder;
 
     public OwnerReferenceBuilderMetaV1[] ownerReferencesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_objectmeta = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_ObjectMeta) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_objectmeta;
@@ -5114,7 +5590,8 @@ public type ObjectMetaBuilderMetaV1 object {
         return self.fluentBuilder;
     }
     public function withInitializers() returns InitializersBuilderMetaV1 {
-        self.initializersBuilder = new InitializersBuilderMetaV1(self);
+        self.initializersBuilder = new InitializersBuilderMetaV1();
+        self.initializersBuilder.init(self);
         match (self.initializersBuilder) {
             InitializersBuilderMetaV1 builder => {
                 return builder;
@@ -5126,7 +5603,8 @@ public type ObjectMetaBuilderMetaV1 object {
         }
     }
     public function withOwnerReferences() returns OwnerReferenceBuilderMetaV1 {
-        self.ownerReferencesBuilder[lengthof ownerReferencesBuilder] = new OwnerReferenceBuilderMetaV1(self);
+        self.ownerReferencesBuilder[lengthof ownerReferencesBuilder] = new OwnerReferenceBuilderMetaV1();
+        self.ownerReferencesBuilder[(lengthof ownerReferencesBuilder)].init(self);
         return self.ownerReferencesBuilder[(lengthof ownerReferencesBuilder) - 1];
     }
 
@@ -5215,10 +5693,13 @@ public type ObjectMetaBuilderMetaV1 object {
 };
 
 public type DaemonSetConditionBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DaemonSetCondition io_k8s_api_extensions_v1beta1_daemonsetcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_daemonsetcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DaemonSetCondition) {
         return self.io_k8s_api_extensions_v1beta1_daemonsetcondition;
@@ -5255,14 +5736,17 @@ public type DaemonSetConditionBuilderExtensionsV1beta1 object {
 };
 
 public type ControllerRevisionListBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_ControllerRevisionList io_k8s_api_apps_v1beta1_controllerrevisionlist;
     public ControllerRevisionBuilderAppsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_controllerrevisionlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_ControllerRevisionList) {
         return self.io_k8s_api_apps_v1beta1_controllerrevisionlist;
@@ -5271,7 +5755,8 @@ public type ControllerRevisionListBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -5283,7 +5768,8 @@ public type ControllerRevisionListBuilderAppsV1beta1 object {
         }
     }
     public function withItems() returns ControllerRevisionBuilderAppsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -5299,12 +5785,15 @@ public type ControllerRevisionListBuilderAppsV1beta1 object {
 };
 
 public type DaemonSetStatusBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DaemonSetStatus io_k8s_api_apps_v1beta2_daemonsetstatus;
     public DaemonSetConditionBuilderAppsV1beta2[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_daemonsetstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DaemonSetStatus) {
         return self.io_k8s_api_apps_v1beta2_daemonsetstatus;
@@ -5313,7 +5802,8 @@ public type DaemonSetStatusBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns DaemonSetConditionBuilderAppsV1beta2 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new DaemonSetConditionBuilderAppsV1beta2(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new DaemonSetConditionBuilderAppsV1beta2();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -5364,10 +5854,13 @@ public type DaemonSetStatusBuilderAppsV1beta2 object {
 };
 
 public type NetworkPolicyPortBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_NetworkPolicyPort io_k8s_api_extensions_v1beta1_networkpolicyport;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_networkpolicyport = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_NetworkPolicyPort) {
         return self.io_k8s_api_extensions_v1beta1_networkpolicyport;
@@ -5388,11 +5881,14 @@ public type NetworkPolicyPortBuilderExtensionsV1beta1 object {
 };
 
 public type ExternalDocumentationBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_ExternalDocumentation
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_externaldocumentation;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_externaldocumentation = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_ExternalDocumentation
                 ) {
@@ -5415,12 +5911,15 @@ public type ExternalDocumentationBuilderApiextensionsV1beta1 object {
 };
 
 public type FlexPersistentVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_FlexPersistentVolumeSource io_k8s_api_core_v1_flexpersistentvolumesource;
     public SecretReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_flexpersistentvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_FlexPersistentVolumeSource) {
         return self.io_k8s_api_core_v1_flexpersistentvolumesource;
@@ -5429,7 +5928,8 @@ public type FlexPersistentVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns SecretReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new SecretReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new SecretReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             SecretReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -5463,14 +5963,17 @@ public type FlexPersistentVolumeSourceBuilderCoreV1 object {
 };
 
 public type RoleBindingListBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_RoleBindingList io_k8s_api_rbac_v1_rolebindinglist;
     public RoleBindingBuilderRbacV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_rolebindinglist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_RoleBindingList) {
         return self.io_k8s_api_rbac_v1_rolebindinglist;
@@ -5479,7 +5982,8 @@ public type RoleBindingListBuilderRbacV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -5491,7 +5995,8 @@ public type RoleBindingListBuilderRbacV1 object {
         }
     }
     public function withItems() returns RoleBindingBuilderRbacV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new RoleBindingBuilderRbacV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new RoleBindingBuilderRbacV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -5507,12 +6012,15 @@ public type RoleBindingListBuilderRbacV1 object {
 };
 
 public type StorageClassBuilderStorageV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1_StorageClass io_k8s_api_storage_v1_storageclass;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_storage_v1_storageclass = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_storage_v1_StorageClass) {
         return self.io_k8s_api_storage_v1_storageclass;
@@ -5521,7 +6029,8 @@ public type StorageClassBuilderStorageV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -5580,12 +6089,15 @@ public type StorageClassBuilderStorageV1 object {
 };
 
 public type LimitRangeSpecBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_LimitRangeSpec io_k8s_api_core_v1_limitrangespec;
     public LimitRangeItemBuilderCoreV1[] limitsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_limitrangespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_LimitRangeSpec) {
         return self.io_k8s_api_core_v1_limitrangespec;
@@ -5594,16 +6106,20 @@ public type LimitRangeSpecBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withLimits() returns LimitRangeItemBuilderCoreV1 {
-        self.limitsBuilder[lengthof limitsBuilder] = new LimitRangeItemBuilderCoreV1(self);
+        self.limitsBuilder[lengthof limitsBuilder] = new LimitRangeItemBuilderCoreV1();
+        self.limitsBuilder[(lengthof limitsBuilder)].init(self);
         return self.limitsBuilder[(lengthof limitsBuilder) - 1];
     }
 };
 
 public type ReplicaSetConditionBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_ReplicaSetCondition io_k8s_api_extensions_v1beta1_replicasetcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_replicasetcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_ReplicaSetCondition) {
         return self.io_k8s_api_extensions_v1beta1_replicasetcondition;
@@ -5640,14 +6156,17 @@ public type ReplicaSetConditionBuilderExtensionsV1beta1 object {
 };
 
 public type PodListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodList io_k8s_api_core_v1_podlist;
     public PodBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodList) {
         return self.io_k8s_api_core_v1_podlist;
@@ -5656,7 +6175,8 @@ public type PodListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -5668,7 +6188,8 @@ public type PodListBuilderCoreV1 object {
         }
     }
     public function withItems() returns PodBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new PodBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new PodBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -5684,10 +6205,13 @@ public type PodListBuilderCoreV1 object {
 };
 
 public type AzureDiskVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_AzureDiskVolumeSource io_k8s_api_core_v1_azurediskvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_azurediskvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_AzureDiskVolumeSource) {
         return self.io_k8s_api_core_v1_azurediskvolumesource;
@@ -5728,14 +6252,17 @@ public type AzureDiskVolumeSourceBuilderCoreV1 object {
 };
 
 public type PodSecurityPolicyBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_PodSecurityPolicy io_k8s_api_policy_v1beta1_podsecuritypolicy;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public PodSecurityPolicySpecBuilderPolicyV1beta1? specBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_podsecuritypolicy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_PodSecurityPolicy) {
         return self.io_k8s_api_policy_v1beta1_podsecuritypolicy;
@@ -5744,7 +6271,8 @@ public type PodSecurityPolicyBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -5756,7 +6284,8 @@ public type PodSecurityPolicyBuilderPolicyV1beta1 object {
         }
     }
     public function withSpec() returns PodSecurityPolicySpecBuilderPolicyV1beta1 {
-        self.specBuilder = new PodSecurityPolicySpecBuilderPolicyV1beta1(self);
+        self.specBuilder = new PodSecurityPolicySpecBuilderPolicyV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             PodSecurityPolicySpecBuilderPolicyV1beta1 builder => {
                 return builder;
@@ -5780,12 +6309,15 @@ public type PodSecurityPolicyBuilderPolicyV1beta1 object {
 };
 
 public type DeploymentRollbackBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DeploymentRollback io_k8s_api_extensions_v1beta1_deploymentrollback;
     public RollbackConfigBuilderExtensionsV1beta1? rollbackToBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_deploymentrollback = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DeploymentRollback) {
         return self.io_k8s_api_extensions_v1beta1_deploymentrollback;
@@ -5794,7 +6326,8 @@ public type DeploymentRollbackBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRollbackTo() returns RollbackConfigBuilderExtensionsV1beta1 {
-        self.rollbackToBuilder = new RollbackConfigBuilderExtensionsV1beta1(self);
+        self.rollbackToBuilder = new RollbackConfigBuilderExtensionsV1beta1();
+        self.rollbackToBuilder.init(self);
         match (self.rollbackToBuilder) {
             RollbackConfigBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -5829,10 +6362,13 @@ public type DeploymentRollbackBuilderExtensionsV1beta1 object {
 };
 
 public type InfoBuilderPkgVersion object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_version_Info io_k8s_apimachinery_pkg_version_info;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_version_info = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_version_Info) {
         return self.io_k8s_apimachinery_pkg_version_info;
@@ -5888,10 +6424,13 @@ public type InfoBuilderPkgVersion object {
 };
 
 public type ResourceAttributesBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_ResourceAttributes io_k8s_api_authorization_v1_resourceattributes;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_resourceattributes = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_ResourceAttributes) {
         return self.io_k8s_api_authorization_v1_resourceattributes;
@@ -5937,12 +6476,15 @@ public type ResourceAttributesBuilderAuthorizationV1 object {
 };
 
 public type ReplicationControllerStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ReplicationControllerStatus io_k8s_api_core_v1_replicationcontrollerstatus;
     public ReplicationControllerConditionBuilderCoreV1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_replicationcontrollerstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ReplicationControllerStatus) {
         return self.io_k8s_api_core_v1_replicationcontrollerstatus;
@@ -5951,7 +6493,8 @@ public type ReplicationControllerStatusBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns ReplicationControllerConditionBuilderCoreV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicationControllerConditionBuilderCoreV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicationControllerConditionBuilderCoreV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -5983,11 +6526,14 @@ public type ReplicationControllerStatusBuilderCoreV1 object {
 };
 
 public type RollingUpdateStatefulSetStrategyBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_RollingUpdateStatefulSetStrategy
     io_k8s_api_apps_v1beta2_rollingupdatestatefulsetstrategy;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_rollingupdatestatefulsetstrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_RollingUpdateStatefulSetStrategy) {
         return self.io_k8s_api_apps_v1beta2_rollingupdatestatefulsetstrategy;
@@ -6003,12 +6549,15 @@ public type RollingUpdateStatefulSetStrategyBuilderAppsV1beta2 object {
 };
 
 public type StorageOSPersistentVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_StorageOSPersistentVolumeSource io_k8s_api_core_v1_storageospersistentvolumesource;
     public ObjectReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_storageospersistentvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_StorageOSPersistentVolumeSource) {
         return self.io_k8s_api_core_v1_storageospersistentvolumesource;
@@ -6017,7 +6566,8 @@ public type StorageOSPersistentVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns ObjectReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new ObjectReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new ObjectReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             ObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -6051,7 +6601,7 @@ public type StorageOSPersistentVolumeSourceBuilderCoreV1 object {
 };
 
 public type DaemonSetBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DaemonSet io_k8s_api_apps_v1beta2_daemonset;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -6059,8 +6609,11 @@ public type DaemonSetBuilderAppsV1beta2 object {
 
     public DaemonSetStatusBuilderAppsV1beta2? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_daemonset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DaemonSet) {
         return self.io_k8s_api_apps_v1beta2_daemonset;
@@ -6069,7 +6622,8 @@ public type DaemonSetBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -6081,7 +6635,8 @@ public type DaemonSetBuilderAppsV1beta2 object {
         }
     }
     public function withSpec() returns DaemonSetSpecBuilderAppsV1beta2 {
-        self.specBuilder = new DaemonSetSpecBuilderAppsV1beta2(self);
+        self.specBuilder = new DaemonSetSpecBuilderAppsV1beta2();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             DaemonSetSpecBuilderAppsV1beta2 builder => {
                 return builder;
@@ -6093,7 +6648,8 @@ public type DaemonSetBuilderAppsV1beta2 object {
         }
     }
     public function withStatus() returns DaemonSetStatusBuilderAppsV1beta2 {
-        self.statusBuilder = new DaemonSetStatusBuilderAppsV1beta2(self);
+        self.statusBuilder = new DaemonSetStatusBuilderAppsV1beta2();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             DaemonSetStatusBuilderAppsV1beta2 builder => {
                 return builder;
@@ -6117,7 +6673,7 @@ public type DaemonSetBuilderAppsV1beta2 object {
 };
 
 public type HorizontalPodAutoscalerBuilderAutoscalingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_HorizontalPodAutoscaler io_k8s_api_autoscaling_v1_horizontalpodautoscaler;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -6125,8 +6681,11 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV1 object {
 
     public HorizontalPodAutoscalerStatusBuilderAutoscalingV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v1_horizontalpodautoscaler = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v1_HorizontalPodAutoscaler) {
         return self.io_k8s_api_autoscaling_v1_horizontalpodautoscaler;
@@ -6135,7 +6694,8 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -6147,7 +6707,8 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV1 object {
         }
     }
     public function withSpec() returns HorizontalPodAutoscalerSpecBuilderAutoscalingV1 {
-        self.specBuilder = new HorizontalPodAutoscalerSpecBuilderAutoscalingV1(self);
+        self.specBuilder = new HorizontalPodAutoscalerSpecBuilderAutoscalingV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             HorizontalPodAutoscalerSpecBuilderAutoscalingV1 builder => {
                 return builder;
@@ -6159,7 +6720,8 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV1 object {
         }
     }
     public function withStatus() returns HorizontalPodAutoscalerStatusBuilderAutoscalingV1 {
-        self.statusBuilder = new HorizontalPodAutoscalerStatusBuilderAutoscalingV1(self);
+        self.statusBuilder = new HorizontalPodAutoscalerStatusBuilderAutoscalingV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             HorizontalPodAutoscalerStatusBuilderAutoscalingV1 builder => {
                 return builder;
@@ -6183,12 +6745,15 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV1 object {
 };
 
 public type TokenReviewStatusBuilderAuthenticationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1beta1_TokenReviewStatus io_k8s_api_authentication_v1beta1_tokenreviewstatus;
     public UserInfoBuilderAuthenticationV1beta1? userBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authentication_v1beta1_tokenreviewstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authentication_v1beta1_TokenReviewStatus) {
         return self.io_k8s_api_authentication_v1beta1_tokenreviewstatus;
@@ -6197,7 +6762,8 @@ public type TokenReviewStatusBuilderAuthenticationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withUser() returns UserInfoBuilderAuthenticationV1beta1 {
-        self.userBuilder = new UserInfoBuilderAuthenticationV1beta1(self);
+        self.userBuilder = new UserInfoBuilderAuthenticationV1beta1();
+        self.userBuilder.init(self);
         match (self.userBuilder) {
             UserInfoBuilderAuthenticationV1beta1 builder => {
                 return builder;
@@ -6221,10 +6787,13 @@ public type TokenReviewStatusBuilderAuthenticationV1beta1 object {
 };
 
 public type CinderVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_CinderVolumeSource io_k8s_api_core_v1_cindervolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_cindervolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_CinderVolumeSource) {
         return self.io_k8s_api_core_v1_cindervolumesource;
@@ -6250,14 +6819,17 @@ public type CinderVolumeSourceBuilderCoreV1 object {
 };
 
 public type ConfigMapListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ConfigMapList io_k8s_api_core_v1_configmaplist;
     public ConfigMapBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_configmaplist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ConfigMapList) {
         return self.io_k8s_api_core_v1_configmaplist;
@@ -6266,7 +6838,8 @@ public type ConfigMapListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -6278,7 +6851,8 @@ public type ConfigMapListBuilderCoreV1 object {
         }
     }
     public function withItems() returns ConfigMapBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ConfigMapBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ConfigMapBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -6294,7 +6868,7 @@ public type ConfigMapListBuilderCoreV1 object {
 };
 
 public type EventBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Event io_k8s_api_core_v1_event;
     public ObjectReferenceBuilderCoreV1? involvedObjectBuilder;
 
@@ -6306,8 +6880,11 @@ public type EventBuilderCoreV1 object {
 
     public EventSourceBuilderCoreV1? sourceBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_event = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Event) {
         return self.io_k8s_api_core_v1_event;
@@ -6316,7 +6893,8 @@ public type EventBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withInvolvedObject() returns ObjectReferenceBuilderCoreV1 {
-        self.involvedObjectBuilder = new ObjectReferenceBuilderCoreV1(self);
+        self.involvedObjectBuilder = new ObjectReferenceBuilderCoreV1();
+        self.involvedObjectBuilder.init(self);
         match (self.involvedObjectBuilder) {
             ObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -6328,7 +6906,8 @@ public type EventBuilderCoreV1 object {
         }
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -6340,7 +6919,8 @@ public type EventBuilderCoreV1 object {
         }
     }
     public function withRelated() returns ObjectReferenceBuilderCoreV1 {
-        self.relatedBuilder = new ObjectReferenceBuilderCoreV1(self);
+        self.relatedBuilder = new ObjectReferenceBuilderCoreV1();
+        self.relatedBuilder.init(self);
         match (self.relatedBuilder) {
             ObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -6352,7 +6932,8 @@ public type EventBuilderCoreV1 object {
         }
     }
     public function withSeries() returns EventSeriesBuilderCoreV1 {
-        self.seriesBuilder = new EventSeriesBuilderCoreV1(self);
+        self.seriesBuilder = new EventSeriesBuilderCoreV1();
+        self.seriesBuilder.init(self);
         match (self.seriesBuilder) {
             EventSeriesBuilderCoreV1 builder => {
                 return builder;
@@ -6364,7 +6945,8 @@ public type EventBuilderCoreV1 object {
         }
     }
     public function withSource() returns EventSourceBuilderCoreV1 {
-        self.sourceBuilder = new EventSourceBuilderCoreV1(self);
+        self.sourceBuilder = new EventSourceBuilderCoreV1();
+        self.sourceBuilder.init(self);
         match (self.sourceBuilder) {
             EventSourceBuilderCoreV1 builder => {
                 return builder;
@@ -6438,11 +7020,14 @@ public type EventBuilderCoreV1 object {
 };
 
 public type HorizontalPodAutoscalerConditionBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscalerCondition
     io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalercondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalercondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscalerCondition) {
         return self.io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalercondition;
@@ -6479,10 +7064,13 @@ public type HorizontalPodAutoscalerConditionBuilderAutoscalingV2beta1 object {
 };
 
 public type AllowedHostPathBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_AllowedHostPath io_k8s_api_policy_v1beta1_allowedhostpath;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_allowedhostpath = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_AllowedHostPath) {
         return self.io_k8s_api_policy_v1beta1_allowedhostpath;
@@ -6498,12 +7086,15 @@ public type AllowedHostPathBuilderPolicyV1beta1 object {
 };
 
 public type ISCSIPersistentVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ISCSIPersistentVolumeSource io_k8s_api_core_v1_iscsipersistentvolumesource;
     public SecretReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_iscsipersistentvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ISCSIPersistentVolumeSource) {
         return self.io_k8s_api_core_v1_iscsipersistentvolumesource;
@@ -6512,7 +7103,8 @@ public type ISCSIPersistentVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns SecretReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new SecretReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new SecretReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             SecretReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -6582,14 +7174,17 @@ public type ISCSIPersistentVolumeSourceBuilderCoreV1 object {
 };
 
 public type ReplicaSetListBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_ReplicaSetList io_k8s_api_apps_v1_replicasetlist;
     public ReplicaSetBuilderAppsV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_replicasetlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_ReplicaSetList) {
         return self.io_k8s_api_apps_v1_replicasetlist;
@@ -6598,7 +7193,8 @@ public type ReplicaSetListBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -6610,7 +7206,8 @@ public type ReplicaSetListBuilderAppsV1 object {
         }
     }
     public function withItems() returns ReplicaSetBuilderAppsV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderAppsV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderAppsV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -6626,10 +7223,13 @@ public type ReplicaSetListBuilderAppsV1 object {
 };
 
 public type OwnerReferenceBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_OwnerReference io_k8s_apimachinery_pkg_apis_meta_v1_ownerreference;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_ownerreference = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_OwnerReference) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_ownerreference;
@@ -6670,14 +7270,17 @@ public type OwnerReferenceBuilderMetaV1 object {
 };
 
 public type ComponentStatusListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ComponentStatusList io_k8s_api_core_v1_componentstatuslist;
     public ComponentStatusBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_componentstatuslist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ComponentStatusList) {
         return self.io_k8s_api_core_v1_componentstatuslist;
@@ -6686,7 +7289,8 @@ public type ComponentStatusListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -6698,7 +7302,8 @@ public type ComponentStatusListBuilderCoreV1 object {
         }
     }
     public function withItems() returns ComponentStatusBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ComponentStatusBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ComponentStatusBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -6714,10 +7319,13 @@ public type ComponentStatusListBuilderCoreV1 object {
 };
 
 public type ContainerImageBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ContainerImage io_k8s_api_core_v1_containerimage;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_containerimage = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ContainerImage) {
         return self.io_k8s_api_core_v1_containerimage;
@@ -6742,7 +7350,7 @@ public type ContainerImageBuilderCoreV1 object {
 };
 
 public type StatefulSetSpecBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_StatefulSetSpec io_k8s_api_apps_v1beta2_statefulsetspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
@@ -6752,8 +7360,11 @@ public type StatefulSetSpecBuilderAppsV1beta2 object {
 
     public PersistentVolumeClaimBuilderCoreV1[] volumeClaimTemplatesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_statefulsetspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_StatefulSetSpec) {
         return self.io_k8s_api_apps_v1beta2_statefulsetspec;
@@ -6762,7 +7373,8 @@ public type StatefulSetSpecBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -6774,7 +7386,8 @@ public type StatefulSetSpecBuilderAppsV1beta2 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -6786,7 +7399,8 @@ public type StatefulSetSpecBuilderAppsV1beta2 object {
         }
     }
     public function withUpdateStrategy() returns StatefulSetUpdateStrategyBuilderAppsV1beta2 {
-        self.updateStrategyBuilder = new StatefulSetUpdateStrategyBuilderAppsV1beta2(self);
+        self.updateStrategyBuilder = new StatefulSetUpdateStrategyBuilderAppsV1beta2();
+        self.updateStrategyBuilder.init(self);
         match (self.updateStrategyBuilder) {
             StatefulSetUpdateStrategyBuilderAppsV1beta2 builder => {
                 return builder;
@@ -6799,7 +7413,8 @@ public type StatefulSetSpecBuilderAppsV1beta2 object {
     }
     public function withVolumeClaimTemplates() returns PersistentVolumeClaimBuilderCoreV1 {
         self.volumeClaimTemplatesBuilder[lengthof volumeClaimTemplatesBuilder] = new PersistentVolumeClaimBuilderCoreV1(
-                                                                                     self);
+        );
+        self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder)].init(self);
         return self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder) - 1];
     }
 
@@ -6825,10 +7440,13 @@ public type StatefulSetSpecBuilderAppsV1beta2 object {
 };
 
 public type PreconditionsBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_Preconditions io_k8s_apimachinery_pkg_apis_meta_v1_preconditions;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_preconditions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_Preconditions) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_preconditions;
@@ -6844,14 +7462,17 @@ public type PreconditionsBuilderMetaV1 object {
 };
 
 public type ReplicaSetSpecBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_ReplicaSetSpec io_k8s_api_apps_v1_replicasetspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
     public PodTemplateSpecBuilderCoreV1? templateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_replicasetspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_ReplicaSetSpec) {
         return self.io_k8s_api_apps_v1_replicasetspec;
@@ -6860,7 +7481,8 @@ public type ReplicaSetSpecBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -6872,7 +7494,8 @@ public type ReplicaSetSpecBuilderAppsV1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -6896,10 +7519,13 @@ public type ReplicaSetSpecBuilderAppsV1 object {
 };
 
 public type AzureFileVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_AzureFileVolumeSource io_k8s_api_core_v1_azurefilevolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_azurefilevolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_AzureFileVolumeSource) {
         return self.io_k8s_api_core_v1_azurefilevolumesource;
@@ -6925,15 +7551,18 @@ public type AzureFileVolumeSourceBuilderCoreV1 object {
 };
 
 public type ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_ValidatingWebhookConfigurationList
     io_k8s_api_admissionregistration_v1beta1_validatingwebhookconfigurationlist;
     public ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_admissionregistration_v1beta1_validatingwebhookconfigurationlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_admissionregistration_v1beta1_ValidatingWebhookConfigurationList) {
         return self.io_k8s_api_admissionregistration_v1beta1_validatingwebhookconfigurationlist;
@@ -6942,7 +7571,8 @@ public type ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -6955,7 +7585,8 @@ public type ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta
     }
     public function withItems() returns ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1
-        (self);
+        ();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -6973,10 +7604,13 @@ public type ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta
 };
 
 public type RollbackConfigBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_RollbackConfig io_k8s_api_extensions_v1beta1_rollbackconfig;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_rollbackconfig = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_RollbackConfig) {
         return self.io_k8s_api_extensions_v1beta1_rollbackconfig;
@@ -6992,10 +7626,13 @@ public type RollbackConfigBuilderExtensionsV1beta1 object {
 };
 
 public type AllowedHostPathBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_AllowedHostPath io_k8s_api_extensions_v1beta1_allowedhostpath;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_allowedhostpath = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_AllowedHostPath) {
         return self.io_k8s_api_extensions_v1beta1_allowedhostpath;
@@ -7011,14 +7648,17 @@ public type AllowedHostPathBuilderExtensionsV1beta1 object {
 };
 
 public type LimitRangeListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_LimitRangeList io_k8s_api_core_v1_limitrangelist;
     public LimitRangeBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_limitrangelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_LimitRangeList) {
         return self.io_k8s_api_core_v1_limitrangelist;
@@ -7027,7 +7667,8 @@ public type LimitRangeListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -7039,7 +7680,8 @@ public type LimitRangeListBuilderCoreV1 object {
         }
     }
     public function withItems() returns LimitRangeBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new LimitRangeBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new LimitRangeBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -7055,14 +7697,17 @@ public type LimitRangeListBuilderCoreV1 object {
 };
 
 public type VolumeAttachmentListBuilderStorageV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_VolumeAttachmentList io_k8s_api_storage_v1beta1_volumeattachmentlist;
     public VolumeAttachmentBuilderStorageV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_storage_v1beta1_volumeattachmentlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_storage_v1beta1_VolumeAttachmentList) {
         return self.io_k8s_api_storage_v1beta1_volumeattachmentlist;
@@ -7071,7 +7716,8 @@ public type VolumeAttachmentListBuilderStorageV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -7083,7 +7729,8 @@ public type VolumeAttachmentListBuilderStorageV1beta1 object {
         }
     }
     public function withItems() returns VolumeAttachmentBuilderStorageV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new VolumeAttachmentBuilderStorageV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new VolumeAttachmentBuilderStorageV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -7099,12 +7746,15 @@ public type VolumeAttachmentListBuilderStorageV1beta1 object {
 };
 
 public type DeploymentStatusBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_DeploymentStatus io_k8s_api_apps_v1beta1_deploymentstatus;
     public DeploymentConditionBuilderAppsV1beta1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_deploymentstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_DeploymentStatus) {
         return self.io_k8s_api_apps_v1beta1_deploymentstatus;
@@ -7113,7 +7763,8 @@ public type DeploymentStatusBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns DeploymentConditionBuilderAppsV1beta1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderAppsV1beta1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderAppsV1beta1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -7154,14 +7805,17 @@ public type DeploymentStatusBuilderAppsV1beta1 object {
 };
 
 public type NodeListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeList io_k8s_api_core_v1_nodelist;
     public NodeBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeList) {
         return self.io_k8s_api_core_v1_nodelist;
@@ -7170,7 +7824,8 @@ public type NodeListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -7182,7 +7837,8 @@ public type NodeListBuilderCoreV1 object {
         }
     }
     public function withItems() returns NodeBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new NodeBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new NodeBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -7198,7 +7854,7 @@ public type NodeListBuilderCoreV1 object {
 };
 
 public type StatefulSetSpecBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_StatefulSetSpec io_k8s_api_apps_v1beta1_statefulsetspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
@@ -7208,8 +7864,11 @@ public type StatefulSetSpecBuilderAppsV1beta1 object {
 
     public PersistentVolumeClaimBuilderCoreV1[] volumeClaimTemplatesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_statefulsetspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_StatefulSetSpec) {
         return self.io_k8s_api_apps_v1beta1_statefulsetspec;
@@ -7218,7 +7877,8 @@ public type StatefulSetSpecBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -7230,7 +7890,8 @@ public type StatefulSetSpecBuilderAppsV1beta1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -7242,7 +7903,8 @@ public type StatefulSetSpecBuilderAppsV1beta1 object {
         }
     }
     public function withUpdateStrategy() returns StatefulSetUpdateStrategyBuilderAppsV1beta1 {
-        self.updateStrategyBuilder = new StatefulSetUpdateStrategyBuilderAppsV1beta1(self);
+        self.updateStrategyBuilder = new StatefulSetUpdateStrategyBuilderAppsV1beta1();
+        self.updateStrategyBuilder.init(self);
         match (self.updateStrategyBuilder) {
             StatefulSetUpdateStrategyBuilderAppsV1beta1 builder => {
                 return builder;
@@ -7255,7 +7917,8 @@ public type StatefulSetSpecBuilderAppsV1beta1 object {
     }
     public function withVolumeClaimTemplates() returns PersistentVolumeClaimBuilderCoreV1 {
         self.volumeClaimTemplatesBuilder[lengthof volumeClaimTemplatesBuilder] = new PersistentVolumeClaimBuilderCoreV1(
-                                                                                     self);
+        );
+        self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder)].init(self);
         return self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder) - 1];
     }
 
@@ -7281,7 +7944,7 @@ public type StatefulSetSpecBuilderAppsV1beta1 object {
 };
 
 public type DeploymentSpecBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DeploymentSpec io_k8s_api_apps_v1_deploymentspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
@@ -7289,8 +7952,11 @@ public type DeploymentSpecBuilderAppsV1 object {
 
     public PodTemplateSpecBuilderCoreV1? templateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_deploymentspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DeploymentSpec) {
         return self.io_k8s_api_apps_v1_deploymentspec;
@@ -7299,7 +7965,8 @@ public type DeploymentSpecBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -7311,7 +7978,8 @@ public type DeploymentSpecBuilderAppsV1 object {
         }
     }
     public function withStrategy() returns DeploymentStrategyBuilderAppsV1 {
-        self.strategyBuilder = new DeploymentStrategyBuilderAppsV1(self);
+        self.strategyBuilder = new DeploymentStrategyBuilderAppsV1();
+        self.strategyBuilder.init(self);
         match (self.strategyBuilder) {
             DeploymentStrategyBuilderAppsV1 builder => {
                 return builder;
@@ -7323,7 +7991,8 @@ public type DeploymentSpecBuilderAppsV1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -7362,14 +8031,17 @@ public type DeploymentSpecBuilderAppsV1 object {
 };
 
 public type VolumeAttachmentStatusBuilderStorageV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_VolumeAttachmentStatus io_k8s_api_storage_v1beta1_volumeattachmentstatus;
     public VolumeErrorBuilderStorageV1beta1? attachErrorBuilder;
 
     public VolumeErrorBuilderStorageV1beta1? detachErrorBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_storage_v1beta1_volumeattachmentstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_storage_v1beta1_VolumeAttachmentStatus) {
         return self.io_k8s_api_storage_v1beta1_volumeattachmentstatus;
@@ -7378,7 +8050,8 @@ public type VolumeAttachmentStatusBuilderStorageV1beta1 object {
         return self.fluentBuilder;
     }
     public function withAttachError() returns VolumeErrorBuilderStorageV1beta1 {
-        self.attachErrorBuilder = new VolumeErrorBuilderStorageV1beta1(self);
+        self.attachErrorBuilder = new VolumeErrorBuilderStorageV1beta1();
+        self.attachErrorBuilder.init(self);
         match (self.attachErrorBuilder) {
             VolumeErrorBuilderStorageV1beta1 builder => {
                 return builder;
@@ -7390,7 +8063,8 @@ public type VolumeAttachmentStatusBuilderStorageV1beta1 object {
         }
     }
     public function withDetachError() returns VolumeErrorBuilderStorageV1beta1 {
-        self.detachErrorBuilder = new VolumeErrorBuilderStorageV1beta1(self);
+        self.detachErrorBuilder = new VolumeErrorBuilderStorageV1beta1();
+        self.detachErrorBuilder.init(self);
         match (self.detachErrorBuilder) {
             VolumeErrorBuilderStorageV1beta1 builder => {
                 return builder;
@@ -7415,10 +8089,13 @@ public type VolumeAttachmentStatusBuilderStorageV1beta1 object {
 };
 
 public type GlusterfsVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_GlusterfsVolumeSource io_k8s_api_core_v1_glusterfsvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_glusterfsvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_GlusterfsVolumeSource) {
         return self.io_k8s_api_core_v1_glusterfsvolumesource;
@@ -7444,7 +8121,7 @@ public type GlusterfsVolumeSourceBuilderCoreV1 object {
 };
 
 public type DeploymentBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_Deployment io_k8s_api_apps_v1_deployment;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -7452,8 +8129,11 @@ public type DeploymentBuilderAppsV1 object {
 
     public DeploymentStatusBuilderAppsV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_deployment = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_Deployment) {
         return self.io_k8s_api_apps_v1_deployment;
@@ -7462,7 +8142,8 @@ public type DeploymentBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -7474,7 +8155,8 @@ public type DeploymentBuilderAppsV1 object {
         }
     }
     public function withSpec() returns DeploymentSpecBuilderAppsV1 {
-        self.specBuilder = new DeploymentSpecBuilderAppsV1(self);
+        self.specBuilder = new DeploymentSpecBuilderAppsV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             DeploymentSpecBuilderAppsV1 builder => {
                 return builder;
@@ -7486,7 +8168,8 @@ public type DeploymentBuilderAppsV1 object {
         }
     }
     public function withStatus() returns DeploymentStatusBuilderAppsV1 {
-        self.statusBuilder = new DeploymentStatusBuilderAppsV1(self);
+        self.statusBuilder = new DeploymentStatusBuilderAppsV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             DeploymentStatusBuilderAppsV1 builder => {
                 return builder;
@@ -7510,14 +8193,17 @@ public type DeploymentBuilderAppsV1 object {
 };
 
 public type RoleBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_Role io_k8s_api_rbac_v1beta1_role;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public PolicyRuleBuilderRbacV1beta1[] rulesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_role = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_Role) {
         return self.io_k8s_api_rbac_v1beta1_role;
@@ -7526,7 +8212,8 @@ public type RoleBuilderRbacV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -7538,7 +8225,8 @@ public type RoleBuilderRbacV1beta1 object {
         }
     }
     public function withRules() returns PolicyRuleBuilderRbacV1beta1 {
-        self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1beta1(self);
+        self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1beta1();
+        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
 
@@ -7554,12 +8242,15 @@ public type RoleBuilderRbacV1beta1 object {
 };
 
 public type VolumeNodeAffinityBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_VolumeNodeAffinity io_k8s_api_core_v1_volumenodeaffinity;
     public NodeSelectorBuilderCoreV1? requiredBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_volumenodeaffinity = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_VolumeNodeAffinity) {
         return self.io_k8s_api_core_v1_volumenodeaffinity;
@@ -7568,7 +8259,8 @@ public type VolumeNodeAffinityBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withRequired() returns NodeSelectorBuilderCoreV1 {
-        self.requiredBuilder = new NodeSelectorBuilderCoreV1(self);
+        self.requiredBuilder = new NodeSelectorBuilderCoreV1();
+        self.requiredBuilder.init(self);
         match (self.requiredBuilder) {
             NodeSelectorBuilderCoreV1 builder => {
                 return builder;
@@ -7582,10 +8274,13 @@ public type VolumeNodeAffinityBuilderCoreV1 object {
 };
 
 public type DaemonSetConditionBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DaemonSetCondition io_k8s_api_apps_v1_daemonsetcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_daemonsetcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DaemonSetCondition) {
         return self.io_k8s_api_apps_v1_daemonsetcondition;
@@ -7621,10 +8316,13 @@ public type DaemonSetConditionBuilderAppsV1 object {
 };
 
 public type NonResourceAttributesBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_NonResourceAttributes io_k8s_api_authorization_v1_nonresourceattributes;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_nonresourceattributes = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_NonResourceAttributes) {
         return self.io_k8s_api_authorization_v1_nonresourceattributes;
@@ -7645,7 +8343,7 @@ public type NonResourceAttributesBuilderAuthorizationV1 object {
 };
 
 public type VolumeBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Volume io_k8s_api_core_v1_volume;
     public AWSElasticBlockStoreVolumeSourceBuilderCoreV1? awsElasticBlockStoreBuilder;
 
@@ -7701,8 +8399,11 @@ public type VolumeBuilderCoreV1 object {
 
     public VsphereVirtualDiskVolumeSourceBuilderCoreV1? vsphereVolumeBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_volume = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Volume) {
         return self.io_k8s_api_core_v1_volume;
@@ -7711,7 +8412,8 @@ public type VolumeBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withAwsElasticBlockStore() returns AWSElasticBlockStoreVolumeSourceBuilderCoreV1 {
-        self.awsElasticBlockStoreBuilder = new AWSElasticBlockStoreVolumeSourceBuilderCoreV1(self);
+        self.awsElasticBlockStoreBuilder = new AWSElasticBlockStoreVolumeSourceBuilderCoreV1();
+        self.awsElasticBlockStoreBuilder.init(self);
         match (self.awsElasticBlockStoreBuilder) {
             AWSElasticBlockStoreVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7723,7 +8425,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withAzureDisk() returns AzureDiskVolumeSourceBuilderCoreV1 {
-        self.azureDiskBuilder = new AzureDiskVolumeSourceBuilderCoreV1(self);
+        self.azureDiskBuilder = new AzureDiskVolumeSourceBuilderCoreV1();
+        self.azureDiskBuilder.init(self);
         match (self.azureDiskBuilder) {
             AzureDiskVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7735,7 +8438,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withAzureFile() returns AzureFileVolumeSourceBuilderCoreV1 {
-        self.azureFileBuilder = new AzureFileVolumeSourceBuilderCoreV1(self);
+        self.azureFileBuilder = new AzureFileVolumeSourceBuilderCoreV1();
+        self.azureFileBuilder.init(self);
         match (self.azureFileBuilder) {
             AzureFileVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7747,7 +8451,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withCephfs() returns CephFSVolumeSourceBuilderCoreV1 {
-        self.cephfsBuilder = new CephFSVolumeSourceBuilderCoreV1(self);
+        self.cephfsBuilder = new CephFSVolumeSourceBuilderCoreV1();
+        self.cephfsBuilder.init(self);
         match (self.cephfsBuilder) {
             CephFSVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7759,7 +8464,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withCinder() returns CinderVolumeSourceBuilderCoreV1 {
-        self.cinderBuilder = new CinderVolumeSourceBuilderCoreV1(self);
+        self.cinderBuilder = new CinderVolumeSourceBuilderCoreV1();
+        self.cinderBuilder.init(self);
         match (self.cinderBuilder) {
             CinderVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7771,7 +8477,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withConfigMap() returns ConfigMapVolumeSourceBuilderCoreV1 {
-        self.configMapBuilder = new ConfigMapVolumeSourceBuilderCoreV1(self);
+        self.configMapBuilder = new ConfigMapVolumeSourceBuilderCoreV1();
+        self.configMapBuilder.init(self);
         match (self.configMapBuilder) {
             ConfigMapVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7783,7 +8490,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withDownwardAPI() returns DownwardAPIVolumeSourceBuilderCoreV1 {
-        self.downwardAPIBuilder = new DownwardAPIVolumeSourceBuilderCoreV1(self);
+        self.downwardAPIBuilder = new DownwardAPIVolumeSourceBuilderCoreV1();
+        self.downwardAPIBuilder.init(self);
         match (self.downwardAPIBuilder) {
             DownwardAPIVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7795,7 +8503,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withEmptyDir() returns EmptyDirVolumeSourceBuilderCoreV1 {
-        self.emptyDirBuilder = new EmptyDirVolumeSourceBuilderCoreV1(self);
+        self.emptyDirBuilder = new EmptyDirVolumeSourceBuilderCoreV1();
+        self.emptyDirBuilder.init(self);
         match (self.emptyDirBuilder) {
             EmptyDirVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7807,7 +8516,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withFc() returns FCVolumeSourceBuilderCoreV1 {
-        self.fcBuilder = new FCVolumeSourceBuilderCoreV1(self);
+        self.fcBuilder = new FCVolumeSourceBuilderCoreV1();
+        self.fcBuilder.init(self);
         match (self.fcBuilder) {
             FCVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7819,7 +8529,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withFlexVolume() returns FlexVolumeSourceBuilderCoreV1 {
-        self.flexVolumeBuilder = new FlexVolumeSourceBuilderCoreV1(self);
+        self.flexVolumeBuilder = new FlexVolumeSourceBuilderCoreV1();
+        self.flexVolumeBuilder.init(self);
         match (self.flexVolumeBuilder) {
             FlexVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7831,7 +8542,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withFlocker() returns FlockerVolumeSourceBuilderCoreV1 {
-        self.flockerBuilder = new FlockerVolumeSourceBuilderCoreV1(self);
+        self.flockerBuilder = new FlockerVolumeSourceBuilderCoreV1();
+        self.flockerBuilder.init(self);
         match (self.flockerBuilder) {
             FlockerVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7843,7 +8555,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withGcePersistentDisk() returns GCEPersistentDiskVolumeSourceBuilderCoreV1 {
-        self.gcePersistentDiskBuilder = new GCEPersistentDiskVolumeSourceBuilderCoreV1(self);
+        self.gcePersistentDiskBuilder = new GCEPersistentDiskVolumeSourceBuilderCoreV1();
+        self.gcePersistentDiskBuilder.init(self);
         match (self.gcePersistentDiskBuilder) {
             GCEPersistentDiskVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7855,7 +8568,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withGitRepo() returns GitRepoVolumeSourceBuilderCoreV1 {
-        self.gitRepoBuilder = new GitRepoVolumeSourceBuilderCoreV1(self);
+        self.gitRepoBuilder = new GitRepoVolumeSourceBuilderCoreV1();
+        self.gitRepoBuilder.init(self);
         match (self.gitRepoBuilder) {
             GitRepoVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7867,7 +8581,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withGlusterfs() returns GlusterfsVolumeSourceBuilderCoreV1 {
-        self.glusterfsBuilder = new GlusterfsVolumeSourceBuilderCoreV1(self);
+        self.glusterfsBuilder = new GlusterfsVolumeSourceBuilderCoreV1();
+        self.glusterfsBuilder.init(self);
         match (self.glusterfsBuilder) {
             GlusterfsVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7879,7 +8594,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withHostPath() returns HostPathVolumeSourceBuilderCoreV1 {
-        self.hostPathBuilder = new HostPathVolumeSourceBuilderCoreV1(self);
+        self.hostPathBuilder = new HostPathVolumeSourceBuilderCoreV1();
+        self.hostPathBuilder.init(self);
         match (self.hostPathBuilder) {
             HostPathVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7891,7 +8607,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withIscsi() returns ISCSIVolumeSourceBuilderCoreV1 {
-        self.iscsiBuilder = new ISCSIVolumeSourceBuilderCoreV1(self);
+        self.iscsiBuilder = new ISCSIVolumeSourceBuilderCoreV1();
+        self.iscsiBuilder.init(self);
         match (self.iscsiBuilder) {
             ISCSIVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7903,7 +8620,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withNfs() returns NFSVolumeSourceBuilderCoreV1 {
-        self.nfsBuilder = new NFSVolumeSourceBuilderCoreV1(self);
+        self.nfsBuilder = new NFSVolumeSourceBuilderCoreV1();
+        self.nfsBuilder.init(self);
         match (self.nfsBuilder) {
             NFSVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7915,7 +8633,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withPersistentVolumeClaim() returns PersistentVolumeClaimVolumeSourceBuilderCoreV1 {
-        self.persistentVolumeClaimBuilder = new PersistentVolumeClaimVolumeSourceBuilderCoreV1(self);
+        self.persistentVolumeClaimBuilder = new PersistentVolumeClaimVolumeSourceBuilderCoreV1();
+        self.persistentVolumeClaimBuilder.init(self);
         match (self.persistentVolumeClaimBuilder) {
             PersistentVolumeClaimVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7927,7 +8646,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withPhotonPersistentDisk() returns PhotonPersistentDiskVolumeSourceBuilderCoreV1 {
-        self.photonPersistentDiskBuilder = new PhotonPersistentDiskVolumeSourceBuilderCoreV1(self);
+        self.photonPersistentDiskBuilder = new PhotonPersistentDiskVolumeSourceBuilderCoreV1();
+        self.photonPersistentDiskBuilder.init(self);
         match (self.photonPersistentDiskBuilder) {
             PhotonPersistentDiskVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7939,7 +8659,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withPortworxVolume() returns PortworxVolumeSourceBuilderCoreV1 {
-        self.portworxVolumeBuilder = new PortworxVolumeSourceBuilderCoreV1(self);
+        self.portworxVolumeBuilder = new PortworxVolumeSourceBuilderCoreV1();
+        self.portworxVolumeBuilder.init(self);
         match (self.portworxVolumeBuilder) {
             PortworxVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7951,7 +8672,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withProjected() returns ProjectedVolumeSourceBuilderCoreV1 {
-        self.projectedBuilder = new ProjectedVolumeSourceBuilderCoreV1(self);
+        self.projectedBuilder = new ProjectedVolumeSourceBuilderCoreV1();
+        self.projectedBuilder.init(self);
         match (self.projectedBuilder) {
             ProjectedVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7963,7 +8685,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withQuobyte() returns QuobyteVolumeSourceBuilderCoreV1 {
-        self.quobyteBuilder = new QuobyteVolumeSourceBuilderCoreV1(self);
+        self.quobyteBuilder = new QuobyteVolumeSourceBuilderCoreV1();
+        self.quobyteBuilder.init(self);
         match (self.quobyteBuilder) {
             QuobyteVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7975,7 +8698,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withRbd() returns RBDVolumeSourceBuilderCoreV1 {
-        self.rbdBuilder = new RBDVolumeSourceBuilderCoreV1(self);
+        self.rbdBuilder = new RBDVolumeSourceBuilderCoreV1();
+        self.rbdBuilder.init(self);
         match (self.rbdBuilder) {
             RBDVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7987,7 +8711,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withScaleIO() returns ScaleIOVolumeSourceBuilderCoreV1 {
-        self.scaleIOBuilder = new ScaleIOVolumeSourceBuilderCoreV1(self);
+        self.scaleIOBuilder = new ScaleIOVolumeSourceBuilderCoreV1();
+        self.scaleIOBuilder.init(self);
         match (self.scaleIOBuilder) {
             ScaleIOVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -7999,7 +8724,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withSecret() returns SecretVolumeSourceBuilderCoreV1 {
-        self.secretBuilder = new SecretVolumeSourceBuilderCoreV1(self);
+        self.secretBuilder = new SecretVolumeSourceBuilderCoreV1();
+        self.secretBuilder.init(self);
         match (self.secretBuilder) {
             SecretVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -8011,7 +8737,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withStorageos() returns StorageOSVolumeSourceBuilderCoreV1 {
-        self.storageosBuilder = new StorageOSVolumeSourceBuilderCoreV1(self);
+        self.storageosBuilder = new StorageOSVolumeSourceBuilderCoreV1();
+        self.storageosBuilder.init(self);
         match (self.storageosBuilder) {
             StorageOSVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -8023,7 +8750,8 @@ public type VolumeBuilderCoreV1 object {
         }
     }
     public function withVsphereVolume() returns VsphereVirtualDiskVolumeSourceBuilderCoreV1 {
-        self.vsphereVolumeBuilder = new VsphereVirtualDiskVolumeSourceBuilderCoreV1(self);
+        self.vsphereVolumeBuilder = new VsphereVirtualDiskVolumeSourceBuilderCoreV1();
+        self.vsphereVolumeBuilder.init(self);
         match (self.vsphereVolumeBuilder) {
             VsphereVirtualDiskVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -8042,10 +8770,13 @@ public type VolumeBuilderCoreV1 object {
 };
 
 public type EventSeriesBuilderEventsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_events_v1beta1_EventSeries io_k8s_api_events_v1beta1_eventseries;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_events_v1beta1_eventseries = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_events_v1beta1_EventSeries) {
         return self.io_k8s_api_events_v1beta1_eventseries;
@@ -8071,12 +8802,15 @@ public type EventSeriesBuilderEventsV1beta1 object {
 };
 
 public type SecretProjectionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SecretProjection io_k8s_api_core_v1_secretprojection;
     public KeyToPathBuilderCoreV1[] itemsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_secretprojection = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_SecretProjection) {
         return self.io_k8s_api_core_v1_secretprojection;
@@ -8085,7 +8819,8 @@ public type SecretProjectionBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withItems() returns KeyToPathBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -8101,10 +8836,13 @@ public type SecretProjectionBuilderCoreV1 object {
 };
 
 public type SubjectBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_Subject io_k8s_api_rbac_v1beta1_subject;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_subject = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_Subject) {
         return self.io_k8s_api_rbac_v1beta1_subject;
@@ -8135,14 +8873,17 @@ public type SubjectBuilderRbacV1beta1 object {
 };
 
 public type EvictionBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_Eviction io_k8s_api_policy_v1beta1_eviction;
     public DeleteOptionsBuilderMetaV1? deleteOptionsBuilder;
 
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_eviction = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_Eviction) {
         return self.io_k8s_api_policy_v1beta1_eviction;
@@ -8151,7 +8892,8 @@ public type EvictionBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withDeleteOptions() returns DeleteOptionsBuilderMetaV1 {
-        self.deleteOptionsBuilder = new DeleteOptionsBuilderMetaV1(self);
+        self.deleteOptionsBuilder = new DeleteOptionsBuilderMetaV1();
+        self.deleteOptionsBuilder.init(self);
         match (self.deleteOptionsBuilder) {
             DeleteOptionsBuilderMetaV1 builder => {
                 return builder;
@@ -8163,7 +8905,8 @@ public type EvictionBuilderPolicyV1beta1 object {
         }
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -8187,10 +8930,13 @@ public type EvictionBuilderPolicyV1beta1 object {
 };
 
 public type AllowedFlexVolumeBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_AllowedFlexVolume io_k8s_api_extensions_v1beta1_allowedflexvolume;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_allowedflexvolume = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_AllowedFlexVolume) {
         return self.io_k8s_api_extensions_v1beta1_allowedflexvolume;
@@ -8206,7 +8952,7 @@ public type AllowedFlexVolumeBuilderExtensionsV1beta1 object {
 };
 
 public type ResourceQuotaBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ResourceQuota io_k8s_api_core_v1_resourcequota;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -8214,8 +8960,11 @@ public type ResourceQuotaBuilderCoreV1 object {
 
     public ResourceQuotaStatusBuilderCoreV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_resourcequota = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ResourceQuota) {
         return self.io_k8s_api_core_v1_resourcequota;
@@ -8224,7 +8973,8 @@ public type ResourceQuotaBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -8236,7 +8986,8 @@ public type ResourceQuotaBuilderCoreV1 object {
         }
     }
     public function withSpec() returns ResourceQuotaSpecBuilderCoreV1 {
-        self.specBuilder = new ResourceQuotaSpecBuilderCoreV1(self);
+        self.specBuilder = new ResourceQuotaSpecBuilderCoreV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             ResourceQuotaSpecBuilderCoreV1 builder => {
                 return builder;
@@ -8248,7 +8999,8 @@ public type ResourceQuotaBuilderCoreV1 object {
         }
     }
     public function withStatus() returns ResourceQuotaStatusBuilderCoreV1 {
-        self.statusBuilder = new ResourceQuotaStatusBuilderCoreV1(self);
+        self.statusBuilder = new ResourceQuotaStatusBuilderCoreV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             ResourceQuotaStatusBuilderCoreV1 builder => {
                 return builder;
@@ -8272,14 +9024,17 @@ public type ResourceQuotaBuilderCoreV1 object {
 };
 
 public type InitializersBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_Initializers io_k8s_apimachinery_pkg_apis_meta_v1_initializers;
     public InitializerBuilderMetaV1[] pendingBuilder;
 
     public StatusBuilderMetaV1? resultBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_initializers = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_Initializers) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_initializers;
@@ -8288,7 +9043,8 @@ public type InitializersBuilderMetaV1 object {
         return self.fluentBuilder;
     }
     public function withResult() returns StatusBuilderMetaV1 {
-        self.resultBuilder = new StatusBuilderMetaV1(self);
+        self.resultBuilder = new StatusBuilderMetaV1();
+        self.resultBuilder.init(self);
         match (self.resultBuilder) {
             StatusBuilderMetaV1 builder => {
                 return builder;
@@ -8300,13 +9056,14 @@ public type InitializersBuilderMetaV1 object {
         }
     }
     public function withPending() returns InitializerBuilderMetaV1 {
-        self.pendingBuilder[lengthof pendingBuilder] = new InitializerBuilderMetaV1(self);
+        self.pendingBuilder[lengthof pendingBuilder] = new InitializerBuilderMetaV1();
+        self.pendingBuilder[(lengthof pendingBuilder)].init(self);
         return self.pendingBuilder[(lengthof pendingBuilder) - 1];
     }
 };
 
 public type ClusterRoleBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_ClusterRole io_k8s_api_rbac_v1beta1_clusterrole;
     public AggregationRuleBuilderRbacV1beta1? aggregationRuleBuilder;
 
@@ -8314,8 +9071,11 @@ public type ClusterRoleBuilderRbacV1beta1 object {
 
     public PolicyRuleBuilderRbacV1beta1[] rulesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_clusterrole = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_ClusterRole) {
         return self.io_k8s_api_rbac_v1beta1_clusterrole;
@@ -8324,7 +9084,8 @@ public type ClusterRoleBuilderRbacV1beta1 object {
         return self.fluentBuilder;
     }
     public function withAggregationRule() returns AggregationRuleBuilderRbacV1beta1 {
-        self.aggregationRuleBuilder = new AggregationRuleBuilderRbacV1beta1(self);
+        self.aggregationRuleBuilder = new AggregationRuleBuilderRbacV1beta1();
+        self.aggregationRuleBuilder.init(self);
         match (self.aggregationRuleBuilder) {
             AggregationRuleBuilderRbacV1beta1 builder => {
                 return builder;
@@ -8336,7 +9097,8 @@ public type ClusterRoleBuilderRbacV1beta1 object {
         }
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -8348,7 +9110,8 @@ public type ClusterRoleBuilderRbacV1beta1 object {
         }
     }
     public function withRules() returns PolicyRuleBuilderRbacV1beta1 {
-        self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1beta1(self);
+        self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1beta1();
+        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
 
@@ -8364,15 +9127,18 @@ public type ClusterRoleBuilderRbacV1beta1 object {
 };
 
 public type HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscalerStatus
     io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerstatus;
     public HorizontalPodAutoscalerConditionBuilderAutoscalingV2beta1[] conditionsBuilder;
 
     public MetricStatusBuilderAutoscalingV2beta1[] currentMetricsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscalerStatus) {
         return self.io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerstatus;
@@ -8382,11 +9148,13 @@ public type HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 object {
     }
     public function withConditions() returns HorizontalPodAutoscalerConditionBuilderAutoscalingV2beta1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new
-        HorizontalPodAutoscalerConditionBuilderAutoscalingV2beta1(self);
+        HorizontalPodAutoscalerConditionBuilderAutoscalingV2beta1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
     public function withCurrentMetrics() returns MetricStatusBuilderAutoscalingV2beta1 {
-        self.currentMetricsBuilder[lengthof currentMetricsBuilder] = new MetricStatusBuilderAutoscalingV2beta1(self);
+        self.currentMetricsBuilder[lengthof currentMetricsBuilder] = new MetricStatusBuilderAutoscalingV2beta1();
+        self.currentMetricsBuilder[(lengthof currentMetricsBuilder)].init(self);
         return self.currentMetricsBuilder[(lengthof currentMetricsBuilder) - 1];
     }
 
@@ -8416,12 +9184,15 @@ public type HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 object {
 };
 
 public type HTTPGetActionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_HTTPGetAction io_k8s_api_core_v1_httpgetaction;
     public HTTPHeaderBuilderCoreV1[] httpHeadersBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_httpgetaction = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_HTTPGetAction) {
         return self.io_k8s_api_core_v1_httpgetaction;
@@ -8430,7 +9201,8 @@ public type HTTPGetActionBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withHttpHeaders() returns HTTPHeaderBuilderCoreV1 {
-        self.httpHeadersBuilder[lengthof httpHeadersBuilder] = new HTTPHeaderBuilderCoreV1(self);
+        self.httpHeadersBuilder[lengthof httpHeadersBuilder] = new HTTPHeaderBuilderCoreV1();
+        self.httpHeadersBuilder[(lengthof httpHeadersBuilder)].init(self);
         return self.httpHeadersBuilder[(lengthof httpHeadersBuilder) - 1];
     }
 
@@ -8456,12 +9228,15 @@ public type HTTPGetActionBuilderCoreV1 object {
 };
 
 public type NodeSelectorBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeSelector io_k8s_api_core_v1_nodeselector;
     public NodeSelectorTermBuilderCoreV1[] nodeSelectorTermsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodeselector = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeSelector) {
         return self.io_k8s_api_core_v1_nodeselector;
@@ -8470,20 +9245,24 @@ public type NodeSelectorBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withNodeSelectorTerms() returns NodeSelectorTermBuilderCoreV1 {
-        self.nodeSelectorTermsBuilder[lengthof nodeSelectorTermsBuilder] = new NodeSelectorTermBuilderCoreV1(self);
+        self.nodeSelectorTermsBuilder[lengthof nodeSelectorTermsBuilder] = new NodeSelectorTermBuilderCoreV1();
+        self.nodeSelectorTermsBuilder[(lengthof nodeSelectorTermsBuilder)].init(self);
         return self.nodeSelectorTermsBuilder[(lengthof nodeSelectorTermsBuilder) - 1];
     }
 };
 
 public type EventListBuilderEventsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_events_v1beta1_EventList io_k8s_api_events_v1beta1_eventlist;
     public EventBuilderEventsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_events_v1beta1_eventlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_events_v1beta1_EventList) {
         return self.io_k8s_api_events_v1beta1_eventlist;
@@ -8492,7 +9271,8 @@ public type EventListBuilderEventsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -8504,7 +9284,8 @@ public type EventListBuilderEventsV1beta1 object {
         }
     }
     public function withItems() returns EventBuilderEventsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new EventBuilderEventsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new EventBuilderEventsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -8520,12 +9301,15 @@ public type EventListBuilderEventsV1beta1 object {
 };
 
 public type StorageOSVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_StorageOSVolumeSource io_k8s_api_core_v1_storageosvolumesource;
     public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_storageosvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_StorageOSVolumeSource) {
         return self.io_k8s_api_core_v1_storageosvolumesource;
@@ -8534,7 +9318,8 @@ public type StorageOSVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns LocalObjectReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             LocalObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -8568,11 +9353,14 @@ public type StorageOSVolumeSourceBuilderCoreV1 object {
 };
 
 public type LabelSelectorRequirementBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_LabelSelectorRequirement
     io_k8s_apimachinery_pkg_apis_meta_v1_labelselectorrequirement;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_labelselectorrequirement = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_LabelSelectorRequirement) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_labelselectorrequirement;
@@ -8603,10 +9391,13 @@ public type LabelSelectorRequirementBuilderMetaV1 object {
 };
 
 public type ResourceRuleBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_ResourceRule io_k8s_api_authorization_v1_resourcerule;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_resourcerule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_ResourceRule) {
         return self.io_k8s_api_authorization_v1_resourcerule;
@@ -8657,12 +9448,15 @@ public type ResourceRuleBuilderAuthorizationV1 object {
 };
 
 public type DownwardAPIProjectionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_DownwardAPIProjection io_k8s_api_core_v1_downwardapiprojection;
     public DownwardAPIVolumeFileBuilderCoreV1[] itemsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_downwardapiprojection = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_DownwardAPIProjection) {
         return self.io_k8s_api_core_v1_downwardapiprojection;
@@ -8671,20 +9465,24 @@ public type DownwardAPIProjectionBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withItems() returns DownwardAPIVolumeFileBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new DownwardAPIVolumeFileBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new DownwardAPIVolumeFileBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 };
 
 public type StorageClassListBuilderStorageV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1_StorageClassList io_k8s_api_storage_v1_storageclasslist;
     public StorageClassBuilderStorageV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_storage_v1_storageclasslist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_storage_v1_StorageClassList) {
         return self.io_k8s_api_storage_v1_storageclasslist;
@@ -8693,7 +9491,8 @@ public type StorageClassListBuilderStorageV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -8705,7 +9504,8 @@ public type StorageClassListBuilderStorageV1 object {
         }
     }
     public function withItems() returns StorageClassBuilderStorageV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new StorageClassBuilderStorageV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new StorageClassBuilderStorageV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -8721,7 +9521,7 @@ public type StorageClassListBuilderStorageV1 object {
 };
 
 public type RoleBindingBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_RoleBinding io_k8s_api_rbac_v1beta1_rolebinding;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -8729,8 +9529,11 @@ public type RoleBindingBuilderRbacV1beta1 object {
 
     public SubjectBuilderRbacV1beta1[] subjectsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_rolebinding = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_RoleBinding) {
         return self.io_k8s_api_rbac_v1beta1_rolebinding;
@@ -8739,7 +9542,8 @@ public type RoleBindingBuilderRbacV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -8751,7 +9555,8 @@ public type RoleBindingBuilderRbacV1beta1 object {
         }
     }
     public function withRoleRef() returns RoleRefBuilderRbacV1beta1 {
-        self.roleRefBuilder = new RoleRefBuilderRbacV1beta1(self);
+        self.roleRefBuilder = new RoleRefBuilderRbacV1beta1();
+        self.roleRefBuilder.init(self);
         match (self.roleRefBuilder) {
             RoleRefBuilderRbacV1beta1 builder => {
                 return builder;
@@ -8763,7 +9568,8 @@ public type RoleBindingBuilderRbacV1beta1 object {
         }
     }
     public function withSubjects() returns SubjectBuilderRbacV1beta1 {
-        self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1beta1(self);
+        self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1beta1();
+        self.subjectsBuilder[(lengthof subjectsBuilder)].init(self);
         return self.subjectsBuilder[(lengthof subjectsBuilder) - 1];
     }
 
@@ -8779,12 +9585,15 @@ public type RoleBindingBuilderRbacV1beta1 object {
 };
 
 public type DaemonSetUpdateStrategyBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DaemonSetUpdateStrategy io_k8s_api_apps_v1_daemonsetupdatestrategy;
     public RollingUpdateDaemonSetBuilderAppsV1? rollingUpdateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_daemonsetupdatestrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DaemonSetUpdateStrategy) {
         return self.io_k8s_api_apps_v1_daemonsetupdatestrategy;
@@ -8793,7 +9602,8 @@ public type DaemonSetUpdateStrategyBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withRollingUpdate() returns RollingUpdateDaemonSetBuilderAppsV1 {
-        self.rollingUpdateBuilder = new RollingUpdateDaemonSetBuilderAppsV1(self);
+        self.rollingUpdateBuilder = new RollingUpdateDaemonSetBuilderAppsV1();
+        self.rollingUpdateBuilder.init(self);
         match (self.rollingUpdateBuilder) {
             RollingUpdateDaemonSetBuilderAppsV1 builder => {
                 return builder;
@@ -8812,15 +9622,18 @@ public type DaemonSetUpdateStrategyBuilderAppsV1 object {
 };
 
 public type NetworkPolicyIngressRuleBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_NetworkPolicyIngressRule io_k8s_api_extensions_v1beta1_networkpolicyingressrule
     ;
     public NetworkPolicyPeerBuilderExtensionsV1beta1[] _fromBuilder;
 
     public NetworkPolicyPortBuilderExtensionsV1beta1[] portsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_networkpolicyingressrule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_NetworkPolicyIngressRule) {
         return self.io_k8s_api_extensions_v1beta1_networkpolicyingressrule;
@@ -8829,17 +9642,19 @@ public type NetworkPolicyIngressRuleBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function with_from() returns NetworkPolicyPeerBuilderExtensionsV1beta1 {
-        self._fromBuilder[lengthof _fromBuilder] = new NetworkPolicyPeerBuilderExtensionsV1beta1(self);
+        self._fromBuilder[lengthof _fromBuilder] = new NetworkPolicyPeerBuilderExtensionsV1beta1();
+        self._fromBuilder[(lengthof _fromBuilder)].init(self);
         return self._fromBuilder[(lengthof _fromBuilder) - 1];
     }
     public function withPorts() returns NetworkPolicyPortBuilderExtensionsV1beta1 {
-        self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderExtensionsV1beta1(self);
+        self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderExtensionsV1beta1();
+        self.portsBuilder[(lengthof portsBuilder)].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
 };
 
 public type SelfSubjectAccessReviewBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SelfSubjectAccessReview
     io_k8s_api_authorization_v1beta1_selfsubjectaccessreview;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
@@ -8848,8 +9663,11 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1beta1 object {
 
     public SubjectAccessReviewStatusBuilderAuthorizationV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_selfsubjectaccessreview = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_SelfSubjectAccessReview) {
         return self.io_k8s_api_authorization_v1beta1_selfsubjectaccessreview;
@@ -8858,7 +9676,8 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -8870,7 +9689,8 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1beta1 object {
         }
     }
     public function withSpec() returns SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 {
-        self.specBuilder = new SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1(self);
+        self.specBuilder = new SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -8882,7 +9702,8 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1beta1 object {
         }
     }
     public function withStatus() returns SubjectAccessReviewStatusBuilderAuthorizationV1beta1 {
-        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1beta1(self);
+        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             SubjectAccessReviewStatusBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -8906,14 +9727,17 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1beta1 object {
 };
 
 public type NetworkPolicyBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_NetworkPolicy io_k8s_api_extensions_v1beta1_networkpolicy;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public NetworkPolicySpecBuilderExtensionsV1beta1? specBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_networkpolicy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_NetworkPolicy) {
         return self.io_k8s_api_extensions_v1beta1_networkpolicy;
@@ -8922,7 +9746,8 @@ public type NetworkPolicyBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -8934,7 +9759,8 @@ public type NetworkPolicyBuilderExtensionsV1beta1 object {
         }
     }
     public function withSpec() returns NetworkPolicySpecBuilderExtensionsV1beta1 {
-        self.specBuilder = new NetworkPolicySpecBuilderExtensionsV1beta1(self);
+        self.specBuilder = new NetworkPolicySpecBuilderExtensionsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             NetworkPolicySpecBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -8958,10 +9784,13 @@ public type NetworkPolicyBuilderExtensionsV1beta1 object {
 };
 
 public type RoleRefBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_RoleRef io_k8s_api_rbac_v1beta1_roleref;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_roleref = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_RoleRef) {
         return self.io_k8s_api_rbac_v1beta1_roleref;
@@ -8987,10 +9816,13 @@ public type RoleRefBuilderRbacV1beta1 object {
 };
 
 public type NodeSystemInfoBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeSystemInfo io_k8s_api_core_v1_nodesysteminfo;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodesysteminfo = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeSystemInfo) {
         return self.io_k8s_api_core_v1_nodesysteminfo;
@@ -9051,11 +9883,14 @@ public type NodeSystemInfoBuilderCoreV1 object {
 };
 
 public type ServerAddressByClientCIDRBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_ServerAddressByClientCIDR
     io_k8s_apimachinery_pkg_apis_meta_v1_serveraddressbyclientcidr;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_serveraddressbyclientcidr = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_ServerAddressByClientCIDR) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_serveraddressbyclientcidr;
@@ -9076,14 +9911,17 @@ public type ServerAddressByClientCIDRBuilderMetaV1 object {
 };
 
 public type StatusBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_Status io_k8s_apimachinery_pkg_apis_meta_v1_status;
     public StatusDetailsBuilderMetaV1? detailsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_status = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_Status) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_status;
@@ -9092,7 +9930,8 @@ public type StatusBuilderMetaV1 object {
         return self.fluentBuilder;
     }
     public function withDetails() returns StatusDetailsBuilderMetaV1 {
-        self.detailsBuilder = new StatusDetailsBuilderMetaV1(self);
+        self.detailsBuilder = new StatusDetailsBuilderMetaV1();
+        self.detailsBuilder.init(self);
         match (self.detailsBuilder) {
             StatusDetailsBuilderMetaV1 builder => {
                 return builder;
@@ -9104,7 +9943,8 @@ public type StatusBuilderMetaV1 object {
         }
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -9148,7 +9988,7 @@ public type StatusBuilderMetaV1 object {
 };
 
 public type MetricSpecBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_MetricSpec io_k8s_api_autoscaling_v2beta1_metricspec;
     public ExternalMetricSourceBuilderAutoscalingV2beta1? externalBuilder;
 
@@ -9158,8 +9998,11 @@ public type MetricSpecBuilderAutoscalingV2beta1 object {
 
     public ResourceMetricSourceBuilderAutoscalingV2beta1? _resourceBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_metricspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_MetricSpec) {
         return self.io_k8s_api_autoscaling_v2beta1_metricspec;
@@ -9168,7 +10011,8 @@ public type MetricSpecBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withExternal() returns ExternalMetricSourceBuilderAutoscalingV2beta1 {
-        self.externalBuilder = new ExternalMetricSourceBuilderAutoscalingV2beta1(self);
+        self.externalBuilder = new ExternalMetricSourceBuilderAutoscalingV2beta1();
+        self.externalBuilder.init(self);
         match (self.externalBuilder) {
             ExternalMetricSourceBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -9180,7 +10024,8 @@ public type MetricSpecBuilderAutoscalingV2beta1 object {
         }
     }
     public function with_object() returns ObjectMetricSourceBuilderAutoscalingV2beta1 {
-        self._objectBuilder = new ObjectMetricSourceBuilderAutoscalingV2beta1(self);
+        self._objectBuilder = new ObjectMetricSourceBuilderAutoscalingV2beta1();
+        self._objectBuilder.init(self);
         match (self._objectBuilder) {
             ObjectMetricSourceBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -9192,7 +10037,8 @@ public type MetricSpecBuilderAutoscalingV2beta1 object {
         }
     }
     public function withPods() returns PodsMetricSourceBuilderAutoscalingV2beta1 {
-        self.podsBuilder = new PodsMetricSourceBuilderAutoscalingV2beta1(self);
+        self.podsBuilder = new PodsMetricSourceBuilderAutoscalingV2beta1();
+        self.podsBuilder.init(self);
         match (self.podsBuilder) {
             PodsMetricSourceBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -9204,7 +10050,8 @@ public type MetricSpecBuilderAutoscalingV2beta1 object {
         }
     }
     public function with_resource() returns ResourceMetricSourceBuilderAutoscalingV2beta1 {
-        self._resourceBuilder = new ResourceMetricSourceBuilderAutoscalingV2beta1(self);
+        self._resourceBuilder = new ResourceMetricSourceBuilderAutoscalingV2beta1();
+        self._resourceBuilder.init(self);
         match (self._resourceBuilder) {
             ResourceMetricSourceBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -9223,7 +10070,7 @@ public type MetricSpecBuilderAutoscalingV2beta1 object {
 };
 
 public type CustomResourceDefinitionBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinition
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinition;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
@@ -9232,8 +10079,11 @@ public type CustomResourceDefinitionBuilderApiextensionsV1beta1 object {
 
     public CustomResourceDefinitionStatusBuilderApiextensionsV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinition) {
@@ -9243,7 +10093,8 @@ public type CustomResourceDefinitionBuilderApiextensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -9255,7 +10106,8 @@ public type CustomResourceDefinitionBuilderApiextensionsV1beta1 object {
         }
     }
     public function withSpec() returns CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 {
-        self.specBuilder = new CustomResourceDefinitionSpecBuilderApiextensionsV1beta1(self);
+        self.specBuilder = new CustomResourceDefinitionSpecBuilderApiextensionsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -9267,7 +10119,8 @@ public type CustomResourceDefinitionBuilderApiextensionsV1beta1 object {
         }
     }
     public function withStatus() returns CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 {
-        self.statusBuilder = new CustomResourceDefinitionStatusBuilderApiextensionsV1beta1(self);
+        self.statusBuilder = new CustomResourceDefinitionStatusBuilderApiextensionsV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -9292,7 +10145,7 @@ public type CustomResourceDefinitionBuilderApiextensionsV1beta1 object {
 };
 
 public type StatefulSetSpecBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_StatefulSetSpec io_k8s_api_apps_v1_statefulsetspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
@@ -9302,8 +10155,11 @@ public type StatefulSetSpecBuilderAppsV1 object {
 
     public PersistentVolumeClaimBuilderCoreV1[] volumeClaimTemplatesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_statefulsetspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_StatefulSetSpec) {
         return self.io_k8s_api_apps_v1_statefulsetspec;
@@ -9312,7 +10168,8 @@ public type StatefulSetSpecBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -9324,7 +10181,8 @@ public type StatefulSetSpecBuilderAppsV1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -9336,7 +10194,8 @@ public type StatefulSetSpecBuilderAppsV1 object {
         }
     }
     public function withUpdateStrategy() returns StatefulSetUpdateStrategyBuilderAppsV1 {
-        self.updateStrategyBuilder = new StatefulSetUpdateStrategyBuilderAppsV1(self);
+        self.updateStrategyBuilder = new StatefulSetUpdateStrategyBuilderAppsV1();
+        self.updateStrategyBuilder.init(self);
         match (self.updateStrategyBuilder) {
             StatefulSetUpdateStrategyBuilderAppsV1 builder => {
                 return builder;
@@ -9349,7 +10208,8 @@ public type StatefulSetSpecBuilderAppsV1 object {
     }
     public function withVolumeClaimTemplates() returns PersistentVolumeClaimBuilderCoreV1 {
         self.volumeClaimTemplatesBuilder[lengthof volumeClaimTemplatesBuilder] = new PersistentVolumeClaimBuilderCoreV1(
-                                                                                     self);
+        );
+        self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder)].init(self);
         return self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder) - 1];
     }
 
@@ -9375,7 +10235,7 @@ public type StatefulSetSpecBuilderAppsV1 object {
 };
 
 public type ProbeBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Probe io_k8s_api_core_v1_probe;
     public ExecActionBuilderCoreV1? execBuilder;
 
@@ -9383,8 +10243,11 @@ public type ProbeBuilderCoreV1 object {
 
     public TCPSocketActionBuilderCoreV1? tcpSocketBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_probe = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Probe) {
         return self.io_k8s_api_core_v1_probe;
@@ -9393,7 +10256,8 @@ public type ProbeBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withExec() returns ExecActionBuilderCoreV1 {
-        self.execBuilder = new ExecActionBuilderCoreV1(self);
+        self.execBuilder = new ExecActionBuilderCoreV1();
+        self.execBuilder.init(self);
         match (self.execBuilder) {
             ExecActionBuilderCoreV1 builder => {
                 return builder;
@@ -9405,7 +10269,8 @@ public type ProbeBuilderCoreV1 object {
         }
     }
     public function withHttpGet() returns HTTPGetActionBuilderCoreV1 {
-        self.httpGetBuilder = new HTTPGetActionBuilderCoreV1(self);
+        self.httpGetBuilder = new HTTPGetActionBuilderCoreV1();
+        self.httpGetBuilder.init(self);
         match (self.httpGetBuilder) {
             HTTPGetActionBuilderCoreV1 builder => {
                 return builder;
@@ -9417,7 +10282,8 @@ public type ProbeBuilderCoreV1 object {
         }
     }
     public function withTcpSocket() returns TCPSocketActionBuilderCoreV1 {
-        self.tcpSocketBuilder = new TCPSocketActionBuilderCoreV1(self);
+        self.tcpSocketBuilder = new TCPSocketActionBuilderCoreV1();
+        self.tcpSocketBuilder.init(self);
         match (self.tcpSocketBuilder) {
             TCPSocketActionBuilderCoreV1 builder => {
                 return builder;
@@ -9456,12 +10322,15 @@ public type ProbeBuilderCoreV1 object {
 };
 
 public type ScaleIOVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ScaleIOVolumeSource io_k8s_api_core_v1_scaleiovolumesource;
     public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_scaleiovolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ScaleIOVolumeSource) {
         return self.io_k8s_api_core_v1_scaleiovolumesource;
@@ -9470,7 +10339,8 @@ public type ScaleIOVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns LocalObjectReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             LocalObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -9529,12 +10399,15 @@ public type ScaleIOVolumeSourceBuilderCoreV1 object {
 };
 
 public type ReplicaSetStatusBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_ReplicaSetStatus io_k8s_api_extensions_v1beta1_replicasetstatus;
     public ReplicaSetConditionBuilderExtensionsV1beta1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_replicasetstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_ReplicaSetStatus) {
         return self.io_k8s_api_extensions_v1beta1_replicasetstatus;
@@ -9543,7 +10416,8 @@ public type ReplicaSetStatusBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns ReplicaSetConditionBuilderExtensionsV1beta1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicaSetConditionBuilderExtensionsV1beta1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicaSetConditionBuilderExtensionsV1beta1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -9575,12 +10449,15 @@ public type ReplicaSetStatusBuilderExtensionsV1beta1 object {
 };
 
 public type PodsMetricStatusBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_PodsMetricStatus io_k8s_api_autoscaling_v2beta1_podsmetricstatus;
     public QuantityBuilderApiResource? currentAverageValueBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_podsmetricstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_PodsMetricStatus) {
         return self.io_k8s_api_autoscaling_v2beta1_podsmetricstatus;
@@ -9589,7 +10466,8 @@ public type PodsMetricStatusBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withCurrentAverageValue() returns QuantityBuilderApiResource {
-        self.currentAverageValueBuilder = new QuantityBuilderApiResource(self);
+        self.currentAverageValueBuilder = new QuantityBuilderApiResource();
+        self.currentAverageValueBuilder.init(self);
         match (self.currentAverageValueBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -9608,10 +10486,13 @@ public type PodsMetricStatusBuilderAutoscalingV2beta1 object {
 };
 
 public type LoadBalancerIngressBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_LoadBalancerIngress io_k8s_api_core_v1_loadbalanceringress;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_loadbalanceringress = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_LoadBalancerIngress) {
         return self.io_k8s_api_core_v1_loadbalanceringress;
@@ -9632,7 +10513,7 @@ public type LoadBalancerIngressBuilderCoreV1 object {
 };
 
 public type DaemonSetSpecBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DaemonSetSpec io_k8s_api_extensions_v1beta1_daemonsetspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
@@ -9640,8 +10521,11 @@ public type DaemonSetSpecBuilderExtensionsV1beta1 object {
 
     public DaemonSetUpdateStrategyBuilderExtensionsV1beta1? updateStrategyBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_daemonsetspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DaemonSetSpec) {
         return self.io_k8s_api_extensions_v1beta1_daemonsetspec;
@@ -9650,7 +10534,8 @@ public type DaemonSetSpecBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -9662,7 +10547,8 @@ public type DaemonSetSpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -9674,7 +10560,8 @@ public type DaemonSetSpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withUpdateStrategy() returns DaemonSetUpdateStrategyBuilderExtensionsV1beta1 {
-        self.updateStrategyBuilder = new DaemonSetUpdateStrategyBuilderExtensionsV1beta1(self);
+        self.updateStrategyBuilder = new DaemonSetUpdateStrategyBuilderExtensionsV1beta1();
+        self.updateStrategyBuilder.init(self);
         match (self.updateStrategyBuilder) {
             DaemonSetUpdateStrategyBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -9703,10 +10590,13 @@ public type DaemonSetSpecBuilderExtensionsV1beta1 object {
 };
 
 public type HostPortRangeBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_HostPortRange io_k8s_api_policy_v1beta1_hostportrange;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_hostportrange = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_HostPortRange) {
         return self.io_k8s_api_policy_v1beta1_hostportrange;
@@ -9727,11 +10617,14 @@ public type HostPortRangeBuilderPolicyV1beta1 object {
 };
 
 public type GroupVersionForDiscoveryBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_GroupVersionForDiscovery
     io_k8s_apimachinery_pkg_apis_meta_v1_groupversionfordiscovery;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_groupversionfordiscovery = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_GroupVersionForDiscovery) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_groupversionfordiscovery;
@@ -9752,7 +10645,7 @@ public type GroupVersionForDiscoveryBuilderMetaV1 object {
 };
 
 public type HorizontalPodAutoscalerBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscaler io_k8s_api_autoscaling_v2beta1_horizontalpodautoscaler
     ;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
@@ -9761,8 +10654,11 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV2beta1 object {
 
     public HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_horizontalpodautoscaler = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscaler) {
         return self.io_k8s_api_autoscaling_v2beta1_horizontalpodautoscaler;
@@ -9771,7 +10667,8 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -9783,7 +10680,8 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV2beta1 object {
         }
     }
     public function withSpec() returns HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 {
-        self.specBuilder = new HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1(self);
+        self.specBuilder = new HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -9795,7 +10693,8 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV2beta1 object {
         }
     }
     public function withStatus() returns HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 {
-        self.statusBuilder = new HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1(self);
+        self.statusBuilder = new HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -9819,12 +10718,15 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV2beta1 object {
 };
 
 public type PodsMetricSourceBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_PodsMetricSource io_k8s_api_autoscaling_v2beta1_podsmetricsource;
     public QuantityBuilderApiResource? targetAverageValueBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_podsmetricsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_PodsMetricSource) {
         return self.io_k8s_api_autoscaling_v2beta1_podsmetricsource;
@@ -9833,7 +10735,8 @@ public type PodsMetricSourceBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withTargetAverageValue() returns QuantityBuilderApiResource {
-        self.targetAverageValueBuilder = new QuantityBuilderApiResource(self);
+        self.targetAverageValueBuilder = new QuantityBuilderApiResource();
+        self.targetAverageValueBuilder.init(self);
         match (self.targetAverageValueBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -9852,10 +10755,13 @@ public type PodsMetricSourceBuilderAutoscalingV2beta1 object {
 };
 
 public type GCEPersistentDiskVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_GCEPersistentDiskVolumeSource io_k8s_api_core_v1_gcepersistentdiskvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_gcepersistentdiskvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_GCEPersistentDiskVolumeSource) {
         return self.io_k8s_api_core_v1_gcepersistentdiskvolumesource;
@@ -9886,14 +10792,17 @@ public type GCEPersistentDiskVolumeSourceBuilderCoreV1 object {
 };
 
 public type NetworkPolicyIngressRuleBuilderNetworkingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_networking_v1_NetworkPolicyIngressRule io_k8s_api_networking_v1_networkpolicyingressrule;
     public NetworkPolicyPeerBuilderNetworkingV1[] _fromBuilder;
 
     public NetworkPolicyPortBuilderNetworkingV1[] portsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_networking_v1_networkpolicyingressrule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_networking_v1_NetworkPolicyIngressRule) {
         return self.io_k8s_api_networking_v1_networkpolicyingressrule;
@@ -9902,24 +10811,29 @@ public type NetworkPolicyIngressRuleBuilderNetworkingV1 object {
         return self.fluentBuilder;
     }
     public function with_from() returns NetworkPolicyPeerBuilderNetworkingV1 {
-        self._fromBuilder[lengthof _fromBuilder] = new NetworkPolicyPeerBuilderNetworkingV1(self);
+        self._fromBuilder[lengthof _fromBuilder] = new NetworkPolicyPeerBuilderNetworkingV1();
+        self._fromBuilder[(lengthof _fromBuilder)].init(self);
         return self._fromBuilder[(lengthof _fromBuilder) - 1];
     }
     public function withPorts() returns NetworkPolicyPortBuilderNetworkingV1 {
-        self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderNetworkingV1(self);
+        self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderNetworkingV1();
+        self.portsBuilder[(lengthof portsBuilder)].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
 };
 
 public type DaemonSetListBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DaemonSetList io_k8s_api_apps_v1beta2_daemonsetlist;
     public DaemonSetBuilderAppsV1beta2[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_daemonsetlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DaemonSetList) {
         return self.io_k8s_api_apps_v1beta2_daemonsetlist;
@@ -9928,7 +10842,8 @@ public type DaemonSetListBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -9940,7 +10855,8 @@ public type DaemonSetListBuilderAppsV1beta2 object {
         }
     }
     public function withItems() returns DaemonSetBuilderAppsV1beta2 {
-        self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderAppsV1beta2(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderAppsV1beta2();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -9956,7 +10872,7 @@ public type DaemonSetListBuilderAppsV1beta2 object {
 };
 
 public type EnvVarSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EnvVarSource io_k8s_api_core_v1_envvarsource;
     public ConfigMapKeySelectorBuilderCoreV1? configMapKeyRefBuilder;
 
@@ -9966,8 +10882,11 @@ public type EnvVarSourceBuilderCoreV1 object {
 
     public SecretKeySelectorBuilderCoreV1? secretKeyRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_envvarsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EnvVarSource) {
         return self.io_k8s_api_core_v1_envvarsource;
@@ -9976,7 +10895,8 @@ public type EnvVarSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withConfigMapKeyRef() returns ConfigMapKeySelectorBuilderCoreV1 {
-        self.configMapKeyRefBuilder = new ConfigMapKeySelectorBuilderCoreV1(self);
+        self.configMapKeyRefBuilder = new ConfigMapKeySelectorBuilderCoreV1();
+        self.configMapKeyRefBuilder.init(self);
         match (self.configMapKeyRefBuilder) {
             ConfigMapKeySelectorBuilderCoreV1 builder => {
                 return builder;
@@ -9988,7 +10908,8 @@ public type EnvVarSourceBuilderCoreV1 object {
         }
     }
     public function withFieldRef() returns ObjectFieldSelectorBuilderCoreV1 {
-        self.fieldRefBuilder = new ObjectFieldSelectorBuilderCoreV1(self);
+        self.fieldRefBuilder = new ObjectFieldSelectorBuilderCoreV1();
+        self.fieldRefBuilder.init(self);
         match (self.fieldRefBuilder) {
             ObjectFieldSelectorBuilderCoreV1 builder => {
                 return builder;
@@ -10000,7 +10921,8 @@ public type EnvVarSourceBuilderCoreV1 object {
         }
     }
     public function withResourceFieldRef() returns ResourceFieldSelectorBuilderCoreV1 {
-        self.resourceFieldRefBuilder = new ResourceFieldSelectorBuilderCoreV1(self);
+        self.resourceFieldRefBuilder = new ResourceFieldSelectorBuilderCoreV1();
+        self.resourceFieldRefBuilder.init(self);
         match (self.resourceFieldRefBuilder) {
             ResourceFieldSelectorBuilderCoreV1 builder => {
                 return builder;
@@ -10012,7 +10934,8 @@ public type EnvVarSourceBuilderCoreV1 object {
         }
     }
     public function withSecretKeyRef() returns SecretKeySelectorBuilderCoreV1 {
-        self.secretKeyRefBuilder = new SecretKeySelectorBuilderCoreV1(self);
+        self.secretKeyRefBuilder = new SecretKeySelectorBuilderCoreV1();
+        self.secretKeyRefBuilder.init(self);
         match (self.secretKeyRefBuilder) {
             SecretKeySelectorBuilderCoreV1 builder => {
                 return builder;
@@ -10026,14 +10949,17 @@ public type EnvVarSourceBuilderCoreV1 object {
 };
 
 public type ReplicaSetListBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ReplicaSetList io_k8s_api_apps_v1beta2_replicasetlist;
     public ReplicaSetBuilderAppsV1beta2[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_replicasetlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_ReplicaSetList) {
         return self.io_k8s_api_apps_v1beta2_replicasetlist;
@@ -10042,7 +10968,8 @@ public type ReplicaSetListBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -10054,7 +10981,8 @@ public type ReplicaSetListBuilderAppsV1beta2 object {
         }
     }
     public function withItems() returns ReplicaSetBuilderAppsV1beta2 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderAppsV1beta2(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderAppsV1beta2();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -10070,10 +10998,13 @@ public type ReplicaSetListBuilderAppsV1beta2 object {
 };
 
 public type RawExtensionBuilderPkgRuntime object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_runtime_RawExtension io_k8s_apimachinery_pkg_runtime_rawextension;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_runtime_rawextension = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_runtime_RawExtension) {
         return self.io_k8s_apimachinery_pkg_runtime_rawextension;
@@ -10089,7 +11020,7 @@ public type RawExtensionBuilderPkgRuntime object {
 };
 
 public type ReplicaSetBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_ReplicaSet io_k8s_api_extensions_v1beta1_replicaset;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -10097,8 +11028,11 @@ public type ReplicaSetBuilderExtensionsV1beta1 object {
 
     public ReplicaSetStatusBuilderExtensionsV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_replicaset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_ReplicaSet) {
         return self.io_k8s_api_extensions_v1beta1_replicaset;
@@ -10107,7 +11041,8 @@ public type ReplicaSetBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -10119,7 +11054,8 @@ public type ReplicaSetBuilderExtensionsV1beta1 object {
         }
     }
     public function withSpec() returns ReplicaSetSpecBuilderExtensionsV1beta1 {
-        self.specBuilder = new ReplicaSetSpecBuilderExtensionsV1beta1(self);
+        self.specBuilder = new ReplicaSetSpecBuilderExtensionsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             ReplicaSetSpecBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -10131,7 +11067,8 @@ public type ReplicaSetBuilderExtensionsV1beta1 object {
         }
     }
     public function withStatus() returns ReplicaSetStatusBuilderExtensionsV1beta1 {
-        self.statusBuilder = new ReplicaSetStatusBuilderExtensionsV1beta1(self);
+        self.statusBuilder = new ReplicaSetStatusBuilderExtensionsV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             ReplicaSetStatusBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -10155,13 +11092,16 @@ public type ReplicaSetBuilderExtensionsV1beta1 object {
 };
 
 public type JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_JSONSchemaPropsOrBool
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_jsonschemapropsorbool;
     public JSONSchemaPropsBuilderApiextensionsV1beta1? SchemaBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_jsonschemapropsorbool = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_JSONSchemaPropsOrBool
                 ) {
@@ -10171,7 +11111,8 @@ public type JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withSchema() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
-        self.SchemaBuilder = new JSONSchemaPropsBuilderApiextensionsV1beta1(self);
+        self.SchemaBuilder = new JSONSchemaPropsBuilderApiextensionsV1beta1();
+        self.SchemaBuilder.init(self);
         match (self.SchemaBuilder) {
             JSONSchemaPropsBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -10190,7 +11131,7 @@ public type JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1 object {
 };
 
 public type NodeStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeStatus io_k8s_api_core_v1_nodestatus;
     public NodeAddressBuilderCoreV1[] addressesBuilder;
 
@@ -10204,8 +11145,11 @@ public type NodeStatusBuilderCoreV1 object {
 
     public AttachedVolumeBuilderCoreV1[] volumesAttachedBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeStatus) {
         return self.io_k8s_api_core_v1_nodestatus;
@@ -10214,7 +11158,8 @@ public type NodeStatusBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withDaemonEndpoints() returns NodeDaemonEndpointsBuilderCoreV1 {
-        self.daemonEndpointsBuilder = new NodeDaemonEndpointsBuilderCoreV1(self);
+        self.daemonEndpointsBuilder = new NodeDaemonEndpointsBuilderCoreV1();
+        self.daemonEndpointsBuilder.init(self);
         match (self.daemonEndpointsBuilder) {
             NodeDaemonEndpointsBuilderCoreV1 builder => {
                 return builder;
@@ -10226,7 +11171,8 @@ public type NodeStatusBuilderCoreV1 object {
         }
     }
     public function withNodeInfo() returns NodeSystemInfoBuilderCoreV1 {
-        self.nodeInfoBuilder = new NodeSystemInfoBuilderCoreV1(self);
+        self.nodeInfoBuilder = new NodeSystemInfoBuilderCoreV1();
+        self.nodeInfoBuilder.init(self);
         match (self.nodeInfoBuilder) {
             NodeSystemInfoBuilderCoreV1 builder => {
                 return builder;
@@ -10238,19 +11184,23 @@ public type NodeStatusBuilderCoreV1 object {
         }
     }
     public function withAddresses() returns NodeAddressBuilderCoreV1 {
-        self.addressesBuilder[lengthof addressesBuilder] = new NodeAddressBuilderCoreV1(self);
+        self.addressesBuilder[lengthof addressesBuilder] = new NodeAddressBuilderCoreV1();
+        self.addressesBuilder[(lengthof addressesBuilder)].init(self);
         return self.addressesBuilder[(lengthof addressesBuilder) - 1];
     }
     public function withConditions() returns NodeConditionBuilderCoreV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new NodeConditionBuilderCoreV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new NodeConditionBuilderCoreV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
     public function withImages() returns ContainerImageBuilderCoreV1 {
-        self.imagesBuilder[lengthof imagesBuilder] = new ContainerImageBuilderCoreV1(self);
+        self.imagesBuilder[lengthof imagesBuilder] = new ContainerImageBuilderCoreV1();
+        self.imagesBuilder[(lengthof imagesBuilder)].init(self);
         return self.imagesBuilder[(lengthof imagesBuilder) - 1];
     }
     public function withVolumesAttached() returns AttachedVolumeBuilderCoreV1 {
-        self.volumesAttachedBuilder[lengthof volumesAttachedBuilder] = new AttachedVolumeBuilderCoreV1(self);
+        self.volumesAttachedBuilder[lengthof volumesAttachedBuilder] = new AttachedVolumeBuilderCoreV1();
+        self.volumesAttachedBuilder[(lengthof volumesAttachedBuilder)].init(self);
         return self.volumesAttachedBuilder[(lengthof volumesAttachedBuilder) - 1];
     }
 
@@ -10281,10 +11231,13 @@ public type NodeStatusBuilderCoreV1 object {
 };
 
 public type ReplicaSetConditionBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ReplicaSetCondition io_k8s_api_apps_v1beta2_replicasetcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_replicasetcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_ReplicaSetCondition) {
         return self.io_k8s_api_apps_v1beta2_replicasetcondition;
@@ -10321,10 +11274,13 @@ public type ReplicaSetConditionBuilderAppsV1beta2 object {
 };
 
 public type EventSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EventSource io_k8s_api_core_v1_eventsource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_eventsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EventSource) {
         return self.io_k8s_api_core_v1_eventsource;
@@ -10345,14 +11301,17 @@ public type EventSourceBuilderCoreV1 object {
 };
 
 public type StatefulSetListBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_StatefulSetList io_k8s_api_apps_v1beta1_statefulsetlist;
     public StatefulSetBuilderAppsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_statefulsetlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_StatefulSetList) {
         return self.io_k8s_api_apps_v1beta1_statefulsetlist;
@@ -10361,7 +11320,8 @@ public type StatefulSetListBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -10373,7 +11333,8 @@ public type StatefulSetListBuilderAppsV1beta1 object {
         }
     }
     public function withItems() returns StatefulSetBuilderAppsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -10389,7 +11350,7 @@ public type StatefulSetListBuilderAppsV1beta1 object {
 };
 
 public type DeploymentBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_Deployment io_k8s_api_apps_v1beta1_deployment;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -10397,8 +11358,11 @@ public type DeploymentBuilderAppsV1beta1 object {
 
     public DeploymentStatusBuilderAppsV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_deployment = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_Deployment) {
         return self.io_k8s_api_apps_v1beta1_deployment;
@@ -10407,7 +11371,8 @@ public type DeploymentBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -10419,7 +11384,8 @@ public type DeploymentBuilderAppsV1beta1 object {
         }
     }
     public function withSpec() returns DeploymentSpecBuilderAppsV1beta1 {
-        self.specBuilder = new DeploymentSpecBuilderAppsV1beta1(self);
+        self.specBuilder = new DeploymentSpecBuilderAppsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             DeploymentSpecBuilderAppsV1beta1 builder => {
                 return builder;
@@ -10431,7 +11397,8 @@ public type DeploymentBuilderAppsV1beta1 object {
         }
     }
     public function withStatus() returns DeploymentStatusBuilderAppsV1beta1 {
-        self.statusBuilder = new DeploymentStatusBuilderAppsV1beta1(self);
+        self.statusBuilder = new DeploymentStatusBuilderAppsV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             DeploymentStatusBuilderAppsV1beta1 builder => {
                 return builder;
@@ -10455,12 +11422,15 @@ public type DeploymentBuilderAppsV1beta1 object {
 };
 
 public type DeploymentStrategyBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_DeploymentStrategy io_k8s_api_apps_v1beta1_deploymentstrategy;
     public RollingUpdateDeploymentBuilderAppsV1beta1? rollingUpdateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_deploymentstrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_DeploymentStrategy) {
         return self.io_k8s_api_apps_v1beta1_deploymentstrategy;
@@ -10469,7 +11439,8 @@ public type DeploymentStrategyBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRollingUpdate() returns RollingUpdateDeploymentBuilderAppsV1beta1 {
-        self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderAppsV1beta1(self);
+        self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderAppsV1beta1();
+        self.rollingUpdateBuilder.init(self);
         match (self.rollingUpdateBuilder) {
             RollingUpdateDeploymentBuilderAppsV1beta1 builder => {
                 return builder;
@@ -10488,7 +11459,7 @@ public type DeploymentStrategyBuilderAppsV1beta1 object {
 };
 
 public type NamespaceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Namespace io_k8s_api_core_v1_namespace;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -10496,8 +11467,11 @@ public type NamespaceBuilderCoreV1 object {
 
     public NamespaceStatusBuilderCoreV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_namespace = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Namespace) {
         return self.io_k8s_api_core_v1_namespace;
@@ -10506,7 +11480,8 @@ public type NamespaceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -10518,7 +11493,8 @@ public type NamespaceBuilderCoreV1 object {
         }
     }
     public function withSpec() returns NamespaceSpecBuilderCoreV1 {
-        self.specBuilder = new NamespaceSpecBuilderCoreV1(self);
+        self.specBuilder = new NamespaceSpecBuilderCoreV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             NamespaceSpecBuilderCoreV1 builder => {
                 return builder;
@@ -10530,7 +11506,8 @@ public type NamespaceBuilderCoreV1 object {
         }
     }
     public function withStatus() returns NamespaceStatusBuilderCoreV1 {
-        self.statusBuilder = new NamespaceStatusBuilderCoreV1(self);
+        self.statusBuilder = new NamespaceStatusBuilderCoreV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             NamespaceStatusBuilderCoreV1 builder => {
                 return builder;
@@ -10554,7 +11531,7 @@ public type NamespaceBuilderCoreV1 object {
 };
 
 public type DeploymentSpecBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DeploymentSpec io_k8s_api_apps_v1beta2_deploymentspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
@@ -10562,8 +11539,11 @@ public type DeploymentSpecBuilderAppsV1beta2 object {
 
     public PodTemplateSpecBuilderCoreV1? templateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_deploymentspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DeploymentSpec) {
         return self.io_k8s_api_apps_v1beta2_deploymentspec;
@@ -10572,7 +11552,8 @@ public type DeploymentSpecBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -10584,7 +11565,8 @@ public type DeploymentSpecBuilderAppsV1beta2 object {
         }
     }
     public function withStrategy() returns DeploymentStrategyBuilderAppsV1beta2 {
-        self.strategyBuilder = new DeploymentStrategyBuilderAppsV1beta2(self);
+        self.strategyBuilder = new DeploymentStrategyBuilderAppsV1beta2();
+        self.strategyBuilder.init(self);
         match (self.strategyBuilder) {
             DeploymentStrategyBuilderAppsV1beta2 builder => {
                 return builder;
@@ -10596,7 +11578,8 @@ public type DeploymentSpecBuilderAppsV1beta2 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -10636,11 +11619,14 @@ public type DeploymentSpecBuilderAppsV1beta2 object {
 };
 
 public type CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionNames
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionnames;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionnames = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionNames) {
@@ -10701,7 +11687,7 @@ public type CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 object {
 };
 
 public type DeploymentSpecBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DeploymentSpec io_k8s_api_extensions_v1beta1_deploymentspec;
     public RollbackConfigBuilderExtensionsV1beta1? rollbackToBuilder;
 
@@ -10711,8 +11697,11 @@ public type DeploymentSpecBuilderExtensionsV1beta1 object {
 
     public PodTemplateSpecBuilderCoreV1? templateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_deploymentspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DeploymentSpec) {
         return self.io_k8s_api_extensions_v1beta1_deploymentspec;
@@ -10721,7 +11710,8 @@ public type DeploymentSpecBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRollbackTo() returns RollbackConfigBuilderExtensionsV1beta1 {
-        self.rollbackToBuilder = new RollbackConfigBuilderExtensionsV1beta1(self);
+        self.rollbackToBuilder = new RollbackConfigBuilderExtensionsV1beta1();
+        self.rollbackToBuilder.init(self);
         match (self.rollbackToBuilder) {
             RollbackConfigBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -10733,7 +11723,8 @@ public type DeploymentSpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -10745,7 +11736,8 @@ public type DeploymentSpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withStrategy() returns DeploymentStrategyBuilderExtensionsV1beta1 {
-        self.strategyBuilder = new DeploymentStrategyBuilderExtensionsV1beta1(self);
+        self.strategyBuilder = new DeploymentStrategyBuilderExtensionsV1beta1();
+        self.strategyBuilder.init(self);
         match (self.strategyBuilder) {
             DeploymentStrategyBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -10757,7 +11749,8 @@ public type DeploymentSpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -10798,10 +11791,13 @@ public type DeploymentSpecBuilderExtensionsV1beta1 object {
 };
 
 public type CapabilitiesBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Capabilities io_k8s_api_core_v1_capabilities;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_capabilities = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Capabilities) {
         return self.io_k8s_api_core_v1_capabilities;
@@ -10830,14 +11826,17 @@ public type CapabilitiesBuilderCoreV1 object {
 };
 
 public type LimitRangeBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_LimitRange io_k8s_api_core_v1_limitrange;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public LimitRangeSpecBuilderCoreV1? specBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_limitrange = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_LimitRange) {
         return self.io_k8s_api_core_v1_limitrange;
@@ -10846,7 +11845,8 @@ public type LimitRangeBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -10858,7 +11858,8 @@ public type LimitRangeBuilderCoreV1 object {
         }
     }
     public function withSpec() returns LimitRangeSpecBuilderCoreV1 {
-        self.specBuilder = new LimitRangeSpecBuilderCoreV1(self);
+        self.specBuilder = new LimitRangeSpecBuilderCoreV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             LimitRangeSpecBuilderCoreV1 builder => {
                 return builder;
@@ -10882,14 +11883,17 @@ public type LimitRangeBuilderCoreV1 object {
 };
 
 public type ReplicaSetSpecBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_ReplicaSetSpec io_k8s_api_extensions_v1beta1_replicasetspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
     public PodTemplateSpecBuilderCoreV1? templateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_replicasetspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_ReplicaSetSpec) {
         return self.io_k8s_api_extensions_v1beta1_replicasetspec;
@@ -10898,7 +11902,8 @@ public type ReplicaSetSpecBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -10910,7 +11915,8 @@ public type ReplicaSetSpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -10934,14 +11940,17 @@ public type ReplicaSetSpecBuilderExtensionsV1beta1 object {
 };
 
 public type ReplicaSetSpecBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ReplicaSetSpec io_k8s_api_apps_v1beta2_replicasetspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
     public PodTemplateSpecBuilderCoreV1? templateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_replicasetspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_ReplicaSetSpec) {
         return self.io_k8s_api_apps_v1beta2_replicasetspec;
@@ -10950,7 +11959,8 @@ public type ReplicaSetSpecBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -10962,7 +11972,8 @@ public type ReplicaSetSpecBuilderAppsV1beta2 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -10986,14 +11997,17 @@ public type ReplicaSetSpecBuilderAppsV1beta2 object {
 };
 
 public type NetworkPolicyEgressRuleBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_NetworkPolicyEgressRule io_k8s_api_extensions_v1beta1_networkpolicyegressrule;
     public NetworkPolicyPortBuilderExtensionsV1beta1[] portsBuilder;
 
     public NetworkPolicyPeerBuilderExtensionsV1beta1[] toBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_networkpolicyegressrule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_NetworkPolicyEgressRule) {
         return self.io_k8s_api_extensions_v1beta1_networkpolicyegressrule;
@@ -11002,20 +12016,25 @@ public type NetworkPolicyEgressRuleBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withPorts() returns NetworkPolicyPortBuilderExtensionsV1beta1 {
-        self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderExtensionsV1beta1(self);
+        self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderExtensionsV1beta1();
+        self.portsBuilder[(lengthof portsBuilder)].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
     public function withTo() returns NetworkPolicyPeerBuilderExtensionsV1beta1 {
-        self.toBuilder[lengthof toBuilder] = new NetworkPolicyPeerBuilderExtensionsV1beta1(self);
+        self.toBuilder[lengthof toBuilder] = new NetworkPolicyPeerBuilderExtensionsV1beta1();
+        self.toBuilder[(lengthof toBuilder)].init(self);
         return self.toBuilder[(lengthof toBuilder) - 1];
     }
 };
 
 public type PersistentVolumeClaimVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeClaimVolumeSource io_k8s_api_core_v1_persistentvolumeclaimvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_persistentvolumeclaimvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PersistentVolumeClaimVolumeSource) {
         return self.io_k8s_api_core_v1_persistentvolumeclaimvolumesource;
@@ -11036,15 +12055,18 @@ public type PersistentVolumeClaimVolumeSourceBuilderCoreV1 object {
 };
 
 public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SelfSubjectAccessReviewSpec
     io_k8s_api_authorization_v1_selfsubjectaccessreviewspec;
     public NonResourceAttributesBuilderAuthorizationV1? nonResourceAttributesBuilder;
 
     public ResourceAttributesBuilderAuthorizationV1? resourceAttributesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_selfsubjectaccessreviewspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_SelfSubjectAccessReviewSpec) {
         return self.io_k8s_api_authorization_v1_selfsubjectaccessreviewspec;
@@ -11053,7 +12075,8 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1 object {
         return self.fluentBuilder;
     }
     public function withNonResourceAttributes() returns NonResourceAttributesBuilderAuthorizationV1 {
-        self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1(self);
+        self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1();
+        self.nonResourceAttributesBuilder.init(self);
         match (self.nonResourceAttributesBuilder) {
             NonResourceAttributesBuilderAuthorizationV1 builder => {
                 return builder;
@@ -11065,7 +12088,8 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1 object {
         }
     }
     public function withResourceAttributes() returns ResourceAttributesBuilderAuthorizationV1 {
-        self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1(self);
+        self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1();
+        self.resourceAttributesBuilder.init(self);
         match (self.resourceAttributesBuilder) {
             ResourceAttributesBuilderAuthorizationV1 builder => {
                 return builder;
@@ -11079,7 +12103,7 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1 object {
 };
 
 public type AffinityBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Affinity io_k8s_api_core_v1_affinity;
     public NodeAffinityBuilderCoreV1? nodeAffinityBuilder;
 
@@ -11087,8 +12111,11 @@ public type AffinityBuilderCoreV1 object {
 
     public PodAntiAffinityBuilderCoreV1? podAntiAffinityBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_affinity = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Affinity) {
         return self.io_k8s_api_core_v1_affinity;
@@ -11097,7 +12124,8 @@ public type AffinityBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withNodeAffinity() returns NodeAffinityBuilderCoreV1 {
-        self.nodeAffinityBuilder = new NodeAffinityBuilderCoreV1(self);
+        self.nodeAffinityBuilder = new NodeAffinityBuilderCoreV1();
+        self.nodeAffinityBuilder.init(self);
         match (self.nodeAffinityBuilder) {
             NodeAffinityBuilderCoreV1 builder => {
                 return builder;
@@ -11109,7 +12137,8 @@ public type AffinityBuilderCoreV1 object {
         }
     }
     public function withPodAffinity() returns PodAffinityBuilderCoreV1 {
-        self.podAffinityBuilder = new PodAffinityBuilderCoreV1(self);
+        self.podAffinityBuilder = new PodAffinityBuilderCoreV1();
+        self.podAffinityBuilder.init(self);
         match (self.podAffinityBuilder) {
             PodAffinityBuilderCoreV1 builder => {
                 return builder;
@@ -11121,7 +12150,8 @@ public type AffinityBuilderCoreV1 object {
         }
     }
     public function withPodAntiAffinity() returns PodAntiAffinityBuilderCoreV1 {
-        self.podAntiAffinityBuilder = new PodAntiAffinityBuilderCoreV1(self);
+        self.podAntiAffinityBuilder = new PodAntiAffinityBuilderCoreV1();
+        self.podAntiAffinityBuilder.init(self);
         match (self.podAntiAffinityBuilder) {
             PodAntiAffinityBuilderCoreV1 builder => {
                 return builder;
@@ -11135,12 +12165,15 @@ public type AffinityBuilderCoreV1 object {
 };
 
 public type FSGroupStrategyOptionsBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_FSGroupStrategyOptions io_k8s_api_extensions_v1beta1_fsgroupstrategyoptions;
     public IDRangeBuilderExtensionsV1beta1[] rangesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_fsgroupstrategyoptions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_FSGroupStrategyOptions) {
         return self.io_k8s_api_extensions_v1beta1_fsgroupstrategyoptions;
@@ -11149,7 +12182,8 @@ public type FSGroupStrategyOptionsBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRanges() returns IDRangeBuilderExtensionsV1beta1 {
-        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderExtensionsV1beta1(self);
+        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderExtensionsV1beta1();
+        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -11160,12 +12194,15 @@ public type FSGroupStrategyOptionsBuilderExtensionsV1beta1 object {
 };
 
 public type StorageClassBuilderStorageV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_StorageClass io_k8s_api_storage_v1beta1_storageclass;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_storage_v1beta1_storageclass = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_storage_v1beta1_StorageClass) {
         return self.io_k8s_api_storage_v1beta1_storageclass;
@@ -11174,7 +12211,8 @@ public type StorageClassBuilderStorageV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -11233,14 +12271,17 @@ public type StorageClassBuilderStorageV1beta1 object {
 };
 
 public type PodTemplateSpecBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodTemplateSpec io_k8s_api_core_v1_podtemplatespec;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public PodSpecBuilderCoreV1? specBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podtemplatespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodTemplateSpec) {
         return self.io_k8s_api_core_v1_podtemplatespec;
@@ -11249,7 +12290,8 @@ public type PodTemplateSpecBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -11261,7 +12303,8 @@ public type PodTemplateSpecBuilderCoreV1 object {
         }
     }
     public function withSpec() returns PodSpecBuilderCoreV1 {
-        self.specBuilder = new PodSpecBuilderCoreV1(self);
+        self.specBuilder = new PodSpecBuilderCoreV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             PodSpecBuilderCoreV1 builder => {
                 return builder;
@@ -11275,14 +12318,17 @@ public type PodTemplateSpecBuilderCoreV1 object {
 };
 
 public type ReplicationControllerListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ReplicationControllerList io_k8s_api_core_v1_replicationcontrollerlist;
     public ReplicationControllerBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_replicationcontrollerlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ReplicationControllerList) {
         return self.io_k8s_api_core_v1_replicationcontrollerlist;
@@ -11291,7 +12337,8 @@ public type ReplicationControllerListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -11303,7 +12350,8 @@ public type ReplicationControllerListBuilderCoreV1 object {
         }
     }
     public function withItems() returns ReplicationControllerBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ReplicationControllerBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ReplicationControllerBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -11319,10 +12367,13 @@ public type ReplicationControllerListBuilderCoreV1 object {
 };
 
 public type NodeAddressBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeAddress io_k8s_api_core_v1_nodeaddress;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodeaddress = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeAddress) {
         return self.io_k8s_api_core_v1_nodeaddress;
@@ -11343,10 +12394,13 @@ public type NodeAddressBuilderCoreV1 object {
 };
 
 public type RollingUpdateDaemonSetBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_RollingUpdateDaemonSet io_k8s_api_apps_v1_rollingupdatedaemonset;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_rollingupdatedaemonset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_RollingUpdateDaemonSet) {
         return self.io_k8s_api_apps_v1_rollingupdatedaemonset;
@@ -11362,14 +12416,17 @@ public type RollingUpdateDaemonSetBuilderAppsV1 object {
 };
 
 public type PodSecurityPolicyBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_PodSecurityPolicy io_k8s_api_extensions_v1beta1_podsecuritypolicy;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public PodSecurityPolicySpecBuilderExtensionsV1beta1? specBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_podsecuritypolicy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_PodSecurityPolicy) {
         return self.io_k8s_api_extensions_v1beta1_podsecuritypolicy;
@@ -11378,7 +12435,8 @@ public type PodSecurityPolicyBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -11390,7 +12448,8 @@ public type PodSecurityPolicyBuilderExtensionsV1beta1 object {
         }
     }
     public function withSpec() returns PodSecurityPolicySpecBuilderExtensionsV1beta1 {
-        self.specBuilder = new PodSecurityPolicySpecBuilderExtensionsV1beta1(self);
+        self.specBuilder = new PodSecurityPolicySpecBuilderExtensionsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             PodSecurityPolicySpecBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -11414,12 +12473,15 @@ public type PodSecurityPolicyBuilderExtensionsV1beta1 object {
 };
 
 public type RBDVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_RBDVolumeSource io_k8s_api_core_v1_rbdvolumesource;
     public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_rbdvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_RBDVolumeSource) {
         return self.io_k8s_api_core_v1_rbdvolumesource;
@@ -11428,7 +12490,8 @@ public type RBDVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns LocalObjectReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             LocalObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -11482,14 +12545,17 @@ public type RBDVolumeSourceBuilderCoreV1 object {
 };
 
 public type StatefulSetListBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_StatefulSetList io_k8s_api_apps_v1_statefulsetlist;
     public StatefulSetBuilderAppsV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_statefulsetlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_StatefulSetList) {
         return self.io_k8s_api_apps_v1_statefulsetlist;
@@ -11498,7 +12564,8 @@ public type StatefulSetListBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -11510,7 +12577,8 @@ public type StatefulSetListBuilderAppsV1 object {
         }
     }
     public function withItems() returns StatefulSetBuilderAppsV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -11526,10 +12594,13 @@ public type StatefulSetListBuilderAppsV1 object {
 };
 
 public type PodDNSConfigOptionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodDNSConfigOption io_k8s_api_core_v1_poddnsconfigoption;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_poddnsconfigoption = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodDNSConfigOption) {
         return self.io_k8s_api_core_v1_poddnsconfigoption;
@@ -11550,15 +12621,18 @@ public type PodDNSConfigOptionBuilderCoreV1 object {
 };
 
 public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SelfSubjectAccessReviewSpec
     io_k8s_api_authorization_v1beta1_selfsubjectaccessreviewspec;
     public NonResourceAttributesBuilderAuthorizationV1beta1? nonResourceAttributesBuilder;
 
     public ResourceAttributesBuilderAuthorizationV1beta1? resourceAttributesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_selfsubjectaccessreviewspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_SelfSubjectAccessReviewSpec) {
         return self.io_k8s_api_authorization_v1beta1_selfsubjectaccessreviewspec;
@@ -11567,7 +12641,8 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withNonResourceAttributes() returns NonResourceAttributesBuilderAuthorizationV1beta1 {
-        self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1beta1(self);
+        self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1beta1();
+        self.nonResourceAttributesBuilder.init(self);
         match (self.nonResourceAttributesBuilder) {
             NonResourceAttributesBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -11579,7 +12654,8 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
         }
     }
     public function withResourceAttributes() returns ResourceAttributesBuilderAuthorizationV1beta1 {
-        self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1beta1(self);
+        self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1beta1();
+        self.resourceAttributesBuilder.init(self);
         match (self.resourceAttributesBuilder) {
             ResourceAttributesBuilderAuthorizationV1beta1 builder => {
                 return builder;
@@ -11593,10 +12669,13 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
 };
 
 public type PortworxVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PortworxVolumeSource io_k8s_api_core_v1_portworxvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_portworxvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PortworxVolumeSource) {
         return self.io_k8s_api_core_v1_portworxvolumesource;
@@ -11622,15 +12701,18 @@ public type PortworxVolumeSourceBuilderCoreV1 object {
 };
 
 public type CertificateSigningRequestListBuilderCertificatesV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_certificates_v1beta1_CertificateSigningRequestList
     io_k8s_api_certificates_v1beta1_certificatesigningrequestlist;
     public CertificateSigningRequestBuilderCertificatesV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_certificates_v1beta1_certificatesigningrequestlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_certificates_v1beta1_CertificateSigningRequestList) {
         return self.io_k8s_api_certificates_v1beta1_certificatesigningrequestlist;
@@ -11639,7 +12721,8 @@ public type CertificateSigningRequestListBuilderCertificatesV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -11651,7 +12734,8 @@ public type CertificateSigningRequestListBuilderCertificatesV1beta1 object {
         }
     }
     public function withItems() returns CertificateSigningRequestBuilderCertificatesV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new CertificateSigningRequestBuilderCertificatesV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new CertificateSigningRequestBuilderCertificatesV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -11668,10 +12752,13 @@ public type CertificateSigningRequestListBuilderCertificatesV1beta1 object {
 };
 
 public type NamespaceSpecBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NamespaceSpec io_k8s_api_core_v1_namespacespec;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_namespacespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NamespaceSpec) {
         return self.io_k8s_api_core_v1_namespacespec;
@@ -11692,12 +12779,15 @@ public type NamespaceSpecBuilderCoreV1 object {
 };
 
 public type DeploymentStrategyBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DeploymentStrategy io_k8s_api_apps_v1_deploymentstrategy;
     public RollingUpdateDeploymentBuilderAppsV1? rollingUpdateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_deploymentstrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DeploymentStrategy) {
         return self.io_k8s_api_apps_v1_deploymentstrategy;
@@ -11706,7 +12796,8 @@ public type DeploymentStrategyBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withRollingUpdate() returns RollingUpdateDeploymentBuilderAppsV1 {
-        self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderAppsV1(self);
+        self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderAppsV1();
+        self.rollingUpdateBuilder.init(self);
         match (self.rollingUpdateBuilder) {
             RollingUpdateDeploymentBuilderAppsV1 builder => {
                 return builder;
@@ -11725,12 +12816,15 @@ public type DeploymentStrategyBuilderAppsV1 object {
 };
 
 public type FSGroupStrategyOptionsBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_FSGroupStrategyOptions io_k8s_api_policy_v1beta1_fsgroupstrategyoptions;
     public IDRangeBuilderPolicyV1beta1[] rangesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_fsgroupstrategyoptions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_FSGroupStrategyOptions) {
         return self.io_k8s_api_policy_v1beta1_fsgroupstrategyoptions;
@@ -11739,7 +12833,8 @@ public type FSGroupStrategyOptionsBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRanges() returns IDRangeBuilderPolicyV1beta1 {
-        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderPolicyV1beta1(self);
+        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderPolicyV1beta1();
+        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -11750,14 +12845,17 @@ public type FSGroupStrategyOptionsBuilderPolicyV1beta1 object {
 };
 
 public type ClusterRoleListBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_ClusterRoleList io_k8s_api_rbac_v1_clusterrolelist;
     public ClusterRoleBuilderRbacV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_clusterrolelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_ClusterRoleList) {
         return self.io_k8s_api_rbac_v1_clusterrolelist;
@@ -11766,7 +12864,8 @@ public type ClusterRoleListBuilderRbacV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -11778,7 +12877,8 @@ public type ClusterRoleListBuilderRbacV1 object {
         }
     }
     public function withItems() returns ClusterRoleBuilderRbacV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBuilderRbacV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBuilderRbacV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -11794,10 +12894,13 @@ public type ClusterRoleListBuilderRbacV1 object {
 };
 
 public type LocalVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_LocalVolumeSource io_k8s_api_core_v1_localvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_localvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_LocalVolumeSource) {
         return self.io_k8s_api_core_v1_localvolumesource;
@@ -11813,7 +12916,7 @@ public type LocalVolumeSourceBuilderCoreV1 object {
 };
 
 public type ClusterRoleBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_ClusterRole io_k8s_api_rbac_v1_clusterrole;
     public AggregationRuleBuilderRbacV1? aggregationRuleBuilder;
 
@@ -11821,8 +12924,11 @@ public type ClusterRoleBuilderRbacV1 object {
 
     public PolicyRuleBuilderRbacV1[] rulesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_clusterrole = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_ClusterRole) {
         return self.io_k8s_api_rbac_v1_clusterrole;
@@ -11831,7 +12937,8 @@ public type ClusterRoleBuilderRbacV1 object {
         return self.fluentBuilder;
     }
     public function withAggregationRule() returns AggregationRuleBuilderRbacV1 {
-        self.aggregationRuleBuilder = new AggregationRuleBuilderRbacV1(self);
+        self.aggregationRuleBuilder = new AggregationRuleBuilderRbacV1();
+        self.aggregationRuleBuilder.init(self);
         match (self.aggregationRuleBuilder) {
             AggregationRuleBuilderRbacV1 builder => {
                 return builder;
@@ -11843,7 +12950,8 @@ public type ClusterRoleBuilderRbacV1 object {
         }
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -11855,7 +12963,8 @@ public type ClusterRoleBuilderRbacV1 object {
         }
     }
     public function withRules() returns PolicyRuleBuilderRbacV1 {
-        self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1(self);
+        self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1();
+        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
 
@@ -11871,14 +12980,17 @@ public type ClusterRoleBuilderRbacV1 object {
 };
 
 public type StorageClassListBuilderStorageV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_StorageClassList io_k8s_api_storage_v1beta1_storageclasslist;
     public StorageClassBuilderStorageV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_storage_v1beta1_storageclasslist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_storage_v1beta1_StorageClassList) {
         return self.io_k8s_api_storage_v1beta1_storageclasslist;
@@ -11887,7 +12999,8 @@ public type StorageClassListBuilderStorageV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -11899,7 +13012,8 @@ public type StorageClassListBuilderStorageV1beta1 object {
         }
     }
     public function withItems() returns StorageClassBuilderStorageV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new StorageClassBuilderStorageV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new StorageClassBuilderStorageV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -11915,14 +13029,17 @@ public type StorageClassListBuilderStorageV1beta1 object {
 };
 
 public type PersistentVolumeListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeList io_k8s_api_core_v1_persistentvolumelist;
     public PersistentVolumeBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_persistentvolumelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PersistentVolumeList) {
         return self.io_k8s_api_core_v1_persistentvolumelist;
@@ -11931,7 +13048,8 @@ public type PersistentVolumeListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -11943,7 +13061,8 @@ public type PersistentVolumeListBuilderCoreV1 object {
         }
     }
     public function withItems() returns PersistentVolumeBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new PersistentVolumeBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new PersistentVolumeBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -11959,10 +13078,13 @@ public type PersistentVolumeListBuilderCoreV1 object {
 };
 
 public type ConfigMapEnvSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ConfigMapEnvSource io_k8s_api_core_v1_configmapenvsource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_configmapenvsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ConfigMapEnvSource) {
         return self.io_k8s_api_core_v1_configmapenvsource;
@@ -11983,14 +13105,17 @@ public type ConfigMapEnvSourceBuilderCoreV1 object {
 };
 
 public type EnvFromSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EnvFromSource io_k8s_api_core_v1_envfromsource;
     public ConfigMapEnvSourceBuilderCoreV1? configMapRefBuilder;
 
     public SecretEnvSourceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_envfromsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EnvFromSource) {
         return self.io_k8s_api_core_v1_envfromsource;
@@ -11999,7 +13124,8 @@ public type EnvFromSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withConfigMapRef() returns ConfigMapEnvSourceBuilderCoreV1 {
-        self.configMapRefBuilder = new ConfigMapEnvSourceBuilderCoreV1(self);
+        self.configMapRefBuilder = new ConfigMapEnvSourceBuilderCoreV1();
+        self.configMapRefBuilder.init(self);
         match (self.configMapRefBuilder) {
             ConfigMapEnvSourceBuilderCoreV1 builder => {
                 return builder;
@@ -12011,7 +13137,8 @@ public type EnvFromSourceBuilderCoreV1 object {
         }
     }
     public function withSecretRef() returns SecretEnvSourceBuilderCoreV1 {
-        self.secretRefBuilder = new SecretEnvSourceBuilderCoreV1(self);
+        self.secretRefBuilder = new SecretEnvSourceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             SecretEnvSourceBuilderCoreV1 builder => {
                 return builder;
@@ -12030,10 +13157,13 @@ public type EnvFromSourceBuilderCoreV1 object {
 };
 
 public type ComponentConditionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ComponentCondition io_k8s_api_core_v1_componentcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_componentcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ComponentCondition) {
         return self.io_k8s_api_core_v1_componentcondition;
@@ -12064,10 +13194,13 @@ public type ComponentConditionBuilderCoreV1 object {
 };
 
 public type RoleRefBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_RoleRef io_k8s_api_rbac_v1_roleref;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_roleref = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_RoleRef) {
         return self.io_k8s_api_rbac_v1_roleref;
@@ -12093,10 +13226,13 @@ public type RoleRefBuilderRbacV1 object {
 };
 
 public type ReplicationControllerConditionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ReplicationControllerCondition io_k8s_api_core_v1_replicationcontrollercondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_replicationcontrollercondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ReplicationControllerCondition) {
         return self.io_k8s_api_core_v1_replicationcontrollercondition;
@@ -12133,12 +13269,15 @@ public type ReplicationControllerConditionBuilderCoreV1 object {
 };
 
 public type SessionAffinityConfigBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SessionAffinityConfig io_k8s_api_core_v1_sessionaffinityconfig;
     public ClientIPConfigBuilderCoreV1? clientIPBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_sessionaffinityconfig = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_SessionAffinityConfig) {
         return self.io_k8s_api_core_v1_sessionaffinityconfig;
@@ -12147,7 +13286,8 @@ public type SessionAffinityConfigBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withClientIP() returns ClientIPConfigBuilderCoreV1 {
-        self.clientIPBuilder = new ClientIPConfigBuilderCoreV1(self);
+        self.clientIPBuilder = new ClientIPConfigBuilderCoreV1();
+        self.clientIPBuilder.init(self);
         match (self.clientIPBuilder) {
             ClientIPConfigBuilderCoreV1 builder => {
                 return builder;
@@ -12161,10 +13301,13 @@ public type SessionAffinityConfigBuilderCoreV1 object {
 };
 
 public type StatefulSetConditionBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_StatefulSetCondition io_k8s_api_apps_v1beta2_statefulsetcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_statefulsetcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_StatefulSetCondition) {
         return self.io_k8s_api_apps_v1beta2_statefulsetcondition;
@@ -12201,7 +13344,7 @@ public type StatefulSetConditionBuilderAppsV1beta2 object {
 };
 
 public type APIGroupBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_APIGroup io_k8s_apimachinery_pkg_apis_meta_v1_apigroup;
     public GroupVersionForDiscoveryBuilderMetaV1? preferredVersionBuilder;
 
@@ -12209,8 +13352,11 @@ public type APIGroupBuilderMetaV1 object {
 
     public GroupVersionForDiscoveryBuilderMetaV1[] versionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_apigroup = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_APIGroup) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_apigroup;
@@ -12219,7 +13365,8 @@ public type APIGroupBuilderMetaV1 object {
         return self.fluentBuilder;
     }
     public function withPreferredVersion() returns GroupVersionForDiscoveryBuilderMetaV1 {
-        self.preferredVersionBuilder = new GroupVersionForDiscoveryBuilderMetaV1(self);
+        self.preferredVersionBuilder = new GroupVersionForDiscoveryBuilderMetaV1();
+        self.preferredVersionBuilder.init(self);
         match (self.preferredVersionBuilder) {
             GroupVersionForDiscoveryBuilderMetaV1 builder => {
                 return builder;
@@ -12232,11 +13379,13 @@ public type APIGroupBuilderMetaV1 object {
     }
     public function withServerAddressByClientCIDRs() returns ServerAddressByClientCIDRBuilderMetaV1 {
         self.serverAddressByClientCIDRsBuilder[lengthof serverAddressByClientCIDRsBuilder] = new
-        ServerAddressByClientCIDRBuilderMetaV1(self);
+        ServerAddressByClientCIDRBuilderMetaV1();
+        self.serverAddressByClientCIDRsBuilder[(lengthof serverAddressByClientCIDRsBuilder)].init(self);
         return self.serverAddressByClientCIDRsBuilder[(lengthof serverAddressByClientCIDRsBuilder) - 1];
     }
     public function withVersions() returns GroupVersionForDiscoveryBuilderMetaV1 {
-        self.versionsBuilder[lengthof versionsBuilder] = new GroupVersionForDiscoveryBuilderMetaV1(self);
+        self.versionsBuilder[lengthof versionsBuilder] = new GroupVersionForDiscoveryBuilderMetaV1();
+        self.versionsBuilder[(lengthof versionsBuilder)].init(self);
         return self.versionsBuilder[(lengthof versionsBuilder) - 1];
     }
 
@@ -12257,10 +13406,13 @@ public type APIGroupBuilderMetaV1 object {
 };
 
 public type ScaleStatusBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_ScaleStatus io_k8s_api_extensions_v1beta1_scalestatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_scalestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_ScaleStatus) {
         return self.io_k8s_api_extensions_v1beta1_scalestatus;
@@ -12286,7 +13438,7 @@ public type ScaleStatusBuilderExtensionsV1beta1 object {
 };
 
 public type StatefulSetBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_StatefulSet io_k8s_api_apps_v1beta1_statefulset;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -12294,8 +13446,11 @@ public type StatefulSetBuilderAppsV1beta1 object {
 
     public StatefulSetStatusBuilderAppsV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_statefulset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_StatefulSet) {
         return self.io_k8s_api_apps_v1beta1_statefulset;
@@ -12304,7 +13459,8 @@ public type StatefulSetBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -12316,7 +13472,8 @@ public type StatefulSetBuilderAppsV1beta1 object {
         }
     }
     public function withSpec() returns StatefulSetSpecBuilderAppsV1beta1 {
-        self.specBuilder = new StatefulSetSpecBuilderAppsV1beta1(self);
+        self.specBuilder = new StatefulSetSpecBuilderAppsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             StatefulSetSpecBuilderAppsV1beta1 builder => {
                 return builder;
@@ -12328,7 +13485,8 @@ public type StatefulSetBuilderAppsV1beta1 object {
         }
     }
     public function withStatus() returns StatefulSetStatusBuilderAppsV1beta1 {
-        self.statusBuilder = new StatefulSetStatusBuilderAppsV1beta1(self);
+        self.statusBuilder = new StatefulSetStatusBuilderAppsV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             StatefulSetStatusBuilderAppsV1beta1 builder => {
                 return builder;
@@ -12352,14 +13510,17 @@ public type StatefulSetBuilderAppsV1beta1 object {
 };
 
 public type JobSpecBuilderBatchV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1_JobSpec io_k8s_api_batch_v1_jobspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
     public PodTemplateSpecBuilderCoreV1? templateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_batch_v1_jobspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_batch_v1_JobSpec) {
         return self.io_k8s_api_batch_v1_jobspec;
@@ -12368,7 +13529,8 @@ public type JobSpecBuilderBatchV1 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -12380,7 +13542,8 @@ public type JobSpecBuilderBatchV1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -12419,12 +13582,15 @@ public type JobSpecBuilderBatchV1 object {
 };
 
 public type TokenReviewStatusBuilderAuthenticationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1_TokenReviewStatus io_k8s_api_authentication_v1_tokenreviewstatus;
     public UserInfoBuilderAuthenticationV1? userBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authentication_v1_tokenreviewstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authentication_v1_TokenReviewStatus) {
         return self.io_k8s_api_authentication_v1_tokenreviewstatus;
@@ -12433,7 +13599,8 @@ public type TokenReviewStatusBuilderAuthenticationV1 object {
         return self.fluentBuilder;
     }
     public function withUser() returns UserInfoBuilderAuthenticationV1 {
-        self.userBuilder = new UserInfoBuilderAuthenticationV1(self);
+        self.userBuilder = new UserInfoBuilderAuthenticationV1();
+        self.userBuilder.init(self);
         match (self.userBuilder) {
             UserInfoBuilderAuthenticationV1 builder => {
                 return builder;
@@ -12457,11 +13624,14 @@ public type TokenReviewStatusBuilderAuthenticationV1 object {
 };
 
 public type CertificateSigningRequestSpecBuilderCertificatesV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_certificates_v1beta1_CertificateSigningRequestSpec
     io_k8s_api_certificates_v1beta1_certificatesigningrequestspec;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_certificates_v1beta1_certificatesigningrequestspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_certificates_v1beta1_CertificateSigningRequestSpec) {
         return self.io_k8s_api_certificates_v1beta1_certificatesigningrequestspec;
@@ -12512,10 +13682,13 @@ public type CertificateSigningRequestSpecBuilderCertificatesV1beta1 object {
 };
 
 public type NonResourceRuleBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_NonResourceRule io_k8s_api_authorization_v1beta1_nonresourcerule;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_nonresourcerule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_NonResourceRule) {
         return self.io_k8s_api_authorization_v1beta1_nonresourcerule;
@@ -12546,10 +13719,13 @@ public type NonResourceRuleBuilderAuthorizationV1beta1 object {
 };
 
 public type ContainerStateRunningBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ContainerStateRunning io_k8s_api_core_v1_containerstaterunning;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_containerstaterunning = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ContainerStateRunning) {
         return self.io_k8s_api_core_v1_containerstaterunning;
@@ -12565,7 +13741,7 @@ public type ContainerStateRunningBuilderCoreV1 object {
 };
 
 public type NetworkPolicySpecBuilderNetworkingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_networking_v1_NetworkPolicySpec io_k8s_api_networking_v1_networkpolicyspec;
     public NetworkPolicyEgressRuleBuilderNetworkingV1[] egressBuilder;
 
@@ -12573,8 +13749,11 @@ public type NetworkPolicySpecBuilderNetworkingV1 object {
 
     public LabelSelectorBuilderMetaV1? podSelectorBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_networking_v1_networkpolicyspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_networking_v1_NetworkPolicySpec) {
         return self.io_k8s_api_networking_v1_networkpolicyspec;
@@ -12583,7 +13762,8 @@ public type NetworkPolicySpecBuilderNetworkingV1 object {
         return self.fluentBuilder;
     }
     public function withPodSelector() returns LabelSelectorBuilderMetaV1 {
-        self.podSelectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.podSelectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.podSelectorBuilder.init(self);
         match (self.podSelectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -12595,11 +13775,13 @@ public type NetworkPolicySpecBuilderNetworkingV1 object {
         }
     }
     public function withEgress() returns NetworkPolicyEgressRuleBuilderNetworkingV1 {
-        self.egressBuilder[lengthof egressBuilder] = new NetworkPolicyEgressRuleBuilderNetworkingV1(self);
+        self.egressBuilder[lengthof egressBuilder] = new NetworkPolicyEgressRuleBuilderNetworkingV1();
+        self.egressBuilder[(lengthof egressBuilder)].init(self);
         return self.egressBuilder[(lengthof egressBuilder) - 1];
     }
     public function withIngress() returns NetworkPolicyIngressRuleBuilderNetworkingV1 {
-        self.ingressBuilder[lengthof ingressBuilder] = new NetworkPolicyIngressRuleBuilderNetworkingV1(self);
+        self.ingressBuilder[lengthof ingressBuilder] = new NetworkPolicyIngressRuleBuilderNetworkingV1();
+        self.ingressBuilder[(lengthof ingressBuilder)].init(self);
         return self.ingressBuilder[(lengthof ingressBuilder) - 1];
     }
 
@@ -12615,12 +13797,15 @@ public type NetworkPolicySpecBuilderNetworkingV1 object {
 };
 
 public type DeploymentStatusBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DeploymentStatus io_k8s_api_apps_v1_deploymentstatus;
     public DeploymentConditionBuilderAppsV1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_deploymentstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DeploymentStatus) {
         return self.io_k8s_api_apps_v1_deploymentstatus;
@@ -12629,7 +13814,8 @@ public type DeploymentStatusBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns DeploymentConditionBuilderAppsV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderAppsV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderAppsV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -12670,10 +13856,13 @@ public type DeploymentStatusBuilderAppsV1 object {
 };
 
 public type PhotonPersistentDiskVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PhotonPersistentDiskVolumeSource io_k8s_api_core_v1_photonpersistentdiskvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_photonpersistentdiskvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PhotonPersistentDiskVolumeSource) {
         return self.io_k8s_api_core_v1_photonpersistentdiskvolumesource;
@@ -12694,7 +13883,7 @@ public type PhotonPersistentDiskVolumeSourceBuilderCoreV1 object {
 };
 
 public type TokenReviewBuilderAuthenticationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1_TokenReview io_k8s_api_authentication_v1_tokenreview;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -12702,8 +13891,11 @@ public type TokenReviewBuilderAuthenticationV1 object {
 
     public TokenReviewStatusBuilderAuthenticationV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authentication_v1_tokenreview = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authentication_v1_TokenReview) {
         return self.io_k8s_api_authentication_v1_tokenreview;
@@ -12712,7 +13904,8 @@ public type TokenReviewBuilderAuthenticationV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -12724,7 +13917,8 @@ public type TokenReviewBuilderAuthenticationV1 object {
         }
     }
     public function withSpec() returns TokenReviewSpecBuilderAuthenticationV1 {
-        self.specBuilder = new TokenReviewSpecBuilderAuthenticationV1(self);
+        self.specBuilder = new TokenReviewSpecBuilderAuthenticationV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             TokenReviewSpecBuilderAuthenticationV1 builder => {
                 return builder;
@@ -12736,7 +13930,8 @@ public type TokenReviewBuilderAuthenticationV1 object {
         }
     }
     public function withStatus() returns TokenReviewStatusBuilderAuthenticationV1 {
-        self.statusBuilder = new TokenReviewStatusBuilderAuthenticationV1(self);
+        self.statusBuilder = new TokenReviewStatusBuilderAuthenticationV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             TokenReviewStatusBuilderAuthenticationV1 builder => {
                 return builder;
@@ -12760,14 +13955,17 @@ public type TokenReviewBuilderAuthenticationV1 object {
 };
 
 public type SubjectAccessReviewSpecBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SubjectAccessReviewSpec io_k8s_api_authorization_v1_subjectaccessreviewspec;
     public NonResourceAttributesBuilderAuthorizationV1? nonResourceAttributesBuilder;
 
     public ResourceAttributesBuilderAuthorizationV1? resourceAttributesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_subjectaccessreviewspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_SubjectAccessReviewSpec) {
         return self.io_k8s_api_authorization_v1_subjectaccessreviewspec;
@@ -12776,7 +13974,8 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1 object {
         return self.fluentBuilder;
     }
     public function withNonResourceAttributes() returns NonResourceAttributesBuilderAuthorizationV1 {
-        self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1(self);
+        self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1();
+        self.nonResourceAttributesBuilder.init(self);
         match (self.nonResourceAttributesBuilder) {
             NonResourceAttributesBuilderAuthorizationV1 builder => {
                 return builder;
@@ -12788,7 +13987,8 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1 object {
         }
     }
     public function withResourceAttributes() returns ResourceAttributesBuilderAuthorizationV1 {
-        self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1(self);
+        self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1();
+        self.resourceAttributesBuilder.init(self);
         match (self.resourceAttributesBuilder) {
             ResourceAttributesBuilderAuthorizationV1 builder => {
                 return builder;
@@ -12827,7 +14027,7 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1 object {
 };
 
 public type PersistentVolumeClaimBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeClaim io_k8s_api_core_v1_persistentvolumeclaim;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -12835,8 +14035,11 @@ public type PersistentVolumeClaimBuilderCoreV1 object {
 
     public PersistentVolumeClaimStatusBuilderCoreV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_persistentvolumeclaim = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PersistentVolumeClaim) {
         return self.io_k8s_api_core_v1_persistentvolumeclaim;
@@ -12845,7 +14048,8 @@ public type PersistentVolumeClaimBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -12857,7 +14061,8 @@ public type PersistentVolumeClaimBuilderCoreV1 object {
         }
     }
     public function withSpec() returns PersistentVolumeClaimSpecBuilderCoreV1 {
-        self.specBuilder = new PersistentVolumeClaimSpecBuilderCoreV1(self);
+        self.specBuilder = new PersistentVolumeClaimSpecBuilderCoreV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             PersistentVolumeClaimSpecBuilderCoreV1 builder => {
                 return builder;
@@ -12869,7 +14074,8 @@ public type PersistentVolumeClaimBuilderCoreV1 object {
         }
     }
     public function withStatus() returns PersistentVolumeClaimStatusBuilderCoreV1 {
-        self.statusBuilder = new PersistentVolumeClaimStatusBuilderCoreV1(self);
+        self.statusBuilder = new PersistentVolumeClaimStatusBuilderCoreV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             PersistentVolumeClaimStatusBuilderCoreV1 builder => {
                 return builder;
@@ -12893,14 +14099,17 @@ public type PersistentVolumeClaimBuilderCoreV1 object {
 };
 
 public type ServiceAccountListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ServiceAccountList io_k8s_api_core_v1_serviceaccountlist;
     public ServiceAccountBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_serviceaccountlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ServiceAccountList) {
         return self.io_k8s_api_core_v1_serviceaccountlist;
@@ -12909,7 +14118,8 @@ public type ServiceAccountListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -12921,7 +14131,8 @@ public type ServiceAccountListBuilderCoreV1 object {
         }
     }
     public function withItems() returns ServiceAccountBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ServiceAccountBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ServiceAccountBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -12937,12 +14148,15 @@ public type ServiceAccountListBuilderCoreV1 object {
 };
 
 public type SecretBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Secret io_k8s_api_core_v1_secret;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_secret = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Secret) {
         return self.io_k8s_api_core_v1_secret;
@@ -12951,7 +14165,8 @@ public type SecretBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -12990,7 +14205,7 @@ public type SecretBuilderCoreV1 object {
 };
 
 public type DaemonSetBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DaemonSet io_k8s_api_extensions_v1beta1_daemonset;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -12998,8 +14213,11 @@ public type DaemonSetBuilderExtensionsV1beta1 object {
 
     public DaemonSetStatusBuilderExtensionsV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_daemonset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DaemonSet) {
         return self.io_k8s_api_extensions_v1beta1_daemonset;
@@ -13008,7 +14226,8 @@ public type DaemonSetBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -13020,7 +14239,8 @@ public type DaemonSetBuilderExtensionsV1beta1 object {
         }
     }
     public function withSpec() returns DaemonSetSpecBuilderExtensionsV1beta1 {
-        self.specBuilder = new DaemonSetSpecBuilderExtensionsV1beta1(self);
+        self.specBuilder = new DaemonSetSpecBuilderExtensionsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             DaemonSetSpecBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -13032,7 +14252,8 @@ public type DaemonSetBuilderExtensionsV1beta1 object {
         }
     }
     public function withStatus() returns DaemonSetStatusBuilderExtensionsV1beta1 {
-        self.statusBuilder = new DaemonSetStatusBuilderExtensionsV1beta1(self);
+        self.statusBuilder = new DaemonSetStatusBuilderExtensionsV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             DaemonSetStatusBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -13056,10 +14277,13 @@ public type DaemonSetBuilderExtensionsV1beta1 object {
 };
 
 public type FlockerVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_FlockerVolumeSource io_k8s_api_core_v1_flockervolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_flockervolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_FlockerVolumeSource) {
         return self.io_k8s_api_core_v1_flockervolumesource;
@@ -13080,14 +14304,17 @@ public type FlockerVolumeSourceBuilderCoreV1 object {
 };
 
 public type PersistentVolumeClaimListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeClaimList io_k8s_api_core_v1_persistentvolumeclaimlist;
     public PersistentVolumeClaimBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_persistentvolumeclaimlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PersistentVolumeClaimList) {
         return self.io_k8s_api_core_v1_persistentvolumeclaimlist;
@@ -13096,7 +14323,8 @@ public type PersistentVolumeClaimListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -13108,7 +14336,8 @@ public type PersistentVolumeClaimListBuilderCoreV1 object {
         }
     }
     public function withItems() returns PersistentVolumeClaimBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new PersistentVolumeClaimBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new PersistentVolumeClaimBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -13124,12 +14353,15 @@ public type PersistentVolumeClaimListBuilderCoreV1 object {
 };
 
 public type IngressRuleBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IngressRule io_k8s_api_extensions_v1beta1_ingressrule;
     public HTTPIngressRuleValueBuilderExtensionsV1beta1? httpBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_ingressrule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_IngressRule) {
         return self.io_k8s_api_extensions_v1beta1_ingressrule;
@@ -13138,7 +14370,8 @@ public type IngressRuleBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withHttp() returns HTTPIngressRuleValueBuilderExtensionsV1beta1 {
-        self.httpBuilder = new HTTPIngressRuleValueBuilderExtensionsV1beta1(self);
+        self.httpBuilder = new HTTPIngressRuleValueBuilderExtensionsV1beta1();
+        self.httpBuilder.init(self);
         match (self.httpBuilder) {
             HTTPIngressRuleValueBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -13157,10 +14390,13 @@ public type IngressRuleBuilderExtensionsV1beta1 object {
 };
 
 public type NonResourceRuleBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_NonResourceRule io_k8s_api_authorization_v1_nonresourcerule;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_nonresourcerule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_NonResourceRule) {
         return self.io_k8s_api_authorization_v1_nonresourcerule;
@@ -13191,14 +14427,17 @@ public type NonResourceRuleBuilderAuthorizationV1 object {
 };
 
 public type ComponentStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ComponentStatus io_k8s_api_core_v1_componentstatus;
     public ComponentConditionBuilderCoreV1[] conditionsBuilder;
 
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_componentstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ComponentStatus) {
         return self.io_k8s_api_core_v1_componentstatus;
@@ -13207,7 +14446,8 @@ public type ComponentStatusBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -13219,7 +14459,8 @@ public type ComponentStatusBuilderCoreV1 object {
         }
     }
     public function withConditions() returns ComponentConditionBuilderCoreV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new ComponentConditionBuilderCoreV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new ComponentConditionBuilderCoreV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -13235,13 +14476,16 @@ public type ComponentStatusBuilderCoreV1 object {
 };
 
 public type CertificateSigningRequestStatusBuilderCertificatesV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_certificates_v1beta1_CertificateSigningRequestStatus
     io_k8s_api_certificates_v1beta1_certificatesigningrequeststatus;
     public CertificateSigningRequestConditionBuilderCertificatesV1beta1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_certificates_v1beta1_certificatesigningrequeststatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_certificates_v1beta1_CertificateSigningRequestStatus) {
         return self.io_k8s_api_certificates_v1beta1_certificatesigningrequeststatus;
@@ -13251,7 +14495,8 @@ public type CertificateSigningRequestStatusBuilderCertificatesV1beta1 object {
     }
     public function withConditions() returns CertificateSigningRequestConditionBuilderCertificatesV1beta1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new
-        CertificateSigningRequestConditionBuilderCertificatesV1beta1(self);
+        CertificateSigningRequestConditionBuilderCertificatesV1beta1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -13263,12 +14508,15 @@ public type CertificateSigningRequestStatusBuilderCertificatesV1beta1 object {
 };
 
 public type SecretVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SecretVolumeSource io_k8s_api_core_v1_secretvolumesource;
     public KeyToPathBuilderCoreV1[] itemsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_secretvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_SecretVolumeSource) {
         return self.io_k8s_api_core_v1_secretvolumesource;
@@ -13277,7 +14525,8 @@ public type SecretVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withItems() returns KeyToPathBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -13298,10 +14547,13 @@ public type SecretVolumeSourceBuilderCoreV1 object {
 };
 
 public type IngressTLSBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IngressTLS io_k8s_api_extensions_v1beta1_ingresstls;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_ingresstls = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_IngressTLS) {
         return self.io_k8s_api_extensions_v1beta1_ingresstls;
@@ -13327,15 +14579,18 @@ public type IngressTLSBuilderExtensionsV1beta1 object {
 };
 
 public type CustomResourceDefinitionListBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionList
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionlist;
     public CustomResourceDefinitionBuilderApiextensionsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionList) {
@@ -13345,7 +14600,8 @@ public type CustomResourceDefinitionListBuilderApiextensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -13357,7 +14613,8 @@ public type CustomResourceDefinitionListBuilderApiextensionsV1beta1 object {
         }
     }
     public function withItems() returns CustomResourceDefinitionBuilderApiextensionsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new CustomResourceDefinitionBuilderApiextensionsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new CustomResourceDefinitionBuilderApiextensionsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -13375,10 +14632,13 @@ public type CustomResourceDefinitionListBuilderApiextensionsV1beta1 object {
 };
 
 public type GitRepoVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_GitRepoVolumeSource io_k8s_api_core_v1_gitrepovolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_gitrepovolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_GitRepoVolumeSource) {
         return self.io_k8s_api_core_v1_gitrepovolumesource;
@@ -13404,10 +14664,13 @@ public type GitRepoVolumeSourceBuilderCoreV1 object {
 };
 
 public type TolerationBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Toleration io_k8s_api_core_v1_toleration;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_toleration = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Toleration) {
         return self.io_k8s_api_core_v1_toleration;
@@ -13443,14 +14706,17 @@ public type TolerationBuilderCoreV1 object {
 };
 
 public type LifecycleBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Lifecycle io_k8s_api_core_v1_lifecycle;
     public HandlerBuilderCoreV1? postStartBuilder;
 
     public HandlerBuilderCoreV1? preStopBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_lifecycle = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Lifecycle) {
         return self.io_k8s_api_core_v1_lifecycle;
@@ -13459,7 +14725,8 @@ public type LifecycleBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withPostStart() returns HandlerBuilderCoreV1 {
-        self.postStartBuilder = new HandlerBuilderCoreV1(self);
+        self.postStartBuilder = new HandlerBuilderCoreV1();
+        self.postStartBuilder.init(self);
         match (self.postStartBuilder) {
             HandlerBuilderCoreV1 builder => {
                 return builder;
@@ -13471,7 +14738,8 @@ public type LifecycleBuilderCoreV1 object {
         }
     }
     public function withPreStop() returns HandlerBuilderCoreV1 {
-        self.preStopBuilder = new HandlerBuilderCoreV1(self);
+        self.preStopBuilder = new HandlerBuilderCoreV1();
+        self.preStopBuilder.init(self);
         match (self.preStopBuilder) {
             HandlerBuilderCoreV1 builder => {
                 return builder;
@@ -13485,10 +14753,13 @@ public type LifecycleBuilderCoreV1 object {
 };
 
 public type StatusCauseBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_StatusCause io_k8s_apimachinery_pkg_apis_meta_v1_statuscause;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_statuscause = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_StatusCause) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_statuscause;
@@ -13514,12 +14785,15 @@ public type StatusCauseBuilderMetaV1 object {
 };
 
 public type PodDNSConfigBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodDNSConfig io_k8s_api_core_v1_poddnsconfig;
     public PodDNSConfigOptionBuilderCoreV1[] optionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_poddnsconfig = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodDNSConfig) {
         return self.io_k8s_api_core_v1_poddnsconfig;
@@ -13528,7 +14802,8 @@ public type PodDNSConfigBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withOptions() returns PodDNSConfigOptionBuilderCoreV1 {
-        self.optionsBuilder[lengthof optionsBuilder] = new PodDNSConfigOptionBuilderCoreV1(self);
+        self.optionsBuilder[lengthof optionsBuilder] = new PodDNSConfigOptionBuilderCoreV1();
+        self.optionsBuilder[(lengthof optionsBuilder)].init(self);
         return self.optionsBuilder[(lengthof optionsBuilder) - 1];
     }
 
@@ -13553,10 +14828,13 @@ public type PodDNSConfigBuilderCoreV1 object {
 };
 
 public type HostPortRangeBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_HostPortRange io_k8s_api_extensions_v1beta1_hostportrange;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_hostportrange = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_HostPortRange) {
         return self.io_k8s_api_extensions_v1beta1_hostportrange;
@@ -13577,10 +14855,13 @@ public type HostPortRangeBuilderExtensionsV1beta1 object {
 };
 
 public type JobConditionBuilderBatchV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1_JobCondition io_k8s_api_batch_v1_jobcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_batch_v1_jobcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_batch_v1_JobCondition) {
         return self.io_k8s_api_batch_v1_jobcondition;
@@ -13621,10 +14902,13 @@ public type JobConditionBuilderBatchV1 object {
 };
 
 public type ExecActionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ExecAction io_k8s_api_core_v1_execaction;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_execaction = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ExecAction) {
         return self.io_k8s_api_core_v1_execaction;
@@ -13644,7 +14928,7 @@ public type ExecActionBuilderCoreV1 object {
 };
 
 public type ReplicaSetBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_ReplicaSet io_k8s_api_apps_v1_replicaset;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -13652,8 +14936,11 @@ public type ReplicaSetBuilderAppsV1 object {
 
     public ReplicaSetStatusBuilderAppsV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_replicaset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_ReplicaSet) {
         return self.io_k8s_api_apps_v1_replicaset;
@@ -13662,7 +14949,8 @@ public type ReplicaSetBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -13674,7 +14962,8 @@ public type ReplicaSetBuilderAppsV1 object {
         }
     }
     public function withSpec() returns ReplicaSetSpecBuilderAppsV1 {
-        self.specBuilder = new ReplicaSetSpecBuilderAppsV1(self);
+        self.specBuilder = new ReplicaSetSpecBuilderAppsV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             ReplicaSetSpecBuilderAppsV1 builder => {
                 return builder;
@@ -13686,7 +14975,8 @@ public type ReplicaSetBuilderAppsV1 object {
         }
     }
     public function withStatus() returns ReplicaSetStatusBuilderAppsV1 {
-        self.statusBuilder = new ReplicaSetStatusBuilderAppsV1(self);
+        self.statusBuilder = new ReplicaSetStatusBuilderAppsV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             ReplicaSetStatusBuilderAppsV1 builder => {
                 return builder;
@@ -13710,12 +15000,15 @@ public type ReplicaSetBuilderAppsV1 object {
 };
 
 public type AggregationRuleBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_AggregationRule io_k8s_api_rbac_v1_aggregationrule;
     public LabelSelectorBuilderMetaV1[] clusterRoleSelectorsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_aggregationrule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_AggregationRule) {
         return self.io_k8s_api_rbac_v1_aggregationrule;
@@ -13724,16 +15017,20 @@ public type AggregationRuleBuilderRbacV1 object {
         return self.fluentBuilder;
     }
     public function withClusterRoleSelectors() returns LabelSelectorBuilderMetaV1 {
-        self.clusterRoleSelectorsBuilder[lengthof clusterRoleSelectorsBuilder] = new LabelSelectorBuilderMetaV1(self);
+        self.clusterRoleSelectorsBuilder[lengthof clusterRoleSelectorsBuilder] = new LabelSelectorBuilderMetaV1();
+        self.clusterRoleSelectorsBuilder[(lengthof clusterRoleSelectorsBuilder)].init(self);
         return self.clusterRoleSelectorsBuilder[(lengthof clusterRoleSelectorsBuilder) - 1];
     }
 };
 
 public type PolicyRuleBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_PolicyRule io_k8s_api_rbac_v1beta1_policyrule;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_policyrule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_PolicyRule) {
         return self.io_k8s_api_rbac_v1beta1_policyrule;
@@ -13793,10 +15090,13 @@ public type PolicyRuleBuilderRbacV1beta1 object {
 };
 
 public type IDRangeBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_IDRange io_k8s_api_policy_v1beta1_idrange;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_idrange = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_IDRange) {
         return self.io_k8s_api_policy_v1beta1_idrange;
@@ -13817,7 +15117,7 @@ public type IDRangeBuilderPolicyV1beta1 object {
 };
 
 public type DaemonSetSpecBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DaemonSetSpec io_k8s_api_apps_v1beta2_daemonsetspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
@@ -13825,8 +15125,11 @@ public type DaemonSetSpecBuilderAppsV1beta2 object {
 
     public DaemonSetUpdateStrategyBuilderAppsV1beta2? updateStrategyBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_daemonsetspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DaemonSetSpec) {
         return self.io_k8s_api_apps_v1beta2_daemonsetspec;
@@ -13835,7 +15138,8 @@ public type DaemonSetSpecBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -13847,7 +15151,8 @@ public type DaemonSetSpecBuilderAppsV1beta2 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -13859,7 +15164,8 @@ public type DaemonSetSpecBuilderAppsV1beta2 object {
         }
     }
     public function withUpdateStrategy() returns DaemonSetUpdateStrategyBuilderAppsV1beta2 {
-        self.updateStrategyBuilder = new DaemonSetUpdateStrategyBuilderAppsV1beta2(self);
+        self.updateStrategyBuilder = new DaemonSetUpdateStrategyBuilderAppsV1beta2();
+        self.updateStrategyBuilder.init(self);
         match (self.updateStrategyBuilder) {
             DaemonSetUpdateStrategyBuilderAppsV1beta2 builder => {
                 return builder;
@@ -13883,14 +15189,17 @@ public type DaemonSetSpecBuilderAppsV1beta2 object {
 };
 
 public type DeploymentListBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DeploymentList io_k8s_api_extensions_v1beta1_deploymentlist;
     public DeploymentBuilderExtensionsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_deploymentlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DeploymentList) {
         return self.io_k8s_api_extensions_v1beta1_deploymentlist;
@@ -13899,7 +15208,8 @@ public type DeploymentListBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -13911,7 +15221,8 @@ public type DeploymentListBuilderExtensionsV1beta1 object {
         }
     }
     public function withItems() returns DeploymentBuilderExtensionsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderExtensionsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderExtensionsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -13927,13 +15238,16 @@ public type DeploymentListBuilderExtensionsV1beta1 object {
 };
 
 public type SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_SupplementalGroupsStrategyOptions
     io_k8s_api_extensions_v1beta1_supplementalgroupsstrategyoptions;
     public IDRangeBuilderExtensionsV1beta1[] rangesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_supplementalgroupsstrategyoptions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_SupplementalGroupsStrategyOptions) {
         return self.io_k8s_api_extensions_v1beta1_supplementalgroupsstrategyoptions;
@@ -13942,7 +15256,8 @@ public type SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRanges() returns IDRangeBuilderExtensionsV1beta1 {
-        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderExtensionsV1beta1(self);
+        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderExtensionsV1beta1();
+        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -13953,7 +15268,7 @@ public type SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 object {
 };
 
 public type DeploymentBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_Deployment io_k8s_api_extensions_v1beta1_deployment;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -13961,8 +15276,11 @@ public type DeploymentBuilderExtensionsV1beta1 object {
 
     public DeploymentStatusBuilderExtensionsV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_deployment = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_Deployment) {
         return self.io_k8s_api_extensions_v1beta1_deployment;
@@ -13971,7 +15289,8 @@ public type DeploymentBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -13983,7 +15302,8 @@ public type DeploymentBuilderExtensionsV1beta1 object {
         }
     }
     public function withSpec() returns DeploymentSpecBuilderExtensionsV1beta1 {
-        self.specBuilder = new DeploymentSpecBuilderExtensionsV1beta1(self);
+        self.specBuilder = new DeploymentSpecBuilderExtensionsV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             DeploymentSpecBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -13995,7 +15315,8 @@ public type DeploymentBuilderExtensionsV1beta1 object {
         }
     }
     public function withStatus() returns DeploymentStatusBuilderExtensionsV1beta1 {
-        self.statusBuilder = new DeploymentStatusBuilderExtensionsV1beta1(self);
+        self.statusBuilder = new DeploymentStatusBuilderExtensionsV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             DeploymentStatusBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -14019,10 +15340,13 @@ public type DeploymentBuilderExtensionsV1beta1 object {
 };
 
 public type DaemonSetConditionBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DaemonSetCondition io_k8s_api_apps_v1beta2_daemonsetcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_daemonsetcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DaemonSetCondition) {
         return self.io_k8s_api_apps_v1beta2_daemonsetcondition;
@@ -14059,14 +15383,17 @@ public type DaemonSetConditionBuilderAppsV1beta2 object {
 };
 
 public type SecretListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SecretList io_k8s_api_core_v1_secretlist;
     public SecretBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_secretlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_SecretList) {
         return self.io_k8s_api_core_v1_secretlist;
@@ -14075,7 +15402,8 @@ public type SecretListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -14087,7 +15415,8 @@ public type SecretListBuilderCoreV1 object {
         }
     }
     public function withItems() returns SecretBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new SecretBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new SecretBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -14103,12 +15432,15 @@ public type SecretListBuilderCoreV1 object {
 };
 
 public type StatefulSetStatusBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_StatefulSetStatus io_k8s_api_apps_v1beta1_statefulsetstatus;
     public StatefulSetConditionBuilderAppsV1beta1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_statefulsetstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_StatefulSetStatus) {
         return self.io_k8s_api_apps_v1beta1_statefulsetstatus;
@@ -14117,7 +15449,8 @@ public type StatefulSetStatusBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns StatefulSetConditionBuilderAppsV1beta1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new StatefulSetConditionBuilderAppsV1beta1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new StatefulSetConditionBuilderAppsV1beta1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -14163,10 +15496,13 @@ public type StatefulSetStatusBuilderAppsV1beta1 object {
 };
 
 public type HTTPHeaderBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_HTTPHeader io_k8s_api_core_v1_httpheader;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_httpheader = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_HTTPHeader) {
         return self.io_k8s_api_core_v1_httpheader;
@@ -14187,7 +15523,7 @@ public type HTTPHeaderBuilderCoreV1 object {
 };
 
 public type ReplicaSetBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ReplicaSet io_k8s_api_apps_v1beta2_replicaset;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -14195,8 +15531,11 @@ public type ReplicaSetBuilderAppsV1beta2 object {
 
     public ReplicaSetStatusBuilderAppsV1beta2? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_replicaset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_ReplicaSet) {
         return self.io_k8s_api_apps_v1beta2_replicaset;
@@ -14205,7 +15544,8 @@ public type ReplicaSetBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -14217,7 +15557,8 @@ public type ReplicaSetBuilderAppsV1beta2 object {
         }
     }
     public function withSpec() returns ReplicaSetSpecBuilderAppsV1beta2 {
-        self.specBuilder = new ReplicaSetSpecBuilderAppsV1beta2(self);
+        self.specBuilder = new ReplicaSetSpecBuilderAppsV1beta2();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             ReplicaSetSpecBuilderAppsV1beta2 builder => {
                 return builder;
@@ -14229,7 +15570,8 @@ public type ReplicaSetBuilderAppsV1beta2 object {
         }
     }
     public function withStatus() returns ReplicaSetStatusBuilderAppsV1beta2 {
-        self.statusBuilder = new ReplicaSetStatusBuilderAppsV1beta2(self);
+        self.statusBuilder = new ReplicaSetStatusBuilderAppsV1beta2();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             ReplicaSetStatusBuilderAppsV1beta2 builder => {
                 return builder;
@@ -14253,12 +15595,15 @@ public type ReplicaSetBuilderAppsV1beta2 object {
 };
 
 public type PodSecurityContextBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodSecurityContext io_k8s_api_core_v1_podsecuritycontext;
     public SELinuxOptionsBuilderCoreV1? seLinuxOptionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podsecuritycontext = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodSecurityContext) {
         return self.io_k8s_api_core_v1_podsecuritycontext;
@@ -14267,7 +15612,8 @@ public type PodSecurityContextBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSeLinuxOptions() returns SELinuxOptionsBuilderCoreV1 {
-        self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1(self);
+        self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1();
+        self.seLinuxOptionsBuilder.init(self);
         match (self.seLinuxOptionsBuilder) {
             SELinuxOptionsBuilderCoreV1 builder => {
                 return builder;
@@ -14311,7 +15657,7 @@ public type PodSecurityContextBuilderCoreV1 object {
 };
 
 public type IngressSpecBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IngressSpec io_k8s_api_extensions_v1beta1_ingressspec;
     public IngressBackendBuilderExtensionsV1beta1? backendBuilder;
 
@@ -14319,8 +15665,11 @@ public type IngressSpecBuilderExtensionsV1beta1 object {
 
     public IngressTLSBuilderExtensionsV1beta1[] tlsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_ingressspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_IngressSpec) {
         return self.io_k8s_api_extensions_v1beta1_ingressspec;
@@ -14329,7 +15678,8 @@ public type IngressSpecBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withBackend() returns IngressBackendBuilderExtensionsV1beta1 {
-        self.backendBuilder = new IngressBackendBuilderExtensionsV1beta1(self);
+        self.backendBuilder = new IngressBackendBuilderExtensionsV1beta1();
+        self.backendBuilder.init(self);
         match (self.backendBuilder) {
             IngressBackendBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -14341,24 +15691,29 @@ public type IngressSpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withRules() returns IngressRuleBuilderExtensionsV1beta1 {
-        self.rulesBuilder[lengthof rulesBuilder] = new IngressRuleBuilderExtensionsV1beta1(self);
+        self.rulesBuilder[lengthof rulesBuilder] = new IngressRuleBuilderExtensionsV1beta1();
+        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
     public function withTls() returns IngressTLSBuilderExtensionsV1beta1 {
-        self.tlsBuilder[lengthof tlsBuilder] = new IngressTLSBuilderExtensionsV1beta1(self);
+        self.tlsBuilder[lengthof tlsBuilder] = new IngressTLSBuilderExtensionsV1beta1();
+        self.tlsBuilder[(lengthof tlsBuilder)].init(self);
         return self.tlsBuilder[(lengthof tlsBuilder) - 1];
     }
 };
 
 public type CronJobListBuilderBatchV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1beta1_CronJobList io_k8s_api_batch_v1beta1_cronjoblist;
     public CronJobBuilderBatchV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_batch_v1beta1_cronjoblist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_batch_v1beta1_CronJobList) {
         return self.io_k8s_api_batch_v1beta1_cronjoblist;
@@ -14367,7 +15722,8 @@ public type CronJobListBuilderBatchV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -14379,7 +15735,8 @@ public type CronJobListBuilderBatchV1beta1 object {
         }
     }
     public function withItems() returns CronJobBuilderBatchV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new CronJobBuilderBatchV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new CronJobBuilderBatchV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -14395,11 +15752,14 @@ public type CronJobListBuilderBatchV1beta1 object {
 };
 
 public type ServiceReferenceBuilderAdmissionregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_ServiceReference
     io_k8s_api_admissionregistration_v1beta1_servicereference;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_admissionregistration_v1beta1_servicereference = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_admissionregistration_v1beta1_ServiceReference) {
         return self.io_k8s_api_admissionregistration_v1beta1_servicereference;
@@ -14425,14 +15785,17 @@ public type ServiceReferenceBuilderAdmissionregistrationV1beta1 object {
 };
 
 public type RoleListBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_RoleList io_k8s_api_rbac_v1beta1_rolelist;
     public RoleBuilderRbacV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_rolelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_RoleList) {
         return self.io_k8s_api_rbac_v1beta1_rolelist;
@@ -14441,7 +15804,8 @@ public type RoleListBuilderRbacV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -14453,7 +15817,8 @@ public type RoleListBuilderRbacV1beta1 object {
         }
     }
     public function withItems() returns RoleBuilderRbacV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new RoleBuilderRbacV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new RoleBuilderRbacV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -14469,10 +15834,13 @@ public type RoleListBuilderRbacV1beta1 object {
 };
 
 public type RollingUpdateDeploymentBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_RollingUpdateDeployment io_k8s_api_apps_v1beta1_rollingupdatedeployment;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_rollingupdatedeployment = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_RollingUpdateDeployment) {
         return self.io_k8s_api_apps_v1beta1_rollingupdatedeployment;
@@ -14493,10 +15861,13 @@ public type RollingUpdateDeploymentBuilderAppsV1beta1 object {
 };
 
 public type TokenReviewSpecBuilderAuthenticationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1beta1_TokenReviewSpec io_k8s_api_authentication_v1beta1_tokenreviewspec;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authentication_v1beta1_tokenreviewspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authentication_v1beta1_TokenReviewSpec) {
         return self.io_k8s_api_authentication_v1beta1_tokenreviewspec;
@@ -14512,10 +15883,13 @@ public type TokenReviewSpecBuilderAuthenticationV1beta1 object {
 };
 
 public type IDRangeBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IDRange io_k8s_api_extensions_v1beta1_idrange;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_idrange = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_IDRange) {
         return self.io_k8s_api_extensions_v1beta1_idrange;
@@ -14536,7 +15910,7 @@ public type IDRangeBuilderExtensionsV1beta1 object {
 };
 
 public type ServiceAccountBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ServiceAccount io_k8s_api_core_v1_serviceaccount;
     public LocalObjectReferenceBuilderCoreV1[] imagePullSecretsBuilder;
 
@@ -14544,8 +15918,11 @@ public type ServiceAccountBuilderCoreV1 object {
 
     public ObjectReferenceBuilderCoreV1[] secretsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_serviceaccount = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ServiceAccount) {
         return self.io_k8s_api_core_v1_serviceaccount;
@@ -14554,7 +15931,8 @@ public type ServiceAccountBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -14566,11 +15944,13 @@ public type ServiceAccountBuilderCoreV1 object {
         }
     }
     public function withImagePullSecrets() returns LocalObjectReferenceBuilderCoreV1 {
-        self.imagePullSecretsBuilder[lengthof imagePullSecretsBuilder] = new LocalObjectReferenceBuilderCoreV1(self);
+        self.imagePullSecretsBuilder[lengthof imagePullSecretsBuilder] = new LocalObjectReferenceBuilderCoreV1();
+        self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder)].init(self);
         return self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder) - 1];
     }
     public function withSecrets() returns ObjectReferenceBuilderCoreV1 {
-        self.secretsBuilder[lengthof secretsBuilder] = new ObjectReferenceBuilderCoreV1(self);
+        self.secretsBuilder[lengthof secretsBuilder] = new ObjectReferenceBuilderCoreV1();
+        self.secretsBuilder[(lengthof secretsBuilder)].init(self);
         return self.secretsBuilder[(lengthof secretsBuilder) - 1];
     }
 
@@ -14592,12 +15972,15 @@ public type ServiceAccountBuilderCoreV1 object {
 };
 
 public type HTTPIngressRuleValueBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_HTTPIngressRuleValue io_k8s_api_extensions_v1beta1_httpingressrulevalue;
     public HTTPIngressPathBuilderExtensionsV1beta1[] pathsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_httpingressrulevalue = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_HTTPIngressRuleValue) {
         return self.io_k8s_api_extensions_v1beta1_httpingressrulevalue;
@@ -14606,17 +15989,21 @@ public type HTTPIngressRuleValueBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withPaths() returns HTTPIngressPathBuilderExtensionsV1beta1 {
-        self.pathsBuilder[lengthof pathsBuilder] = new HTTPIngressPathBuilderExtensionsV1beta1(self);
+        self.pathsBuilder[lengthof pathsBuilder] = new HTTPIngressPathBuilderExtensionsV1beta1();
+        self.pathsBuilder[(lengthof pathsBuilder)].init(self);
         return self.pathsBuilder[(lengthof pathsBuilder) - 1];
     }
 };
 
 public type ServiceReferenceBuilderApiregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_ServiceReference
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_servicereference;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_servicereference = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_ServiceReference) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_servicereference;
@@ -14637,12 +16024,15 @@ public type ServiceReferenceBuilderApiregistrationV1beta1 object {
 };
 
 public type ISCSIVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ISCSIVolumeSource io_k8s_api_core_v1_iscsivolumesource;
     public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_iscsivolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ISCSIVolumeSource) {
         return self.io_k8s_api_core_v1_iscsivolumesource;
@@ -14651,7 +16041,8 @@ public type ISCSIVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns LocalObjectReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             LocalObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -14720,13 +16111,16 @@ public type ISCSIVolumeSourceBuilderCoreV1 object {
 };
 
 public type CustomResourceValidationBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceValidation
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcevalidation;
     public JSONSchemaPropsBuilderApiextensionsV1beta1? openAPIV3SchemaBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcevalidation = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceValidation) {
@@ -14736,7 +16130,8 @@ public type CustomResourceValidationBuilderApiextensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withOpenAPIV3Schema() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
-        self.openAPIV3SchemaBuilder = new JSONSchemaPropsBuilderApiextensionsV1beta1(self);
+        self.openAPIV3SchemaBuilder = new JSONSchemaPropsBuilderApiextensionsV1beta1();
+        self.openAPIV3SchemaBuilder.init(self);
         match (self.openAPIV3SchemaBuilder) {
             JSONSchemaPropsBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -14750,10 +16145,13 @@ public type CustomResourceValidationBuilderApiextensionsV1beta1 object {
 };
 
 public type NetworkPolicyPortBuilderNetworkingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_networking_v1_NetworkPolicyPort io_k8s_api_networking_v1_networkpolicyport;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_networking_v1_networkpolicyport = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_networking_v1_NetworkPolicyPort) {
         return self.io_k8s_api_networking_v1_networkpolicyport;
@@ -14774,7 +16172,7 @@ public type NetworkPolicyPortBuilderNetworkingV1 object {
 };
 
 public type RoleBindingBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_RoleBinding io_k8s_api_rbac_v1_rolebinding;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -14782,8 +16180,11 @@ public type RoleBindingBuilderRbacV1 object {
 
     public SubjectBuilderRbacV1[] subjectsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_rolebinding = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_RoleBinding) {
         return self.io_k8s_api_rbac_v1_rolebinding;
@@ -14792,7 +16193,8 @@ public type RoleBindingBuilderRbacV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -14804,7 +16206,8 @@ public type RoleBindingBuilderRbacV1 object {
         }
     }
     public function withRoleRef() returns RoleRefBuilderRbacV1 {
-        self.roleRefBuilder = new RoleRefBuilderRbacV1(self);
+        self.roleRefBuilder = new RoleRefBuilderRbacV1();
+        self.roleRefBuilder.init(self);
         match (self.roleRefBuilder) {
             RoleRefBuilderRbacV1 builder => {
                 return builder;
@@ -14816,7 +16219,8 @@ public type RoleBindingBuilderRbacV1 object {
         }
     }
     public function withSubjects() returns SubjectBuilderRbacV1 {
-        self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1(self);
+        self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1();
+        self.subjectsBuilder[(lengthof subjectsBuilder)].init(self);
         return self.subjectsBuilder[(lengthof subjectsBuilder) - 1];
     }
 
@@ -14832,12 +16236,15 @@ public type RoleBindingBuilderRbacV1 object {
 };
 
 public type LabelSelectorBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_LabelSelector io_k8s_apimachinery_pkg_apis_meta_v1_labelselector;
     public LabelSelectorRequirementBuilderMetaV1[] matchExpressionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_labelselector = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_LabelSelector) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_labelselector;
@@ -14846,8 +16253,8 @@ public type LabelSelectorBuilderMetaV1 object {
         return self.fluentBuilder;
     }
     public function withMatchExpressions() returns LabelSelectorRequirementBuilderMetaV1 {
-        self.matchExpressionsBuilder[lengthof matchExpressionsBuilder] = new LabelSelectorRequirementBuilderMetaV1(self)
-        ;
+        self.matchExpressionsBuilder[lengthof matchExpressionsBuilder] = new LabelSelectorRequirementBuilderMetaV1();
+        self.matchExpressionsBuilder[(lengthof matchExpressionsBuilder)].init(self);
         return self.matchExpressionsBuilder[(lengthof matchExpressionsBuilder) - 1];
     }
 
@@ -14858,10 +16265,13 @@ public type LabelSelectorBuilderMetaV1 object {
 };
 
 public type QuobyteVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_QuobyteVolumeSource io_k8s_api_core_v1_quobytevolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_quobytevolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_QuobyteVolumeSource) {
         return self.io_k8s_api_core_v1_quobytevolumesource;
@@ -14897,14 +16307,17 @@ public type QuobyteVolumeSourceBuilderCoreV1 object {
 };
 
 public type ClusterRoleListBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_ClusterRoleList io_k8s_api_rbac_v1beta1_clusterrolelist;
     public ClusterRoleBuilderRbacV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_clusterrolelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_ClusterRoleList) {
         return self.io_k8s_api_rbac_v1beta1_clusterrolelist;
@@ -14913,7 +16326,8 @@ public type ClusterRoleListBuilderRbacV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -14925,7 +16339,8 @@ public type ClusterRoleListBuilderRbacV1beta1 object {
         }
     }
     public function withItems() returns ClusterRoleBuilderRbacV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBuilderRbacV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBuilderRbacV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -14941,15 +16356,18 @@ public type ClusterRoleListBuilderRbacV1beta1 object {
 };
 
 public type ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_ValidatingWebhookConfiguration
     io_k8s_api_admissionregistration_v1beta1_validatingwebhookconfiguration;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public WebhookBuilderAdmissionregistrationV1beta1[] webhooksBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_admissionregistration_v1beta1_validatingwebhookconfiguration = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_admissionregistration_v1beta1_ValidatingWebhookConfiguration) {
         return self.io_k8s_api_admissionregistration_v1beta1_validatingwebhookconfiguration;
@@ -14958,7 +16376,8 @@ public type ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 ob
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -14970,7 +16389,8 @@ public type ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 ob
         }
     }
     public function withWebhooks() returns WebhookBuilderAdmissionregistrationV1beta1 {
-        self.webhooksBuilder[lengthof webhooksBuilder] = new WebhookBuilderAdmissionregistrationV1beta1(self);
+        self.webhooksBuilder[lengthof webhooksBuilder] = new WebhookBuilderAdmissionregistrationV1beta1();
+        self.webhooksBuilder[(lengthof webhooksBuilder)].init(self);
         return self.webhooksBuilder[(lengthof webhooksBuilder) - 1];
     }
 
@@ -14987,14 +16407,17 @@ public type ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 ob
 };
 
 public type PodAntiAffinityBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodAntiAffinity io_k8s_api_core_v1_podantiaffinity;
     public WeightedPodAffinityTermBuilderCoreV1[] preferredDuringSchedulingIgnoredDuringExecutionBuilder;
 
     public PodAffinityTermBuilderCoreV1[] requiredDuringSchedulingIgnoredDuringExecutionBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podantiaffinity = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodAntiAffinity) {
         return self.io_k8s_api_core_v1_podantiaffinity;
@@ -15004,23 +16427,30 @@ public type PodAntiAffinityBuilderCoreV1 object {
     }
     public function withPreferredDuringSchedulingIgnoredDuringExecution() returns WeightedPodAffinityTermBuilderCoreV1 {
         self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[lengthof
-        preferredDuringSchedulingIgnoredDuringExecutionBuilder] = new WeightedPodAffinityTermBuilderCoreV1(self);
+        preferredDuringSchedulingIgnoredDuringExecutionBuilder] = new WeightedPodAffinityTermBuilderCoreV1();
+        self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
+        preferredDuringSchedulingIgnoredDuringExecutionBuilder)].init(self);
         return self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
             preferredDuringSchedulingIgnoredDuringExecutionBuilder) - 1];
     }
     public function withRequiredDuringSchedulingIgnoredDuringExecution() returns PodAffinityTermBuilderCoreV1 {
         self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[lengthof
-        requiredDuringSchedulingIgnoredDuringExecutionBuilder] = new PodAffinityTermBuilderCoreV1(self);
+        requiredDuringSchedulingIgnoredDuringExecutionBuilder] = new PodAffinityTermBuilderCoreV1();
+        self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
+        requiredDuringSchedulingIgnoredDuringExecutionBuilder)].init(self);
         return self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
             requiredDuringSchedulingIgnoredDuringExecutionBuilder) - 1];
     }
 };
 
 public type UserInfoBuilderAuthenticationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1_UserInfo io_k8s_api_authentication_v1_userinfo;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authentication_v1_userinfo = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authentication_v1_UserInfo) {
         return self.io_k8s_api_authentication_v1_userinfo;
@@ -15056,12 +16486,15 @@ public type UserInfoBuilderAuthenticationV1 object {
 };
 
 public type ResourceFieldSelectorBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ResourceFieldSelector io_k8s_api_core_v1_resourcefieldselector;
     public QuantityBuilderApiResource? divisorBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_resourcefieldselector = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ResourceFieldSelector) {
         return self.io_k8s_api_core_v1_resourcefieldselector;
@@ -15070,7 +16503,8 @@ public type ResourceFieldSelectorBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withDivisor() returns QuantityBuilderApiResource {
-        self.divisorBuilder = new QuantityBuilderApiResource(self);
+        self.divisorBuilder = new QuantityBuilderApiResource();
+        self.divisorBuilder.init(self);
         match (self.divisorBuilder) {
             QuantityBuilderApiResource builder => {
                 return builder;
@@ -15094,10 +16528,13 @@ public type ResourceFieldSelectorBuilderCoreV1 object {
 };
 
 public type DaemonEndpointBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_DaemonEndpoint io_k8s_api_core_v1_daemonendpoint;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_daemonendpoint = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_DaemonEndpoint) {
         return self.io_k8s_api_core_v1_daemonendpoint;
@@ -15113,14 +16550,17 @@ public type DaemonEndpointBuilderCoreV1 object {
 };
 
 public type ReplicaSetListBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_ReplicaSetList io_k8s_api_extensions_v1beta1_replicasetlist;
     public ReplicaSetBuilderExtensionsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_replicasetlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_ReplicaSetList) {
         return self.io_k8s_api_extensions_v1beta1_replicasetlist;
@@ -15129,7 +16569,8 @@ public type ReplicaSetListBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -15141,7 +16582,8 @@ public type ReplicaSetListBuilderExtensionsV1beta1 object {
         }
     }
     public function withItems() returns ReplicaSetBuilderExtensionsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderExtensionsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderExtensionsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -15157,10 +16599,13 @@ public type ReplicaSetListBuilderExtensionsV1beta1 object {
 };
 
 public type AllowedFlexVolumeBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_AllowedFlexVolume io_k8s_api_policy_v1beta1_allowedflexvolume;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_allowedflexvolume = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_AllowedFlexVolume) {
         return self.io_k8s_api_policy_v1beta1_allowedflexvolume;
@@ -15176,10 +16621,13 @@ public type AllowedFlexVolumeBuilderPolicyV1beta1 object {
 };
 
 public type IPBlockBuilderNetworkingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_networking_v1_IPBlock io_k8s_api_networking_v1_ipblock;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_networking_v1_ipblock = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_networking_v1_IPBlock) {
         return self.io_k8s_api_networking_v1_ipblock;
@@ -15204,10 +16652,13 @@ public type IPBlockBuilderNetworkingV1 object {
 };
 
 public type DeploymentConditionBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DeploymentCondition io_k8s_api_apps_v1beta2_deploymentcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_deploymentcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DeploymentCondition) {
         return self.io_k8s_api_apps_v1beta2_deploymentcondition;
@@ -15249,7 +16700,7 @@ public type DeploymentConditionBuilderAppsV1beta2 object {
 };
 
 public type TokenReviewBuilderAuthenticationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1beta1_TokenReview io_k8s_api_authentication_v1beta1_tokenreview;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -15257,8 +16708,11 @@ public type TokenReviewBuilderAuthenticationV1beta1 object {
 
     public TokenReviewStatusBuilderAuthenticationV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authentication_v1beta1_tokenreview = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authentication_v1beta1_TokenReview) {
         return self.io_k8s_api_authentication_v1beta1_tokenreview;
@@ -15267,7 +16721,8 @@ public type TokenReviewBuilderAuthenticationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -15279,7 +16734,8 @@ public type TokenReviewBuilderAuthenticationV1beta1 object {
         }
     }
     public function withSpec() returns TokenReviewSpecBuilderAuthenticationV1beta1 {
-        self.specBuilder = new TokenReviewSpecBuilderAuthenticationV1beta1(self);
+        self.specBuilder = new TokenReviewSpecBuilderAuthenticationV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             TokenReviewSpecBuilderAuthenticationV1beta1 builder => {
                 return builder;
@@ -15291,7 +16747,8 @@ public type TokenReviewBuilderAuthenticationV1beta1 object {
         }
     }
     public function withStatus() returns TokenReviewStatusBuilderAuthenticationV1beta1 {
-        self.statusBuilder = new TokenReviewStatusBuilderAuthenticationV1beta1(self);
+        self.statusBuilder = new TokenReviewStatusBuilderAuthenticationV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             TokenReviewStatusBuilderAuthenticationV1beta1 builder => {
                 return builder;
@@ -15315,10 +16772,13 @@ public type TokenReviewBuilderAuthenticationV1beta1 object {
 };
 
 public type VolumeErrorBuilderStorageV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_VolumeError io_k8s_api_storage_v1beta1_volumeerror;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_storage_v1beta1_volumeerror = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_storage_v1beta1_VolumeError) {
         return self.io_k8s_api_storage_v1beta1_volumeerror;
@@ -15339,12 +16799,15 @@ public type VolumeErrorBuilderStorageV1beta1 object {
 };
 
 public type StatefulSetUpdateStrategyBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_StatefulSetUpdateStrategy io_k8s_api_apps_v1beta1_statefulsetupdatestrategy;
     public RollingUpdateStatefulSetStrategyBuilderAppsV1beta1? rollingUpdateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_statefulsetupdatestrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_StatefulSetUpdateStrategy) {
         return self.io_k8s_api_apps_v1beta1_statefulsetupdatestrategy;
@@ -15353,7 +16816,8 @@ public type StatefulSetUpdateStrategyBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRollingUpdate() returns RollingUpdateStatefulSetStrategyBuilderAppsV1beta1 {
-        self.rollingUpdateBuilder = new RollingUpdateStatefulSetStrategyBuilderAppsV1beta1(self);
+        self.rollingUpdateBuilder = new RollingUpdateStatefulSetStrategyBuilderAppsV1beta1();
+        self.rollingUpdateBuilder.init(self);
         match (self.rollingUpdateBuilder) {
             RollingUpdateStatefulSetStrategyBuilderAppsV1beta1 builder => {
                 return builder;
@@ -15372,14 +16836,17 @@ public type StatefulSetUpdateStrategyBuilderAppsV1beta1 object {
 };
 
 public type NetworkPolicyEgressRuleBuilderNetworkingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_networking_v1_NetworkPolicyEgressRule io_k8s_api_networking_v1_networkpolicyegressrule;
     public NetworkPolicyPortBuilderNetworkingV1[] portsBuilder;
 
     public NetworkPolicyPeerBuilderNetworkingV1[] toBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_networking_v1_networkpolicyegressrule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_networking_v1_NetworkPolicyEgressRule) {
         return self.io_k8s_api_networking_v1_networkpolicyegressrule;
@@ -15388,22 +16855,27 @@ public type NetworkPolicyEgressRuleBuilderNetworkingV1 object {
         return self.fluentBuilder;
     }
     public function withPorts() returns NetworkPolicyPortBuilderNetworkingV1 {
-        self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderNetworkingV1(self);
+        self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderNetworkingV1();
+        self.portsBuilder[(lengthof portsBuilder)].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
     public function withTo() returns NetworkPolicyPeerBuilderNetworkingV1 {
-        self.toBuilder[lengthof toBuilder] = new NetworkPolicyPeerBuilderNetworkingV1(self);
+        self.toBuilder[lengthof toBuilder] = new NetworkPolicyPeerBuilderNetworkingV1();
+        self.toBuilder[(lengthof toBuilder)].init(self);
         return self.toBuilder[(lengthof toBuilder) - 1];
     }
 };
 
 public type CronJobStatusBuilderBatchV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1beta1_CronJobStatus io_k8s_api_batch_v1beta1_cronjobstatus;
     public ObjectReferenceBuilderCoreV1[] activeBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_batch_v1beta1_cronjobstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_batch_v1beta1_CronJobStatus) {
         return self.io_k8s_api_batch_v1beta1_cronjobstatus;
@@ -15412,7 +16884,8 @@ public type CronJobStatusBuilderBatchV1beta1 object {
         return self.fluentBuilder;
     }
     public function withActive() returns ObjectReferenceBuilderCoreV1 {
-        self.activeBuilder[lengthof activeBuilder] = new ObjectReferenceBuilderCoreV1(self);
+        self.activeBuilder[lengthof activeBuilder] = new ObjectReferenceBuilderCoreV1();
+        self.activeBuilder[(lengthof activeBuilder)].init(self);
         return self.activeBuilder[(lengthof activeBuilder) - 1];
     }
 
@@ -15423,10 +16896,13 @@ public type CronJobStatusBuilderBatchV1beta1 object {
 };
 
 public type RollbackConfigBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_RollbackConfig io_k8s_api_apps_v1beta1_rollbackconfig;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_rollbackconfig = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_RollbackConfig) {
         return self.io_k8s_api_apps_v1beta1_rollbackconfig;
@@ -15442,7 +16918,7 @@ public type RollbackConfigBuilderAppsV1beta1 object {
 };
 
 public type WebhookBuilderAdmissionregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_Webhook io_k8s_api_admissionregistration_v1beta1_webhook;
     public WebhookClientConfigBuilderAdmissionregistrationV1beta1? clientConfigBuilder;
 
@@ -15450,8 +16926,11 @@ public type WebhookBuilderAdmissionregistrationV1beta1 object {
 
     public RuleWithOperationsBuilderAdmissionregistrationV1beta1[] rulesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_admissionregistration_v1beta1_webhook = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_admissionregistration_v1beta1_Webhook) {
         return self.io_k8s_api_admissionregistration_v1beta1_webhook;
@@ -15460,7 +16939,8 @@ public type WebhookBuilderAdmissionregistrationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withClientConfig() returns WebhookClientConfigBuilderAdmissionregistrationV1beta1 {
-        self.clientConfigBuilder = new WebhookClientConfigBuilderAdmissionregistrationV1beta1(self);
+        self.clientConfigBuilder = new WebhookClientConfigBuilderAdmissionregistrationV1beta1();
+        self.clientConfigBuilder.init(self);
         match (self.clientConfigBuilder) {
             WebhookClientConfigBuilderAdmissionregistrationV1beta1 builder => {
                 return builder;
@@ -15472,7 +16952,8 @@ public type WebhookBuilderAdmissionregistrationV1beta1 object {
         }
     }
     public function withNamespaceSelector() returns LabelSelectorBuilderMetaV1 {
-        self.namespaceSelectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.namespaceSelectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.namespaceSelectorBuilder.init(self);
         match (self.namespaceSelectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -15484,7 +16965,8 @@ public type WebhookBuilderAdmissionregistrationV1beta1 object {
         }
     }
     public function withRules() returns RuleWithOperationsBuilderAdmissionregistrationV1beta1 {
-        self.rulesBuilder[lengthof rulesBuilder] = new RuleWithOperationsBuilderAdmissionregistrationV1beta1(self);
+        self.rulesBuilder[lengthof rulesBuilder] = new RuleWithOperationsBuilderAdmissionregistrationV1beta1();
+        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
 
@@ -15500,10 +16982,13 @@ public type WebhookBuilderAdmissionregistrationV1beta1 object {
 };
 
 public type LimitRangeItemBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_LimitRangeItem io_k8s_api_core_v1_limitrangeitem;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_limitrangeitem = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_LimitRangeItem) {
         return self.io_k8s_api_core_v1_limitrangeitem;
@@ -15544,10 +17029,13 @@ public type LimitRangeItemBuilderCoreV1 object {
 };
 
 public type UserInfoBuilderAuthenticationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1beta1_UserInfo io_k8s_api_authentication_v1beta1_userinfo;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authentication_v1beta1_userinfo = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authentication_v1beta1_UserInfo) {
         return self.io_k8s_api_authentication_v1beta1_userinfo;
@@ -15583,10 +17071,13 @@ public type UserInfoBuilderAuthenticationV1beta1 object {
 };
 
 public type PodConditionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodCondition io_k8s_api_core_v1_podcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodCondition) {
         return self.io_k8s_api_core_v1_podcondition;
@@ -15627,10 +17118,13 @@ public type PodConditionBuilderCoreV1 object {
 };
 
 public type ScaleSpecBuilderAutoscalingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_ScaleSpec io_k8s_api_autoscaling_v1_scalespec;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v1_scalespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v1_ScaleSpec) {
         return self.io_k8s_api_autoscaling_v1_scalespec;
@@ -15646,10 +17140,13 @@ public type ScaleSpecBuilderAutoscalingV1 object {
 };
 
 public type SubjectAccessReviewStatusBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SubjectAccessReviewStatus io_k8s_api_authorization_v1_subjectaccessreviewstatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_subjectaccessreviewstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_SubjectAccessReviewStatus) {
         return self.io_k8s_api_authorization_v1_subjectaccessreviewstatus;
@@ -15681,7 +17178,7 @@ public type SubjectAccessReviewStatusBuilderAuthorizationV1 object {
 };
 
 public type ClusterRoleBindingBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_ClusterRoleBinding io_k8s_api_rbac_v1_clusterrolebinding;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -15689,8 +17186,11 @@ public type ClusterRoleBindingBuilderRbacV1 object {
 
     public SubjectBuilderRbacV1[] subjectsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_clusterrolebinding = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_ClusterRoleBinding) {
         return self.io_k8s_api_rbac_v1_clusterrolebinding;
@@ -15699,7 +17199,8 @@ public type ClusterRoleBindingBuilderRbacV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -15711,7 +17212,8 @@ public type ClusterRoleBindingBuilderRbacV1 object {
         }
     }
     public function withRoleRef() returns RoleRefBuilderRbacV1 {
-        self.roleRefBuilder = new RoleRefBuilderRbacV1(self);
+        self.roleRefBuilder = new RoleRefBuilderRbacV1();
+        self.roleRefBuilder.init(self);
         match (self.roleRefBuilder) {
             RoleRefBuilderRbacV1 builder => {
                 return builder;
@@ -15723,7 +17225,8 @@ public type ClusterRoleBindingBuilderRbacV1 object {
         }
     }
     public function withSubjects() returns SubjectBuilderRbacV1 {
-        self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1(self);
+        self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1();
+        self.subjectsBuilder[(lengthof subjectsBuilder)].init(self);
         return self.subjectsBuilder[(lengthof subjectsBuilder) - 1];
     }
 
@@ -15739,14 +17242,17 @@ public type ClusterRoleBindingBuilderRbacV1 object {
 };
 
 public type NetworkPolicyListBuilderNetworkingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_networking_v1_NetworkPolicyList io_k8s_api_networking_v1_networkpolicylist;
     public NetworkPolicyBuilderNetworkingV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_networking_v1_networkpolicylist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_networking_v1_NetworkPolicyList) {
         return self.io_k8s_api_networking_v1_networkpolicylist;
@@ -15755,7 +17261,8 @@ public type NetworkPolicyListBuilderNetworkingV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -15767,7 +17274,8 @@ public type NetworkPolicyListBuilderNetworkingV1 object {
         }
     }
     public function withItems() returns NetworkPolicyBuilderNetworkingV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new NetworkPolicyBuilderNetworkingV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new NetworkPolicyBuilderNetworkingV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -15783,7 +17291,7 @@ public type NetworkPolicyListBuilderNetworkingV1 object {
 };
 
 public type ContainerBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Container io_k8s_api_core_v1_container;
     public EnvVarBuilderCoreV1[] envBuilder;
 
@@ -15805,8 +17313,11 @@ public type ContainerBuilderCoreV1 object {
 
     public VolumeMountBuilderCoreV1[] volumeMountsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_container = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Container) {
         return self.io_k8s_api_core_v1_container;
@@ -15815,7 +17326,8 @@ public type ContainerBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withLifecycle() returns LifecycleBuilderCoreV1 {
-        self.lifecycleBuilder = new LifecycleBuilderCoreV1(self);
+        self.lifecycleBuilder = new LifecycleBuilderCoreV1();
+        self.lifecycleBuilder.init(self);
         match (self.lifecycleBuilder) {
             LifecycleBuilderCoreV1 builder => {
                 return builder;
@@ -15827,7 +17339,8 @@ public type ContainerBuilderCoreV1 object {
         }
     }
     public function withLivenessProbe() returns ProbeBuilderCoreV1 {
-        self.livenessProbeBuilder = new ProbeBuilderCoreV1(self);
+        self.livenessProbeBuilder = new ProbeBuilderCoreV1();
+        self.livenessProbeBuilder.init(self);
         match (self.livenessProbeBuilder) {
             ProbeBuilderCoreV1 builder => {
                 return builder;
@@ -15839,7 +17352,8 @@ public type ContainerBuilderCoreV1 object {
         }
     }
     public function withReadinessProbe() returns ProbeBuilderCoreV1 {
-        self.readinessProbeBuilder = new ProbeBuilderCoreV1(self);
+        self.readinessProbeBuilder = new ProbeBuilderCoreV1();
+        self.readinessProbeBuilder.init(self);
         match (self.readinessProbeBuilder) {
             ProbeBuilderCoreV1 builder => {
                 return builder;
@@ -15851,7 +17365,8 @@ public type ContainerBuilderCoreV1 object {
         }
     }
     public function withResources() returns ResourceRequirementsBuilderCoreV1 {
-        self.resourcesBuilder = new ResourceRequirementsBuilderCoreV1(self);
+        self.resourcesBuilder = new ResourceRequirementsBuilderCoreV1();
+        self.resourcesBuilder.init(self);
         match (self.resourcesBuilder) {
             ResourceRequirementsBuilderCoreV1 builder => {
                 return builder;
@@ -15863,7 +17378,8 @@ public type ContainerBuilderCoreV1 object {
         }
     }
     public function withSecurityContext() returns SecurityContextBuilderCoreV1 {
-        self.securityContextBuilder = new SecurityContextBuilderCoreV1(self);
+        self.securityContextBuilder = new SecurityContextBuilderCoreV1();
+        self.securityContextBuilder.init(self);
         match (self.securityContextBuilder) {
             SecurityContextBuilderCoreV1 builder => {
                 return builder;
@@ -15875,23 +17391,28 @@ public type ContainerBuilderCoreV1 object {
         }
     }
     public function withEnv() returns EnvVarBuilderCoreV1 {
-        self.envBuilder[lengthof envBuilder] = new EnvVarBuilderCoreV1(self);
+        self.envBuilder[lengthof envBuilder] = new EnvVarBuilderCoreV1();
+        self.envBuilder[(lengthof envBuilder)].init(self);
         return self.envBuilder[(lengthof envBuilder) - 1];
     }
     public function withEnvFrom() returns EnvFromSourceBuilderCoreV1 {
-        self.envFromBuilder[lengthof envFromBuilder] = new EnvFromSourceBuilderCoreV1(self);
+        self.envFromBuilder[lengthof envFromBuilder] = new EnvFromSourceBuilderCoreV1();
+        self.envFromBuilder[(lengthof envFromBuilder)].init(self);
         return self.envFromBuilder[(lengthof envFromBuilder) - 1];
     }
     public function withPorts() returns ContainerPortBuilderCoreV1 {
-        self.portsBuilder[lengthof portsBuilder] = new ContainerPortBuilderCoreV1(self);
+        self.portsBuilder[lengthof portsBuilder] = new ContainerPortBuilderCoreV1();
+        self.portsBuilder[(lengthof portsBuilder)].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
     public function withVolumeDevices() returns VolumeDeviceBuilderCoreV1 {
-        self.volumeDevicesBuilder[lengthof volumeDevicesBuilder] = new VolumeDeviceBuilderCoreV1(self);
+        self.volumeDevicesBuilder[lengthof volumeDevicesBuilder] = new VolumeDeviceBuilderCoreV1();
+        self.volumeDevicesBuilder[(lengthof volumeDevicesBuilder)].init(self);
         return self.volumeDevicesBuilder[(lengthof volumeDevicesBuilder) - 1];
     }
     public function withVolumeMounts() returns VolumeMountBuilderCoreV1 {
-        self.volumeMountsBuilder[lengthof volumeMountsBuilder] = new VolumeMountBuilderCoreV1(self);
+        self.volumeMountsBuilder[lengthof volumeMountsBuilder] = new VolumeMountBuilderCoreV1();
+        self.volumeMountsBuilder[(lengthof volumeMountsBuilder)].init(self);
         return self.volumeMountsBuilder[(lengthof volumeMountsBuilder) - 1];
     }
 
@@ -15960,12 +17481,15 @@ public type ContainerBuilderCoreV1 object {
 };
 
 public type DeploymentStrategyBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DeploymentStrategy io_k8s_api_apps_v1beta2_deploymentstrategy;
     public RollingUpdateDeploymentBuilderAppsV1beta2? rollingUpdateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_deploymentstrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DeploymentStrategy) {
         return self.io_k8s_api_apps_v1beta2_deploymentstrategy;
@@ -15974,7 +17498,8 @@ public type DeploymentStrategyBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withRollingUpdate() returns RollingUpdateDeploymentBuilderAppsV1beta2 {
-        self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderAppsV1beta2(self);
+        self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderAppsV1beta2();
+        self.rollingUpdateBuilder.init(self);
         match (self.rollingUpdateBuilder) {
             RollingUpdateDeploymentBuilderAppsV1beta2 builder => {
                 return builder;
@@ -15993,14 +17518,17 @@ public type DeploymentStrategyBuilderAppsV1beta2 object {
 };
 
 public type JobTemplateSpecBuilderBatchV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1beta1_JobTemplateSpec io_k8s_api_batch_v1beta1_jobtemplatespec;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public JobSpecBuilderBatchV1? specBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_batch_v1beta1_jobtemplatespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_batch_v1beta1_JobTemplateSpec) {
         return self.io_k8s_api_batch_v1beta1_jobtemplatespec;
@@ -16009,7 +17537,8 @@ public type JobTemplateSpecBuilderBatchV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -16021,7 +17550,8 @@ public type JobTemplateSpecBuilderBatchV1beta1 object {
         }
     }
     public function withSpec() returns JobSpecBuilderBatchV1 {
-        self.specBuilder = new JobSpecBuilderBatchV1(self);
+        self.specBuilder = new JobSpecBuilderBatchV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             JobSpecBuilderBatchV1 builder => {
                 return builder;
@@ -16035,14 +17565,17 @@ public type JobTemplateSpecBuilderBatchV1beta1 object {
 };
 
 public type ControllerRevisionBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_ControllerRevision io_k8s_api_apps_v1beta1_controllerrevision;
     public RawExtensionBuilderPkgRuntime? dataBuilder;
 
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_controllerrevision = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_ControllerRevision) {
         return self.io_k8s_api_apps_v1beta1_controllerrevision;
@@ -16051,7 +17584,8 @@ public type ControllerRevisionBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withData() returns RawExtensionBuilderPkgRuntime {
-        self.dataBuilder = new RawExtensionBuilderPkgRuntime(self);
+        self.dataBuilder = new RawExtensionBuilderPkgRuntime();
+        self.dataBuilder.init(self);
         match (self.dataBuilder) {
             RawExtensionBuilderPkgRuntime builder => {
                 return builder;
@@ -16063,7 +17597,8 @@ public type ControllerRevisionBuilderAppsV1beta1 object {
         }
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -16092,7 +17627,7 @@ public type ControllerRevisionBuilderAppsV1beta1 object {
 };
 
 public type DeploymentSpecBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_DeploymentSpec io_k8s_api_apps_v1beta1_deploymentspec;
     public RollbackConfigBuilderAppsV1beta1? rollbackToBuilder;
 
@@ -16102,8 +17637,11 @@ public type DeploymentSpecBuilderAppsV1beta1 object {
 
     public PodTemplateSpecBuilderCoreV1? templateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_deploymentspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_DeploymentSpec) {
         return self.io_k8s_api_apps_v1beta1_deploymentspec;
@@ -16112,7 +17650,8 @@ public type DeploymentSpecBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRollbackTo() returns RollbackConfigBuilderAppsV1beta1 {
-        self.rollbackToBuilder = new RollbackConfigBuilderAppsV1beta1(self);
+        self.rollbackToBuilder = new RollbackConfigBuilderAppsV1beta1();
+        self.rollbackToBuilder.init(self);
         match (self.rollbackToBuilder) {
             RollbackConfigBuilderAppsV1beta1 builder => {
                 return builder;
@@ -16124,7 +17663,8 @@ public type DeploymentSpecBuilderAppsV1beta1 object {
         }
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -16136,7 +17676,8 @@ public type DeploymentSpecBuilderAppsV1beta1 object {
         }
     }
     public function withStrategy() returns DeploymentStrategyBuilderAppsV1beta1 {
-        self.strategyBuilder = new DeploymentStrategyBuilderAppsV1beta1(self);
+        self.strategyBuilder = new DeploymentStrategyBuilderAppsV1beta1();
+        self.strategyBuilder.init(self);
         match (self.strategyBuilder) {
             DeploymentStrategyBuilderAppsV1beta1 builder => {
                 return builder;
@@ -16148,7 +17689,8 @@ public type DeploymentSpecBuilderAppsV1beta1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -16188,10 +17730,13 @@ public type DeploymentSpecBuilderAppsV1beta1 object {
 };
 
 public type SELinuxOptionsBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SELinuxOptions io_k8s_api_core_v1_selinuxoptions;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_selinuxoptions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_SELinuxOptions) {
         return self.io_k8s_api_core_v1_selinuxoptions;
@@ -16222,12 +17767,15 @@ public type SELinuxOptionsBuilderCoreV1 object {
 };
 
 public type DeploymentStrategyBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DeploymentStrategy io_k8s_api_extensions_v1beta1_deploymentstrategy;
     public RollingUpdateDeploymentBuilderExtensionsV1beta1? rollingUpdateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_deploymentstrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DeploymentStrategy) {
         return self.io_k8s_api_extensions_v1beta1_deploymentstrategy;
@@ -16236,7 +17784,8 @@ public type DeploymentStrategyBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRollingUpdate() returns RollingUpdateDeploymentBuilderExtensionsV1beta1 {
-        self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderExtensionsV1beta1(self);
+        self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderExtensionsV1beta1();
+        self.rollingUpdateBuilder.init(self);
         match (self.rollingUpdateBuilder) {
             RollingUpdateDeploymentBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -16255,14 +17804,17 @@ public type DeploymentStrategyBuilderExtensionsV1beta1 object {
 };
 
 public type PersistentVolumeClaimSpecBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeClaimSpec io_k8s_api_core_v1_persistentvolumeclaimspec;
     public ResourceRequirementsBuilderCoreV1? resourcesBuilder;
 
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_persistentvolumeclaimspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PersistentVolumeClaimSpec) {
         return self.io_k8s_api_core_v1_persistentvolumeclaimspec;
@@ -16271,7 +17823,8 @@ public type PersistentVolumeClaimSpecBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withResources() returns ResourceRequirementsBuilderCoreV1 {
-        self.resourcesBuilder = new ResourceRequirementsBuilderCoreV1(self);
+        self.resourcesBuilder = new ResourceRequirementsBuilderCoreV1();
+        self.resourcesBuilder.init(self);
         match (self.resourcesBuilder) {
             ResourceRequirementsBuilderCoreV1 builder => {
                 return builder;
@@ -16283,7 +17836,8 @@ public type PersistentVolumeClaimSpecBuilderCoreV1 object {
         }
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -16322,12 +17876,15 @@ public type PersistentVolumeClaimSpecBuilderCoreV1 object {
 };
 
 public type ReplicaSetStatusBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_ReplicaSetStatus io_k8s_api_apps_v1_replicasetstatus;
     public ReplicaSetConditionBuilderAppsV1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_replicasetstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_ReplicaSetStatus) {
         return self.io_k8s_api_apps_v1_replicasetstatus;
@@ -16336,7 +17893,8 @@ public type ReplicaSetStatusBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns ReplicaSetConditionBuilderAppsV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicaSetConditionBuilderAppsV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicaSetConditionBuilderAppsV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -16367,12 +17925,15 @@ public type ReplicaSetStatusBuilderAppsV1 object {
 };
 
 public type RunAsUserStrategyOptionsBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_RunAsUserStrategyOptions io_k8s_api_policy_v1beta1_runasuserstrategyoptions;
     public IDRangeBuilderPolicyV1beta1[] rangesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_runasuserstrategyoptions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_RunAsUserStrategyOptions) {
         return self.io_k8s_api_policy_v1beta1_runasuserstrategyoptions;
@@ -16381,7 +17942,8 @@ public type RunAsUserStrategyOptionsBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRanges() returns IDRangeBuilderPolicyV1beta1 {
-        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderPolicyV1beta1(self);
+        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderPolicyV1beta1();
+        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -16392,11 +17954,14 @@ public type RunAsUserStrategyOptionsBuilderPolicyV1beta1 object {
 };
 
 public type NonResourceAttributesBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_NonResourceAttributes io_k8s_api_authorization_v1beta1_nonresourceattributes
     ;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_nonresourceattributes = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_NonResourceAttributes) {
         return self.io_k8s_api_authorization_v1beta1_nonresourceattributes;
@@ -16417,10 +17982,13 @@ public type NonResourceAttributesBuilderAuthorizationV1beta1 object {
 };
 
 public type IngressBackendBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IngressBackend io_k8s_api_extensions_v1beta1_ingressbackend;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_ingressbackend = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_IngressBackend) {
         return self.io_k8s_api_extensions_v1beta1_ingressbackend;
@@ -16441,12 +18009,15 @@ public type IngressBackendBuilderExtensionsV1beta1 object {
 };
 
 public type SELinuxStrategyOptionsBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_SELinuxStrategyOptions io_k8s_api_policy_v1beta1_selinuxstrategyoptions;
     public SELinuxOptionsBuilderCoreV1? seLinuxOptionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_selinuxstrategyoptions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_SELinuxStrategyOptions) {
         return self.io_k8s_api_policy_v1beta1_selinuxstrategyoptions;
@@ -16455,7 +18026,8 @@ public type SELinuxStrategyOptionsBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withSeLinuxOptions() returns SELinuxOptionsBuilderCoreV1 {
-        self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1(self);
+        self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1();
+        self.seLinuxOptionsBuilder.init(self);
         match (self.seLinuxOptionsBuilder) {
             SELinuxOptionsBuilderCoreV1 builder => {
                 return builder;
@@ -16474,14 +18046,17 @@ public type SELinuxStrategyOptionsBuilderPolicyV1beta1 object {
 };
 
 public type EndpointsBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Endpoints io_k8s_api_core_v1_endpoints;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public EndpointSubsetBuilderCoreV1[] subsetsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_endpoints = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Endpoints) {
         return self.io_k8s_api_core_v1_endpoints;
@@ -16490,7 +18065,8 @@ public type EndpointsBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -16502,7 +18078,8 @@ public type EndpointsBuilderCoreV1 object {
         }
     }
     public function withSubsets() returns EndpointSubsetBuilderCoreV1 {
-        self.subsetsBuilder[lengthof subsetsBuilder] = new EndpointSubsetBuilderCoreV1(self);
+        self.subsetsBuilder[lengthof subsetsBuilder] = new EndpointSubsetBuilderCoreV1();
+        self.subsetsBuilder[(lengthof subsetsBuilder)].init(self);
         return self.subsetsBuilder[(lengthof subsetsBuilder) - 1];
     }
 
@@ -16518,10 +18095,13 @@ public type EndpointsBuilderCoreV1 object {
 };
 
 public type StatefulSetConditionBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_StatefulSetCondition io_k8s_api_apps_v1_statefulsetcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_statefulsetcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_StatefulSetCondition) {
         return self.io_k8s_api_apps_v1_statefulsetcondition;
@@ -16557,11 +18137,14 @@ public type StatefulSetConditionBuilderAppsV1 object {
 };
 
 public type SubjectAccessReviewStatusBuilderAuthorizationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SubjectAccessReviewStatus
     io_k8s_api_authorization_v1beta1_subjectaccessreviewstatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1beta1_subjectaccessreviewstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1beta1_SubjectAccessReviewStatus) {
         return self.io_k8s_api_authorization_v1beta1_subjectaccessreviewstatus;
@@ -16593,10 +18176,13 @@ public type SubjectAccessReviewStatusBuilderAuthorizationV1beta1 object {
 };
 
 public type LocalObjectReferenceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_LocalObjectReference io_k8s_api_core_v1_localobjectreference;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_localobjectreference = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_LocalObjectReference) {
         return self.io_k8s_api_core_v1_localobjectreference;
@@ -16612,10 +18198,13 @@ public type LocalObjectReferenceBuilderCoreV1 object {
 };
 
 public type TCPSocketActionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_TCPSocketAction io_k8s_api_core_v1_tcpsocketaction;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_tcpsocketaction = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_TCPSocketAction) {
         return self.io_k8s_api_core_v1_tcpsocketaction;
@@ -16636,7 +18225,7 @@ public type TCPSocketActionBuilderCoreV1 object {
 };
 
 public type PodStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodStatus io_k8s_api_core_v1_podstatus;
     public PodConditionBuilderCoreV1[] conditionsBuilder;
 
@@ -16644,8 +18233,11 @@ public type PodStatusBuilderCoreV1 object {
 
     public ContainerStatusBuilderCoreV1[] initContainerStatusesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodStatus) {
         return self.io_k8s_api_core_v1_podstatus;
@@ -16654,16 +18246,18 @@ public type PodStatusBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns PodConditionBuilderCoreV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new PodConditionBuilderCoreV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new PodConditionBuilderCoreV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
     public function withContainerStatuses() returns ContainerStatusBuilderCoreV1 {
-        self.containerStatusesBuilder[lengthof containerStatusesBuilder] = new ContainerStatusBuilderCoreV1(self);
+        self.containerStatusesBuilder[lengthof containerStatusesBuilder] = new ContainerStatusBuilderCoreV1();
+        self.containerStatusesBuilder[(lengthof containerStatusesBuilder)].init(self);
         return self.containerStatusesBuilder[(lengthof containerStatusesBuilder) - 1];
     }
     public function withInitContainerStatuses() returns ContainerStatusBuilderCoreV1 {
-        self.initContainerStatusesBuilder[lengthof initContainerStatusesBuilder] = new ContainerStatusBuilderCoreV1(self
-        );
+        self.initContainerStatusesBuilder[lengthof initContainerStatusesBuilder] = new ContainerStatusBuilderCoreV1();
+        self.initContainerStatusesBuilder[(lengthof initContainerStatusesBuilder)].init(self);
         return self.initContainerStatusesBuilder[(lengthof initContainerStatusesBuilder) - 1];
     }
 
@@ -16709,15 +18303,18 @@ public type PodStatusBuilderCoreV1 object {
 };
 
 public type HorizontalPodAutoscalerListBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscalerList
     io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerlist;
     public HorizontalPodAutoscalerBuilderAutoscalingV2beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscalerList) {
         return self.io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerlist;
@@ -16726,7 +18323,8 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -16738,7 +18336,8 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV2beta1 object {
         }
     }
     public function withItems() returns HorizontalPodAutoscalerBuilderAutoscalingV2beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new HorizontalPodAutoscalerBuilderAutoscalingV2beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new HorizontalPodAutoscalerBuilderAutoscalingV2beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -16754,14 +18353,17 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV2beta1 object {
 };
 
 public type EventListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EventList io_k8s_api_core_v1_eventlist;
     public EventBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_eventlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EventList) {
         return self.io_k8s_api_core_v1_eventlist;
@@ -16770,7 +18372,8 @@ public type EventListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -16782,7 +18385,8 @@ public type EventListBuilderCoreV1 object {
         }
     }
     public function withItems() returns EventBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new EventBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new EventBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -16798,10 +18402,13 @@ public type EventListBuilderCoreV1 object {
 };
 
 public type CrossVersionObjectReferenceBuilderAutoscalingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_CrossVersionObjectReference io_k8s_api_autoscaling_v1_crossversionobjectreference;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v1_crossversionobjectreference = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v1_CrossVersionObjectReference) {
         return self.io_k8s_api_autoscaling_v1_crossversionobjectreference;
@@ -16827,12 +18434,15 @@ public type CrossVersionObjectReferenceBuilderAutoscalingV1 object {
 };
 
 public type CephFSVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_CephFSVolumeSource io_k8s_api_core_v1_cephfsvolumesource;
     public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_cephfsvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_CephFSVolumeSource) {
         return self.io_k8s_api_core_v1_cephfsvolumesource;
@@ -16841,7 +18451,8 @@ public type CephFSVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns LocalObjectReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             LocalObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -16885,12 +18496,15 @@ public type CephFSVolumeSourceBuilderCoreV1 object {
 };
 
 public type CephFSPersistentVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_CephFSPersistentVolumeSource io_k8s_api_core_v1_cephfspersistentvolumesource;
     public SecretReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_cephfspersistentvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_CephFSPersistentVolumeSource) {
         return self.io_k8s_api_core_v1_cephfspersistentvolumesource;
@@ -16899,7 +18513,8 @@ public type CephFSPersistentVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns SecretReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new SecretReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new SecretReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             SecretReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -16943,11 +18558,14 @@ public type CephFSPersistentVolumeSourceBuilderCoreV1 object {
 };
 
 public type APIServiceConditionBuilderApiregistrationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIServiceCondition
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicecondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicecondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIServiceCondition) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicecondition;
@@ -16985,15 +18603,18 @@ public type APIServiceConditionBuilderApiregistrationV1 object {
 };
 
 public type JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_JSONSchemaPropsOrArray
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_jsonschemapropsorarray;
     public JSONSchemaPropsBuilderApiextensionsV1beta1[] JSONSchemasBuilder;
 
     public JSONSchemaPropsBuilderApiextensionsV1beta1? SchemaBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_jsonschemapropsorarray = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_JSONSchemaPropsOrArray) {
@@ -17003,7 +18624,8 @@ public type JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withSchema() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
-        self.SchemaBuilder = new JSONSchemaPropsBuilderApiextensionsV1beta1(self);
+        self.SchemaBuilder = new JSONSchemaPropsBuilderApiextensionsV1beta1();
+        self.SchemaBuilder.init(self);
         match (self.SchemaBuilder) {
             JSONSchemaPropsBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -17015,13 +18637,14 @@ public type JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1 object {
         }
     }
     public function withJSONSchemas() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
-        self.JSONSchemasBuilder[lengthof JSONSchemasBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1(self);
+        self.JSONSchemasBuilder[lengthof JSONSchemasBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1();
+        self.JSONSchemasBuilder[(lengthof JSONSchemasBuilder)].init(self);
         return self.JSONSchemasBuilder[(lengthof JSONSchemasBuilder) - 1];
     }
 };
 
 public type PodBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Pod io_k8s_api_core_v1_pod;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -17029,8 +18652,11 @@ public type PodBuilderCoreV1 object {
 
     public PodStatusBuilderCoreV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_pod = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Pod) {
         return self.io_k8s_api_core_v1_pod;
@@ -17039,7 +18665,8 @@ public type PodBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -17051,7 +18678,8 @@ public type PodBuilderCoreV1 object {
         }
     }
     public function withSpec() returns PodSpecBuilderCoreV1 {
-        self.specBuilder = new PodSpecBuilderCoreV1(self);
+        self.specBuilder = new PodSpecBuilderCoreV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             PodSpecBuilderCoreV1 builder => {
                 return builder;
@@ -17063,7 +18691,8 @@ public type PodBuilderCoreV1 object {
         }
     }
     public function withStatus() returns PodStatusBuilderCoreV1 {
-        self.statusBuilder = new PodStatusBuilderCoreV1(self);
+        self.statusBuilder = new PodStatusBuilderCoreV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             PodStatusBuilderCoreV1 builder => {
                 return builder;
@@ -17087,7 +18716,7 @@ public type PodBuilderCoreV1 object {
 };
 
 public type ClusterRoleBindingBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_ClusterRoleBinding io_k8s_api_rbac_v1beta1_clusterrolebinding;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -17095,8 +18724,11 @@ public type ClusterRoleBindingBuilderRbacV1beta1 object {
 
     public SubjectBuilderRbacV1beta1[] subjectsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_clusterrolebinding = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_ClusterRoleBinding) {
         return self.io_k8s_api_rbac_v1beta1_clusterrolebinding;
@@ -17105,7 +18737,8 @@ public type ClusterRoleBindingBuilderRbacV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -17117,7 +18750,8 @@ public type ClusterRoleBindingBuilderRbacV1beta1 object {
         }
     }
     public function withRoleRef() returns RoleRefBuilderRbacV1beta1 {
-        self.roleRefBuilder = new RoleRefBuilderRbacV1beta1(self);
+        self.roleRefBuilder = new RoleRefBuilderRbacV1beta1();
+        self.roleRefBuilder.init(self);
         match (self.roleRefBuilder) {
             RoleRefBuilderRbacV1beta1 builder => {
                 return builder;
@@ -17129,7 +18763,8 @@ public type ClusterRoleBindingBuilderRbacV1beta1 object {
         }
     }
     public function withSubjects() returns SubjectBuilderRbacV1beta1 {
-        self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1beta1(self);
+        self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1beta1();
+        self.subjectsBuilder[(lengthof subjectsBuilder)].init(self);
         return self.subjectsBuilder[(lengthof subjectsBuilder) - 1];
     }
 
@@ -17145,10 +18780,13 @@ public type ClusterRoleBindingBuilderRbacV1beta1 object {
 };
 
 public type PodDisruptionBudgetStatusBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_PodDisruptionBudgetStatus io_k8s_api_policy_v1beta1_poddisruptionbudgetstatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_poddisruptionbudgetstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_PodDisruptionBudgetStatus) {
         return self.io_k8s_api_policy_v1beta1_poddisruptionbudgetstatus;
@@ -17191,14 +18829,17 @@ public type PodDisruptionBudgetStatusBuilderPolicyV1beta1 object {
 };
 
 public type RoleBindingListBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_RoleBindingList io_k8s_api_rbac_v1beta1_rolebindinglist;
     public RoleBindingBuilderRbacV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_rolebindinglist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_RoleBindingList) {
         return self.io_k8s_api_rbac_v1beta1_rolebindinglist;
@@ -17207,7 +18848,8 @@ public type RoleBindingListBuilderRbacV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -17219,7 +18861,8 @@ public type RoleBindingListBuilderRbacV1beta1 object {
         }
     }
     public function withItems() returns RoleBindingBuilderRbacV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new RoleBindingBuilderRbacV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new RoleBindingBuilderRbacV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -17235,7 +18878,7 @@ public type RoleBindingListBuilderRbacV1beta1 object {
 };
 
 public type LocalSubjectAccessReviewBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_LocalSubjectAccessReview io_k8s_api_authorization_v1_localsubjectaccessreview;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -17243,8 +18886,11 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1 object {
 
     public SubjectAccessReviewStatusBuilderAuthorizationV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_localsubjectaccessreview = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_LocalSubjectAccessReview) {
         return self.io_k8s_api_authorization_v1_localsubjectaccessreview;
@@ -17253,7 +18899,8 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -17265,7 +18912,8 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1 object {
         }
     }
     public function withSpec() returns SubjectAccessReviewSpecBuilderAuthorizationV1 {
-        self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1(self);
+        self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             SubjectAccessReviewSpecBuilderAuthorizationV1 builder => {
                 return builder;
@@ -17277,7 +18925,8 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1 object {
         }
     }
     public function withStatus() returns SubjectAccessReviewStatusBuilderAuthorizationV1 {
-        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1(self);
+        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             SubjectAccessReviewStatusBuilderAuthorizationV1 builder => {
                 return builder;
@@ -17301,14 +18950,17 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1 object {
 };
 
 public type PodAffinityBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodAffinity io_k8s_api_core_v1_podaffinity;
     public WeightedPodAffinityTermBuilderCoreV1[] preferredDuringSchedulingIgnoredDuringExecutionBuilder;
 
     public PodAffinityTermBuilderCoreV1[] requiredDuringSchedulingIgnoredDuringExecutionBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podaffinity = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodAffinity) {
         return self.io_k8s_api_core_v1_podaffinity;
@@ -17318,25 +18970,32 @@ public type PodAffinityBuilderCoreV1 object {
     }
     public function withPreferredDuringSchedulingIgnoredDuringExecution() returns WeightedPodAffinityTermBuilderCoreV1 {
         self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[lengthof
-        preferredDuringSchedulingIgnoredDuringExecutionBuilder] = new WeightedPodAffinityTermBuilderCoreV1(self);
+        preferredDuringSchedulingIgnoredDuringExecutionBuilder] = new WeightedPodAffinityTermBuilderCoreV1();
+        self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
+        preferredDuringSchedulingIgnoredDuringExecutionBuilder)].init(self);
         return self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
             preferredDuringSchedulingIgnoredDuringExecutionBuilder) - 1];
     }
     public function withRequiredDuringSchedulingIgnoredDuringExecution() returns PodAffinityTermBuilderCoreV1 {
         self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[lengthof
-        requiredDuringSchedulingIgnoredDuringExecutionBuilder] = new PodAffinityTermBuilderCoreV1(self);
+        requiredDuringSchedulingIgnoredDuringExecutionBuilder] = new PodAffinityTermBuilderCoreV1();
+        self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
+        requiredDuringSchedulingIgnoredDuringExecutionBuilder)].init(self);
         return self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
             requiredDuringSchedulingIgnoredDuringExecutionBuilder) - 1];
     }
 };
 
 public type AggregationRuleBuilderRbacV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_AggregationRule io_k8s_api_rbac_v1beta1_aggregationrule;
     public LabelSelectorBuilderMetaV1[] clusterRoleSelectorsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1beta1_aggregationrule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1beta1_AggregationRule) {
         return self.io_k8s_api_rbac_v1beta1_aggregationrule;
@@ -17345,17 +19004,21 @@ public type AggregationRuleBuilderRbacV1beta1 object {
         return self.fluentBuilder;
     }
     public function withClusterRoleSelectors() returns LabelSelectorBuilderMetaV1 {
-        self.clusterRoleSelectorsBuilder[lengthof clusterRoleSelectorsBuilder] = new LabelSelectorBuilderMetaV1(self);
+        self.clusterRoleSelectorsBuilder[lengthof clusterRoleSelectorsBuilder] = new LabelSelectorBuilderMetaV1();
+        self.clusterRoleSelectorsBuilder[(lengthof clusterRoleSelectorsBuilder)].init(self);
         return self.clusterRoleSelectorsBuilder[(lengthof clusterRoleSelectorsBuilder) - 1];
     }
 };
 
 public type CrossVersionObjectReferenceBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_CrossVersionObjectReference
     io_k8s_api_autoscaling_v2beta1_crossversionobjectreference;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_crossversionobjectreference = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_CrossVersionObjectReference) {
         return self.io_k8s_api_autoscaling_v2beta1_crossversionobjectreference;
@@ -17381,15 +19044,18 @@ public type CrossVersionObjectReferenceBuilderAutoscalingV2beta1 object {
 };
 
 public type APIServiceListBuilderApiregistrationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIServiceList
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicelist;
     public APIServiceBuilderApiregistrationV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIServiceList) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicelist;
@@ -17398,7 +19064,8 @@ public type APIServiceListBuilderApiregistrationV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -17410,7 +19077,8 @@ public type APIServiceListBuilderApiregistrationV1 object {
         }
     }
     public function withItems() returns APIServiceBuilderApiregistrationV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new APIServiceBuilderApiregistrationV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new APIServiceBuilderApiregistrationV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -17426,12 +19094,15 @@ public type APIServiceListBuilderApiregistrationV1 object {
 };
 
 public type CronJobSpecBuilderBatchV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1beta1_CronJobSpec io_k8s_api_batch_v1beta1_cronjobspec;
     public JobTemplateSpecBuilderBatchV1beta1? jobTemplateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_batch_v1beta1_cronjobspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_batch_v1beta1_CronJobSpec) {
         return self.io_k8s_api_batch_v1beta1_cronjobspec;
@@ -17440,7 +19111,8 @@ public type CronJobSpecBuilderBatchV1beta1 object {
         return self.fluentBuilder;
     }
     public function withJobTemplate() returns JobTemplateSpecBuilderBatchV1beta1 {
-        self.jobTemplateBuilder = new JobTemplateSpecBuilderBatchV1beta1(self);
+        self.jobTemplateBuilder = new JobTemplateSpecBuilderBatchV1beta1();
+        self.jobTemplateBuilder.init(self);
         match (self.jobTemplateBuilder) {
             JobTemplateSpecBuilderBatchV1beta1 builder => {
                 return builder;
@@ -17485,12 +19157,15 @@ public type CronJobSpecBuilderBatchV1beta1 object {
 };
 
 public type FlexVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_FlexVolumeSource io_k8s_api_core_v1_flexvolumesource;
     public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_flexvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_FlexVolumeSource) {
         return self.io_k8s_api_core_v1_flexvolumesource;
@@ -17499,7 +19174,8 @@ public type FlexVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSecretRef() returns LocalObjectReferenceBuilderCoreV1 {
-        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1(self);
+        self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
+        self.secretRefBuilder.init(self);
         match (self.secretRefBuilder) {
             LocalObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -17533,10 +19209,13 @@ public type FlexVolumeSourceBuilderCoreV1 object {
 };
 
 public type PolicyRuleBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_PolicyRule io_k8s_api_rbac_v1_policyrule;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_policyrule = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_PolicyRule) {
         return self.io_k8s_api_rbac_v1_policyrule;
@@ -17594,10 +19273,13 @@ public type PolicyRuleBuilderRbacV1 object {
 };
 
 public type TokenReviewSpecBuilderAuthenticationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1_TokenReviewSpec io_k8s_api_authentication_v1_tokenreviewspec;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authentication_v1_tokenreviewspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authentication_v1_TokenReviewSpec) {
         return self.io_k8s_api_authentication_v1_tokenreviewspec;
@@ -17613,10 +19295,13 @@ public type TokenReviewSpecBuilderAuthenticationV1 object {
 };
 
 public type EndpointPortBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EndpointPort io_k8s_api_core_v1_endpointport;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_endpointport = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EndpointPort) {
         return self.io_k8s_api_core_v1_endpointport;
@@ -17642,10 +19327,13 @@ public type EndpointPortBuilderCoreV1 object {
 };
 
 public type EventSeriesBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EventSeries io_k8s_api_core_v1_eventseries;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_eventseries = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EventSeries) {
         return self.io_k8s_api_core_v1_eventseries;
@@ -17671,14 +19359,17 @@ public type EventSeriesBuilderCoreV1 object {
 };
 
 public type PodTemplateBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodTemplate io_k8s_api_core_v1_podtemplate;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public PodTemplateSpecBuilderCoreV1? templateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podtemplate = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodTemplate) {
         return self.io_k8s_api_core_v1_podtemplate;
@@ -17687,7 +19378,8 @@ public type PodTemplateBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -17699,7 +19391,8 @@ public type PodTemplateBuilderCoreV1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -17723,14 +19416,17 @@ public type PodTemplateBuilderCoreV1 object {
 };
 
 public type ControllerRevisionBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_ControllerRevision io_k8s_api_apps_v1_controllerrevision;
     public RawExtensionBuilderPkgRuntime? dataBuilder;
 
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_controllerrevision = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_ControllerRevision) {
         return self.io_k8s_api_apps_v1_controllerrevision;
@@ -17739,7 +19435,8 @@ public type ControllerRevisionBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withData() returns RawExtensionBuilderPkgRuntime {
-        self.dataBuilder = new RawExtensionBuilderPkgRuntime(self);
+        self.dataBuilder = new RawExtensionBuilderPkgRuntime();
+        self.dataBuilder.init(self);
         match (self.dataBuilder) {
             RawExtensionBuilderPkgRuntime builder => {
                 return builder;
@@ -17751,7 +19448,8 @@ public type ControllerRevisionBuilderAppsV1 object {
         }
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -17780,7 +19478,7 @@ public type ControllerRevisionBuilderAppsV1 object {
 };
 
 public type DaemonSetSpecBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DaemonSetSpec io_k8s_api_apps_v1_daemonsetspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
@@ -17788,8 +19486,11 @@ public type DaemonSetSpecBuilderAppsV1 object {
 
     public DaemonSetUpdateStrategyBuilderAppsV1? updateStrategyBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_daemonsetspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DaemonSetSpec) {
         return self.io_k8s_api_apps_v1_daemonsetspec;
@@ -17798,7 +19499,8 @@ public type DaemonSetSpecBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -17810,7 +19512,8 @@ public type DaemonSetSpecBuilderAppsV1 object {
         }
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -17822,7 +19525,8 @@ public type DaemonSetSpecBuilderAppsV1 object {
         }
     }
     public function withUpdateStrategy() returns DaemonSetUpdateStrategyBuilderAppsV1 {
-        self.updateStrategyBuilder = new DaemonSetUpdateStrategyBuilderAppsV1(self);
+        self.updateStrategyBuilder = new DaemonSetUpdateStrategyBuilderAppsV1();
+        self.updateStrategyBuilder.init(self);
         match (self.updateStrategyBuilder) {
             DaemonSetUpdateStrategyBuilderAppsV1 builder => {
                 return builder;
@@ -17846,11 +19550,14 @@ public type DaemonSetSpecBuilderAppsV1 object {
 };
 
 public type APIServiceConditionBuilderApiregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIServiceCondition
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicecondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicecondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIServiceCondition) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicecondition;
@@ -17888,10 +19595,13 @@ public type APIServiceConditionBuilderApiregistrationV1beta1 object {
 };
 
 public type ScaleStatusBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_ScaleStatus io_k8s_api_apps_v1beta1_scalestatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_scalestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_ScaleStatus) {
         return self.io_k8s_api_apps_v1beta1_scalestatus;
@@ -17917,14 +19627,17 @@ public type ScaleStatusBuilderAppsV1beta1 object {
 };
 
 public type DownwardAPIVolumeFileBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_DownwardAPIVolumeFile io_k8s_api_core_v1_downwardapivolumefile;
     public ObjectFieldSelectorBuilderCoreV1? fieldRefBuilder;
 
     public ResourceFieldSelectorBuilderCoreV1? resourceFieldRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_downwardapivolumefile = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_DownwardAPIVolumeFile) {
         return self.io_k8s_api_core_v1_downwardapivolumefile;
@@ -17933,7 +19646,8 @@ public type DownwardAPIVolumeFileBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withFieldRef() returns ObjectFieldSelectorBuilderCoreV1 {
-        self.fieldRefBuilder = new ObjectFieldSelectorBuilderCoreV1(self);
+        self.fieldRefBuilder = new ObjectFieldSelectorBuilderCoreV1();
+        self.fieldRefBuilder.init(self);
         match (self.fieldRefBuilder) {
             ObjectFieldSelectorBuilderCoreV1 builder => {
                 return builder;
@@ -17945,7 +19659,8 @@ public type DownwardAPIVolumeFileBuilderCoreV1 object {
         }
     }
     public function withResourceFieldRef() returns ResourceFieldSelectorBuilderCoreV1 {
-        self.resourceFieldRefBuilder = new ResourceFieldSelectorBuilderCoreV1(self);
+        self.resourceFieldRefBuilder = new ResourceFieldSelectorBuilderCoreV1();
+        self.resourceFieldRefBuilder.init(self);
         match (self.resourceFieldRefBuilder) {
             ResourceFieldSelectorBuilderCoreV1 builder => {
                 return builder;
@@ -17969,15 +19684,18 @@ public type DownwardAPIVolumeFileBuilderCoreV1 object {
 };
 
 public type CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionStatus
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionstatus;
     public CustomResourceDefinitionNamesBuilderApiextensionsV1beta1? acceptedNamesBuilder;
 
     public CustomResourceDefinitionConditionBuilderApiextensionsV1beta1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionStatus) {
@@ -17987,7 +19705,8 @@ public type CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withAcceptedNames() returns CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 {
-        self.acceptedNamesBuilder = new CustomResourceDefinitionNamesBuilderApiextensionsV1beta1(self);
+        self.acceptedNamesBuilder = new CustomResourceDefinitionNamesBuilderApiextensionsV1beta1();
+        self.acceptedNamesBuilder.init(self);
         match (self.acceptedNamesBuilder) {
             CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -18000,18 +19719,22 @@ public type CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 object {
     }
     public function withConditions() returns CustomResourceDefinitionConditionBuilderApiextensionsV1beta1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new
-        CustomResourceDefinitionConditionBuilderApiextensionsV1beta1(self);
+        CustomResourceDefinitionConditionBuilderApiextensionsV1beta1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 };
 
 public type DeploymentStatusBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DeploymentStatus io_k8s_api_extensions_v1beta1_deploymentstatus;
     public DeploymentConditionBuilderExtensionsV1beta1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_deploymentstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DeploymentStatus) {
         return self.io_k8s_api_extensions_v1beta1_deploymentstatus;
@@ -18020,7 +19743,8 @@ public type DeploymentStatusBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns DeploymentConditionBuilderExtensionsV1beta1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderExtensionsV1beta1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderExtensionsV1beta1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -18062,14 +19786,17 @@ public type DeploymentStatusBuilderExtensionsV1beta1 object {
 };
 
 public type ServiceSpecBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ServiceSpec io_k8s_api_core_v1_servicespec;
     public ServicePortBuilderCoreV1[] portsBuilder;
 
     public SessionAffinityConfigBuilderCoreV1? sessionAffinityConfigBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_servicespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ServiceSpec) {
         return self.io_k8s_api_core_v1_servicespec;
@@ -18078,7 +19805,8 @@ public type ServiceSpecBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSessionAffinityConfig() returns SessionAffinityConfigBuilderCoreV1 {
-        self.sessionAffinityConfigBuilder = new SessionAffinityConfigBuilderCoreV1(self);
+        self.sessionAffinityConfigBuilder = new SessionAffinityConfigBuilderCoreV1();
+        self.sessionAffinityConfigBuilder.init(self);
         match (self.sessionAffinityConfigBuilder) {
             SessionAffinityConfigBuilderCoreV1 builder => {
                 return builder;
@@ -18090,7 +19818,8 @@ public type ServiceSpecBuilderCoreV1 object {
         }
     }
     public function withPorts() returns ServicePortBuilderCoreV1 {
-        self.portsBuilder[lengthof portsBuilder] = new ServicePortBuilderCoreV1(self);
+        self.portsBuilder[lengthof portsBuilder] = new ServicePortBuilderCoreV1();
+        self.portsBuilder[(lengthof portsBuilder)].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
 
@@ -18161,12 +19890,15 @@ public type ServiceSpecBuilderCoreV1 object {
 };
 
 public type HorizontalPodAutoscalerSpecBuilderAutoscalingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_HorizontalPodAutoscalerSpec io_k8s_api_autoscaling_v1_horizontalpodautoscalerspec;
     public CrossVersionObjectReferenceBuilderAutoscalingV1? scaleTargetRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v1_horizontalpodautoscalerspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v1_HorizontalPodAutoscalerSpec) {
         return self.io_k8s_api_autoscaling_v1_horizontalpodautoscalerspec;
@@ -18175,7 +19907,8 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV1 object {
         return self.fluentBuilder;
     }
     public function withScaleTargetRef() returns CrossVersionObjectReferenceBuilderAutoscalingV1 {
-        self.scaleTargetRefBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV1(self);
+        self.scaleTargetRefBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV1();
+        self.scaleTargetRefBuilder.init(self);
         match (self.scaleTargetRefBuilder) {
             CrossVersionObjectReferenceBuilderAutoscalingV1 builder => {
                 return builder;
@@ -18206,12 +19939,15 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV1 object {
 };
 
 public type DeleteOptionsBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_DeleteOptions io_k8s_apimachinery_pkg_apis_meta_v1_deleteoptions;
     public PreconditionsBuilderMetaV1? preconditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_deleteoptions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_DeleteOptions) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_deleteoptions;
@@ -18220,7 +19956,8 @@ public type DeleteOptionsBuilderMetaV1 object {
         return self.fluentBuilder;
     }
     public function withPreconditions() returns PreconditionsBuilderMetaV1 {
-        self.preconditionsBuilder = new PreconditionsBuilderMetaV1(self);
+        self.preconditionsBuilder = new PreconditionsBuilderMetaV1();
+        self.preconditionsBuilder.init(self);
         match (self.preconditionsBuilder) {
             PreconditionsBuilderMetaV1 builder => {
                 return builder;
@@ -18259,11 +19996,14 @@ public type DeleteOptionsBuilderMetaV1 object {
 };
 
 public type CustomResourceSubresourceStatusBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceSubresourceStatus
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcesubresourcestatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcesubresourcestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceSubresourceStatus) {
@@ -18275,14 +20015,17 @@ public type CustomResourceSubresourceStatusBuilderApiextensionsV1beta1 object {
 };
 
 public type RoleBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_Role io_k8s_api_rbac_v1_role;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public PolicyRuleBuilderRbacV1[] rulesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_role = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_Role) {
         return self.io_k8s_api_rbac_v1_role;
@@ -18291,7 +20034,8 @@ public type RoleBuilderRbacV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -18303,7 +20047,8 @@ public type RoleBuilderRbacV1 object {
         }
     }
     public function withRules() returns PolicyRuleBuilderRbacV1 {
-        self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1(self);
+        self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1();
+        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
 
@@ -18319,7 +20064,7 @@ public type RoleBuilderRbacV1 object {
 };
 
 public type PersistentVolumeBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolume io_k8s_api_core_v1_persistentvolume;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -18327,8 +20072,11 @@ public type PersistentVolumeBuilderCoreV1 object {
 
     public PersistentVolumeStatusBuilderCoreV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_persistentvolume = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PersistentVolume) {
         return self.io_k8s_api_core_v1_persistentvolume;
@@ -18337,7 +20085,8 @@ public type PersistentVolumeBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -18349,7 +20098,8 @@ public type PersistentVolumeBuilderCoreV1 object {
         }
     }
     public function withSpec() returns PersistentVolumeSpecBuilderCoreV1 {
-        self.specBuilder = new PersistentVolumeSpecBuilderCoreV1(self);
+        self.specBuilder = new PersistentVolumeSpecBuilderCoreV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             PersistentVolumeSpecBuilderCoreV1 builder => {
                 return builder;
@@ -18361,7 +20111,8 @@ public type PersistentVolumeBuilderCoreV1 object {
         }
     }
     public function withStatus() returns PersistentVolumeStatusBuilderCoreV1 {
-        self.statusBuilder = new PersistentVolumeStatusBuilderCoreV1(self);
+        self.statusBuilder = new PersistentVolumeStatusBuilderCoreV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             PersistentVolumeStatusBuilderCoreV1 builder => {
                 return builder;
@@ -18385,10 +20136,13 @@ public type PersistentVolumeBuilderCoreV1 object {
 };
 
 public type PersistentVolumeStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeStatus io_k8s_api_core_v1_persistentvolumestatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_persistentvolumestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PersistentVolumeStatus) {
         return self.io_k8s_api_core_v1_persistentvolumestatus;
@@ -18414,7 +20168,7 @@ public type PersistentVolumeStatusBuilderCoreV1 object {
 };
 
 public type ContainerStateBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ContainerState io_k8s_api_core_v1_containerstate;
     public ContainerStateRunningBuilderCoreV1? runningBuilder;
 
@@ -18422,8 +20176,11 @@ public type ContainerStateBuilderCoreV1 object {
 
     public ContainerStateWaitingBuilderCoreV1? waitingBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_containerstate = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ContainerState) {
         return self.io_k8s_api_core_v1_containerstate;
@@ -18432,7 +20189,8 @@ public type ContainerStateBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withRunning() returns ContainerStateRunningBuilderCoreV1 {
-        self.runningBuilder = new ContainerStateRunningBuilderCoreV1(self);
+        self.runningBuilder = new ContainerStateRunningBuilderCoreV1();
+        self.runningBuilder.init(self);
         match (self.runningBuilder) {
             ContainerStateRunningBuilderCoreV1 builder => {
                 return builder;
@@ -18444,7 +20202,8 @@ public type ContainerStateBuilderCoreV1 object {
         }
     }
     public function withTerminated() returns ContainerStateTerminatedBuilderCoreV1 {
-        self.terminatedBuilder = new ContainerStateTerminatedBuilderCoreV1(self);
+        self.terminatedBuilder = new ContainerStateTerminatedBuilderCoreV1();
+        self.terminatedBuilder.init(self);
         match (self.terminatedBuilder) {
             ContainerStateTerminatedBuilderCoreV1 builder => {
                 return builder;
@@ -18456,7 +20215,8 @@ public type ContainerStateBuilderCoreV1 object {
         }
     }
     public function withWaiting() returns ContainerStateWaitingBuilderCoreV1 {
-        self.waitingBuilder = new ContainerStateWaitingBuilderCoreV1(self);
+        self.waitingBuilder = new ContainerStateWaitingBuilderCoreV1();
+        self.waitingBuilder.init(self);
         match (self.waitingBuilder) {
             ContainerStateWaitingBuilderCoreV1 builder => {
                 return builder;
@@ -18470,7 +20230,7 @@ public type ContainerStateBuilderCoreV1 object {
 };
 
 public type StatefulSetBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_StatefulSet io_k8s_api_apps_v1_statefulset;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -18478,8 +20238,11 @@ public type StatefulSetBuilderAppsV1 object {
 
     public StatefulSetStatusBuilderAppsV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_statefulset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_StatefulSet) {
         return self.io_k8s_api_apps_v1_statefulset;
@@ -18488,7 +20251,8 @@ public type StatefulSetBuilderAppsV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -18500,7 +20264,8 @@ public type StatefulSetBuilderAppsV1 object {
         }
     }
     public function withSpec() returns StatefulSetSpecBuilderAppsV1 {
-        self.specBuilder = new StatefulSetSpecBuilderAppsV1(self);
+        self.specBuilder = new StatefulSetSpecBuilderAppsV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             StatefulSetSpecBuilderAppsV1 builder => {
                 return builder;
@@ -18512,7 +20277,8 @@ public type StatefulSetBuilderAppsV1 object {
         }
     }
     public function withStatus() returns StatefulSetStatusBuilderAppsV1 {
-        self.statusBuilder = new StatefulSetStatusBuilderAppsV1(self);
+        self.statusBuilder = new StatefulSetStatusBuilderAppsV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             StatefulSetStatusBuilderAppsV1 builder => {
                 return builder;
@@ -18536,10 +20302,13 @@ public type StatefulSetBuilderAppsV1 object {
 };
 
 public type ScaleSpecBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_ScaleSpec io_k8s_api_apps_v1beta1_scalespec;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_scalespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_ScaleSpec) {
         return self.io_k8s_api_apps_v1beta1_scalespec;
@@ -18555,7 +20324,7 @@ public type ScaleSpecBuilderAppsV1beta1 object {
 };
 
 public type NetworkPolicyPeerBuilderNetworkingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_networking_v1_NetworkPolicyPeer io_k8s_api_networking_v1_networkpolicypeer;
     public IPBlockBuilderNetworkingV1? ipBlockBuilder;
 
@@ -18563,8 +20332,11 @@ public type NetworkPolicyPeerBuilderNetworkingV1 object {
 
     public LabelSelectorBuilderMetaV1? podSelectorBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_networking_v1_networkpolicypeer = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_networking_v1_NetworkPolicyPeer) {
         return self.io_k8s_api_networking_v1_networkpolicypeer;
@@ -18573,7 +20345,8 @@ public type NetworkPolicyPeerBuilderNetworkingV1 object {
         return self.fluentBuilder;
     }
     public function withIpBlock() returns IPBlockBuilderNetworkingV1 {
-        self.ipBlockBuilder = new IPBlockBuilderNetworkingV1(self);
+        self.ipBlockBuilder = new IPBlockBuilderNetworkingV1();
+        self.ipBlockBuilder.init(self);
         match (self.ipBlockBuilder) {
             IPBlockBuilderNetworkingV1 builder => {
                 return builder;
@@ -18585,7 +20358,8 @@ public type NetworkPolicyPeerBuilderNetworkingV1 object {
         }
     }
     public function withNamespaceSelector() returns LabelSelectorBuilderMetaV1 {
-        self.namespaceSelectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.namespaceSelectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.namespaceSelectorBuilder.init(self);
         match (self.namespaceSelectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -18597,7 +20371,8 @@ public type NetworkPolicyPeerBuilderNetworkingV1 object {
         }
     }
     public function withPodSelector() returns LabelSelectorBuilderMetaV1 {
-        self.podSelectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.podSelectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.podSelectorBuilder.init(self);
         match (self.podSelectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -18611,7 +20386,7 @@ public type NetworkPolicyPeerBuilderNetworkingV1 object {
 };
 
 public type JobBuilderBatchV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1_Job io_k8s_api_batch_v1_job;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -18619,8 +20394,11 @@ public type JobBuilderBatchV1 object {
 
     public JobStatusBuilderBatchV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_batch_v1_job = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_batch_v1_Job) {
         return self.io_k8s_api_batch_v1_job;
@@ -18629,7 +20407,8 @@ public type JobBuilderBatchV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -18641,7 +20420,8 @@ public type JobBuilderBatchV1 object {
         }
     }
     public function withSpec() returns JobSpecBuilderBatchV1 {
-        self.specBuilder = new JobSpecBuilderBatchV1(self);
+        self.specBuilder = new JobSpecBuilderBatchV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             JobSpecBuilderBatchV1 builder => {
                 return builder;
@@ -18653,7 +20433,8 @@ public type JobBuilderBatchV1 object {
         }
     }
     public function withStatus() returns JobStatusBuilderBatchV1 {
-        self.statusBuilder = new JobStatusBuilderBatchV1(self);
+        self.statusBuilder = new JobStatusBuilderBatchV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             JobStatusBuilderBatchV1 builder => {
                 return builder;
@@ -18677,10 +20458,13 @@ public type JobBuilderBatchV1 object {
 };
 
 public type RollingUpdateDeploymentBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_RollingUpdateDeployment io_k8s_api_apps_v1beta2_rollingupdatedeployment;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_rollingupdatedeployment = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_RollingUpdateDeployment) {
         return self.io_k8s_api_apps_v1beta2_rollingupdatedeployment;
@@ -18701,7 +20485,7 @@ public type RollingUpdateDeploymentBuilderAppsV1beta2 object {
 };
 
 public type ServiceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Service io_k8s_api_core_v1_service;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -18709,8 +20493,11 @@ public type ServiceBuilderCoreV1 object {
 
     public ServiceStatusBuilderCoreV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_service = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Service) {
         return self.io_k8s_api_core_v1_service;
@@ -18719,7 +20506,8 @@ public type ServiceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -18731,7 +20519,8 @@ public type ServiceBuilderCoreV1 object {
         }
     }
     public function withSpec() returns ServiceSpecBuilderCoreV1 {
-        self.specBuilder = new ServiceSpecBuilderCoreV1(self);
+        self.specBuilder = new ServiceSpecBuilderCoreV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             ServiceSpecBuilderCoreV1 builder => {
                 return builder;
@@ -18743,7 +20532,8 @@ public type ServiceBuilderCoreV1 object {
         }
     }
     public function withStatus() returns ServiceStatusBuilderCoreV1 {
-        self.statusBuilder = new ServiceStatusBuilderCoreV1(self);
+        self.statusBuilder = new ServiceStatusBuilderCoreV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             ServiceStatusBuilderCoreV1 builder => {
                 return builder;
@@ -18767,7 +20557,7 @@ public type ServiceBuilderCoreV1 object {
 };
 
 public type APIServiceBuilderApiregistrationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIService
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservice;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
@@ -18776,8 +20566,11 @@ public type APIServiceBuilderApiregistrationV1 object {
 
     public APIServiceStatusBuilderApiregistrationV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservice = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIService) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservice;
@@ -18786,7 +20579,8 @@ public type APIServiceBuilderApiregistrationV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -18798,7 +20592,8 @@ public type APIServiceBuilderApiregistrationV1 object {
         }
     }
     public function withSpec() returns APIServiceSpecBuilderApiregistrationV1 {
-        self.specBuilder = new APIServiceSpecBuilderApiregistrationV1(self);
+        self.specBuilder = new APIServiceSpecBuilderApiregistrationV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             APIServiceSpecBuilderApiregistrationV1 builder => {
                 return builder;
@@ -18810,7 +20605,8 @@ public type APIServiceBuilderApiregistrationV1 object {
         }
     }
     public function withStatus() returns APIServiceStatusBuilderApiregistrationV1 {
-        self.statusBuilder = new APIServiceStatusBuilderApiregistrationV1(self);
+        self.statusBuilder = new APIServiceStatusBuilderApiregistrationV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             APIServiceStatusBuilderApiregistrationV1 builder => {
                 return builder;
@@ -18834,10 +20630,13 @@ public type APIServiceBuilderApiregistrationV1 object {
 };
 
 public type NodeConditionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeCondition io_k8s_api_core_v1_nodecondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodecondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeCondition) {
         return self.io_k8s_api_core_v1_nodecondition;
@@ -18878,10 +20677,13 @@ public type NodeConditionBuilderCoreV1 object {
 };
 
 public type DeploymentConditionBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_DeploymentCondition io_k8s_api_apps_v1beta1_deploymentcondition;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_deploymentcondition = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_DeploymentCondition) {
         return self.io_k8s_api_apps_v1beta1_deploymentcondition;
@@ -18923,14 +20725,17 @@ public type DeploymentConditionBuilderAppsV1beta1 object {
 };
 
 public type ContainerStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ContainerStatus io_k8s_api_core_v1_containerstatus;
     public ContainerStateBuilderCoreV1? lastStateBuilder;
 
     public ContainerStateBuilderCoreV1? stateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_containerstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ContainerStatus) {
         return self.io_k8s_api_core_v1_containerstatus;
@@ -18939,7 +20744,8 @@ public type ContainerStatusBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withLastState() returns ContainerStateBuilderCoreV1 {
-        self.lastStateBuilder = new ContainerStateBuilderCoreV1(self);
+        self.lastStateBuilder = new ContainerStateBuilderCoreV1();
+        self.lastStateBuilder.init(self);
         match (self.lastStateBuilder) {
             ContainerStateBuilderCoreV1 builder => {
                 return builder;
@@ -18951,7 +20757,8 @@ public type ContainerStatusBuilderCoreV1 object {
         }
     }
     public function withState() returns ContainerStateBuilderCoreV1 {
-        self.stateBuilder = new ContainerStateBuilderCoreV1(self);
+        self.stateBuilder = new ContainerStateBuilderCoreV1();
+        self.stateBuilder.init(self);
         match (self.stateBuilder) {
             ContainerStateBuilderCoreV1 builder => {
                 return builder;
@@ -18995,12 +20802,15 @@ public type ContainerStatusBuilderCoreV1 object {
 };
 
 public type WeightedPodAffinityTermBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_WeightedPodAffinityTerm io_k8s_api_core_v1_weightedpodaffinityterm;
     public PodAffinityTermBuilderCoreV1? podAffinityTermBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_weightedpodaffinityterm = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_WeightedPodAffinityTerm) {
         return self.io_k8s_api_core_v1_weightedpodaffinityterm;
@@ -19009,7 +20819,8 @@ public type WeightedPodAffinityTermBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withPodAffinityTerm() returns PodAffinityTermBuilderCoreV1 {
-        self.podAffinityTermBuilder = new PodAffinityTermBuilderCoreV1(self);
+        self.podAffinityTermBuilder = new PodAffinityTermBuilderCoreV1();
+        self.podAffinityTermBuilder.init(self);
         match (self.podAffinityTermBuilder) {
             PodAffinityTermBuilderCoreV1 builder => {
                 return builder;
@@ -19028,14 +20839,17 @@ public type WeightedPodAffinityTermBuilderCoreV1 object {
 };
 
 public type IngressListBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IngressList io_k8s_api_extensions_v1beta1_ingresslist;
     public IngressBuilderExtensionsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_ingresslist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_IngressList) {
         return self.io_k8s_api_extensions_v1beta1_ingresslist;
@@ -19044,7 +20858,8 @@ public type IngressListBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -19056,7 +20871,8 @@ public type IngressListBuilderExtensionsV1beta1 object {
         }
     }
     public function withItems() returns IngressBuilderExtensionsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new IngressBuilderExtensionsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new IngressBuilderExtensionsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -19072,10 +20888,13 @@ public type IngressListBuilderExtensionsV1beta1 object {
 };
 
 public type ObjectReferenceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ObjectReference io_k8s_api_core_v1_objectreference;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_objectreference = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ObjectReference) {
         return self.io_k8s_api_core_v1_objectreference;
@@ -19121,14 +20940,17 @@ public type ObjectReferenceBuilderCoreV1 object {
 };
 
 public type PodSecurityPolicyListBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_PodSecurityPolicyList io_k8s_api_extensions_v1beta1_podsecuritypolicylist;
     public PodSecurityPolicyBuilderExtensionsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_podsecuritypolicylist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_PodSecurityPolicyList) {
         return self.io_k8s_api_extensions_v1beta1_podsecuritypolicylist;
@@ -19137,7 +20959,8 @@ public type PodSecurityPolicyListBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -19149,7 +20972,8 @@ public type PodSecurityPolicyListBuilderExtensionsV1beta1 object {
         }
     }
     public function withItems() returns PodSecurityPolicyBuilderExtensionsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new PodSecurityPolicyBuilderExtensionsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new PodSecurityPolicyBuilderExtensionsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -19165,10 +20989,13 @@ public type PodSecurityPolicyListBuilderExtensionsV1beta1 object {
 };
 
 public type ServicePortBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ServicePort io_k8s_api_core_v1_serviceport;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_serviceport = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ServicePort) {
         return self.io_k8s_api_core_v1_serviceport;
@@ -19204,11 +21031,14 @@ public type ServicePortBuilderCoreV1 object {
 };
 
 public type RollingUpdateStatefulSetStrategyBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_RollingUpdateStatefulSetStrategy
     io_k8s_api_apps_v1beta1_rollingupdatestatefulsetstrategy;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_rollingupdatestatefulsetstrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_RollingUpdateStatefulSetStrategy) {
         return self.io_k8s_api_apps_v1beta1_rollingupdatestatefulsetstrategy;
@@ -19224,7 +21054,7 @@ public type RollingUpdateStatefulSetStrategyBuilderAppsV1beta1 object {
 };
 
 public type NetworkPolicyPeerBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_NetworkPolicyPeer io_k8s_api_extensions_v1beta1_networkpolicypeer;
     public IPBlockBuilderExtensionsV1beta1? ipBlockBuilder;
 
@@ -19232,8 +21062,11 @@ public type NetworkPolicyPeerBuilderExtensionsV1beta1 object {
 
     public LabelSelectorBuilderMetaV1? podSelectorBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_networkpolicypeer = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_NetworkPolicyPeer) {
         return self.io_k8s_api_extensions_v1beta1_networkpolicypeer;
@@ -19242,7 +21075,8 @@ public type NetworkPolicyPeerBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withIpBlock() returns IPBlockBuilderExtensionsV1beta1 {
-        self.ipBlockBuilder = new IPBlockBuilderExtensionsV1beta1(self);
+        self.ipBlockBuilder = new IPBlockBuilderExtensionsV1beta1();
+        self.ipBlockBuilder.init(self);
         match (self.ipBlockBuilder) {
             IPBlockBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -19254,7 +21088,8 @@ public type NetworkPolicyPeerBuilderExtensionsV1beta1 object {
         }
     }
     public function withNamespaceSelector() returns LabelSelectorBuilderMetaV1 {
-        self.namespaceSelectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.namespaceSelectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.namespaceSelectorBuilder.init(self);
         match (self.namespaceSelectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -19266,7 +21101,8 @@ public type NetworkPolicyPeerBuilderExtensionsV1beta1 object {
         }
     }
     public function withPodSelector() returns LabelSelectorBuilderMetaV1 {
-        self.podSelectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.podSelectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.podSelectorBuilder.init(self);
         match (self.podSelectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -19280,10 +21116,13 @@ public type NetworkPolicyPeerBuilderExtensionsV1beta1 object {
 };
 
 public type VsphereVirtualDiskVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_VsphereVirtualDiskVolumeSource io_k8s_api_core_v1_vspherevirtualdiskvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_vspherevirtualdiskvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_VsphereVirtualDiskVolumeSource) {
         return self.io_k8s_api_core_v1_vspherevirtualdiskvolumesource;
@@ -19315,11 +21154,14 @@ public type VsphereVirtualDiskVolumeSourceBuilderCoreV1 object {
 };
 
 public type JSONBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_JSON
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_json;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_json = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_JSON) {
         return self.io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_json;
@@ -19335,10 +21177,13 @@ public type JSONBuilderApiextensionsV1beta1 object {
 };
 
 public type ListMetaBuilderMetaV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_ListMeta io_k8s_apimachinery_pkg_apis_meta_v1_listmeta;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_listmeta = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apimachinery_pkg_apis_meta_v1_ListMeta) {
         return self.io_k8s_apimachinery_pkg_apis_meta_v1_listmeta;
@@ -19364,10 +21209,13 @@ public type ListMetaBuilderMetaV1 object {
 };
 
 public type NodeSelectorRequirementBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeSelectorRequirement io_k8s_api_core_v1_nodeselectorrequirement;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodeselectorrequirement = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeSelectorRequirement) {
         return self.io_k8s_api_core_v1_nodeselectorrequirement;
@@ -19398,14 +21246,17 @@ public type NodeSelectorRequirementBuilderCoreV1 object {
 };
 
 public type ServiceListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ServiceList io_k8s_api_core_v1_servicelist;
     public ServiceBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_servicelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ServiceList) {
         return self.io_k8s_api_core_v1_servicelist;
@@ -19414,7 +21265,8 @@ public type ServiceListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -19426,7 +21278,8 @@ public type ServiceListBuilderCoreV1 object {
         }
     }
     public function withItems() returns ServiceBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ServiceBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ServiceBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -19442,12 +21295,15 @@ public type ServiceListBuilderCoreV1 object {
 };
 
 public type ConfigMapProjectionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ConfigMapProjection io_k8s_api_core_v1_configmapprojection;
     public KeyToPathBuilderCoreV1[] itemsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_configmapprojection = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ConfigMapProjection) {
         return self.io_k8s_api_core_v1_configmapprojection;
@@ -19456,7 +21312,8 @@ public type ConfigMapProjectionBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withItems() returns KeyToPathBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -19472,10 +21329,13 @@ public type ConfigMapProjectionBuilderCoreV1 object {
 };
 
 public type ResourceQuotaStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ResourceQuotaStatus io_k8s_api_core_v1_resourcequotastatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_resourcequotastatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ResourceQuotaStatus) {
         return self.io_k8s_api_core_v1_resourcequotastatus;
@@ -19496,7 +21356,7 @@ public type ResourceQuotaStatusBuilderCoreV1 object {
 };
 
 public type SubjectAccessReviewBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SubjectAccessReview io_k8s_api_authorization_v1_subjectaccessreview;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -19504,8 +21364,11 @@ public type SubjectAccessReviewBuilderAuthorizationV1 object {
 
     public SubjectAccessReviewStatusBuilderAuthorizationV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_subjectaccessreview = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_SubjectAccessReview) {
         return self.io_k8s_api_authorization_v1_subjectaccessreview;
@@ -19514,7 +21377,8 @@ public type SubjectAccessReviewBuilderAuthorizationV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -19526,7 +21390,8 @@ public type SubjectAccessReviewBuilderAuthorizationV1 object {
         }
     }
     public function withSpec() returns SubjectAccessReviewSpecBuilderAuthorizationV1 {
-        self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1(self);
+        self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             SubjectAccessReviewSpecBuilderAuthorizationV1 builder => {
                 return builder;
@@ -19538,7 +21403,8 @@ public type SubjectAccessReviewBuilderAuthorizationV1 object {
         }
     }
     public function withStatus() returns SubjectAccessReviewStatusBuilderAuthorizationV1 {
-        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1(self);
+        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             SubjectAccessReviewStatusBuilderAuthorizationV1 builder => {
                 return builder;
@@ -19562,12 +21428,15 @@ public type SubjectAccessReviewBuilderAuthorizationV1 object {
 };
 
 public type IngressStatusBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IngressStatus io_k8s_api_extensions_v1beta1_ingressstatus;
     public LoadBalancerStatusBuilderCoreV1? loadBalancerBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_ingressstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_IngressStatus) {
         return self.io_k8s_api_extensions_v1beta1_ingressstatus;
@@ -19576,7 +21445,8 @@ public type IngressStatusBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withLoadBalancer() returns LoadBalancerStatusBuilderCoreV1 {
-        self.loadBalancerBuilder = new LoadBalancerStatusBuilderCoreV1(self);
+        self.loadBalancerBuilder = new LoadBalancerStatusBuilderCoreV1();
+        self.loadBalancerBuilder.init(self);
         match (self.loadBalancerBuilder) {
             LoadBalancerStatusBuilderCoreV1 builder => {
                 return builder;
@@ -19590,12 +21460,15 @@ public type IngressStatusBuilderExtensionsV1beta1 object {
 };
 
 public type DeploymentRollbackBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_DeploymentRollback io_k8s_api_apps_v1beta1_deploymentrollback;
     public RollbackConfigBuilderAppsV1beta1? rollbackToBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_deploymentrollback = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_DeploymentRollback) {
         return self.io_k8s_api_apps_v1beta1_deploymentrollback;
@@ -19604,7 +21477,8 @@ public type DeploymentRollbackBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRollbackTo() returns RollbackConfigBuilderAppsV1beta1 {
-        self.rollbackToBuilder = new RollbackConfigBuilderAppsV1beta1(self);
+        self.rollbackToBuilder = new RollbackConfigBuilderAppsV1beta1();
+        self.rollbackToBuilder.init(self);
         match (self.rollbackToBuilder) {
             RollbackConfigBuilderAppsV1beta1 builder => {
                 return builder;
@@ -19638,14 +21512,17 @@ public type DeploymentRollbackBuilderAppsV1beta1 object {
 };
 
 public type EndpointsListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EndpointsList io_k8s_api_core_v1_endpointslist;
     public EndpointsBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_endpointslist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EndpointsList) {
         return self.io_k8s_api_core_v1_endpointslist;
@@ -19654,7 +21531,8 @@ public type EndpointsListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -19666,7 +21544,8 @@ public type EndpointsListBuilderCoreV1 object {
         }
     }
     public function withItems() returns EndpointsBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new EndpointsBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new EndpointsBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -19682,7 +21561,7 @@ public type EndpointsListBuilderCoreV1 object {
 };
 
 public type EventBuilderEventsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_events_v1beta1_Event io_k8s_api_events_v1beta1_event;
     public EventSourceBuilderCoreV1? deprecatedSourceBuilder;
 
@@ -19694,8 +21573,11 @@ public type EventBuilderEventsV1beta1 object {
 
     public EventSeriesBuilderEventsV1beta1? seriesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_events_v1beta1_event = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_events_v1beta1_Event) {
         return self.io_k8s_api_events_v1beta1_event;
@@ -19704,7 +21586,8 @@ public type EventBuilderEventsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withDeprecatedSource() returns EventSourceBuilderCoreV1 {
-        self.deprecatedSourceBuilder = new EventSourceBuilderCoreV1(self);
+        self.deprecatedSourceBuilder = new EventSourceBuilderCoreV1();
+        self.deprecatedSourceBuilder.init(self);
         match (self.deprecatedSourceBuilder) {
             EventSourceBuilderCoreV1 builder => {
                 return builder;
@@ -19716,7 +21599,8 @@ public type EventBuilderEventsV1beta1 object {
         }
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -19728,7 +21612,8 @@ public type EventBuilderEventsV1beta1 object {
         }
     }
     public function withRegarding() returns ObjectReferenceBuilderCoreV1 {
-        self.regardingBuilder = new ObjectReferenceBuilderCoreV1(self);
+        self.regardingBuilder = new ObjectReferenceBuilderCoreV1();
+        self.regardingBuilder.init(self);
         match (self.regardingBuilder) {
             ObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -19740,7 +21625,8 @@ public type EventBuilderEventsV1beta1 object {
         }
     }
     public function withRelated() returns ObjectReferenceBuilderCoreV1 {
-        self.relatedBuilder = new ObjectReferenceBuilderCoreV1(self);
+        self.relatedBuilder = new ObjectReferenceBuilderCoreV1();
+        self.relatedBuilder.init(self);
         match (self.relatedBuilder) {
             ObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -19752,7 +21638,8 @@ public type EventBuilderEventsV1beta1 object {
         }
     }
     public function withSeries() returns EventSeriesBuilderEventsV1beta1 {
-        self.seriesBuilder = new EventSeriesBuilderEventsV1beta1(self);
+        self.seriesBuilder = new EventSeriesBuilderEventsV1beta1();
+        self.seriesBuilder.init(self);
         match (self.seriesBuilder) {
             EventSeriesBuilderEventsV1beta1 builder => {
                 return builder;
@@ -19828,15 +21715,18 @@ public type EventBuilderEventsV1beta1 object {
 };
 
 public type HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscalerSpec
     io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerspec;
     public MetricSpecBuilderAutoscalingV2beta1[] metricsBuilder;
 
     public CrossVersionObjectReferenceBuilderAutoscalingV2beta1? scaleTargetRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscalerSpec) {
         return self.io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerspec;
@@ -19845,7 +21735,8 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 object {
         return self.fluentBuilder;
     }
     public function withScaleTargetRef() returns CrossVersionObjectReferenceBuilderAutoscalingV2beta1 {
-        self.scaleTargetRefBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV2beta1(self);
+        self.scaleTargetRefBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV2beta1();
+        self.scaleTargetRefBuilder.init(self);
         match (self.scaleTargetRefBuilder) {
             CrossVersionObjectReferenceBuilderAutoscalingV2beta1 builder => {
                 return builder;
@@ -19857,7 +21748,8 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 object {
         }
     }
     public function withMetrics() returns MetricSpecBuilderAutoscalingV2beta1 {
-        self.metricsBuilder[lengthof metricsBuilder] = new MetricSpecBuilderAutoscalingV2beta1(self);
+        self.metricsBuilder[lengthof metricsBuilder] = new MetricSpecBuilderAutoscalingV2beta1();
+        self.metricsBuilder[(lengthof metricsBuilder)].init(self);
         return self.metricsBuilder[(lengthof metricsBuilder) - 1];
     }
 
@@ -19873,10 +21765,13 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 object {
 };
 
 public type FCVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_FCVolumeSource io_k8s_api_core_v1_fcvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_fcvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_FCVolumeSource) {
         return self.io_k8s_api_core_v1_fcvolumesource;
@@ -19921,11 +21816,14 @@ public type FCVolumeSourceBuilderCoreV1 object {
 };
 
 public type SelfSubjectRulesReviewSpecBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SelfSubjectRulesReviewSpec io_k8s_api_authorization_v1_selfsubjectrulesreviewspec
     ;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_selfsubjectrulesreviewspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_SelfSubjectRulesReviewSpec) {
         return self.io_k8s_api_authorization_v1_selfsubjectrulesreviewspec;
@@ -19941,10 +21839,13 @@ public type SelfSubjectRulesReviewSpecBuilderAuthorizationV1 object {
 };
 
 public type KeyToPathBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_KeyToPath io_k8s_api_core_v1_keytopath;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_keytopath = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_KeyToPath) {
         return self.io_k8s_api_core_v1_keytopath;
@@ -19970,7 +21871,7 @@ public type KeyToPathBuilderCoreV1 object {
 };
 
 public type SelfSubjectAccessReviewBuilderAuthorizationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SelfSubjectAccessReview io_k8s_api_authorization_v1_selfsubjectaccessreview;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -19978,8 +21879,11 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1 object {
 
     public SubjectAccessReviewStatusBuilderAuthorizationV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_authorization_v1_selfsubjectaccessreview = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_authorization_v1_SelfSubjectAccessReview) {
         return self.io_k8s_api_authorization_v1_selfsubjectaccessreview;
@@ -19988,7 +21892,8 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -20000,7 +21905,8 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1 object {
         }
     }
     public function withSpec() returns SelfSubjectAccessReviewSpecBuilderAuthorizationV1 {
-        self.specBuilder = new SelfSubjectAccessReviewSpecBuilderAuthorizationV1(self);
+        self.specBuilder = new SelfSubjectAccessReviewSpecBuilderAuthorizationV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             SelfSubjectAccessReviewSpecBuilderAuthorizationV1 builder => {
                 return builder;
@@ -20012,7 +21918,8 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1 object {
         }
     }
     public function withStatus() returns SubjectAccessReviewStatusBuilderAuthorizationV1 {
-        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1(self);
+        self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             SubjectAccessReviewStatusBuilderAuthorizationV1 builder => {
                 return builder;
@@ -20036,10 +21943,13 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1 object {
 };
 
 public type IPBlockBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IPBlock io_k8s_api_extensions_v1beta1_ipblock;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_ipblock = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_IPBlock) {
         return self.io_k8s_api_extensions_v1beta1_ipblock;
@@ -20065,12 +21975,15 @@ public type IPBlockBuilderExtensionsV1beta1 object {
 };
 
 public type ProjectedVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ProjectedVolumeSource io_k8s_api_core_v1_projectedvolumesource;
     public VolumeProjectionBuilderCoreV1[] sourcesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_projectedvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ProjectedVolumeSource) {
         return self.io_k8s_api_core_v1_projectedvolumesource;
@@ -20079,7 +21992,8 @@ public type ProjectedVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withSources() returns VolumeProjectionBuilderCoreV1 {
-        self.sourcesBuilder[lengthof sourcesBuilder] = new VolumeProjectionBuilderCoreV1(self);
+        self.sourcesBuilder[lengthof sourcesBuilder] = new VolumeProjectionBuilderCoreV1();
+        self.sourcesBuilder[(lengthof sourcesBuilder)].init(self);
         return self.sourcesBuilder[(lengthof sourcesBuilder) - 1];
     }
 
@@ -20090,12 +22004,15 @@ public type ProjectedVolumeSourceBuilderCoreV1 object {
 };
 
 public type PersistentVolumeClaimStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeClaimStatus io_k8s_api_core_v1_persistentvolumeclaimstatus;
     public PersistentVolumeClaimConditionBuilderCoreV1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_persistentvolumeclaimstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PersistentVolumeClaimStatus) {
         return self.io_k8s_api_core_v1_persistentvolumeclaimstatus;
@@ -20104,7 +22021,8 @@ public type PersistentVolumeClaimStatusBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns PersistentVolumeClaimConditionBuilderCoreV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new PersistentVolumeClaimConditionBuilderCoreV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new PersistentVolumeClaimConditionBuilderCoreV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -20130,10 +22048,13 @@ public type PersistentVolumeClaimStatusBuilderCoreV1 object {
 };
 
 public type ResourceQuotaSpecBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ResourceQuotaSpec io_k8s_api_core_v1_resourcequotaspec;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_resourcequotaspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ResourceQuotaSpec) {
         return self.io_k8s_api_core_v1_resourcequotaspec;
@@ -20159,14 +22080,17 @@ public type ResourceQuotaSpecBuilderCoreV1 object {
 };
 
 public type NodeAffinityBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeAffinity io_k8s_api_core_v1_nodeaffinity;
     public PreferredSchedulingTermBuilderCoreV1[] preferredDuringSchedulingIgnoredDuringExecutionBuilder;
 
     public NodeSelectorBuilderCoreV1? requiredDuringSchedulingIgnoredDuringExecutionBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodeaffinity = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeAffinity) {
         return self.io_k8s_api_core_v1_nodeaffinity;
@@ -20175,7 +22099,8 @@ public type NodeAffinityBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withRequiredDuringSchedulingIgnoredDuringExecution() returns NodeSelectorBuilderCoreV1 {
-        self.requiredDuringSchedulingIgnoredDuringExecutionBuilder = new NodeSelectorBuilderCoreV1(self);
+        self.requiredDuringSchedulingIgnoredDuringExecutionBuilder = new NodeSelectorBuilderCoreV1();
+        self.requiredDuringSchedulingIgnoredDuringExecutionBuilder.init(self);
         match (self.requiredDuringSchedulingIgnoredDuringExecutionBuilder) {
             NodeSelectorBuilderCoreV1 builder => {
                 return builder;
@@ -20188,17 +22113,22 @@ public type NodeAffinityBuilderCoreV1 object {
     }
     public function withPreferredDuringSchedulingIgnoredDuringExecution() returns PreferredSchedulingTermBuilderCoreV1 {
         self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[lengthof
-        preferredDuringSchedulingIgnoredDuringExecutionBuilder] = new PreferredSchedulingTermBuilderCoreV1(self);
+        preferredDuringSchedulingIgnoredDuringExecutionBuilder] = new PreferredSchedulingTermBuilderCoreV1();
+        self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
+        preferredDuringSchedulingIgnoredDuringExecutionBuilder)].init(self);
         return self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
             preferredDuringSchedulingIgnoredDuringExecutionBuilder) - 1];
     }
 };
 
 public type RollingUpdateDaemonSetBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_RollingUpdateDaemonSet io_k8s_api_extensions_v1beta1_rollingupdatedaemonset;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_rollingupdatedaemonset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_RollingUpdateDaemonSet) {
         return self.io_k8s_api_extensions_v1beta1_rollingupdatedaemonset;
@@ -20215,10 +22145,13 @@ public type RollingUpdateDaemonSetBuilderExtensionsV1beta1 object {
 };
 
 public type SecretReferenceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SecretReference io_k8s_api_core_v1_secretreference;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_secretreference = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_SecretReference) {
         return self.io_k8s_api_core_v1_secretreference;
@@ -20239,12 +22172,15 @@ public type SecretReferenceBuilderCoreV1 object {
 };
 
 public type EndpointAddressBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EndpointAddress io_k8s_api_core_v1_endpointaddress;
     public ObjectReferenceBuilderCoreV1? targetRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_endpointaddress = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_EndpointAddress) {
         return self.io_k8s_api_core_v1_endpointaddress;
@@ -20253,7 +22189,8 @@ public type EndpointAddressBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withTargetRef() returns ObjectReferenceBuilderCoreV1 {
-        self.targetRefBuilder = new ObjectReferenceBuilderCoreV1(self);
+        self.targetRefBuilder = new ObjectReferenceBuilderCoreV1();
+        self.targetRefBuilder.init(self);
         match (self.targetRefBuilder) {
             ObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -20282,11 +22219,14 @@ public type EndpointAddressBuilderCoreV1 object {
 };
 
 public type HorizontalPodAutoscalerStatusBuilderAutoscalingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_HorizontalPodAutoscalerStatus
     io_k8s_api_autoscaling_v1_horizontalpodautoscalerstatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v1_horizontalpodautoscalerstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v1_HorizontalPodAutoscalerStatus) {
         return self.io_k8s_api_autoscaling_v1_horizontalpodautoscalerstatus;
@@ -20328,12 +22268,15 @@ public type HorizontalPodAutoscalerStatusBuilderAutoscalingV1 object {
 };
 
 public type JobStatusBuilderBatchV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1_JobStatus io_k8s_api_batch_v1_jobstatus;
     public JobConditionBuilderBatchV1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_batch_v1_jobstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_batch_v1_JobStatus) {
         return self.io_k8s_api_batch_v1_jobstatus;
@@ -20342,7 +22285,8 @@ public type JobStatusBuilderBatchV1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns JobConditionBuilderBatchV1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new JobConditionBuilderBatchV1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new JobConditionBuilderBatchV1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -20373,12 +22317,15 @@ public type JobStatusBuilderBatchV1 object {
 };
 
 public type NodeSelectorTermBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeSelectorTerm io_k8s_api_core_v1_nodeselectorterm;
     public NodeSelectorRequirementBuilderCoreV1[] matchExpressionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodeselectorterm = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeSelectorTerm) {
         return self.io_k8s_api_core_v1_nodeselectorterm;
@@ -20387,13 +22334,14 @@ public type NodeSelectorTermBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMatchExpressions() returns NodeSelectorRequirementBuilderCoreV1 {
-        self.matchExpressionsBuilder[lengthof matchExpressionsBuilder] = new NodeSelectorRequirementBuilderCoreV1(self);
+        self.matchExpressionsBuilder[lengthof matchExpressionsBuilder] = new NodeSelectorRequirementBuilderCoreV1();
+        self.matchExpressionsBuilder[(lengthof matchExpressionsBuilder)].init(self);
         return self.matchExpressionsBuilder[(lengthof matchExpressionsBuilder) - 1];
     }
 };
 
 public type VolumeProjectionBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_VolumeProjection io_k8s_api_core_v1_volumeprojection;
     public ConfigMapProjectionBuilderCoreV1? configMapBuilder;
 
@@ -20401,8 +22349,11 @@ public type VolumeProjectionBuilderCoreV1 object {
 
     public SecretProjectionBuilderCoreV1? secretBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_volumeprojection = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_VolumeProjection) {
         return self.io_k8s_api_core_v1_volumeprojection;
@@ -20411,7 +22362,8 @@ public type VolumeProjectionBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withConfigMap() returns ConfigMapProjectionBuilderCoreV1 {
-        self.configMapBuilder = new ConfigMapProjectionBuilderCoreV1(self);
+        self.configMapBuilder = new ConfigMapProjectionBuilderCoreV1();
+        self.configMapBuilder.init(self);
         match (self.configMapBuilder) {
             ConfigMapProjectionBuilderCoreV1 builder => {
                 return builder;
@@ -20423,7 +22375,8 @@ public type VolumeProjectionBuilderCoreV1 object {
         }
     }
     public function withDownwardAPI() returns DownwardAPIProjectionBuilderCoreV1 {
-        self.downwardAPIBuilder = new DownwardAPIProjectionBuilderCoreV1(self);
+        self.downwardAPIBuilder = new DownwardAPIProjectionBuilderCoreV1();
+        self.downwardAPIBuilder.init(self);
         match (self.downwardAPIBuilder) {
             DownwardAPIProjectionBuilderCoreV1 builder => {
                 return builder;
@@ -20435,7 +22388,8 @@ public type VolumeProjectionBuilderCoreV1 object {
         }
     }
     public function withSecret() returns SecretProjectionBuilderCoreV1 {
-        self.secretBuilder = new SecretProjectionBuilderCoreV1(self);
+        self.secretBuilder = new SecretProjectionBuilderCoreV1();
+        self.secretBuilder.init(self);
         match (self.secretBuilder) {
             SecretProjectionBuilderCoreV1 builder => {
                 return builder;
@@ -20449,14 +22403,17 @@ public type VolumeProjectionBuilderCoreV1 object {
 };
 
 public type DaemonSetListBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DaemonSetList io_k8s_api_extensions_v1beta1_daemonsetlist;
     public DaemonSetBuilderExtensionsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_daemonsetlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_DaemonSetList) {
         return self.io_k8s_api_extensions_v1beta1_daemonsetlist;
@@ -20465,7 +22422,8 @@ public type DaemonSetListBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -20477,7 +22435,8 @@ public type DaemonSetListBuilderExtensionsV1beta1 object {
         }
     }
     public function withItems() returns DaemonSetBuilderExtensionsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderExtensionsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderExtensionsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -20493,12 +22452,15 @@ public type DaemonSetListBuilderExtensionsV1beta1 object {
 };
 
 public type HTTPIngressPathBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_HTTPIngressPath io_k8s_api_extensions_v1beta1_httpingresspath;
     public IngressBackendBuilderExtensionsV1beta1? backendBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_httpingresspath = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_HTTPIngressPath) {
         return self.io_k8s_api_extensions_v1beta1_httpingresspath;
@@ -20507,7 +22469,8 @@ public type HTTPIngressPathBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withBackend() returns IngressBackendBuilderExtensionsV1beta1 {
-        self.backendBuilder = new IngressBackendBuilderExtensionsV1beta1(self);
+        self.backendBuilder = new IngressBackendBuilderExtensionsV1beta1();
+        self.backendBuilder.init(self);
         match (self.backendBuilder) {
             IngressBackendBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -20526,12 +22489,15 @@ public type HTTPIngressPathBuilderExtensionsV1beta1 object {
 };
 
 public type PodDisruptionBudgetSpecBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_PodDisruptionBudgetSpec io_k8s_api_policy_v1beta1_poddisruptionbudgetspec;
     public LabelSelectorBuilderMetaV1? selectorBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_poddisruptionbudgetspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_PodDisruptionBudgetSpec) {
         return self.io_k8s_api_policy_v1beta1_poddisruptionbudgetspec;
@@ -20540,7 +22506,8 @@ public type PodDisruptionBudgetSpecBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withSelector() returns LabelSelectorBuilderMetaV1 {
-        self.selectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.selectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.selectorBuilder.init(self);
         match (self.selectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -20565,14 +22532,17 @@ public type PodDisruptionBudgetSpecBuilderPolicyV1beta1 object {
 };
 
 public type DeploymentListBuilderAppsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_DeploymentList io_k8s_api_apps_v1beta1_deploymentlist;
     public DeploymentBuilderAppsV1beta1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta1_deploymentlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta1_DeploymentList) {
         return self.io_k8s_api_apps_v1beta1_deploymentlist;
@@ -20581,7 +22551,8 @@ public type DeploymentListBuilderAppsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -20593,7 +22564,8 @@ public type DeploymentListBuilderAppsV1beta1 object {
         }
     }
     public function withItems() returns DeploymentBuilderAppsV1beta1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1beta1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1beta1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -20609,7 +22581,7 @@ public type DeploymentListBuilderAppsV1beta1 object {
 };
 
 public type NodeBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Node io_k8s_api_core_v1_node;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -20617,8 +22589,11 @@ public type NodeBuilderCoreV1 object {
 
     public NodeStatusBuilderCoreV1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_node = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Node) {
         return self.io_k8s_api_core_v1_node;
@@ -20627,7 +22602,8 @@ public type NodeBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -20639,7 +22615,8 @@ public type NodeBuilderCoreV1 object {
         }
     }
     public function withSpec() returns NodeSpecBuilderCoreV1 {
-        self.specBuilder = new NodeSpecBuilderCoreV1(self);
+        self.specBuilder = new NodeSpecBuilderCoreV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             NodeSpecBuilderCoreV1 builder => {
                 return builder;
@@ -20651,7 +22628,8 @@ public type NodeBuilderCoreV1 object {
         }
     }
     public function withStatus() returns NodeStatusBuilderCoreV1 {
-        self.statusBuilder = new NodeStatusBuilderCoreV1(self);
+        self.statusBuilder = new NodeStatusBuilderCoreV1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             NodeStatusBuilderCoreV1 builder => {
                 return builder;
@@ -20675,12 +22653,15 @@ public type NodeBuilderCoreV1 object {
 };
 
 public type DownwardAPIVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_DownwardAPIVolumeSource io_k8s_api_core_v1_downwardapivolumesource;
     public DownwardAPIVolumeFileBuilderCoreV1[] itemsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_downwardapivolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_DownwardAPIVolumeSource) {
         return self.io_k8s_api_core_v1_downwardapivolumesource;
@@ -20689,7 +22670,8 @@ public type DownwardAPIVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withItems() returns DownwardAPIVolumeFileBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new DownwardAPIVolumeFileBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new DownwardAPIVolumeFileBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -20700,10 +22682,13 @@ public type DownwardAPIVolumeSourceBuilderCoreV1 object {
 };
 
 public type ScaleStatusBuilderAutoscalingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_ScaleStatus io_k8s_api_autoscaling_v1_scalestatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v1_scalestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v1_ScaleStatus) {
         return self.io_k8s_api_autoscaling_v1_scalestatus;
@@ -20724,7 +22709,7 @@ public type ScaleStatusBuilderAutoscalingV1 object {
 };
 
 public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_JSONSchemaProps
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_jsonschemaprops;
     public JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1? additionalItemsBuilder;
@@ -20749,8 +22734,11 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
 
     public JSONSchemaPropsBuilderApiextensionsV1beta1[] oneOfBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_jsonschemaprops = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_JSONSchemaProps) {
         return self.io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_jsonschemaprops;
@@ -20759,7 +22747,8 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withAdditionalItems() returns JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1 {
-        self.additionalItemsBuilder = new JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1(self);
+        self.additionalItemsBuilder = new JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1();
+        self.additionalItemsBuilder.init(self);
         match (self.additionalItemsBuilder) {
             JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -20771,7 +22760,8 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
         }
     }
     public function withAdditionalProperties() returns JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1 {
-        self.additionalPropertiesBuilder = new JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1(self);
+        self.additionalPropertiesBuilder = new JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1();
+        self.additionalPropertiesBuilder.init(self);
         match (self.additionalPropertiesBuilder) {
             JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -20783,7 +22773,8 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
         }
     }
     public function withDefault() returns JSONBuilderApiextensionsV1beta1 {
-        self.defaultBuilder = new JSONBuilderApiextensionsV1beta1(self);
+        self.defaultBuilder = new JSONBuilderApiextensionsV1beta1();
+        self.defaultBuilder.init(self);
         match (self.defaultBuilder) {
             JSONBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -20795,7 +22786,8 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
         }
     }
     public function withExample() returns JSONBuilderApiextensionsV1beta1 {
-        self.exampleBuilder = new JSONBuilderApiextensionsV1beta1(self);
+        self.exampleBuilder = new JSONBuilderApiextensionsV1beta1();
+        self.exampleBuilder.init(self);
         match (self.exampleBuilder) {
             JSONBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -20807,7 +22799,8 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
         }
     }
     public function withExternalDocs() returns ExternalDocumentationBuilderApiextensionsV1beta1 {
-        self.externalDocsBuilder = new ExternalDocumentationBuilderApiextensionsV1beta1(self);
+        self.externalDocsBuilder = new ExternalDocumentationBuilderApiextensionsV1beta1();
+        self.externalDocsBuilder.init(self);
         match (self.externalDocsBuilder) {
             ExternalDocumentationBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -20819,7 +22812,8 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
         }
     }
     public function withItems() returns JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1 {
-        self.itemsBuilder = new JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1(self);
+        self.itemsBuilder = new JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1();
+        self.itemsBuilder.init(self);
         match (self.itemsBuilder) {
             JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -20831,7 +22825,8 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
         }
     }
     public function withNot() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
-        self.notBuilder = new JSONSchemaPropsBuilderApiextensionsV1beta1(self);
+        self.notBuilder = new JSONSchemaPropsBuilderApiextensionsV1beta1();
+        self.notBuilder.init(self);
         match (self.notBuilder) {
             JSONSchemaPropsBuilderApiextensionsV1beta1 builder => {
                 return builder;
@@ -20843,19 +22838,23 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
         }
     }
     public function withAllOf() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
-        self.allOfBuilder[lengthof allOfBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1(self);
+        self.allOfBuilder[lengthof allOfBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1();
+        self.allOfBuilder[(lengthof allOfBuilder)].init(self);
         return self.allOfBuilder[(lengthof allOfBuilder) - 1];
     }
     public function withAnyOf() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
-        self.anyOfBuilder[lengthof anyOfBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1(self);
+        self.anyOfBuilder[lengthof anyOfBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1();
+        self.anyOfBuilder[(lengthof anyOfBuilder)].init(self);
         return self.anyOfBuilder[(lengthof anyOfBuilder) - 1];
     }
     public function withEnum() returns JSONBuilderApiextensionsV1beta1 {
-        self.enumBuilder[lengthof enumBuilder] = new JSONBuilderApiextensionsV1beta1(self);
+        self.enumBuilder[lengthof enumBuilder] = new JSONBuilderApiextensionsV1beta1();
+        self.enumBuilder[(lengthof enumBuilder)].init(self);
         return self.enumBuilder[(lengthof enumBuilder) - 1];
     }
     public function withOneOf() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
-        self.oneOfBuilder[lengthof oneOfBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1(self);
+        self.oneOfBuilder[lengthof oneOfBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1();
+        self.oneOfBuilder[(lengthof oneOfBuilder)].init(self);
         return self.oneOfBuilder[(lengthof oneOfBuilder) - 1];
     }
 
@@ -20998,14 +22997,17 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
 };
 
 public type DeploymentListBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DeploymentList io_k8s_api_apps_v1beta2_deploymentlist;
     public DeploymentBuilderAppsV1beta2[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_deploymentlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_DeploymentList) {
         return self.io_k8s_api_apps_v1beta2_deploymentlist;
@@ -21014,7 +23016,8 @@ public type DeploymentListBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -21026,7 +23029,8 @@ public type DeploymentListBuilderAppsV1beta2 object {
         }
     }
     public function withItems() returns DeploymentBuilderAppsV1beta2 {
-        self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1beta2(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1beta2();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -21042,13 +23046,16 @@ public type DeploymentListBuilderAppsV1beta2 object {
 };
 
 public type APIServiceStatusBuilderApiregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIServiceStatus
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicestatus;
     public APIServiceConditionBuilderApiregistrationV1beta1[] conditionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIServiceStatus) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicestatus;
@@ -21057,16 +23064,20 @@ public type APIServiceStatusBuilderApiregistrationV1beta1 object {
         return self.fluentBuilder;
     }
     public function withConditions() returns APIServiceConditionBuilderApiregistrationV1beta1 {
-        self.conditionsBuilder[lengthof conditionsBuilder] = new APIServiceConditionBuilderApiregistrationV1beta1(self);
+        self.conditionsBuilder[lengthof conditionsBuilder] = new APIServiceConditionBuilderApiregistrationV1beta1();
+        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 };
 
 public type ObjectFieldSelectorBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ObjectFieldSelector io_k8s_api_core_v1_objectfieldselector;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_objectfieldselector = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ObjectFieldSelector) {
         return self.io_k8s_api_core_v1_objectfieldselector;
@@ -21087,14 +23098,17 @@ public type ObjectFieldSelectorBuilderCoreV1 object {
 };
 
 public type PodTemplateListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodTemplateList io_k8s_api_core_v1_podtemplatelist;
     public PodTemplateBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podtemplatelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodTemplateList) {
         return self.io_k8s_api_core_v1_podtemplatelist;
@@ -21103,7 +23117,8 @@ public type PodTemplateListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -21115,7 +23130,8 @@ public type PodTemplateListBuilderCoreV1 object {
         }
     }
     public function withItems() returns PodTemplateBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new PodTemplateBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new PodTemplateBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -21131,11 +23147,14 @@ public type PodTemplateListBuilderCoreV1 object {
 };
 
 public type RuleWithOperationsBuilderAdmissionregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_RuleWithOperations
     io_k8s_api_admissionregistration_v1beta1_rulewithoperations;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_admissionregistration_v1beta1_rulewithoperations = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_admissionregistration_v1beta1_RuleWithOperations) {
         return self.io_k8s_api_admissionregistration_v1beta1_rulewithoperations;
@@ -21188,7 +23207,7 @@ public type RuleWithOperationsBuilderAdmissionregistrationV1beta1 object {
 };
 
 public type CertificateSigningRequestBuilderCertificatesV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_certificates_v1beta1_CertificateSigningRequest
     io_k8s_api_certificates_v1beta1_certificatesigningrequest;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
@@ -21197,8 +23216,11 @@ public type CertificateSigningRequestBuilderCertificatesV1beta1 object {
 
     public CertificateSigningRequestStatusBuilderCertificatesV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_certificates_v1beta1_certificatesigningrequest = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_certificates_v1beta1_CertificateSigningRequest) {
         return self.io_k8s_api_certificates_v1beta1_certificatesigningrequest;
@@ -21207,7 +23229,8 @@ public type CertificateSigningRequestBuilderCertificatesV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -21219,7 +23242,8 @@ public type CertificateSigningRequestBuilderCertificatesV1beta1 object {
         }
     }
     public function withSpec() returns CertificateSigningRequestSpecBuilderCertificatesV1beta1 {
-        self.specBuilder = new CertificateSigningRequestSpecBuilderCertificatesV1beta1(self);
+        self.specBuilder = new CertificateSigningRequestSpecBuilderCertificatesV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             CertificateSigningRequestSpecBuilderCertificatesV1beta1 builder => {
                 return builder;
@@ -21231,7 +23255,8 @@ public type CertificateSigningRequestBuilderCertificatesV1beta1 object {
         }
     }
     public function withStatus() returns CertificateSigningRequestStatusBuilderCertificatesV1beta1 {
-        self.statusBuilder = new CertificateSigningRequestStatusBuilderCertificatesV1beta1(self);
+        self.statusBuilder = new CertificateSigningRequestStatusBuilderCertificatesV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             CertificateSigningRequestStatusBuilderCertificatesV1beta1 builder => {
                 return builder;
@@ -21255,7 +23280,7 @@ public type CertificateSigningRequestBuilderCertificatesV1beta1 object {
 };
 
 public type HandlerBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Handler io_k8s_api_core_v1_handler;
     public ExecActionBuilderCoreV1? execBuilder;
 
@@ -21263,8 +23288,11 @@ public type HandlerBuilderCoreV1 object {
 
     public TCPSocketActionBuilderCoreV1? tcpSocketBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_handler = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Handler) {
         return self.io_k8s_api_core_v1_handler;
@@ -21273,7 +23301,8 @@ public type HandlerBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withExec() returns ExecActionBuilderCoreV1 {
-        self.execBuilder = new ExecActionBuilderCoreV1(self);
+        self.execBuilder = new ExecActionBuilderCoreV1();
+        self.execBuilder.init(self);
         match (self.execBuilder) {
             ExecActionBuilderCoreV1 builder => {
                 return builder;
@@ -21285,7 +23314,8 @@ public type HandlerBuilderCoreV1 object {
         }
     }
     public function withHttpGet() returns HTTPGetActionBuilderCoreV1 {
-        self.httpGetBuilder = new HTTPGetActionBuilderCoreV1(self);
+        self.httpGetBuilder = new HTTPGetActionBuilderCoreV1();
+        self.httpGetBuilder.init(self);
         match (self.httpGetBuilder) {
             HTTPGetActionBuilderCoreV1 builder => {
                 return builder;
@@ -21297,7 +23327,8 @@ public type HandlerBuilderCoreV1 object {
         }
     }
     public function withTcpSocket() returns TCPSocketActionBuilderCoreV1 {
-        self.tcpSocketBuilder = new TCPSocketActionBuilderCoreV1(self);
+        self.tcpSocketBuilder = new TCPSocketActionBuilderCoreV1();
+        self.tcpSocketBuilder.init(self);
         match (self.tcpSocketBuilder) {
             TCPSocketActionBuilderCoreV1 builder => {
                 return builder;
@@ -21311,14 +23342,17 @@ public type HandlerBuilderCoreV1 object {
 };
 
 public type BindingBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Binding io_k8s_api_core_v1_binding;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public ObjectReferenceBuilderCoreV1? targetBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_binding = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Binding) {
         return self.io_k8s_api_core_v1_binding;
@@ -21327,7 +23361,8 @@ public type BindingBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -21339,7 +23374,8 @@ public type BindingBuilderCoreV1 object {
         }
     }
     public function withTarget() returns ObjectReferenceBuilderCoreV1 {
-        self.targetBuilder = new ObjectReferenceBuilderCoreV1(self);
+        self.targetBuilder = new ObjectReferenceBuilderCoreV1();
+        self.targetBuilder.init(self);
         match (self.targetBuilder) {
             ObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -21363,7 +23399,7 @@ public type BindingBuilderCoreV1 object {
 };
 
 public type PersistentVolumeSpecBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeSpec io_k8s_api_core_v1_persistentvolumespec;
     public AWSElasticBlockStoreVolumeSourceBuilderCoreV1? awsElasticBlockStoreBuilder;
 
@@ -21413,8 +23449,11 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
 
     public VsphereVirtualDiskVolumeSourceBuilderCoreV1? vsphereVolumeBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_persistentvolumespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PersistentVolumeSpec) {
         return self.io_k8s_api_core_v1_persistentvolumespec;
@@ -21423,7 +23462,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withAwsElasticBlockStore() returns AWSElasticBlockStoreVolumeSourceBuilderCoreV1 {
-        self.awsElasticBlockStoreBuilder = new AWSElasticBlockStoreVolumeSourceBuilderCoreV1(self);
+        self.awsElasticBlockStoreBuilder = new AWSElasticBlockStoreVolumeSourceBuilderCoreV1();
+        self.awsElasticBlockStoreBuilder.init(self);
         match (self.awsElasticBlockStoreBuilder) {
             AWSElasticBlockStoreVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21435,7 +23475,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withAzureDisk() returns AzureDiskVolumeSourceBuilderCoreV1 {
-        self.azureDiskBuilder = new AzureDiskVolumeSourceBuilderCoreV1(self);
+        self.azureDiskBuilder = new AzureDiskVolumeSourceBuilderCoreV1();
+        self.azureDiskBuilder.init(self);
         match (self.azureDiskBuilder) {
             AzureDiskVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21447,7 +23488,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withAzureFile() returns AzureFilePersistentVolumeSourceBuilderCoreV1 {
-        self.azureFileBuilder = new AzureFilePersistentVolumeSourceBuilderCoreV1(self);
+        self.azureFileBuilder = new AzureFilePersistentVolumeSourceBuilderCoreV1();
+        self.azureFileBuilder.init(self);
         match (self.azureFileBuilder) {
             AzureFilePersistentVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21459,7 +23501,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withCephfs() returns CephFSPersistentVolumeSourceBuilderCoreV1 {
-        self.cephfsBuilder = new CephFSPersistentVolumeSourceBuilderCoreV1(self);
+        self.cephfsBuilder = new CephFSPersistentVolumeSourceBuilderCoreV1();
+        self.cephfsBuilder.init(self);
         match (self.cephfsBuilder) {
             CephFSPersistentVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21471,7 +23514,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withCinder() returns CinderVolumeSourceBuilderCoreV1 {
-        self.cinderBuilder = new CinderVolumeSourceBuilderCoreV1(self);
+        self.cinderBuilder = new CinderVolumeSourceBuilderCoreV1();
+        self.cinderBuilder.init(self);
         match (self.cinderBuilder) {
             CinderVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21483,7 +23527,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withClaimRef() returns ObjectReferenceBuilderCoreV1 {
-        self.claimRefBuilder = new ObjectReferenceBuilderCoreV1(self);
+        self.claimRefBuilder = new ObjectReferenceBuilderCoreV1();
+        self.claimRefBuilder.init(self);
         match (self.claimRefBuilder) {
             ObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -21495,7 +23540,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withCsi() returns CSIPersistentVolumeSourceBuilderCoreV1 {
-        self.csiBuilder = new CSIPersistentVolumeSourceBuilderCoreV1(self);
+        self.csiBuilder = new CSIPersistentVolumeSourceBuilderCoreV1();
+        self.csiBuilder.init(self);
         match (self.csiBuilder) {
             CSIPersistentVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21507,7 +23553,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withFc() returns FCVolumeSourceBuilderCoreV1 {
-        self.fcBuilder = new FCVolumeSourceBuilderCoreV1(self);
+        self.fcBuilder = new FCVolumeSourceBuilderCoreV1();
+        self.fcBuilder.init(self);
         match (self.fcBuilder) {
             FCVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21519,7 +23566,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withFlexVolume() returns FlexPersistentVolumeSourceBuilderCoreV1 {
-        self.flexVolumeBuilder = new FlexPersistentVolumeSourceBuilderCoreV1(self);
+        self.flexVolumeBuilder = new FlexPersistentVolumeSourceBuilderCoreV1();
+        self.flexVolumeBuilder.init(self);
         match (self.flexVolumeBuilder) {
             FlexPersistentVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21531,7 +23579,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withFlocker() returns FlockerVolumeSourceBuilderCoreV1 {
-        self.flockerBuilder = new FlockerVolumeSourceBuilderCoreV1(self);
+        self.flockerBuilder = new FlockerVolumeSourceBuilderCoreV1();
+        self.flockerBuilder.init(self);
         match (self.flockerBuilder) {
             FlockerVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21543,7 +23592,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withGcePersistentDisk() returns GCEPersistentDiskVolumeSourceBuilderCoreV1 {
-        self.gcePersistentDiskBuilder = new GCEPersistentDiskVolumeSourceBuilderCoreV1(self);
+        self.gcePersistentDiskBuilder = new GCEPersistentDiskVolumeSourceBuilderCoreV1();
+        self.gcePersistentDiskBuilder.init(self);
         match (self.gcePersistentDiskBuilder) {
             GCEPersistentDiskVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21555,7 +23605,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withGlusterfs() returns GlusterfsVolumeSourceBuilderCoreV1 {
-        self.glusterfsBuilder = new GlusterfsVolumeSourceBuilderCoreV1(self);
+        self.glusterfsBuilder = new GlusterfsVolumeSourceBuilderCoreV1();
+        self.glusterfsBuilder.init(self);
         match (self.glusterfsBuilder) {
             GlusterfsVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21567,7 +23618,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withHostPath() returns HostPathVolumeSourceBuilderCoreV1 {
-        self.hostPathBuilder = new HostPathVolumeSourceBuilderCoreV1(self);
+        self.hostPathBuilder = new HostPathVolumeSourceBuilderCoreV1();
+        self.hostPathBuilder.init(self);
         match (self.hostPathBuilder) {
             HostPathVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21579,7 +23631,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withIscsi() returns ISCSIPersistentVolumeSourceBuilderCoreV1 {
-        self.iscsiBuilder = new ISCSIPersistentVolumeSourceBuilderCoreV1(self);
+        self.iscsiBuilder = new ISCSIPersistentVolumeSourceBuilderCoreV1();
+        self.iscsiBuilder.init(self);
         match (self.iscsiBuilder) {
             ISCSIPersistentVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21591,7 +23644,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withLocal() returns LocalVolumeSourceBuilderCoreV1 {
-        self.localBuilder = new LocalVolumeSourceBuilderCoreV1(self);
+        self.localBuilder = new LocalVolumeSourceBuilderCoreV1();
+        self.localBuilder.init(self);
         match (self.localBuilder) {
             LocalVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21603,7 +23657,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withNfs() returns NFSVolumeSourceBuilderCoreV1 {
-        self.nfsBuilder = new NFSVolumeSourceBuilderCoreV1(self);
+        self.nfsBuilder = new NFSVolumeSourceBuilderCoreV1();
+        self.nfsBuilder.init(self);
         match (self.nfsBuilder) {
             NFSVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21615,7 +23670,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withNodeAffinity() returns VolumeNodeAffinityBuilderCoreV1 {
-        self.nodeAffinityBuilder = new VolumeNodeAffinityBuilderCoreV1(self);
+        self.nodeAffinityBuilder = new VolumeNodeAffinityBuilderCoreV1();
+        self.nodeAffinityBuilder.init(self);
         match (self.nodeAffinityBuilder) {
             VolumeNodeAffinityBuilderCoreV1 builder => {
                 return builder;
@@ -21627,7 +23683,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withPhotonPersistentDisk() returns PhotonPersistentDiskVolumeSourceBuilderCoreV1 {
-        self.photonPersistentDiskBuilder = new PhotonPersistentDiskVolumeSourceBuilderCoreV1(self);
+        self.photonPersistentDiskBuilder = new PhotonPersistentDiskVolumeSourceBuilderCoreV1();
+        self.photonPersistentDiskBuilder.init(self);
         match (self.photonPersistentDiskBuilder) {
             PhotonPersistentDiskVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21639,7 +23696,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withPortworxVolume() returns PortworxVolumeSourceBuilderCoreV1 {
-        self.portworxVolumeBuilder = new PortworxVolumeSourceBuilderCoreV1(self);
+        self.portworxVolumeBuilder = new PortworxVolumeSourceBuilderCoreV1();
+        self.portworxVolumeBuilder.init(self);
         match (self.portworxVolumeBuilder) {
             PortworxVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21651,7 +23709,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withQuobyte() returns QuobyteVolumeSourceBuilderCoreV1 {
-        self.quobyteBuilder = new QuobyteVolumeSourceBuilderCoreV1(self);
+        self.quobyteBuilder = new QuobyteVolumeSourceBuilderCoreV1();
+        self.quobyteBuilder.init(self);
         match (self.quobyteBuilder) {
             QuobyteVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21663,7 +23722,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withRbd() returns RBDPersistentVolumeSourceBuilderCoreV1 {
-        self.rbdBuilder = new RBDPersistentVolumeSourceBuilderCoreV1(self);
+        self.rbdBuilder = new RBDPersistentVolumeSourceBuilderCoreV1();
+        self.rbdBuilder.init(self);
         match (self.rbdBuilder) {
             RBDPersistentVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21675,7 +23735,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withScaleIO() returns ScaleIOPersistentVolumeSourceBuilderCoreV1 {
-        self.scaleIOBuilder = new ScaleIOPersistentVolumeSourceBuilderCoreV1(self);
+        self.scaleIOBuilder = new ScaleIOPersistentVolumeSourceBuilderCoreV1();
+        self.scaleIOBuilder.init(self);
         match (self.scaleIOBuilder) {
             ScaleIOPersistentVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21687,7 +23748,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withStorageos() returns StorageOSPersistentVolumeSourceBuilderCoreV1 {
-        self.storageosBuilder = new StorageOSPersistentVolumeSourceBuilderCoreV1(self);
+        self.storageosBuilder = new StorageOSPersistentVolumeSourceBuilderCoreV1();
+        self.storageosBuilder.init(self);
         match (self.storageosBuilder) {
             StorageOSPersistentVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21699,7 +23761,8 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
         }
     }
     public function withVsphereVolume() returns VsphereVirtualDiskVolumeSourceBuilderCoreV1 {
-        self.vsphereVolumeBuilder = new VsphereVirtualDiskVolumeSourceBuilderCoreV1(self);
+        self.vsphereVolumeBuilder = new VsphereVirtualDiskVolumeSourceBuilderCoreV1();
+        self.vsphereVolumeBuilder.init(self);
         match (self.vsphereVolumeBuilder) {
             VsphereVirtualDiskVolumeSourceBuilderCoreV1 builder => {
                 return builder;
@@ -21754,12 +23817,15 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
 };
 
 public type LoadBalancerStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_LoadBalancerStatus io_k8s_api_core_v1_loadbalancerstatus;
     public LoadBalancerIngressBuilderCoreV1[] ingressBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_loadbalancerstatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_LoadBalancerStatus) {
         return self.io_k8s_api_core_v1_loadbalancerstatus;
@@ -21768,16 +23834,20 @@ public type LoadBalancerStatusBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withIngress() returns LoadBalancerIngressBuilderCoreV1 {
-        self.ingressBuilder[lengthof ingressBuilder] = new LoadBalancerIngressBuilderCoreV1(self);
+        self.ingressBuilder[lengthof ingressBuilder] = new LoadBalancerIngressBuilderCoreV1();
+        self.ingressBuilder[(lengthof ingressBuilder)].init(self);
         return self.ingressBuilder[(lengthof ingressBuilder) - 1];
     }
 };
 
 public type SecretEnvSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SecretEnvSource io_k8s_api_core_v1_secretenvsource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_secretenvsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_SecretEnvSource) {
         return self.io_k8s_api_core_v1_secretenvsource;
@@ -21798,12 +23868,15 @@ public type SecretEnvSourceBuilderCoreV1 object {
 };
 
 public type SELinuxStrategyOptionsBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_SELinuxStrategyOptions io_k8s_api_extensions_v1beta1_selinuxstrategyoptions;
     public SELinuxOptionsBuilderCoreV1? seLinuxOptionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_selinuxstrategyoptions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_SELinuxStrategyOptions) {
         return self.io_k8s_api_extensions_v1beta1_selinuxstrategyoptions;
@@ -21812,7 +23885,8 @@ public type SELinuxStrategyOptionsBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withSeLinuxOptions() returns SELinuxOptionsBuilderCoreV1 {
-        self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1(self);
+        self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1();
+        self.seLinuxOptionsBuilder.init(self);
         match (self.seLinuxOptionsBuilder) {
             SELinuxOptionsBuilderCoreV1 builder => {
                 return builder;
@@ -21831,10 +23905,13 @@ public type SELinuxStrategyOptionsBuilderExtensionsV1beta1 object {
 };
 
 public type NamespaceStatusBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NamespaceStatus io_k8s_api_core_v1_namespacestatus;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_namespacestatus = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NamespaceStatus) {
         return self.io_k8s_api_core_v1_namespacestatus;
@@ -21850,14 +23927,17 @@ public type NamespaceStatusBuilderCoreV1 object {
 };
 
 public type SecurityContextBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SecurityContext io_k8s_api_core_v1_securitycontext;
     public CapabilitiesBuilderCoreV1? capabilitiesBuilder;
 
     public SELinuxOptionsBuilderCoreV1? seLinuxOptionsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_securitycontext = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_SecurityContext) {
         return self.io_k8s_api_core_v1_securitycontext;
@@ -21866,7 +23946,8 @@ public type SecurityContextBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withCapabilities() returns CapabilitiesBuilderCoreV1 {
-        self.capabilitiesBuilder = new CapabilitiesBuilderCoreV1(self);
+        self.capabilitiesBuilder = new CapabilitiesBuilderCoreV1();
+        self.capabilitiesBuilder.init(self);
         match (self.capabilitiesBuilder) {
             CapabilitiesBuilderCoreV1 builder => {
                 return builder;
@@ -21878,7 +23959,8 @@ public type SecurityContextBuilderCoreV1 object {
         }
     }
     public function withSeLinuxOptions() returns SELinuxOptionsBuilderCoreV1 {
-        self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1(self);
+        self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1();
+        self.seLinuxOptionsBuilder.init(self);
         match (self.seLinuxOptionsBuilder) {
             SELinuxOptionsBuilderCoreV1 builder => {
                 return builder;
@@ -21923,10 +24005,13 @@ public type SecurityContextBuilderCoreV1 object {
 };
 
 public type SecretKeySelectorBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SecretKeySelector io_k8s_api_core_v1_secretkeyselector;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_secretkeyselector = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_SecretKeySelector) {
         return self.io_k8s_api_core_v1_secretkeyselector;
@@ -21952,10 +24037,13 @@ public type SecretKeySelectorBuilderCoreV1 object {
 };
 
 public type RollingUpdateStatefulSetStrategyBuilderAppsV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_RollingUpdateStatefulSetStrategy io_k8s_api_apps_v1_rollingupdatestatefulsetstrategy;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1_rollingupdatestatefulsetstrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_RollingUpdateStatefulSetStrategy) {
         return self.io_k8s_api_apps_v1_rollingupdatestatefulsetstrategy;
@@ -21971,10 +24059,13 @@ public type RollingUpdateStatefulSetStrategyBuilderAppsV1 object {
 };
 
 public type NFSVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NFSVolumeSource io_k8s_api_core_v1_nfsvolumesource;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nfsvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NFSVolumeSource) {
         return self.io_k8s_api_core_v1_nfsvolumesource;
@@ -22000,13 +24091,16 @@ public type NFSVolumeSourceBuilderCoreV1 object {
 };
 
 public type WebhookClientConfigBuilderAdmissionregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_WebhookClientConfig
     io_k8s_api_admissionregistration_v1beta1_webhookclientconfig;
     public ServiceReferenceBuilderAdmissionregistrationV1beta1? _serviceBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_admissionregistration_v1beta1_webhookclientconfig = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_admissionregistration_v1beta1_WebhookClientConfig) {
         return self.io_k8s_api_admissionregistration_v1beta1_webhookclientconfig;
@@ -22015,7 +24109,8 @@ public type WebhookClientConfigBuilderAdmissionregistrationV1beta1 object {
         return self.fluentBuilder;
     }
     public function with_service() returns ServiceReferenceBuilderAdmissionregistrationV1beta1 {
-        self._serviceBuilder = new ServiceReferenceBuilderAdmissionregistrationV1beta1(self);
+        self._serviceBuilder = new ServiceReferenceBuilderAdmissionregistrationV1beta1();
+        self._serviceBuilder.init(self);
         match (self._serviceBuilder) {
             ServiceReferenceBuilderAdmissionregistrationV1beta1 builder => {
                 return builder;
@@ -22039,11 +24134,14 @@ public type WebhookClientConfigBuilderAdmissionregistrationV1beta1 object {
 };
 
 public type CustomResourceSubresourceScaleBuilderApiextensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceSubresourceScale
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcesubresourcescale;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcesubresourcescale = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (
                 io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceSubresourceScale) {
@@ -22076,14 +24174,17 @@ public type CustomResourceSubresourceScaleBuilderApiextensionsV1beta1 object {
 };
 
 public type ResourceQuotaListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ResourceQuotaList io_k8s_api_core_v1_resourcequotalist;
     public ResourceQuotaBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_resourcequotalist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ResourceQuotaList) {
         return self.io_k8s_api_core_v1_resourcequotalist;
@@ -22092,7 +24193,8 @@ public type ResourceQuotaListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -22104,7 +24206,8 @@ public type ResourceQuotaListBuilderCoreV1 object {
         }
     }
     public function withItems() returns ResourceQuotaBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ResourceQuotaBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ResourceQuotaBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -22120,12 +24223,15 @@ public type ResourceQuotaListBuilderCoreV1 object {
 };
 
 public type NodeDaemonEndpointsBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeDaemonEndpoints io_k8s_api_core_v1_nodedaemonendpoints;
     public DaemonEndpointBuilderCoreV1? kubeletEndpointBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodedaemonendpoints = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeDaemonEndpoints) {
         return self.io_k8s_api_core_v1_nodedaemonendpoints;
@@ -22134,7 +24240,8 @@ public type NodeDaemonEndpointsBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withKubeletEndpoint() returns DaemonEndpointBuilderCoreV1 {
-        self.kubeletEndpointBuilder = new DaemonEndpointBuilderCoreV1(self);
+        self.kubeletEndpointBuilder = new DaemonEndpointBuilderCoreV1();
+        self.kubeletEndpointBuilder.init(self);
         match (self.kubeletEndpointBuilder) {
             DaemonEndpointBuilderCoreV1 builder => {
                 return builder;
@@ -22148,10 +24255,13 @@ public type NodeDaemonEndpointsBuilderCoreV1 object {
 };
 
 public type TaintBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Taint io_k8s_api_core_v1_taint;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_taint = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_Taint) {
         return self.io_k8s_api_core_v1_taint;
@@ -22182,12 +24292,15 @@ public type TaintBuilderCoreV1 object {
 };
 
 public type ReplicationControllerSpecBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ReplicationControllerSpec io_k8s_api_core_v1_replicationcontrollerspec;
     public PodTemplateSpecBuilderCoreV1? templateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_replicationcontrollerspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ReplicationControllerSpec) {
         return self.io_k8s_api_core_v1_replicationcontrollerspec;
@@ -22196,7 +24309,8 @@ public type ReplicationControllerSpecBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withTemplate() returns PodTemplateSpecBuilderCoreV1 {
-        self.templateBuilder = new PodTemplateSpecBuilderCoreV1(self);
+        self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
+        self.templateBuilder.init(self);
         match (self.templateBuilder) {
             PodTemplateSpecBuilderCoreV1 builder => {
                 return builder;
@@ -22225,14 +24339,17 @@ public type ReplicationControllerSpecBuilderCoreV1 object {
 };
 
 public type NamespaceListBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NamespaceList io_k8s_api_core_v1_namespacelist;
     public NamespaceBuilderCoreV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_namespacelist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NamespaceList) {
         return self.io_k8s_api_core_v1_namespacelist;
@@ -22241,7 +24358,8 @@ public type NamespaceListBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -22253,7 +24371,8 @@ public type NamespaceListBuilderCoreV1 object {
         }
     }
     public function withItems() returns NamespaceBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new NamespaceBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new NamespaceBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -22269,13 +24388,16 @@ public type NamespaceListBuilderCoreV1 object {
 };
 
 public type RunAsUserStrategyOptionsBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_RunAsUserStrategyOptions io_k8s_api_extensions_v1beta1_runasuserstrategyoptions
     ;
     public IDRangeBuilderExtensionsV1beta1[] rangesBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_runasuserstrategyoptions = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_RunAsUserStrategyOptions) {
         return self.io_k8s_api_extensions_v1beta1_runasuserstrategyoptions;
@@ -22284,7 +24406,8 @@ public type RunAsUserStrategyOptionsBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withRanges() returns IDRangeBuilderExtensionsV1beta1 {
-        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderExtensionsV1beta1(self);
+        self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderExtensionsV1beta1();
+        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -22295,12 +24418,15 @@ public type RunAsUserStrategyOptionsBuilderExtensionsV1beta1 object {
 };
 
 public type ConfigMapBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ConfigMap io_k8s_api_core_v1_configmap;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_configmap = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ConfigMap) {
         return self.io_k8s_api_core_v1_configmap;
@@ -22309,7 +24435,8 @@ public type ConfigMapBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -22343,14 +24470,17 @@ public type ConfigMapBuilderCoreV1 object {
 };
 
 public type ClusterRoleBindingListBuilderRbacV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_ClusterRoleBindingList io_k8s_api_rbac_v1_clusterrolebindinglist;
     public ClusterRoleBindingBuilderRbacV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_rbac_v1_clusterrolebindinglist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_rbac_v1_ClusterRoleBindingList) {
         return self.io_k8s_api_rbac_v1_clusterrolebindinglist;
@@ -22359,7 +24489,8 @@ public type ClusterRoleBindingListBuilderRbacV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -22371,7 +24502,8 @@ public type ClusterRoleBindingListBuilderRbacV1 object {
         }
     }
     public function withItems() returns ClusterRoleBindingBuilderRbacV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBindingBuilderRbacV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBindingBuilderRbacV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -22387,12 +24519,15 @@ public type ClusterRoleBindingListBuilderRbacV1 object {
 };
 
 public type PreferredSchedulingTermBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PreferredSchedulingTerm io_k8s_api_core_v1_preferredschedulingterm;
     public NodeSelectorTermBuilderCoreV1? preferenceBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_preferredschedulingterm = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PreferredSchedulingTerm) {
         return self.io_k8s_api_core_v1_preferredschedulingterm;
@@ -22401,7 +24536,8 @@ public type PreferredSchedulingTermBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withPreference() returns NodeSelectorTermBuilderCoreV1 {
-        self.preferenceBuilder = new NodeSelectorTermBuilderCoreV1(self);
+        self.preferenceBuilder = new NodeSelectorTermBuilderCoreV1();
+        self.preferenceBuilder.init(self);
         match (self.preferenceBuilder) {
             NodeSelectorTermBuilderCoreV1 builder => {
                 return builder;
@@ -22420,12 +24556,15 @@ public type PreferredSchedulingTermBuilderCoreV1 object {
 };
 
 public type PodAffinityTermBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodAffinityTerm io_k8s_api_core_v1_podaffinityterm;
     public LabelSelectorBuilderMetaV1? labelSelectorBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_podaffinityterm = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_PodAffinityTerm) {
         return self.io_k8s_api_core_v1_podaffinityterm;
@@ -22434,7 +24573,8 @@ public type PodAffinityTermBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withLabelSelector() returns LabelSelectorBuilderMetaV1 {
-        self.labelSelectorBuilder = new LabelSelectorBuilderMetaV1(self);
+        self.labelSelectorBuilder = new LabelSelectorBuilderMetaV1();
+        self.labelSelectorBuilder.init(self);
         match (self.labelSelectorBuilder) {
             LabelSelectorBuilderMetaV1 builder => {
                 return builder;
@@ -22463,10 +24603,13 @@ public type PodAffinityTermBuilderCoreV1 object {
 };
 
 public type ScaleSpecBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_ScaleSpec io_k8s_api_extensions_v1beta1_scalespec;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_scalespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_ScaleSpec) {
         return self.io_k8s_api_extensions_v1beta1_scalespec;
@@ -22482,12 +24625,15 @@ public type ScaleSpecBuilderExtensionsV1beta1 object {
 };
 
 public type StatefulSetUpdateStrategyBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_StatefulSetUpdateStrategy io_k8s_api_apps_v1beta2_statefulsetupdatestrategy;
     public RollingUpdateStatefulSetStrategyBuilderAppsV1beta2? rollingUpdateBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_statefulsetupdatestrategy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_StatefulSetUpdateStrategy) {
         return self.io_k8s_api_apps_v1beta2_statefulsetupdatestrategy;
@@ -22496,7 +24642,8 @@ public type StatefulSetUpdateStrategyBuilderAppsV1beta2 object {
         return self.fluentBuilder;
     }
     public function withRollingUpdate() returns RollingUpdateStatefulSetStrategyBuilderAppsV1beta2 {
-        self.rollingUpdateBuilder = new RollingUpdateStatefulSetStrategyBuilderAppsV1beta2(self);
+        self.rollingUpdateBuilder = new RollingUpdateStatefulSetStrategyBuilderAppsV1beta2();
+        self.rollingUpdateBuilder.init(self);
         match (self.rollingUpdateBuilder) {
             RollingUpdateStatefulSetStrategyBuilderAppsV1beta2 builder => {
                 return builder;
@@ -22515,7 +24662,7 @@ public type StatefulSetUpdateStrategyBuilderAppsV1beta2 object {
 };
 
 public type PodDisruptionBudgetBuilderPolicyV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_PodDisruptionBudget io_k8s_api_policy_v1beta1_poddisruptionbudget;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
@@ -22523,8 +24670,11 @@ public type PodDisruptionBudgetBuilderPolicyV1beta1 object {
 
     public PodDisruptionBudgetStatusBuilderPolicyV1beta1? statusBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_policy_v1beta1_poddisruptionbudget = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_policy_v1beta1_PodDisruptionBudget) {
         return self.io_k8s_api_policy_v1beta1_poddisruptionbudget;
@@ -22533,7 +24683,8 @@ public type PodDisruptionBudgetBuilderPolicyV1beta1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -22545,7 +24696,8 @@ public type PodDisruptionBudgetBuilderPolicyV1beta1 object {
         }
     }
     public function withSpec() returns PodDisruptionBudgetSpecBuilderPolicyV1beta1 {
-        self.specBuilder = new PodDisruptionBudgetSpecBuilderPolicyV1beta1(self);
+        self.specBuilder = new PodDisruptionBudgetSpecBuilderPolicyV1beta1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             PodDisruptionBudgetSpecBuilderPolicyV1beta1 builder => {
                 return builder;
@@ -22557,7 +24709,8 @@ public type PodDisruptionBudgetBuilderPolicyV1beta1 object {
         }
     }
     public function withStatus() returns PodDisruptionBudgetStatusBuilderPolicyV1beta1 {
-        self.statusBuilder = new PodDisruptionBudgetStatusBuilderPolicyV1beta1(self);
+        self.statusBuilder = new PodDisruptionBudgetStatusBuilderPolicyV1beta1();
+        self.statusBuilder.init(self);
         match (self.statusBuilder) {
             PodDisruptionBudgetStatusBuilderPolicyV1beta1 builder => {
                 return builder;
@@ -22581,12 +24734,15 @@ public type PodDisruptionBudgetBuilderPolicyV1beta1 object {
 };
 
 public type NodeConfigSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeConfigSource io_k8s_api_core_v1_nodeconfigsource;
     public ObjectReferenceBuilderCoreV1? configMapRefBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_nodeconfigsource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_NodeConfigSource) {
         return self.io_k8s_api_core_v1_nodeconfigsource;
@@ -22595,7 +24751,8 @@ public type NodeConfigSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withConfigMapRef() returns ObjectReferenceBuilderCoreV1 {
-        self.configMapRefBuilder = new ObjectReferenceBuilderCoreV1(self);
+        self.configMapRefBuilder = new ObjectReferenceBuilderCoreV1();
+        self.configMapRefBuilder.init(self);
         match (self.configMapRefBuilder) {
             ObjectReferenceBuilderCoreV1 builder => {
                 return builder;
@@ -22619,12 +24776,15 @@ public type NodeConfigSourceBuilderCoreV1 object {
 };
 
 public type ConfigMapVolumeSourceBuilderCoreV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ConfigMapVolumeSource io_k8s_api_core_v1_configmapvolumesource;
     public KeyToPathBuilderCoreV1[] itemsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_core_v1_configmapvolumesource = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_core_v1_ConfigMapVolumeSource) {
         return self.io_k8s_api_core_v1_configmapvolumesource;
@@ -22633,7 +24793,8 @@ public type ConfigMapVolumeSourceBuilderCoreV1 object {
         return self.fluentBuilder;
     }
     public function withItems() returns KeyToPathBuilderCoreV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -22654,7 +24815,7 @@ public type ConfigMapVolumeSourceBuilderCoreV1 object {
 };
 
 public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_PodSecurityPolicySpec io_k8s_api_extensions_v1beta1_podsecuritypolicyspec;
     public AllowedFlexVolumeBuilderExtensionsV1beta1[] allowedFlexVolumesBuilder;
 
@@ -22670,8 +24831,11 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
 
     public SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1? supplementalGroupsBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_extensions_v1beta1_podsecuritypolicyspec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_extensions_v1beta1_PodSecurityPolicySpec) {
         return self.io_k8s_api_extensions_v1beta1_podsecuritypolicyspec;
@@ -22680,7 +24844,8 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
         return self.fluentBuilder;
     }
     public function withFsGroup() returns FSGroupStrategyOptionsBuilderExtensionsV1beta1 {
-        self.fsGroupBuilder = new FSGroupStrategyOptionsBuilderExtensionsV1beta1(self);
+        self.fsGroupBuilder = new FSGroupStrategyOptionsBuilderExtensionsV1beta1();
+        self.fsGroupBuilder.init(self);
         match (self.fsGroupBuilder) {
             FSGroupStrategyOptionsBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -22692,7 +24857,8 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withRunAsUser() returns RunAsUserStrategyOptionsBuilderExtensionsV1beta1 {
-        self.runAsUserBuilder = new RunAsUserStrategyOptionsBuilderExtensionsV1beta1(self);
+        self.runAsUserBuilder = new RunAsUserStrategyOptionsBuilderExtensionsV1beta1();
+        self.runAsUserBuilder.init(self);
         match (self.runAsUserBuilder) {
             RunAsUserStrategyOptionsBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -22704,7 +24870,8 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withSeLinux() returns SELinuxStrategyOptionsBuilderExtensionsV1beta1 {
-        self.seLinuxBuilder = new SELinuxStrategyOptionsBuilderExtensionsV1beta1(self);
+        self.seLinuxBuilder = new SELinuxStrategyOptionsBuilderExtensionsV1beta1();
+        self.seLinuxBuilder.init(self);
         match (self.seLinuxBuilder) {
             SELinuxStrategyOptionsBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -22716,7 +24883,8 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
         }
     }
     public function withSupplementalGroups() returns SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 {
-        self.supplementalGroupsBuilder = new SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1(self);
+        self.supplementalGroupsBuilder = new SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1();
+        self.supplementalGroupsBuilder.init(self);
         match (self.supplementalGroupsBuilder) {
             SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 builder => {
                 return builder;
@@ -22729,16 +24897,18 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
     }
     public function withAllowedFlexVolumes() returns AllowedFlexVolumeBuilderExtensionsV1beta1 {
         self.allowedFlexVolumesBuilder[lengthof allowedFlexVolumesBuilder] = new
-        AllowedFlexVolumeBuilderExtensionsV1beta1(self);
+        AllowedFlexVolumeBuilderExtensionsV1beta1();
+        self.allowedFlexVolumesBuilder[(lengthof allowedFlexVolumesBuilder)].init(self);
         return self.allowedFlexVolumesBuilder[(lengthof allowedFlexVolumesBuilder) - 1];
     }
     public function withAllowedHostPaths() returns AllowedHostPathBuilderExtensionsV1beta1 {
-        self.allowedHostPathsBuilder[lengthof allowedHostPathsBuilder] = new AllowedHostPathBuilderExtensionsV1beta1(
-                                                                             self);
+        self.allowedHostPathsBuilder[lengthof allowedHostPathsBuilder] = new AllowedHostPathBuilderExtensionsV1beta1();
+        self.allowedHostPathsBuilder[(lengthof allowedHostPathsBuilder)].init(self);
         return self.allowedHostPathsBuilder[(lengthof allowedHostPathsBuilder) - 1];
     }
     public function withHostPorts() returns HostPortRangeBuilderExtensionsV1beta1 {
-        self.hostPortsBuilder[lengthof hostPortsBuilder] = new HostPortRangeBuilderExtensionsV1beta1(self);
+        self.hostPortsBuilder[lengthof hostPortsBuilder] = new HostPortRangeBuilderExtensionsV1beta1();
+        self.hostPortsBuilder[(lengthof hostPortsBuilder)].init(self);
         return self.hostPortsBuilder[(lengthof hostPortsBuilder) - 1];
     }
 
@@ -22826,10 +24996,13 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
 };
 
 public type RollingUpdateDaemonSetBuilderAppsV1beta2 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_RollingUpdateDaemonSet io_k8s_api_apps_v1beta2_rollingupdatedaemonset;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_apps_v1beta2_rollingupdatedaemonset = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1beta2_RollingUpdateDaemonSet) {
         return self.io_k8s_api_apps_v1beta2_rollingupdatedaemonset;
@@ -22845,14 +25018,17 @@ public type RollingUpdateDaemonSetBuilderAppsV1beta2 object {
 };
 
 public type HorizontalPodAutoscalerListBuilderAutoscalingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_HorizontalPodAutoscalerList io_k8s_api_autoscaling_v1_horizontalpodautoscalerlist;
     public HorizontalPodAutoscalerBuilderAutoscalingV1[] itemsBuilder;
 
     public ListMetaBuilderMetaV1? metadataBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_autoscaling_v1_horizontalpodautoscalerlist = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_autoscaling_v1_HorizontalPodAutoscalerList) {
         return self.io_k8s_api_autoscaling_v1_horizontalpodautoscalerlist;
@@ -22861,7 +25037,8 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ListMetaBuilderMetaV1 {
-        self.metadataBuilder = new ListMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ListMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ListMetaBuilderMetaV1 builder => {
                 return builder;
@@ -22873,7 +25050,8 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV1 object {
         }
     }
     public function withItems() returns HorizontalPodAutoscalerBuilderAutoscalingV1 {
-        self.itemsBuilder[lengthof itemsBuilder] = new HorizontalPodAutoscalerBuilderAutoscalingV1(self);
+        self.itemsBuilder[lengthof itemsBuilder] = new HorizontalPodAutoscalerBuilderAutoscalingV1();
+        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -22889,11 +25067,14 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV1 object {
 };
 
 public type ServiceReferenceBuilderApiregistrationV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_ServiceReference
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_servicereference;
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_servicereference = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_ServiceReference) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_servicereference;
@@ -22914,13 +25095,16 @@ public type ServiceReferenceBuilderApiregistrationV1 object {
 };
 
 public type APIServiceSpecBuilderApiregistrationV1beta1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIServiceSpec
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicespec;
     public ServiceReferenceBuilderApiregistrationV1beta1? _serviceBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicespec = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIServiceSpec) {
         return self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicespec;
@@ -22929,7 +25113,8 @@ public type APIServiceSpecBuilderApiregistrationV1beta1 object {
         return self.fluentBuilder;
     }
     public function with_service() returns ServiceReferenceBuilderApiregistrationV1beta1 {
-        self._serviceBuilder = new ServiceReferenceBuilderApiregistrationV1beta1(self);
+        self._serviceBuilder = new ServiceReferenceBuilderApiregistrationV1beta1();
+        self._serviceBuilder.init(self);
         match (self._serviceBuilder) {
             ServiceReferenceBuilderApiregistrationV1beta1 builder => {
                 return builder;
@@ -22977,14 +25162,17 @@ public type APIServiceSpecBuilderApiregistrationV1beta1 object {
 };
 
 public type NetworkPolicyBuilderNetworkingV1 object {
-    public FluentBuilder fluentBuilder;
+    public FluentBuilder? fluentBuilder;
     public io_k8s_api_networking_v1_NetworkPolicy io_k8s_api_networking_v1_networkpolicy;
     public ObjectMetaBuilderMetaV1? metadataBuilder;
 
     public NetworkPolicySpecBuilderNetworkingV1? specBuilder;
 
-    public new(fluentBuilder) {
+    public new() {
         io_k8s_api_networking_v1_networkpolicy = new;
+    }
+    public function init(FluentBuilder parent) {
+        self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_networking_v1_NetworkPolicy) {
         return self.io_k8s_api_networking_v1_networkpolicy;
@@ -22993,7 +25181,8 @@ public type NetworkPolicyBuilderNetworkingV1 object {
         return self.fluentBuilder;
     }
     public function withMetadata() returns ObjectMetaBuilderMetaV1 {
-        self.metadataBuilder = new ObjectMetaBuilderMetaV1(self);
+        self.metadataBuilder = new ObjectMetaBuilderMetaV1();
+        self.metadataBuilder.init(self);
         match (self.metadataBuilder) {
             ObjectMetaBuilderMetaV1 builder => {
                 return builder;
@@ -23005,7 +25194,8 @@ public type NetworkPolicyBuilderNetworkingV1 object {
         }
     }
     public function withSpec() returns NetworkPolicySpecBuilderNetworkingV1 {
-        self.specBuilder = new NetworkPolicySpecBuilderNetworkingV1(self);
+        self.specBuilder = new NetworkPolicySpecBuilderNetworkingV1();
+        self.specBuilder.init(self);
         match (self.specBuilder) {
             NetworkPolicySpecBuilderNetworkingV1 builder => {
                 return builder;
