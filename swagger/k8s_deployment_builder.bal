@@ -127,31 +127,32 @@ function main(string...args) {
     //
     //io:println(v);
 
-    //DeploymentBuilderAppsV1  de = new;
-    //io_k8s_api_apps_v1_Deployment dep=  check<io_k8s_api_apps_v1_Deployment>de
-    //.withMetadataDeloymetAppsV1()
-    //    .addLabel("app","sss")
-    //    .setName("MyDeployment")
-    //.end()
-    //.withSpec()
-    //    .withTemplate()
-    //        .withSpec()
-    //            .withContainer()
-    //                .setImage("abc:1.0")
-    //                .withContainerPort()
-    //                    .setContainerPort(9090)
-    //                    .setName("http")
-    //                .end()
-    //                .withContainerPort()
-    //                    .setContainerPort(9093)
-    //                    .setName("https")
-    //                .end()
-    //            .end()
-    //        .end()
-    //    .end()
-    //.end()
-    //.build();
-    //io:println(<json>dep);
+    DeploymentBuilderAppsV1 de = new;
+    io_k8s_api_apps_v1_Deployment dep = <io_k8s_api_apps_v1_Deployment>de
+    .withMetadataDeploymentAppsV1()
+        .addLabel("app", "sss")
+        .setName("MyDeployment")
+    .endMetadataDeploymentAppsV1()
+    .withSpecDeploymentAppsV1()
+        .withTemplateDeploymentSpecAppsV1()
+            .withSpecPodTemplateSpecCoreV1()
+                .withContainersPodSpecCoreV1()
+                    .setImage("abc:1.0")
+                    .withPortsContainerCoreV1()
+                        .setContainerPort(9090)
+                        .setName("http")
+                    .endPortsContainerCoreV1()
+                    .withPortsContainerCoreV1()
+                        .setContainerPort(9093)
+                        .setName("https")
+                    .endPortsContainerCoreV1()
+                .endContainersPodSpecCoreV1()
+            .endSpecPodTemplateSpecCoreV1()
+        .endTemplateDeploymentSpecAppsV1()
+    .endSpecDeploymentAppsV1()
+    .build();
+
+    io:println(<json>dep);
 
     //MetadataBuilder v = deployment.withMetaData();
     //v = v.setName("hello");

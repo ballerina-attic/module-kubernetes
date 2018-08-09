@@ -13,9 +13,12 @@ public type QuantityBuilderApiResource object {
 
     public function endTargetAverageValueResourceMetricSourceAutoscalingV2beta1() returns (
                 ResourceMetricSourceBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ResourceMetricSourceBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ResourceMetricSourceBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ResourceMetricSourceBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26,9 +29,12 @@ public type QuantityBuilderApiResource object {
 
     public function endCurrentAverageValueExternalMetricStatusAutoscalingV2beta1() returns (
                 ExternalMetricStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ExternalMetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ExternalMetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ExternalMetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -39,9 +45,12 @@ public type QuantityBuilderApiResource object {
 
     public function endCurrentValueExternalMetricStatusAutoscalingV2beta1() returns (
                 ExternalMetricStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ExternalMetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ExternalMetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ExternalMetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -52,9 +61,12 @@ public type QuantityBuilderApiResource object {
 
     public function endTargetAverageValueExternalMetricSourceAutoscalingV2beta1() returns (
                 ExternalMetricSourceBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ExternalMetricSourceBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ExternalMetricSourceBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ExternalMetricSourceBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -65,9 +77,12 @@ public type QuantityBuilderApiResource object {
 
     public function endTargetValueExternalMetricSourceAutoscalingV2beta1() returns (
                 ExternalMetricSourceBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ExternalMetricSourceBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ExternalMetricSourceBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ExternalMetricSourceBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -78,9 +93,12 @@ public type QuantityBuilderApiResource object {
 
     public function endTargetValueObjectMetricSourceAutoscalingV2beta1() returns (
                 ObjectMetricSourceBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ObjectMetricSourceBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ObjectMetricSourceBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ObjectMetricSourceBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -91,9 +109,12 @@ public type QuantityBuilderApiResource object {
 
     public function endCurrentAverageValueResourceMetricStatusAutoscalingV2beta1() returns (
                 ResourceMetricStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ResourceMetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ResourceMetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ResourceMetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -104,9 +125,12 @@ public type QuantityBuilderApiResource object {
 
     public function endCurrentValueObjectMetricStatusAutoscalingV2beta1() returns (
                 ObjectMetricStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ObjectMetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ObjectMetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ObjectMetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -116,9 +140,12 @@ public type QuantityBuilderApiResource object {
     }
 
     public function endSizeLimitEmptyDirVolumeSourceCoreV1() returns (EmptyDirVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EmptyDirVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EmptyDirVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EmptyDirVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -129,9 +156,12 @@ public type QuantityBuilderApiResource object {
 
     public function endCurrentAverageValuePodsMetricStatusAutoscalingV2beta1() returns (
                 PodsMetricStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodsMetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodsMetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodsMetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -142,9 +172,12 @@ public type QuantityBuilderApiResource object {
 
     public function endTargetAverageValuePodsMetricSourceAutoscalingV2beta1() returns (
                 PodsMetricSourceBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodsMetricSourceBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodsMetricSourceBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodsMetricSourceBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -154,9 +187,12 @@ public type QuantityBuilderApiResource object {
     }
 
     public function endDivisorResourceFieldSelectorCoreV1() returns (ResourceFieldSelectorBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ResourceFieldSelectorBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ResourceFieldSelectorBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ResourceFieldSelectorBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -188,9 +224,12 @@ public type ResourceMetricSourceBuilderAutoscalingV2beta1 object {
     }
 
     public function end_resourceMetricSpecAutoscalingV2beta1() returns (MetricSpecBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MetricSpecBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MetricSpecBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MetricSpecBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -245,9 +284,12 @@ public type CSIPersistentVolumeSourceBuilderCoreV1 object {
     }
 
     public function endCsiPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -345,9 +387,12 @@ public type APIServiceBuilderApiregistrationV1beta1 object {
 
     public function endItemsAPIServiceListApiregistrationV1beta1() returns (APIServiceListBuilderApiregistrationV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceListBuilderApiregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceListBuilderApiregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceListBuilderApiregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -422,9 +467,12 @@ public type PersistentVolumeClaimConditionBuilderCoreV1 object {
 
     public function endConditionsPersistentVolumeClaimStatusCoreV1() returns (PersistentVolumeClaimStatusBuilderCoreV1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeClaimStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeClaimStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeClaimStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -487,9 +535,12 @@ public type CustomResourceSubresourcesBuilderApiextensionsV1beta1 object {
 
     public function endSubresourcesCustomResourceDefinitionSpecApiextensionsV1beta1() returns (
                 CustomResourceDefinitionSpecBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceDefinitionSpecBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceDefinitionSpecBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -562,7 +613,7 @@ public type PodSecurityPolicyListBuilderPolicyV1beta1 object {
     }
     public function withItemsPodSecurityPolicyListPolicyV1beta1() returns PodSecurityPolicyBuilderPolicyV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PodSecurityPolicyBuilderPolicyV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -672,9 +723,12 @@ public type VolumeAttachmentBuilderStorageV1beta1 object {
     }
 
     public function endItemsVolumeAttachmentListStorageV1beta1() returns (VolumeAttachmentListBuilderStorageV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeAttachmentListBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeAttachmentListBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeAttachmentListBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -750,9 +804,12 @@ public type RBDPersistentVolumeSourceBuilderCoreV1 object {
     }
 
     public function endRbdPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -848,7 +905,7 @@ public type ControllerRevisionListBuilderAppsV1 object {
     }
     public function withItemsControllerRevisionListAppsV1() returns ControllerRevisionBuilderAppsV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -883,9 +940,12 @@ public type DeploymentBuilderAppsV1beta2 object {
     }
 
     public function endItemsDeploymentListAppsV1beta2() returns (DeploymentListBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentListBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentListBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentListBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -962,9 +1022,12 @@ public type APIServiceStatusBuilderApiregistrationV1 object {
     }
 
     public function endStatusAPIServiceApiregistrationV1() returns (APIServiceBuilderApiregistrationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceBuilderApiregistrationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceBuilderApiregistrationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceBuilderApiregistrationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -976,7 +1039,7 @@ public type APIServiceStatusBuilderApiregistrationV1 object {
     public function withConditionsAPIServiceStatusApiregistrationV1() returns
                                                                           APIServiceConditionBuilderApiregistrationV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new APIServiceConditionBuilderApiregistrationV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 };
@@ -1001,9 +1064,12 @@ public type ExternalMetricStatusBuilderAutoscalingV2beta1 object {
     }
 
     public function endExternalMetricStatusAutoscalingV2beta1() returns (MetricStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1072,9 +1138,12 @@ public type ScaleSpecBuilderAppsV1beta2 object {
     }
 
     public function endSpecScaleAppsV1beta2() returns (ScaleBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1110,9 +1179,12 @@ public type ExternalMetricSourceBuilderAutoscalingV2beta1 object {
     }
 
     public function endExternalMetricSpecAutoscalingV2beta1() returns (MetricSpecBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MetricSpecBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MetricSpecBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MetricSpecBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1199,7 +1271,7 @@ public type DeploymentListBuilderAppsV1 object {
     }
     public function withItemsDeploymentListAppsV1() returns DeploymentBuilderAppsV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -1230,9 +1302,12 @@ public type ReplicaSetStatusBuilderAppsV1beta2 object {
     }
 
     public function endStatusReplicaSetAppsV1beta2() returns (ReplicaSetBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1243,7 +1318,7 @@ public type ReplicaSetStatusBuilderAppsV1beta2 object {
 
     public function withConditionsReplicaSetStatusAppsV1beta2() returns ReplicaSetConditionBuilderAppsV1beta2 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicaSetConditionBuilderAppsV1beta2();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -1291,9 +1366,12 @@ public type ObjectMetricSourceBuilderAutoscalingV2beta1 object {
     }
 
     public function end_objectMetricSpecAutoscalingV2beta1() returns (MetricSpecBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MetricSpecBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MetricSpecBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MetricSpecBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1353,9 +1431,12 @@ public type ResourceMetricStatusBuilderAutoscalingV2beta1 object {
     }
 
     public function end_resourceMetricStatusAutoscalingV2beta1() returns (MetricStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1404,9 +1485,12 @@ public type ReplicaSetConditionBuilderAppsV1 object {
     }
 
     public function endConditionsReplicaSetStatusAppsV1() returns (ReplicaSetStatusBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetStatusBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetStatusBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetStatusBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1462,9 +1546,12 @@ public type DaemonSetBuilderAppsV1 object {
     }
 
     public function endItemsDaemonSetListAppsV1() returns (DaemonSetListBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetListBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetListBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetListBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1538,9 +1625,12 @@ public type VolumeDeviceBuilderCoreV1 object {
     }
 
     public function endVolumeDevicesContainerCoreV1() returns (ContainerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1575,9 +1665,12 @@ public type SubjectBuilderRbacV1 object {
     }
 
     public function endSubjectsRoleBindingRbacV1() returns (RoleBindingBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBindingBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBindingBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBindingBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1587,9 +1680,12 @@ public type SubjectBuilderRbacV1 object {
     }
 
     public function endSubjectsClusterRoleBindingRbacV1() returns (ClusterRoleBindingBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBindingBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBindingBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBindingBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1653,7 +1749,7 @@ public type APIServiceListBuilderApiregistrationV1beta1 object {
     }
     public function withItemsAPIServiceListApiregistrationV1beta1() returns APIServiceBuilderApiregistrationV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new APIServiceBuilderApiregistrationV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -1703,9 +1799,12 @@ public type SubjectRulesReviewStatusBuilderAuthorizationV1beta1 object {
 
     public function endStatusSelfSubjectRulesReviewAuthorizationV1beta1() returns (
                 SelfSubjectRulesReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectRulesReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectRulesReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectRulesReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1719,14 +1818,14 @@ public type SubjectRulesReviewStatusBuilderAuthorizationV1beta1 object {
     {
         self.nonResourceRulesBuilder[lengthof nonResourceRulesBuilder] = new NonResourceRuleBuilderAuthorizationV1beta1(
         );
-        self.nonResourceRulesBuilder[(lengthof nonResourceRulesBuilder)].init(self);
+        self.nonResourceRulesBuilder[(lengthof nonResourceRulesBuilder) - 1].init(self);
         return self.nonResourceRulesBuilder[(lengthof nonResourceRulesBuilder) - 1];
     }
     public function withResourceRulesSubjectRulesReviewStatusAuthorizationV1beta1() returns
                                                                                         ResourceRuleBuilderAuthorizationV1beta1
     {
         self.resourceRulesBuilder[lengthof resourceRulesBuilder] = new ResourceRuleBuilderAuthorizationV1beta1();
-        self.resourceRulesBuilder[(lengthof resourceRulesBuilder)].init(self);
+        self.resourceRulesBuilder[(lengthof resourceRulesBuilder) - 1].init(self);
         return self.resourceRulesBuilder[(lengthof resourceRulesBuilder) - 1];
     }
 
@@ -1756,9 +1855,12 @@ public type DeploymentConditionBuilderAppsV1 object {
     }
 
     public function endConditionsDeploymentStatusAppsV1() returns (DeploymentStatusBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentStatusBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentStatusBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentStatusBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1815,9 +1917,12 @@ public type VolumeAttachmentSpecBuilderStorageV1beta1 object {
     }
 
     public function endSpecVolumeAttachmentStorageV1beta1() returns (VolumeAttachmentBuilderStorageV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeAttachmentBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeAttachmentBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeAttachmentBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1867,9 +1972,12 @@ public type SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1 object {
 
     public function endSpecSelfSubjectRulesReviewAuthorizationV1beta1() returns (
                 SelfSubjectRulesReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectRulesReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectRulesReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectRulesReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1903,9 +2011,12 @@ public type ObjectMetricStatusBuilderAutoscalingV2beta1 object {
     }
 
     public function end_objectMetricStatusAutoscalingV2beta1() returns (MetricStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -1981,7 +2092,7 @@ public type ControllerRevisionListBuilderAppsV1beta2 object {
     }
     public function withItemsControllerRevisionListAppsV1beta2() returns ControllerRevisionBuilderAppsV1beta2 {
         self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1beta2();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -2196,9 +2307,12 @@ public type StatefulSetConditionBuilderAppsV1beta1 object {
     }
 
     public function endConditionsStatefulSetStatusAppsV1beta1() returns (StatefulSetStatusBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetStatusBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetStatusBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetStatusBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2253,9 +2367,12 @@ public type ControllerRevisionBuilderAppsV1beta2 object {
     }
 
     public function endItemsControllerRevisionListAppsV1beta2() returns (ControllerRevisionListBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionListBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionListBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionListBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2327,9 +2444,12 @@ public type MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 obje
 
     public function endItemsMutatingWebhookConfigurationListAdmissionregistrationV1beta1() returns (
                 MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2356,7 +2476,7 @@ public type MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 obje
                                                                                                WebhookBuilderAdmissionregistrationV1beta1
     {
         self.webhooksBuilder[lengthof webhooksBuilder] = new WebhookBuilderAdmissionregistrationV1beta1();
-        self.webhooksBuilder[(lengthof webhooksBuilder)].init(self);
+        self.webhooksBuilder[(lengthof webhooksBuilder) - 1].init(self);
         return self.webhooksBuilder[(lengthof webhooksBuilder) - 1];
     }
 
@@ -2404,7 +2524,7 @@ public type RoleListBuilderRbacV1 object {
     }
     public function withItemsRoleListRbacV1() returns RoleBuilderRbacV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new RoleBuilderRbacV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -2439,9 +2559,12 @@ public type ReplicationControllerBuilderCoreV1 object {
     }
 
     public function endItemsReplicationControllerListCoreV1() returns (ReplicationControllerListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicationControllerListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicationControllerListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicationControllerListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2520,9 +2643,12 @@ public type SubjectRulesReviewStatusBuilderAuthorizationV1 object {
 
     public function endStatusSelfSubjectRulesReviewAuthorizationV1() returns (
                 SelfSubjectRulesReviewBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectRulesReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectRulesReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectRulesReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2535,13 +2661,13 @@ public type SubjectRulesReviewStatusBuilderAuthorizationV1 object {
                                                                                       NonResourceRuleBuilderAuthorizationV1
     {
         self.nonResourceRulesBuilder[lengthof nonResourceRulesBuilder] = new NonResourceRuleBuilderAuthorizationV1();
-        self.nonResourceRulesBuilder[(lengthof nonResourceRulesBuilder)].init(self);
+        self.nonResourceRulesBuilder[(lengthof nonResourceRulesBuilder) - 1].init(self);
         return self.nonResourceRulesBuilder[(lengthof nonResourceRulesBuilder) - 1];
     }
     public function withResourceRulesSubjectRulesReviewStatusAuthorizationV1() returns
                                                                                    ResourceRuleBuilderAuthorizationV1 {
         self.resourceRulesBuilder[lengthof resourceRulesBuilder] = new ResourceRuleBuilderAuthorizationV1();
-        self.resourceRulesBuilder[(lengthof resourceRulesBuilder)].init(self);
+        self.resourceRulesBuilder[(lengthof resourceRulesBuilder) - 1].init(self);
         return self.resourceRulesBuilder[(lengthof resourceRulesBuilder) - 1];
     }
 
@@ -2571,9 +2697,12 @@ public type HostAliasBuilderCoreV1 object {
     }
 
     public function endHostAliasesPodSpecCoreV1() returns (PodSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2630,9 +2759,12 @@ public type PodSpecBuilderCoreV1 object {
     }
 
     public function endSpecPodTemplateSpecCoreV1() returns (PodTemplateSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodTemplateSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodTemplateSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodTemplateSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2642,9 +2774,12 @@ public type PodSpecBuilderCoreV1 object {
     }
 
     public function endSpecPodCoreV1() returns (PodBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2694,32 +2829,32 @@ public type PodSpecBuilderCoreV1 object {
     }
     public function withContainersPodSpecCoreV1() returns ContainerBuilderCoreV1 {
         self.containersBuilder[lengthof containersBuilder] = new ContainerBuilderCoreV1();
-        self.containersBuilder[(lengthof containersBuilder)].init(self);
+        self.containersBuilder[(lengthof containersBuilder) - 1].init(self);
         return self.containersBuilder[(lengthof containersBuilder) - 1];
     }
     public function withHostAliasesPodSpecCoreV1() returns HostAliasBuilderCoreV1 {
         self.hostAliasesBuilder[lengthof hostAliasesBuilder] = new HostAliasBuilderCoreV1();
-        self.hostAliasesBuilder[(lengthof hostAliasesBuilder)].init(self);
+        self.hostAliasesBuilder[(lengthof hostAliasesBuilder) - 1].init(self);
         return self.hostAliasesBuilder[(lengthof hostAliasesBuilder) - 1];
     }
     public function withImagePullSecretsPodSpecCoreV1() returns LocalObjectReferenceBuilderCoreV1 {
         self.imagePullSecretsBuilder[lengthof imagePullSecretsBuilder] = new LocalObjectReferenceBuilderCoreV1();
-        self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder)].init(self);
+        self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder) - 1].init(self);
         return self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder) - 1];
     }
     public function withInitContainersPodSpecCoreV1() returns ContainerBuilderCoreV1 {
         self.initContainersBuilder[lengthof initContainersBuilder] = new ContainerBuilderCoreV1();
-        self.initContainersBuilder[(lengthof initContainersBuilder)].init(self);
+        self.initContainersBuilder[(lengthof initContainersBuilder) - 1].init(self);
         return self.initContainersBuilder[(lengthof initContainersBuilder) - 1];
     }
     public function withTolerationsPodSpecCoreV1() returns TolerationBuilderCoreV1 {
         self.tolerationsBuilder[lengthof tolerationsBuilder] = new TolerationBuilderCoreV1();
-        self.tolerationsBuilder[(lengthof tolerationsBuilder)].init(self);
+        self.tolerationsBuilder[(lengthof tolerationsBuilder) - 1].init(self);
         return self.tolerationsBuilder[(lengthof tolerationsBuilder) - 1];
     }
     public function withVolumesPodSpecCoreV1() returns VolumeBuilderCoreV1 {
         self.volumesBuilder[lengthof volumesBuilder] = new VolumeBuilderCoreV1();
-        self.volumesBuilder[(lengthof volumesBuilder)].init(self);
+        self.volumesBuilder[(lengthof volumesBuilder) - 1].init(self);
         return self.volumesBuilder[(lengthof volumesBuilder) - 1];
     }
 
@@ -2832,9 +2967,12 @@ public type StatefulSetStatusBuilderAppsV1beta2 object {
     }
 
     public function endStatusStatefulSetAppsV1beta2() returns (StatefulSetBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2845,7 +2983,7 @@ public type StatefulSetStatusBuilderAppsV1beta2 object {
 
     public function withConditionsStatefulSetStatusAppsV1beta2() returns StatefulSetConditionBuilderAppsV1beta2 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new StatefulSetConditionBuilderAppsV1beta2();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -2904,9 +3042,12 @@ public type AzureFilePersistentVolumeSourceBuilderCoreV1 object {
     }
 
     public function endAzureFilePersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2953,9 +3094,12 @@ public type DaemonSetStatusBuilderAppsV1 object {
     }
 
     public function endStatusDaemonSetAppsV1() returns (DaemonSetBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -2966,7 +3110,7 @@ public type DaemonSetStatusBuilderAppsV1 object {
 
     public function withConditionsDaemonSetStatusAppsV1() returns DaemonSetConditionBuilderAppsV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new DaemonSetConditionBuilderAppsV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -3039,9 +3183,12 @@ public type MetricStatusBuilderAutoscalingV2beta1 object {
 
     public function endCurrentMetricsHorizontalPodAutoscalerStatusAutoscalingV2beta1() returns (
                 HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3124,9 +3271,12 @@ public type VolumeMountBuilderCoreV1 object {
     }
 
     public function endVolumeMountsContainerCoreV1() returns (ContainerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3178,9 +3328,12 @@ public type DeploymentStatusBuilderAppsV1beta2 object {
     }
 
     public function endStatusDeploymentAppsV1beta2() returns (DeploymentBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3191,7 +3344,7 @@ public type DeploymentStatusBuilderAppsV1beta2 object {
 
     public function withConditionsDeploymentStatusAppsV1beta2() returns DeploymentConditionBuilderAppsV1beta2 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderAppsV1beta2();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -3248,9 +3401,12 @@ public type APIServiceSpecBuilderApiregistrationV1 object {
     }
 
     public function endSpecAPIServiceApiregistrationV1() returns (APIServiceBuilderApiregistrationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceBuilderApiregistrationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceBuilderApiregistrationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceBuilderApiregistrationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3326,7 +3482,7 @@ public type APIGroupListBuilderMetaV1 object {
 
     public function withGroupsAPIGroupListMetaV1() returns APIGroupBuilderMetaV1 {
         self.groupsBuilder[lengthof groupsBuilder] = new APIGroupBuilderMetaV1();
-        self.groupsBuilder[(lengthof groupsBuilder)].init(self);
+        self.groupsBuilder[(lengthof groupsBuilder) - 1].init(self);
         return self.groupsBuilder[(lengthof groupsBuilder) - 1];
     }
 
@@ -3357,9 +3513,12 @@ public type DaemonSetUpdateStrategyBuilderAppsV1beta2 object {
     }
 
     public function endUpdateStrategyDaemonSetSpecAppsV1beta2() returns (DaemonSetSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3405,9 +3564,12 @@ public type EmptyDirVolumeSourceBuilderCoreV1 object {
     }
 
     public function endEmptyDirVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3456,9 +3618,12 @@ public type EndpointSubsetBuilderCoreV1 object {
     }
 
     public function endSubsetsEndpointsCoreV1() returns (EndpointsBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EndpointsBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EndpointsBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EndpointsBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3469,17 +3634,17 @@ public type EndpointSubsetBuilderCoreV1 object {
 
     public function withAddressesEndpointSubsetCoreV1() returns EndpointAddressBuilderCoreV1 {
         self.addressesBuilder[lengthof addressesBuilder] = new EndpointAddressBuilderCoreV1();
-        self.addressesBuilder[(lengthof addressesBuilder)].init(self);
+        self.addressesBuilder[(lengthof addressesBuilder) - 1].init(self);
         return self.addressesBuilder[(lengthof addressesBuilder) - 1];
     }
     public function withNotReadyAddressesEndpointSubsetCoreV1() returns EndpointAddressBuilderCoreV1 {
         self.notReadyAddressesBuilder[lengthof notReadyAddressesBuilder] = new EndpointAddressBuilderCoreV1();
-        self.notReadyAddressesBuilder[(lengthof notReadyAddressesBuilder)].init(self);
+        self.notReadyAddressesBuilder[(lengthof notReadyAddressesBuilder) - 1].init(self);
         return self.notReadyAddressesBuilder[(lengthof notReadyAddressesBuilder) - 1];
     }
     public function withPortsEndpointSubsetCoreV1() returns EndpointPortBuilderCoreV1 {
         self.portsBuilder[lengthof portsBuilder] = new EndpointPortBuilderCoreV1();
-        self.portsBuilder[(lengthof portsBuilder)].init(self);
+        self.portsBuilder[(lengthof portsBuilder) - 1].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
 };
@@ -3498,9 +3663,12 @@ public type AWSElasticBlockStoreVolumeSourceBuilderCoreV1 object {
     }
 
     public function endAwsElasticBlockStoreVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3510,9 +3678,12 @@ public type AWSElasticBlockStoreVolumeSourceBuilderCoreV1 object {
     }
 
     public function endAwsElasticBlockStorePersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3557,9 +3728,12 @@ public type ResourceRequirementsBuilderCoreV1 object {
     }
 
     public function endResourcesContainerCoreV1() returns (ContainerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3569,9 +3743,12 @@ public type ResourceRequirementsBuilderCoreV1 object {
     }
 
     public function endResourcesPersistentVolumeClaimSpecCoreV1() returns (PersistentVolumeClaimSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeClaimSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeClaimSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeClaimSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3698,7 +3875,7 @@ public type DaemonSetListBuilderAppsV1 object {
     }
     public function withItemsDaemonSetListAppsV1() returns DaemonSetBuilderAppsV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderAppsV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -3733,9 +3910,12 @@ public type NetworkPolicySpecBuilderExtensionsV1beta1 object {
     }
 
     public function endSpecNetworkPolicyExtensionsV1beta1() returns (NetworkPolicyBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3760,14 +3940,14 @@ public type NetworkPolicySpecBuilderExtensionsV1beta1 object {
     public function withEgressNetworkPolicySpecExtensionsV1beta1() returns
                                                                        NetworkPolicyEgressRuleBuilderExtensionsV1beta1 {
         self.egressBuilder[lengthof egressBuilder] = new NetworkPolicyEgressRuleBuilderExtensionsV1beta1();
-        self.egressBuilder[(lengthof egressBuilder)].init(self);
+        self.egressBuilder[(lengthof egressBuilder) - 1].init(self);
         return self.egressBuilder[(lengthof egressBuilder) - 1];
     }
     public function withIngressNetworkPolicySpecExtensionsV1beta1() returns
                                                                         NetworkPolicyIngressRuleBuilderExtensionsV1beta1
     {
         self.ingressBuilder[lengthof ingressBuilder] = new NetworkPolicyIngressRuleBuilderExtensionsV1beta1();
-        self.ingressBuilder[(lengthof ingressBuilder)].init(self);
+        self.ingressBuilder[(lengthof ingressBuilder) - 1].init(self);
         return self.ingressBuilder[(lengthof ingressBuilder) - 1];
     }
 
@@ -3798,9 +3978,12 @@ public type StatusDetailsBuilderMetaV1 object {
     }
 
     public function endDetailsStatusMetaV1() returns (StatusBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatusBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatusBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatusBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3811,7 +3994,7 @@ public type StatusDetailsBuilderMetaV1 object {
 
     public function withCausesStatusDetailsMetaV1() returns StatusCauseBuilderMetaV1 {
         self.causesBuilder[lengthof causesBuilder] = new StatusCauseBuilderMetaV1();
-        self.causesBuilder[(lengthof causesBuilder)].init(self);
+        self.causesBuilder[(lengthof causesBuilder) - 1].init(self);
         return self.causesBuilder[(lengthof causesBuilder) - 1];
     }
 
@@ -3855,9 +4038,12 @@ public type ClientIPConfigBuilderCoreV1 object {
     }
 
     public function endClientIPSessionAffinityConfigCoreV1() returns (SessionAffinityConfigBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SessionAffinityConfigBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SessionAffinityConfigBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SessionAffinityConfigBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3901,9 +4087,12 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
     }
 
     public function endSpecPodSecurityPolicyPolicyV1beta1() returns (PodSecurityPolicyBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicyBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicyBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicyBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -3972,18 +4161,18 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
     {
         self.allowedFlexVolumesBuilder[lengthof allowedFlexVolumesBuilder] = new AllowedFlexVolumeBuilderPolicyV1beta1()
         ;
-        self.allowedFlexVolumesBuilder[(lengthof allowedFlexVolumesBuilder)].init(self);
+        self.allowedFlexVolumesBuilder[(lengthof allowedFlexVolumesBuilder) - 1].init(self);
         return self.allowedFlexVolumesBuilder[(lengthof allowedFlexVolumesBuilder) - 1];
     }
     public function withAllowedHostPathsPodSecurityPolicySpecPolicyV1beta1() returns AllowedHostPathBuilderPolicyV1beta1
     {
         self.allowedHostPathsBuilder[lengthof allowedHostPathsBuilder] = new AllowedHostPathBuilderPolicyV1beta1();
-        self.allowedHostPathsBuilder[(lengthof allowedHostPathsBuilder)].init(self);
+        self.allowedHostPathsBuilder[(lengthof allowedHostPathsBuilder) - 1].init(self);
         return self.allowedHostPathsBuilder[(lengthof allowedHostPathsBuilder) - 1];
     }
     public function withHostPortsPodSecurityPolicySpecPolicyV1beta1() returns HostPortRangeBuilderPolicyV1beta1 {
         self.hostPortsBuilder[lengthof hostPortsBuilder] = new HostPortRangeBuilderPolicyV1beta1();
-        self.hostPortsBuilder[(lengthof hostPortsBuilder)].init(self);
+        self.hostPortsBuilder[(lengthof hostPortsBuilder) - 1].init(self);
         return self.hostPortsBuilder[(lengthof hostPortsBuilder) - 1];
     }
 
@@ -4102,7 +4291,7 @@ public type ClusterRoleBindingListBuilderRbacV1beta1 object {
     }
     public function withItemsClusterRoleBindingListRbacV1beta1() returns ClusterRoleBindingBuilderRbacV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBindingBuilderRbacV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -4131,9 +4320,12 @@ public type InitializerBuilderMetaV1 object {
     }
 
     public function endPendingInitializersMetaV1() returns (InitializersBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <InitializersBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            InitializersBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <InitializersBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4164,9 +4356,12 @@ public type DeploymentConditionBuilderExtensionsV1beta1 object {
 
     public function endConditionsDeploymentStatusExtensionsV1beta1() returns (DeploymentStatusBuilderExtensionsV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentStatusBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentStatusBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentStatusBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4225,9 +4420,12 @@ public type ServiceStatusBuilderCoreV1 object {
     }
 
     public function endStatusServiceCoreV1() returns (ServiceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4353,7 +4551,7 @@ public type JobListBuilderBatchV1 object {
     }
     public function withItemsJobListBatchV1() returns JobBuilderBatchV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new JobBuilderBatchV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -4388,9 +4586,12 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
 
     public function endSpecLocalSubjectAccessReviewAuthorizationV1beta1() returns (
                 LocalSubjectAccessReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LocalSubjectAccessReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            LocalSubjectAccessReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LocalSubjectAccessReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4401,9 +4602,12 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
 
     public function endSpecSubjectAccessReviewAuthorizationV1beta1() returns (
                 SubjectAccessReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectAccessReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectAccessReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectAccessReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4484,9 +4688,12 @@ public type ResourceRuleBuilderAuthorizationV1beta1 object {
 
     public function endResourceRulesSubjectRulesReviewStatusAuthorizationV1beta1() returns (
                 SubjectRulesReviewStatusBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectRulesReviewStatusBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectRulesReviewStatusBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectRulesReviewStatusBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4554,7 +4761,7 @@ public type APIResourceListBuilderMetaV1 object {
 
     public function withResourcesAPIResourceListMetaV1() returns APIResourceBuilderMetaV1 {
         self.resourcesBuilder[lengthof resourcesBuilder] = new APIResourceBuilderMetaV1();
-        self.resourcesBuilder[(lengthof resourcesBuilder)].init(self);
+        self.resourcesBuilder[(lengthof resourcesBuilder) - 1].init(self);
         return self.resourcesBuilder[(lengthof resourcesBuilder) - 1];
     }
 
@@ -4659,9 +4866,12 @@ public type ResourceAttributesBuilderAuthorizationV1beta1 object {
 
     public function endResourceAttributesSubjectAccessReviewSpecAuthorizationV1beta1() returns (
                 SubjectAccessReviewSpecBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectAccessReviewSpecBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectAccessReviewSpecBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectAccessReviewSpecBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4672,9 +4882,12 @@ public type ResourceAttributesBuilderAuthorizationV1beta1 object {
 
     public function endResourceAttributesSelfSubjectAccessReviewSpecAuthorizationV1beta1() returns (
                 SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4740,9 +4953,12 @@ public type StatefulSetBuilderAppsV1beta2 object {
     }
 
     public function endItemsStatefulSetListAppsV1beta2() returns (StatefulSetListBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetListBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetListBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetListBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4825,9 +5041,12 @@ public type CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 object {
 
     public function endSpecCustomResourceDefinitionApiextensionsV1beta1() returns (
                 CustomResourceDefinitionBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceDefinitionBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceDefinitionBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceDefinitionBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4915,9 +5134,12 @@ public type ConfigMapKeySelectorBuilderCoreV1 object {
     }
 
     public function endConfigMapKeyRefEnvVarSourceCoreV1() returns (EnvVarSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EnvVarSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EnvVarSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EnvVarSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4957,9 +5179,12 @@ public type VolumeAttachmentSourceBuilderStorageV1beta1 object {
     }
 
     public function endSourceVolumeAttachmentSpecStorageV1beta1() returns (VolumeAttachmentSpecBuilderStorageV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeAttachmentSpecBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeAttachmentSpecBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeAttachmentSpecBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -4992,9 +5217,12 @@ public type ScaleIOPersistentVolumeSourceBuilderCoreV1 object {
     }
 
     public function endScaleIOPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5095,7 +5323,7 @@ public type StatefulSetListBuilderAppsV1beta2 object {
     }
     public function withItemsStatefulSetListAppsV1beta2() returns StatefulSetBuilderAppsV1beta2 {
         self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1beta2();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -5124,9 +5352,12 @@ public type APIResourceBuilderMetaV1 object {
     }
 
     public function endResourcesAPIResourceListMetaV1() returns (APIResourceListBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIResourceListBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIResourceListBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIResourceListBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5212,9 +5443,12 @@ public type RollingUpdateDeploymentBuilderExtensionsV1beta1 object {
 
     public function endRollingUpdateDeploymentStrategyExtensionsV1beta1() returns (
                 DeploymentStrategyBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentStrategyBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentStrategyBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentStrategyBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5252,9 +5486,12 @@ public type StatefulSetStatusBuilderAppsV1 object {
     }
 
     public function endStatusStatefulSetAppsV1() returns (StatefulSetBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5265,7 +5502,7 @@ public type StatefulSetStatusBuilderAppsV1 object {
 
     public function withConditionsStatefulSetStatusAppsV1() returns StatefulSetConditionBuilderAppsV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new StatefulSetConditionBuilderAppsV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -5342,7 +5579,7 @@ public type PodDisruptionBudgetListBuilderPolicyV1beta1 object {
     }
     public function withItemsPodDisruptionBudgetListPolicyV1beta1() returns PodDisruptionBudgetBuilderPolicyV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PodDisruptionBudgetBuilderPolicyV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -5375,9 +5612,12 @@ public type NodeSpecBuilderCoreV1 object {
     }
 
     public function endSpecNodeCoreV1() returns (NodeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5401,7 +5641,7 @@ public type NodeSpecBuilderCoreV1 object {
     }
     public function withTaintsNodeSpecCoreV1() returns TaintBuilderCoreV1 {
         self.taintsBuilder[lengthof taintsBuilder] = new TaintBuilderCoreV1();
-        self.taintsBuilder[(lengthof taintsBuilder)].init(self);
+        self.taintsBuilder[(lengthof taintsBuilder) - 1].init(self);
         return self.taintsBuilder[(lengthof taintsBuilder) - 1];
     }
 
@@ -5444,9 +5684,12 @@ public type SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 object {
 
     public function endSupplementalGroupsPodSecurityPolicySpecPolicyV1beta1() returns (
                 PodSecurityPolicySpecBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5457,7 +5700,7 @@ public type SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 object {
 
     public function withRangesSupplementalGroupsStrategyOptionsPolicyV1beta1() returns IDRangeBuilderPolicyV1beta1 {
         self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderPolicyV1beta1();
-        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
+        self.rangesBuilder[(lengthof rangesBuilder) - 1].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -5483,9 +5726,12 @@ public type EnvVarBuilderCoreV1 object {
     }
 
     public function endEnvContainerCoreV1() returns (ContainerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5536,9 +5782,12 @@ public type CustomResourceDefinitionConditionBuilderApiextensionsV1beta1 object 
 
     public function endConditionsCustomResourceDefinitionStatusApiextensionsV1beta1() returns (
                 CustomResourceDefinitionStatusBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceDefinitionStatusBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceDefinitionStatusBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5594,9 +5843,12 @@ public type ScaleStatusBuilderAppsV1beta2 object {
     }
 
     public function endStatusScaleAppsV1beta2() returns (ScaleBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5640,7 +5892,7 @@ public type APIVersionsBuilderMetaV1 object {
     public function withServerAddressByClientCIDRsAPIVersionsMetaV1() returns ServerAddressByClientCIDRBuilderMetaV1 {
         self.serverAddressByClientCIDRsBuilder[lengthof serverAddressByClientCIDRsBuilder] = new
         ServerAddressByClientCIDRBuilderMetaV1();
-        self.serverAddressByClientCIDRsBuilder[(lengthof serverAddressByClientCIDRsBuilder)].init(self);
+        self.serverAddressByClientCIDRsBuilder[(lengthof serverAddressByClientCIDRsBuilder) - 1].init(self);
         return self.serverAddressByClientCIDRsBuilder[(lengthof serverAddressByClientCIDRsBuilder) - 1];
     }
 
@@ -5679,9 +5931,12 @@ public type RollingUpdateDeploymentBuilderAppsV1 object {
     }
 
     public function endRollingUpdateDeploymentStrategyAppsV1() returns (DeploymentStrategyBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentStrategyBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentStrategyBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentStrategyBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5718,9 +5973,12 @@ public type StatefulSetUpdateStrategyBuilderAppsV1 object {
     }
 
     public function endUpdateStrategyStatefulSetSpecAppsV1() returns (StatefulSetSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5767,9 +6025,12 @@ public type DaemonSetStatusBuilderExtensionsV1beta1 object {
     }
 
     public function endStatusDaemonSetExtensionsV1beta1() returns (DaemonSetBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5781,7 +6042,7 @@ public type DaemonSetStatusBuilderExtensionsV1beta1 object {
     public function withConditionsDaemonSetStatusExtensionsV1beta1() returns DaemonSetConditionBuilderExtensionsV1beta1
     {
         self.conditionsBuilder[lengthof conditionsBuilder] = new DaemonSetConditionBuilderExtensionsV1beta1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -5850,9 +6111,12 @@ public type DaemonSetUpdateStrategyBuilderExtensionsV1beta1 object {
     }
 
     public function endUpdateStrategyDaemonSetSpecExtensionsV1beta1() returns (DaemonSetSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5897,9 +6161,12 @@ public type ContainerStateWaitingBuilderCoreV1 object {
     }
 
     public function endWaitingContainerStateCoreV1() returns (ContainerStateBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerStateBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerStateBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerStateBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5934,9 +6201,12 @@ public type AttachedVolumeBuilderCoreV1 object {
     }
 
     public function endVolumesAttachedNodeStatusCoreV1() returns (NodeStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -5977,9 +6247,12 @@ public type IngressBuilderExtensionsV1beta1 object {
     }
 
     public function endItemsIngressListExtensionsV1beta1() returns (IngressListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <IngressListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            IngressListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <IngressListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6130,9 +6403,12 @@ public type CertificateSigningRequestConditionBuilderCertificatesV1beta1 object 
 
     public function endConditionsCertificateSigningRequestStatusCertificatesV1beta1() returns (
                 CertificateSigningRequestStatusBuilderCertificatesV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CertificateSigningRequestStatusBuilderCertificatesV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CertificateSigningRequestStatusBuilderCertificatesV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CertificateSigningRequestStatusBuilderCertificatesV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6213,9 +6489,12 @@ public type HostPathVolumeSourceBuilderCoreV1 object {
     }
 
     public function endHostPathVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6225,9 +6504,12 @@ public type HostPathVolumeSourceBuilderCoreV1 object {
     }
 
     public function endHostPathPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6360,7 +6642,7 @@ public type MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 
     {
         self.itemsBuilder[lengthof itemsBuilder] = new MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1()
         ;
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -6397,9 +6679,12 @@ public type CronJobBuilderBatchV1beta1 object {
     }
 
     public function endItemsCronJobListBatchV1beta1() returns (CronJobListBuilderBatchV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CronJobListBuilderBatchV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CronJobListBuilderBatchV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CronJobListBuilderBatchV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6473,9 +6758,12 @@ public type ContainerPortBuilderCoreV1 object {
     }
 
     public function endPortsContainerCoreV1() returns (ContainerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6543,7 +6831,7 @@ public type NetworkPolicyListBuilderExtensionsV1beta1 object {
     }
     public function withItemsNetworkPolicyListExtensionsV1beta1() returns NetworkPolicyBuilderExtensionsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new NetworkPolicyBuilderExtensionsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -6572,9 +6860,12 @@ public type ContainerStateTerminatedBuilderCoreV1 object {
     }
 
     public function endTerminatedContainerStateCoreV1() returns (ContainerStateBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerStateBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerStateBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerStateBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6638,9 +6929,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataAPIServiceApiregistrationV1beta1() returns (APIServiceBuilderApiregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceBuilderApiregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceBuilderApiregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceBuilderApiregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6651,9 +6945,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataLocalSubjectAccessReviewAuthorizationV1beta1() returns (
                 LocalSubjectAccessReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LocalSubjectAccessReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            LocalSubjectAccessReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LocalSubjectAccessReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6663,9 +6960,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataVolumeAttachmentStorageV1beta1() returns (VolumeAttachmentBuilderStorageV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeAttachmentBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeAttachmentBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeAttachmentBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6675,9 +6975,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDeploymentAppsV1beta2() returns (DeploymentBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6687,9 +6990,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDaemonSetAppsV1() returns (DaemonSetBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6699,9 +7005,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataScaleAutoscalingV1() returns (ScaleBuilderAutoscalingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderAutoscalingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderAutoscalingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderAutoscalingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6711,9 +7020,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataScaleExtensionsV1beta1() returns (ScaleBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6723,9 +7035,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataControllerRevisionAppsV1beta2() returns (ControllerRevisionBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6736,9 +7051,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataMutatingWebhookConfigurationAdmissionregistrationV1beta1() returns (
                 MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6748,9 +7066,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataReplicationControllerCoreV1() returns (ReplicationControllerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicationControllerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicationControllerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicationControllerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6761,9 +7082,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataSubjectAccessReviewAuthorizationV1beta1() returns (
                 SubjectAccessReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectAccessReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectAccessReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectAccessReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6773,9 +7097,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataScaleAppsV1beta2() returns (ScaleBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6785,9 +7112,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataScaleAppsV1beta1() returns (ScaleBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6797,9 +7127,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStatefulSetAppsV1beta2() returns (StatefulSetBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6809,9 +7142,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataIngressExtensionsV1beta1() returns (IngressBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <IngressBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            IngressBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <IngressBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6822,9 +7158,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataSelfSubjectRulesReviewAuthorizationV1beta1() returns (
                 SelfSubjectRulesReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectRulesReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectRulesReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectRulesReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6835,9 +7174,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataSelfSubjectRulesReviewAuthorizationV1() returns (
                 SelfSubjectRulesReviewBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectRulesReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectRulesReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectRulesReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6847,9 +7189,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataCronJobBatchV1beta1() returns (CronJobBuilderBatchV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CronJobBuilderBatchV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CronJobBuilderBatchV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CronJobBuilderBatchV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6859,9 +7204,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStorageClassStorageV1() returns (StorageClassBuilderStorageV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StorageClassBuilderStorageV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StorageClassBuilderStorageV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StorageClassBuilderStorageV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6871,9 +7219,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPodSecurityPolicyPolicyV1beta1() returns (PodSecurityPolicyBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicyBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicyBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicyBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6883,9 +7234,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDaemonSetAppsV1beta2() returns (DaemonSetBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6896,9 +7250,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataHorizontalPodAutoscalerAutoscalingV1() returns (
                 HorizontalPodAutoscalerBuilderAutoscalingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerBuilderAutoscalingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerBuilderAutoscalingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerBuilderAutoscalingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6908,9 +7265,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataEventCoreV1() returns (EventBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6920,9 +7280,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDeploymentAppsV1() returns (DeploymentBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6932,9 +7295,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataRoleRbacV1beta1() returns (RoleBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6944,9 +7310,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataEvictionPolicyV1beta1() returns (EvictionBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EvictionBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            EvictionBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EvictionBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6956,9 +7325,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataResourceQuotaCoreV1() returns (ResourceQuotaBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ResourceQuotaBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ResourceQuotaBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ResourceQuotaBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6968,9 +7340,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataClusterRoleRbacV1beta1() returns (ClusterRoleBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6980,9 +7355,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataRoleBindingRbacV1beta1() returns (RoleBindingBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBindingBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBindingBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBindingBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -6993,9 +7371,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataSelfSubjectAccessReviewAuthorizationV1beta1() returns (
                 SelfSubjectAccessReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectAccessReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectAccessReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectAccessReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7005,9 +7386,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataNetworkPolicyExtensionsV1beta1() returns (NetworkPolicyBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7018,9 +7402,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataCustomResourceDefinitionApiextensionsV1beta1() returns (
                 CustomResourceDefinitionBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceDefinitionBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceDefinitionBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceDefinitionBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7031,9 +7418,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataHorizontalPodAutoscalerAutoscalingV2beta1() returns (
                 HorizontalPodAutoscalerBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7043,9 +7433,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataReplicaSetExtensionsV1beta1() returns (ReplicaSetBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7055,9 +7448,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDeploymentAppsV1beta1() returns (DeploymentBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7067,9 +7463,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataNamespaceCoreV1() returns (NamespaceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NamespaceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NamespaceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NamespaceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7079,9 +7478,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataLimitRangeCoreV1() returns (LimitRangeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LimitRangeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LimitRangeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LimitRangeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7091,9 +7493,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStorageClassStorageV1beta1() returns (StorageClassBuilderStorageV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StorageClassBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StorageClassBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StorageClassBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7103,9 +7508,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPodTemplateSpecCoreV1() returns (PodTemplateSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodTemplateSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodTemplateSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodTemplateSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7116,9 +7524,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataPodSecurityPolicyExtensionsV1beta1() returns (PodSecurityPolicyBuilderExtensionsV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicyBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicyBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicyBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7128,9 +7539,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataClusterRoleRbacV1() returns (ClusterRoleBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7140,9 +7554,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStatefulSetAppsV1beta1() returns (StatefulSetBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7152,9 +7569,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataTokenReviewAuthenticationV1() returns (TokenReviewBuilderAuthenticationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <TokenReviewBuilderAuthenticationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            TokenReviewBuilderAuthenticationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <TokenReviewBuilderAuthenticationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7164,9 +7584,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPersistentVolumeClaimCoreV1() returns (PersistentVolumeClaimBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeClaimBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeClaimBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeClaimBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7176,9 +7599,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataSecretCoreV1() returns (SecretBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SecretBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SecretBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SecretBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7188,9 +7614,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDaemonSetExtensionsV1beta1() returns (DaemonSetBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7200,9 +7629,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataComponentStatusCoreV1() returns (ComponentStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ComponentStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ComponentStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ComponentStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7212,9 +7644,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataReplicaSetAppsV1() returns (ReplicaSetBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7224,9 +7659,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDeploymentExtensionsV1beta1() returns (DeploymentBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7236,9 +7674,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataReplicaSetAppsV1beta2() returns (ReplicaSetBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7248,9 +7689,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataServiceAccountCoreV1() returns (ServiceAccountBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceAccountBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceAccountBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceAccountBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7260,9 +7704,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataRoleBindingRbacV1() returns (RoleBindingBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBindingBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBindingBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBindingBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7273,9 +7720,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataValidatingWebhookConfigurationAdmissionregistrationV1beta1() returns (
                 ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7285,9 +7735,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataTokenReviewAuthenticationV1beta1() returns (TokenReviewBuilderAuthenticationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <TokenReviewBuilderAuthenticationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            TokenReviewBuilderAuthenticationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <TokenReviewBuilderAuthenticationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7297,9 +7750,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataClusterRoleBindingRbacV1() returns (ClusterRoleBindingBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBindingBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBindingBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBindingBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7309,9 +7765,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataJobTemplateSpecBatchV1beta1() returns (JobTemplateSpecBuilderBatchV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JobTemplateSpecBuilderBatchV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JobTemplateSpecBuilderBatchV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JobTemplateSpecBuilderBatchV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7321,9 +7780,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataControllerRevisionAppsV1beta1() returns (ControllerRevisionBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7333,9 +7795,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataEndpointsCoreV1() returns (EndpointsBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EndpointsBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EndpointsBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EndpointsBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7345,9 +7810,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPodCoreV1() returns (PodBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7357,9 +7825,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataClusterRoleBindingRbacV1beta1() returns (ClusterRoleBindingBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBindingBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBindingBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBindingBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7370,9 +7841,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataLocalSubjectAccessReviewAuthorizationV1() returns (
                 LocalSubjectAccessReviewBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LocalSubjectAccessReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LocalSubjectAccessReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LocalSubjectAccessReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7382,9 +7856,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPodTemplateCoreV1() returns (PodTemplateBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodTemplateBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodTemplateBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodTemplateBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7394,9 +7871,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataControllerRevisionAppsV1() returns (ControllerRevisionBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7406,9 +7886,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataRoleRbacV1() returns (RoleBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7418,9 +7901,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPersistentVolumeCoreV1() returns (PersistentVolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7430,9 +7916,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStatefulSetAppsV1() returns (StatefulSetBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7442,9 +7931,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataJobBatchV1() returns (JobBuilderBatchV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JobBuilderBatchV1>parentBuilder;
+        match (self.fluentBuilder) {
+            JobBuilderBatchV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JobBuilderBatchV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7454,9 +7946,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataServiceCoreV1() returns (ServiceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7466,9 +7961,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataAPIServiceApiregistrationV1() returns (APIServiceBuilderApiregistrationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceBuilderApiregistrationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceBuilderApiregistrationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceBuilderApiregistrationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7479,9 +7977,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataSubjectAccessReviewAuthorizationV1() returns (SubjectAccessReviewBuilderAuthorizationV1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectAccessReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectAccessReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectAccessReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7491,9 +7992,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataEventEventsV1beta1() returns (EventBuilderEventsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventBuilderEventsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventBuilderEventsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventBuilderEventsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7504,9 +8008,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataSelfSubjectAccessReviewAuthorizationV1() returns (
                 SelfSubjectAccessReviewBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectAccessReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectAccessReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectAccessReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7516,9 +8023,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataNodeCoreV1() returns (NodeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7529,9 +8039,12 @@ public type ObjectMetaBuilderMetaV1 object {
 
     public function endMetadataCertificateSigningRequestCertificatesV1beta1() returns (
                 CertificateSigningRequestBuilderCertificatesV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CertificateSigningRequestBuilderCertificatesV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CertificateSigningRequestBuilderCertificatesV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CertificateSigningRequestBuilderCertificatesV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7541,9 +8054,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataBindingCoreV1() returns (BindingBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <BindingBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            BindingBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <BindingBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7553,9 +8069,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataConfigMapCoreV1() returns (ConfigMapBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ConfigMapBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ConfigMapBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ConfigMapBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7565,9 +8084,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPodDisruptionBudgetPolicyV1beta1() returns (PodDisruptionBudgetBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodDisruptionBudgetBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodDisruptionBudgetBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodDisruptionBudgetBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7577,9 +8099,12 @@ public type ObjectMetaBuilderMetaV1 object {
     }
 
     public function endMetadataNetworkPolicyNetworkingV1() returns (NetworkPolicyBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7603,7 +8128,7 @@ public type ObjectMetaBuilderMetaV1 object {
     }
     public function withOwnerReferencesObjectMetaMetaV1() returns OwnerReferenceBuilderMetaV1 {
         self.ownerReferencesBuilder[lengthof ownerReferencesBuilder] = new OwnerReferenceBuilderMetaV1();
-        self.ownerReferencesBuilder[(lengthof ownerReferencesBuilder)].init(self);
+        self.ownerReferencesBuilder[(lengthof ownerReferencesBuilder) - 1].init(self);
         return self.ownerReferencesBuilder[(lengthof ownerReferencesBuilder) - 1];
     }
 
@@ -7705,9 +8230,12 @@ public type DaemonSetConditionBuilderExtensionsV1beta1 object {
     }
 
     public function endConditionsDaemonSetStatusExtensionsV1beta1() returns (DaemonSetStatusBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetStatusBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetStatusBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetStatusBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7776,7 +8304,7 @@ public type ControllerRevisionListBuilderAppsV1beta1 object {
     }
     public function withItemsControllerRevisionListAppsV1beta1() returns ControllerRevisionBuilderAppsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -7807,9 +8335,12 @@ public type DaemonSetStatusBuilderAppsV1beta2 object {
     }
 
     public function endStatusDaemonSetAppsV1beta2() returns (DaemonSetBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7820,7 +8351,7 @@ public type DaemonSetStatusBuilderAppsV1beta2 object {
 
     public function withConditionsDaemonSetStatusAppsV1beta2() returns DaemonSetConditionBuilderAppsV1beta2 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new DaemonSetConditionBuilderAppsV1beta2();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -7885,9 +8416,12 @@ public type NetworkPolicyPortBuilderExtensionsV1beta1 object {
 
     public function endPortsNetworkPolicyIngressRuleExtensionsV1beta1() returns (
                 NetworkPolicyIngressRuleBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyIngressRuleBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyIngressRuleBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyIngressRuleBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7898,9 +8432,12 @@ public type NetworkPolicyPortBuilderExtensionsV1beta1 object {
 
     public function endPortsNetworkPolicyEgressRuleExtensionsV1beta1() returns (
                 NetworkPolicyEgressRuleBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyEgressRuleBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyEgressRuleBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyEgressRuleBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7938,9 +8475,12 @@ public type ExternalDocumentationBuilderApiextensionsV1beta1 object {
 
     public function endExternalDocsJSONSchemaPropsApiextensionsV1beta1() returns (
                 JSONSchemaPropsBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -7978,9 +8518,12 @@ public type FlexPersistentVolumeSourceBuilderCoreV1 object {
     }
 
     public function endFlexVolumePersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8056,7 +8599,7 @@ public type RoleBindingListBuilderRbacV1 object {
     }
     public function withItemsRoleBindingListRbacV1() returns RoleBindingBuilderRbacV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new RoleBindingBuilderRbacV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -8087,9 +8630,12 @@ public type StorageClassBuilderStorageV1 object {
     }
 
     public function endItemsStorageClassListStorageV1() returns (StorageClassListBuilderStorageV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StorageClassListBuilderStorageV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StorageClassListBuilderStorageV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StorageClassListBuilderStorageV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8174,9 +8720,12 @@ public type LimitRangeSpecBuilderCoreV1 object {
     }
 
     public function endSpecLimitRangeCoreV1() returns (LimitRangeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LimitRangeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LimitRangeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LimitRangeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8187,7 +8736,7 @@ public type LimitRangeSpecBuilderCoreV1 object {
 
     public function withLimitsLimitRangeSpecCoreV1() returns LimitRangeItemBuilderCoreV1 {
         self.limitsBuilder[lengthof limitsBuilder] = new LimitRangeItemBuilderCoreV1();
-        self.limitsBuilder[(lengthof limitsBuilder)].init(self);
+        self.limitsBuilder[(lengthof limitsBuilder) - 1].init(self);
         return self.limitsBuilder[(lengthof limitsBuilder) - 1];
     }
 };
@@ -8207,9 +8756,12 @@ public type ReplicaSetConditionBuilderExtensionsV1beta1 object {
 
     public function endConditionsReplicaSetStatusExtensionsV1beta1() returns (ReplicaSetStatusBuilderExtensionsV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetStatusBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetStatusBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetStatusBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8278,7 +8830,7 @@ public type PodListBuilderCoreV1 object {
     }
     public function withItemsPodListCoreV1() returns PodBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PodBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -8307,9 +8859,12 @@ public type AzureDiskVolumeSourceBuilderCoreV1 object {
     }
 
     public function endAzureDiskVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8319,9 +8874,12 @@ public type AzureDiskVolumeSourceBuilderCoreV1 object {
     }
 
     public function endAzureDiskPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8380,9 +8938,12 @@ public type PodSecurityPolicyBuilderPolicyV1beta1 object {
     }
 
     public function endItemsPodSecurityPolicyListPolicyV1beta1() returns (PodSecurityPolicyListBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicyListBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicyListBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicyListBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8555,9 +9116,12 @@ public type ResourceAttributesBuilderAuthorizationV1 object {
 
     public function endResourceAttributesSelfSubjectAccessReviewSpecAuthorizationV1() returns (
                 SelfSubjectAccessReviewSpecBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectAccessReviewSpecBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectAccessReviewSpecBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectAccessReviewSpecBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8568,9 +9132,12 @@ public type ResourceAttributesBuilderAuthorizationV1 object {
 
     public function endResourceAttributesSubjectAccessReviewSpecAuthorizationV1() returns (
                 SubjectAccessReviewSpecBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectAccessReviewSpecBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectAccessReviewSpecBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectAccessReviewSpecBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8632,9 +9199,12 @@ public type ReplicationControllerStatusBuilderCoreV1 object {
     }
 
     public function endStatusReplicationControllerCoreV1() returns (ReplicationControllerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicationControllerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicationControllerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicationControllerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8646,7 +9216,7 @@ public type ReplicationControllerStatusBuilderCoreV1 object {
     public function withConditionsReplicationControllerStatusCoreV1() returns
                                                                           ReplicationControllerConditionBuilderCoreV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicationControllerConditionBuilderCoreV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -8693,9 +9263,12 @@ public type RollingUpdateStatefulSetStrategyBuilderAppsV1beta2 object {
 
     public function endRollingUpdateStatefulSetUpdateStrategyAppsV1beta2() returns (
                 StatefulSetUpdateStrategyBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetUpdateStrategyBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetUpdateStrategyBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetUpdateStrategyBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8727,9 +9300,12 @@ public type StorageOSPersistentVolumeSourceBuilderCoreV1 object {
     }
 
     public function endStorageosPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8793,9 +9369,12 @@ public type DaemonSetBuilderAppsV1beta2 object {
     }
 
     public function endItemsDaemonSetListAppsV1beta2() returns (DaemonSetListBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetListBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetListBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetListBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8876,9 +9455,12 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV1 object {
 
     public function endItemsHorizontalPodAutoscalerListAutoscalingV1() returns (
                 HorizontalPodAutoscalerListBuilderAutoscalingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerListBuilderAutoscalingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerListBuilderAutoscalingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerListBuilderAutoscalingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -8957,9 +9539,12 @@ public type TokenReviewStatusBuilderAuthenticationV1beta1 object {
     }
 
     public function endStatusTokenReviewAuthenticationV1beta1() returns (TokenReviewBuilderAuthenticationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <TokenReviewBuilderAuthenticationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            TokenReviewBuilderAuthenticationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <TokenReviewBuilderAuthenticationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9007,9 +9592,12 @@ public type CinderVolumeSourceBuilderCoreV1 object {
     }
 
     public function endCinderVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9019,9 +9607,12 @@ public type CinderVolumeSourceBuilderCoreV1 object {
     }
 
     public function endCinderPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9079,7 +9670,7 @@ public type ConfigMapListBuilderCoreV1 object {
     }
     public function withItemsConfigMapListCoreV1() returns ConfigMapBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ConfigMapBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -9118,9 +9709,12 @@ public type EventBuilderCoreV1 object {
     }
 
     public function endItemsEventListCoreV1() returns (EventListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9272,9 +9866,12 @@ public type HorizontalPodAutoscalerConditionBuilderAutoscalingV2beta1 object {
 
     public function endConditionsHorizontalPodAutoscalerStatusAutoscalingV2beta1() returns (
                 HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9326,9 +9923,12 @@ public type AllowedHostPathBuilderPolicyV1beta1 object {
 
     public function endAllowedHostPathsPodSecurityPolicySpecPolicyV1beta1() returns (
                 PodSecurityPolicySpecBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9360,9 +9960,12 @@ public type ISCSIPersistentVolumeSourceBuilderCoreV1 object {
     }
 
     public function endIscsiPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9474,7 +10077,7 @@ public type ReplicaSetListBuilderAppsV1 object {
     }
     public function withItemsReplicaSetListAppsV1() returns ReplicaSetBuilderAppsV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderAppsV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -9503,9 +10106,12 @@ public type OwnerReferenceBuilderMetaV1 object {
     }
 
     public function endOwnerReferencesObjectMetaMetaV1() returns (ObjectMetaBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ObjectMetaBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ObjectMetaBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ObjectMetaBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9578,7 +10184,7 @@ public type ComponentStatusListBuilderCoreV1 object {
     }
     public function withItemsComponentStatusListCoreV1() returns ComponentStatusBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ComponentStatusBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -9607,9 +10213,12 @@ public type ContainerImageBuilderCoreV1 object {
     }
 
     public function endImagesNodeStatusCoreV1() returns (NodeStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9656,9 +10265,12 @@ public type StatefulSetSpecBuilderAppsV1beta2 object {
     }
 
     public function endSpecStatefulSetAppsV1beta2() returns (StatefulSetBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9709,7 +10321,7 @@ public type StatefulSetSpecBuilderAppsV1beta2 object {
     public function withVolumeClaimTemplatesStatefulSetSpecAppsV1beta2() returns PersistentVolumeClaimBuilderCoreV1 {
         self.volumeClaimTemplatesBuilder[lengthof volumeClaimTemplatesBuilder] = new PersistentVolumeClaimBuilderCoreV1(
         );
-        self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder)].init(self);
+        self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder) - 1].init(self);
         return self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder) - 1];
     }
 
@@ -9748,9 +10360,12 @@ public type PreconditionsBuilderMetaV1 object {
     }
 
     public function endPreconditionsDeleteOptionsMetaV1() returns (DeleteOptionsBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeleteOptionsBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeleteOptionsBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeleteOptionsBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9784,9 +10399,12 @@ public type ReplicaSetSpecBuilderAppsV1 object {
     }
 
     public function endSpecReplicaSetAppsV1() returns (ReplicaSetBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9847,9 +10465,12 @@ public type AzureFileVolumeSourceBuilderCoreV1 object {
     }
 
     public function endAzureFileVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9913,7 +10534,7 @@ public type ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta
     {
         self.itemsBuilder[lengthof itemsBuilder] = new ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1
         ();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -9945,9 +10566,12 @@ public type RollbackConfigBuilderExtensionsV1beta1 object {
 
     public function endRollbackToDeploymentRollbackExtensionsV1beta1() returns (
                 DeploymentRollbackBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentRollbackBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentRollbackBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentRollbackBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9957,9 +10581,12 @@ public type RollbackConfigBuilderExtensionsV1beta1 object {
     }
 
     public function endRollbackToDeploymentSpecExtensionsV1beta1() returns (DeploymentSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -9990,9 +10617,12 @@ public type AllowedHostPathBuilderExtensionsV1beta1 object {
 
     public function endAllowedHostPathsPodSecurityPolicySpecExtensionsV1beta1() returns (
                 PodSecurityPolicySpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10040,7 +10670,7 @@ public type LimitRangeListBuilderCoreV1 object {
     }
     public function withItemsLimitRangeListCoreV1() returns LimitRangeBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new LimitRangeBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -10087,7 +10717,7 @@ public type VolumeAttachmentListBuilderStorageV1beta1 object {
     }
     public function withItemsVolumeAttachmentListStorageV1beta1() returns VolumeAttachmentBuilderStorageV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new VolumeAttachmentBuilderStorageV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -10118,9 +10748,12 @@ public type DeploymentStatusBuilderAppsV1beta1 object {
     }
 
     public function endStatusDeploymentAppsV1beta1() returns (DeploymentBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10131,7 +10764,7 @@ public type DeploymentStatusBuilderAppsV1beta1 object {
 
     public function withConditionsDeploymentStatusAppsV1beta1() returns DeploymentConditionBuilderAppsV1beta1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderAppsV1beta1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -10203,7 +10836,7 @@ public type NodeListBuilderCoreV1 object {
     }
     public function withItemsNodeListCoreV1() returns NodeBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new NodeBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -10240,9 +10873,12 @@ public type StatefulSetSpecBuilderAppsV1beta1 object {
     }
 
     public function endSpecStatefulSetAppsV1beta1() returns (StatefulSetBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10293,7 +10929,7 @@ public type StatefulSetSpecBuilderAppsV1beta1 object {
     public function withVolumeClaimTemplatesStatefulSetSpecAppsV1beta1() returns PersistentVolumeClaimBuilderCoreV1 {
         self.volumeClaimTemplatesBuilder[lengthof volumeClaimTemplatesBuilder] = new PersistentVolumeClaimBuilderCoreV1(
         );
-        self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder)].init(self);
+        self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder) - 1].init(self);
         return self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder) - 1];
     }
 
@@ -10338,9 +10974,12 @@ public type DeploymentSpecBuilderAppsV1 object {
     }
 
     public function endSpecDeploymentAppsV1() returns (DeploymentBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10433,9 +11072,12 @@ public type VolumeAttachmentStatusBuilderStorageV1beta1 object {
     }
 
     public function endStatusVolumeAttachmentStorageV1beta1() returns (VolumeAttachmentBuilderStorageV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeAttachmentBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeAttachmentBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeAttachmentBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10497,9 +11139,12 @@ public type GlusterfsVolumeSourceBuilderCoreV1 object {
     }
 
     public function endGlusterfsVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10509,9 +11154,12 @@ public type GlusterfsVolumeSourceBuilderCoreV1 object {
     }
 
     public function endGlusterfsPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10557,9 +11205,12 @@ public type DeploymentBuilderAppsV1 object {
     }
 
     public function endItemsDeploymentListAppsV1() returns (DeploymentListBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentListBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentListBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentListBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10637,9 +11288,12 @@ public type RoleBuilderRbacV1beta1 object {
     }
 
     public function endItemsRoleListRbacV1beta1() returns (RoleListBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleListBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleListBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleListBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10663,7 +11317,7 @@ public type RoleBuilderRbacV1beta1 object {
     }
     public function withRulesRoleRbacV1beta1() returns PolicyRuleBuilderRbacV1beta1 {
         self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1beta1();
-        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
+        self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
 
@@ -10694,9 +11348,12 @@ public type VolumeNodeAffinityBuilderCoreV1 object {
     }
 
     public function endNodeAffinityPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10734,9 +11391,12 @@ public type DaemonSetConditionBuilderAppsV1 object {
     }
 
     public function endConditionsDaemonSetStatusAppsV1() returns (DaemonSetStatusBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetStatusBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetStatusBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetStatusBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10787,9 +11447,12 @@ public type NonResourceAttributesBuilderAuthorizationV1 object {
 
     public function endNonResourceAttributesSelfSubjectAccessReviewSpecAuthorizationV1() returns (
                 SelfSubjectAccessReviewSpecBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectAccessReviewSpecBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectAccessReviewSpecBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectAccessReviewSpecBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10800,9 +11463,12 @@ public type NonResourceAttributesBuilderAuthorizationV1 object {
 
     public function endNonResourceAttributesSubjectAccessReviewSpecAuthorizationV1() returns (
                 SubjectAccessReviewSpecBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectAccessReviewSpecBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectAccessReviewSpecBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectAccessReviewSpecBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -10891,9 +11557,12 @@ public type VolumeBuilderCoreV1 object {
     }
 
     public function endVolumesPodSpecCoreV1() returns (PodSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11274,9 +11943,12 @@ public type EventSeriesBuilderEventsV1beta1 object {
     }
 
     public function endSeriesEventEventsV1beta1() returns (EventBuilderEventsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventBuilderEventsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventBuilderEventsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventBuilderEventsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11318,9 +11990,12 @@ public type SecretProjectionBuilderCoreV1 object {
     }
 
     public function endSecretVolumeProjectionCoreV1() returns (VolumeProjectionBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeProjectionBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeProjectionBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeProjectionBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11331,7 +12006,7 @@ public type SecretProjectionBuilderCoreV1 object {
 
     public function withItemsSecretProjectionCoreV1() returns KeyToPathBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -11360,9 +12035,12 @@ public type SubjectBuilderRbacV1beta1 object {
     }
 
     public function endSubjectsRoleBindingRbacV1beta1() returns (RoleBindingBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBindingBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBindingBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBindingBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11372,9 +12050,12 @@ public type SubjectBuilderRbacV1beta1 object {
     }
 
     public function endSubjectsClusterRoleBindingRbacV1beta1() returns (ClusterRoleBindingBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBindingBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBindingBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBindingBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11475,9 +12156,12 @@ public type AllowedFlexVolumeBuilderExtensionsV1beta1 object {
 
     public function endAllowedFlexVolumesPodSecurityPolicySpecExtensionsV1beta1() returns (
                 PodSecurityPolicySpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11513,9 +12197,12 @@ public type ResourceQuotaBuilderCoreV1 object {
     }
 
     public function endItemsResourceQuotaListCoreV1() returns (ResourceQuotaListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ResourceQuotaListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ResourceQuotaListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ResourceQuotaListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11593,9 +12280,12 @@ public type InitializersBuilderMetaV1 object {
     }
 
     public function endInitializersObjectMetaMetaV1() returns (ObjectMetaBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ObjectMetaBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ObjectMetaBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ObjectMetaBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11619,7 +12309,7 @@ public type InitializersBuilderMetaV1 object {
     }
     public function withPendingInitializersMetaV1() returns InitializerBuilderMetaV1 {
         self.pendingBuilder[lengthof pendingBuilder] = new InitializerBuilderMetaV1();
-        self.pendingBuilder[(lengthof pendingBuilder)].init(self);
+        self.pendingBuilder[(lengthof pendingBuilder) - 1].init(self);
         return self.pendingBuilder[(lengthof pendingBuilder) - 1];
     }
 };
@@ -11644,9 +12334,12 @@ public type ClusterRoleBuilderRbacV1beta1 object {
     }
 
     public function endItemsClusterRoleListRbacV1beta1() returns (ClusterRoleListBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleListBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleListBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleListBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11683,7 +12376,7 @@ public type ClusterRoleBuilderRbacV1beta1 object {
     }
     public function withRulesClusterRoleRbacV1beta1() returns PolicyRuleBuilderRbacV1beta1 {
         self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1beta1();
-        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
+        self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
 
@@ -11718,9 +12411,12 @@ public type HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 object {
 
     public function endStatusHorizontalPodAutoscalerAutoscalingV2beta1() returns (
                 HorizontalPodAutoscalerBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11734,14 +12430,14 @@ public type HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 object {
     {
         self.conditionsBuilder[lengthof conditionsBuilder] = new
         HorizontalPodAutoscalerConditionBuilderAutoscalingV2beta1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
     public function withCurrentMetricsHorizontalPodAutoscalerStatusAutoscalingV2beta1() returns
                                                                                             MetricStatusBuilderAutoscalingV2beta1
     {
         self.currentMetricsBuilder[lengthof currentMetricsBuilder] = new MetricStatusBuilderAutoscalingV2beta1();
-        self.currentMetricsBuilder[(lengthof currentMetricsBuilder)].init(self);
+        self.currentMetricsBuilder[(lengthof currentMetricsBuilder) - 1].init(self);
         return self.currentMetricsBuilder[(lengthof currentMetricsBuilder) - 1];
     }
 
@@ -11786,9 +12482,12 @@ public type HTTPGetActionBuilderCoreV1 object {
     }
 
     public function endHttpGetProbeCoreV1() returns (ProbeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ProbeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ProbeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ProbeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11798,9 +12497,12 @@ public type HTTPGetActionBuilderCoreV1 object {
     }
 
     public function endHttpGetHandlerCoreV1() returns (HandlerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HandlerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            HandlerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HandlerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11811,7 +12513,7 @@ public type HTTPGetActionBuilderCoreV1 object {
 
     public function withHttpHeadersHTTPGetActionCoreV1() returns HTTPHeaderBuilderCoreV1 {
         self.httpHeadersBuilder[lengthof httpHeadersBuilder] = new HTTPHeaderBuilderCoreV1();
-        self.httpHeadersBuilder[(lengthof httpHeadersBuilder)].init(self);
+        self.httpHeadersBuilder[(lengthof httpHeadersBuilder) - 1].init(self);
         return self.httpHeadersBuilder[(lengthof httpHeadersBuilder) - 1];
     }
 
@@ -11852,9 +12554,12 @@ public type NodeSelectorBuilderCoreV1 object {
     }
 
     public function endRequiredVolumeNodeAffinityCoreV1() returns (VolumeNodeAffinityBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeNodeAffinityBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeNodeAffinityBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeNodeAffinityBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11865,9 +12570,12 @@ public type NodeSelectorBuilderCoreV1 object {
 
     public function endRequiredDuringSchedulingIgnoredDuringExecutionNodeAffinityCoreV1() returns (
                 NodeAffinityBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeAffinityBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeAffinityBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeAffinityBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -11878,7 +12586,7 @@ public type NodeSelectorBuilderCoreV1 object {
 
     public function withNodeSelectorTermsNodeSelectorCoreV1() returns NodeSelectorTermBuilderCoreV1 {
         self.nodeSelectorTermsBuilder[lengthof nodeSelectorTermsBuilder] = new NodeSelectorTermBuilderCoreV1();
-        self.nodeSelectorTermsBuilder[(lengthof nodeSelectorTermsBuilder)].init(self);
+        self.nodeSelectorTermsBuilder[(lengthof nodeSelectorTermsBuilder) - 1].init(self);
         return self.nodeSelectorTermsBuilder[(lengthof nodeSelectorTermsBuilder) - 1];
     }
 };
@@ -11915,7 +12623,7 @@ public type EventListBuilderEventsV1beta1 object {
     }
     public function withItemsEventListEventsV1beta1() returns EventBuilderEventsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new EventBuilderEventsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -11946,9 +12654,12 @@ public type StorageOSVolumeSourceBuilderCoreV1 object {
     }
 
     public function endStorageosVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12007,9 +12718,12 @@ public type LabelSelectorRequirementBuilderMetaV1 object {
     }
 
     public function endMatchExpressionsLabelSelectorMetaV1() returns (LabelSelectorBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LabelSelectorBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LabelSelectorBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LabelSelectorBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12055,9 +12769,12 @@ public type ResourceRuleBuilderAuthorizationV1 object {
 
     public function endResourceRulesSubjectRulesReviewStatusAuthorizationV1() returns (
                 SubjectRulesReviewStatusBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectRulesReviewStatusBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectRulesReviewStatusBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectRulesReviewStatusBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12124,9 +12841,12 @@ public type DownwardAPIProjectionBuilderCoreV1 object {
     }
 
     public function endDownwardAPIVolumeProjectionCoreV1() returns (VolumeProjectionBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeProjectionBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeProjectionBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeProjectionBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12137,7 +12857,7 @@ public type DownwardAPIProjectionBuilderCoreV1 object {
 
     public function withItemsDownwardAPIProjectionCoreV1() returns DownwardAPIVolumeFileBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DownwardAPIVolumeFileBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 };
@@ -12174,7 +12894,7 @@ public type StorageClassListBuilderStorageV1 object {
     }
     public function withItemsStorageClassListStorageV1() returns StorageClassBuilderStorageV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new StorageClassBuilderStorageV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -12209,9 +12929,12 @@ public type RoleBindingBuilderRbacV1beta1 object {
     }
 
     public function endItemsRoleBindingListRbacV1beta1() returns (RoleBindingListBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBindingListBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBindingListBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBindingListBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12248,7 +12971,7 @@ public type RoleBindingBuilderRbacV1beta1 object {
     }
     public function withSubjectsRoleBindingRbacV1beta1() returns SubjectBuilderRbacV1beta1 {
         self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1beta1();
-        self.subjectsBuilder[(lengthof subjectsBuilder)].init(self);
+        self.subjectsBuilder[(lengthof subjectsBuilder) - 1].init(self);
         return self.subjectsBuilder[(lengthof subjectsBuilder) - 1];
     }
 
@@ -12279,9 +13002,12 @@ public type DaemonSetUpdateStrategyBuilderAppsV1 object {
     }
 
     public function endUpdateStrategyDaemonSetSpecAppsV1() returns (DaemonSetSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12329,9 +13055,12 @@ public type NetworkPolicyIngressRuleBuilderExtensionsV1beta1 object {
     }
 
     public function endIngressNetworkPolicySpecExtensionsV1beta1() returns (NetworkPolicySpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicySpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicySpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicySpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12343,13 +13072,13 @@ public type NetworkPolicyIngressRuleBuilderExtensionsV1beta1 object {
     public function with_fromNetworkPolicyIngressRuleExtensionsV1beta1() returns
                                                                              NetworkPolicyPeerBuilderExtensionsV1beta1 {
         self._fromBuilder[lengthof _fromBuilder] = new NetworkPolicyPeerBuilderExtensionsV1beta1();
-        self._fromBuilder[(lengthof _fromBuilder)].init(self);
+        self._fromBuilder[(lengthof _fromBuilder) - 1].init(self);
         return self._fromBuilder[(lengthof _fromBuilder) - 1];
     }
     public function withPortsNetworkPolicyIngressRuleExtensionsV1beta1() returns
                                                                              NetworkPolicyPortBuilderExtensionsV1beta1 {
         self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderExtensionsV1beta1();
-        self.portsBuilder[(lengthof portsBuilder)].init(self);
+        self.portsBuilder[(lengthof portsBuilder) - 1].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
 };
@@ -12447,9 +13176,12 @@ public type NetworkPolicyBuilderExtensionsV1beta1 object {
     }
 
     public function endItemsNetworkPolicyListExtensionsV1beta1() returns (NetworkPolicyListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12510,9 +13242,12 @@ public type RoleRefBuilderRbacV1beta1 object {
     }
 
     public function endRoleRefRoleBindingRbacV1beta1() returns (RoleBindingBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBindingBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBindingBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBindingBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12522,9 +13257,12 @@ public type RoleRefBuilderRbacV1beta1 object {
     }
 
     public function endRoleRefClusterRoleBindingRbacV1beta1() returns (ClusterRoleBindingBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBindingBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBindingBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBindingBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12564,9 +13302,12 @@ public type NodeSystemInfoBuilderCoreV1 object {
     }
 
     public function endNodeInfoNodeStatusCoreV1() returns (NodeStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12642,9 +13383,12 @@ public type ServerAddressByClientCIDRBuilderMetaV1 object {
     }
 
     public function endServerAddressByClientCIDRsAPIVersionsMetaV1() returns (APIVersionsBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIVersionsBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIVersionsBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIVersionsBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12654,9 +13398,12 @@ public type ServerAddressByClientCIDRBuilderMetaV1 object {
     }
 
     public function endServerAddressByClientCIDRsAPIGroupMetaV1() returns (APIGroupBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIGroupBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIGroupBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIGroupBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12695,9 +13442,12 @@ public type StatusBuilderMetaV1 object {
     }
 
     public function endResultInitializersMetaV1() returns (InitializersBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <InitializersBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            InitializersBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <InitializersBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12787,9 +13537,12 @@ public type MetricSpecBuilderAutoscalingV2beta1 object {
 
     public function endMetricsHorizontalPodAutoscalerSpecAutoscalingV2beta1() returns (
                 HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12880,9 +13633,12 @@ public type CustomResourceDefinitionBuilderApiextensionsV1beta1 object {
 
     public function endItemsCustomResourceDefinitionListApiextensionsV1beta1() returns (
                 CustomResourceDefinitionListBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceDefinitionListBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceDefinitionListBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceDefinitionListBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -12969,9 +13725,12 @@ public type StatefulSetSpecBuilderAppsV1 object {
     }
 
     public function endSpecStatefulSetAppsV1() returns (StatefulSetBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13022,7 +13781,7 @@ public type StatefulSetSpecBuilderAppsV1 object {
     public function withVolumeClaimTemplatesStatefulSetSpecAppsV1() returns PersistentVolumeClaimBuilderCoreV1 {
         self.volumeClaimTemplatesBuilder[lengthof volumeClaimTemplatesBuilder] = new PersistentVolumeClaimBuilderCoreV1(
         );
-        self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder)].init(self);
+        self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder) - 1].init(self);
         return self.volumeClaimTemplatesBuilder[(lengthof volumeClaimTemplatesBuilder) - 1];
     }
 
@@ -13067,9 +13826,12 @@ public type ProbeBuilderCoreV1 object {
     }
 
     public function endLivenessProbeContainerCoreV1() returns (ContainerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13079,9 +13841,12 @@ public type ProbeBuilderCoreV1 object {
     }
 
     public function endReadinessProbeContainerCoreV1() returns (ContainerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13172,9 +13937,12 @@ public type ScaleIOVolumeSourceBuilderCoreV1 object {
     }
 
     public function endScaleIOVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13259,9 +14027,12 @@ public type ReplicaSetStatusBuilderExtensionsV1beta1 object {
     }
 
     public function endStatusReplicaSetExtensionsV1beta1() returns (ReplicaSetBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13273,7 +14044,7 @@ public type ReplicaSetStatusBuilderExtensionsV1beta1 object {
     public function withConditionsReplicaSetStatusExtensionsV1beta1() returns
                                                                           ReplicaSetConditionBuilderExtensionsV1beta1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicaSetConditionBuilderExtensionsV1beta1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -13320,9 +14091,12 @@ public type PodsMetricStatusBuilderAutoscalingV2beta1 object {
     }
 
     public function endPodsMetricStatusAutoscalingV2beta1() returns (MetricStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13365,9 +14139,12 @@ public type LoadBalancerIngressBuilderCoreV1 object {
     }
 
     public function endIngressLoadBalancerStatusCoreV1() returns (LoadBalancerStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LoadBalancerStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LoadBalancerStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LoadBalancerStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13408,9 +14185,12 @@ public type DaemonSetSpecBuilderExtensionsV1beta1 object {
     }
 
     public function endSpecDaemonSetExtensionsV1beta1() returns (DaemonSetBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13492,9 +14272,12 @@ public type HostPortRangeBuilderPolicyV1beta1 object {
 
     public function endHostPortsPodSecurityPolicySpecPolicyV1beta1() returns (PodSecurityPolicySpecBuilderPolicyV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13530,9 +14313,12 @@ public type GroupVersionForDiscoveryBuilderMetaV1 object {
     }
 
     public function endPreferredVersionAPIGroupMetaV1() returns (APIGroupBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIGroupBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIGroupBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIGroupBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13542,9 +14328,12 @@ public type GroupVersionForDiscoveryBuilderMetaV1 object {
     }
 
     public function endVersionsAPIGroupMetaV1() returns (APIGroupBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIGroupBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIGroupBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIGroupBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13587,9 +14376,12 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV2beta1 object {
 
     public function endItemsHorizontalPodAutoscalerListAutoscalingV2beta1() returns (
                 HorizontalPodAutoscalerListBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerListBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerListBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerListBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13669,9 +14461,12 @@ public type PodsMetricSourceBuilderAutoscalingV2beta1 object {
     }
 
     public function endPodsMetricSpecAutoscalingV2beta1() returns (MetricSpecBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MetricSpecBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MetricSpecBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MetricSpecBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13714,9 +14509,12 @@ public type GCEPersistentDiskVolumeSourceBuilderCoreV1 object {
     }
 
     public function endGcePersistentDiskVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13726,9 +14524,12 @@ public type GCEPersistentDiskVolumeSourceBuilderCoreV1 object {
     }
 
     public function endGcePersistentDiskPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13777,9 +14578,12 @@ public type NetworkPolicyIngressRuleBuilderNetworkingV1 object {
     }
 
     public function endIngressNetworkPolicySpecNetworkingV1() returns (NetworkPolicySpecBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicySpecBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicySpecBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicySpecBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13790,12 +14594,12 @@ public type NetworkPolicyIngressRuleBuilderNetworkingV1 object {
 
     public function with_fromNetworkPolicyIngressRuleNetworkingV1() returns NetworkPolicyPeerBuilderNetworkingV1 {
         self._fromBuilder[lengthof _fromBuilder] = new NetworkPolicyPeerBuilderNetworkingV1();
-        self._fromBuilder[(lengthof _fromBuilder)].init(self);
+        self._fromBuilder[(lengthof _fromBuilder) - 1].init(self);
         return self._fromBuilder[(lengthof _fromBuilder) - 1];
     }
     public function withPortsNetworkPolicyIngressRuleNetworkingV1() returns NetworkPolicyPortBuilderNetworkingV1 {
         self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderNetworkingV1();
-        self.portsBuilder[(lengthof portsBuilder)].init(self);
+        self.portsBuilder[(lengthof portsBuilder) - 1].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
 };
@@ -13832,7 +14636,7 @@ public type DaemonSetListBuilderAppsV1beta2 object {
     }
     public function withItemsDaemonSetListAppsV1beta2() returns DaemonSetBuilderAppsV1beta2 {
         self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderAppsV1beta2();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -13869,9 +14673,12 @@ public type EnvVarSourceBuilderCoreV1 object {
     }
 
     public function endValueFromEnvVarCoreV1() returns (EnvVarBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EnvVarBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EnvVarBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EnvVarBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -13966,7 +14773,7 @@ public type ReplicaSetListBuilderAppsV1beta2 object {
     }
     public function withItemsReplicaSetListAppsV1beta2() returns ReplicaSetBuilderAppsV1beta2 {
         self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderAppsV1beta2();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -13995,9 +14802,12 @@ public type RawExtensionBuilderPkgRuntime object {
     }
 
     public function endDataControllerRevisionAppsV1beta2() returns (ControllerRevisionBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14007,9 +14817,12 @@ public type RawExtensionBuilderPkgRuntime object {
     }
 
     public function end_objectWatchEventMetaV1() returns (WatchEventBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <WatchEventBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            WatchEventBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <WatchEventBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14019,9 +14832,12 @@ public type RawExtensionBuilderPkgRuntime object {
     }
 
     public function endDataControllerRevisionAppsV1beta1() returns (ControllerRevisionBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14031,9 +14847,12 @@ public type RawExtensionBuilderPkgRuntime object {
     }
 
     public function endDataControllerRevisionAppsV1() returns (ControllerRevisionBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14069,9 +14888,12 @@ public type ReplicaSetBuilderExtensionsV1beta1 object {
     }
 
     public function endItemsReplicaSetListExtensionsV1beta1() returns (ReplicaSetListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14150,9 +14972,12 @@ public type JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1 object {
 
     public function endAdditionalItemsJSONSchemaPropsApiextensionsV1beta1() returns (
                 JSONSchemaPropsBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14163,9 +14988,12 @@ public type JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1 object {
 
     public function endAdditionalPropertiesJSONSchemaPropsApiextensionsV1beta1() returns (
                 JSONSchemaPropsBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14222,9 +15050,12 @@ public type NodeStatusBuilderCoreV1 object {
     }
 
     public function endStatusNodeCoreV1() returns (NodeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14261,22 +15092,22 @@ public type NodeStatusBuilderCoreV1 object {
     }
     public function withAddressesNodeStatusCoreV1() returns NodeAddressBuilderCoreV1 {
         self.addressesBuilder[lengthof addressesBuilder] = new NodeAddressBuilderCoreV1();
-        self.addressesBuilder[(lengthof addressesBuilder)].init(self);
+        self.addressesBuilder[(lengthof addressesBuilder) - 1].init(self);
         return self.addressesBuilder[(lengthof addressesBuilder) - 1];
     }
     public function withConditionsNodeStatusCoreV1() returns NodeConditionBuilderCoreV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new NodeConditionBuilderCoreV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
     public function withImagesNodeStatusCoreV1() returns ContainerImageBuilderCoreV1 {
         self.imagesBuilder[lengthof imagesBuilder] = new ContainerImageBuilderCoreV1();
-        self.imagesBuilder[(lengthof imagesBuilder)].init(self);
+        self.imagesBuilder[(lengthof imagesBuilder) - 1].init(self);
         return self.imagesBuilder[(lengthof imagesBuilder) - 1];
     }
     public function withVolumesAttachedNodeStatusCoreV1() returns AttachedVolumeBuilderCoreV1 {
         self.volumesAttachedBuilder[lengthof volumesAttachedBuilder] = new AttachedVolumeBuilderCoreV1();
-        self.volumesAttachedBuilder[(lengthof volumesAttachedBuilder)].init(self);
+        self.volumesAttachedBuilder[(lengthof volumesAttachedBuilder) - 1].init(self);
         return self.volumesAttachedBuilder[(lengthof volumesAttachedBuilder) - 1];
     }
 
@@ -14320,9 +15151,12 @@ public type ReplicaSetConditionBuilderAppsV1beta2 object {
     }
 
     public function endConditionsReplicaSetStatusAppsV1beta2() returns (ReplicaSetStatusBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetStatusBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetStatusBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetStatusBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14373,9 +15207,12 @@ public type EventSourceBuilderCoreV1 object {
     }
 
     public function endSourceEventCoreV1() returns (EventBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14385,9 +15222,12 @@ public type EventSourceBuilderCoreV1 object {
     }
 
     public function endDeprecatedSourceEventEventsV1beta1() returns (EventBuilderEventsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventBuilderEventsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventBuilderEventsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventBuilderEventsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14440,7 +15280,7 @@ public type StatefulSetListBuilderAppsV1beta1 object {
     }
     public function withItemsStatefulSetListAppsV1beta1() returns StatefulSetBuilderAppsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -14475,9 +15315,12 @@ public type DeploymentBuilderAppsV1beta1 object {
     }
 
     public function endItemsDeploymentListAppsV1beta1() returns (DeploymentListBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentListBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentListBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentListBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14553,9 +15396,12 @@ public type DeploymentStrategyBuilderAppsV1beta1 object {
     }
 
     public function endStrategyDeploymentSpecAppsV1beta1() returns (DeploymentSpecBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14604,9 +15450,12 @@ public type NamespaceBuilderCoreV1 object {
     }
 
     public function endItemsNamespaceListCoreV1() returns (NamespaceListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NamespaceListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NamespaceListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NamespaceListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14686,9 +15535,12 @@ public type DeploymentSpecBuilderAppsV1beta2 object {
     }
 
     public function endSpecDeploymentAppsV1beta2() returns (DeploymentBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14781,9 +15633,12 @@ public type CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 object {
 
     public function endNamesCustomResourceDefinitionSpecApiextensionsV1beta1() returns (
                 CustomResourceDefinitionSpecBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceDefinitionSpecBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceDefinitionSpecBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14794,9 +15649,12 @@ public type CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 object {
 
     public function endAcceptedNamesCustomResourceDefinitionStatusApiextensionsV1beta1() returns (
                 CustomResourceDefinitionStatusBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceDefinitionStatusBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceDefinitionStatusBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14878,9 +15736,12 @@ public type DeploymentSpecBuilderExtensionsV1beta1 object {
     }
 
     public function endSpecDeploymentExtensionsV1beta1() returns (DeploymentBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -14984,9 +15845,12 @@ public type CapabilitiesBuilderCoreV1 object {
     }
 
     public function endCapabilitiesSecurityContextCoreV1() returns (SecurityContextBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SecurityContextBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SecurityContextBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SecurityContextBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15033,9 +15897,12 @@ public type LimitRangeBuilderCoreV1 object {
     }
 
     public function endItemsLimitRangeListCoreV1() returns (LimitRangeListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LimitRangeListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LimitRangeListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LimitRangeListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15100,9 +15967,12 @@ public type ReplicaSetSpecBuilderExtensionsV1beta1 object {
     }
 
     public function endSpecReplicaSetExtensionsV1beta1() returns (ReplicaSetBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15167,9 +16037,12 @@ public type ReplicaSetSpecBuilderAppsV1beta2 object {
     }
 
     public function endSpecReplicaSetAppsV1beta2() returns (ReplicaSetBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15234,9 +16107,12 @@ public type NetworkPolicyEgressRuleBuilderExtensionsV1beta1 object {
     }
 
     public function endEgressNetworkPolicySpecExtensionsV1beta1() returns (NetworkPolicySpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicySpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicySpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicySpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15248,12 +16124,12 @@ public type NetworkPolicyEgressRuleBuilderExtensionsV1beta1 object {
     public function withPortsNetworkPolicyEgressRuleExtensionsV1beta1() returns
                                                                             NetworkPolicyPortBuilderExtensionsV1beta1 {
         self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderExtensionsV1beta1();
-        self.portsBuilder[(lengthof portsBuilder)].init(self);
+        self.portsBuilder[(lengthof portsBuilder) - 1].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
     public function withToNetworkPolicyEgressRuleExtensionsV1beta1() returns NetworkPolicyPeerBuilderExtensionsV1beta1 {
         self.toBuilder[lengthof toBuilder] = new NetworkPolicyPeerBuilderExtensionsV1beta1();
-        self.toBuilder[(lengthof toBuilder)].init(self);
+        self.toBuilder[(lengthof toBuilder) - 1].init(self);
         return self.toBuilder[(lengthof toBuilder) - 1];
     }
 };
@@ -15272,9 +16148,12 @@ public type PersistentVolumeClaimVolumeSourceBuilderCoreV1 object {
     }
 
     public function endPersistentVolumeClaimVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15315,9 +16194,12 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1 object {
 
     public function endSpecSelfSubjectAccessReviewAuthorizationV1() returns (
                 SelfSubjectAccessReviewBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectAccessReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectAccessReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectAccessReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15378,9 +16260,12 @@ public type AffinityBuilderCoreV1 object {
     }
 
     public function endAffinityPodSpecCoreV1() returns (PodSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15447,9 +16332,12 @@ public type FSGroupStrategyOptionsBuilderExtensionsV1beta1 object {
 
     public function endFsGroupPodSecurityPolicySpecExtensionsV1beta1() returns (
                 PodSecurityPolicySpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15460,7 +16348,7 @@ public type FSGroupStrategyOptionsBuilderExtensionsV1beta1 object {
 
     public function withRangesFSGroupStrategyOptionsExtensionsV1beta1() returns IDRangeBuilderExtensionsV1beta1 {
         self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderExtensionsV1beta1();
-        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
+        self.rangesBuilder[(lengthof rangesBuilder) - 1].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -15486,9 +16374,12 @@ public type StorageClassBuilderStorageV1beta1 object {
     }
 
     public function endItemsStorageClassListStorageV1beta1() returns (StorageClassListBuilderStorageV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StorageClassListBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StorageClassListBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StorageClassListBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15575,9 +16466,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateStatefulSetSpecAppsV1beta2() returns (StatefulSetSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15587,9 +16481,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateReplicaSetSpecAppsV1() returns (ReplicaSetSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15599,9 +16496,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateStatefulSetSpecAppsV1beta1() returns (StatefulSetSpecBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15611,9 +16511,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateDeploymentSpecAppsV1() returns (DeploymentSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15623,9 +16526,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateStatefulSetSpecAppsV1() returns (StatefulSetSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15635,9 +16541,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateDaemonSetSpecExtensionsV1beta1() returns (DaemonSetSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15647,9 +16556,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateDeploymentSpecAppsV1beta2() returns (DeploymentSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15659,9 +16571,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateDeploymentSpecExtensionsV1beta1() returns (DeploymentSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15671,9 +16586,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateReplicaSetSpecExtensionsV1beta1() returns (ReplicaSetSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15683,9 +16601,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateReplicaSetSpecAppsV1beta2() returns (ReplicaSetSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15695,9 +16616,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateJobSpecBatchV1() returns (JobSpecBuilderBatchV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JobSpecBuilderBatchV1>parentBuilder;
+        match (self.fluentBuilder) {
+            JobSpecBuilderBatchV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JobSpecBuilderBatchV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15707,9 +16631,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateDaemonSetSpecAppsV1beta2() returns (DaemonSetSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15719,9 +16646,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateDeploymentSpecAppsV1beta1() returns (DeploymentSpecBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15731,9 +16661,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplatePodTemplateCoreV1() returns (PodTemplateBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodTemplateBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodTemplateBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodTemplateBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15743,9 +16676,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateDaemonSetSpecAppsV1() returns (DaemonSetSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15755,9 +16691,12 @@ public type PodTemplateSpecBuilderCoreV1 object {
     }
 
     public function endTemplateReplicationControllerSpecCoreV1() returns (ReplicationControllerSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicationControllerSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicationControllerSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicationControllerSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15826,7 +16765,7 @@ public type ReplicationControllerListBuilderCoreV1 object {
     }
     public function withItemsReplicationControllerListCoreV1() returns ReplicationControllerBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ReplicationControllerBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -15855,9 +16794,12 @@ public type NodeAddressBuilderCoreV1 object {
     }
 
     public function endAddressesNodeStatusCoreV1() returns (NodeStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15892,9 +16834,12 @@ public type RollingUpdateDaemonSetBuilderAppsV1 object {
     }
 
     public function endRollingUpdateDaemonSetUpdateStrategyAppsV1() returns (DaemonSetUpdateStrategyBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetUpdateStrategyBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetUpdateStrategyBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetUpdateStrategyBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15929,9 +16874,12 @@ public type PodSecurityPolicyBuilderExtensionsV1beta1 object {
 
     public function endItemsPodSecurityPolicyListExtensionsV1beta1() returns (
                 PodSecurityPolicyListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicyListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicyListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicyListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -15994,9 +16942,12 @@ public type RBDVolumeSourceBuilderCoreV1 object {
     }
 
     public function endRbdVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16092,7 +17043,7 @@ public type StatefulSetListBuilderAppsV1 object {
     }
     public function withItemsStatefulSetListAppsV1() returns StatefulSetBuilderAppsV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -16121,9 +17072,12 @@ public type PodDNSConfigOptionBuilderCoreV1 object {
     }
 
     public function endOptionsPodDNSConfigCoreV1() returns (PodDNSConfigBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodDNSConfigBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodDNSConfigBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodDNSConfigBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16164,9 +17118,12 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
 
     public function endSpecSelfSubjectAccessReviewAuthorizationV1beta1() returns (
                 SelfSubjectAccessReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectAccessReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectAccessReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectAccessReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16221,9 +17178,12 @@ public type PortworxVolumeSourceBuilderCoreV1 object {
     }
 
     public function endPortworxVolumeVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16233,9 +17193,12 @@ public type PortworxVolumeSourceBuilderCoreV1 object {
     }
 
     public function endPortworxVolumePersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16296,7 +17259,7 @@ public type CertificateSigningRequestListBuilderCertificatesV1beta1 object {
                                                                                     CertificateSigningRequestBuilderCertificatesV1beta1
     {
         self.itemsBuilder[lengthof itemsBuilder] = new CertificateSigningRequestBuilderCertificatesV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -16326,9 +17289,12 @@ public type NamespaceSpecBuilderCoreV1 object {
     }
 
     public function endSpecNamespaceCoreV1() returns (NamespaceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NamespaceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NamespaceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NamespaceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16365,9 +17331,12 @@ public type DeploymentStrategyBuilderAppsV1 object {
     }
 
     public function endStrategyDeploymentSpecAppsV1() returns (DeploymentSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16412,9 +17381,12 @@ public type FSGroupStrategyOptionsBuilderPolicyV1beta1 object {
     }
 
     public function endFsGroupPodSecurityPolicySpecPolicyV1beta1() returns (PodSecurityPolicySpecBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16425,7 +17397,7 @@ public type FSGroupStrategyOptionsBuilderPolicyV1beta1 object {
 
     public function withRangesFSGroupStrategyOptionsPolicyV1beta1() returns IDRangeBuilderPolicyV1beta1 {
         self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderPolicyV1beta1();
-        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
+        self.rangesBuilder[(lengthof rangesBuilder) - 1].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -16467,7 +17439,7 @@ public type ClusterRoleListBuilderRbacV1 object {
     }
     public function withItemsClusterRoleListRbacV1() returns ClusterRoleBuilderRbacV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBuilderRbacV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -16496,9 +17468,12 @@ public type LocalVolumeSourceBuilderCoreV1 object {
     }
 
     public function endLocalPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16534,9 +17509,12 @@ public type ClusterRoleBuilderRbacV1 object {
     }
 
     public function endItemsClusterRoleListRbacV1() returns (ClusterRoleListBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleListBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleListBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleListBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16573,7 +17551,7 @@ public type ClusterRoleBuilderRbacV1 object {
     }
     public function withRulesClusterRoleRbacV1() returns PolicyRuleBuilderRbacV1 {
         self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1();
-        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
+        self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
 
@@ -16620,7 +17598,7 @@ public type StorageClassListBuilderStorageV1beta1 object {
     }
     public function withItemsStorageClassListStorageV1beta1() returns StorageClassBuilderStorageV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new StorageClassBuilderStorageV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -16667,7 +17645,7 @@ public type PersistentVolumeListBuilderCoreV1 object {
     }
     public function withItemsPersistentVolumeListCoreV1() returns PersistentVolumeBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PersistentVolumeBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -16696,9 +17674,12 @@ public type ConfigMapEnvSourceBuilderCoreV1 object {
     }
 
     public function endConfigMapRefEnvFromSourceCoreV1() returns (EnvFromSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EnvFromSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EnvFromSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EnvFromSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16737,9 +17718,12 @@ public type EnvFromSourceBuilderCoreV1 object {
     }
 
     public function endEnvFromContainerCoreV1() returns (ContainerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16795,9 +17779,12 @@ public type ComponentConditionBuilderCoreV1 object {
     }
 
     public function endConditionsComponentStatusCoreV1() returns (ComponentStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ComponentStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ComponentStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ComponentStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16842,9 +17829,12 @@ public type RoleRefBuilderRbacV1 object {
     }
 
     public function endRoleRefRoleBindingRbacV1() returns (RoleBindingBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBindingBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBindingBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBindingBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16854,9 +17844,12 @@ public type RoleRefBuilderRbacV1 object {
     }
 
     public function endRoleRefClusterRoleBindingRbacV1() returns (ClusterRoleBindingBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBindingBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBindingBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBindingBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16897,9 +17890,12 @@ public type ReplicationControllerConditionBuilderCoreV1 object {
 
     public function endConditionsReplicationControllerStatusCoreV1() returns (ReplicationControllerStatusBuilderCoreV1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicationControllerStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicationControllerStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicationControllerStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16952,9 +17948,12 @@ public type SessionAffinityConfigBuilderCoreV1 object {
     }
 
     public function endSessionAffinityConfigServiceSpecCoreV1() returns (ServiceSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -16992,9 +17991,12 @@ public type StatefulSetConditionBuilderAppsV1beta2 object {
     }
 
     public function endConditionsStatefulSetStatusAppsV1beta2() returns (StatefulSetStatusBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetStatusBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetStatusBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetStatusBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17051,9 +18053,12 @@ public type APIGroupBuilderMetaV1 object {
     }
 
     public function endGroupsAPIGroupListMetaV1() returns (APIGroupListBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIGroupListBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIGroupListBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIGroupListBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17078,12 +18083,12 @@ public type APIGroupBuilderMetaV1 object {
     public function withServerAddressByClientCIDRsAPIGroupMetaV1() returns ServerAddressByClientCIDRBuilderMetaV1 {
         self.serverAddressByClientCIDRsBuilder[lengthof serverAddressByClientCIDRsBuilder] = new
         ServerAddressByClientCIDRBuilderMetaV1();
-        self.serverAddressByClientCIDRsBuilder[(lengthof serverAddressByClientCIDRsBuilder)].init(self);
+        self.serverAddressByClientCIDRsBuilder[(lengthof serverAddressByClientCIDRsBuilder) - 1].init(self);
         return self.serverAddressByClientCIDRsBuilder[(lengthof serverAddressByClientCIDRsBuilder) - 1];
     }
     public function withVersionsAPIGroupMetaV1() returns GroupVersionForDiscoveryBuilderMetaV1 {
         self.versionsBuilder[lengthof versionsBuilder] = new GroupVersionForDiscoveryBuilderMetaV1();
-        self.versionsBuilder[(lengthof versionsBuilder)].init(self);
+        self.versionsBuilder[(lengthof versionsBuilder) - 1].init(self);
         return self.versionsBuilder[(lengthof versionsBuilder) - 1];
     }
 
@@ -17117,9 +18122,12 @@ public type ScaleStatusBuilderExtensionsV1beta1 object {
     }
 
     public function endStatusScaleExtensionsV1beta1() returns (ScaleBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17165,9 +18173,12 @@ public type StatefulSetBuilderAppsV1beta1 object {
     }
 
     public function endItemsStatefulSetListAppsV1beta1() returns (StatefulSetListBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetListBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetListBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetListBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17245,9 +18256,12 @@ public type JobSpecBuilderBatchV1 object {
     }
 
     public function endSpecJobTemplateSpecBatchV1beta1() returns (JobTemplateSpecBuilderBatchV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JobTemplateSpecBuilderBatchV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JobTemplateSpecBuilderBatchV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JobTemplateSpecBuilderBatchV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17257,9 +18271,12 @@ public type JobSpecBuilderBatchV1 object {
     }
 
     public function endSpecJobBatchV1() returns (JobBuilderBatchV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JobBuilderBatchV1>parentBuilder;
+        match (self.fluentBuilder) {
+            JobBuilderBatchV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JobBuilderBatchV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17337,9 +18354,12 @@ public type TokenReviewStatusBuilderAuthenticationV1 object {
     }
 
     public function endStatusTokenReviewAuthenticationV1() returns (TokenReviewBuilderAuthenticationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <TokenReviewBuilderAuthenticationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            TokenReviewBuilderAuthenticationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <TokenReviewBuilderAuthenticationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17389,9 +18409,12 @@ public type CertificateSigningRequestSpecBuilderCertificatesV1beta1 object {
 
     public function endSpecCertificateSigningRequestCertificatesV1beta1() returns (
                 CertificateSigningRequestBuilderCertificatesV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CertificateSigningRequestBuilderCertificatesV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CertificateSigningRequestBuilderCertificatesV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CertificateSigningRequestBuilderCertificatesV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17457,9 +18480,12 @@ public type NonResourceRuleBuilderAuthorizationV1beta1 object {
 
     public function endNonResourceRulesSubjectRulesReviewStatusAuthorizationV1beta1() returns (
                 SubjectRulesReviewStatusBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectRulesReviewStatusBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectRulesReviewStatusBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectRulesReviewStatusBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17504,9 +18530,12 @@ public type ContainerStateRunningBuilderCoreV1 object {
     }
 
     public function endRunningContainerStateCoreV1() returns (ContainerStateBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerStateBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerStateBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerStateBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17542,9 +18571,12 @@ public type NetworkPolicySpecBuilderNetworkingV1 object {
     }
 
     public function endSpecNetworkPolicyNetworkingV1() returns (NetworkPolicyBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17568,12 +18600,12 @@ public type NetworkPolicySpecBuilderNetworkingV1 object {
     }
     public function withEgressNetworkPolicySpecNetworkingV1() returns NetworkPolicyEgressRuleBuilderNetworkingV1 {
         self.egressBuilder[lengthof egressBuilder] = new NetworkPolicyEgressRuleBuilderNetworkingV1();
-        self.egressBuilder[(lengthof egressBuilder)].init(self);
+        self.egressBuilder[(lengthof egressBuilder) - 1].init(self);
         return self.egressBuilder[(lengthof egressBuilder) - 1];
     }
     public function withIngressNetworkPolicySpecNetworkingV1() returns NetworkPolicyIngressRuleBuilderNetworkingV1 {
         self.ingressBuilder[lengthof ingressBuilder] = new NetworkPolicyIngressRuleBuilderNetworkingV1();
-        self.ingressBuilder[(lengthof ingressBuilder)].init(self);
+        self.ingressBuilder[(lengthof ingressBuilder) - 1].init(self);
         return self.ingressBuilder[(lengthof ingressBuilder) - 1];
     }
 
@@ -17604,9 +18636,12 @@ public type DeploymentStatusBuilderAppsV1 object {
     }
 
     public function endStatusDeploymentAppsV1() returns (DeploymentBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17617,7 +18652,7 @@ public type DeploymentStatusBuilderAppsV1 object {
 
     public function withConditionsDeploymentStatusAppsV1() returns DeploymentConditionBuilderAppsV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderAppsV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -17671,9 +18706,12 @@ public type PhotonPersistentDiskVolumeSourceBuilderCoreV1 object {
     }
 
     public function endPhotonPersistentDiskVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17683,9 +18721,12 @@ public type PhotonPersistentDiskVolumeSourceBuilderCoreV1 object {
     }
 
     public function endPhotonPersistentDiskPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17795,9 +18836,12 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1 object {
 
     public function endSpecLocalSubjectAccessReviewAuthorizationV1() returns (
                 LocalSubjectAccessReviewBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LocalSubjectAccessReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LocalSubjectAccessReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LocalSubjectAccessReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17807,9 +18851,12 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1 object {
     }
 
     public function endSpecSubjectAccessReviewAuthorizationV1() returns (SubjectAccessReviewBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectAccessReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectAccessReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectAccessReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17895,9 +18942,12 @@ public type PersistentVolumeClaimBuilderCoreV1 object {
     }
 
     public function endVolumeClaimTemplatesStatefulSetSpecAppsV1beta2() returns (StatefulSetSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17907,9 +18957,12 @@ public type PersistentVolumeClaimBuilderCoreV1 object {
     }
 
     public function endVolumeClaimTemplatesStatefulSetSpecAppsV1beta1() returns (StatefulSetSpecBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17919,9 +18972,12 @@ public type PersistentVolumeClaimBuilderCoreV1 object {
     }
 
     public function endVolumeClaimTemplatesStatefulSetSpecAppsV1() returns (StatefulSetSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -17931,9 +18987,12 @@ public type PersistentVolumeClaimBuilderCoreV1 object {
     }
 
     public function endItemsPersistentVolumeClaimListCoreV1() returns (PersistentVolumeClaimListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeClaimListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeClaimListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeClaimListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18025,7 +19084,7 @@ public type ServiceAccountListBuilderCoreV1 object {
     }
     public function withItemsServiceAccountListCoreV1() returns ServiceAccountBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ServiceAccountBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -18056,9 +19115,12 @@ public type SecretBuilderCoreV1 object {
     }
 
     public function endItemsSecretListCoreV1() returns (SecretListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SecretListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SecretListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SecretListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18127,9 +19189,12 @@ public type DaemonSetBuilderExtensionsV1beta1 object {
     }
 
     public function endItemsDaemonSetListExtensionsV1beta1() returns (DaemonSetListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18203,9 +19268,12 @@ public type FlockerVolumeSourceBuilderCoreV1 object {
     }
 
     public function endFlockerVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18215,9 +19283,12 @@ public type FlockerVolumeSourceBuilderCoreV1 object {
     }
 
     public function endFlockerPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18270,7 +19341,7 @@ public type PersistentVolumeClaimListBuilderCoreV1 object {
     }
     public function withItemsPersistentVolumeClaimListCoreV1() returns PersistentVolumeClaimBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PersistentVolumeClaimBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -18301,9 +19372,12 @@ public type IngressRuleBuilderExtensionsV1beta1 object {
     }
 
     public function endRulesIngressSpecExtensionsV1beta1() returns (IngressSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <IngressSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            IngressSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <IngressSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18347,9 +19421,12 @@ public type NonResourceRuleBuilderAuthorizationV1 object {
 
     public function endNonResourceRulesSubjectRulesReviewStatusAuthorizationV1() returns (
                 SubjectRulesReviewStatusBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectRulesReviewStatusBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectRulesReviewStatusBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectRulesReviewStatusBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18398,9 +19475,12 @@ public type ComponentStatusBuilderCoreV1 object {
     }
 
     public function endItemsComponentStatusListCoreV1() returns (ComponentStatusListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ComponentStatusListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ComponentStatusListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ComponentStatusListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18424,7 +19504,7 @@ public type ComponentStatusBuilderCoreV1 object {
     }
     public function withConditionsComponentStatusCoreV1() returns ComponentConditionBuilderCoreV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new ComponentConditionBuilderCoreV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -18457,9 +19537,12 @@ public type CertificateSigningRequestStatusBuilderCertificatesV1beta1 object {
 
     public function endStatusCertificateSigningRequestCertificatesV1beta1() returns (
                 CertificateSigningRequestBuilderCertificatesV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CertificateSigningRequestBuilderCertificatesV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CertificateSigningRequestBuilderCertificatesV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CertificateSigningRequestBuilderCertificatesV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18473,7 +19556,7 @@ public type CertificateSigningRequestStatusBuilderCertificatesV1beta1 object {
     {
         self.conditionsBuilder[lengthof conditionsBuilder] = new
         CertificateSigningRequestConditionBuilderCertificatesV1beta1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -18500,9 +19583,12 @@ public type SecretVolumeSourceBuilderCoreV1 object {
     }
 
     public function endSecretVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18513,7 +19599,7 @@ public type SecretVolumeSourceBuilderCoreV1 object {
 
     public function withItemsSecretVolumeSourceCoreV1() returns KeyToPathBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -18547,9 +19633,12 @@ public type IngressTLSBuilderExtensionsV1beta1 object {
     }
 
     public function endTlsIngressSpecExtensionsV1beta1() returns (IngressSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <IngressSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            IngressSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <IngressSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18611,7 +19700,7 @@ public type CustomResourceDefinitionListBuilderApiextensionsV1beta1 object {
                                                                                     CustomResourceDefinitionBuilderApiextensionsV1beta1
     {
         self.itemsBuilder[lengthof itemsBuilder] = new CustomResourceDefinitionBuilderApiextensionsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -18642,9 +19731,12 @@ public type GitRepoVolumeSourceBuilderCoreV1 object {
     }
 
     public function endGitRepoVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18684,9 +19776,12 @@ public type TolerationBuilderCoreV1 object {
     }
 
     public function endTolerationsPodSpecCoreV1() returns (PodSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18740,9 +19835,12 @@ public type LifecycleBuilderCoreV1 object {
     }
 
     public function endLifecycleContainerCoreV1() returns (ContainerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18793,9 +19891,12 @@ public type StatusCauseBuilderMetaV1 object {
     }
 
     public function endCausesStatusDetailsMetaV1() returns (StatusDetailsBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatusDetailsBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatusDetailsBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatusDetailsBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18837,9 +19938,12 @@ public type PodDNSConfigBuilderCoreV1 object {
     }
 
     public function endDnsConfigPodSpecCoreV1() returns (PodSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18850,7 +19954,7 @@ public type PodDNSConfigBuilderCoreV1 object {
 
     public function withOptionsPodDNSConfigCoreV1() returns PodDNSConfigOptionBuilderCoreV1 {
         self.optionsBuilder[lengthof optionsBuilder] = new PodDNSConfigOptionBuilderCoreV1();
-        self.optionsBuilder[(lengthof optionsBuilder)].init(self);
+        self.optionsBuilder[(lengthof optionsBuilder) - 1].init(self);
         return self.optionsBuilder[(lengthof optionsBuilder) - 1];
     }
 
@@ -18889,9 +19993,12 @@ public type HostPortRangeBuilderExtensionsV1beta1 object {
 
     public function endHostPortsPodSecurityPolicySpecExtensionsV1beta1() returns (
                 PodSecurityPolicySpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18926,9 +20033,12 @@ public type JobConditionBuilderBatchV1 object {
     }
 
     public function endConditionsJobStatusBatchV1() returns (JobStatusBuilderBatchV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JobStatusBuilderBatchV1>parentBuilder;
+        match (self.fluentBuilder) {
+            JobStatusBuilderBatchV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JobStatusBuilderBatchV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18983,9 +20093,12 @@ public type ExecActionBuilderCoreV1 object {
     }
 
     public function endExecProbeCoreV1() returns (ProbeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ProbeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ProbeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ProbeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -18995,9 +20108,12 @@ public type ExecActionBuilderCoreV1 object {
     }
 
     public function endExecHandlerCoreV1() returns (HandlerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HandlerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            HandlerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HandlerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19037,9 +20153,12 @@ public type ReplicaSetBuilderAppsV1 object {
     }
 
     public function endItemsReplicaSetListAppsV1() returns (ReplicaSetListBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetListBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetListBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetListBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19115,9 +20234,12 @@ public type AggregationRuleBuilderRbacV1 object {
     }
 
     public function endAggregationRuleClusterRoleRbacV1() returns (ClusterRoleBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19128,7 +20250,7 @@ public type AggregationRuleBuilderRbacV1 object {
 
     public function withClusterRoleSelectorsAggregationRuleRbacV1() returns LabelSelectorBuilderMetaV1 {
         self.clusterRoleSelectorsBuilder[lengthof clusterRoleSelectorsBuilder] = new LabelSelectorBuilderMetaV1();
-        self.clusterRoleSelectorsBuilder[(lengthof clusterRoleSelectorsBuilder)].init(self);
+        self.clusterRoleSelectorsBuilder[(lengthof clusterRoleSelectorsBuilder) - 1].init(self);
         return self.clusterRoleSelectorsBuilder[(lengthof clusterRoleSelectorsBuilder) - 1];
     }
 };
@@ -19147,9 +20269,12 @@ public type PolicyRuleBuilderRbacV1beta1 object {
     }
 
     public function endRulesRoleRbacV1beta1() returns (RoleBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19159,9 +20284,12 @@ public type PolicyRuleBuilderRbacV1beta1 object {
     }
 
     public function endRulesClusterRoleRbacV1beta1() returns (ClusterRoleBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19236,9 +20364,12 @@ public type IDRangeBuilderPolicyV1beta1 object {
 
     public function endRangesSupplementalGroupsStrategyOptionsPolicyV1beta1() returns (
                 SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19249,9 +20380,12 @@ public type IDRangeBuilderPolicyV1beta1 object {
 
     public function endRangesFSGroupStrategyOptionsPolicyV1beta1() returns (FSGroupStrategyOptionsBuilderPolicyV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <FSGroupStrategyOptionsBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            FSGroupStrategyOptionsBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <FSGroupStrategyOptionsBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19262,9 +20396,12 @@ public type IDRangeBuilderPolicyV1beta1 object {
 
     public function endRangesRunAsUserStrategyOptionsPolicyV1beta1() returns (
                 RunAsUserStrategyOptionsBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RunAsUserStrategyOptionsBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RunAsUserStrategyOptionsBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RunAsUserStrategyOptionsBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19305,9 +20442,12 @@ public type DaemonSetSpecBuilderAppsV1beta2 object {
     }
 
     public function endSpecDaemonSetAppsV1beta2() returns (DaemonSetBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19399,7 +20539,7 @@ public type DeploymentListBuilderExtensionsV1beta1 object {
     }
     public function withItemsDeploymentListExtensionsV1beta1() returns DeploymentBuilderExtensionsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderExtensionsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -19432,9 +20572,12 @@ public type SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 object {
 
     public function endSupplementalGroupsPodSecurityPolicySpecExtensionsV1beta1() returns (
                 PodSecurityPolicySpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19446,7 +20589,7 @@ public type SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 object {
     public function withRangesSupplementalGroupsStrategyOptionsExtensionsV1beta1() returns
                                                                                        IDRangeBuilderExtensionsV1beta1 {
         self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderExtensionsV1beta1();
-        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
+        self.rangesBuilder[(lengthof rangesBuilder) - 1].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -19476,9 +20619,12 @@ public type DeploymentBuilderExtensionsV1beta1 object {
     }
 
     public function endItemsDeploymentListExtensionsV1beta1() returns (DeploymentListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19552,9 +20698,12 @@ public type DaemonSetConditionBuilderAppsV1beta2 object {
     }
 
     public function endConditionsDaemonSetStatusAppsV1beta2() returns (DaemonSetStatusBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetStatusBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetStatusBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetStatusBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19623,7 +20772,7 @@ public type SecretListBuilderCoreV1 object {
     }
     public function withItemsSecretListCoreV1() returns SecretBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new SecretBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -19654,9 +20803,12 @@ public type StatefulSetStatusBuilderAppsV1beta1 object {
     }
 
     public function endStatusStatefulSetAppsV1beta1() returns (StatefulSetBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19667,7 +20819,7 @@ public type StatefulSetStatusBuilderAppsV1beta1 object {
 
     public function withConditionsStatefulSetStatusAppsV1beta1() returns StatefulSetConditionBuilderAppsV1beta1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new StatefulSetConditionBuilderAppsV1beta1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -19726,9 +20878,12 @@ public type HTTPHeaderBuilderCoreV1 object {
     }
 
     public function endHttpHeadersHTTPGetActionCoreV1() returns (HTTPGetActionBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HTTPGetActionBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            HTTPGetActionBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HTTPGetActionBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19769,9 +20924,12 @@ public type ReplicaSetBuilderAppsV1beta2 object {
     }
 
     public function endItemsReplicaSetListAppsV1beta2() returns (ReplicaSetListBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetListBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetListBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetListBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19847,9 +21005,12 @@ public type PodSecurityContextBuilderCoreV1 object {
     }
 
     public function endSecurityContextPodSpecCoreV1() returns (PodSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19923,9 +21084,12 @@ public type IngressSpecBuilderExtensionsV1beta1 object {
     }
 
     public function endSpecIngressExtensionsV1beta1() returns (IngressBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <IngressBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            IngressBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <IngressBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -19949,12 +21113,12 @@ public type IngressSpecBuilderExtensionsV1beta1 object {
     }
     public function withRulesIngressSpecExtensionsV1beta1() returns IngressRuleBuilderExtensionsV1beta1 {
         self.rulesBuilder[lengthof rulesBuilder] = new IngressRuleBuilderExtensionsV1beta1();
-        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
+        self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
     public function withTlsIngressSpecExtensionsV1beta1() returns IngressTLSBuilderExtensionsV1beta1 {
         self.tlsBuilder[lengthof tlsBuilder] = new IngressTLSBuilderExtensionsV1beta1();
-        self.tlsBuilder[(lengthof tlsBuilder)].init(self);
+        self.tlsBuilder[(lengthof tlsBuilder) - 1].init(self);
         return self.tlsBuilder[(lengthof tlsBuilder) - 1];
     }
 };
@@ -19991,7 +21155,7 @@ public type CronJobListBuilderBatchV1beta1 object {
     }
     public function withItemsCronJobListBatchV1beta1() returns CronJobBuilderBatchV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new CronJobBuilderBatchV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -20022,9 +21186,12 @@ public type ServiceReferenceBuilderAdmissionregistrationV1beta1 object {
 
     public function end_serviceWebhookClientConfigAdmissionregistrationV1beta1() returns (
                 WebhookClientConfigBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <WebhookClientConfigBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            WebhookClientConfigBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <WebhookClientConfigBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20082,7 +21249,7 @@ public type RoleListBuilderRbacV1beta1 object {
     }
     public function withItemsRoleListRbacV1beta1() returns RoleBuilderRbacV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new RoleBuilderRbacV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -20111,9 +21278,12 @@ public type RollingUpdateDeploymentBuilderAppsV1beta1 object {
     }
 
     public function endRollingUpdateDeploymentStrategyAppsV1beta1() returns (DeploymentStrategyBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentStrategyBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentStrategyBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentStrategyBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20148,9 +21318,12 @@ public type TokenReviewSpecBuilderAuthenticationV1beta1 object {
     }
 
     public function endSpecTokenReviewAuthenticationV1beta1() returns (TokenReviewBuilderAuthenticationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <TokenReviewBuilderAuthenticationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            TokenReviewBuilderAuthenticationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <TokenReviewBuilderAuthenticationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20181,9 +21354,12 @@ public type IDRangeBuilderExtensionsV1beta1 object {
 
     public function endRangesFSGroupStrategyOptionsExtensionsV1beta1() returns (
                 FSGroupStrategyOptionsBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <FSGroupStrategyOptionsBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            FSGroupStrategyOptionsBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <FSGroupStrategyOptionsBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20194,9 +21370,12 @@ public type IDRangeBuilderExtensionsV1beta1 object {
 
     public function endRangesSupplementalGroupsStrategyOptionsExtensionsV1beta1() returns (
                 SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20207,9 +21386,12 @@ public type IDRangeBuilderExtensionsV1beta1 object {
 
     public function endRangesRunAsUserStrategyOptionsExtensionsV1beta1() returns (
                 RunAsUserStrategyOptionsBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RunAsUserStrategyOptionsBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RunAsUserStrategyOptionsBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RunAsUserStrategyOptionsBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20250,9 +21432,12 @@ public type ServiceAccountBuilderCoreV1 object {
     }
 
     public function endItemsServiceAccountListCoreV1() returns (ServiceAccountListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceAccountListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceAccountListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceAccountListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20276,12 +21461,12 @@ public type ServiceAccountBuilderCoreV1 object {
     }
     public function withImagePullSecretsServiceAccountCoreV1() returns LocalObjectReferenceBuilderCoreV1 {
         self.imagePullSecretsBuilder[lengthof imagePullSecretsBuilder] = new LocalObjectReferenceBuilderCoreV1();
-        self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder)].init(self);
+        self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder) - 1].init(self);
         return self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder) - 1];
     }
     public function withSecretsServiceAccountCoreV1() returns ObjectReferenceBuilderCoreV1 {
         self.secretsBuilder[lengthof secretsBuilder] = new ObjectReferenceBuilderCoreV1();
-        self.secretsBuilder[(lengthof secretsBuilder)].init(self);
+        self.secretsBuilder[(lengthof secretsBuilder) - 1].init(self);
         return self.secretsBuilder[(lengthof secretsBuilder) - 1];
     }
 
@@ -20318,9 +21503,12 @@ public type HTTPIngressRuleValueBuilderExtensionsV1beta1 object {
     }
 
     public function endHttpIngressRuleExtensionsV1beta1() returns (IngressRuleBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <IngressRuleBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            IngressRuleBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <IngressRuleBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20331,7 +21519,7 @@ public type HTTPIngressRuleValueBuilderExtensionsV1beta1 object {
 
     public function withPathsHTTPIngressRuleValueExtensionsV1beta1() returns HTTPIngressPathBuilderExtensionsV1beta1 {
         self.pathsBuilder[lengthof pathsBuilder] = new HTTPIngressPathBuilderExtensionsV1beta1();
-        self.pathsBuilder[(lengthof pathsBuilder)].init(self);
+        self.pathsBuilder[(lengthof pathsBuilder) - 1].init(self);
         return self.pathsBuilder[(lengthof pathsBuilder) - 1];
     }
 };
@@ -20352,9 +21540,12 @@ public type ServiceReferenceBuilderApiregistrationV1beta1 object {
 
     public function end_serviceAPIServiceSpecApiregistrationV1beta1() returns (
                 APIServiceSpecBuilderApiregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceSpecBuilderApiregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceSpecBuilderApiregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceSpecBuilderApiregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20391,9 +21582,12 @@ public type ISCSIVolumeSourceBuilderCoreV1 object {
     }
 
     public function endIscsiVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20491,9 +21685,12 @@ public type CustomResourceValidationBuilderApiextensionsV1beta1 object {
 
     public function endValidationCustomResourceDefinitionSpecApiextensionsV1beta1() returns (
                 CustomResourceDefinitionSpecBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceDefinitionSpecBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceDefinitionSpecBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20534,9 +21731,12 @@ public type NetworkPolicyPortBuilderNetworkingV1 object {
 
     public function endPortsNetworkPolicyIngressRuleNetworkingV1() returns (NetworkPolicyIngressRuleBuilderNetworkingV1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyIngressRuleBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyIngressRuleBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyIngressRuleBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20546,9 +21746,12 @@ public type NetworkPolicyPortBuilderNetworkingV1 object {
     }
 
     public function endPortsNetworkPolicyEgressRuleNetworkingV1() returns (NetworkPolicyEgressRuleBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyEgressRuleBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyEgressRuleBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyEgressRuleBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20589,9 +21792,12 @@ public type RoleBindingBuilderRbacV1 object {
     }
 
     public function endItemsRoleBindingListRbacV1() returns (RoleBindingListBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBindingListBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBindingListBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBindingListBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20628,7 +21834,7 @@ public type RoleBindingBuilderRbacV1 object {
     }
     public function withSubjectsRoleBindingRbacV1() returns SubjectBuilderRbacV1 {
         self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1();
-        self.subjectsBuilder[(lengthof subjectsBuilder)].init(self);
+        self.subjectsBuilder[(lengthof subjectsBuilder) - 1].init(self);
         return self.subjectsBuilder[(lengthof subjectsBuilder) - 1];
     }
 
@@ -20660,9 +21866,12 @@ public type LabelSelectorBuilderMetaV1 object {
 
     public function endMetricSelectorExternalMetricStatusAutoscalingV2beta1() returns (
                 ExternalMetricStatusBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ExternalMetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ExternalMetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ExternalMetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20673,9 +21882,12 @@ public type LabelSelectorBuilderMetaV1 object {
 
     public function endMetricSelectorExternalMetricSourceAutoscalingV2beta1() returns (
                 ExternalMetricSourceBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ExternalMetricSourceBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ExternalMetricSourceBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ExternalMetricSourceBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20686,9 +21898,12 @@ public type LabelSelectorBuilderMetaV1 object {
 
     public function endPodSelectorNetworkPolicySpecExtensionsV1beta1() returns (
                 NetworkPolicySpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicySpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicySpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicySpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20698,9 +21913,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorStatefulSetSpecAppsV1beta2() returns (StatefulSetSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20710,9 +21928,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorReplicaSetSpecAppsV1() returns (ReplicaSetSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20722,9 +21943,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorStatefulSetSpecAppsV1beta1() returns (StatefulSetSpecBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20734,9 +21958,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorDeploymentSpecAppsV1() returns (DeploymentSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20746,9 +21973,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorStatefulSetSpecAppsV1() returns (StatefulSetSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20758,9 +21988,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorDaemonSetSpecExtensionsV1beta1() returns (DaemonSetSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20770,9 +22003,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorDeploymentSpecAppsV1beta2() returns (DeploymentSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20782,9 +22018,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorDeploymentSpecExtensionsV1beta1() returns (DeploymentSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20794,9 +22033,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorReplicaSetSpecExtensionsV1beta1() returns (ReplicaSetSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20806,9 +22048,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorReplicaSetSpecAppsV1beta2() returns (ReplicaSetSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20818,9 +22063,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorJobSpecBatchV1() returns (JobSpecBuilderBatchV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JobSpecBuilderBatchV1>parentBuilder;
+        match (self.fluentBuilder) {
+            JobSpecBuilderBatchV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JobSpecBuilderBatchV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20830,9 +22078,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endPodSelectorNetworkPolicySpecNetworkingV1() returns (NetworkPolicySpecBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicySpecBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicySpecBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicySpecBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20842,9 +22093,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endClusterRoleSelectorsAggregationRuleRbacV1() returns (AggregationRuleBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <AggregationRuleBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            AggregationRuleBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <AggregationRuleBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20854,9 +22108,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorDaemonSetSpecAppsV1beta2() returns (DaemonSetSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20867,9 +22124,12 @@ public type LabelSelectorBuilderMetaV1 object {
 
     public function endNamespaceSelectorWebhookAdmissionregistrationV1beta1() returns (
                 WebhookBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <WebhookBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            WebhookBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <WebhookBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20879,9 +22139,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorDeploymentSpecAppsV1beta1() returns (DeploymentSpecBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20891,9 +22154,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorPersistentVolumeClaimSpecCoreV1() returns (PersistentVolumeClaimSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeClaimSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeClaimSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeClaimSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20903,9 +22169,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endClusterRoleSelectorsAggregationRuleRbacV1beta1() returns (AggregationRuleBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <AggregationRuleBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            AggregationRuleBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <AggregationRuleBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20915,9 +22184,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endSelectorDaemonSetSpecAppsV1() returns (DaemonSetSpecBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetSpecBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetSpecBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetSpecBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20927,9 +22199,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endNamespaceSelectorNetworkPolicyPeerNetworkingV1() returns (NetworkPolicyPeerBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyPeerBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyPeerBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyPeerBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20939,9 +22214,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endPodSelectorNetworkPolicyPeerNetworkingV1() returns (NetworkPolicyPeerBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyPeerBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyPeerBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyPeerBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20952,9 +22230,12 @@ public type LabelSelectorBuilderMetaV1 object {
 
     public function endNamespaceSelectorNetworkPolicyPeerExtensionsV1beta1() returns (
                 NetworkPolicyPeerBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyPeerBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyPeerBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyPeerBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20965,9 +22246,12 @@ public type LabelSelectorBuilderMetaV1 object {
 
     public function endPodSelectorNetworkPolicyPeerExtensionsV1beta1() returns (
                 NetworkPolicyPeerBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyPeerBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyPeerBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyPeerBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20978,9 +22262,12 @@ public type LabelSelectorBuilderMetaV1 object {
 
     public function endSelectorPodDisruptionBudgetSpecPolicyV1beta1() returns (
                 PodDisruptionBudgetSpecBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodDisruptionBudgetSpecBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodDisruptionBudgetSpecBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodDisruptionBudgetSpecBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -20990,9 +22277,12 @@ public type LabelSelectorBuilderMetaV1 object {
     }
 
     public function endLabelSelectorPodAffinityTermCoreV1() returns (PodAffinityTermBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodAffinityTermBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodAffinityTermBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodAffinityTermBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21003,7 +22293,7 @@ public type LabelSelectorBuilderMetaV1 object {
 
     public function withMatchExpressionsLabelSelectorMetaV1() returns LabelSelectorRequirementBuilderMetaV1 {
         self.matchExpressionsBuilder[lengthof matchExpressionsBuilder] = new LabelSelectorRequirementBuilderMetaV1();
-        self.matchExpressionsBuilder[(lengthof matchExpressionsBuilder)].init(self);
+        self.matchExpressionsBuilder[(lengthof matchExpressionsBuilder) - 1].init(self);
         return self.matchExpressionsBuilder[(lengthof matchExpressionsBuilder) - 1];
     }
 
@@ -21027,9 +22317,12 @@ public type QuobyteVolumeSourceBuilderCoreV1 object {
     }
 
     public function endQuobyteVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21039,9 +22332,12 @@ public type QuobyteVolumeSourceBuilderCoreV1 object {
     }
 
     public function endQuobytePersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21109,7 +22405,7 @@ public type ClusterRoleListBuilderRbacV1beta1 object {
     }
     public function withItemsClusterRoleListRbacV1beta1() returns ClusterRoleBuilderRbacV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBuilderRbacV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -21144,9 +22440,12 @@ public type ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 ob
 
     public function endItemsValidatingWebhookConfigurationListAdmissionregistrationV1beta1() returns (
                 ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21174,7 +22473,7 @@ public type ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 ob
                                                                                                  WebhookBuilderAdmissionregistrationV1beta1
     {
         self.webhooksBuilder[lengthof webhooksBuilder] = new WebhookBuilderAdmissionregistrationV1beta1();
-        self.webhooksBuilder[(lengthof webhooksBuilder)].init(self);
+        self.webhooksBuilder[(lengthof webhooksBuilder) - 1].init(self);
         return self.webhooksBuilder[(lengthof webhooksBuilder) - 1];
     }
 
@@ -21208,9 +22507,12 @@ public type PodAntiAffinityBuilderCoreV1 object {
     }
 
     public function endPodAntiAffinityAffinityCoreV1() returns (AffinityBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <AffinityBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            AffinityBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <AffinityBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21225,7 +22527,7 @@ public type PodAntiAffinityBuilderCoreV1 object {
         self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[lengthof
         preferredDuringSchedulingIgnoredDuringExecutionBuilder] = new WeightedPodAffinityTermBuilderCoreV1();
         self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
-        preferredDuringSchedulingIgnoredDuringExecutionBuilder)].init(self);
+            preferredDuringSchedulingIgnoredDuringExecutionBuilder) - 1].init(self);
         return self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
             preferredDuringSchedulingIgnoredDuringExecutionBuilder) - 1];
     }
@@ -21235,7 +22537,7 @@ public type PodAntiAffinityBuilderCoreV1 object {
         self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[lengthof
         requiredDuringSchedulingIgnoredDuringExecutionBuilder] = new PodAffinityTermBuilderCoreV1();
         self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
-        requiredDuringSchedulingIgnoredDuringExecutionBuilder)].init(self);
+            requiredDuringSchedulingIgnoredDuringExecutionBuilder) - 1].init(self);
         return self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
             requiredDuringSchedulingIgnoredDuringExecutionBuilder) - 1];
     }
@@ -21255,9 +22557,12 @@ public type UserInfoBuilderAuthenticationV1 object {
     }
 
     public function endUserTokenReviewStatusAuthenticationV1() returns (TokenReviewStatusBuilderAuthenticationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <TokenReviewStatusBuilderAuthenticationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            TokenReviewStatusBuilderAuthenticationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <TokenReviewStatusBuilderAuthenticationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21309,9 +22614,12 @@ public type ResourceFieldSelectorBuilderCoreV1 object {
     }
 
     public function endResourceFieldRefEnvVarSourceCoreV1() returns (EnvVarSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EnvVarSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EnvVarSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EnvVarSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21321,9 +22629,12 @@ public type ResourceFieldSelectorBuilderCoreV1 object {
     }
 
     public function endResourceFieldRefDownwardAPIVolumeFileCoreV1() returns (DownwardAPIVolumeFileBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DownwardAPIVolumeFileBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DownwardAPIVolumeFileBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DownwardAPIVolumeFileBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21371,9 +22682,12 @@ public type DaemonEndpointBuilderCoreV1 object {
     }
 
     public function endKubeletEndpointNodeDaemonEndpointsCoreV1() returns (NodeDaemonEndpointsBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeDaemonEndpointsBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeDaemonEndpointsBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeDaemonEndpointsBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21421,7 +22735,7 @@ public type ReplicaSetListBuilderExtensionsV1beta1 object {
     }
     public function withItemsReplicaSetListExtensionsV1beta1() returns ReplicaSetBuilderExtensionsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderExtensionsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -21451,9 +22765,12 @@ public type AllowedFlexVolumeBuilderPolicyV1beta1 object {
 
     public function endAllowedFlexVolumesPodSecurityPolicySpecPolicyV1beta1() returns (
                 PodSecurityPolicySpecBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21483,9 +22800,12 @@ public type IPBlockBuilderNetworkingV1 object {
     }
 
     public function endIpBlockNetworkPolicyPeerNetworkingV1() returns (NetworkPolicyPeerBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyPeerBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyPeerBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyPeerBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21524,9 +22844,12 @@ public type DeploymentConditionBuilderAppsV1beta2 object {
     }
 
     public function endConditionsDeploymentStatusAppsV1beta2() returns (DeploymentStatusBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentStatusBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentStatusBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentStatusBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21653,9 +22976,12 @@ public type VolumeErrorBuilderStorageV1beta1 object {
 
     public function endAttachErrorVolumeAttachmentStatusStorageV1beta1() returns (
                 VolumeAttachmentStatusBuilderStorageV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeAttachmentStatusBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeAttachmentStatusBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeAttachmentStatusBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21666,9 +22992,12 @@ public type VolumeErrorBuilderStorageV1beta1 object {
 
     public function endDetachErrorVolumeAttachmentStatusStorageV1beta1() returns (
                 VolumeAttachmentStatusBuilderStorageV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeAttachmentStatusBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeAttachmentStatusBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeAttachmentStatusBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21705,9 +23034,12 @@ public type StatefulSetUpdateStrategyBuilderAppsV1beta1 object {
     }
 
     public function endUpdateStrategyStatefulSetSpecAppsV1beta1() returns (StatefulSetSpecBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21756,9 +23088,12 @@ public type NetworkPolicyEgressRuleBuilderNetworkingV1 object {
     }
 
     public function endEgressNetworkPolicySpecNetworkingV1() returns (NetworkPolicySpecBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicySpecBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicySpecBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicySpecBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21769,12 +23104,12 @@ public type NetworkPolicyEgressRuleBuilderNetworkingV1 object {
 
     public function withPortsNetworkPolicyEgressRuleNetworkingV1() returns NetworkPolicyPortBuilderNetworkingV1 {
         self.portsBuilder[lengthof portsBuilder] = new NetworkPolicyPortBuilderNetworkingV1();
-        self.portsBuilder[(lengthof portsBuilder)].init(self);
+        self.portsBuilder[(lengthof portsBuilder) - 1].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
     public function withToNetworkPolicyEgressRuleNetworkingV1() returns NetworkPolicyPeerBuilderNetworkingV1 {
         self.toBuilder[lengthof toBuilder] = new NetworkPolicyPeerBuilderNetworkingV1();
-        self.toBuilder[(lengthof toBuilder)].init(self);
+        self.toBuilder[(lengthof toBuilder) - 1].init(self);
         return self.toBuilder[(lengthof toBuilder) - 1];
     }
 };
@@ -21795,9 +23130,12 @@ public type CronJobStatusBuilderBatchV1beta1 object {
     }
 
     public function endStatusCronJobBatchV1beta1() returns (CronJobBuilderBatchV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CronJobBuilderBatchV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CronJobBuilderBatchV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CronJobBuilderBatchV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21808,7 +23146,7 @@ public type CronJobStatusBuilderBatchV1beta1 object {
 
     public function withActiveCronJobStatusBatchV1beta1() returns ObjectReferenceBuilderCoreV1 {
         self.activeBuilder[lengthof activeBuilder] = new ObjectReferenceBuilderCoreV1();
-        self.activeBuilder[(lengthof activeBuilder)].init(self);
+        self.activeBuilder[(lengthof activeBuilder) - 1].init(self);
         return self.activeBuilder[(lengthof activeBuilder) - 1];
     }
 
@@ -21832,9 +23170,12 @@ public type RollbackConfigBuilderAppsV1beta1 object {
     }
 
     public function endRollbackToDeploymentSpecAppsV1beta1() returns (DeploymentSpecBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21844,9 +23185,12 @@ public type RollbackConfigBuilderAppsV1beta1 object {
     }
 
     public function endRollbackToDeploymentRollbackAppsV1beta1() returns (DeploymentRollbackBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentRollbackBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentRollbackBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentRollbackBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21883,9 +23227,12 @@ public type WebhookBuilderAdmissionregistrationV1beta1 object {
 
     public function endWebhooksMutatingWebhookConfigurationAdmissionregistrationV1beta1() returns (
                 MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21896,9 +23243,12 @@ public type WebhookBuilderAdmissionregistrationV1beta1 object {
 
     public function endWebhooksValidatingWebhookConfigurationAdmissionregistrationV1beta1() returns (
                 ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -21939,7 +23289,7 @@ public type WebhookBuilderAdmissionregistrationV1beta1 object {
                                                                        RuleWithOperationsBuilderAdmissionregistrationV1beta1
     {
         self.rulesBuilder[lengthof rulesBuilder] = new RuleWithOperationsBuilderAdmissionregistrationV1beta1();
-        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
+        self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
 
@@ -21968,9 +23318,12 @@ public type LimitRangeItemBuilderCoreV1 object {
     }
 
     public function endLimitsLimitRangeSpecCoreV1() returns (LimitRangeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LimitRangeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LimitRangeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LimitRangeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22026,9 +23379,12 @@ public type UserInfoBuilderAuthenticationV1beta1 object {
 
     public function endUserTokenReviewStatusAuthenticationV1beta1() returns (
                 TokenReviewStatusBuilderAuthenticationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <TokenReviewStatusBuilderAuthenticationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            TokenReviewStatusBuilderAuthenticationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <TokenReviewStatusBuilderAuthenticationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22078,9 +23434,12 @@ public type PodConditionBuilderCoreV1 object {
     }
 
     public function endConditionsPodStatusCoreV1() returns (PodStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22135,9 +23494,12 @@ public type ScaleSpecBuilderAutoscalingV1 object {
     }
 
     public function endSpecScaleAutoscalingV1() returns (ScaleBuilderAutoscalingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderAutoscalingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderAutoscalingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderAutoscalingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22168,9 +23530,12 @@ public type SubjectAccessReviewStatusBuilderAuthorizationV1 object {
 
     public function endStatusLocalSubjectAccessReviewAuthorizationV1() returns (
                 LocalSubjectAccessReviewBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LocalSubjectAccessReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LocalSubjectAccessReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LocalSubjectAccessReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22180,9 +23545,12 @@ public type SubjectAccessReviewStatusBuilderAuthorizationV1 object {
     }
 
     public function endStatusSubjectAccessReviewAuthorizationV1() returns (SubjectAccessReviewBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectAccessReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectAccessReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectAccessReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22193,9 +23561,12 @@ public type SubjectAccessReviewStatusBuilderAuthorizationV1 object {
 
     public function endStatusSelfSubjectAccessReviewAuthorizationV1() returns (
                 SelfSubjectAccessReviewBuilderAuthorizationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectAccessReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectAccessReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectAccessReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22247,9 +23618,12 @@ public type ClusterRoleBindingBuilderRbacV1 object {
     }
 
     public function endItemsClusterRoleBindingListRbacV1() returns (ClusterRoleBindingListBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBindingListBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBindingListBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBindingListBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22286,7 +23660,7 @@ public type ClusterRoleBindingBuilderRbacV1 object {
     }
     public function withSubjectsClusterRoleBindingRbacV1() returns SubjectBuilderRbacV1 {
         self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1();
-        self.subjectsBuilder[(lengthof subjectsBuilder)].init(self);
+        self.subjectsBuilder[(lengthof subjectsBuilder) - 1].init(self);
         return self.subjectsBuilder[(lengthof subjectsBuilder) - 1];
     }
 
@@ -22333,7 +23707,7 @@ public type NetworkPolicyListBuilderNetworkingV1 object {
     }
     public function withItemsNetworkPolicyListNetworkingV1() returns NetworkPolicyBuilderNetworkingV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new NetworkPolicyBuilderNetworkingV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -22382,9 +23756,12 @@ public type ContainerBuilderCoreV1 object {
     }
 
     public function endContainersPodSpecCoreV1() returns (PodSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22394,9 +23771,12 @@ public type ContainerBuilderCoreV1 object {
     }
 
     public function endInitContainersPodSpecCoreV1() returns (PodSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22472,27 +23852,27 @@ public type ContainerBuilderCoreV1 object {
     }
     public function withEnvContainerCoreV1() returns EnvVarBuilderCoreV1 {
         self.envBuilder[lengthof envBuilder] = new EnvVarBuilderCoreV1();
-        self.envBuilder[(lengthof envBuilder)].init(self);
+        self.envBuilder[(lengthof envBuilder) - 1].init(self);
         return self.envBuilder[(lengthof envBuilder) - 1];
     }
     public function withEnvFromContainerCoreV1() returns EnvFromSourceBuilderCoreV1 {
         self.envFromBuilder[lengthof envFromBuilder] = new EnvFromSourceBuilderCoreV1();
-        self.envFromBuilder[(lengthof envFromBuilder)].init(self);
+        self.envFromBuilder[(lengthof envFromBuilder) - 1].init(self);
         return self.envFromBuilder[(lengthof envFromBuilder) - 1];
     }
     public function withPortsContainerCoreV1() returns ContainerPortBuilderCoreV1 {
         self.portsBuilder[lengthof portsBuilder] = new ContainerPortBuilderCoreV1();
-        self.portsBuilder[(lengthof portsBuilder)].init(self);
+        self.portsBuilder[(lengthof portsBuilder) - 1].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
     public function withVolumeDevicesContainerCoreV1() returns VolumeDeviceBuilderCoreV1 {
         self.volumeDevicesBuilder[lengthof volumeDevicesBuilder] = new VolumeDeviceBuilderCoreV1();
-        self.volumeDevicesBuilder[(lengthof volumeDevicesBuilder)].init(self);
+        self.volumeDevicesBuilder[(lengthof volumeDevicesBuilder) - 1].init(self);
         return self.volumeDevicesBuilder[(lengthof volumeDevicesBuilder) - 1];
     }
     public function withVolumeMountsContainerCoreV1() returns VolumeMountBuilderCoreV1 {
         self.volumeMountsBuilder[lengthof volumeMountsBuilder] = new VolumeMountBuilderCoreV1();
-        self.volumeMountsBuilder[(lengthof volumeMountsBuilder)].init(self);
+        self.volumeMountsBuilder[(lengthof volumeMountsBuilder) - 1].init(self);
         return self.volumeMountsBuilder[(lengthof volumeMountsBuilder) - 1];
     }
 
@@ -22576,9 +23956,12 @@ public type DeploymentStrategyBuilderAppsV1beta2 object {
     }
 
     public function endStrategyDeploymentSpecAppsV1beta2() returns (DeploymentSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22625,9 +24008,12 @@ public type JobTemplateSpecBuilderBatchV1beta1 object {
     }
 
     public function endJobTemplateCronJobSpecBatchV1beta1() returns (CronJobSpecBuilderBatchV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CronJobSpecBuilderBatchV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CronJobSpecBuilderBatchV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CronJobSpecBuilderBatchV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22682,9 +24068,12 @@ public type ControllerRevisionBuilderAppsV1beta1 object {
     }
 
     public function endItemsControllerRevisionListAppsV1beta1() returns (ControllerRevisionListBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionListBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionListBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionListBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22758,9 +24147,12 @@ public type DeploymentSpecBuilderAppsV1beta1 object {
     }
 
     public function endSpecDeploymentAppsV1beta1() returns (DeploymentBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22863,9 +24255,12 @@ public type SELinuxOptionsBuilderCoreV1 object {
     }
 
     public function endSeLinuxOptionsPodSecurityContextCoreV1() returns (PodSecurityContextBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityContextBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityContextBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityContextBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22876,9 +24271,12 @@ public type SELinuxOptionsBuilderCoreV1 object {
 
     public function endSeLinuxOptionsSELinuxStrategyOptionsPolicyV1beta1() returns (
                 SELinuxStrategyOptionsBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SELinuxStrategyOptionsBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SELinuxStrategyOptionsBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SELinuxStrategyOptionsBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22889,9 +24287,12 @@ public type SELinuxOptionsBuilderCoreV1 object {
 
     public function endSeLinuxOptionsSELinuxStrategyOptionsExtensionsV1beta1() returns (
                 SELinuxStrategyOptionsBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SELinuxStrategyOptionsBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SELinuxStrategyOptionsBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SELinuxStrategyOptionsBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22901,9 +24302,12 @@ public type SELinuxOptionsBuilderCoreV1 object {
     }
 
     public function endSeLinuxOptionsSecurityContextCoreV1() returns (SecurityContextBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SecurityContextBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SecurityContextBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SecurityContextBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -22950,9 +24354,12 @@ public type DeploymentStrategyBuilderExtensionsV1beta1 object {
     }
 
     public function endStrategyDeploymentSpecExtensionsV1beta1() returns (DeploymentSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23001,9 +24408,12 @@ public type PersistentVolumeClaimSpecBuilderCoreV1 object {
     }
 
     public function endSpecPersistentVolumeClaimCoreV1() returns (PersistentVolumeClaimBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeClaimBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeClaimBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeClaimBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23081,9 +24491,12 @@ public type ReplicaSetStatusBuilderAppsV1 object {
     }
 
     public function endStatusReplicaSetAppsV1() returns (ReplicaSetBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23094,7 +24507,7 @@ public type ReplicaSetStatusBuilderAppsV1 object {
 
     public function withConditionsReplicaSetStatusAppsV1() returns ReplicaSetConditionBuilderAppsV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new ReplicaSetConditionBuilderAppsV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -23141,9 +24554,12 @@ public type RunAsUserStrategyOptionsBuilderPolicyV1beta1 object {
 
     public function endRunAsUserPodSecurityPolicySpecPolicyV1beta1() returns (PodSecurityPolicySpecBuilderPolicyV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23154,7 +24570,7 @@ public type RunAsUserStrategyOptionsBuilderPolicyV1beta1 object {
 
     public function withRangesRunAsUserStrategyOptionsPolicyV1beta1() returns IDRangeBuilderPolicyV1beta1 {
         self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderPolicyV1beta1();
-        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
+        self.rangesBuilder[(lengthof rangesBuilder) - 1].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -23180,9 +24596,12 @@ public type NonResourceAttributesBuilderAuthorizationV1beta1 object {
 
     public function endNonResourceAttributesSubjectAccessReviewSpecAuthorizationV1beta1() returns (
                 SubjectAccessReviewSpecBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectAccessReviewSpecBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectAccessReviewSpecBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectAccessReviewSpecBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23193,9 +24612,12 @@ public type NonResourceAttributesBuilderAuthorizationV1beta1 object {
 
     public function endNonResourceAttributesSelfSubjectAccessReviewSpecAuthorizationV1beta1() returns (
                 SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23230,9 +24652,12 @@ public type IngressBackendBuilderExtensionsV1beta1 object {
     }
 
     public function endBackendIngressSpecExtensionsV1beta1() returns (IngressSpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <IngressSpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            IngressSpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <IngressSpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23242,9 +24667,12 @@ public type IngressBackendBuilderExtensionsV1beta1 object {
     }
 
     public function endBackendHTTPIngressPathExtensionsV1beta1() returns (HTTPIngressPathBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HTTPIngressPathBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HTTPIngressPathBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HTTPIngressPathBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23281,9 +24709,12 @@ public type SELinuxStrategyOptionsBuilderPolicyV1beta1 object {
     }
 
     public function endSeLinuxPodSecurityPolicySpecPolicyV1beta1() returns (PodSecurityPolicySpecBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23330,9 +24761,12 @@ public type EndpointsBuilderCoreV1 object {
     }
 
     public function endItemsEndpointsListCoreV1() returns (EndpointsListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EndpointsListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EndpointsListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EndpointsListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23356,7 +24790,7 @@ public type EndpointsBuilderCoreV1 object {
     }
     public function withSubsetsEndpointsCoreV1() returns EndpointSubsetBuilderCoreV1 {
         self.subsetsBuilder[lengthof subsetsBuilder] = new EndpointSubsetBuilderCoreV1();
-        self.subsetsBuilder[(lengthof subsetsBuilder)].init(self);
+        self.subsetsBuilder[(lengthof subsetsBuilder) - 1].init(self);
         return self.subsetsBuilder[(lengthof subsetsBuilder) - 1];
     }
 
@@ -23385,9 +24819,12 @@ public type StatefulSetConditionBuilderAppsV1 object {
     }
 
     public function endConditionsStatefulSetStatusAppsV1() returns (StatefulSetStatusBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetStatusBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetStatusBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetStatusBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23439,9 +24876,12 @@ public type SubjectAccessReviewStatusBuilderAuthorizationV1beta1 object {
 
     public function endStatusLocalSubjectAccessReviewAuthorizationV1beta1() returns (
                 LocalSubjectAccessReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LocalSubjectAccessReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            LocalSubjectAccessReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LocalSubjectAccessReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23452,9 +24892,12 @@ public type SubjectAccessReviewStatusBuilderAuthorizationV1beta1 object {
 
     public function endStatusSubjectAccessReviewAuthorizationV1beta1() returns (
                 SubjectAccessReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SubjectAccessReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SubjectAccessReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SubjectAccessReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23465,9 +24908,12 @@ public type SubjectAccessReviewStatusBuilderAuthorizationV1beta1 object {
 
     public function endStatusSelfSubjectAccessReviewAuthorizationV1beta1() returns (
                 SelfSubjectAccessReviewBuilderAuthorizationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectAccessReviewBuilderAuthorizationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectAccessReviewBuilderAuthorizationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectAccessReviewBuilderAuthorizationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23513,9 +24959,12 @@ public type LocalObjectReferenceBuilderCoreV1 object {
     }
 
     public function endImagePullSecretsPodSpecCoreV1() returns (PodSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23525,9 +24974,12 @@ public type LocalObjectReferenceBuilderCoreV1 object {
     }
 
     public function endSecretRefStorageOSVolumeSourceCoreV1() returns (StorageOSVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StorageOSVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StorageOSVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StorageOSVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23537,9 +24989,12 @@ public type LocalObjectReferenceBuilderCoreV1 object {
     }
 
     public function endSecretRefScaleIOVolumeSourceCoreV1() returns (ScaleIOVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleIOVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleIOVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleIOVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23549,9 +25004,12 @@ public type LocalObjectReferenceBuilderCoreV1 object {
     }
 
     public function endSecretRefRBDVolumeSourceCoreV1() returns (RBDVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RBDVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RBDVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RBDVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23561,9 +25019,12 @@ public type LocalObjectReferenceBuilderCoreV1 object {
     }
 
     public function endImagePullSecretsServiceAccountCoreV1() returns (ServiceAccountBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceAccountBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceAccountBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceAccountBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23573,9 +25034,12 @@ public type LocalObjectReferenceBuilderCoreV1 object {
     }
 
     public function endSecretRefISCSIVolumeSourceCoreV1() returns (ISCSIVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ISCSIVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ISCSIVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ISCSIVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23585,9 +25049,12 @@ public type LocalObjectReferenceBuilderCoreV1 object {
     }
 
     public function endSecretRefCephFSVolumeSourceCoreV1() returns (CephFSVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CephFSVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            CephFSVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CephFSVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23597,9 +25064,12 @@ public type LocalObjectReferenceBuilderCoreV1 object {
     }
 
     public function endSecretRefFlexVolumeSourceCoreV1() returns (FlexVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <FlexVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            FlexVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <FlexVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23629,9 +25099,12 @@ public type TCPSocketActionBuilderCoreV1 object {
     }
 
     public function endTcpSocketProbeCoreV1() returns (ProbeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ProbeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ProbeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ProbeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23641,9 +25114,12 @@ public type TCPSocketActionBuilderCoreV1 object {
     }
 
     public function endTcpSocketHandlerCoreV1() returns (HandlerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HandlerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            HandlerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HandlerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23684,9 +25160,12 @@ public type PodStatusBuilderCoreV1 object {
     }
 
     public function endStatusPodCoreV1() returns (PodBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23697,17 +25176,17 @@ public type PodStatusBuilderCoreV1 object {
 
     public function withConditionsPodStatusCoreV1() returns PodConditionBuilderCoreV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new PodConditionBuilderCoreV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
     public function withContainerStatusesPodStatusCoreV1() returns ContainerStatusBuilderCoreV1 {
         self.containerStatusesBuilder[lengthof containerStatusesBuilder] = new ContainerStatusBuilderCoreV1();
-        self.containerStatusesBuilder[(lengthof containerStatusesBuilder)].init(self);
+        self.containerStatusesBuilder[(lengthof containerStatusesBuilder) - 1].init(self);
         return self.containerStatusesBuilder[(lengthof containerStatusesBuilder) - 1];
     }
     public function withInitContainerStatusesPodStatusCoreV1() returns ContainerStatusBuilderCoreV1 {
         self.initContainerStatusesBuilder[lengthof initContainerStatusesBuilder] = new ContainerStatusBuilderCoreV1();
-        self.initContainerStatusesBuilder[(lengthof initContainerStatusesBuilder)].init(self);
+        self.initContainerStatusesBuilder[(lengthof initContainerStatusesBuilder) - 1].init(self);
         return self.initContainerStatusesBuilder[(lengthof initContainerStatusesBuilder) - 1];
     }
 
@@ -23787,7 +25266,7 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV2beta1 object {
                                                                                  HorizontalPodAutoscalerBuilderAutoscalingV2beta1
     {
         self.itemsBuilder[lengthof itemsBuilder] = new HorizontalPodAutoscalerBuilderAutoscalingV2beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -23834,7 +25313,7 @@ public type EventListBuilderCoreV1 object {
     }
     public function withItemsEventListCoreV1() returns EventBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new EventBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -23864,9 +25343,12 @@ public type CrossVersionObjectReferenceBuilderAutoscalingV1 object {
 
     public function endScaleTargetRefHorizontalPodAutoscalerSpecAutoscalingV1() returns (
                 HorizontalPodAutoscalerSpecBuilderAutoscalingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerSpecBuilderAutoscalingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerSpecBuilderAutoscalingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerSpecBuilderAutoscalingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23908,9 +25390,12 @@ public type CephFSVolumeSourceBuilderCoreV1 object {
     }
 
     public function endCephfsVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -23980,9 +25465,12 @@ public type CephFSPersistentVolumeSourceBuilderCoreV1 object {
     }
 
     public function endCephfsPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24052,9 +25540,12 @@ public type APIServiceConditionBuilderApiregistrationV1 object {
 
     public function endConditionsAPIServiceStatusApiregistrationV1() returns (APIServiceStatusBuilderApiregistrationV1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceStatusBuilderApiregistrationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceStatusBuilderApiregistrationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceStatusBuilderApiregistrationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24112,9 +25603,12 @@ public type JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1 object {
     }
 
     public function endItemsJSONSchemaPropsApiextensionsV1beta1() returns (JSONSchemaPropsBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24142,7 +25636,7 @@ public type JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1 object {
                                                                                     JSONSchemaPropsBuilderApiextensionsV1beta1
     {
         self.JSONSchemasBuilder[lengthof JSONSchemasBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1();
-        self.JSONSchemasBuilder[(lengthof JSONSchemasBuilder)].init(self);
+        self.JSONSchemasBuilder[(lengthof JSONSchemasBuilder) - 1].init(self);
         return self.JSONSchemasBuilder[(lengthof JSONSchemasBuilder) - 1];
     }
 };
@@ -24167,9 +25661,12 @@ public type PodBuilderCoreV1 object {
     }
 
     public function endItemsPodListCoreV1() returns (PodListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24249,9 +25746,12 @@ public type ClusterRoleBindingBuilderRbacV1beta1 object {
     }
 
     public function endItemsClusterRoleBindingListRbacV1beta1() returns (ClusterRoleBindingListBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBindingListBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBindingListBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBindingListBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24288,7 +25788,7 @@ public type ClusterRoleBindingBuilderRbacV1beta1 object {
     }
     public function withSubjectsClusterRoleBindingRbacV1beta1() returns SubjectBuilderRbacV1beta1 {
         self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1beta1();
-        self.subjectsBuilder[(lengthof subjectsBuilder)].init(self);
+        self.subjectsBuilder[(lengthof subjectsBuilder) - 1].init(self);
         return self.subjectsBuilder[(lengthof subjectsBuilder) - 1];
     }
 
@@ -24317,9 +25817,12 @@ public type PodDisruptionBudgetStatusBuilderPolicyV1beta1 object {
     }
 
     public function endStatusPodDisruptionBudgetPolicyV1beta1() returns (PodDisruptionBudgetBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodDisruptionBudgetBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodDisruptionBudgetBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodDisruptionBudgetBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24394,7 +25897,7 @@ public type RoleBindingListBuilderRbacV1beta1 object {
     }
     public function withItemsRoleBindingListRbacV1beta1() returns RoleBindingBuilderRbacV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new RoleBindingBuilderRbacV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -24501,9 +26004,12 @@ public type PodAffinityBuilderCoreV1 object {
     }
 
     public function endPodAffinityAffinityCoreV1() returns (AffinityBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <AffinityBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            AffinityBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <AffinityBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24518,7 +26024,7 @@ public type PodAffinityBuilderCoreV1 object {
         self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[lengthof
         preferredDuringSchedulingIgnoredDuringExecutionBuilder] = new WeightedPodAffinityTermBuilderCoreV1();
         self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
-        preferredDuringSchedulingIgnoredDuringExecutionBuilder)].init(self);
+            preferredDuringSchedulingIgnoredDuringExecutionBuilder) - 1].init(self);
         return self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
             preferredDuringSchedulingIgnoredDuringExecutionBuilder) - 1];
     }
@@ -24528,7 +26034,7 @@ public type PodAffinityBuilderCoreV1 object {
         self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[lengthof
         requiredDuringSchedulingIgnoredDuringExecutionBuilder] = new PodAffinityTermBuilderCoreV1();
         self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
-        requiredDuringSchedulingIgnoredDuringExecutionBuilder)].init(self);
+            requiredDuringSchedulingIgnoredDuringExecutionBuilder) - 1].init(self);
         return self.requiredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
             requiredDuringSchedulingIgnoredDuringExecutionBuilder) - 1];
     }
@@ -24550,9 +26056,12 @@ public type AggregationRuleBuilderRbacV1beta1 object {
     }
 
     public function endAggregationRuleClusterRoleRbacV1beta1() returns (ClusterRoleBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24563,7 +26072,7 @@ public type AggregationRuleBuilderRbacV1beta1 object {
 
     public function withClusterRoleSelectorsAggregationRuleRbacV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.clusterRoleSelectorsBuilder[lengthof clusterRoleSelectorsBuilder] = new LabelSelectorBuilderMetaV1();
-        self.clusterRoleSelectorsBuilder[(lengthof clusterRoleSelectorsBuilder)].init(self);
+        self.clusterRoleSelectorsBuilder[(lengthof clusterRoleSelectorsBuilder) - 1].init(self);
         return self.clusterRoleSelectorsBuilder[(lengthof clusterRoleSelectorsBuilder) - 1];
     }
 };
@@ -24584,9 +26093,12 @@ public type CrossVersionObjectReferenceBuilderAutoscalingV2beta1 object {
 
     public function endTargetObjectMetricSourceAutoscalingV2beta1() returns (ObjectMetricSourceBuilderAutoscalingV2beta1
                 ) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ObjectMetricSourceBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ObjectMetricSourceBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ObjectMetricSourceBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24597,9 +26109,12 @@ public type CrossVersionObjectReferenceBuilderAutoscalingV2beta1 object {
 
     public function endTargetObjectMetricStatusAutoscalingV2beta1() returns (ObjectMetricStatusBuilderAutoscalingV2beta1
                 ) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ObjectMetricStatusBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ObjectMetricStatusBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ObjectMetricStatusBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24610,9 +26125,12 @@ public type CrossVersionObjectReferenceBuilderAutoscalingV2beta1 object {
 
     public function endScaleTargetRefHorizontalPodAutoscalerSpecAutoscalingV2beta1() returns (
                 HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24671,7 +26189,7 @@ public type APIServiceListBuilderApiregistrationV1 object {
     }
     public function withItemsAPIServiceListApiregistrationV1() returns APIServiceBuilderApiregistrationV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new APIServiceBuilderApiregistrationV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -24702,9 +26220,12 @@ public type CronJobSpecBuilderBatchV1beta1 object {
     }
 
     public function endSpecCronJobBatchV1beta1() returns (CronJobBuilderBatchV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CronJobBuilderBatchV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CronJobBuilderBatchV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CronJobBuilderBatchV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24775,9 +26296,12 @@ public type FlexVolumeSourceBuilderCoreV1 object {
     }
 
     public function endFlexVolumeVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24835,9 +26359,12 @@ public type PolicyRuleBuilderRbacV1 object {
     }
 
     public function endRulesClusterRoleRbacV1() returns (ClusterRoleBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24847,9 +26374,12 @@ public type PolicyRuleBuilderRbacV1 object {
     }
 
     public function endRulesRoleRbacV1() returns (RoleBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24921,9 +26451,12 @@ public type TokenReviewSpecBuilderAuthenticationV1 object {
     }
 
     public function endSpecTokenReviewAuthenticationV1() returns (TokenReviewBuilderAuthenticationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <TokenReviewBuilderAuthenticationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            TokenReviewBuilderAuthenticationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <TokenReviewBuilderAuthenticationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24953,9 +26486,12 @@ public type EndpointPortBuilderCoreV1 object {
     }
 
     public function endPortsEndpointSubsetCoreV1() returns (EndpointSubsetBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EndpointSubsetBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EndpointSubsetBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EndpointSubsetBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -24995,9 +26531,12 @@ public type EventSeriesBuilderCoreV1 object {
     }
 
     public function endSeriesEventCoreV1() returns (EventBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25041,9 +26580,12 @@ public type PodTemplateBuilderCoreV1 object {
     }
 
     public function endItemsPodTemplateListCoreV1() returns (PodTemplateListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodTemplateListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodTemplateListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodTemplateListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25108,9 +26650,12 @@ public type ControllerRevisionBuilderAppsV1 object {
     }
 
     public function endItemsControllerRevisionListAppsV1() returns (ControllerRevisionListBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionListBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionListBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionListBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25182,9 +26727,12 @@ public type DaemonSetSpecBuilderAppsV1 object {
     }
 
     public function endSpecDaemonSetAppsV1() returns (DaemonSetBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25260,9 +26808,12 @@ public type APIServiceConditionBuilderApiregistrationV1beta1 object {
 
     public function endConditionsAPIServiceStatusApiregistrationV1beta1() returns (
                 APIServiceStatusBuilderApiregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceStatusBuilderApiregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceStatusBuilderApiregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceStatusBuilderApiregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25314,9 +26865,12 @@ public type ScaleStatusBuilderAppsV1beta1 object {
     }
 
     public function endStatusScaleAppsV1beta1() returns (ScaleBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25360,9 +26914,12 @@ public type DownwardAPIVolumeFileBuilderCoreV1 object {
     }
 
     public function endItemsDownwardAPIProjectionCoreV1() returns (DownwardAPIProjectionBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DownwardAPIProjectionBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DownwardAPIProjectionBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DownwardAPIProjectionBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25372,9 +26929,12 @@ public type DownwardAPIVolumeFileBuilderCoreV1 object {
     }
 
     public function endItemsDownwardAPIVolumeSourceCoreV1() returns (DownwardAPIVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DownwardAPIVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DownwardAPIVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DownwardAPIVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25442,9 +27002,12 @@ public type CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 object {
 
     public function endStatusCustomResourceDefinitionApiextensionsV1beta1() returns (
                 CustomResourceDefinitionBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceDefinitionBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceDefinitionBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceDefinitionBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25473,7 +27036,7 @@ public type CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 object {
     {
         self.conditionsBuilder[lengthof conditionsBuilder] = new
         CustomResourceDefinitionConditionBuilderApiextensionsV1beta1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 };
@@ -25494,9 +27057,12 @@ public type DeploymentStatusBuilderExtensionsV1beta1 object {
     }
 
     public function endStatusDeploymentExtensionsV1beta1() returns (DeploymentBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25508,7 +27074,7 @@ public type DeploymentStatusBuilderExtensionsV1beta1 object {
     public function withConditionsDeploymentStatusExtensionsV1beta1() returns
                                                                           DeploymentConditionBuilderExtensionsV1beta1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new DeploymentConditionBuilderExtensionsV1beta1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -25567,9 +27133,12 @@ public type ServiceSpecBuilderCoreV1 object {
     }
 
     public function endSpecServiceCoreV1() returns (ServiceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25593,7 +27162,7 @@ public type ServiceSpecBuilderCoreV1 object {
     }
     public function withPortsServiceSpecCoreV1() returns ServicePortBuilderCoreV1 {
         self.portsBuilder[lengthof portsBuilder] = new ServicePortBuilderCoreV1();
-        self.portsBuilder[(lengthof portsBuilder)].init(self);
+        self.portsBuilder[(lengthof portsBuilder) - 1].init(self);
         return self.portsBuilder[(lengthof portsBuilder) - 1];
     }
 
@@ -25680,9 +27249,12 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV1 object {
 
     public function endSpecHorizontalPodAutoscalerAutoscalingV1() returns (HorizontalPodAutoscalerBuilderAutoscalingV1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerBuilderAutoscalingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerBuilderAutoscalingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerBuilderAutoscalingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25741,9 +27313,12 @@ public type DeleteOptionsBuilderMetaV1 object {
     }
 
     public function endDeleteOptionsEvictionPolicyV1beta1() returns (EvictionBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EvictionBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            EvictionBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EvictionBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25809,9 +27384,12 @@ public type CustomResourceSubresourceStatusBuilderApiextensionsV1beta1 object {
 
     public function endStatusCustomResourceSubresourcesApiextensionsV1beta1() returns (
                 CustomResourceSubresourcesBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceSubresourcesBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceSubresourcesBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceSubresourcesBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25840,9 +27418,12 @@ public type RoleBuilderRbacV1 object {
     }
 
     public function endItemsRoleListRbacV1() returns (RoleListBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleListBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleListBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleListBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25866,7 +27447,7 @@ public type RoleBuilderRbacV1 object {
     }
     public function withRulesRoleRbacV1() returns PolicyRuleBuilderRbacV1 {
         self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1();
-        self.rulesBuilder[(lengthof rulesBuilder)].init(self);
+        self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
         return self.rulesBuilder[(lengthof rulesBuilder) - 1];
     }
 
@@ -25901,9 +27482,12 @@ public type PersistentVolumeBuilderCoreV1 object {
     }
 
     public function endItemsPersistentVolumeListCoreV1() returns (PersistentVolumeListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -25977,9 +27561,12 @@ public type PersistentVolumeStatusBuilderCoreV1 object {
     }
 
     public function endStatusPersistentVolumeCoreV1() returns (PersistentVolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26025,9 +27612,12 @@ public type ContainerStateBuilderCoreV1 object {
     }
 
     public function endLastStateContainerStatusCoreV1() returns (ContainerStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26037,9 +27627,12 @@ public type ContainerStateBuilderCoreV1 object {
     }
 
     public function endStateContainerStatusCoreV1() returns (ContainerStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26109,9 +27702,12 @@ public type StatefulSetBuilderAppsV1 object {
     }
 
     public function endItemsStatefulSetListAppsV1() returns (StatefulSetListBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetListBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetListBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetListBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26185,9 +27781,12 @@ public type ScaleSpecBuilderAppsV1beta1 object {
     }
 
     public function endSpecScaleAppsV1beta1() returns (ScaleBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26224,9 +27823,12 @@ public type NetworkPolicyPeerBuilderNetworkingV1 object {
 
     public function end_fromNetworkPolicyIngressRuleNetworkingV1() returns (NetworkPolicyIngressRuleBuilderNetworkingV1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyIngressRuleBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyIngressRuleBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyIngressRuleBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26236,9 +27838,12 @@ public type NetworkPolicyPeerBuilderNetworkingV1 object {
     }
 
     public function endToNetworkPolicyEgressRuleNetworkingV1() returns (NetworkPolicyEgressRuleBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyEgressRuleBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyEgressRuleBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyEgressRuleBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26308,9 +27913,12 @@ public type JobBuilderBatchV1 object {
     }
 
     public function endItemsJobListBatchV1() returns (JobListBuilderBatchV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JobListBuilderBatchV1>parentBuilder;
+        match (self.fluentBuilder) {
+            JobListBuilderBatchV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JobListBuilderBatchV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26384,9 +27992,12 @@ public type RollingUpdateDeploymentBuilderAppsV1beta2 object {
     }
 
     public function endRollingUpdateDeploymentStrategyAppsV1beta2() returns (DeploymentStrategyBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentStrategyBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentStrategyBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentStrategyBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26427,9 +28038,12 @@ public type ServiceBuilderCoreV1 object {
     }
 
     public function endItemsServiceListCoreV1() returns (ServiceListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26510,9 +28124,12 @@ public type APIServiceBuilderApiregistrationV1 object {
     }
 
     public function endItemsAPIServiceListApiregistrationV1() returns (APIServiceListBuilderApiregistrationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceListBuilderApiregistrationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceListBuilderApiregistrationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceListBuilderApiregistrationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26586,9 +28203,12 @@ public type NodeConditionBuilderCoreV1 object {
     }
 
     public function endConditionsNodeStatusCoreV1() returns (NodeStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26643,9 +28263,12 @@ public type DeploymentConditionBuilderAppsV1beta1 object {
     }
 
     public function endConditionsDeploymentStatusAppsV1beta1() returns (DeploymentStatusBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentStatusBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentStatusBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentStatusBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26705,9 +28328,12 @@ public type ContainerStatusBuilderCoreV1 object {
     }
 
     public function endContainerStatusesPodStatusCoreV1() returns (PodStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26717,9 +28343,12 @@ public type ContainerStatusBuilderCoreV1 object {
     }
 
     public function endInitContainerStatusesPodStatusCoreV1() returns (PodStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26803,9 +28432,12 @@ public type WeightedPodAffinityTermBuilderCoreV1 object {
 
     public function endPreferredDuringSchedulingIgnoredDuringExecutionPodAntiAffinityCoreV1() returns (
                 PodAntiAffinityBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodAntiAffinityBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodAntiAffinityBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodAntiAffinityBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26816,9 +28448,12 @@ public type WeightedPodAffinityTermBuilderCoreV1 object {
 
     public function endPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityCoreV1() returns (
                 PodAffinityBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodAffinityBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodAffinityBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodAffinityBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26879,7 +28514,7 @@ public type IngressListBuilderExtensionsV1beta1 object {
     }
     public function withItemsIngressListExtensionsV1beta1() returns IngressBuilderExtensionsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new IngressBuilderExtensionsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -26909,9 +28544,12 @@ public type ObjectReferenceBuilderCoreV1 object {
 
     public function endSecretRefStorageOSPersistentVolumeSourceCoreV1() returns (
                 StorageOSPersistentVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StorageOSPersistentVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StorageOSPersistentVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StorageOSPersistentVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26921,9 +28559,12 @@ public type ObjectReferenceBuilderCoreV1 object {
     }
 
     public function endInvolvedObjectEventCoreV1() returns (EventBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26933,9 +28574,12 @@ public type ObjectReferenceBuilderCoreV1 object {
     }
 
     public function endRelatedEventCoreV1() returns (EventBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26945,9 +28589,12 @@ public type ObjectReferenceBuilderCoreV1 object {
     }
 
     public function endSecretsServiceAccountCoreV1() returns (ServiceAccountBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceAccountBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceAccountBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceAccountBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26957,9 +28604,12 @@ public type ObjectReferenceBuilderCoreV1 object {
     }
 
     public function endActiveCronJobStatusBatchV1beta1() returns (CronJobStatusBuilderBatchV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CronJobStatusBuilderBatchV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CronJobStatusBuilderBatchV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CronJobStatusBuilderBatchV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26969,9 +28619,12 @@ public type ObjectReferenceBuilderCoreV1 object {
     }
 
     public function endRegardingEventEventsV1beta1() returns (EventBuilderEventsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventBuilderEventsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventBuilderEventsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventBuilderEventsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26981,9 +28634,12 @@ public type ObjectReferenceBuilderCoreV1 object {
     }
 
     public function endRelatedEventEventsV1beta1() returns (EventBuilderEventsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventBuilderEventsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventBuilderEventsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventBuilderEventsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -26993,9 +28649,12 @@ public type ObjectReferenceBuilderCoreV1 object {
     }
 
     public function endTargetRefEndpointAddressCoreV1() returns (EndpointAddressBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EndpointAddressBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EndpointAddressBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EndpointAddressBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27005,9 +28664,12 @@ public type ObjectReferenceBuilderCoreV1 object {
     }
 
     public function endTargetBindingCoreV1() returns (BindingBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <BindingBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            BindingBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <BindingBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27017,9 +28679,12 @@ public type ObjectReferenceBuilderCoreV1 object {
     }
 
     public function endClaimRefPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27029,9 +28694,12 @@ public type ObjectReferenceBuilderCoreV1 object {
     }
 
     public function endConfigMapRefNodeConfigSourceCoreV1() returns (NodeConfigSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeConfigSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeConfigSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeConfigSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27110,7 +28778,7 @@ public type PodSecurityPolicyListBuilderExtensionsV1beta1 object {
     public function withItemsPodSecurityPolicyListExtensionsV1beta1() returns PodSecurityPolicyBuilderExtensionsV1beta1
     {
         self.itemsBuilder[lengthof itemsBuilder] = new PodSecurityPolicyBuilderExtensionsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -27139,9 +28807,12 @@ public type ServicePortBuilderCoreV1 object {
     }
 
     public function endPortsServiceSpecCoreV1() returns (ServiceSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27193,9 +28864,12 @@ public type RollingUpdateStatefulSetStrategyBuilderAppsV1beta1 object {
 
     public function endRollingUpdateStatefulSetUpdateStrategyAppsV1beta1() returns (
                 StatefulSetUpdateStrategyBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetUpdateStrategyBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetUpdateStrategyBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetUpdateStrategyBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27232,9 +28906,12 @@ public type NetworkPolicyPeerBuilderExtensionsV1beta1 object {
 
     public function end_fromNetworkPolicyIngressRuleExtensionsV1beta1() returns (
                 NetworkPolicyIngressRuleBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyIngressRuleBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyIngressRuleBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyIngressRuleBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27245,9 +28922,12 @@ public type NetworkPolicyPeerBuilderExtensionsV1beta1 object {
 
     public function endToNetworkPolicyEgressRuleExtensionsV1beta1() returns (
                 NetworkPolicyEgressRuleBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyEgressRuleBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyEgressRuleBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyEgressRuleBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27311,9 +28991,12 @@ public type VsphereVirtualDiskVolumeSourceBuilderCoreV1 object {
     }
 
     public function endVsphereVolumeVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27323,9 +29006,12 @@ public type VsphereVirtualDiskVolumeSourceBuilderCoreV1 object {
     }
 
     public function endVsphereVolumePersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27373,9 +29059,12 @@ public type JSONBuilderApiextensionsV1beta1 object {
 
     public function endDefaultJSONSchemaPropsApiextensionsV1beta1() returns (JSONSchemaPropsBuilderApiextensionsV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27385,9 +29074,12 @@ public type JSONBuilderApiextensionsV1beta1 object {
     }
 
     public function endEnumJSONSchemaPropsApiextensionsV1beta1() returns (JSONSchemaPropsBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27398,9 +29090,12 @@ public type JSONBuilderApiextensionsV1beta1 object {
 
     public function endExampleJSONSchemaPropsApiextensionsV1beta1() returns (JSONSchemaPropsBuilderApiextensionsV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27431,9 +29126,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataPodSecurityPolicyListPolicyV1beta1() returns (PodSecurityPolicyListBuilderPolicyV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicyListBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicyListBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicyListBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27443,9 +29141,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataControllerRevisionListAppsV1() returns (ControllerRevisionListBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionListBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionListBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionListBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27455,9 +29156,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDeploymentListAppsV1() returns (DeploymentListBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentListBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentListBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentListBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27468,9 +29172,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataAPIServiceListApiregistrationV1beta1() returns (
                 APIServiceListBuilderApiregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceListBuilderApiregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceListBuilderApiregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceListBuilderApiregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27480,9 +29187,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataControllerRevisionListAppsV1beta2() returns (ControllerRevisionListBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionListBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionListBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionListBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27492,9 +29202,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataRoleListRbacV1() returns (RoleListBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleListBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleListBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleListBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27504,9 +29217,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDaemonSetListAppsV1() returns (DaemonSetListBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetListBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetListBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetListBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27516,9 +29232,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataClusterRoleBindingListRbacV1beta1() returns (ClusterRoleBindingListBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBindingListBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBindingListBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBindingListBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27528,9 +29247,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataJobListBatchV1() returns (JobListBuilderBatchV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JobListBuilderBatchV1>parentBuilder;
+        match (self.fluentBuilder) {
+            JobListBuilderBatchV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JobListBuilderBatchV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27540,9 +29262,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStatefulSetListAppsV1beta2() returns (StatefulSetListBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetListBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetListBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetListBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27553,9 +29278,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataPodDisruptionBudgetListPolicyV1beta1() returns (
                 PodDisruptionBudgetListBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodDisruptionBudgetListBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodDisruptionBudgetListBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodDisruptionBudgetListBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27566,9 +29294,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataMutatingWebhookConfigurationListAdmissionregistrationV1beta1() returns (
                 MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27579,9 +29310,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataNetworkPolicyListExtensionsV1beta1() returns (NetworkPolicyListBuilderExtensionsV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27591,9 +29325,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataControllerRevisionListAppsV1beta1() returns (ControllerRevisionListBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ControllerRevisionListBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ControllerRevisionListBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ControllerRevisionListBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27603,9 +29340,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataRoleBindingListRbacV1() returns (RoleBindingListBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBindingListBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBindingListBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBindingListBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27615,9 +29355,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPodListCoreV1() returns (PodListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27627,9 +29370,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataConfigMapListCoreV1() returns (ConfigMapListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ConfigMapListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ConfigMapListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ConfigMapListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27639,9 +29385,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataReplicaSetListAppsV1() returns (ReplicaSetListBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetListBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetListBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetListBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27651,9 +29400,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataComponentStatusListCoreV1() returns (ComponentStatusListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ComponentStatusListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ComponentStatusListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ComponentStatusListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27664,9 +29416,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataValidatingWebhookConfigurationListAdmissionregistrationV1beta1() returns (
                 ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27676,9 +29431,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataLimitRangeListCoreV1() returns (LimitRangeListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LimitRangeListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LimitRangeListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LimitRangeListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27689,9 +29447,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataVolumeAttachmentListStorageV1beta1() returns (VolumeAttachmentListBuilderStorageV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeAttachmentListBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeAttachmentListBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeAttachmentListBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27701,9 +29462,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataNodeListCoreV1() returns (NodeListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27713,9 +29477,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataEventListEventsV1beta1() returns (EventListBuilderEventsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventListBuilderEventsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventListBuilderEventsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventListBuilderEventsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27725,9 +29492,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStorageClassListStorageV1() returns (StorageClassListBuilderStorageV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StorageClassListBuilderStorageV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StorageClassListBuilderStorageV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StorageClassListBuilderStorageV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27737,9 +29507,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStatusMetaV1() returns (StatusBuilderMetaV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatusBuilderMetaV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatusBuilderMetaV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatusBuilderMetaV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27749,9 +29522,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDaemonSetListAppsV1beta2() returns (DaemonSetListBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetListBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetListBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetListBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27761,9 +29537,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataReplicaSetListAppsV1beta2() returns (ReplicaSetListBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetListBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetListBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetListBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27773,9 +29552,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStatefulSetListAppsV1beta1() returns (StatefulSetListBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetListBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetListBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetListBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27785,9 +29567,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataReplicationControllerListCoreV1() returns (ReplicationControllerListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicationControllerListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicationControllerListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicationControllerListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27797,9 +29582,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStatefulSetListAppsV1() returns (StatefulSetListBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetListBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetListBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetListBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27810,9 +29598,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataCertificateSigningRequestListCertificatesV1beta1() returns (
                 CertificateSigningRequestListBuilderCertificatesV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CertificateSigningRequestListBuilderCertificatesV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CertificateSigningRequestListBuilderCertificatesV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CertificateSigningRequestListBuilderCertificatesV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27822,9 +29613,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataClusterRoleListRbacV1() returns (ClusterRoleListBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleListBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleListBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleListBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27834,9 +29628,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataStorageClassListStorageV1beta1() returns (StorageClassListBuilderStorageV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StorageClassListBuilderStorageV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            StorageClassListBuilderStorageV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StorageClassListBuilderStorageV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27846,9 +29643,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPersistentVolumeListCoreV1() returns (PersistentVolumeListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27858,9 +29658,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataServiceAccountListCoreV1() returns (ServiceAccountListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceAccountListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceAccountListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceAccountListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27870,9 +29673,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPersistentVolumeClaimListCoreV1() returns (PersistentVolumeClaimListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeClaimListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeClaimListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeClaimListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27883,9 +29689,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataCustomResourceDefinitionListApiextensionsV1beta1() returns (
                 CustomResourceDefinitionListBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceDefinitionListBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceDefinitionListBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceDefinitionListBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27895,9 +29704,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDeploymentListExtensionsV1beta1() returns (DeploymentListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27907,9 +29719,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataSecretListCoreV1() returns (SecretListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SecretListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SecretListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SecretListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27919,9 +29734,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataCronJobListBatchV1beta1() returns (CronJobListBuilderBatchV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CronJobListBuilderBatchV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CronJobListBuilderBatchV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CronJobListBuilderBatchV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27931,9 +29749,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataRoleListRbacV1beta1() returns (RoleListBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleListBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleListBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleListBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27943,9 +29764,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataClusterRoleListRbacV1beta1() returns (ClusterRoleListBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleListBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleListBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleListBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27955,9 +29779,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataReplicaSetListExtensionsV1beta1() returns (ReplicaSetListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicaSetListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicaSetListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicaSetListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27967,9 +29794,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataNetworkPolicyListNetworkingV1() returns (NetworkPolicyListBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyListBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyListBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyListBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27980,9 +29810,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataHorizontalPodAutoscalerListAutoscalingV2beta1() returns (
                 HorizontalPodAutoscalerListBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerListBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerListBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerListBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -27992,9 +29825,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataEventListCoreV1() returns (EventListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28004,9 +29840,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataRoleBindingListRbacV1beta1() returns (RoleBindingListBuilderRbacV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RoleBindingListBuilderRbacV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            RoleBindingListBuilderRbacV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RoleBindingListBuilderRbacV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28016,9 +29855,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataAPIServiceListApiregistrationV1() returns (APIServiceListBuilderApiregistrationV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceListBuilderApiregistrationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceListBuilderApiregistrationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceListBuilderApiregistrationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28028,9 +29870,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataIngressListExtensionsV1beta1() returns (IngressListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <IngressListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            IngressListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <IngressListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28041,9 +29886,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataPodSecurityPolicyListExtensionsV1beta1() returns (
                 PodSecurityPolicyListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicyListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicyListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicyListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28053,9 +29901,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataServiceListCoreV1() returns (ServiceListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28065,9 +29916,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataEndpointsListCoreV1() returns (EndpointsListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EndpointsListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EndpointsListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EndpointsListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28077,9 +29931,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDaemonSetListExtensionsV1beta1() returns (DaemonSetListBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetListBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetListBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetListBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28089,9 +29946,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDeploymentListAppsV1beta1() returns (DeploymentListBuilderAppsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentListBuilderAppsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentListBuilderAppsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentListBuilderAppsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28101,9 +29961,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataDeploymentListAppsV1beta2() returns (DeploymentListBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DeploymentListBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DeploymentListBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DeploymentListBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28113,9 +29976,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataPodTemplateListCoreV1() returns (PodTemplateListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodTemplateListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodTemplateListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodTemplateListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28125,9 +29991,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataResourceQuotaListCoreV1() returns (ResourceQuotaListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ResourceQuotaListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ResourceQuotaListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ResourceQuotaListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28137,9 +30006,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataNamespaceListCoreV1() returns (NamespaceListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NamespaceListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NamespaceListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NamespaceListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28149,9 +30021,12 @@ public type ListMetaBuilderMetaV1 object {
     }
 
     public function endMetadataClusterRoleBindingListRbacV1() returns (ClusterRoleBindingListBuilderRbacV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ClusterRoleBindingListBuilderRbacV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ClusterRoleBindingListBuilderRbacV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ClusterRoleBindingListBuilderRbacV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28162,9 +30037,12 @@ public type ListMetaBuilderMetaV1 object {
 
     public function endMetadataHorizontalPodAutoscalerListAutoscalingV1() returns (
                 HorizontalPodAutoscalerListBuilderAutoscalingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerListBuilderAutoscalingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerListBuilderAutoscalingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerListBuilderAutoscalingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28204,9 +30082,12 @@ public type NodeSelectorRequirementBuilderCoreV1 object {
     }
 
     public function endMatchExpressionsNodeSelectorTermCoreV1() returns (NodeSelectorTermBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeSelectorTermBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeSelectorTermBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeSelectorTermBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28269,7 +30150,7 @@ public type ServiceListBuilderCoreV1 object {
     }
     public function withItemsServiceListCoreV1() returns ServiceBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ServiceBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -28300,9 +30181,12 @@ public type ConfigMapProjectionBuilderCoreV1 object {
     }
 
     public function endConfigMapVolumeProjectionCoreV1() returns (VolumeProjectionBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeProjectionBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeProjectionBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeProjectionBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28313,7 +30197,7 @@ public type ConfigMapProjectionBuilderCoreV1 object {
 
     public function withItemsConfigMapProjectionCoreV1() returns KeyToPathBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -28342,9 +30226,12 @@ public type ResourceQuotaStatusBuilderCoreV1 object {
     }
 
     public function endStatusResourceQuotaCoreV1() returns (ResourceQuotaBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ResourceQuotaBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ResourceQuotaBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ResourceQuotaBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28452,9 +30339,12 @@ public type IngressStatusBuilderExtensionsV1beta1 object {
     }
 
     public function endStatusIngressExtensionsV1beta1() returns (IngressBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <IngressBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            IngressBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <IngressBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28560,7 +30450,7 @@ public type EndpointsListBuilderCoreV1 object {
     }
     public function withItemsEndpointsListCoreV1() returns EndpointsBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new EndpointsBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -28599,9 +30489,12 @@ public type EventBuilderEventsV1beta1 object {
     }
 
     public function endItemsEventListEventsV1beta1() returns (EventListBuilderEventsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EventListBuilderEventsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            EventListBuilderEventsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EventListBuilderEventsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28759,9 +30652,12 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 object {
 
     public function endSpecHorizontalPodAutoscalerAutoscalingV2beta1() returns (
                 HorizontalPodAutoscalerBuilderAutoscalingV2beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerBuilderAutoscalingV2beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerBuilderAutoscalingV2beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerBuilderAutoscalingV2beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28788,7 +30684,7 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 object {
     public function withMetricsHorizontalPodAutoscalerSpecAutoscalingV2beta1() returns
                                                                                    MetricSpecBuilderAutoscalingV2beta1 {
         self.metricsBuilder[lengthof metricsBuilder] = new MetricSpecBuilderAutoscalingV2beta1();
-        self.metricsBuilder[(lengthof metricsBuilder)].init(self);
+        self.metricsBuilder[(lengthof metricsBuilder) - 1].init(self);
         return self.metricsBuilder[(lengthof metricsBuilder) - 1];
     }
 
@@ -28817,9 +30713,12 @@ public type FCVolumeSourceBuilderCoreV1 object {
     }
 
     public function endFcVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28829,9 +30728,12 @@ public type FCVolumeSourceBuilderCoreV1 object {
     }
 
     public function endFcPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28892,9 +30794,12 @@ public type SelfSubjectRulesReviewSpecBuilderAuthorizationV1 object {
 
     public function endSpecSelfSubjectRulesReviewAuthorizationV1() returns (SelfSubjectRulesReviewBuilderAuthorizationV1
                 ) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SelfSubjectRulesReviewBuilderAuthorizationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SelfSubjectRulesReviewBuilderAuthorizationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SelfSubjectRulesReviewBuilderAuthorizationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28924,9 +30829,12 @@ public type KeyToPathBuilderCoreV1 object {
     }
 
     public function endItemsSecretProjectionCoreV1() returns (SecretProjectionBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SecretProjectionBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SecretProjectionBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SecretProjectionBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28936,9 +30844,12 @@ public type KeyToPathBuilderCoreV1 object {
     }
 
     public function endItemsSecretVolumeSourceCoreV1() returns (SecretVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <SecretVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            SecretVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <SecretVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28948,9 +30859,12 @@ public type KeyToPathBuilderCoreV1 object {
     }
 
     public function endItemsConfigMapProjectionCoreV1() returns (ConfigMapProjectionBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ConfigMapProjectionBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ConfigMapProjectionBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ConfigMapProjectionBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -28960,9 +30874,12 @@ public type KeyToPathBuilderCoreV1 object {
     }
 
     public function endItemsConfigMapVolumeSourceCoreV1() returns (ConfigMapVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ConfigMapVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ConfigMapVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ConfigMapVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29076,9 +30993,12 @@ public type IPBlockBuilderExtensionsV1beta1 object {
     }
 
     public function endIpBlockNetworkPolicyPeerExtensionsV1beta1() returns (NetworkPolicyPeerBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyPeerBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyPeerBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyPeerBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29120,9 +31040,12 @@ public type ProjectedVolumeSourceBuilderCoreV1 object {
     }
 
     public function endProjectedVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29133,7 +31056,7 @@ public type ProjectedVolumeSourceBuilderCoreV1 object {
 
     public function withSourcesProjectedVolumeSourceCoreV1() returns VolumeProjectionBuilderCoreV1 {
         self.sourcesBuilder[lengthof sourcesBuilder] = new VolumeProjectionBuilderCoreV1();
-        self.sourcesBuilder[(lengthof sourcesBuilder)].init(self);
+        self.sourcesBuilder[(lengthof sourcesBuilder) - 1].init(self);
         return self.sourcesBuilder[(lengthof sourcesBuilder) - 1];
     }
 
@@ -29159,9 +31082,12 @@ public type PersistentVolumeClaimStatusBuilderCoreV1 object {
     }
 
     public function endStatusPersistentVolumeClaimCoreV1() returns (PersistentVolumeClaimBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeClaimBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeClaimBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeClaimBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29173,7 +31099,7 @@ public type PersistentVolumeClaimStatusBuilderCoreV1 object {
     public function withConditionsPersistentVolumeClaimStatusCoreV1() returns
                                                                           PersistentVolumeClaimConditionBuilderCoreV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new PersistentVolumeClaimConditionBuilderCoreV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -29212,9 +31138,12 @@ public type ResourceQuotaSpecBuilderCoreV1 object {
     }
 
     public function endSpecResourceQuotaCoreV1() returns (ResourceQuotaBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ResourceQuotaBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ResourceQuotaBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ResourceQuotaBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29258,9 +31187,12 @@ public type NodeAffinityBuilderCoreV1 object {
     }
 
     public function endNodeAffinityAffinityCoreV1() returns (AffinityBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <AffinityBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            AffinityBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <AffinityBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29290,7 +31222,7 @@ public type NodeAffinityBuilderCoreV1 object {
         self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[lengthof
         preferredDuringSchedulingIgnoredDuringExecutionBuilder] = new PreferredSchedulingTermBuilderCoreV1();
         self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
-        preferredDuringSchedulingIgnoredDuringExecutionBuilder)].init(self);
+            preferredDuringSchedulingIgnoredDuringExecutionBuilder) - 1].init(self);
         return self.preferredDuringSchedulingIgnoredDuringExecutionBuilder[(lengthof
             preferredDuringSchedulingIgnoredDuringExecutionBuilder) - 1];
     }
@@ -29311,9 +31243,12 @@ public type RollingUpdateDaemonSetBuilderExtensionsV1beta1 object {
 
     public function endRollingUpdateDaemonSetUpdateStrategyExtensionsV1beta1() returns (
                 DaemonSetUpdateStrategyBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetUpdateStrategyBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetUpdateStrategyBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetUpdateStrategyBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29345,9 +31280,12 @@ public type SecretReferenceBuilderCoreV1 object {
 
     public function endControllerPublishSecretRefCSIPersistentVolumeSourceCoreV1() returns (
                 CSIPersistentVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CSIPersistentVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            CSIPersistentVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CSIPersistentVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29358,9 +31296,12 @@ public type SecretReferenceBuilderCoreV1 object {
 
     public function endNodePublishSecretRefCSIPersistentVolumeSourceCoreV1() returns (
                 CSIPersistentVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CSIPersistentVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            CSIPersistentVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CSIPersistentVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29371,9 +31312,12 @@ public type SecretReferenceBuilderCoreV1 object {
 
     public function endNodeStageSecretRefCSIPersistentVolumeSourceCoreV1() returns (
                 CSIPersistentVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CSIPersistentVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            CSIPersistentVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CSIPersistentVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29383,9 +31327,12 @@ public type SecretReferenceBuilderCoreV1 object {
     }
 
     public function endSecretRefRBDPersistentVolumeSourceCoreV1() returns (RBDPersistentVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <RBDPersistentVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            RBDPersistentVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <RBDPersistentVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29396,9 +31343,12 @@ public type SecretReferenceBuilderCoreV1 object {
 
     public function endSecretRefScaleIOPersistentVolumeSourceCoreV1() returns (
                 ScaleIOPersistentVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleIOPersistentVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleIOPersistentVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleIOPersistentVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29408,9 +31358,12 @@ public type SecretReferenceBuilderCoreV1 object {
     }
 
     public function endSecretRefFlexPersistentVolumeSourceCoreV1() returns (FlexPersistentVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <FlexPersistentVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            FlexPersistentVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <FlexPersistentVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29420,9 +31373,12 @@ public type SecretReferenceBuilderCoreV1 object {
     }
 
     public function endSecretRefISCSIPersistentVolumeSourceCoreV1() returns (ISCSIPersistentVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ISCSIPersistentVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ISCSIPersistentVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ISCSIPersistentVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29433,9 +31389,12 @@ public type SecretReferenceBuilderCoreV1 object {
 
     public function endSecretRefCephFSPersistentVolumeSourceCoreV1() returns (CephFSPersistentVolumeSourceBuilderCoreV1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CephFSPersistentVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            CephFSPersistentVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CephFSPersistentVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29472,9 +31431,12 @@ public type EndpointAddressBuilderCoreV1 object {
     }
 
     public function endAddressesEndpointSubsetCoreV1() returns (EndpointSubsetBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EndpointSubsetBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EndpointSubsetBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EndpointSubsetBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29484,9 +31446,12 @@ public type EndpointAddressBuilderCoreV1 object {
     }
 
     public function endNotReadyAddressesEndpointSubsetCoreV1() returns (EndpointSubsetBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EndpointSubsetBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EndpointSubsetBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EndpointSubsetBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29541,9 +31506,12 @@ public type HorizontalPodAutoscalerStatusBuilderAutoscalingV1 object {
 
     public function endStatusHorizontalPodAutoscalerAutoscalingV1() returns (HorizontalPodAutoscalerBuilderAutoscalingV1
                 ) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HorizontalPodAutoscalerBuilderAutoscalingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            HorizontalPodAutoscalerBuilderAutoscalingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HorizontalPodAutoscalerBuilderAutoscalingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29601,9 +31569,12 @@ public type JobStatusBuilderBatchV1 object {
     }
 
     public function endStatusJobBatchV1() returns (JobBuilderBatchV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JobBuilderBatchV1>parentBuilder;
+        match (self.fluentBuilder) {
+            JobBuilderBatchV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JobBuilderBatchV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29614,7 +31585,7 @@ public type JobStatusBuilderBatchV1 object {
 
     public function withConditionsJobStatusBatchV1() returns JobConditionBuilderBatchV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new JobConditionBuilderBatchV1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 
@@ -29660,9 +31631,12 @@ public type NodeSelectorTermBuilderCoreV1 object {
     }
 
     public function endNodeSelectorTermsNodeSelectorCoreV1() returns (NodeSelectorBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeSelectorBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeSelectorBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeSelectorBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29672,9 +31646,12 @@ public type NodeSelectorTermBuilderCoreV1 object {
     }
 
     public function endPreferencePreferredSchedulingTermCoreV1() returns (PreferredSchedulingTermBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PreferredSchedulingTermBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PreferredSchedulingTermBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PreferredSchedulingTermBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29685,7 +31662,7 @@ public type NodeSelectorTermBuilderCoreV1 object {
 
     public function withMatchExpressionsNodeSelectorTermCoreV1() returns NodeSelectorRequirementBuilderCoreV1 {
         self.matchExpressionsBuilder[lengthof matchExpressionsBuilder] = new NodeSelectorRequirementBuilderCoreV1();
-        self.matchExpressionsBuilder[(lengthof matchExpressionsBuilder)].init(self);
+        self.matchExpressionsBuilder[(lengthof matchExpressionsBuilder) - 1].init(self);
         return self.matchExpressionsBuilder[(lengthof matchExpressionsBuilder) - 1];
     }
 };
@@ -29710,9 +31687,12 @@ public type VolumeProjectionBuilderCoreV1 object {
     }
 
     public function endSourcesProjectedVolumeSourceCoreV1() returns (ProjectedVolumeSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ProjectedVolumeSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ProjectedVolumeSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ProjectedVolumeSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29794,7 +31774,7 @@ public type DaemonSetListBuilderExtensionsV1beta1 object {
     }
     public function withItemsDaemonSetListExtensionsV1beta1() returns DaemonSetBuilderExtensionsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderExtensionsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -29826,9 +31806,12 @@ public type HTTPIngressPathBuilderExtensionsV1beta1 object {
 
     public function endPathsHTTPIngressRuleValueExtensionsV1beta1() returns (
                 HTTPIngressRuleValueBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <HTTPIngressRuleValueBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            HTTPIngressRuleValueBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <HTTPIngressRuleValueBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29873,9 +31856,12 @@ public type PodDisruptionBudgetSpecBuilderPolicyV1beta1 object {
     }
 
     public function endSpecPodDisruptionBudgetPolicyV1beta1() returns (PodDisruptionBudgetBuilderPolicyV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodDisruptionBudgetBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodDisruptionBudgetBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodDisruptionBudgetBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -29942,7 +31928,7 @@ public type DeploymentListBuilderAppsV1beta1 object {
     }
     public function withItemsDeploymentListAppsV1beta1() returns DeploymentBuilderAppsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1beta1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -29977,9 +31963,12 @@ public type NodeBuilderCoreV1 object {
     }
 
     public function endItemsNodeListCoreV1() returns (NodeListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30055,9 +32044,12 @@ public type DownwardAPIVolumeSourceBuilderCoreV1 object {
     }
 
     public function endDownwardAPIVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30068,7 +32060,7 @@ public type DownwardAPIVolumeSourceBuilderCoreV1 object {
 
     public function withItemsDownwardAPIVolumeSourceCoreV1() returns DownwardAPIVolumeFileBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DownwardAPIVolumeFileBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -30092,9 +32084,12 @@ public type ScaleStatusBuilderAutoscalingV1 object {
     }
 
     public function endStatusScaleAutoscalingV1() returns (ScaleBuilderAutoscalingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderAutoscalingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderAutoscalingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderAutoscalingV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30153,9 +32148,12 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
 
     public function endSchemaJSONSchemaPropsOrStringArrayApiextensionsV1beta1() returns (
                 JSONSchemaPropsOrStringArrayBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsOrStringArrayBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsOrStringArrayBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsOrStringArrayBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30166,9 +32164,12 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
 
     public function endSchemaJSONSchemaPropsOrBoolApiextensionsV1beta1() returns (
                 JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsOrBoolBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30179,9 +32180,12 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
 
     public function endOpenAPIV3SchemaCustomResourceValidationApiextensionsV1beta1() returns (
                 CustomResourceValidationBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceValidationBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceValidationBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceValidationBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30192,9 +32196,12 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
 
     public function endJSONSchemasJSONSchemaPropsOrArrayApiextensionsV1beta1() returns (
                 JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30205,9 +32212,12 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
 
     public function endSchemaJSONSchemaPropsOrArrayApiextensionsV1beta1() returns (
                 JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30217,9 +32227,12 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
     }
 
     public function endAllOfJSONSchemaPropsApiextensionsV1beta1() returns (JSONSchemaPropsBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30229,9 +32242,12 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
     }
 
     public function endAnyOfJSONSchemaPropsApiextensionsV1beta1() returns (JSONSchemaPropsBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30241,9 +32257,12 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
     }
 
     public function endNotJSONSchemaPropsApiextensionsV1beta1() returns (JSONSchemaPropsBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30253,9 +32272,12 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
     }
 
     public function endOneOfJSONSchemaPropsApiextensionsV1beta1() returns (JSONSchemaPropsBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            JSONSchemaPropsBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <JSONSchemaPropsBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30365,22 +32387,22 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
     }
     public function withAllOfJSONSchemaPropsApiextensionsV1beta1() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
         self.allOfBuilder[lengthof allOfBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1();
-        self.allOfBuilder[(lengthof allOfBuilder)].init(self);
+        self.allOfBuilder[(lengthof allOfBuilder) - 1].init(self);
         return self.allOfBuilder[(lengthof allOfBuilder) - 1];
     }
     public function withAnyOfJSONSchemaPropsApiextensionsV1beta1() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
         self.anyOfBuilder[lengthof anyOfBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1();
-        self.anyOfBuilder[(lengthof anyOfBuilder)].init(self);
+        self.anyOfBuilder[(lengthof anyOfBuilder) - 1].init(self);
         return self.anyOfBuilder[(lengthof anyOfBuilder) - 1];
     }
     public function withEnumJSONSchemaPropsApiextensionsV1beta1() returns JSONBuilderApiextensionsV1beta1 {
         self.enumBuilder[lengthof enumBuilder] = new JSONBuilderApiextensionsV1beta1();
-        self.enumBuilder[(lengthof enumBuilder)].init(self);
+        self.enumBuilder[(lengthof enumBuilder) - 1].init(self);
         return self.enumBuilder[(lengthof enumBuilder) - 1];
     }
     public function withOneOfJSONSchemaPropsApiextensionsV1beta1() returns JSONSchemaPropsBuilderApiextensionsV1beta1 {
         self.oneOfBuilder[lengthof oneOfBuilder] = new JSONSchemaPropsBuilderApiextensionsV1beta1();
-        self.oneOfBuilder[(lengthof oneOfBuilder)].init(self);
+        self.oneOfBuilder[(lengthof oneOfBuilder) - 1].init(self);
         return self.oneOfBuilder[(lengthof oneOfBuilder) - 1];
     }
 
@@ -30554,7 +32576,7 @@ public type DeploymentListBuilderAppsV1beta2 object {
     }
     public function withItemsDeploymentListAppsV1beta2() returns DeploymentBuilderAppsV1beta2 {
         self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1beta2();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -30586,9 +32608,12 @@ public type APIServiceStatusBuilderApiregistrationV1beta1 object {
     }
 
     public function endStatusAPIServiceApiregistrationV1beta1() returns (APIServiceBuilderApiregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceBuilderApiregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceBuilderApiregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceBuilderApiregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30601,7 +32626,7 @@ public type APIServiceStatusBuilderApiregistrationV1beta1 object {
                                                                                APIServiceConditionBuilderApiregistrationV1beta1
     {
         self.conditionsBuilder[lengthof conditionsBuilder] = new APIServiceConditionBuilderApiregistrationV1beta1();
-        self.conditionsBuilder[(lengthof conditionsBuilder)].init(self);
+        self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
         return self.conditionsBuilder[(lengthof conditionsBuilder) - 1];
     }
 };
@@ -30620,9 +32645,12 @@ public type ObjectFieldSelectorBuilderCoreV1 object {
     }
 
     public function endFieldRefEnvVarSourceCoreV1() returns (EnvVarSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EnvVarSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EnvVarSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EnvVarSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30632,9 +32660,12 @@ public type ObjectFieldSelectorBuilderCoreV1 object {
     }
 
     public function endFieldRefDownwardAPIVolumeFileCoreV1() returns (DownwardAPIVolumeFileBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DownwardAPIVolumeFileBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            DownwardAPIVolumeFileBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DownwardAPIVolumeFileBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30687,7 +32718,7 @@ public type PodTemplateListBuilderCoreV1 object {
     }
     public function withItemsPodTemplateListCoreV1() returns PodTemplateBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PodTemplateBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -30717,9 +32748,12 @@ public type RuleWithOperationsBuilderAdmissionregistrationV1beta1 object {
     }
 
     public function endRulesWebhookAdmissionregistrationV1beta1() returns (WebhookBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <WebhookBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            WebhookBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <WebhookBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30794,9 +32828,12 @@ public type CertificateSigningRequestBuilderCertificatesV1beta1 object {
 
     public function endItemsCertificateSigningRequestListCertificatesV1beta1() returns (
                 CertificateSigningRequestListBuilderCertificatesV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CertificateSigningRequestListBuilderCertificatesV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CertificateSigningRequestListBuilderCertificatesV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CertificateSigningRequestListBuilderCertificatesV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30880,9 +32917,12 @@ public type HandlerBuilderCoreV1 object {
     }
 
     public function endPostStartLifecycleCoreV1() returns (LifecycleBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LifecycleBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LifecycleBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LifecycleBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -30892,9 +32932,12 @@ public type HandlerBuilderCoreV1 object {
     }
 
     public function endPreStopLifecycleCoreV1() returns (LifecycleBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <LifecycleBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            LifecycleBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <LifecycleBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31061,9 +33104,12 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
     }
 
     public function endSpecPersistentVolumeCoreV1() returns (PersistentVolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31448,9 +33494,12 @@ public type LoadBalancerStatusBuilderCoreV1 object {
     }
 
     public function endLoadBalancerServiceStatusCoreV1() returns (ServiceStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ServiceStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ServiceStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ServiceStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31460,9 +33509,12 @@ public type LoadBalancerStatusBuilderCoreV1 object {
     }
 
     public function endLoadBalancerIngressStatusExtensionsV1beta1() returns (IngressStatusBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <IngressStatusBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            IngressStatusBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <IngressStatusBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31473,7 +33525,7 @@ public type LoadBalancerStatusBuilderCoreV1 object {
 
     public function withIngressLoadBalancerStatusCoreV1() returns LoadBalancerIngressBuilderCoreV1 {
         self.ingressBuilder[lengthof ingressBuilder] = new LoadBalancerIngressBuilderCoreV1();
-        self.ingressBuilder[(lengthof ingressBuilder)].init(self);
+        self.ingressBuilder[(lengthof ingressBuilder) - 1].init(self);
         return self.ingressBuilder[(lengthof ingressBuilder) - 1];
     }
 };
@@ -31492,9 +33544,12 @@ public type SecretEnvSourceBuilderCoreV1 object {
     }
 
     public function endSecretRefEnvFromSourceCoreV1() returns (EnvFromSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EnvFromSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EnvFromSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EnvFromSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31532,9 +33587,12 @@ public type SELinuxStrategyOptionsBuilderExtensionsV1beta1 object {
 
     public function endSeLinuxPodSecurityPolicySpecExtensionsV1beta1() returns (
                 PodSecurityPolicySpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31577,9 +33635,12 @@ public type NamespaceStatusBuilderCoreV1 object {
     }
 
     public function endStatusNamespaceCoreV1() returns (NamespaceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NamespaceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NamespaceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NamespaceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31613,9 +33674,12 @@ public type SecurityContextBuilderCoreV1 object {
     }
 
     public function endSecurityContextContainerCoreV1() returns (ContainerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ContainerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ContainerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ContainerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31697,9 +33761,12 @@ public type SecretKeySelectorBuilderCoreV1 object {
     }
 
     public function endSecretKeyRefEnvVarSourceCoreV1() returns (EnvVarSourceBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <EnvVarSourceBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            EnvVarSourceBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <EnvVarSourceBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31739,9 +33806,12 @@ public type RollingUpdateStatefulSetStrategyBuilderAppsV1 object {
     }
 
     public function endRollingUpdateStatefulSetUpdateStrategyAppsV1() returns (StatefulSetUpdateStrategyBuilderAppsV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetUpdateStrategyBuilderAppsV1>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetUpdateStrategyBuilderAppsV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetUpdateStrategyBuilderAppsV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31771,9 +33841,12 @@ public type NFSVolumeSourceBuilderCoreV1 object {
     }
 
     public function endNfsVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31783,9 +33856,12 @@ public type NFSVolumeSourceBuilderCoreV1 object {
     }
 
     public function endNfsPersistentVolumeSpecCoreV1() returns (PersistentVolumeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PersistentVolumeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PersistentVolumeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PersistentVolumeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31829,9 +33905,12 @@ public type WebhookClientConfigBuilderAdmissionregistrationV1beta1 object {
 
     public function endClientConfigWebhookAdmissionregistrationV1beta1() returns (
                 WebhookBuilderAdmissionregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <WebhookBuilderAdmissionregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            WebhookBuilderAdmissionregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <WebhookBuilderAdmissionregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31884,9 +33963,12 @@ public type CustomResourceSubresourceScaleBuilderApiextensionsV1beta1 object {
 
     public function endScaleCustomResourceSubresourcesApiextensionsV1beta1() returns (
                 CustomResourceSubresourcesBuilderApiextensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <CustomResourceSubresourcesBuilderApiextensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            CustomResourceSubresourcesBuilderApiextensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <CustomResourceSubresourcesBuilderApiextensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -31950,7 +34032,7 @@ public type ResourceQuotaListBuilderCoreV1 object {
     }
     public function withItemsResourceQuotaListCoreV1() returns ResourceQuotaBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ResourceQuotaBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -31981,9 +34063,12 @@ public type NodeDaemonEndpointsBuilderCoreV1 object {
     }
 
     public function endDaemonEndpointsNodeStatusCoreV1() returns (NodeStatusBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeStatusBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeStatusBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeStatusBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32021,9 +34106,12 @@ public type TaintBuilderCoreV1 object {
     }
 
     public function endTaintsNodeSpecCoreV1() returns (NodeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32070,9 +34158,12 @@ public type ReplicationControllerSpecBuilderCoreV1 object {
     }
 
     public function endSpecReplicationControllerCoreV1() returns (ReplicationControllerBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ReplicationControllerBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ReplicationControllerBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ReplicationControllerBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32143,7 +34234,7 @@ public type NamespaceListBuilderCoreV1 object {
     }
     public function withItemsNamespaceListCoreV1() returns NamespaceBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new NamespaceBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -32176,9 +34267,12 @@ public type RunAsUserStrategyOptionsBuilderExtensionsV1beta1 object {
 
     public function endRunAsUserPodSecurityPolicySpecExtensionsV1beta1() returns (
                 PodSecurityPolicySpecBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicySpecBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicySpecBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32189,7 +34283,7 @@ public type RunAsUserStrategyOptionsBuilderExtensionsV1beta1 object {
 
     public function withRangesRunAsUserStrategyOptionsExtensionsV1beta1() returns IDRangeBuilderExtensionsV1beta1 {
         self.rangesBuilder[lengthof rangesBuilder] = new IDRangeBuilderExtensionsV1beta1();
-        self.rangesBuilder[(lengthof rangesBuilder)].init(self);
+        self.rangesBuilder[(lengthof rangesBuilder) - 1].init(self);
         return self.rangesBuilder[(lengthof rangesBuilder) - 1];
     }
 
@@ -32215,9 +34309,12 @@ public type ConfigMapBuilderCoreV1 object {
     }
 
     public function endItemsConfigMapListCoreV1() returns (ConfigMapListBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ConfigMapListBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            ConfigMapListBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ConfigMapListBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32293,7 +34390,7 @@ public type ClusterRoleBindingListBuilderRbacV1 object {
     }
     public function withItemsClusterRoleBindingListRbacV1() returns ClusterRoleBindingBuilderRbacV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBindingBuilderRbacV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -32325,9 +34422,12 @@ public type PreferredSchedulingTermBuilderCoreV1 object {
 
     public function endPreferredDuringSchedulingIgnoredDuringExecutionNodeAffinityCoreV1() returns (
                 NodeAffinityBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeAffinityBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeAffinityBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeAffinityBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32373,9 +34473,12 @@ public type PodAffinityTermBuilderCoreV1 object {
 
     public function endRequiredDuringSchedulingIgnoredDuringExecutionPodAntiAffinityCoreV1() returns (
                 PodAntiAffinityBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodAntiAffinityBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodAntiAffinityBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodAntiAffinityBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32386,9 +34489,12 @@ public type PodAffinityTermBuilderCoreV1 object {
 
     public function endRequiredDuringSchedulingIgnoredDuringExecutionPodAffinityCoreV1() returns (
                 PodAffinityBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodAffinityBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodAffinityBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodAffinityBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32398,9 +34504,12 @@ public type PodAffinityTermBuilderCoreV1 object {
     }
 
     public function endPodAffinityTermWeightedPodAffinityTermCoreV1() returns (WeightedPodAffinityTermBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <WeightedPodAffinityTermBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            WeightedPodAffinityTermBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <WeightedPodAffinityTermBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32453,9 +34562,12 @@ public type ScaleSpecBuilderExtensionsV1beta1 object {
     }
 
     public function endSpecScaleExtensionsV1beta1() returns (ScaleBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <ScaleBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            ScaleBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <ScaleBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32487,9 +34599,12 @@ public type StatefulSetUpdateStrategyBuilderAppsV1beta2 object {
     }
 
     public function endUpdateStrategyStatefulSetSpecAppsV1beta2() returns (StatefulSetSpecBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <StatefulSetSpecBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            StatefulSetSpecBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <StatefulSetSpecBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32541,9 +34656,12 @@ public type PodDisruptionBudgetBuilderPolicyV1beta1 object {
 
     public function endItemsPodDisruptionBudgetListPolicyV1beta1() returns (PodDisruptionBudgetListBuilderPolicyV1beta1)
     {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodDisruptionBudgetListBuilderPolicyV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodDisruptionBudgetListBuilderPolicyV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodDisruptionBudgetListBuilderPolicyV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32619,9 +34737,12 @@ public type NodeConfigSourceBuilderCoreV1 object {
     }
 
     public function endConfigSourceNodeSpecCoreV1() returns (NodeSpecBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NodeSpecBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NodeSpecBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NodeSpecBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32671,9 +34792,12 @@ public type ConfigMapVolumeSourceBuilderCoreV1 object {
     }
 
     public function endConfigMapVolumeCoreV1() returns (VolumeBuilderCoreV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <VolumeBuilderCoreV1>parentBuilder;
+        match (self.fluentBuilder) {
+            VolumeBuilderCoreV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <VolumeBuilderCoreV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32684,7 +34808,7 @@ public type ConfigMapVolumeSourceBuilderCoreV1 object {
 
     public function withItemsConfigMapVolumeSourceCoreV1() returns KeyToPathBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new KeyToPathBuilderCoreV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -32732,9 +34856,12 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
     }
 
     public function endSpecPodSecurityPolicyExtensionsV1beta1() returns (PodSecurityPolicyBuilderExtensionsV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <PodSecurityPolicyBuilderExtensionsV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            PodSecurityPolicyBuilderExtensionsV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <PodSecurityPolicyBuilderExtensionsV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32808,20 +34935,20 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
     {
         self.allowedFlexVolumesBuilder[lengthof allowedFlexVolumesBuilder] = new
         AllowedFlexVolumeBuilderExtensionsV1beta1();
-        self.allowedFlexVolumesBuilder[(lengthof allowedFlexVolumesBuilder)].init(self);
+        self.allowedFlexVolumesBuilder[(lengthof allowedFlexVolumesBuilder) - 1].init(self);
         return self.allowedFlexVolumesBuilder[(lengthof allowedFlexVolumesBuilder) - 1];
     }
     public function withAllowedHostPathsPodSecurityPolicySpecExtensionsV1beta1() returns
                                                                                      AllowedHostPathBuilderExtensionsV1beta1
     {
         self.allowedHostPathsBuilder[lengthof allowedHostPathsBuilder] = new AllowedHostPathBuilderExtensionsV1beta1();
-        self.allowedHostPathsBuilder[(lengthof allowedHostPathsBuilder)].init(self);
+        self.allowedHostPathsBuilder[(lengthof allowedHostPathsBuilder) - 1].init(self);
         return self.allowedHostPathsBuilder[(lengthof allowedHostPathsBuilder) - 1];
     }
     public function withHostPortsPodSecurityPolicySpecExtensionsV1beta1() returns HostPortRangeBuilderExtensionsV1beta1
     {
         self.hostPortsBuilder[lengthof hostPortsBuilder] = new HostPortRangeBuilderExtensionsV1beta1();
-        self.hostPortsBuilder[(lengthof hostPortsBuilder)].init(self);
+        self.hostPortsBuilder[(lengthof hostPortsBuilder) - 1].init(self);
         return self.hostPortsBuilder[(lengthof hostPortsBuilder) - 1];
     }
 
@@ -32923,9 +35050,12 @@ public type RollingUpdateDaemonSetBuilderAppsV1beta2 object {
 
     public function endRollingUpdateDaemonSetUpdateStrategyAppsV1beta2() returns (
                 DaemonSetUpdateStrategyBuilderAppsV1beta2) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <DaemonSetUpdateStrategyBuilderAppsV1beta2>parentBuilder;
+        match (self.fluentBuilder) {
+            DaemonSetUpdateStrategyBuilderAppsV1beta2 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <DaemonSetUpdateStrategyBuilderAppsV1beta2>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -32975,7 +35105,7 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV1 object {
                                                                             HorizontalPodAutoscalerBuilderAutoscalingV1
     {
         self.itemsBuilder[lengthof itemsBuilder] = new HorizontalPodAutoscalerBuilderAutoscalingV1();
-        self.itemsBuilder[(lengthof itemsBuilder)].init(self);
+        self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
         return self.itemsBuilder[(lengthof itemsBuilder) - 1];
     }
 
@@ -33006,9 +35136,12 @@ public type ServiceReferenceBuilderApiregistrationV1 object {
 
     public function endServiceReferenceAPIServiceSpecApiregistrationV1() returns (APIServiceSpecBuilderApiregistrationV1
                 ) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceSpecBuilderApiregistrationV1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceSpecBuilderApiregistrationV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceSpecBuilderApiregistrationV1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -33046,9 +35179,12 @@ public type APIServiceSpecBuilderApiregistrationV1beta1 object {
     }
 
     public function endSpecAPIServiceApiregistrationV1beta1() returns (APIServiceBuilderApiregistrationV1beta1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <APIServiceBuilderApiregistrationV1beta1>parentBuilder;
+        match (self.fluentBuilder) {
+            APIServiceBuilderApiregistrationV1beta1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <APIServiceBuilderApiregistrationV1beta1>genericBuilder;
             }
             () v => {
                 error e = {};
@@ -33126,9 +35262,12 @@ public type NetworkPolicyBuilderNetworkingV1 object {
     }
 
     public function endItemsNetworkPolicyListNetworkingV1() returns (NetworkPolicyListBuilderNetworkingV1) {
-        match (fluentBuilder) {
-            FluentBuilder parentBuilder => {
-                return check <NetworkPolicyListBuilderNetworkingV1>parentBuilder;
+        match (self.fluentBuilder) {
+            NetworkPolicyListBuilderNetworkingV1 parentBuilder => {
+                return parentBuilder;
+            }
+            FluentBuilder genericBuilder => {
+                return check <NetworkPolicyListBuilderNetworkingV1>genericBuilder;
             }
             () v => {
                 error e = {};
