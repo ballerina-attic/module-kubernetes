@@ -20,13 +20,13 @@ public type DeploymentBuilder object {
         return deployment;
     }
 
-    public function withMetaData() returns MetadataBuilder {
+    public function withMetaDataDeploymentAppsV1() returns MetadataBuilder {
         metaBuilder = new MetadataBuilder();
         metaBuilder.init(self);
         return metaBuilder;
     }
 
-    public function withSpec() returns SpecBuilder {
+    public function withSpecDeploymentAppsV1() returns SpecBuilder {
         specBuilder = new SpecBuilder();
         specBuilder.init(self);
         return specBuilder;
@@ -46,7 +46,7 @@ public type SpecBuilder object {
         parentBuilder = builder;
     }
 
-    public function end() returns DeploymentBuilder {
+    public function endSpecDeploymentAppsV1() returns DeploymentBuilder {
         match (parentBuilder) {
             GenericBuilder vv => {
                 return check <DeploymentBuilder>vv;
@@ -81,7 +81,7 @@ public type MetadataBuilder object {
         parentBuilder = builder;
     }
 
-    public function end() returns DeploymentBuilder {
+    public function endMetaDataDeploymentAppsV1() returns DeploymentBuilder {
         match (parentBuilder) {
             GenericBuilder vv => {
                 return check <DeploymentBuilder>vv;
@@ -127,30 +127,30 @@ function main(string...args) {
     //
     //io:println(v);
 
-    DeploymentBuilderAppsV1  de = new;
-    io_k8s_api_apps_v1_Deployment dep=  check<io_k8s_api_apps_v1_Deployment>de
-    .withMetadata()
-        .addLabel("app","sss")
-        .setName("MyDeployment")
-    .end()
-    .withSpec()
-        .withTemplate()
-            .withSpec()
-                .withContainer()
-                    .setImage("abc:1.0")
-                    .withContainerPort()
-                        .setContainerPort(9090)
-                        .setName("http")
-                    .end()
-                    .withContainerPort()
-                        .setContainerPort(9093)
-                        .setName("https")
-                    .end()
-                .end()
-            .end()
-        .end()
-    .end()
-    .build();
+    //DeploymentBuilderAppsV1  de = new;
+    //io_k8s_api_apps_v1_Deployment dep=  check<io_k8s_api_apps_v1_Deployment>de
+    //.withMetadataDeloymetAppsV1()
+    //    .addLabel("app","sss")
+    //    .setName("MyDeployment")
+    //.end()
+    //.withSpec()
+    //    .withTemplate()
+    //        .withSpec()
+    //            .withContainer()
+    //                .setImage("abc:1.0")
+    //                .withContainerPort()
+    //                    .setContainerPort(9090)
+    //                    .setName("http")
+    //                .end()
+    //                .withContainerPort()
+    //                    .setContainerPort(9093)
+    //                    .setName("https")
+    //                .end()
+    //            .end()
+    //        .end()
+    //    .end()
+    //.end()
+    //.build();
     //io:println(<json>dep);
 
     //MetadataBuilder v = deployment.withMetaData();
