@@ -10970,6 +10970,7 @@ public type DeploymentSpecBuilderAppsV1 object {
         self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DeploymentSpec) {
+        self.io_k8s_api_apps_v1_deploymentspec.template=templateBuilder.build();
         return self.io_k8s_api_apps_v1_deploymentspec;
     }
 
@@ -11201,6 +11202,10 @@ public type DeploymentBuilderAppsV1 object {
         self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_Deployment) {
+        io_k8s_api_apps_v1_deployment.apiVersion = "apps/v1";
+        io_k8s_api_apps_v1_deployment.kind = "Deployment";
+        io_k8s_api_apps_v1_deployment.metadata = metadataBuilder.build();
+        io_k8s_api_apps_v1_deployment.spec = specBuilder.build();
         return self.io_k8s_api_apps_v1_deployment;
     }
 

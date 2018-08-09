@@ -1,7 +1,15 @@
 import ballerina/io;
 
+public type k8sDeployment object{
+    string name;
+};
+
+public type k8sDeploymentSpec object{
+    int replicas;
+};
+
 public type DeploymentBuilder object {
-    public io_k8s_api_apps_v1_Deployment deployment;
+    public k8sDeployment deployment;
     public MetadataBuilder metaBuilder;
     public SpecBuilder specBuilder;
 
@@ -35,7 +43,7 @@ public type DeploymentBuilder object {
 };
 
 public type SpecBuilder object {
-    public io_k8s_api_apps_v1_DeploymentSpec spec;
+    public k8sDeploymentSpec spec;
     public GenericBuilder? parentBuilder;
 
     public new() {
@@ -134,6 +142,7 @@ function main(string...args) {
         .setName("MyDeployment")
     .endMetadataDeploymentAppsV1()
     .withSpecDeploymentAppsV1()
+        .setReplicas(1)
         .withTemplateDeploymentSpecAppsV1()
             .withSpecPodTemplateSpecCoreV1()
                 .withContainersPodSpecCoreV1()
@@ -141,10 +150,6 @@ function main(string...args) {
                     .withPortsContainerCoreV1()
                         .setContainerPort(9090)
                         .setName("http")
-                    .endPortsContainerCoreV1()
-                    .withPortsContainerCoreV1()
-                        .setContainerPort(9093)
-                        .setName("https")
                     .endPortsContainerCoreV1()
                 .endContainersPodSpecCoreV1()
             .endSpecPodTemplateSpecCoreV1()
