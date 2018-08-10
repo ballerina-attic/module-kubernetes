@@ -1,4 +1,4 @@
-# Kubernetes Connector
+# Ballerina Kubernetes Connector
 
 Ballerina connector for Kubernetes.
 
