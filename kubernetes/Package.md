@@ -76,6 +76,5 @@ function main(string... args) {
 ```
 
 ## Samples
-1. Deploying a Kubernetes deployment in Minikube
-2. Deploying a Kubernetes deployment in GKE    
-
+1. [Creating a Kubernetes deployment in Minikube](https://github.com/wso2-ballerina/package-kubernetes/tree/master/sample_minikube)
+2. [Creating a Kubernetes deployment in Google Kubernetes Engine](https://github.com/wso2-ballerina/package-kubernetes/tree/master/sample_gke)    
