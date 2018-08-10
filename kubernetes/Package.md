@@ -28,8 +28,14 @@ cluster. You can chose the relevant authentication mechanism supported by your K
 | Ballerina Language       | 0.981.1        |
 | Kubernetes API Version   | 1.10.0 or above |
 
+## Samples
+1. Deploying a Kubernetes deployment in Minikube
+2. Deploying a Kubernetes deployment in GKE
+
+
+ 
+## Minikube Sample
 ### Pre-requisites
-**Running the sample against a local K8s cluster**
 1. Setup minikube to run a k8s cluster locally (https://kubernetes.io/docs/setup/minikube/)
 2. Minikube uses Mutual SSL authentication to connect with the cluster.
 * Create a truststore
@@ -40,27 +46,12 @@ cluster. You can chose the relevant authentication mechanism supported by your K
 * Create a keystore
 ```bash
 openssl pkcs12 -export -in ~/.minikube/client.crt -inkey ~/.minikube/client.key -certfile client.crt -out keystore.p12
-```  
- 
-**Running the sample against a remote GKE K8s cluster**
-1. Setup a k8s cluster in Google Kubernetes Engine (https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster)
-2. Obtain the username and password to connect to the cluster
+```
 
-3. Create a truststore with the cluster public certificate
-```bash
-    keytool -import -alias cluster-minikube -file ~/.minikube/apiserver.crt -keystore trustore.jks
-    keytool -importkeystore -srckeystore trustore.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore trustore.p12
-``` 
-
-## Sample ballerina.conf file
+#### Configuring credentials and keystore information in ballerina.conf file
 ```toml
 trustStorePath="~/ballerina/trustore.p12"
 trustStorePassword="ballerina"
-
-[gke]
-masterURL="https://35.193.187.46"
-username="username"
-password="password"
 
 [minikube]
 masterURL="https://192.168.99.100:8443"
@@ -68,7 +59,8 @@ sslkeyStorePath="~/ballerina/keystore.p12"
 sslkeyStorePassword="ballerina"
 ```
 
-## Sample 1
+#### Creating a K8s deployment in minikube
+
 ```ballerina
 import ballerina/io;
 import ballerina/config;
@@ -104,28 +96,9 @@ function main(string... args) {
     .setReplicaCount(3)
     .addMatchLabels("app", "nginx");
 
-    // Create a k8s service
-    kubernetes:Service serviceDef = new;
-    serviceDef = serviceDef
-    .setMetaData({
-            name: "nginx-service",
-            labels: { "app": "nginx" }
-        })
-    .setSpec({
-            selector: { "app": "nginx" },
-            serviceType: "ClusterIP",
-            ports: [{
-                port: 80,
-                targetPort: 80,
-                protocol: "TCP",
-                name: "http"
-            }]
-        });
-
     // Add the K8s objects to holder
     kubernetes:K8SHolder holder = new;
     holder.addDeployment(deployment);
-    holder.addService(serviceDef);
 
     io:println("--- Response from Kubernetes API ---");
     // Deploy the k8s objects in the cluster
@@ -134,8 +107,32 @@ function main(string... args) {
 }
 ```
     
-## Sample 2 
-First, import the `wso2/kuberenetes` package into the Ballerina project.
+## Google Kubernetes Engine Sample 
+
+### Pre-requisites
+**Running the sample against a remote GKE K8s cluster**
+1. Setup a k8s cluster in Google Kubernetes Engine (https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster)
+2. Obtain the username and password to connect to the cluster
+
+3. Create a truststore with the cluster public certificate
+```bash
+    keytool -import -alias cluster-minikube -file ~/.minikube/apiserver.crt -keystore trustore.jks
+    keytool -importkeystore -srckeystore trustore.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore trustore.p12
+``` 
+
+
+#### Configuring credentials and keystore information in ballerina.conf file
+```toml
+trustStorePath="~/ballerina/trustore.p12"
+trustStorePassword="ballerina"
+
+[gke]
+masterURL="https://35.193.187.46"
+username="username"
+password="password"
+```
+
+#### Creating a K8s deployment in Google K8s Engine (GKE)
 ```ballerina
 import ballerina/io;
 import ballerina/config;
@@ -171,34 +168,14 @@ function main(string... args) {
     .setReplicaCount(2)
     .addMatchLabels("app", "nginx");
 
-    // Create the k8s service object
-    kubernetes:Service nginxService = new;
-    nginxService = nginxService
-    .setMetaData({
-            name: "nginx-service",
-            labels: { "app": "nginx" }
-        })
-    .setSpec({
-            selector: { "app": "nginx" },
-            serviceType: "ClusterIP",
-            ports: [{
-                port: 80,
-                targetPort: 80,
-                protocol: "TCP",
-                name: "http"
-            }]
-        });
-
     // Add K8s objects to the holder
     kubernetes:K8SHolder holder = new;
     holder.addDeployment(deployment);
-    holder.addService(nginxService);
 
     // Deploy the k8s objects in the cluster
     io:println("--- Response from Kubernetes API ---");
     var response = k8sEndpoint->apply(holder);
     io:println(response);
-}
 }
 ```
 
