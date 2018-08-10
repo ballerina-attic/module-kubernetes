@@ -1,3 +1,32 @@
+## Running the Kubernetes connector on Minikube
+
+### Pre-requisites
+1. Setup minikube to run a k8s cluster locally (https://kubernetes.io/docs/setup/minikube/)
+2. Minikube uses Mutual SSL authentication to connect with the cluster.
+* Create a truststore
+```bash
+   keytool -import -alias cluster-minikube -file ~/.minikube/apiserver.crt -keystore trustore.jks
+   keytool -importkeystore -srckeystore trustore.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore trustore.p12
+``` 
+* Create a keystore
+```bash
+openssl pkcs12 -export -in ~/.minikube/client.crt -inkey ~/.minikube/client.key -certfile client.crt -out keystore.p12
+```
+
+#### Configuring credentials and keystore information in ballerina.conf file
+```toml
+trustStorePath="~/ballerina/trustore.p12"
+trustStorePassword="ballerina"
+
+[minikube]
+masterURL="https://192.168.99.100:8443"
+sslkeyStorePath="~/ballerina/keystore.p12"
+sslkeyStorePassword="ballerina"
+```
+
+#### Creating a K8s deployment in minikube
+
+```ballerina
 import ballerina/io;
 import ballerina/config;
 import wso2/kubernetes;
@@ -32,31 +61,18 @@ function main(string... args) {
     .setReplicaCount(3)
     .addMatchLabels("app", "nginx");
 
-    // Create a k8s service
-    kubernetes:Service serviceDef = new;
-    serviceDef = serviceDef
-    .setMetaData({
-            name: "nginx-service",
-            labels: { "app": "nginx" }
-        })
-    .setSpec({
-            selector: { "app": "nginx" },
-            serviceType: "ClusterIP",
-            ports: [{
-                port: 80,
-                targetPort: 80,
-                protocol: "TCP",
-                name: "http"
-            }]
-        });
-
     // Add the K8s objects to holder
     kubernetes:K8SHolder holder = new;
     holder.addDeployment(deployment);
-    holder.addService(serviceDef);
 
     io:println("--- Response from Kubernetes API ---");
     // Deploy the k8s objects in the cluster
     var response = k8sEndpoint->apply(holder);
     io:println(response);
 }
+```
+
+#### Running the sample
+```bash
+ballerina run k8s_sample.bal --config ballerina.conf
+```
