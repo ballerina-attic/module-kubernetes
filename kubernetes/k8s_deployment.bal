@@ -26,8 +26,8 @@ public type Deployment object {
         return self;
     }
 
-    public function addMatchLabels(string key, string value) returns (Deployment) {
-        self.spec.selector[key] = value;
+    public function addMatchLabels(map selectorMap) returns (Deployment) {
+        self.spec.selector = selectorMap;
         return self;
     }
 

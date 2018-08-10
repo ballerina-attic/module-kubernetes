@@ -19,6 +19,10 @@ public function convertToDeployment(json deploymentJSON) returns Deployment {
         })
     .setReplicaCount(check <int>deploymentJSON.spec.replicas);
 
+    foreach key in deploymentJSON.spec.selector {
+        deployment = deployment.addMatchLabels(check <map>key);
+    }
+
     foreach container in deploymentJSON.spec.template.spec.containers {
         Container tempContainer = {
             image: check <string>container.image,
