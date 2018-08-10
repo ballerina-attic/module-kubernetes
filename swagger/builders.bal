@@ -211,7 +211,7 @@ public type QuantityBuilderApiResource object {
 public type ResourceMetricSourceBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ResourceMetricSource io_k8s_api_autoscaling_v2beta1_resourcemetricsource;
-    public QuantityBuilderApiResource? targetAverageValueBuilder;
+    public QuantityBuilderApiResource targetAverageValueBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_resourcemetricsource = new;
@@ -241,16 +241,9 @@ public type ResourceMetricSourceBuilderAutoscalingV2beta1 object {
     public function withTargetAverageValueResourceMetricSourceAutoscalingV2beta1() returns QuantityBuilderApiResource {
         self.targetAverageValueBuilder = new QuantityBuilderApiResource();
         self.targetAverageValueBuilder.init(self);
-        match (self.targetAverageValueBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return targetAverageValueBuilder;
     }
+
 
     public function setName(string _name) returns (ResourceMetricSourceBuilderAutoscalingV2beta1) {
         self.io_k8s_api_autoscaling_v2beta1_resourcemetricsource.name = _name;
@@ -267,11 +260,11 @@ public type ResourceMetricSourceBuilderAutoscalingV2beta1 object {
 public type CSIPersistentVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_CSIPersistentVolumeSource io_k8s_api_core_v1_csipersistentvolumesource;
-    public SecretReferenceBuilderCoreV1? controllerPublishSecretRefBuilder;
+    public SecretReferenceBuilderCoreV1 controllerPublishSecretRefBuilder;
 
-    public SecretReferenceBuilderCoreV1? nodePublishSecretRefBuilder;
+    public SecretReferenceBuilderCoreV1 nodePublishSecretRefBuilder;
 
-    public SecretReferenceBuilderCoreV1? nodeStageSecretRefBuilder;
+    public SecretReferenceBuilderCoreV1 nodeStageSecretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_csipersistentvolumesource = new;
@@ -302,42 +295,21 @@ public type CSIPersistentVolumeSourceBuilderCoreV1 object {
     {
         self.controllerPublishSecretRefBuilder = new SecretReferenceBuilderCoreV1();
         self.controllerPublishSecretRefBuilder.init(self);
-        match (self.controllerPublishSecretRefBuilder) {
-            SecretReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return controllerPublishSecretRefBuilder;
     }
+
     public function withNodePublishSecretRefCSIPersistentVolumeSourceCoreV1() returns SecretReferenceBuilderCoreV1 {
         self.nodePublishSecretRefBuilder = new SecretReferenceBuilderCoreV1();
         self.nodePublishSecretRefBuilder.init(self);
-        match (self.nodePublishSecretRefBuilder) {
-            SecretReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nodePublishSecretRefBuilder;
     }
+
     public function withNodeStageSecretRefCSIPersistentVolumeSourceCoreV1() returns SecretReferenceBuilderCoreV1 {
         self.nodeStageSecretRefBuilder = new SecretReferenceBuilderCoreV1();
         self.nodeStageSecretRefBuilder.init(self);
-        match (self.nodeStageSecretRefBuilder) {
-            SecretReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nodeStageSecretRefBuilder;
     }
+
 
     public function setDriver(string _driver) returns (CSIPersistentVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_csipersistentvolumesource.driver = _driver;
@@ -369,11 +341,11 @@ public type APIServiceBuilderApiregistrationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIService
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservice;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public APIServiceSpecBuilderApiregistrationV1beta1? specBuilder;
+    public APIServiceSpecBuilderApiregistrationV1beta1 specBuilder;
 
-    public APIServiceStatusBuilderApiregistrationV1beta1? statusBuilder;
+    public APIServiceStatusBuilderApiregistrationV1beta1 statusBuilder;
 
     public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservice = new;
@@ -404,42 +376,21 @@ public type APIServiceBuilderApiregistrationV1beta1 object {
     public function withMetadataAPIServiceApiregistrationV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecAPIServiceApiregistrationV1beta1() returns APIServiceSpecBuilderApiregistrationV1beta1 {
         self.specBuilder = new APIServiceSpecBuilderApiregistrationV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            APIServiceSpecBuilderApiregistrationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusAPIServiceApiregistrationV1beta1() returns APIServiceStatusBuilderApiregistrationV1beta1 {
         self.statusBuilder = new APIServiceStatusBuilderApiregistrationV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            APIServiceStatusBuilderApiregistrationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (APIServiceBuilderApiregistrationV1beta1) {
         self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservice.apiVersion = _apiVersion;
@@ -518,9 +469,9 @@ public type CustomResourceSubresourcesBuilderApiextensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceSubresources
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcesubresources;
-    public CustomResourceSubresourceScaleBuilderApiextensionsV1beta1? scaleBuilder;
+    public CustomResourceSubresourceScaleBuilderApiextensionsV1beta1 scaleBuilder;
 
-    public CustomResourceSubresourceStatusBuilderApiextensionsV1beta1? statusBuilder;
+    public CustomResourceSubresourceStatusBuilderApiextensionsV1beta1 statusBuilder;
 
     public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcesubresources = new;
@@ -554,31 +505,17 @@ public type CustomResourceSubresourcesBuilderApiextensionsV1beta1 object {
     {
         self.scaleBuilder = new CustomResourceSubresourceScaleBuilderApiextensionsV1beta1();
         self.scaleBuilder.init(self);
-        match (self.scaleBuilder) {
-            CustomResourceSubresourceScaleBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return scaleBuilder;
     }
+
     public function withStatusCustomResourceSubresourcesApiextensionsV1beta1() returns
                                                                                    CustomResourceSubresourceStatusBuilderApiextensionsV1beta1
     {
         self.statusBuilder = new CustomResourceSubresourceStatusBuilderApiextensionsV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            CustomResourceSubresourceStatusBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 };
 
 public type PodSecurityPolicyListBuilderPolicyV1beta1 object {
@@ -586,7 +523,7 @@ public type PodSecurityPolicyListBuilderPolicyV1beta1 object {
     public io_k8s_api_policy_v1beta1_PodSecurityPolicyList io_k8s_api_policy_v1beta1_podsecuritypolicylist;
     public PodSecurityPolicyBuilderPolicyV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_policy_v1beta1_podsecuritypolicylist = new;
@@ -601,16 +538,9 @@ public type PodSecurityPolicyListBuilderPolicyV1beta1 object {
     public function withMetadataPodSecurityPolicyListPolicyV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsPodSecurityPolicyListPolicyV1beta1() returns PodSecurityPolicyBuilderPolicyV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PodSecurityPolicyBuilderPolicyV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -632,11 +562,11 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_LocalSubjectAccessReview
     io_k8s_api_authorization_v1beta1_localsubjectaccessreview;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public SubjectAccessReviewSpecBuilderAuthorizationV1beta1? specBuilder;
+    public SubjectAccessReviewSpecBuilderAuthorizationV1beta1 specBuilder;
 
-    public SubjectAccessReviewStatusBuilderAuthorizationV1beta1? statusBuilder;
+    public SubjectAccessReviewStatusBuilderAuthorizationV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_authorization_v1beta1_localsubjectaccessreview = new;
@@ -651,46 +581,25 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1beta1 object {
     public function withMetadataLocalSubjectAccessReviewAuthorizationV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecLocalSubjectAccessReviewAuthorizationV1beta1() returns
                                                                                SubjectAccessReviewSpecBuilderAuthorizationV1beta1
     {
         self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            SubjectAccessReviewSpecBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusLocalSubjectAccessReviewAuthorizationV1beta1() returns
                                                                                  SubjectAccessReviewStatusBuilderAuthorizationV1beta1
     {
         self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            SubjectAccessReviewStatusBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (LocalSubjectAccessReviewBuilderAuthorizationV1beta1) {
         self.io_k8s_api_authorization_v1beta1_localsubjectaccessreview.apiVersion = _apiVersion;
@@ -706,11 +615,11 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1beta1 object {
 public type VolumeAttachmentBuilderStorageV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_VolumeAttachment io_k8s_api_storage_v1beta1_volumeattachment;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public VolumeAttachmentSpecBuilderStorageV1beta1? specBuilder;
+    public VolumeAttachmentSpecBuilderStorageV1beta1 specBuilder;
 
-    public VolumeAttachmentStatusBuilderStorageV1beta1? statusBuilder;
+    public VolumeAttachmentStatusBuilderStorageV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_storage_v1beta1_volumeattachment = new;
@@ -740,42 +649,21 @@ public type VolumeAttachmentBuilderStorageV1beta1 object {
     public function withMetadataVolumeAttachmentStorageV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecVolumeAttachmentStorageV1beta1() returns VolumeAttachmentSpecBuilderStorageV1beta1 {
         self.specBuilder = new VolumeAttachmentSpecBuilderStorageV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            VolumeAttachmentSpecBuilderStorageV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusVolumeAttachmentStorageV1beta1() returns VolumeAttachmentStatusBuilderStorageV1beta1 {
         self.statusBuilder = new VolumeAttachmentStatusBuilderStorageV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            VolumeAttachmentStatusBuilderStorageV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (VolumeAttachmentBuilderStorageV1beta1) {
         self.io_k8s_api_storage_v1beta1_volumeattachment.apiVersion = _apiVersion;
@@ -791,7 +679,7 @@ public type VolumeAttachmentBuilderStorageV1beta1 object {
 public type RBDPersistentVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_RBDPersistentVolumeSource io_k8s_api_core_v1_rbdpersistentvolumesource;
-    public SecretReferenceBuilderCoreV1? secretRefBuilder;
+    public SecretReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_rbdpersistentvolumesource = new;
@@ -821,16 +709,9 @@ public type RBDPersistentVolumeSourceBuilderCoreV1 object {
     public function withSecretRefRBDPersistentVolumeSourceCoreV1() returns SecretReferenceBuilderCoreV1 {
         self.secretRefBuilder = new SecretReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            SecretReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setFsType(string _fsType) returns (RBDPersistentVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_rbdpersistentvolumesource.fsType = _fsType;
@@ -878,7 +759,7 @@ public type ControllerRevisionListBuilderAppsV1 object {
     public io_k8s_api_apps_v1_ControllerRevisionList io_k8s_api_apps_v1_controllerrevisionlist;
     public ControllerRevisionBuilderAppsV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1_controllerrevisionlist = new;
@@ -893,16 +774,9 @@ public type ControllerRevisionListBuilderAppsV1 object {
     public function withMetadataControllerRevisionListAppsV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsControllerRevisionListAppsV1() returns ControllerRevisionBuilderAppsV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -923,11 +797,11 @@ public type ControllerRevisionListBuilderAppsV1 object {
 public type DeploymentBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_Deployment io_k8s_api_apps_v1beta2_deployment;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public DeploymentSpecBuilderAppsV1beta2? specBuilder;
+    public DeploymentSpecBuilderAppsV1beta2 specBuilder;
 
-    public DeploymentStatusBuilderAppsV1beta2? statusBuilder;
+    public DeploymentStatusBuilderAppsV1beta2 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_deployment = new;
@@ -957,42 +831,21 @@ public type DeploymentBuilderAppsV1beta2 object {
     public function withMetadataDeploymentAppsV1beta2() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecDeploymentAppsV1beta2() returns DeploymentSpecBuilderAppsV1beta2 {
         self.specBuilder = new DeploymentSpecBuilderAppsV1beta2();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            DeploymentSpecBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusDeploymentAppsV1beta2() returns DeploymentStatusBuilderAppsV1beta2 {
         self.statusBuilder = new DeploymentStatusBuilderAppsV1beta2();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            DeploymentStatusBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (DeploymentBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_deployment.apiVersion = _apiVersion;
@@ -1047,11 +900,11 @@ public type APIServiceStatusBuilderApiregistrationV1 object {
 public type ExternalMetricStatusBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ExternalMetricStatus io_k8s_api_autoscaling_v2beta1_externalmetricstatus;
-    public QuantityBuilderApiResource? currentAverageValueBuilder;
+    public QuantityBuilderApiResource currentAverageValueBuilder;
 
-    public QuantityBuilderApiResource? currentValueBuilder;
+    public QuantityBuilderApiResource currentValueBuilder;
 
-    public LabelSelectorBuilderMetaV1? metricSelectorBuilder;
+    public LabelSelectorBuilderMetaV1 metricSelectorBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_externalmetricstatus = new;
@@ -1081,42 +934,21 @@ public type ExternalMetricStatusBuilderAutoscalingV2beta1 object {
     public function withCurrentAverageValueExternalMetricStatusAutoscalingV2beta1() returns QuantityBuilderApiResource {
         self.currentAverageValueBuilder = new QuantityBuilderApiResource();
         self.currentAverageValueBuilder.init(self);
-        match (self.currentAverageValueBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return currentAverageValueBuilder;
     }
+
     public function withCurrentValueExternalMetricStatusAutoscalingV2beta1() returns QuantityBuilderApiResource {
         self.currentValueBuilder = new QuantityBuilderApiResource();
         self.currentValueBuilder.init(self);
-        match (self.currentValueBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return currentValueBuilder;
     }
+
     public function withMetricSelectorExternalMetricStatusAutoscalingV2beta1() returns LabelSelectorBuilderMetaV1 {
         self.metricSelectorBuilder = new LabelSelectorBuilderMetaV1();
         self.metricSelectorBuilder.init(self);
-        match (self.metricSelectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metricSelectorBuilder;
     }
+
 
     public function setMetricName(string _metricName) returns (ExternalMetricStatusBuilderAutoscalingV2beta1) {
         self.io_k8s_api_autoscaling_v2beta1_externalmetricstatus.metricName = _metricName;
@@ -1162,11 +994,11 @@ public type ScaleSpecBuilderAppsV1beta2 object {
 public type ExternalMetricSourceBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ExternalMetricSource io_k8s_api_autoscaling_v2beta1_externalmetricsource;
-    public LabelSelectorBuilderMetaV1? metricSelectorBuilder;
+    public LabelSelectorBuilderMetaV1 metricSelectorBuilder;
 
-    public QuantityBuilderApiResource? targetAverageValueBuilder;
+    public QuantityBuilderApiResource targetAverageValueBuilder;
 
-    public QuantityBuilderApiResource? targetValueBuilder;
+    public QuantityBuilderApiResource targetValueBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_externalmetricsource = new;
@@ -1196,42 +1028,21 @@ public type ExternalMetricSourceBuilderAutoscalingV2beta1 object {
     public function withMetricSelectorExternalMetricSourceAutoscalingV2beta1() returns LabelSelectorBuilderMetaV1 {
         self.metricSelectorBuilder = new LabelSelectorBuilderMetaV1();
         self.metricSelectorBuilder.init(self);
-        match (self.metricSelectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metricSelectorBuilder;
     }
+
     public function withTargetAverageValueExternalMetricSourceAutoscalingV2beta1() returns QuantityBuilderApiResource {
         self.targetAverageValueBuilder = new QuantityBuilderApiResource();
         self.targetAverageValueBuilder.init(self);
-        match (self.targetAverageValueBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return targetAverageValueBuilder;
     }
+
     public function withTargetValueExternalMetricSourceAutoscalingV2beta1() returns QuantityBuilderApiResource {
         self.targetValueBuilder = new QuantityBuilderApiResource();
         self.targetValueBuilder.init(self);
-        match (self.targetValueBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return targetValueBuilder;
     }
+
 
     public function setMetricName(string _metricName) returns (ExternalMetricSourceBuilderAutoscalingV2beta1) {
         self.io_k8s_api_autoscaling_v2beta1_externalmetricsource.metricName = _metricName;
@@ -1244,7 +1055,7 @@ public type DeploymentListBuilderAppsV1 object {
     public io_k8s_api_apps_v1_DeploymentList io_k8s_api_apps_v1_deploymentlist;
     public DeploymentBuilderAppsV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1_deploymentlist = new;
@@ -1259,16 +1070,9 @@ public type DeploymentListBuilderAppsV1 object {
     public function withMetadataDeploymentListAppsV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsDeploymentListAppsV1() returns DeploymentBuilderAppsV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -1351,9 +1155,9 @@ public type ReplicaSetStatusBuilderAppsV1beta2 object {
 public type ObjectMetricSourceBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ObjectMetricSource io_k8s_api_autoscaling_v2beta1_objectmetricsource;
-    public CrossVersionObjectReferenceBuilderAutoscalingV2beta1? targetBuilder;
+    public CrossVersionObjectReferenceBuilderAutoscalingV2beta1 targetBuilder;
 
-    public QuantityBuilderApiResource? targetValueBuilder;
+    public QuantityBuilderApiResource targetValueBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_objectmetricsource = new;
@@ -1385,29 +1189,15 @@ public type ObjectMetricSourceBuilderAutoscalingV2beta1 object {
     {
         self.targetBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV2beta1();
         self.targetBuilder.init(self);
-        match (self.targetBuilder) {
-            CrossVersionObjectReferenceBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return targetBuilder;
     }
+
     public function withTargetValueObjectMetricSourceAutoscalingV2beta1() returns QuantityBuilderApiResource {
         self.targetValueBuilder = new QuantityBuilderApiResource();
         self.targetValueBuilder.init(self);
-        match (self.targetValueBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return targetValueBuilder;
     }
+
 
     public function setMetricName(string _metricName) returns (ObjectMetricSourceBuilderAutoscalingV2beta1) {
         self.io_k8s_api_autoscaling_v2beta1_objectmetricsource.metricName = _metricName;
@@ -1418,7 +1208,7 @@ public type ObjectMetricSourceBuilderAutoscalingV2beta1 object {
 public type ResourceMetricStatusBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ResourceMetricStatus io_k8s_api_autoscaling_v2beta1_resourcemetricstatus;
-    public QuantityBuilderApiResource? currentAverageValueBuilder;
+    public QuantityBuilderApiResource currentAverageValueBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_resourcemetricstatus = new;
@@ -1448,16 +1238,9 @@ public type ResourceMetricStatusBuilderAutoscalingV2beta1 object {
     public function withCurrentAverageValueResourceMetricStatusAutoscalingV2beta1() returns QuantityBuilderApiResource {
         self.currentAverageValueBuilder = new QuantityBuilderApiResource();
         self.currentAverageValueBuilder.init(self);
-        match (self.currentAverageValueBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return currentAverageValueBuilder;
     }
+
 
     public function setCurrentAverageUtilization(int _currentAverageUtilization) returns (
                 ResourceMetricStatusBuilderAutoscalingV2beta1) {
@@ -1529,11 +1312,11 @@ public type ReplicaSetConditionBuilderAppsV1 object {
 public type DaemonSetBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DaemonSet io_k8s_api_apps_v1_daemonset;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public DaemonSetSpecBuilderAppsV1? specBuilder;
+    public DaemonSetSpecBuilderAppsV1 specBuilder;
 
-    public DaemonSetStatusBuilderAppsV1? statusBuilder;
+    public DaemonSetStatusBuilderAppsV1 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1_daemonset = new;
@@ -1563,42 +1346,21 @@ public type DaemonSetBuilderAppsV1 object {
     public function withMetadataDaemonSetAppsV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecDaemonSetAppsV1() returns DaemonSetSpecBuilderAppsV1 {
         self.specBuilder = new DaemonSetSpecBuilderAppsV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            DaemonSetSpecBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusDaemonSetAppsV1() returns DaemonSetStatusBuilderAppsV1 {
         self.statusBuilder = new DaemonSetStatusBuilderAppsV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            DaemonSetStatusBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (DaemonSetBuilderAppsV1) {
         self.io_k8s_api_apps_v1_daemonset.apiVersion = _apiVersion;
@@ -1722,7 +1484,7 @@ public type APIServiceListBuilderApiregistrationV1beta1 object {
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicelist;
     public APIServiceBuilderApiregistrationV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicelist = new;
@@ -1737,16 +1499,9 @@ public type APIServiceListBuilderApiregistrationV1beta1 object {
     public function withMetadataAPIServiceListApiregistrationV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsAPIServiceListApiregistrationV1beta1() returns APIServiceBuilderApiregistrationV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new APIServiceBuilderApiregistrationV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -1904,7 +1659,7 @@ public type DeploymentConditionBuilderAppsV1 object {
 public type VolumeAttachmentSpecBuilderStorageV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_VolumeAttachmentSpec io_k8s_api_storage_v1beta1_volumeattachmentspec;
-    public VolumeAttachmentSourceBuilderStorageV1beta1? sourceBuilder;
+    public VolumeAttachmentSourceBuilderStorageV1beta1 sourceBuilder;
 
     public new() {
         io_k8s_api_storage_v1beta1_volumeattachmentspec = new;
@@ -1934,16 +1689,9 @@ public type VolumeAttachmentSpecBuilderStorageV1beta1 object {
     public function withSourceVolumeAttachmentSpecStorageV1beta1() returns VolumeAttachmentSourceBuilderStorageV1beta1 {
         self.sourceBuilder = new VolumeAttachmentSourceBuilderStorageV1beta1();
         self.sourceBuilder.init(self);
-        match (self.sourceBuilder) {
-            VolumeAttachmentSourceBuilderStorageV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return sourceBuilder;
     }
+
 
     public function setAttacher(string _attacher) returns (VolumeAttachmentSpecBuilderStorageV1beta1) {
         self.io_k8s_api_storage_v1beta1_volumeattachmentspec.attacher = _attacher;
@@ -1996,9 +1744,9 @@ public type SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1 object {
 public type ObjectMetricStatusBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_ObjectMetricStatus io_k8s_api_autoscaling_v2beta1_objectmetricstatus;
-    public QuantityBuilderApiResource? currentValueBuilder;
+    public QuantityBuilderApiResource currentValueBuilder;
 
-    public CrossVersionObjectReferenceBuilderAutoscalingV2beta1? targetBuilder;
+    public CrossVersionObjectReferenceBuilderAutoscalingV2beta1 targetBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_objectmetricstatus = new;
@@ -2028,31 +1776,17 @@ public type ObjectMetricStatusBuilderAutoscalingV2beta1 object {
     public function withCurrentValueObjectMetricStatusAutoscalingV2beta1() returns QuantityBuilderApiResource {
         self.currentValueBuilder = new QuantityBuilderApiResource();
         self.currentValueBuilder.init(self);
-        match (self.currentValueBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return currentValueBuilder;
     }
+
     public function withTargetObjectMetricStatusAutoscalingV2beta1() returns
                                                                          CrossVersionObjectReferenceBuilderAutoscalingV2beta1
     {
         self.targetBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV2beta1();
         self.targetBuilder.init(self);
-        match (self.targetBuilder) {
-            CrossVersionObjectReferenceBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return targetBuilder;
     }
+
 
     public function setMetricName(string _metricName) returns (ObjectMetricStatusBuilderAutoscalingV2beta1) {
         self.io_k8s_api_autoscaling_v2beta1_objectmetricstatus.metricName = _metricName;
@@ -2065,7 +1799,7 @@ public type ControllerRevisionListBuilderAppsV1beta2 object {
     public io_k8s_api_apps_v1beta2_ControllerRevisionList io_k8s_api_apps_v1beta2_controllerrevisionlist;
     public ControllerRevisionBuilderAppsV1beta2[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_controllerrevisionlist = new;
@@ -2080,16 +1814,9 @@ public type ControllerRevisionListBuilderAppsV1beta2 object {
     public function withMetadataControllerRevisionListAppsV1beta2() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsControllerRevisionListAppsV1beta2() returns ControllerRevisionBuilderAppsV1beta2 {
         self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1beta2();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -2110,11 +1837,11 @@ public type ControllerRevisionListBuilderAppsV1beta2 object {
 public type ScaleBuilderAutoscalingV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_Scale io_k8s_api_autoscaling_v1_scale;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ScaleSpecBuilderAutoscalingV1? specBuilder;
+    public ScaleSpecBuilderAutoscalingV1 specBuilder;
 
-    public ScaleStatusBuilderAutoscalingV1? statusBuilder;
+    public ScaleStatusBuilderAutoscalingV1 statusBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v1_scale = new;
@@ -2129,42 +1856,21 @@ public type ScaleBuilderAutoscalingV1 object {
     public function withMetadataScaleAutoscalingV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecScaleAutoscalingV1() returns ScaleSpecBuilderAutoscalingV1 {
         self.specBuilder = new ScaleSpecBuilderAutoscalingV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            ScaleSpecBuilderAutoscalingV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusScaleAutoscalingV1() returns ScaleStatusBuilderAutoscalingV1 {
         self.statusBuilder = new ScaleStatusBuilderAutoscalingV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            ScaleStatusBuilderAutoscalingV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ScaleBuilderAutoscalingV1) {
         self.io_k8s_api_autoscaling_v1_scale.apiVersion = _apiVersion;
@@ -2226,11 +1932,11 @@ public type JSONSchemaPropsOrStringArrayBuilderApiextensionsV1beta1 object {
 public type ScaleBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_Scale io_k8s_api_extensions_v1beta1_scale;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ScaleSpecBuilderExtensionsV1beta1? specBuilder;
+    public ScaleSpecBuilderExtensionsV1beta1 specBuilder;
 
-    public ScaleStatusBuilderExtensionsV1beta1? statusBuilder;
+    public ScaleStatusBuilderExtensionsV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_scale = new;
@@ -2245,42 +1951,21 @@ public type ScaleBuilderExtensionsV1beta1 object {
     public function withMetadataScaleExtensionsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecScaleExtensionsV1beta1() returns ScaleSpecBuilderExtensionsV1beta1 {
         self.specBuilder = new ScaleSpecBuilderExtensionsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            ScaleSpecBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusScaleExtensionsV1beta1() returns ScaleStatusBuilderExtensionsV1beta1 {
         self.statusBuilder = new ScaleStatusBuilderExtensionsV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            ScaleStatusBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ScaleBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_scale.apiVersion = _apiVersion;
@@ -2352,9 +2037,9 @@ public type StatefulSetConditionBuilderAppsV1beta1 object {
 public type ControllerRevisionBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ControllerRevision io_k8s_api_apps_v1beta2_controllerrevision;
-    public RawExtensionBuilderPkgRuntime? dataBuilder;
+    public RawExtensionBuilderPkgRuntime dataBuilder;
 
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_controllerrevision = new;
@@ -2384,29 +2069,15 @@ public type ControllerRevisionBuilderAppsV1beta2 object {
     public function withDataControllerRevisionAppsV1beta2() returns RawExtensionBuilderPkgRuntime {
         self.dataBuilder = new RawExtensionBuilderPkgRuntime();
         self.dataBuilder.init(self);
-        match (self.dataBuilder) {
-            RawExtensionBuilderPkgRuntime builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return dataBuilder;
     }
+
     public function withMetadataControllerRevisionAppsV1beta2() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ControllerRevisionBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_controllerrevision.apiVersion = _apiVersion;
@@ -2428,7 +2099,7 @@ public type MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 obje
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_MutatingWebhookConfiguration
     io_k8s_api_admissionregistration_v1beta1_mutatingwebhookconfiguration;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public WebhookBuilderAdmissionregistrationV1beta1[] webhooksBuilder;
 
@@ -2462,16 +2133,9 @@ public type MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 obje
                                                                                                ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withWebhooksMutatingWebhookConfigurationAdmissionregistrationV1beta1() returns
                                                                                                WebhookBuilderAdmissionregistrationV1beta1
     {
@@ -2497,7 +2161,7 @@ public type RoleListBuilderRbacV1 object {
     public io_k8s_api_rbac_v1_RoleList io_k8s_api_rbac_v1_rolelist;
     public RoleBuilderRbacV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_rbac_v1_rolelist = new;
@@ -2512,16 +2176,9 @@ public type RoleListBuilderRbacV1 object {
     public function withMetadataRoleListRbacV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsRoleListRbacV1() returns RoleBuilderRbacV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new RoleBuilderRbacV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -2542,11 +2199,11 @@ public type RoleListBuilderRbacV1 object {
 public type ReplicationControllerBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ReplicationController io_k8s_api_core_v1_replicationcontroller;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ReplicationControllerSpecBuilderCoreV1? specBuilder;
+    public ReplicationControllerSpecBuilderCoreV1 specBuilder;
 
-    public ReplicationControllerStatusBuilderCoreV1? statusBuilder;
+    public ReplicationControllerStatusBuilderCoreV1 statusBuilder;
 
     public new() {
         io_k8s_api_core_v1_replicationcontroller = new;
@@ -2576,42 +2233,21 @@ public type ReplicationControllerBuilderCoreV1 object {
     public function withMetadataReplicationControllerCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecReplicationControllerCoreV1() returns ReplicationControllerSpecBuilderCoreV1 {
         self.specBuilder = new ReplicationControllerSpecBuilderCoreV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            ReplicationControllerSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusReplicationControllerCoreV1() returns ReplicationControllerStatusBuilderCoreV1 {
         self.statusBuilder = new ReplicationControllerStatusBuilderCoreV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            ReplicationControllerStatusBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ReplicationControllerBuilderCoreV1) {
         self.io_k8s_api_core_v1_replicationcontroller.apiVersion = _apiVersion;
@@ -2730,11 +2366,11 @@ public type HostAliasBuilderCoreV1 object {
 public type PodSpecBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodSpec io_k8s_api_core_v1_podspec;
-    public AffinityBuilderCoreV1? affinityBuilder;
+    public AffinityBuilderCoreV1 affinityBuilder;
 
     public ContainerBuilderCoreV1[] containersBuilder;
 
-    public PodDNSConfigBuilderCoreV1? dnsConfigBuilder;
+    public PodDNSConfigBuilderCoreV1 dnsConfigBuilder;
 
     public HostAliasBuilderCoreV1[] hostAliasesBuilder;
 
@@ -2742,7 +2378,7 @@ public type PodSpecBuilderCoreV1 object {
 
     public ContainerBuilderCoreV1[] initContainersBuilder;
 
-    public PodSecurityContextBuilderCoreV1? securityContextBuilder;
+    public PodSecurityContextBuilderCoreV1 securityContextBuilder;
 
     public TolerationBuilderCoreV1[] tolerationsBuilder;
 
@@ -2791,42 +2427,21 @@ public type PodSpecBuilderCoreV1 object {
     public function withAffinityPodSpecCoreV1() returns AffinityBuilderCoreV1 {
         self.affinityBuilder = new AffinityBuilderCoreV1();
         self.affinityBuilder.init(self);
-        match (self.affinityBuilder) {
-            AffinityBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return affinityBuilder;
     }
+
     public function withDnsConfigPodSpecCoreV1() returns PodDNSConfigBuilderCoreV1 {
         self.dnsConfigBuilder = new PodDNSConfigBuilderCoreV1();
         self.dnsConfigBuilder.init(self);
-        match (self.dnsConfigBuilder) {
-            PodDNSConfigBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return dnsConfigBuilder;
     }
+
     public function withSecurityContextPodSpecCoreV1() returns PodSecurityContextBuilderCoreV1 {
         self.securityContextBuilder = new PodSecurityContextBuilderCoreV1();
         self.securityContextBuilder.init(self);
-        match (self.securityContextBuilder) {
-            PodSecurityContextBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return securityContextBuilder;
     }
+
     public function withContainersPodSpecCoreV1() returns ContainerBuilderCoreV1 {
         self.containersBuilder[lengthof containersBuilder] = new ContainerBuilderCoreV1();
         self.containersBuilder[(lengthof containersBuilder) - 1].init(self);
@@ -3163,13 +2778,13 @@ public type DaemonSetStatusBuilderAppsV1 object {
 public type MetricStatusBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_MetricStatus io_k8s_api_autoscaling_v2beta1_metricstatus;
-    public ExternalMetricStatusBuilderAutoscalingV2beta1? externalBuilder;
+    public ExternalMetricStatusBuilderAutoscalingV2beta1 externalBuilder;
 
-    public ObjectMetricStatusBuilderAutoscalingV2beta1? _objectBuilder;
+    public ObjectMetricStatusBuilderAutoscalingV2beta1 _objectBuilder;
 
-    public PodsMetricStatusBuilderAutoscalingV2beta1? podsBuilder;
+    public PodsMetricStatusBuilderAutoscalingV2beta1 podsBuilder;
 
-    public ResourceMetricStatusBuilderAutoscalingV2beta1? _resourceBuilder;
+    public ResourceMetricStatusBuilderAutoscalingV2beta1 _resourceBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_metricstatus = new;
@@ -3200,56 +2815,28 @@ public type MetricStatusBuilderAutoscalingV2beta1 object {
     public function withExternalMetricStatusAutoscalingV2beta1() returns ExternalMetricStatusBuilderAutoscalingV2beta1 {
         self.externalBuilder = new ExternalMetricStatusBuilderAutoscalingV2beta1();
         self.externalBuilder.init(self);
-        match (self.externalBuilder) {
-            ExternalMetricStatusBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return externalBuilder;
     }
+
     public function with_objectMetricStatusAutoscalingV2beta1() returns ObjectMetricStatusBuilderAutoscalingV2beta1 {
         self._objectBuilder = new ObjectMetricStatusBuilderAutoscalingV2beta1();
         self._objectBuilder.init(self);
-        match (self._objectBuilder) {
-            ObjectMetricStatusBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return _objectBuilder;
     }
+
     public function withPodsMetricStatusAutoscalingV2beta1() returns PodsMetricStatusBuilderAutoscalingV2beta1 {
         self.podsBuilder = new PodsMetricStatusBuilderAutoscalingV2beta1();
         self.podsBuilder.init(self);
-        match (self.podsBuilder) {
-            PodsMetricStatusBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return podsBuilder;
     }
+
     public function with_resourceMetricStatusAutoscalingV2beta1() returns ResourceMetricStatusBuilderAutoscalingV2beta1
     {
         self._resourceBuilder = new ResourceMetricStatusBuilderAutoscalingV2beta1();
         self._resourceBuilder.init(self);
-        match (self._resourceBuilder) {
-            ResourceMetricStatusBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return _resourceBuilder;
     }
+
 
     public function set_type(string __type) returns (MetricStatusBuilderAutoscalingV2beta1) {
         self.io_k8s_api_autoscaling_v2beta1_metricstatus._type = __type;
@@ -3388,7 +2975,7 @@ public type APIServiceSpecBuilderApiregistrationV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIServiceSpec
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicespec;
-    public ServiceReferenceBuilderApiregistrationV1? serviceReferenceBuilder;
+    public ServiceReferenceBuilderApiregistrationV1 serviceReferenceBuilder;
 
     public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicespec = new;
@@ -3419,16 +3006,9 @@ public type APIServiceSpecBuilderApiregistrationV1 object {
                                                                               ServiceReferenceBuilderApiregistrationV1 {
         self.serviceReferenceBuilder = new ServiceReferenceBuilderApiregistrationV1();
         self.serviceReferenceBuilder.init(self);
-        match (self.serviceReferenceBuilder) {
-            ServiceReferenceBuilderApiregistrationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return serviceReferenceBuilder;
     }
+
 
     public function setCaBundle(string _caBundle) returns (APIServiceSpecBuilderApiregistrationV1) {
         self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicespec.caBundle = _caBundle;
@@ -3500,7 +3080,7 @@ public type APIGroupListBuilderMetaV1 object {
 public type DaemonSetUpdateStrategyBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DaemonSetUpdateStrategy io_k8s_api_apps_v1beta2_daemonsetupdatestrategy;
-    public RollingUpdateDaemonSetBuilderAppsV1beta2? rollingUpdateBuilder;
+    public RollingUpdateDaemonSetBuilderAppsV1beta2 rollingUpdateBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_daemonsetupdatestrategy = new;
@@ -3531,16 +3111,9 @@ public type DaemonSetUpdateStrategyBuilderAppsV1beta2 object {
                                                                               RollingUpdateDaemonSetBuilderAppsV1beta2 {
         self.rollingUpdateBuilder = new RollingUpdateDaemonSetBuilderAppsV1beta2();
         self.rollingUpdateBuilder.init(self);
-        match (self.rollingUpdateBuilder) {
-            RollingUpdateDaemonSetBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollingUpdateBuilder;
     }
+
 
     public function set_type(string __type) returns (DaemonSetUpdateStrategyBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_daemonsetupdatestrategy._type = __type;
@@ -3551,7 +3124,7 @@ public type DaemonSetUpdateStrategyBuilderAppsV1beta2 object {
 public type EmptyDirVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EmptyDirVolumeSource io_k8s_api_core_v1_emptydirvolumesource;
-    public QuantityBuilderApiResource? sizeLimitBuilder;
+    public QuantityBuilderApiResource sizeLimitBuilder;
 
     public new() {
         io_k8s_api_core_v1_emptydirvolumesource = new;
@@ -3581,16 +3154,9 @@ public type EmptyDirVolumeSourceBuilderCoreV1 object {
     public function withSizeLimitEmptyDirVolumeSourceCoreV1() returns QuantityBuilderApiResource {
         self.sizeLimitBuilder = new QuantityBuilderApiResource();
         self.sizeLimitBuilder.init(self);
-        match (self.sizeLimitBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return sizeLimitBuilder;
     }
+
 
     public function setMedium(string _medium) returns (EmptyDirVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_emptydirvolumesource.medium = _medium;
@@ -3772,11 +3338,11 @@ public type ResourceRequirementsBuilderCoreV1 object {
 public type SubjectAccessReviewBuilderAuthorizationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SubjectAccessReview io_k8s_api_authorization_v1beta1_subjectaccessreview;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public SubjectAccessReviewSpecBuilderAuthorizationV1beta1? specBuilder;
+    public SubjectAccessReviewSpecBuilderAuthorizationV1beta1 specBuilder;
 
-    public SubjectAccessReviewStatusBuilderAuthorizationV1beta1? statusBuilder;
+    public SubjectAccessReviewStatusBuilderAuthorizationV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_authorization_v1beta1_subjectaccessreview = new;
@@ -3791,46 +3357,25 @@ public type SubjectAccessReviewBuilderAuthorizationV1beta1 object {
     public function withMetadataSubjectAccessReviewAuthorizationV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecSubjectAccessReviewAuthorizationV1beta1() returns
                                                                           SubjectAccessReviewSpecBuilderAuthorizationV1beta1
     {
         self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            SubjectAccessReviewSpecBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusSubjectAccessReviewAuthorizationV1beta1() returns
                                                                             SubjectAccessReviewStatusBuilderAuthorizationV1beta1
     {
         self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            SubjectAccessReviewStatusBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (SubjectAccessReviewBuilderAuthorizationV1beta1) {
         self.io_k8s_api_authorization_v1beta1_subjectaccessreview.apiVersion = _apiVersion;
@@ -3848,7 +3393,7 @@ public type DaemonSetListBuilderAppsV1 object {
     public io_k8s_api_apps_v1_DaemonSetList io_k8s_api_apps_v1_daemonsetlist;
     public DaemonSetBuilderAppsV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1_daemonsetlist = new;
@@ -3863,16 +3408,9 @@ public type DaemonSetListBuilderAppsV1 object {
     public function withMetadataDaemonSetListAppsV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsDaemonSetListAppsV1() returns DaemonSetBuilderAppsV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderAppsV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -3897,7 +3435,7 @@ public type NetworkPolicySpecBuilderExtensionsV1beta1 object {
 
     public NetworkPolicyIngressRuleBuilderExtensionsV1beta1[] ingressBuilder;
 
-    public LabelSelectorBuilderMetaV1? podSelectorBuilder;
+    public LabelSelectorBuilderMetaV1 podSelectorBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_networkpolicyspec = new;
@@ -3927,16 +3465,9 @@ public type NetworkPolicySpecBuilderExtensionsV1beta1 object {
     public function withPodSelectorNetworkPolicySpecExtensionsV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.podSelectorBuilder = new LabelSelectorBuilderMetaV1();
         self.podSelectorBuilder.init(self);
-        match (self.podSelectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return podSelectorBuilder;
     }
+
     public function withEgressNetworkPolicySpecExtensionsV1beta1() returns
                                                                        NetworkPolicyEgressRuleBuilderExtensionsV1beta1 {
         self.egressBuilder[lengthof egressBuilder] = new NetworkPolicyEgressRuleBuilderExtensionsV1beta1();
@@ -4066,15 +3597,15 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
 
     public AllowedHostPathBuilderPolicyV1beta1[] allowedHostPathsBuilder;
 
-    public FSGroupStrategyOptionsBuilderPolicyV1beta1? fsGroupBuilder;
+    public FSGroupStrategyOptionsBuilderPolicyV1beta1 fsGroupBuilder;
 
     public HostPortRangeBuilderPolicyV1beta1[] hostPortsBuilder;
 
-    public RunAsUserStrategyOptionsBuilderPolicyV1beta1? runAsUserBuilder;
+    public RunAsUserStrategyOptionsBuilderPolicyV1beta1 runAsUserBuilder;
 
-    public SELinuxStrategyOptionsBuilderPolicyV1beta1? seLinuxBuilder;
+    public SELinuxStrategyOptionsBuilderPolicyV1beta1 seLinuxBuilder;
 
-    public SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1? supplementalGroupsBuilder;
+    public SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 supplementalGroupsBuilder;
 
     public new() {
         io_k8s_api_policy_v1beta1_podsecuritypolicyspec = new;
@@ -4104,58 +3635,30 @@ public type PodSecurityPolicySpecBuilderPolicyV1beta1 object {
     public function withFsGroupPodSecurityPolicySpecPolicyV1beta1() returns FSGroupStrategyOptionsBuilderPolicyV1beta1 {
         self.fsGroupBuilder = new FSGroupStrategyOptionsBuilderPolicyV1beta1();
         self.fsGroupBuilder.init(self);
-        match (self.fsGroupBuilder) {
-            FSGroupStrategyOptionsBuilderPolicyV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return fsGroupBuilder;
     }
+
     public function withRunAsUserPodSecurityPolicySpecPolicyV1beta1() returns
                                                                           RunAsUserStrategyOptionsBuilderPolicyV1beta1 {
         self.runAsUserBuilder = new RunAsUserStrategyOptionsBuilderPolicyV1beta1();
         self.runAsUserBuilder.init(self);
-        match (self.runAsUserBuilder) {
-            RunAsUserStrategyOptionsBuilderPolicyV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return runAsUserBuilder;
     }
+
     public function withSeLinuxPodSecurityPolicySpecPolicyV1beta1() returns SELinuxStrategyOptionsBuilderPolicyV1beta1 {
         self.seLinuxBuilder = new SELinuxStrategyOptionsBuilderPolicyV1beta1();
         self.seLinuxBuilder.init(self);
-        match (self.seLinuxBuilder) {
-            SELinuxStrategyOptionsBuilderPolicyV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return seLinuxBuilder;
     }
+
     public function withSupplementalGroupsPodSecurityPolicySpecPolicyV1beta1() returns
                                                                                    SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1
     {
         self.supplementalGroupsBuilder = new SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1();
         self.supplementalGroupsBuilder.init(self);
-        match (self.supplementalGroupsBuilder) {
-            SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return supplementalGroupsBuilder;
     }
+
     public function withAllowedFlexVolumesPodSecurityPolicySpecPolicyV1beta1() returns
                                                                                    AllowedFlexVolumeBuilderPolicyV1beta1
     {
@@ -4264,7 +3767,7 @@ public type ClusterRoleBindingListBuilderRbacV1beta1 object {
     public io_k8s_api_rbac_v1beta1_ClusterRoleBindingList io_k8s_api_rbac_v1beta1_clusterrolebindinglist;
     public ClusterRoleBindingBuilderRbacV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_rbac_v1beta1_clusterrolebindinglist = new;
@@ -4279,16 +3782,9 @@ public type ClusterRoleBindingListBuilderRbacV1beta1 object {
     public function withMetadataClusterRoleBindingListRbacV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsClusterRoleBindingListRbacV1beta1() returns ClusterRoleBindingBuilderRbacV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBindingBuilderRbacV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -4407,7 +3903,7 @@ public type DeploymentConditionBuilderExtensionsV1beta1 object {
 public type ServiceStatusBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ServiceStatus io_k8s_api_core_v1_servicestatus;
-    public LoadBalancerStatusBuilderCoreV1? loadBalancerBuilder;
+    public LoadBalancerStatusBuilderCoreV1 loadBalancerBuilder;
 
     public new() {
         io_k8s_api_core_v1_servicestatus = new;
@@ -4437,26 +3933,19 @@ public type ServiceStatusBuilderCoreV1 object {
     public function withLoadBalancerServiceStatusCoreV1() returns LoadBalancerStatusBuilderCoreV1 {
         self.loadBalancerBuilder = new LoadBalancerStatusBuilderCoreV1();
         self.loadBalancerBuilder.init(self);
-        match (self.loadBalancerBuilder) {
-            LoadBalancerStatusBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return loadBalancerBuilder;
     }
+
 };
 
 public type ScaleBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_Scale io_k8s_api_apps_v1beta2_scale;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ScaleSpecBuilderAppsV1beta2? specBuilder;
+    public ScaleSpecBuilderAppsV1beta2 specBuilder;
 
-    public ScaleStatusBuilderAppsV1beta2? statusBuilder;
+    public ScaleStatusBuilderAppsV1beta2 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_scale = new;
@@ -4471,42 +3960,21 @@ public type ScaleBuilderAppsV1beta2 object {
     public function withMetadataScaleAppsV1beta2() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecScaleAppsV1beta2() returns ScaleSpecBuilderAppsV1beta2 {
         self.specBuilder = new ScaleSpecBuilderAppsV1beta2();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            ScaleSpecBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusScaleAppsV1beta2() returns ScaleStatusBuilderAppsV1beta2 {
         self.statusBuilder = new ScaleStatusBuilderAppsV1beta2();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            ScaleStatusBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ScaleBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_scale.apiVersion = _apiVersion;
@@ -4524,7 +3992,7 @@ public type JobListBuilderBatchV1 object {
     public io_k8s_api_batch_v1_JobList io_k8s_api_batch_v1_joblist;
     public JobBuilderBatchV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_batch_v1_joblist = new;
@@ -4539,16 +4007,9 @@ public type JobListBuilderBatchV1 object {
     public function withMetadataJobListBatchV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsJobListBatchV1() returns JobBuilderBatchV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new JobBuilderBatchV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -4570,9 +4031,9 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SubjectAccessReviewSpec
     io_k8s_api_authorization_v1beta1_subjectaccessreviewspec;
-    public NonResourceAttributesBuilderAuthorizationV1beta1? nonResourceAttributesBuilder;
+    public NonResourceAttributesBuilderAuthorizationV1beta1 nonResourceAttributesBuilder;
 
-    public ResourceAttributesBuilderAuthorizationV1beta1? resourceAttributesBuilder;
+    public ResourceAttributesBuilderAuthorizationV1beta1 resourceAttributesBuilder;
 
     public new() {
         io_k8s_api_authorization_v1beta1_subjectaccessreviewspec = new;
@@ -4621,31 +4082,17 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
     {
         self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1beta1();
         self.nonResourceAttributesBuilder.init(self);
-        match (self.nonResourceAttributesBuilder) {
-            NonResourceAttributesBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nonResourceAttributesBuilder;
     }
+
     public function withResourceAttributesSubjectAccessReviewSpecAuthorizationV1beta1() returns
                                                                                             ResourceAttributesBuilderAuthorizationV1beta1
     {
         self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1beta1();
         self.resourceAttributesBuilder.init(self);
-        match (self.resourceAttributesBuilder) {
-            ResourceAttributesBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return resourceAttributesBuilder;
     }
+
 
     public function setExtra(any _extra) returns (SubjectAccessReviewSpecBuilderAuthorizationV1beta1) {
         self.io_k8s_api_authorization_v1beta1_subjectaccessreviewspec.extra = _extra;
@@ -4784,11 +4231,11 @@ public type APIResourceListBuilderMetaV1 object {
 public type ScaleBuilderAppsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_Scale io_k8s_api_apps_v1beta1_scale;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ScaleSpecBuilderAppsV1beta1? specBuilder;
+    public ScaleSpecBuilderAppsV1beta1 specBuilder;
 
-    public ScaleStatusBuilderAppsV1beta1? statusBuilder;
+    public ScaleStatusBuilderAppsV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_scale = new;
@@ -4803,42 +4250,21 @@ public type ScaleBuilderAppsV1beta1 object {
     public function withMetadataScaleAppsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecScaleAppsV1beta1() returns ScaleSpecBuilderAppsV1beta1 {
         self.specBuilder = new ScaleSpecBuilderAppsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            ScaleSpecBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusScaleAppsV1beta1() returns ScaleStatusBuilderAppsV1beta1 {
         self.statusBuilder = new ScaleStatusBuilderAppsV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            ScaleStatusBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ScaleBuilderAppsV1beta1) {
         self.io_k8s_api_apps_v1beta1_scale.apiVersion = _apiVersion;
@@ -4936,11 +4362,11 @@ public type ResourceAttributesBuilderAuthorizationV1beta1 object {
 public type StatefulSetBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_StatefulSet io_k8s_api_apps_v1beta2_statefulset;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public StatefulSetSpecBuilderAppsV1beta2? specBuilder;
+    public StatefulSetSpecBuilderAppsV1beta2 specBuilder;
 
-    public StatefulSetStatusBuilderAppsV1beta2? statusBuilder;
+    public StatefulSetStatusBuilderAppsV1beta2 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_statefulset = new;
@@ -4970,42 +4396,21 @@ public type StatefulSetBuilderAppsV1beta2 object {
     public function withMetadataStatefulSetAppsV1beta2() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecStatefulSetAppsV1beta2() returns StatefulSetSpecBuilderAppsV1beta2 {
         self.specBuilder = new StatefulSetSpecBuilderAppsV1beta2();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            StatefulSetSpecBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusStatefulSetAppsV1beta2() returns StatefulSetStatusBuilderAppsV1beta2 {
         self.statusBuilder = new StatefulSetStatusBuilderAppsV1beta2();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            StatefulSetStatusBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (StatefulSetBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_statefulset.apiVersion = _apiVersion;
@@ -5022,11 +4427,11 @@ public type CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionSpec
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionspec;
-    public CustomResourceDefinitionNamesBuilderApiextensionsV1beta1? namesBuilder;
+    public CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 namesBuilder;
 
-    public CustomResourceSubresourcesBuilderApiextensionsV1beta1? subresourcesBuilder;
+    public CustomResourceSubresourcesBuilderApiextensionsV1beta1 subresourcesBuilder;
 
-    public CustomResourceValidationBuilderApiextensionsV1beta1? validationBuilder;
+    public CustomResourceValidationBuilderApiextensionsV1beta1 validationBuilder;
 
     public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionspec = new;
@@ -5060,46 +4465,25 @@ public type CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 object {
     {
         self.namesBuilder = new CustomResourceDefinitionNamesBuilderApiextensionsV1beta1();
         self.namesBuilder.init(self);
-        match (self.namesBuilder) {
-            CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return namesBuilder;
     }
+
     public function withSubresourcesCustomResourceDefinitionSpecApiextensionsV1beta1() returns
                                                                                            CustomResourceSubresourcesBuilderApiextensionsV1beta1
     {
         self.subresourcesBuilder = new CustomResourceSubresourcesBuilderApiextensionsV1beta1();
         self.subresourcesBuilder.init(self);
-        match (self.subresourcesBuilder) {
-            CustomResourceSubresourcesBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return subresourcesBuilder;
     }
+
     public function withValidationCustomResourceDefinitionSpecApiextensionsV1beta1() returns
                                                                                          CustomResourceValidationBuilderApiextensionsV1beta1
     {
         self.validationBuilder = new CustomResourceValidationBuilderApiextensionsV1beta1();
         self.validationBuilder.init(self);
-        match (self.validationBuilder) {
-            CustomResourceValidationBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return validationBuilder;
     }
+
 
     public function set_group(string __group) returns (CustomResourceDefinitionSpecBuilderApiextensionsV1beta1) {
         self.io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionspec._group = __group
@@ -5204,7 +4588,7 @@ public type VolumeAttachmentSourceBuilderStorageV1beta1 object {
 public type ScaleIOPersistentVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ScaleIOPersistentVolumeSource io_k8s_api_core_v1_scaleiopersistentvolumesource;
-    public SecretReferenceBuilderCoreV1? secretRefBuilder;
+    public SecretReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_scaleiopersistentvolumesource = new;
@@ -5234,16 +4618,9 @@ public type ScaleIOPersistentVolumeSourceBuilderCoreV1 object {
     public function withSecretRefScaleIOPersistentVolumeSourceCoreV1() returns SecretReferenceBuilderCoreV1 {
         self.secretRefBuilder = new SecretReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            SecretReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setFsType(string _fsType) returns (ScaleIOPersistentVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_scaleiopersistentvolumesource.fsType = _fsType;
@@ -5296,7 +4673,7 @@ public type StatefulSetListBuilderAppsV1beta2 object {
     public io_k8s_api_apps_v1beta2_StatefulSetList io_k8s_api_apps_v1beta2_statefulsetlist;
     public StatefulSetBuilderAppsV1beta2[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_statefulsetlist = new;
@@ -5311,16 +4688,9 @@ public type StatefulSetListBuilderAppsV1beta2 object {
     public function withMetadataStatefulSetListAppsV1beta2() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsStatefulSetListAppsV1beta2() returns StatefulSetBuilderAppsV1beta2 {
         self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1beta2();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -5552,7 +4922,7 @@ public type PodDisruptionBudgetListBuilderPolicyV1beta1 object {
     public io_k8s_api_policy_v1beta1_PodDisruptionBudgetList io_k8s_api_policy_v1beta1_poddisruptionbudgetlist;
     public PodDisruptionBudgetBuilderPolicyV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_policy_v1beta1_poddisruptionbudgetlist = new;
@@ -5567,16 +4937,9 @@ public type PodDisruptionBudgetListBuilderPolicyV1beta1 object {
     public function withMetadataPodDisruptionBudgetListPolicyV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsPodDisruptionBudgetListPolicyV1beta1() returns PodDisruptionBudgetBuilderPolicyV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PodDisruptionBudgetBuilderPolicyV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -5597,7 +4960,7 @@ public type PodDisruptionBudgetListBuilderPolicyV1beta1 object {
 public type NodeSpecBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeSpec io_k8s_api_core_v1_nodespec;
-    public NodeConfigSourceBuilderCoreV1? configSourceBuilder;
+    public NodeConfigSourceBuilderCoreV1 configSourceBuilder;
 
     public TaintBuilderCoreV1[] taintsBuilder;
 
@@ -5629,16 +4992,9 @@ public type NodeSpecBuilderCoreV1 object {
     public function withConfigSourceNodeSpecCoreV1() returns NodeConfigSourceBuilderCoreV1 {
         self.configSourceBuilder = new NodeConfigSourceBuilderCoreV1();
         self.configSourceBuilder.init(self);
-        match (self.configSourceBuilder) {
-            NodeConfigSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return configSourceBuilder;
     }
+
     public function withTaintsNodeSpecCoreV1() returns TaintBuilderCoreV1 {
         self.taintsBuilder[lengthof taintsBuilder] = new TaintBuilderCoreV1();
         self.taintsBuilder[(lengthof taintsBuilder) - 1].init(self);
@@ -5713,7 +5069,7 @@ public type SupplementalGroupsStrategyOptionsBuilderPolicyV1beta1 object {
 public type EnvVarBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EnvVar io_k8s_api_core_v1_envvar;
-    public EnvVarSourceBuilderCoreV1? valueFromBuilder;
+    public EnvVarSourceBuilderCoreV1 valueFromBuilder;
 
     public new() {
         io_k8s_api_core_v1_envvar = new;
@@ -5743,16 +5099,9 @@ public type EnvVarBuilderCoreV1 object {
     public function withValueFromEnvVarCoreV1() returns EnvVarSourceBuilderCoreV1 {
         self.valueFromBuilder = new EnvVarSourceBuilderCoreV1();
         self.valueFromBuilder.init(self);
-        match (self.valueFromBuilder) {
-            EnvVarSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return valueFromBuilder;
     }
+
 
     public function setName(string _name) returns (EnvVarBuilderCoreV1) {
         self.io_k8s_api_core_v1_envvar.name = _name;
@@ -5960,7 +5309,7 @@ public type RollingUpdateDeploymentBuilderAppsV1 object {
 public type StatefulSetUpdateStrategyBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_StatefulSetUpdateStrategy io_k8s_api_apps_v1_statefulsetupdatestrategy;
-    public RollingUpdateStatefulSetStrategyBuilderAppsV1? rollingUpdateBuilder;
+    public RollingUpdateStatefulSetStrategyBuilderAppsV1 rollingUpdateBuilder;
 
     public new() {
         io_k8s_api_apps_v1_statefulsetupdatestrategy = new;
@@ -5992,16 +5341,9 @@ public type StatefulSetUpdateStrategyBuilderAppsV1 object {
     {
         self.rollingUpdateBuilder = new RollingUpdateStatefulSetStrategyBuilderAppsV1();
         self.rollingUpdateBuilder.init(self);
-        match (self.rollingUpdateBuilder) {
-            RollingUpdateStatefulSetStrategyBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollingUpdateBuilder;
     }
+
 
     public function set_type(string __type) returns (StatefulSetUpdateStrategyBuilderAppsV1) {
         self.io_k8s_api_apps_v1_statefulsetupdatestrategy._type = __type;
@@ -6098,7 +5440,7 @@ public type DaemonSetStatusBuilderExtensionsV1beta1 object {
 public type DaemonSetUpdateStrategyBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DaemonSetUpdateStrategy io_k8s_api_extensions_v1beta1_daemonsetupdatestrategy;
-    public RollingUpdateDaemonSetBuilderExtensionsV1beta1? rollingUpdateBuilder;
+    public RollingUpdateDaemonSetBuilderExtensionsV1beta1 rollingUpdateBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_daemonsetupdatestrategy = new;
@@ -6130,16 +5472,9 @@ public type DaemonSetUpdateStrategyBuilderExtensionsV1beta1 object {
     {
         self.rollingUpdateBuilder = new RollingUpdateDaemonSetBuilderExtensionsV1beta1();
         self.rollingUpdateBuilder.init(self);
-        match (self.rollingUpdateBuilder) {
-            RollingUpdateDaemonSetBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollingUpdateBuilder;
     }
+
 
     public function set_type(string __type) returns (DaemonSetUpdateStrategyBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_daemonsetupdatestrategy._type = __type;
@@ -6230,11 +5565,11 @@ public type AttachedVolumeBuilderCoreV1 object {
 public type IngressBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_Ingress io_k8s_api_extensions_v1beta1_ingress;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public IngressSpecBuilderExtensionsV1beta1? specBuilder;
+    public IngressSpecBuilderExtensionsV1beta1 specBuilder;
 
-    public IngressStatusBuilderExtensionsV1beta1? statusBuilder;
+    public IngressStatusBuilderExtensionsV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_ingress = new;
@@ -6264,42 +5599,21 @@ public type IngressBuilderExtensionsV1beta1 object {
     public function withMetadataIngressExtensionsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecIngressExtensionsV1beta1() returns IngressSpecBuilderExtensionsV1beta1 {
         self.specBuilder = new IngressSpecBuilderExtensionsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            IngressSpecBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusIngressExtensionsV1beta1() returns IngressStatusBuilderExtensionsV1beta1 {
         self.statusBuilder = new IngressStatusBuilderExtensionsV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            IngressStatusBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (IngressBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_ingress.apiVersion = _apiVersion;
@@ -6316,11 +5630,11 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SelfSubjectRulesReview
     io_k8s_api_authorization_v1beta1_selfsubjectrulesreview;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1? specBuilder;
+    public SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1 specBuilder;
 
-    public SubjectRulesReviewStatusBuilderAuthorizationV1beta1? statusBuilder;
+    public SubjectRulesReviewStatusBuilderAuthorizationV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_authorization_v1beta1_selfsubjectrulesreview = new;
@@ -6335,46 +5649,25 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1beta1 object {
     public function withMetadataSelfSubjectRulesReviewAuthorizationV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecSelfSubjectRulesReviewAuthorizationV1beta1() returns
                                                                              SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1
     {
         self.specBuilder = new SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            SelfSubjectRulesReviewSpecBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusSelfSubjectRulesReviewAuthorizationV1beta1() returns
                                                                                SubjectRulesReviewStatusBuilderAuthorizationV1beta1
     {
         self.statusBuilder = new SubjectRulesReviewStatusBuilderAuthorizationV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            SubjectRulesReviewStatusBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (SelfSubjectRulesReviewBuilderAuthorizationV1beta1) {
         self.io_k8s_api_authorization_v1beta1_selfsubjectrulesreview.apiVersion = _apiVersion;
@@ -6443,7 +5736,7 @@ public type CertificateSigningRequestConditionBuilderCertificatesV1beta1 object 
 public type WatchEventBuilderMetaV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_WatchEvent io_k8s_apimachinery_pkg_apis_meta_v1_watchevent;
-    public RawExtensionBuilderPkgRuntime? _objectBuilder;
+    public RawExtensionBuilderPkgRuntime _objectBuilder;
 
     public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_watchevent = new;
@@ -6458,16 +5751,9 @@ public type WatchEventBuilderMetaV1 object {
     public function with_objectWatchEventMetaV1() returns RawExtensionBuilderPkgRuntime {
         self._objectBuilder = new RawExtensionBuilderPkgRuntime();
         self._objectBuilder.init(self);
-        match (self._objectBuilder) {
-            RawExtensionBuilderPkgRuntime builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return _objectBuilder;
     }
+
 
     public function set_type(string __type) returns (WatchEventBuilderMetaV1) {
         self.io_k8s_apimachinery_pkg_apis_meta_v1_watchevent._type = __type;
@@ -6533,11 +5819,11 @@ public type HostPathVolumeSourceBuilderCoreV1 object {
 public type SelfSubjectRulesReviewBuilderAuthorizationV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SelfSubjectRulesReview io_k8s_api_authorization_v1_selfsubjectrulesreview;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public SelfSubjectRulesReviewSpecBuilderAuthorizationV1? specBuilder;
+    public SelfSubjectRulesReviewSpecBuilderAuthorizationV1 specBuilder;
 
-    public SubjectRulesReviewStatusBuilderAuthorizationV1? statusBuilder;
+    public SubjectRulesReviewStatusBuilderAuthorizationV1 statusBuilder;
 
     public new() {
         io_k8s_api_authorization_v1_selfsubjectrulesreview = new;
@@ -6552,46 +5838,25 @@ public type SelfSubjectRulesReviewBuilderAuthorizationV1 object {
     public function withMetadataSelfSubjectRulesReviewAuthorizationV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecSelfSubjectRulesReviewAuthorizationV1() returns
                                                                         SelfSubjectRulesReviewSpecBuilderAuthorizationV1
     {
         self.specBuilder = new SelfSubjectRulesReviewSpecBuilderAuthorizationV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            SelfSubjectRulesReviewSpecBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusSelfSubjectRulesReviewAuthorizationV1() returns
                                                                           SubjectRulesReviewStatusBuilderAuthorizationV1
     {
         self.statusBuilder = new SubjectRulesReviewStatusBuilderAuthorizationV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            SubjectRulesReviewStatusBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (SelfSubjectRulesReviewBuilderAuthorizationV1) {
         self.io_k8s_api_authorization_v1_selfsubjectrulesreview.apiVersion = _apiVersion;
@@ -6610,7 +5875,7 @@ public type MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 
     io_k8s_api_admissionregistration_v1beta1_mutatingwebhookconfigurationlist;
     public MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_admissionregistration_v1beta1_mutatingwebhookconfigurationlist = new;
@@ -6627,16 +5892,9 @@ public type MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 
     {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsMutatingWebhookConfigurationListAdmissionregistrationV1beta1() returns
                                                                                                 MutatingWebhookConfigurationBuilderAdmissionregistrationV1beta1
     {
@@ -6662,11 +5920,11 @@ public type MutatingWebhookConfigurationListBuilderAdmissionregistrationV1beta1 
 public type CronJobBuilderBatchV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1beta1_CronJob io_k8s_api_batch_v1beta1_cronjob;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public CronJobSpecBuilderBatchV1beta1? specBuilder;
+    public CronJobSpecBuilderBatchV1beta1 specBuilder;
 
-    public CronJobStatusBuilderBatchV1beta1? statusBuilder;
+    public CronJobStatusBuilderBatchV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_batch_v1beta1_cronjob = new;
@@ -6696,42 +5954,21 @@ public type CronJobBuilderBatchV1beta1 object {
     public function withMetadataCronJobBatchV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecCronJobBatchV1beta1() returns CronJobSpecBuilderBatchV1beta1 {
         self.specBuilder = new CronJobSpecBuilderBatchV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            CronJobSpecBuilderBatchV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusCronJobBatchV1beta1() returns CronJobStatusBuilderBatchV1beta1 {
         self.statusBuilder = new CronJobStatusBuilderBatchV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            CronJobStatusBuilderBatchV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (CronJobBuilderBatchV1beta1) {
         self.io_k8s_api_batch_v1beta1_cronjob.apiVersion = _apiVersion;
@@ -6804,7 +6041,7 @@ public type NetworkPolicyListBuilderExtensionsV1beta1 object {
     public io_k8s_api_extensions_v1beta1_NetworkPolicyList io_k8s_api_extensions_v1beta1_networkpolicylist;
     public NetworkPolicyBuilderExtensionsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_networkpolicylist = new;
@@ -6819,16 +6056,9 @@ public type NetworkPolicyListBuilderExtensionsV1beta1 object {
     public function withMetadataNetworkPolicyListExtensionsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsNetworkPolicyListExtensionsV1beta1() returns NetworkPolicyBuilderExtensionsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new NetworkPolicyBuilderExtensionsV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -6914,7 +6144,7 @@ public type ContainerStateTerminatedBuilderCoreV1 object {
 public type ObjectMetaBuilderMetaV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_ObjectMeta io_k8s_apimachinery_pkg_apis_meta_v1_objectmeta;
-    public InitializersBuilderMetaV1? initializersBuilder;
+    public InitializersBuilderMetaV1 initializersBuilder;
 
     public OwnerReferenceBuilderMetaV1[] ownerReferencesBuilder;
 
@@ -8116,16 +7346,9 @@ public type ObjectMetaBuilderMetaV1 object {
     public function withInitializersObjectMetaMetaV1() returns InitializersBuilderMetaV1 {
         self.initializersBuilder = new InitializersBuilderMetaV1();
         self.initializersBuilder.init(self);
-        match (self.initializersBuilder) {
-            InitializersBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return initializersBuilder;
     }
+
     public function withOwnerReferencesObjectMetaMetaV1() returns OwnerReferenceBuilderMetaV1 {
         self.ownerReferencesBuilder[lengthof ownerReferencesBuilder] = new OwnerReferenceBuilderMetaV1();
         self.ownerReferencesBuilder[(lengthof ownerReferencesBuilder) - 1].init(self);
@@ -8277,7 +7500,7 @@ public type ControllerRevisionListBuilderAppsV1beta1 object {
     public io_k8s_api_apps_v1beta1_ControllerRevisionList io_k8s_api_apps_v1beta1_controllerrevisionlist;
     public ControllerRevisionBuilderAppsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_controllerrevisionlist = new;
@@ -8292,16 +7515,9 @@ public type ControllerRevisionListBuilderAppsV1beta1 object {
     public function withMetadataControllerRevisionListAppsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsControllerRevisionListAppsV1beta1() returns ControllerRevisionBuilderAppsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ControllerRevisionBuilderAppsV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -8505,7 +7721,7 @@ public type ExternalDocumentationBuilderApiextensionsV1beta1 object {
 public type FlexPersistentVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_FlexPersistentVolumeSource io_k8s_api_core_v1_flexpersistentvolumesource;
-    public SecretReferenceBuilderCoreV1? secretRefBuilder;
+    public SecretReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_flexpersistentvolumesource = new;
@@ -8535,16 +7751,9 @@ public type FlexPersistentVolumeSourceBuilderCoreV1 object {
     public function withSecretRefFlexPersistentVolumeSourceCoreV1() returns SecretReferenceBuilderCoreV1 {
         self.secretRefBuilder = new SecretReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            SecretReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setDriver(string _driver) returns (FlexPersistentVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_flexpersistentvolumesource.driver = _driver;
@@ -8572,7 +7781,7 @@ public type RoleBindingListBuilderRbacV1 object {
     public io_k8s_api_rbac_v1_RoleBindingList io_k8s_api_rbac_v1_rolebindinglist;
     public RoleBindingBuilderRbacV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_rbac_v1_rolebindinglist = new;
@@ -8587,16 +7796,9 @@ public type RoleBindingListBuilderRbacV1 object {
     public function withMetadataRoleBindingListRbacV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsRoleBindingListRbacV1() returns RoleBindingBuilderRbacV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new RoleBindingBuilderRbacV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -8617,7 +7819,7 @@ public type RoleBindingListBuilderRbacV1 object {
 public type StorageClassBuilderStorageV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1_StorageClass io_k8s_api_storage_v1_storageclass;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_storage_v1_storageclass = new;
@@ -8647,16 +7849,9 @@ public type StorageClassBuilderStorageV1 object {
     public function withMetadataStorageClassStorageV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
 
     public function setAllowVolumeExpansion(boolean _allowVolumeExpansion) returns (StorageClassBuilderStorageV1) {
         self.io_k8s_api_storage_v1_storageclass.allowVolumeExpansion = _allowVolumeExpansion;
@@ -8803,7 +7998,7 @@ public type PodListBuilderCoreV1 object {
     public io_k8s_api_core_v1_PodList io_k8s_api_core_v1_podlist;
     public PodBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_podlist = new;
@@ -8818,16 +8013,9 @@ public type PodListBuilderCoreV1 object {
     public function withMetadataPodListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsPodListCoreV1() returns PodBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PodBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -8923,9 +8111,9 @@ public type AzureDiskVolumeSourceBuilderCoreV1 object {
 public type PodSecurityPolicyBuilderPolicyV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_PodSecurityPolicy io_k8s_api_policy_v1beta1_podsecuritypolicy;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public PodSecurityPolicySpecBuilderPolicyV1beta1? specBuilder;
+    public PodSecurityPolicySpecBuilderPolicyV1beta1 specBuilder;
 
     public new() {
         io_k8s_api_policy_v1beta1_podsecuritypolicy = new;
@@ -8955,29 +8143,15 @@ public type PodSecurityPolicyBuilderPolicyV1beta1 object {
     public function withMetadataPodSecurityPolicyPolicyV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecPodSecurityPolicyPolicyV1beta1() returns PodSecurityPolicySpecBuilderPolicyV1beta1 {
         self.specBuilder = new PodSecurityPolicySpecBuilderPolicyV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            PodSecurityPolicySpecBuilderPolicyV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (PodSecurityPolicyBuilderPolicyV1beta1) {
         self.io_k8s_api_policy_v1beta1_podsecuritypolicy.apiVersion = _apiVersion;
@@ -8993,7 +8167,7 @@ public type PodSecurityPolicyBuilderPolicyV1beta1 object {
 public type DeploymentRollbackBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DeploymentRollback io_k8s_api_extensions_v1beta1_deploymentrollback;
-    public RollbackConfigBuilderExtensionsV1beta1? rollbackToBuilder;
+    public RollbackConfigBuilderExtensionsV1beta1 rollbackToBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_deploymentrollback = new;
@@ -9008,16 +8182,9 @@ public type DeploymentRollbackBuilderExtensionsV1beta1 object {
     public function withRollbackToDeploymentRollbackExtensionsV1beta1() returns RollbackConfigBuilderExtensionsV1beta1 {
         self.rollbackToBuilder = new RollbackConfigBuilderExtensionsV1beta1();
         self.rollbackToBuilder.init(self);
-        match (self.rollbackToBuilder) {
-            RollbackConfigBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollbackToBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (DeploymentRollbackBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_deploymentrollback.apiVersion = _apiVersion;
@@ -9287,7 +8454,7 @@ public type RollingUpdateStatefulSetStrategyBuilderAppsV1beta2 object {
 public type StorageOSPersistentVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_StorageOSPersistentVolumeSource io_k8s_api_core_v1_storageospersistentvolumesource;
-    public ObjectReferenceBuilderCoreV1? secretRefBuilder;
+    public ObjectReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_storageospersistentvolumesource = new;
@@ -9317,16 +8484,9 @@ public type StorageOSPersistentVolumeSourceBuilderCoreV1 object {
     public function withSecretRefStorageOSPersistentVolumeSourceCoreV1() returns ObjectReferenceBuilderCoreV1 {
         self.secretRefBuilder = new ObjectReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            ObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setFsType(string _fsType) returns (StorageOSPersistentVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_storageospersistentvolumesource.fsType = _fsType;
@@ -9352,11 +8512,11 @@ public type StorageOSPersistentVolumeSourceBuilderCoreV1 object {
 public type DaemonSetBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DaemonSet io_k8s_api_apps_v1beta2_daemonset;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public DaemonSetSpecBuilderAppsV1beta2? specBuilder;
+    public DaemonSetSpecBuilderAppsV1beta2 specBuilder;
 
-    public DaemonSetStatusBuilderAppsV1beta2? statusBuilder;
+    public DaemonSetStatusBuilderAppsV1beta2 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_daemonset = new;
@@ -9386,42 +8546,21 @@ public type DaemonSetBuilderAppsV1beta2 object {
     public function withMetadataDaemonSetAppsV1beta2() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecDaemonSetAppsV1beta2() returns DaemonSetSpecBuilderAppsV1beta2 {
         self.specBuilder = new DaemonSetSpecBuilderAppsV1beta2();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            DaemonSetSpecBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusDaemonSetAppsV1beta2() returns DaemonSetStatusBuilderAppsV1beta2 {
         self.statusBuilder = new DaemonSetStatusBuilderAppsV1beta2();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            DaemonSetStatusBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (DaemonSetBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_daemonset.apiVersion = _apiVersion;
@@ -9437,11 +8576,11 @@ public type DaemonSetBuilderAppsV1beta2 object {
 public type HorizontalPodAutoscalerBuilderAutoscalingV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_HorizontalPodAutoscaler io_k8s_api_autoscaling_v1_horizontalpodautoscaler;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public HorizontalPodAutoscalerSpecBuilderAutoscalingV1? specBuilder;
+    public HorizontalPodAutoscalerSpecBuilderAutoscalingV1 specBuilder;
 
-    public HorizontalPodAutoscalerStatusBuilderAutoscalingV1? statusBuilder;
+    public HorizontalPodAutoscalerStatusBuilderAutoscalingV1 statusBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v1_horizontalpodautoscaler = new;
@@ -9472,45 +8611,24 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV1 object {
     public function withMetadataHorizontalPodAutoscalerAutoscalingV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecHorizontalPodAutoscalerAutoscalingV1() returns
                                                                        HorizontalPodAutoscalerSpecBuilderAutoscalingV1 {
         self.specBuilder = new HorizontalPodAutoscalerSpecBuilderAutoscalingV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            HorizontalPodAutoscalerSpecBuilderAutoscalingV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusHorizontalPodAutoscalerAutoscalingV1() returns
                                                                          HorizontalPodAutoscalerStatusBuilderAutoscalingV1
     {
         self.statusBuilder = new HorizontalPodAutoscalerStatusBuilderAutoscalingV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            HorizontalPodAutoscalerStatusBuilderAutoscalingV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (HorizontalPodAutoscalerBuilderAutoscalingV1) {
         self.io_k8s_api_autoscaling_v1_horizontalpodautoscaler.apiVersion = _apiVersion;
@@ -9526,7 +8644,7 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV1 object {
 public type TokenReviewStatusBuilderAuthenticationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1beta1_TokenReviewStatus io_k8s_api_authentication_v1beta1_tokenreviewstatus;
-    public UserInfoBuilderAuthenticationV1beta1? userBuilder;
+    public UserInfoBuilderAuthenticationV1beta1 userBuilder;
 
     public new() {
         io_k8s_api_authentication_v1beta1_tokenreviewstatus = new;
@@ -9556,16 +8674,9 @@ public type TokenReviewStatusBuilderAuthenticationV1beta1 object {
     public function withUserTokenReviewStatusAuthenticationV1beta1() returns UserInfoBuilderAuthenticationV1beta1 {
         self.userBuilder = new UserInfoBuilderAuthenticationV1beta1();
         self.userBuilder.init(self);
-        match (self.userBuilder) {
-            UserInfoBuilderAuthenticationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return userBuilder;
     }
+
 
     public function setAuthenticated(boolean _authenticated) returns (TokenReviewStatusBuilderAuthenticationV1beta1) {
         self.io_k8s_api_authentication_v1beta1_tokenreviewstatus.authenticated = _authenticated;
@@ -9643,7 +8754,7 @@ public type ConfigMapListBuilderCoreV1 object {
     public io_k8s_api_core_v1_ConfigMapList io_k8s_api_core_v1_configmaplist;
     public ConfigMapBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_configmaplist = new;
@@ -9658,16 +8769,9 @@ public type ConfigMapListBuilderCoreV1 object {
     public function withMetadataConfigMapListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsConfigMapListCoreV1() returns ConfigMapBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ConfigMapBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -9688,15 +8792,15 @@ public type ConfigMapListBuilderCoreV1 object {
 public type EventBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Event io_k8s_api_core_v1_event;
-    public ObjectReferenceBuilderCoreV1? involvedObjectBuilder;
+    public ObjectReferenceBuilderCoreV1 involvedObjectBuilder;
 
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ObjectReferenceBuilderCoreV1? relatedBuilder;
+    public ObjectReferenceBuilderCoreV1 relatedBuilder;
 
-    public EventSeriesBuilderCoreV1? seriesBuilder;
+    public EventSeriesBuilderCoreV1 seriesBuilder;
 
-    public EventSourceBuilderCoreV1? sourceBuilder;
+    public EventSourceBuilderCoreV1 sourceBuilder;
 
     public new() {
         io_k8s_api_core_v1_event = new;
@@ -9726,68 +8830,33 @@ public type EventBuilderCoreV1 object {
     public function withInvolvedObjectEventCoreV1() returns ObjectReferenceBuilderCoreV1 {
         self.involvedObjectBuilder = new ObjectReferenceBuilderCoreV1();
         self.involvedObjectBuilder.init(self);
-        match (self.involvedObjectBuilder) {
-            ObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return involvedObjectBuilder;
     }
+
     public function withMetadataEventCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withRelatedEventCoreV1() returns ObjectReferenceBuilderCoreV1 {
         self.relatedBuilder = new ObjectReferenceBuilderCoreV1();
         self.relatedBuilder.init(self);
-        match (self.relatedBuilder) {
-            ObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return relatedBuilder;
     }
+
     public function withSeriesEventCoreV1() returns EventSeriesBuilderCoreV1 {
         self.seriesBuilder = new EventSeriesBuilderCoreV1();
         self.seriesBuilder.init(self);
-        match (self.seriesBuilder) {
-            EventSeriesBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return seriesBuilder;
     }
+
     public function withSourceEventCoreV1() returns EventSourceBuilderCoreV1 {
         self.sourceBuilder = new EventSourceBuilderCoreV1();
         self.sourceBuilder.init(self);
-        match (self.sourceBuilder) {
-            EventSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return sourceBuilder;
     }
+
 
     public function setAction(string _action) returns (EventBuilderCoreV1) {
         self.io_k8s_api_core_v1_event.action = _action;
@@ -9947,7 +9016,7 @@ public type AllowedHostPathBuilderPolicyV1beta1 object {
 public type ISCSIPersistentVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ISCSIPersistentVolumeSource io_k8s_api_core_v1_iscsipersistentvolumesource;
-    public SecretReferenceBuilderCoreV1? secretRefBuilder;
+    public SecretReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_iscsipersistentvolumesource = new;
@@ -9977,16 +9046,9 @@ public type ISCSIPersistentVolumeSourceBuilderCoreV1 object {
     public function withSecretRefISCSIPersistentVolumeSourceCoreV1() returns SecretReferenceBuilderCoreV1 {
         self.secretRefBuilder = new SecretReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            SecretReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setChapAuthDiscovery(boolean _chapAuthDiscovery) returns (ISCSIPersistentVolumeSourceBuilderCoreV1)
     {
@@ -10050,7 +9112,7 @@ public type ReplicaSetListBuilderAppsV1 object {
     public io_k8s_api_apps_v1_ReplicaSetList io_k8s_api_apps_v1_replicasetlist;
     public ReplicaSetBuilderAppsV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1_replicasetlist = new;
@@ -10065,16 +9127,9 @@ public type ReplicaSetListBuilderAppsV1 object {
     public function withMetadataReplicaSetListAppsV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsReplicaSetListAppsV1() returns ReplicaSetBuilderAppsV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderAppsV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -10157,7 +9212,7 @@ public type ComponentStatusListBuilderCoreV1 object {
     public io_k8s_api_core_v1_ComponentStatusList io_k8s_api_core_v1_componentstatuslist;
     public ComponentStatusBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_componentstatuslist = new;
@@ -10172,16 +9227,9 @@ public type ComponentStatusListBuilderCoreV1 object {
     public function withMetadataComponentStatusListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsComponentStatusListCoreV1() returns ComponentStatusBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ComponentStatusBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -10246,11 +9294,11 @@ public type ContainerImageBuilderCoreV1 object {
 public type StatefulSetSpecBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_StatefulSetSpec io_k8s_api_apps_v1beta2_statefulsetspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
-    public StatefulSetUpdateStrategyBuilderAppsV1beta2? updateStrategyBuilder;
+    public StatefulSetUpdateStrategyBuilderAppsV1beta2 updateStrategyBuilder;
 
     public PersistentVolumeClaimBuilderCoreV1[] volumeClaimTemplatesBuilder;
 
@@ -10282,42 +9330,21 @@ public type StatefulSetSpecBuilderAppsV1beta2 object {
     public function withSelectorStatefulSetSpecAppsV1beta2() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withTemplateStatefulSetSpecAppsV1beta2() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
     public function withUpdateStrategyStatefulSetSpecAppsV1beta2() returns StatefulSetUpdateStrategyBuilderAppsV1beta2 {
         self.updateStrategyBuilder = new StatefulSetUpdateStrategyBuilderAppsV1beta2();
         self.updateStrategyBuilder.init(self);
-        match (self.updateStrategyBuilder) {
-            StatefulSetUpdateStrategyBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return updateStrategyBuilder;
     }
+
     public function withVolumeClaimTemplatesStatefulSetSpecAppsV1beta2() returns PersistentVolumeClaimBuilderCoreV1 {
         self.volumeClaimTemplatesBuilder[lengthof volumeClaimTemplatesBuilder] = new PersistentVolumeClaimBuilderCoreV1(
         );
@@ -10384,9 +9411,9 @@ public type PreconditionsBuilderMetaV1 object {
 public type ReplicaSetSpecBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_ReplicaSetSpec io_k8s_api_apps_v1_replicasetspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
     public new() {
         io_k8s_api_apps_v1_replicasetspec = new;
@@ -10416,29 +9443,15 @@ public type ReplicaSetSpecBuilderAppsV1 object {
     public function withSelectorReplicaSetSpecAppsV1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withTemplateReplicaSetSpecAppsV1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (ReplicaSetSpecBuilderAppsV1) {
         self.io_k8s_api_apps_v1_replicasetspec.minReadySeconds = _minReadySeconds;
@@ -10502,7 +9515,7 @@ public type ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta
     io_k8s_api_admissionregistration_v1beta1_validatingwebhookconfigurationlist;
     public ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_admissionregistration_v1beta1_validatingwebhookconfigurationlist = new;
@@ -10519,16 +9532,9 @@ public type ValidatingWebhookConfigurationListBuilderAdmissionregistrationV1beta
     {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsValidatingWebhookConfigurationListAdmissionregistrationV1beta1() returns
                                                                                                   ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1
     {
@@ -10643,7 +9649,7 @@ public type LimitRangeListBuilderCoreV1 object {
     public io_k8s_api_core_v1_LimitRangeList io_k8s_api_core_v1_limitrangelist;
     public LimitRangeBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_limitrangelist = new;
@@ -10658,16 +9664,9 @@ public type LimitRangeListBuilderCoreV1 object {
     public function withMetadataLimitRangeListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsLimitRangeListCoreV1() returns LimitRangeBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new LimitRangeBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -10690,7 +9689,7 @@ public type VolumeAttachmentListBuilderStorageV1beta1 object {
     public io_k8s_api_storage_v1beta1_VolumeAttachmentList io_k8s_api_storage_v1beta1_volumeattachmentlist;
     public VolumeAttachmentBuilderStorageV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_storage_v1beta1_volumeattachmentlist = new;
@@ -10705,16 +9704,9 @@ public type VolumeAttachmentListBuilderStorageV1beta1 object {
     public function withMetadataVolumeAttachmentListStorageV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsVolumeAttachmentListStorageV1beta1() returns VolumeAttachmentBuilderStorageV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new VolumeAttachmentBuilderStorageV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -10809,7 +9801,7 @@ public type NodeListBuilderCoreV1 object {
     public io_k8s_api_core_v1_NodeList io_k8s_api_core_v1_nodelist;
     public NodeBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_nodelist = new;
@@ -10824,16 +9816,9 @@ public type NodeListBuilderCoreV1 object {
     public function withMetadataNodeListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsNodeListCoreV1() returns NodeBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new NodeBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -10854,11 +9839,11 @@ public type NodeListBuilderCoreV1 object {
 public type StatefulSetSpecBuilderAppsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_StatefulSetSpec io_k8s_api_apps_v1beta1_statefulsetspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
-    public StatefulSetUpdateStrategyBuilderAppsV1beta1? updateStrategyBuilder;
+    public StatefulSetUpdateStrategyBuilderAppsV1beta1 updateStrategyBuilder;
 
     public PersistentVolumeClaimBuilderCoreV1[] volumeClaimTemplatesBuilder;
 
@@ -10890,42 +9875,21 @@ public type StatefulSetSpecBuilderAppsV1beta1 object {
     public function withSelectorStatefulSetSpecAppsV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withTemplateStatefulSetSpecAppsV1beta1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
     public function withUpdateStrategyStatefulSetSpecAppsV1beta1() returns StatefulSetUpdateStrategyBuilderAppsV1beta1 {
         self.updateStrategyBuilder = new StatefulSetUpdateStrategyBuilderAppsV1beta1();
         self.updateStrategyBuilder.init(self);
-        match (self.updateStrategyBuilder) {
-            StatefulSetUpdateStrategyBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return updateStrategyBuilder;
     }
+
     public function withVolumeClaimTemplatesStatefulSetSpecAppsV1beta1() returns PersistentVolumeClaimBuilderCoreV1 {
         self.volumeClaimTemplatesBuilder[lengthof volumeClaimTemplatesBuilder] = new PersistentVolumeClaimBuilderCoreV1(
         );
@@ -10957,11 +9921,11 @@ public type StatefulSetSpecBuilderAppsV1beta1 object {
 public type DeploymentSpecBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DeploymentSpec io_k8s_api_apps_v1_deploymentspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public DeploymentStrategyBuilderAppsV1? strategyBuilder;
+    public DeploymentStrategyBuilderAppsV1 strategyBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
     public new() {
         io_k8s_api_apps_v1_deploymentspec = new;
@@ -10970,7 +9934,6 @@ public type DeploymentSpecBuilderAppsV1 object {
         self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_DeploymentSpec) {
-        self.io_k8s_api_apps_v1_deploymentspec.template=templateBuilder.build();
         return self.io_k8s_api_apps_v1_deploymentspec;
     }
 
@@ -10992,42 +9955,21 @@ public type DeploymentSpecBuilderAppsV1 object {
     public function withSelectorDeploymentSpecAppsV1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withStrategyDeploymentSpecAppsV1() returns DeploymentStrategyBuilderAppsV1 {
         self.strategyBuilder = new DeploymentStrategyBuilderAppsV1();
         self.strategyBuilder.init(self);
-        match (self.strategyBuilder) {
-            DeploymentStrategyBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return strategyBuilder;
     }
+
     public function withTemplateDeploymentSpecAppsV1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (DeploymentSpecBuilderAppsV1) {
         self.io_k8s_api_apps_v1_deploymentspec.minReadySeconds = _minReadySeconds;
@@ -11058,9 +10000,9 @@ public type DeploymentSpecBuilderAppsV1 object {
 public type VolumeAttachmentStatusBuilderStorageV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_VolumeAttachmentStatus io_k8s_api_storage_v1beta1_volumeattachmentstatus;
-    public VolumeErrorBuilderStorageV1beta1? attachErrorBuilder;
+    public VolumeErrorBuilderStorageV1beta1 attachErrorBuilder;
 
-    public VolumeErrorBuilderStorageV1beta1? detachErrorBuilder;
+    public VolumeErrorBuilderStorageV1beta1 detachErrorBuilder;
 
     public new() {
         io_k8s_api_storage_v1beta1_volumeattachmentstatus = new;
@@ -11090,29 +10032,15 @@ public type VolumeAttachmentStatusBuilderStorageV1beta1 object {
     public function withAttachErrorVolumeAttachmentStatusStorageV1beta1() returns VolumeErrorBuilderStorageV1beta1 {
         self.attachErrorBuilder = new VolumeErrorBuilderStorageV1beta1();
         self.attachErrorBuilder.init(self);
-        match (self.attachErrorBuilder) {
-            VolumeErrorBuilderStorageV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return attachErrorBuilder;
     }
+
     public function withDetachErrorVolumeAttachmentStatusStorageV1beta1() returns VolumeErrorBuilderStorageV1beta1 {
         self.detachErrorBuilder = new VolumeErrorBuilderStorageV1beta1();
         self.detachErrorBuilder.init(self);
-        match (self.detachErrorBuilder) {
-            VolumeErrorBuilderStorageV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return detachErrorBuilder;
     }
+
 
     public function setAttached(boolean _attached) returns (VolumeAttachmentStatusBuilderStorageV1beta1) {
         self.io_k8s_api_storage_v1beta1_volumeattachmentstatus.attached = _attached;
@@ -11189,11 +10117,11 @@ public type GlusterfsVolumeSourceBuilderCoreV1 object {
 public type DeploymentBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_Deployment io_k8s_api_apps_v1_deployment;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public DeploymentSpecBuilderAppsV1? specBuilder;
+    public DeploymentSpecBuilderAppsV1 specBuilder;
 
-    public DeploymentStatusBuilderAppsV1? statusBuilder;
+    public DeploymentStatusBuilderAppsV1 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1_deployment = new;
@@ -11202,10 +10130,6 @@ public type DeploymentBuilderAppsV1 object {
         self.fluentBuilder = parent;
     }
     public function build() returns (io_k8s_api_apps_v1_Deployment) {
-        io_k8s_api_apps_v1_deployment.apiVersion = "apps/v1";
-        io_k8s_api_apps_v1_deployment.kind = "Deployment";
-        io_k8s_api_apps_v1_deployment.metadata = metadataBuilder.build();
-        io_k8s_api_apps_v1_deployment.spec = specBuilder.build();
         return self.io_k8s_api_apps_v1_deployment;
     }
 
@@ -11227,42 +10151,21 @@ public type DeploymentBuilderAppsV1 object {
     public function withMetadataDeploymentAppsV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecDeploymentAppsV1() returns DeploymentSpecBuilderAppsV1 {
         self.specBuilder = new DeploymentSpecBuilderAppsV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            DeploymentSpecBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusDeploymentAppsV1() returns DeploymentStatusBuilderAppsV1 {
         self.statusBuilder = new DeploymentStatusBuilderAppsV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            DeploymentStatusBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (DeploymentBuilderAppsV1) {
         self.io_k8s_api_apps_v1_deployment.apiVersion = _apiVersion;
@@ -11278,7 +10181,7 @@ public type DeploymentBuilderAppsV1 object {
 public type RoleBuilderRbacV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_Role io_k8s_api_rbac_v1beta1_role;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public PolicyRuleBuilderRbacV1beta1[] rulesBuilder;
 
@@ -11310,16 +10213,9 @@ public type RoleBuilderRbacV1beta1 object {
     public function withMetadataRoleRbacV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withRulesRoleRbacV1beta1() returns PolicyRuleBuilderRbacV1beta1 {
         self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1beta1();
         self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
@@ -11340,7 +10236,7 @@ public type RoleBuilderRbacV1beta1 object {
 public type VolumeNodeAffinityBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_VolumeNodeAffinity io_k8s_api_core_v1_volumenodeaffinity;
-    public NodeSelectorBuilderCoreV1? requiredBuilder;
+    public NodeSelectorBuilderCoreV1 requiredBuilder;
 
     public new() {
         io_k8s_api_core_v1_volumenodeaffinity = new;
@@ -11370,16 +10266,9 @@ public type VolumeNodeAffinityBuilderCoreV1 object {
     public function withRequiredVolumeNodeAffinityCoreV1() returns NodeSelectorBuilderCoreV1 {
         self.requiredBuilder = new NodeSelectorBuilderCoreV1();
         self.requiredBuilder.init(self);
-        match (self.requiredBuilder) {
-            NodeSelectorBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return requiredBuilder;
     }
+
 };
 
 public type DaemonSetConditionBuilderAppsV1 object {
@@ -11497,59 +10386,59 @@ public type NonResourceAttributesBuilderAuthorizationV1 object {
 public type VolumeBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Volume io_k8s_api_core_v1_volume;
-    public AWSElasticBlockStoreVolumeSourceBuilderCoreV1? awsElasticBlockStoreBuilder;
+    public AWSElasticBlockStoreVolumeSourceBuilderCoreV1 awsElasticBlockStoreBuilder;
 
-    public AzureDiskVolumeSourceBuilderCoreV1? azureDiskBuilder;
+    public AzureDiskVolumeSourceBuilderCoreV1 azureDiskBuilder;
 
-    public AzureFileVolumeSourceBuilderCoreV1? azureFileBuilder;
+    public AzureFileVolumeSourceBuilderCoreV1 azureFileBuilder;
 
-    public CephFSVolumeSourceBuilderCoreV1? cephfsBuilder;
+    public CephFSVolumeSourceBuilderCoreV1 cephfsBuilder;
 
-    public CinderVolumeSourceBuilderCoreV1? cinderBuilder;
+    public CinderVolumeSourceBuilderCoreV1 cinderBuilder;
 
-    public ConfigMapVolumeSourceBuilderCoreV1? configMapBuilder;
+    public ConfigMapVolumeSourceBuilderCoreV1 configMapBuilder;
 
-    public DownwardAPIVolumeSourceBuilderCoreV1? downwardAPIBuilder;
+    public DownwardAPIVolumeSourceBuilderCoreV1 downwardAPIBuilder;
 
-    public EmptyDirVolumeSourceBuilderCoreV1? emptyDirBuilder;
+    public EmptyDirVolumeSourceBuilderCoreV1 emptyDirBuilder;
 
-    public FCVolumeSourceBuilderCoreV1? fcBuilder;
+    public FCVolumeSourceBuilderCoreV1 fcBuilder;
 
-    public FlexVolumeSourceBuilderCoreV1? flexVolumeBuilder;
+    public FlexVolumeSourceBuilderCoreV1 flexVolumeBuilder;
 
-    public FlockerVolumeSourceBuilderCoreV1? flockerBuilder;
+    public FlockerVolumeSourceBuilderCoreV1 flockerBuilder;
 
-    public GCEPersistentDiskVolumeSourceBuilderCoreV1? gcePersistentDiskBuilder;
+    public GCEPersistentDiskVolumeSourceBuilderCoreV1 gcePersistentDiskBuilder;
 
-    public GitRepoVolumeSourceBuilderCoreV1? gitRepoBuilder;
+    public GitRepoVolumeSourceBuilderCoreV1 gitRepoBuilder;
 
-    public GlusterfsVolumeSourceBuilderCoreV1? glusterfsBuilder;
+    public GlusterfsVolumeSourceBuilderCoreV1 glusterfsBuilder;
 
-    public HostPathVolumeSourceBuilderCoreV1? hostPathBuilder;
+    public HostPathVolumeSourceBuilderCoreV1 hostPathBuilder;
 
-    public ISCSIVolumeSourceBuilderCoreV1? iscsiBuilder;
+    public ISCSIVolumeSourceBuilderCoreV1 iscsiBuilder;
 
-    public NFSVolumeSourceBuilderCoreV1? nfsBuilder;
+    public NFSVolumeSourceBuilderCoreV1 nfsBuilder;
 
-    public PersistentVolumeClaimVolumeSourceBuilderCoreV1? persistentVolumeClaimBuilder;
+    public PersistentVolumeClaimVolumeSourceBuilderCoreV1 persistentVolumeClaimBuilder;
 
-    public PhotonPersistentDiskVolumeSourceBuilderCoreV1? photonPersistentDiskBuilder;
+    public PhotonPersistentDiskVolumeSourceBuilderCoreV1 photonPersistentDiskBuilder;
 
-    public PortworxVolumeSourceBuilderCoreV1? portworxVolumeBuilder;
+    public PortworxVolumeSourceBuilderCoreV1 portworxVolumeBuilder;
 
-    public ProjectedVolumeSourceBuilderCoreV1? projectedBuilder;
+    public ProjectedVolumeSourceBuilderCoreV1 projectedBuilder;
 
-    public QuobyteVolumeSourceBuilderCoreV1? quobyteBuilder;
+    public QuobyteVolumeSourceBuilderCoreV1 quobyteBuilder;
 
-    public RBDVolumeSourceBuilderCoreV1? rbdBuilder;
+    public RBDVolumeSourceBuilderCoreV1 rbdBuilder;
 
-    public ScaleIOVolumeSourceBuilderCoreV1? scaleIOBuilder;
+    public ScaleIOVolumeSourceBuilderCoreV1 scaleIOBuilder;
 
-    public SecretVolumeSourceBuilderCoreV1? secretBuilder;
+    public SecretVolumeSourceBuilderCoreV1 secretBuilder;
 
-    public StorageOSVolumeSourceBuilderCoreV1? storageosBuilder;
+    public StorageOSVolumeSourceBuilderCoreV1 storageosBuilder;
 
-    public VsphereVirtualDiskVolumeSourceBuilderCoreV1? vsphereVolumeBuilder;
+    public VsphereVirtualDiskVolumeSourceBuilderCoreV1 vsphereVolumeBuilder;
 
     public new() {
         io_k8s_api_core_v1_volume = new;
@@ -11579,354 +10468,165 @@ public type VolumeBuilderCoreV1 object {
     public function withAwsElasticBlockStoreVolumeCoreV1() returns AWSElasticBlockStoreVolumeSourceBuilderCoreV1 {
         self.awsElasticBlockStoreBuilder = new AWSElasticBlockStoreVolumeSourceBuilderCoreV1();
         self.awsElasticBlockStoreBuilder.init(self);
-        match (self.awsElasticBlockStoreBuilder) {
-            AWSElasticBlockStoreVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return awsElasticBlockStoreBuilder;
     }
+
     public function withAzureDiskVolumeCoreV1() returns AzureDiskVolumeSourceBuilderCoreV1 {
         self.azureDiskBuilder = new AzureDiskVolumeSourceBuilderCoreV1();
         self.azureDiskBuilder.init(self);
-        match (self.azureDiskBuilder) {
-            AzureDiskVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return azureDiskBuilder;
     }
+
     public function withAzureFileVolumeCoreV1() returns AzureFileVolumeSourceBuilderCoreV1 {
         self.azureFileBuilder = new AzureFileVolumeSourceBuilderCoreV1();
         self.azureFileBuilder.init(self);
-        match (self.azureFileBuilder) {
-            AzureFileVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return azureFileBuilder;
     }
+
     public function withCephfsVolumeCoreV1() returns CephFSVolumeSourceBuilderCoreV1 {
         self.cephfsBuilder = new CephFSVolumeSourceBuilderCoreV1();
         self.cephfsBuilder.init(self);
-        match (self.cephfsBuilder) {
-            CephFSVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return cephfsBuilder;
     }
+
     public function withCinderVolumeCoreV1() returns CinderVolumeSourceBuilderCoreV1 {
         self.cinderBuilder = new CinderVolumeSourceBuilderCoreV1();
         self.cinderBuilder.init(self);
-        match (self.cinderBuilder) {
-            CinderVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return cinderBuilder;
     }
+
     public function withConfigMapVolumeCoreV1() returns ConfigMapVolumeSourceBuilderCoreV1 {
         self.configMapBuilder = new ConfigMapVolumeSourceBuilderCoreV1();
         self.configMapBuilder.init(self);
-        match (self.configMapBuilder) {
-            ConfigMapVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return configMapBuilder;
     }
+
     public function withDownwardAPIVolumeCoreV1() returns DownwardAPIVolumeSourceBuilderCoreV1 {
         self.downwardAPIBuilder = new DownwardAPIVolumeSourceBuilderCoreV1();
         self.downwardAPIBuilder.init(self);
-        match (self.downwardAPIBuilder) {
-            DownwardAPIVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return downwardAPIBuilder;
     }
+
     public function withEmptyDirVolumeCoreV1() returns EmptyDirVolumeSourceBuilderCoreV1 {
         self.emptyDirBuilder = new EmptyDirVolumeSourceBuilderCoreV1();
         self.emptyDirBuilder.init(self);
-        match (self.emptyDirBuilder) {
-            EmptyDirVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return emptyDirBuilder;
     }
+
     public function withFcVolumeCoreV1() returns FCVolumeSourceBuilderCoreV1 {
         self.fcBuilder = new FCVolumeSourceBuilderCoreV1();
         self.fcBuilder.init(self);
-        match (self.fcBuilder) {
-            FCVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return fcBuilder;
     }
+
     public function withFlexVolumeVolumeCoreV1() returns FlexVolumeSourceBuilderCoreV1 {
         self.flexVolumeBuilder = new FlexVolumeSourceBuilderCoreV1();
         self.flexVolumeBuilder.init(self);
-        match (self.flexVolumeBuilder) {
-            FlexVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return flexVolumeBuilder;
     }
+
     public function withFlockerVolumeCoreV1() returns FlockerVolumeSourceBuilderCoreV1 {
         self.flockerBuilder = new FlockerVolumeSourceBuilderCoreV1();
         self.flockerBuilder.init(self);
-        match (self.flockerBuilder) {
-            FlockerVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return flockerBuilder;
     }
+
     public function withGcePersistentDiskVolumeCoreV1() returns GCEPersistentDiskVolumeSourceBuilderCoreV1 {
         self.gcePersistentDiskBuilder = new GCEPersistentDiskVolumeSourceBuilderCoreV1();
         self.gcePersistentDiskBuilder.init(self);
-        match (self.gcePersistentDiskBuilder) {
-            GCEPersistentDiskVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return gcePersistentDiskBuilder;
     }
+
     public function withGitRepoVolumeCoreV1() returns GitRepoVolumeSourceBuilderCoreV1 {
         self.gitRepoBuilder = new GitRepoVolumeSourceBuilderCoreV1();
         self.gitRepoBuilder.init(self);
-        match (self.gitRepoBuilder) {
-            GitRepoVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return gitRepoBuilder;
     }
+
     public function withGlusterfsVolumeCoreV1() returns GlusterfsVolumeSourceBuilderCoreV1 {
         self.glusterfsBuilder = new GlusterfsVolumeSourceBuilderCoreV1();
         self.glusterfsBuilder.init(self);
-        match (self.glusterfsBuilder) {
-            GlusterfsVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return glusterfsBuilder;
     }
+
     public function withHostPathVolumeCoreV1() returns HostPathVolumeSourceBuilderCoreV1 {
         self.hostPathBuilder = new HostPathVolumeSourceBuilderCoreV1();
         self.hostPathBuilder.init(self);
-        match (self.hostPathBuilder) {
-            HostPathVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return hostPathBuilder;
     }
+
     public function withIscsiVolumeCoreV1() returns ISCSIVolumeSourceBuilderCoreV1 {
         self.iscsiBuilder = new ISCSIVolumeSourceBuilderCoreV1();
         self.iscsiBuilder.init(self);
-        match (self.iscsiBuilder) {
-            ISCSIVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return iscsiBuilder;
     }
+
     public function withNfsVolumeCoreV1() returns NFSVolumeSourceBuilderCoreV1 {
         self.nfsBuilder = new NFSVolumeSourceBuilderCoreV1();
         self.nfsBuilder.init(self);
-        match (self.nfsBuilder) {
-            NFSVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nfsBuilder;
     }
+
     public function withPersistentVolumeClaimVolumeCoreV1() returns PersistentVolumeClaimVolumeSourceBuilderCoreV1 {
         self.persistentVolumeClaimBuilder = new PersistentVolumeClaimVolumeSourceBuilderCoreV1();
         self.persistentVolumeClaimBuilder.init(self);
-        match (self.persistentVolumeClaimBuilder) {
-            PersistentVolumeClaimVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return persistentVolumeClaimBuilder;
     }
+
     public function withPhotonPersistentDiskVolumeCoreV1() returns PhotonPersistentDiskVolumeSourceBuilderCoreV1 {
         self.photonPersistentDiskBuilder = new PhotonPersistentDiskVolumeSourceBuilderCoreV1();
         self.photonPersistentDiskBuilder.init(self);
-        match (self.photonPersistentDiskBuilder) {
-            PhotonPersistentDiskVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return photonPersistentDiskBuilder;
     }
+
     public function withPortworxVolumeVolumeCoreV1() returns PortworxVolumeSourceBuilderCoreV1 {
         self.portworxVolumeBuilder = new PortworxVolumeSourceBuilderCoreV1();
         self.portworxVolumeBuilder.init(self);
-        match (self.portworxVolumeBuilder) {
-            PortworxVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return portworxVolumeBuilder;
     }
+
     public function withProjectedVolumeCoreV1() returns ProjectedVolumeSourceBuilderCoreV1 {
         self.projectedBuilder = new ProjectedVolumeSourceBuilderCoreV1();
         self.projectedBuilder.init(self);
-        match (self.projectedBuilder) {
-            ProjectedVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return projectedBuilder;
     }
+
     public function withQuobyteVolumeCoreV1() returns QuobyteVolumeSourceBuilderCoreV1 {
         self.quobyteBuilder = new QuobyteVolumeSourceBuilderCoreV1();
         self.quobyteBuilder.init(self);
-        match (self.quobyteBuilder) {
-            QuobyteVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return quobyteBuilder;
     }
+
     public function withRbdVolumeCoreV1() returns RBDVolumeSourceBuilderCoreV1 {
         self.rbdBuilder = new RBDVolumeSourceBuilderCoreV1();
         self.rbdBuilder.init(self);
-        match (self.rbdBuilder) {
-            RBDVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rbdBuilder;
     }
+
     public function withScaleIOVolumeCoreV1() returns ScaleIOVolumeSourceBuilderCoreV1 {
         self.scaleIOBuilder = new ScaleIOVolumeSourceBuilderCoreV1();
         self.scaleIOBuilder.init(self);
-        match (self.scaleIOBuilder) {
-            ScaleIOVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return scaleIOBuilder;
     }
+
     public function withSecretVolumeCoreV1() returns SecretVolumeSourceBuilderCoreV1 {
         self.secretBuilder = new SecretVolumeSourceBuilderCoreV1();
         self.secretBuilder.init(self);
-        match (self.secretBuilder) {
-            SecretVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretBuilder;
     }
+
     public function withStorageosVolumeCoreV1() returns StorageOSVolumeSourceBuilderCoreV1 {
         self.storageosBuilder = new StorageOSVolumeSourceBuilderCoreV1();
         self.storageosBuilder.init(self);
-        match (self.storageosBuilder) {
-            StorageOSVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return storageosBuilder;
     }
+
     public function withVsphereVolumeVolumeCoreV1() returns VsphereVirtualDiskVolumeSourceBuilderCoreV1 {
         self.vsphereVolumeBuilder = new VsphereVirtualDiskVolumeSourceBuilderCoreV1();
         self.vsphereVolumeBuilder.init(self);
-        match (self.vsphereVolumeBuilder) {
-            VsphereVirtualDiskVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return vsphereVolumeBuilder;
     }
+
 
     public function setName(string _name) returns (VolumeBuilderCoreV1) {
         self.io_k8s_api_core_v1_volume.name = _name;
@@ -12094,9 +10794,9 @@ public type SubjectBuilderRbacV1beta1 object {
 public type EvictionBuilderPolicyV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_Eviction io_k8s_api_policy_v1beta1_eviction;
-    public DeleteOptionsBuilderMetaV1? deleteOptionsBuilder;
+    public DeleteOptionsBuilderMetaV1 deleteOptionsBuilder;
 
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_policy_v1beta1_eviction = new;
@@ -12111,29 +10811,15 @@ public type EvictionBuilderPolicyV1beta1 object {
     public function withDeleteOptionsEvictionPolicyV1beta1() returns DeleteOptionsBuilderMetaV1 {
         self.deleteOptionsBuilder = new DeleteOptionsBuilderMetaV1();
         self.deleteOptionsBuilder.init(self);
-        match (self.deleteOptionsBuilder) {
-            DeleteOptionsBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return deleteOptionsBuilder;
     }
+
     public function withMetadataEvictionPolicyV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (EvictionBuilderPolicyV1beta1) {
         self.io_k8s_api_policy_v1beta1_eviction.apiVersion = _apiVersion;
@@ -12185,11 +10871,11 @@ public type AllowedFlexVolumeBuilderExtensionsV1beta1 object {
 public type ResourceQuotaBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ResourceQuota io_k8s_api_core_v1_resourcequota;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ResourceQuotaSpecBuilderCoreV1? specBuilder;
+    public ResourceQuotaSpecBuilderCoreV1 specBuilder;
 
-    public ResourceQuotaStatusBuilderCoreV1? statusBuilder;
+    public ResourceQuotaStatusBuilderCoreV1 statusBuilder;
 
     public new() {
         io_k8s_api_core_v1_resourcequota = new;
@@ -12219,42 +10905,21 @@ public type ResourceQuotaBuilderCoreV1 object {
     public function withMetadataResourceQuotaCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecResourceQuotaCoreV1() returns ResourceQuotaSpecBuilderCoreV1 {
         self.specBuilder = new ResourceQuotaSpecBuilderCoreV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            ResourceQuotaSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusResourceQuotaCoreV1() returns ResourceQuotaStatusBuilderCoreV1 {
         self.statusBuilder = new ResourceQuotaStatusBuilderCoreV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            ResourceQuotaStatusBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ResourceQuotaBuilderCoreV1) {
         self.io_k8s_api_core_v1_resourcequota.apiVersion = _apiVersion;
@@ -12272,7 +10937,7 @@ public type InitializersBuilderMetaV1 object {
     public io_k8s_apimachinery_pkg_apis_meta_v1_Initializers io_k8s_apimachinery_pkg_apis_meta_v1_initializers;
     public InitializerBuilderMetaV1[] pendingBuilder;
 
-    public StatusBuilderMetaV1? resultBuilder;
+    public StatusBuilderMetaV1 resultBuilder;
 
     public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_initializers = new;
@@ -12302,16 +10967,9 @@ public type InitializersBuilderMetaV1 object {
     public function withResultInitializersMetaV1() returns StatusBuilderMetaV1 {
         self.resultBuilder = new StatusBuilderMetaV1();
         self.resultBuilder.init(self);
-        match (self.resultBuilder) {
-            StatusBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return resultBuilder;
     }
+
     public function withPendingInitializersMetaV1() returns InitializerBuilderMetaV1 {
         self.pendingBuilder[lengthof pendingBuilder] = new InitializerBuilderMetaV1();
         self.pendingBuilder[(lengthof pendingBuilder) - 1].init(self);
@@ -12322,9 +10980,9 @@ public type InitializersBuilderMetaV1 object {
 public type ClusterRoleBuilderRbacV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_ClusterRole io_k8s_api_rbac_v1beta1_clusterrole;
-    public AggregationRuleBuilderRbacV1beta1? aggregationRuleBuilder;
+    public AggregationRuleBuilderRbacV1beta1 aggregationRuleBuilder;
 
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public PolicyRuleBuilderRbacV1beta1[] rulesBuilder;
 
@@ -12356,29 +11014,15 @@ public type ClusterRoleBuilderRbacV1beta1 object {
     public function withAggregationRuleClusterRoleRbacV1beta1() returns AggregationRuleBuilderRbacV1beta1 {
         self.aggregationRuleBuilder = new AggregationRuleBuilderRbacV1beta1();
         self.aggregationRuleBuilder.init(self);
-        match (self.aggregationRuleBuilder) {
-            AggregationRuleBuilderRbacV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return aggregationRuleBuilder;
     }
+
     public function withMetadataClusterRoleRbacV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withRulesClusterRoleRbacV1beta1() returns PolicyRuleBuilderRbacV1beta1 {
         self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1beta1();
         self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
@@ -12601,7 +11245,7 @@ public type EventListBuilderEventsV1beta1 object {
     public io_k8s_api_events_v1beta1_EventList io_k8s_api_events_v1beta1_eventlist;
     public EventBuilderEventsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_events_v1beta1_eventlist = new;
@@ -12616,16 +11260,9 @@ public type EventListBuilderEventsV1beta1 object {
     public function withMetadataEventListEventsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsEventListEventsV1beta1() returns EventBuilderEventsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new EventBuilderEventsV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -12646,7 +11283,7 @@ public type EventListBuilderEventsV1beta1 object {
 public type StorageOSVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_StorageOSVolumeSource io_k8s_api_core_v1_storageosvolumesource;
-    public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
+    public LocalObjectReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_storageosvolumesource = new;
@@ -12676,16 +11313,9 @@ public type StorageOSVolumeSourceBuilderCoreV1 object {
     public function withSecretRefStorageOSVolumeSourceCoreV1() returns LocalObjectReferenceBuilderCoreV1 {
         self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            LocalObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setFsType(string _fsType) returns (StorageOSVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_storageosvolumesource.fsType = _fsType;
@@ -12872,7 +11502,7 @@ public type StorageClassListBuilderStorageV1 object {
     public io_k8s_api_storage_v1_StorageClassList io_k8s_api_storage_v1_storageclasslist;
     public StorageClassBuilderStorageV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_storage_v1_storageclasslist = new;
@@ -12887,16 +11517,9 @@ public type StorageClassListBuilderStorageV1 object {
     public function withMetadataStorageClassListStorageV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsStorageClassListStorageV1() returns StorageClassBuilderStorageV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new StorageClassBuilderStorageV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -12917,9 +11540,9 @@ public type StorageClassListBuilderStorageV1 object {
 public type RoleBindingBuilderRbacV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_RoleBinding io_k8s_api_rbac_v1beta1_rolebinding;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public RoleRefBuilderRbacV1beta1? roleRefBuilder;
+    public RoleRefBuilderRbacV1beta1 roleRefBuilder;
 
     public SubjectBuilderRbacV1beta1[] subjectsBuilder;
 
@@ -12951,29 +11574,15 @@ public type RoleBindingBuilderRbacV1beta1 object {
     public function withMetadataRoleBindingRbacV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withRoleRefRoleBindingRbacV1beta1() returns RoleRefBuilderRbacV1beta1 {
         self.roleRefBuilder = new RoleRefBuilderRbacV1beta1();
         self.roleRefBuilder.init(self);
-        match (self.roleRefBuilder) {
-            RoleRefBuilderRbacV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return roleRefBuilder;
     }
+
     public function withSubjectsRoleBindingRbacV1beta1() returns SubjectBuilderRbacV1beta1 {
         self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1beta1();
         self.subjectsBuilder[(lengthof subjectsBuilder) - 1].init(self);
@@ -12994,7 +11603,7 @@ public type RoleBindingBuilderRbacV1beta1 object {
 public type DaemonSetUpdateStrategyBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DaemonSetUpdateStrategy io_k8s_api_apps_v1_daemonsetupdatestrategy;
-    public RollingUpdateDaemonSetBuilderAppsV1? rollingUpdateBuilder;
+    public RollingUpdateDaemonSetBuilderAppsV1 rollingUpdateBuilder;
 
     public new() {
         io_k8s_api_apps_v1_daemonsetupdatestrategy = new;
@@ -13024,16 +11633,9 @@ public type DaemonSetUpdateStrategyBuilderAppsV1 object {
     public function withRollingUpdateDaemonSetUpdateStrategyAppsV1() returns RollingUpdateDaemonSetBuilderAppsV1 {
         self.rollingUpdateBuilder = new RollingUpdateDaemonSetBuilderAppsV1();
         self.rollingUpdateBuilder.init(self);
-        match (self.rollingUpdateBuilder) {
-            RollingUpdateDaemonSetBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollingUpdateBuilder;
     }
+
 
     public function set_type(string __type) returns (DaemonSetUpdateStrategyBuilderAppsV1) {
         self.io_k8s_api_apps_v1_daemonsetupdatestrategy._type = __type;
@@ -13092,11 +11694,11 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SelfSubjectAccessReview
     io_k8s_api_authorization_v1beta1_selfsubjectaccessreview;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1? specBuilder;
+    public SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 specBuilder;
 
-    public SubjectAccessReviewStatusBuilderAuthorizationV1beta1? statusBuilder;
+    public SubjectAccessReviewStatusBuilderAuthorizationV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_authorization_v1beta1_selfsubjectaccessreview = new;
@@ -13111,46 +11713,25 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1beta1 object {
     public function withMetadataSelfSubjectAccessReviewAuthorizationV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecSelfSubjectAccessReviewAuthorizationV1beta1() returns
                                                                               SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1
     {
         self.specBuilder = new SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusSelfSubjectAccessReviewAuthorizationV1beta1() returns
                                                                                 SubjectAccessReviewStatusBuilderAuthorizationV1beta1
     {
         self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            SubjectAccessReviewStatusBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (SelfSubjectAccessReviewBuilderAuthorizationV1beta1) {
         self.io_k8s_api_authorization_v1beta1_selfsubjectaccessreview.apiVersion = _apiVersion;
@@ -13166,9 +11747,9 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1beta1 object {
 public type NetworkPolicyBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_NetworkPolicy io_k8s_api_extensions_v1beta1_networkpolicy;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public NetworkPolicySpecBuilderExtensionsV1beta1? specBuilder;
+    public NetworkPolicySpecBuilderExtensionsV1beta1 specBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_networkpolicy = new;
@@ -13198,29 +11779,15 @@ public type NetworkPolicyBuilderExtensionsV1beta1 object {
     public function withMetadataNetworkPolicyExtensionsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecNetworkPolicyExtensionsV1beta1() returns NetworkPolicySpecBuilderExtensionsV1beta1 {
         self.specBuilder = new NetworkPolicySpecBuilderExtensionsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            NetworkPolicySpecBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (NetworkPolicyBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_networkpolicy.apiVersion = _apiVersion;
@@ -13432,9 +11999,9 @@ public type ServerAddressByClientCIDRBuilderMetaV1 object {
 public type StatusBuilderMetaV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_Status io_k8s_apimachinery_pkg_apis_meta_v1_status;
-    public StatusDetailsBuilderMetaV1? detailsBuilder;
+    public StatusDetailsBuilderMetaV1 detailsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_status = new;
@@ -13464,29 +12031,15 @@ public type StatusBuilderMetaV1 object {
     public function withDetailsStatusMetaV1() returns StatusDetailsBuilderMetaV1 {
         self.detailsBuilder = new StatusDetailsBuilderMetaV1();
         self.detailsBuilder.init(self);
-        match (self.detailsBuilder) {
-            StatusDetailsBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return detailsBuilder;
     }
+
     public function withMetadataStatusMetaV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (StatusBuilderMetaV1) {
         self.io_k8s_apimachinery_pkg_apis_meta_v1_status.apiVersion = _apiVersion;
@@ -13522,13 +12075,13 @@ public type StatusBuilderMetaV1 object {
 public type MetricSpecBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_MetricSpec io_k8s_api_autoscaling_v2beta1_metricspec;
-    public ExternalMetricSourceBuilderAutoscalingV2beta1? externalBuilder;
+    public ExternalMetricSourceBuilderAutoscalingV2beta1 externalBuilder;
 
-    public ObjectMetricSourceBuilderAutoscalingV2beta1? _objectBuilder;
+    public ObjectMetricSourceBuilderAutoscalingV2beta1 _objectBuilder;
 
-    public PodsMetricSourceBuilderAutoscalingV2beta1? podsBuilder;
+    public PodsMetricSourceBuilderAutoscalingV2beta1 podsBuilder;
 
-    public ResourceMetricSourceBuilderAutoscalingV2beta1? _resourceBuilder;
+    public ResourceMetricSourceBuilderAutoscalingV2beta1 _resourceBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_metricspec = new;
@@ -13559,55 +12112,27 @@ public type MetricSpecBuilderAutoscalingV2beta1 object {
     public function withExternalMetricSpecAutoscalingV2beta1() returns ExternalMetricSourceBuilderAutoscalingV2beta1 {
         self.externalBuilder = new ExternalMetricSourceBuilderAutoscalingV2beta1();
         self.externalBuilder.init(self);
-        match (self.externalBuilder) {
-            ExternalMetricSourceBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return externalBuilder;
     }
+
     public function with_objectMetricSpecAutoscalingV2beta1() returns ObjectMetricSourceBuilderAutoscalingV2beta1 {
         self._objectBuilder = new ObjectMetricSourceBuilderAutoscalingV2beta1();
         self._objectBuilder.init(self);
-        match (self._objectBuilder) {
-            ObjectMetricSourceBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return _objectBuilder;
     }
+
     public function withPodsMetricSpecAutoscalingV2beta1() returns PodsMetricSourceBuilderAutoscalingV2beta1 {
         self.podsBuilder = new PodsMetricSourceBuilderAutoscalingV2beta1();
         self.podsBuilder.init(self);
-        match (self.podsBuilder) {
-            PodsMetricSourceBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return podsBuilder;
     }
+
     public function with_resourceMetricSpecAutoscalingV2beta1() returns ResourceMetricSourceBuilderAutoscalingV2beta1 {
         self._resourceBuilder = new ResourceMetricSourceBuilderAutoscalingV2beta1();
         self._resourceBuilder.init(self);
-        match (self._resourceBuilder) {
-            ResourceMetricSourceBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return _resourceBuilder;
     }
+
 
     public function set_type(string __type) returns (MetricSpecBuilderAutoscalingV2beta1) {
         self.io_k8s_api_autoscaling_v2beta1_metricspec._type = __type;
@@ -13619,11 +12144,11 @@ public type CustomResourceDefinitionBuilderApiextensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinition
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinition;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public CustomResourceDefinitionSpecBuilderApiextensionsV1beta1? specBuilder;
+    public CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 specBuilder;
 
-    public CustomResourceDefinitionStatusBuilderApiextensionsV1beta1? statusBuilder;
+    public CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 statusBuilder;
 
     public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinition = new;
@@ -13655,46 +12180,25 @@ public type CustomResourceDefinitionBuilderApiextensionsV1beta1 object {
     public function withMetadataCustomResourceDefinitionApiextensionsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecCustomResourceDefinitionApiextensionsV1beta1() returns
                                                                                CustomResourceDefinitionSpecBuilderApiextensionsV1beta1
     {
         self.specBuilder = new CustomResourceDefinitionSpecBuilderApiextensionsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            CustomResourceDefinitionSpecBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusCustomResourceDefinitionApiextensionsV1beta1() returns
                                                                                  CustomResourceDefinitionStatusBuilderApiextensionsV1beta1
     {
         self.statusBuilder = new CustomResourceDefinitionStatusBuilderApiextensionsV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (CustomResourceDefinitionBuilderApiextensionsV1beta1) {
         self.io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinition.apiVersion =
@@ -13711,11 +12215,11 @@ public type CustomResourceDefinitionBuilderApiextensionsV1beta1 object {
 public type StatefulSetSpecBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_StatefulSetSpec io_k8s_api_apps_v1_statefulsetspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
-    public StatefulSetUpdateStrategyBuilderAppsV1? updateStrategyBuilder;
+    public StatefulSetUpdateStrategyBuilderAppsV1 updateStrategyBuilder;
 
     public PersistentVolumeClaimBuilderCoreV1[] volumeClaimTemplatesBuilder;
 
@@ -13747,42 +12251,21 @@ public type StatefulSetSpecBuilderAppsV1 object {
     public function withSelectorStatefulSetSpecAppsV1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withTemplateStatefulSetSpecAppsV1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
     public function withUpdateStrategyStatefulSetSpecAppsV1() returns StatefulSetUpdateStrategyBuilderAppsV1 {
         self.updateStrategyBuilder = new StatefulSetUpdateStrategyBuilderAppsV1();
         self.updateStrategyBuilder.init(self);
-        match (self.updateStrategyBuilder) {
-            StatefulSetUpdateStrategyBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return updateStrategyBuilder;
     }
+
     public function withVolumeClaimTemplatesStatefulSetSpecAppsV1() returns PersistentVolumeClaimBuilderCoreV1 {
         self.volumeClaimTemplatesBuilder[lengthof volumeClaimTemplatesBuilder] = new PersistentVolumeClaimBuilderCoreV1(
         );
@@ -13814,11 +12297,11 @@ public type StatefulSetSpecBuilderAppsV1 object {
 public type ProbeBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Probe io_k8s_api_core_v1_probe;
-    public ExecActionBuilderCoreV1? execBuilder;
+    public ExecActionBuilderCoreV1 execBuilder;
 
-    public HTTPGetActionBuilderCoreV1? httpGetBuilder;
+    public HTTPGetActionBuilderCoreV1 httpGetBuilder;
 
-    public TCPSocketActionBuilderCoreV1? tcpSocketBuilder;
+    public TCPSocketActionBuilderCoreV1 tcpSocketBuilder;
 
     public new() {
         io_k8s_api_core_v1_probe = new;
@@ -13863,42 +12346,21 @@ public type ProbeBuilderCoreV1 object {
     public function withExecProbeCoreV1() returns ExecActionBuilderCoreV1 {
         self.execBuilder = new ExecActionBuilderCoreV1();
         self.execBuilder.init(self);
-        match (self.execBuilder) {
-            ExecActionBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return execBuilder;
     }
+
     public function withHttpGetProbeCoreV1() returns HTTPGetActionBuilderCoreV1 {
         self.httpGetBuilder = new HTTPGetActionBuilderCoreV1();
         self.httpGetBuilder.init(self);
-        match (self.httpGetBuilder) {
-            HTTPGetActionBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return httpGetBuilder;
     }
+
     public function withTcpSocketProbeCoreV1() returns TCPSocketActionBuilderCoreV1 {
         self.tcpSocketBuilder = new TCPSocketActionBuilderCoreV1();
         self.tcpSocketBuilder.init(self);
-        match (self.tcpSocketBuilder) {
-            TCPSocketActionBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return tcpSocketBuilder;
     }
+
 
     public function setFailureThreshold(int _failureThreshold) returns (ProbeBuilderCoreV1) {
         self.io_k8s_api_core_v1_probe.failureThreshold = _failureThreshold;
@@ -13929,7 +12391,7 @@ public type ProbeBuilderCoreV1 object {
 public type ScaleIOVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ScaleIOVolumeSource io_k8s_api_core_v1_scaleiovolumesource;
-    public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
+    public LocalObjectReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_scaleiovolumesource = new;
@@ -13959,16 +12421,9 @@ public type ScaleIOVolumeSourceBuilderCoreV1 object {
     public function withSecretRefScaleIOVolumeSourceCoreV1() returns LocalObjectReferenceBuilderCoreV1 {
         self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            LocalObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setFsType(string _fsType) returns (ScaleIOVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_scaleiovolumesource.fsType = _fsType;
@@ -14083,7 +12538,7 @@ public type ReplicaSetStatusBuilderExtensionsV1beta1 object {
 public type PodsMetricStatusBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_PodsMetricStatus io_k8s_api_autoscaling_v2beta1_podsmetricstatus;
-    public QuantityBuilderApiResource? currentAverageValueBuilder;
+    public QuantityBuilderApiResource currentAverageValueBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_podsmetricstatus = new;
@@ -14113,16 +12568,9 @@ public type PodsMetricStatusBuilderAutoscalingV2beta1 object {
     public function withCurrentAverageValuePodsMetricStatusAutoscalingV2beta1() returns QuantityBuilderApiResource {
         self.currentAverageValueBuilder = new QuantityBuilderApiResource();
         self.currentAverageValueBuilder.init(self);
-        match (self.currentAverageValueBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return currentAverageValueBuilder;
     }
+
 
     public function setMetricName(string _metricName) returns (PodsMetricStatusBuilderAutoscalingV2beta1) {
         self.io_k8s_api_autoscaling_v2beta1_podsmetricstatus.metricName = _metricName;
@@ -14173,11 +12621,11 @@ public type LoadBalancerIngressBuilderCoreV1 object {
 public type DaemonSetSpecBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DaemonSetSpec io_k8s_api_extensions_v1beta1_daemonsetspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
-    public DaemonSetUpdateStrategyBuilderExtensionsV1beta1? updateStrategyBuilder;
+    public DaemonSetUpdateStrategyBuilderExtensionsV1beta1 updateStrategyBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_daemonsetspec = new;
@@ -14207,44 +12655,23 @@ public type DaemonSetSpecBuilderExtensionsV1beta1 object {
     public function withSelectorDaemonSetSpecExtensionsV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withTemplateDaemonSetSpecExtensionsV1beta1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
     public function withUpdateStrategyDaemonSetSpecExtensionsV1beta1() returns
                                                                            DaemonSetUpdateStrategyBuilderExtensionsV1beta1
     {
         self.updateStrategyBuilder = new DaemonSetUpdateStrategyBuilderExtensionsV1beta1();
         self.updateStrategyBuilder.init(self);
-        match (self.updateStrategyBuilder) {
-            DaemonSetUpdateStrategyBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return updateStrategyBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (DaemonSetSpecBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_daemonsetspec.minReadySeconds = _minReadySeconds;
@@ -14363,11 +12790,11 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_HorizontalPodAutoscaler io_k8s_api_autoscaling_v2beta1_horizontalpodautoscaler
     ;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1? specBuilder;
+    public HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 specBuilder;
 
-    public HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1? statusBuilder;
+    public HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 statusBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_horizontalpodautoscaler = new;
@@ -14398,46 +12825,25 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV2beta1 object {
     public function withMetadataHorizontalPodAutoscalerAutoscalingV2beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecHorizontalPodAutoscalerAutoscalingV2beta1() returns
                                                                             HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1
     {
         self.specBuilder = new HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusHorizontalPodAutoscalerAutoscalingV2beta1() returns
                                                                               HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1
     {
         self.statusBuilder = new HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            HorizontalPodAutoscalerStatusBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (HorizontalPodAutoscalerBuilderAutoscalingV2beta1) {
         self.io_k8s_api_autoscaling_v2beta1_horizontalpodautoscaler.apiVersion = _apiVersion;
@@ -14453,7 +12859,7 @@ public type HorizontalPodAutoscalerBuilderAutoscalingV2beta1 object {
 public type PodsMetricSourceBuilderAutoscalingV2beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v2beta1_PodsMetricSource io_k8s_api_autoscaling_v2beta1_podsmetricsource;
-    public QuantityBuilderApiResource? targetAverageValueBuilder;
+    public QuantityBuilderApiResource targetAverageValueBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_podsmetricsource = new;
@@ -14483,16 +12889,9 @@ public type PodsMetricSourceBuilderAutoscalingV2beta1 object {
     public function withTargetAverageValuePodsMetricSourceAutoscalingV2beta1() returns QuantityBuilderApiResource {
         self.targetAverageValueBuilder = new QuantityBuilderApiResource();
         self.targetAverageValueBuilder.init(self);
-        match (self.targetAverageValueBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return targetAverageValueBuilder;
     }
+
 
     public function setMetricName(string _metricName) returns (PodsMetricSourceBuilderAutoscalingV2beta1) {
         self.io_k8s_api_autoscaling_v2beta1_podsmetricsource.metricName = _metricName;
@@ -14614,7 +13013,7 @@ public type DaemonSetListBuilderAppsV1beta2 object {
     public io_k8s_api_apps_v1beta2_DaemonSetList io_k8s_api_apps_v1beta2_daemonsetlist;
     public DaemonSetBuilderAppsV1beta2[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_daemonsetlist = new;
@@ -14629,16 +13028,9 @@ public type DaemonSetListBuilderAppsV1beta2 object {
     public function withMetadataDaemonSetListAppsV1beta2() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsDaemonSetListAppsV1beta2() returns DaemonSetBuilderAppsV1beta2 {
         self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderAppsV1beta2();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -14659,13 +13051,13 @@ public type DaemonSetListBuilderAppsV1beta2 object {
 public type EnvVarSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EnvVarSource io_k8s_api_core_v1_envvarsource;
-    public ConfigMapKeySelectorBuilderCoreV1? configMapKeyRefBuilder;
+    public ConfigMapKeySelectorBuilderCoreV1 configMapKeyRefBuilder;
 
-    public ObjectFieldSelectorBuilderCoreV1? fieldRefBuilder;
+    public ObjectFieldSelectorBuilderCoreV1 fieldRefBuilder;
 
-    public ResourceFieldSelectorBuilderCoreV1? resourceFieldRefBuilder;
+    public ResourceFieldSelectorBuilderCoreV1 resourceFieldRefBuilder;
 
-    public SecretKeySelectorBuilderCoreV1? secretKeyRefBuilder;
+    public SecretKeySelectorBuilderCoreV1 secretKeyRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_envvarsource = new;
@@ -14695,55 +13087,27 @@ public type EnvVarSourceBuilderCoreV1 object {
     public function withConfigMapKeyRefEnvVarSourceCoreV1() returns ConfigMapKeySelectorBuilderCoreV1 {
         self.configMapKeyRefBuilder = new ConfigMapKeySelectorBuilderCoreV1();
         self.configMapKeyRefBuilder.init(self);
-        match (self.configMapKeyRefBuilder) {
-            ConfigMapKeySelectorBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return configMapKeyRefBuilder;
     }
+
     public function withFieldRefEnvVarSourceCoreV1() returns ObjectFieldSelectorBuilderCoreV1 {
         self.fieldRefBuilder = new ObjectFieldSelectorBuilderCoreV1();
         self.fieldRefBuilder.init(self);
-        match (self.fieldRefBuilder) {
-            ObjectFieldSelectorBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return fieldRefBuilder;
     }
+
     public function withResourceFieldRefEnvVarSourceCoreV1() returns ResourceFieldSelectorBuilderCoreV1 {
         self.resourceFieldRefBuilder = new ResourceFieldSelectorBuilderCoreV1();
         self.resourceFieldRefBuilder.init(self);
-        match (self.resourceFieldRefBuilder) {
-            ResourceFieldSelectorBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return resourceFieldRefBuilder;
     }
+
     public function withSecretKeyRefEnvVarSourceCoreV1() returns SecretKeySelectorBuilderCoreV1 {
         self.secretKeyRefBuilder = new SecretKeySelectorBuilderCoreV1();
         self.secretKeyRefBuilder.init(self);
-        match (self.secretKeyRefBuilder) {
-            SecretKeySelectorBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretKeyRefBuilder;
     }
+
 };
 
 public type ReplicaSetListBuilderAppsV1beta2 object {
@@ -14751,7 +13115,7 @@ public type ReplicaSetListBuilderAppsV1beta2 object {
     public io_k8s_api_apps_v1beta2_ReplicaSetList io_k8s_api_apps_v1beta2_replicasetlist;
     public ReplicaSetBuilderAppsV1beta2[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_replicasetlist = new;
@@ -14766,16 +13130,9 @@ public type ReplicaSetListBuilderAppsV1beta2 object {
     public function withMetadataReplicaSetListAppsV1beta2() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsReplicaSetListAppsV1beta2() returns ReplicaSetBuilderAppsV1beta2 {
         self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderAppsV1beta2();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -14876,11 +13233,11 @@ public type RawExtensionBuilderPkgRuntime object {
 public type ReplicaSetBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_ReplicaSet io_k8s_api_extensions_v1beta1_replicaset;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ReplicaSetSpecBuilderExtensionsV1beta1? specBuilder;
+    public ReplicaSetSpecBuilderExtensionsV1beta1 specBuilder;
 
-    public ReplicaSetStatusBuilderExtensionsV1beta1? statusBuilder;
+    public ReplicaSetStatusBuilderExtensionsV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_replicaset = new;
@@ -14910,42 +13267,21 @@ public type ReplicaSetBuilderExtensionsV1beta1 object {
     public function withMetadataReplicaSetExtensionsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecReplicaSetExtensionsV1beta1() returns ReplicaSetSpecBuilderExtensionsV1beta1 {
         self.specBuilder = new ReplicaSetSpecBuilderExtensionsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            ReplicaSetSpecBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusReplicaSetExtensionsV1beta1() returns ReplicaSetStatusBuilderExtensionsV1beta1 {
         self.statusBuilder = new ReplicaSetStatusBuilderExtensionsV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            ReplicaSetStatusBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ReplicaSetBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_replicaset.apiVersion = _apiVersion;
@@ -15036,11 +13372,11 @@ public type NodeStatusBuilderCoreV1 object {
 
     public NodeConditionBuilderCoreV1[] conditionsBuilder;
 
-    public NodeDaemonEndpointsBuilderCoreV1? daemonEndpointsBuilder;
+    public NodeDaemonEndpointsBuilderCoreV1 daemonEndpointsBuilder;
 
     public ContainerImageBuilderCoreV1[] imagesBuilder;
 
-    public NodeSystemInfoBuilderCoreV1? nodeInfoBuilder;
+    public NodeSystemInfoBuilderCoreV1 nodeInfoBuilder;
 
     public AttachedVolumeBuilderCoreV1[] volumesAttachedBuilder;
 
@@ -15072,29 +13408,15 @@ public type NodeStatusBuilderCoreV1 object {
     public function withDaemonEndpointsNodeStatusCoreV1() returns NodeDaemonEndpointsBuilderCoreV1 {
         self.daemonEndpointsBuilder = new NodeDaemonEndpointsBuilderCoreV1();
         self.daemonEndpointsBuilder.init(self);
-        match (self.daemonEndpointsBuilder) {
-            NodeDaemonEndpointsBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return daemonEndpointsBuilder;
     }
+
     public function withNodeInfoNodeStatusCoreV1() returns NodeSystemInfoBuilderCoreV1 {
         self.nodeInfoBuilder = new NodeSystemInfoBuilderCoreV1();
         self.nodeInfoBuilder.init(self);
-        match (self.nodeInfoBuilder) {
-            NodeSystemInfoBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nodeInfoBuilder;
     }
+
     public function withAddressesNodeStatusCoreV1() returns NodeAddressBuilderCoreV1 {
         self.addressesBuilder[lengthof addressesBuilder] = new NodeAddressBuilderCoreV1();
         self.addressesBuilder[(lengthof addressesBuilder) - 1].init(self);
@@ -15258,7 +13580,7 @@ public type StatefulSetListBuilderAppsV1beta1 object {
     public io_k8s_api_apps_v1beta1_StatefulSetList io_k8s_api_apps_v1beta1_statefulsetlist;
     public StatefulSetBuilderAppsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_statefulsetlist = new;
@@ -15273,16 +13595,9 @@ public type StatefulSetListBuilderAppsV1beta1 object {
     public function withMetadataStatefulSetListAppsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsStatefulSetListAppsV1beta1() returns StatefulSetBuilderAppsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -15303,11 +13618,11 @@ public type StatefulSetListBuilderAppsV1beta1 object {
 public type DeploymentBuilderAppsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_Deployment io_k8s_api_apps_v1beta1_deployment;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public DeploymentSpecBuilderAppsV1beta1? specBuilder;
+    public DeploymentSpecBuilderAppsV1beta1 specBuilder;
 
-    public DeploymentStatusBuilderAppsV1beta1? statusBuilder;
+    public DeploymentStatusBuilderAppsV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_deployment = new;
@@ -15337,42 +13652,21 @@ public type DeploymentBuilderAppsV1beta1 object {
     public function withMetadataDeploymentAppsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecDeploymentAppsV1beta1() returns DeploymentSpecBuilderAppsV1beta1 {
         self.specBuilder = new DeploymentSpecBuilderAppsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            DeploymentSpecBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusDeploymentAppsV1beta1() returns DeploymentStatusBuilderAppsV1beta1 {
         self.statusBuilder = new DeploymentStatusBuilderAppsV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            DeploymentStatusBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (DeploymentBuilderAppsV1beta1) {
         self.io_k8s_api_apps_v1beta1_deployment.apiVersion = _apiVersion;
@@ -15388,7 +13682,7 @@ public type DeploymentBuilderAppsV1beta1 object {
 public type DeploymentStrategyBuilderAppsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_DeploymentStrategy io_k8s_api_apps_v1beta1_deploymentstrategy;
-    public RollingUpdateDeploymentBuilderAppsV1beta1? rollingUpdateBuilder;
+    public RollingUpdateDeploymentBuilderAppsV1beta1 rollingUpdateBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_deploymentstrategy = new;
@@ -15418,16 +13712,9 @@ public type DeploymentStrategyBuilderAppsV1beta1 object {
     public function withRollingUpdateDeploymentStrategyAppsV1beta1() returns RollingUpdateDeploymentBuilderAppsV1beta1 {
         self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderAppsV1beta1();
         self.rollingUpdateBuilder.init(self);
-        match (self.rollingUpdateBuilder) {
-            RollingUpdateDeploymentBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollingUpdateBuilder;
     }
+
 
     public function set_type(string __type) returns (DeploymentStrategyBuilderAppsV1beta1) {
         self.io_k8s_api_apps_v1beta1_deploymentstrategy._type = __type;
@@ -15438,11 +13725,11 @@ public type DeploymentStrategyBuilderAppsV1beta1 object {
 public type NamespaceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Namespace io_k8s_api_core_v1_namespace;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public NamespaceSpecBuilderCoreV1? specBuilder;
+    public NamespaceSpecBuilderCoreV1 specBuilder;
 
-    public NamespaceStatusBuilderCoreV1? statusBuilder;
+    public NamespaceStatusBuilderCoreV1 statusBuilder;
 
     public new() {
         io_k8s_api_core_v1_namespace = new;
@@ -15472,42 +13759,21 @@ public type NamespaceBuilderCoreV1 object {
     public function withMetadataNamespaceCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecNamespaceCoreV1() returns NamespaceSpecBuilderCoreV1 {
         self.specBuilder = new NamespaceSpecBuilderCoreV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            NamespaceSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusNamespaceCoreV1() returns NamespaceStatusBuilderCoreV1 {
         self.statusBuilder = new NamespaceStatusBuilderCoreV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            NamespaceStatusBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (NamespaceBuilderCoreV1) {
         self.io_k8s_api_core_v1_namespace.apiVersion = _apiVersion;
@@ -15523,11 +13789,11 @@ public type NamespaceBuilderCoreV1 object {
 public type DeploymentSpecBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DeploymentSpec io_k8s_api_apps_v1beta2_deploymentspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public DeploymentStrategyBuilderAppsV1beta2? strategyBuilder;
+    public DeploymentStrategyBuilderAppsV1beta2 strategyBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_deploymentspec = new;
@@ -15557,42 +13823,21 @@ public type DeploymentSpecBuilderAppsV1beta2 object {
     public function withSelectorDeploymentSpecAppsV1beta2() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withStrategyDeploymentSpecAppsV1beta2() returns DeploymentStrategyBuilderAppsV1beta2 {
         self.strategyBuilder = new DeploymentStrategyBuilderAppsV1beta2();
         self.strategyBuilder.init(self);
-        match (self.strategyBuilder) {
-            DeploymentStrategyBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return strategyBuilder;
     }
+
     public function withTemplateDeploymentSpecAppsV1beta2() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (DeploymentSpecBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_deploymentspec.minReadySeconds = _minReadySeconds;
@@ -15722,13 +13967,13 @@ public type CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 object {
 public type DeploymentSpecBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DeploymentSpec io_k8s_api_extensions_v1beta1_deploymentspec;
-    public RollbackConfigBuilderExtensionsV1beta1? rollbackToBuilder;
+    public RollbackConfigBuilderExtensionsV1beta1 rollbackToBuilder;
 
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public DeploymentStrategyBuilderExtensionsV1beta1? strategyBuilder;
+    public DeploymentStrategyBuilderExtensionsV1beta1 strategyBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_deploymentspec = new;
@@ -15758,55 +14003,27 @@ public type DeploymentSpecBuilderExtensionsV1beta1 object {
     public function withRollbackToDeploymentSpecExtensionsV1beta1() returns RollbackConfigBuilderExtensionsV1beta1 {
         self.rollbackToBuilder = new RollbackConfigBuilderExtensionsV1beta1();
         self.rollbackToBuilder.init(self);
-        match (self.rollbackToBuilder) {
-            RollbackConfigBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollbackToBuilder;
     }
+
     public function withSelectorDeploymentSpecExtensionsV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withStrategyDeploymentSpecExtensionsV1beta1() returns DeploymentStrategyBuilderExtensionsV1beta1 {
         self.strategyBuilder = new DeploymentStrategyBuilderExtensionsV1beta1();
         self.strategyBuilder.init(self);
-        match (self.strategyBuilder) {
-            DeploymentStrategyBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return strategyBuilder;
     }
+
     public function withTemplateDeploymentSpecExtensionsV1beta1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (DeploymentSpecBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_deploymentspec.minReadySeconds = _minReadySeconds;
@@ -15887,9 +14104,9 @@ public type CapabilitiesBuilderCoreV1 object {
 public type LimitRangeBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_LimitRange io_k8s_api_core_v1_limitrange;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public LimitRangeSpecBuilderCoreV1? specBuilder;
+    public LimitRangeSpecBuilderCoreV1 specBuilder;
 
     public new() {
         io_k8s_api_core_v1_limitrange = new;
@@ -15919,29 +14136,15 @@ public type LimitRangeBuilderCoreV1 object {
     public function withMetadataLimitRangeCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecLimitRangeCoreV1() returns LimitRangeSpecBuilderCoreV1 {
         self.specBuilder = new LimitRangeSpecBuilderCoreV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            LimitRangeSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (LimitRangeBuilderCoreV1) {
         self.io_k8s_api_core_v1_limitrange.apiVersion = _apiVersion;
@@ -15957,9 +14160,9 @@ public type LimitRangeBuilderCoreV1 object {
 public type ReplicaSetSpecBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_ReplicaSetSpec io_k8s_api_extensions_v1beta1_replicasetspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_replicasetspec = new;
@@ -15989,29 +14192,15 @@ public type ReplicaSetSpecBuilderExtensionsV1beta1 object {
     public function withSelectorReplicaSetSpecExtensionsV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withTemplateReplicaSetSpecExtensionsV1beta1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (ReplicaSetSpecBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_replicasetspec.minReadySeconds = _minReadySeconds;
@@ -16027,9 +14216,9 @@ public type ReplicaSetSpecBuilderExtensionsV1beta1 object {
 public type ReplicaSetSpecBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ReplicaSetSpec io_k8s_api_apps_v1beta2_replicasetspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_replicasetspec = new;
@@ -16059,29 +14248,15 @@ public type ReplicaSetSpecBuilderAppsV1beta2 object {
     public function withSelectorReplicaSetSpecAppsV1beta2() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withTemplateReplicaSetSpecAppsV1beta2() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (ReplicaSetSpecBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_replicasetspec.minReadySeconds = _minReadySeconds;
@@ -16183,9 +14358,9 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SelfSubjectAccessReviewSpec
     io_k8s_api_authorization_v1_selfsubjectaccessreviewspec;
-    public NonResourceAttributesBuilderAuthorizationV1? nonResourceAttributesBuilder;
+    public NonResourceAttributesBuilderAuthorizationV1 nonResourceAttributesBuilder;
 
-    public ResourceAttributesBuilderAuthorizationV1? resourceAttributesBuilder;
+    public ResourceAttributesBuilderAuthorizationV1 resourceAttributesBuilder;
 
     public new() {
         io_k8s_api_authorization_v1_selfsubjectaccessreviewspec = new;
@@ -16218,41 +14393,27 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1 object {
     {
         self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1();
         self.nonResourceAttributesBuilder.init(self);
-        match (self.nonResourceAttributesBuilder) {
-            NonResourceAttributesBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nonResourceAttributesBuilder;
     }
+
     public function withResourceAttributesSelfSubjectAccessReviewSpecAuthorizationV1() returns
                                                                                            ResourceAttributesBuilderAuthorizationV1
     {
         self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1();
         self.resourceAttributesBuilder.init(self);
-        match (self.resourceAttributesBuilder) {
-            ResourceAttributesBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return resourceAttributesBuilder;
     }
+
 };
 
 public type AffinityBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Affinity io_k8s_api_core_v1_affinity;
-    public NodeAffinityBuilderCoreV1? nodeAffinityBuilder;
+    public NodeAffinityBuilderCoreV1 nodeAffinityBuilder;
 
-    public PodAffinityBuilderCoreV1? podAffinityBuilder;
+    public PodAffinityBuilderCoreV1 podAffinityBuilder;
 
-    public PodAntiAffinityBuilderCoreV1? podAntiAffinityBuilder;
+    public PodAntiAffinityBuilderCoreV1 podAntiAffinityBuilder;
 
     public new() {
         io_k8s_api_core_v1_affinity = new;
@@ -16282,42 +14443,21 @@ public type AffinityBuilderCoreV1 object {
     public function withNodeAffinityAffinityCoreV1() returns NodeAffinityBuilderCoreV1 {
         self.nodeAffinityBuilder = new NodeAffinityBuilderCoreV1();
         self.nodeAffinityBuilder.init(self);
-        match (self.nodeAffinityBuilder) {
-            NodeAffinityBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nodeAffinityBuilder;
     }
+
     public function withPodAffinityAffinityCoreV1() returns PodAffinityBuilderCoreV1 {
         self.podAffinityBuilder = new PodAffinityBuilderCoreV1();
         self.podAffinityBuilder.init(self);
-        match (self.podAffinityBuilder) {
-            PodAffinityBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return podAffinityBuilder;
     }
+
     public function withPodAntiAffinityAffinityCoreV1() returns PodAntiAffinityBuilderCoreV1 {
         self.podAntiAffinityBuilder = new PodAntiAffinityBuilderCoreV1();
         self.podAntiAffinityBuilder.init(self);
-        match (self.podAntiAffinityBuilder) {
-            PodAntiAffinityBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return podAntiAffinityBuilder;
     }
+
 };
 
 public type FSGroupStrategyOptionsBuilderExtensionsV1beta1 object {
@@ -16366,7 +14506,7 @@ public type FSGroupStrategyOptionsBuilderExtensionsV1beta1 object {
 public type StorageClassBuilderStorageV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_storage_v1beta1_StorageClass io_k8s_api_storage_v1beta1_storageclass;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_storage_v1beta1_storageclass = new;
@@ -16396,16 +14536,9 @@ public type StorageClassBuilderStorageV1beta1 object {
     public function withMetadataStorageClassStorageV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
 
     public function setAllowVolumeExpansion(boolean _allowVolumeExpansion) returns (StorageClassBuilderStorageV1beta1) {
         self.io_k8s_api_storage_v1beta1_storageclass.allowVolumeExpansion = _allowVolumeExpansion;
@@ -16456,9 +14589,9 @@ public type StorageClassBuilderStorageV1beta1 object {
 public type PodTemplateSpecBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodTemplateSpec io_k8s_api_core_v1_podtemplatespec;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public PodSpecBuilderCoreV1? specBuilder;
+    public PodSpecBuilderCoreV1 specBuilder;
 
     public new() {
         io_k8s_api_core_v1_podtemplatespec = new;
@@ -16713,29 +14846,15 @@ public type PodTemplateSpecBuilderCoreV1 object {
     public function withMetadataPodTemplateSpecCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecPodTemplateSpecCoreV1() returns PodSpecBuilderCoreV1 {
         self.specBuilder = new PodSpecBuilderCoreV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            PodSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
 };
 
 public type ReplicationControllerListBuilderCoreV1 object {
@@ -16743,7 +14862,7 @@ public type ReplicationControllerListBuilderCoreV1 object {
     public io_k8s_api_core_v1_ReplicationControllerList io_k8s_api_core_v1_replicationcontrollerlist;
     public ReplicationControllerBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_replicationcontrollerlist = new;
@@ -16758,16 +14877,9 @@ public type ReplicationControllerListBuilderCoreV1 object {
     public function withMetadataReplicationControllerListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsReplicationControllerListCoreV1() returns ReplicationControllerBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ReplicationControllerBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -16863,9 +14975,9 @@ public type RollingUpdateDaemonSetBuilderAppsV1 object {
 public type PodSecurityPolicyBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_PodSecurityPolicy io_k8s_api_extensions_v1beta1_podsecuritypolicy;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public PodSecurityPolicySpecBuilderExtensionsV1beta1? specBuilder;
+    public PodSecurityPolicySpecBuilderExtensionsV1beta1 specBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_podsecuritypolicy = new;
@@ -16896,29 +15008,15 @@ public type PodSecurityPolicyBuilderExtensionsV1beta1 object {
     public function withMetadataPodSecurityPolicyExtensionsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecPodSecurityPolicyExtensionsV1beta1() returns PodSecurityPolicySpecBuilderExtensionsV1beta1 {
         self.specBuilder = new PodSecurityPolicySpecBuilderExtensionsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            PodSecurityPolicySpecBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (PodSecurityPolicyBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_podsecuritypolicy.apiVersion = _apiVersion;
@@ -16934,7 +15032,7 @@ public type PodSecurityPolicyBuilderExtensionsV1beta1 object {
 public type RBDVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_RBDVolumeSource io_k8s_api_core_v1_rbdvolumesource;
-    public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
+    public LocalObjectReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_rbdvolumesource = new;
@@ -16964,16 +15062,9 @@ public type RBDVolumeSourceBuilderCoreV1 object {
     public function withSecretRefRBDVolumeSourceCoreV1() returns LocalObjectReferenceBuilderCoreV1 {
         self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            LocalObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setFsType(string _fsType) returns (RBDVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_rbdvolumesource.fsType = _fsType;
@@ -17021,7 +15112,7 @@ public type StatefulSetListBuilderAppsV1 object {
     public io_k8s_api_apps_v1_StatefulSetList io_k8s_api_apps_v1_statefulsetlist;
     public StatefulSetBuilderAppsV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1_statefulsetlist = new;
@@ -17036,16 +15127,9 @@ public type StatefulSetListBuilderAppsV1 object {
     public function withMetadataStatefulSetListAppsV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsStatefulSetListAppsV1() returns StatefulSetBuilderAppsV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new StatefulSetBuilderAppsV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -17107,9 +15191,9 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1beta1_SelfSubjectAccessReviewSpec
     io_k8s_api_authorization_v1beta1_selfsubjectaccessreviewspec;
-    public NonResourceAttributesBuilderAuthorizationV1beta1? nonResourceAttributesBuilder;
+    public NonResourceAttributesBuilderAuthorizationV1beta1 nonResourceAttributesBuilder;
 
-    public ResourceAttributesBuilderAuthorizationV1beta1? resourceAttributesBuilder;
+    public ResourceAttributesBuilderAuthorizationV1beta1 resourceAttributesBuilder;
 
     public new() {
         io_k8s_api_authorization_v1beta1_selfsubjectaccessreviewspec = new;
@@ -17142,31 +15226,17 @@ public type SelfSubjectAccessReviewSpecBuilderAuthorizationV1beta1 object {
     {
         self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1beta1();
         self.nonResourceAttributesBuilder.init(self);
-        match (self.nonResourceAttributesBuilder) {
-            NonResourceAttributesBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nonResourceAttributesBuilder;
     }
+
     public function withResourceAttributesSelfSubjectAccessReviewSpecAuthorizationV1beta1() returns
                                                                                                 ResourceAttributesBuilderAuthorizationV1beta1
     {
         self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1beta1();
         self.resourceAttributesBuilder.init(self);
-        match (self.resourceAttributesBuilder) {
-            ResourceAttributesBuilderAuthorizationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return resourceAttributesBuilder;
     }
+
 };
 
 public type PortworxVolumeSourceBuilderCoreV1 object {
@@ -17235,7 +15305,7 @@ public type CertificateSigningRequestListBuilderCertificatesV1beta1 object {
     io_k8s_api_certificates_v1beta1_certificatesigningrequestlist;
     public CertificateSigningRequestBuilderCertificatesV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_certificates_v1beta1_certificatesigningrequestlist = new;
@@ -17250,16 +15320,9 @@ public type CertificateSigningRequestListBuilderCertificatesV1beta1 object {
     public function withMetadataCertificateSigningRequestListCertificatesV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsCertificateSigningRequestListCertificatesV1beta1() returns
                                                                                     CertificateSigningRequestBuilderCertificatesV1beta1
     {
@@ -17323,7 +15386,7 @@ public type NamespaceSpecBuilderCoreV1 object {
 public type DeploymentStrategyBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DeploymentStrategy io_k8s_api_apps_v1_deploymentstrategy;
-    public RollingUpdateDeploymentBuilderAppsV1? rollingUpdateBuilder;
+    public RollingUpdateDeploymentBuilderAppsV1 rollingUpdateBuilder;
 
     public new() {
         io_k8s_api_apps_v1_deploymentstrategy = new;
@@ -17353,16 +15416,9 @@ public type DeploymentStrategyBuilderAppsV1 object {
     public function withRollingUpdateDeploymentStrategyAppsV1() returns RollingUpdateDeploymentBuilderAppsV1 {
         self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderAppsV1();
         self.rollingUpdateBuilder.init(self);
-        match (self.rollingUpdateBuilder) {
-            RollingUpdateDeploymentBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollingUpdateBuilder;
     }
+
 
     public function set_type(string __type) returns (DeploymentStrategyBuilderAppsV1) {
         self.io_k8s_api_apps_v1_deploymentstrategy._type = __type;
@@ -17417,7 +15473,7 @@ public type ClusterRoleListBuilderRbacV1 object {
     public io_k8s_api_rbac_v1_ClusterRoleList io_k8s_api_rbac_v1_clusterrolelist;
     public ClusterRoleBuilderRbacV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_rbac_v1_clusterrolelist = new;
@@ -17432,16 +15488,9 @@ public type ClusterRoleListBuilderRbacV1 object {
     public function withMetadataClusterRoleListRbacV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsClusterRoleListRbacV1() returns ClusterRoleBuilderRbacV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBuilderRbacV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -17497,9 +15546,9 @@ public type LocalVolumeSourceBuilderCoreV1 object {
 public type ClusterRoleBuilderRbacV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_ClusterRole io_k8s_api_rbac_v1_clusterrole;
-    public AggregationRuleBuilderRbacV1? aggregationRuleBuilder;
+    public AggregationRuleBuilderRbacV1 aggregationRuleBuilder;
 
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public PolicyRuleBuilderRbacV1[] rulesBuilder;
 
@@ -17531,29 +15580,15 @@ public type ClusterRoleBuilderRbacV1 object {
     public function withAggregationRuleClusterRoleRbacV1() returns AggregationRuleBuilderRbacV1 {
         self.aggregationRuleBuilder = new AggregationRuleBuilderRbacV1();
         self.aggregationRuleBuilder.init(self);
-        match (self.aggregationRuleBuilder) {
-            AggregationRuleBuilderRbacV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return aggregationRuleBuilder;
     }
+
     public function withMetadataClusterRoleRbacV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withRulesClusterRoleRbacV1() returns PolicyRuleBuilderRbacV1 {
         self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1();
         self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
@@ -17576,7 +15611,7 @@ public type StorageClassListBuilderStorageV1beta1 object {
     public io_k8s_api_storage_v1beta1_StorageClassList io_k8s_api_storage_v1beta1_storageclasslist;
     public StorageClassBuilderStorageV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_storage_v1beta1_storageclasslist = new;
@@ -17591,16 +15626,9 @@ public type StorageClassListBuilderStorageV1beta1 object {
     public function withMetadataStorageClassListStorageV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsStorageClassListStorageV1beta1() returns StorageClassBuilderStorageV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new StorageClassBuilderStorageV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -17623,7 +15651,7 @@ public type PersistentVolumeListBuilderCoreV1 object {
     public io_k8s_api_core_v1_PersistentVolumeList io_k8s_api_core_v1_persistentvolumelist;
     public PersistentVolumeBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_persistentvolumelist = new;
@@ -17638,16 +15666,9 @@ public type PersistentVolumeListBuilderCoreV1 object {
     public function withMetadataPersistentVolumeListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsPersistentVolumeListCoreV1() returns PersistentVolumeBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PersistentVolumeBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -17708,9 +15729,9 @@ public type ConfigMapEnvSourceBuilderCoreV1 object {
 public type EnvFromSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EnvFromSource io_k8s_api_core_v1_envfromsource;
-    public ConfigMapEnvSourceBuilderCoreV1? configMapRefBuilder;
+    public ConfigMapEnvSourceBuilderCoreV1 configMapRefBuilder;
 
-    public SecretEnvSourceBuilderCoreV1? secretRefBuilder;
+    public SecretEnvSourceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_envfromsource = new;
@@ -17740,29 +15761,15 @@ public type EnvFromSourceBuilderCoreV1 object {
     public function withConfigMapRefEnvFromSourceCoreV1() returns ConfigMapEnvSourceBuilderCoreV1 {
         self.configMapRefBuilder = new ConfigMapEnvSourceBuilderCoreV1();
         self.configMapRefBuilder.init(self);
-        match (self.configMapRefBuilder) {
-            ConfigMapEnvSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return configMapRefBuilder;
     }
+
     public function withSecretRefEnvFromSourceCoreV1() returns SecretEnvSourceBuilderCoreV1 {
         self.secretRefBuilder = new SecretEnvSourceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            SecretEnvSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setPrefix(string _prefix) returns (EnvFromSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_envfromsource.prefix = _prefix;
@@ -17940,7 +15947,7 @@ public type ReplicationControllerConditionBuilderCoreV1 object {
 public type SessionAffinityConfigBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SessionAffinityConfig io_k8s_api_core_v1_sessionaffinityconfig;
-    public ClientIPConfigBuilderCoreV1? clientIPBuilder;
+    public ClientIPConfigBuilderCoreV1 clientIPBuilder;
 
     public new() {
         io_k8s_api_core_v1_sessionaffinityconfig = new;
@@ -17970,16 +15977,9 @@ public type SessionAffinityConfigBuilderCoreV1 object {
     public function withClientIPSessionAffinityConfigCoreV1() returns ClientIPConfigBuilderCoreV1 {
         self.clientIPBuilder = new ClientIPConfigBuilderCoreV1();
         self.clientIPBuilder.init(self);
-        match (self.clientIPBuilder) {
-            ClientIPConfigBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return clientIPBuilder;
     }
+
 };
 
 public type StatefulSetConditionBuilderAppsV1beta2 object {
@@ -18041,7 +16041,7 @@ public type StatefulSetConditionBuilderAppsV1beta2 object {
 public type APIGroupBuilderMetaV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_APIGroup io_k8s_apimachinery_pkg_apis_meta_v1_apigroup;
-    public GroupVersionForDiscoveryBuilderMetaV1? preferredVersionBuilder;
+    public GroupVersionForDiscoveryBuilderMetaV1 preferredVersionBuilder;
 
     public ServerAddressByClientCIDRBuilderMetaV1[] serverAddressByClientCIDRsBuilder;
 
@@ -18075,16 +16075,9 @@ public type APIGroupBuilderMetaV1 object {
     public function withPreferredVersionAPIGroupMetaV1() returns GroupVersionForDiscoveryBuilderMetaV1 {
         self.preferredVersionBuilder = new GroupVersionForDiscoveryBuilderMetaV1();
         self.preferredVersionBuilder.init(self);
-        match (self.preferredVersionBuilder) {
-            GroupVersionForDiscoveryBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return preferredVersionBuilder;
     }
+
     public function withServerAddressByClientCIDRsAPIGroupMetaV1() returns ServerAddressByClientCIDRBuilderMetaV1 {
         self.serverAddressByClientCIDRsBuilder[lengthof serverAddressByClientCIDRsBuilder] = new
         ServerAddressByClientCIDRBuilderMetaV1();
@@ -18161,11 +16154,11 @@ public type ScaleStatusBuilderExtensionsV1beta1 object {
 public type StatefulSetBuilderAppsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_StatefulSet io_k8s_api_apps_v1beta1_statefulset;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public StatefulSetSpecBuilderAppsV1beta1? specBuilder;
+    public StatefulSetSpecBuilderAppsV1beta1 specBuilder;
 
-    public StatefulSetStatusBuilderAppsV1beta1? statusBuilder;
+    public StatefulSetStatusBuilderAppsV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_statefulset = new;
@@ -18195,42 +16188,21 @@ public type StatefulSetBuilderAppsV1beta1 object {
     public function withMetadataStatefulSetAppsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecStatefulSetAppsV1beta1() returns StatefulSetSpecBuilderAppsV1beta1 {
         self.specBuilder = new StatefulSetSpecBuilderAppsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            StatefulSetSpecBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusStatefulSetAppsV1beta1() returns StatefulSetStatusBuilderAppsV1beta1 {
         self.statusBuilder = new StatefulSetStatusBuilderAppsV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            StatefulSetStatusBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (StatefulSetBuilderAppsV1beta1) {
         self.io_k8s_api_apps_v1beta1_statefulset.apiVersion = _apiVersion;
@@ -18246,9 +16218,9 @@ public type StatefulSetBuilderAppsV1beta1 object {
 public type JobSpecBuilderBatchV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1_JobSpec io_k8s_api_batch_v1_jobspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
     public new() {
         io_k8s_api_batch_v1_jobspec = new;
@@ -18293,29 +16265,15 @@ public type JobSpecBuilderBatchV1 object {
     public function withSelectorJobSpecBatchV1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withTemplateJobSpecBatchV1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
 
     public function setActiveDeadlineSeconds(int _activeDeadlineSeconds) returns (JobSpecBuilderBatchV1) {
         self.io_k8s_api_batch_v1_jobspec.activeDeadlineSeconds = _activeDeadlineSeconds;
@@ -18346,7 +16304,7 @@ public type JobSpecBuilderBatchV1 object {
 public type TokenReviewStatusBuilderAuthenticationV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1_TokenReviewStatus io_k8s_api_authentication_v1_tokenreviewstatus;
-    public UserInfoBuilderAuthenticationV1? userBuilder;
+    public UserInfoBuilderAuthenticationV1 userBuilder;
 
     public new() {
         io_k8s_api_authentication_v1_tokenreviewstatus = new;
@@ -18376,16 +16334,9 @@ public type TokenReviewStatusBuilderAuthenticationV1 object {
     public function withUserTokenReviewStatusAuthenticationV1() returns UserInfoBuilderAuthenticationV1 {
         self.userBuilder = new UserInfoBuilderAuthenticationV1();
         self.userBuilder.init(self);
-        match (self.userBuilder) {
-            UserInfoBuilderAuthenticationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return userBuilder;
     }
+
 
     public function setAuthenticated(boolean _authenticated) returns (TokenReviewStatusBuilderAuthenticationV1) {
         self.io_k8s_api_authentication_v1_tokenreviewstatus.authenticated = _authenticated;
@@ -18563,7 +16514,7 @@ public type NetworkPolicySpecBuilderNetworkingV1 object {
 
     public NetworkPolicyIngressRuleBuilderNetworkingV1[] ingressBuilder;
 
-    public LabelSelectorBuilderMetaV1? podSelectorBuilder;
+    public LabelSelectorBuilderMetaV1 podSelectorBuilder;
 
     public new() {
         io_k8s_api_networking_v1_networkpolicyspec = new;
@@ -18593,16 +16544,9 @@ public type NetworkPolicySpecBuilderNetworkingV1 object {
     public function withPodSelectorNetworkPolicySpecNetworkingV1() returns LabelSelectorBuilderMetaV1 {
         self.podSelectorBuilder = new LabelSelectorBuilderMetaV1();
         self.podSelectorBuilder.init(self);
-        match (self.podSelectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return podSelectorBuilder;
     }
+
     public function withEgressNetworkPolicySpecNetworkingV1() returns NetworkPolicyEgressRuleBuilderNetworkingV1 {
         self.egressBuilder[lengthof egressBuilder] = new NetworkPolicyEgressRuleBuilderNetworkingV1();
         self.egressBuilder[(lengthof egressBuilder) - 1].init(self);
@@ -18755,11 +16699,11 @@ public type PhotonPersistentDiskVolumeSourceBuilderCoreV1 object {
 public type TokenReviewBuilderAuthenticationV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1_TokenReview io_k8s_api_authentication_v1_tokenreview;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public TokenReviewSpecBuilderAuthenticationV1? specBuilder;
+    public TokenReviewSpecBuilderAuthenticationV1 specBuilder;
 
-    public TokenReviewStatusBuilderAuthenticationV1? statusBuilder;
+    public TokenReviewStatusBuilderAuthenticationV1 statusBuilder;
 
     public new() {
         io_k8s_api_authentication_v1_tokenreview = new;
@@ -18774,42 +16718,21 @@ public type TokenReviewBuilderAuthenticationV1 object {
     public function withMetadataTokenReviewAuthenticationV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecTokenReviewAuthenticationV1() returns TokenReviewSpecBuilderAuthenticationV1 {
         self.specBuilder = new TokenReviewSpecBuilderAuthenticationV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            TokenReviewSpecBuilderAuthenticationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusTokenReviewAuthenticationV1() returns TokenReviewStatusBuilderAuthenticationV1 {
         self.statusBuilder = new TokenReviewStatusBuilderAuthenticationV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            TokenReviewStatusBuilderAuthenticationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (TokenReviewBuilderAuthenticationV1) {
         self.io_k8s_api_authentication_v1_tokenreview.apiVersion = _apiVersion;
@@ -18825,9 +16748,9 @@ public type TokenReviewBuilderAuthenticationV1 object {
 public type SubjectAccessReviewSpecBuilderAuthorizationV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SubjectAccessReviewSpec io_k8s_api_authorization_v1_subjectaccessreviewspec;
-    public NonResourceAttributesBuilderAuthorizationV1? nonResourceAttributesBuilder;
+    public NonResourceAttributesBuilderAuthorizationV1 nonResourceAttributesBuilder;
 
-    public ResourceAttributesBuilderAuthorizationV1? resourceAttributesBuilder;
+    public ResourceAttributesBuilderAuthorizationV1 resourceAttributesBuilder;
 
     public new() {
         io_k8s_api_authorization_v1_subjectaccessreviewspec = new;
@@ -18875,31 +16798,17 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1 object {
     {
         self.nonResourceAttributesBuilder = new NonResourceAttributesBuilderAuthorizationV1();
         self.nonResourceAttributesBuilder.init(self);
-        match (self.nonResourceAttributesBuilder) {
-            NonResourceAttributesBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nonResourceAttributesBuilder;
     }
+
     public function withResourceAttributesSubjectAccessReviewSpecAuthorizationV1() returns
                                                                                        ResourceAttributesBuilderAuthorizationV1
     {
         self.resourceAttributesBuilder = new ResourceAttributesBuilderAuthorizationV1();
         self.resourceAttributesBuilder.init(self);
-        match (self.resourceAttributesBuilder) {
-            ResourceAttributesBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return resourceAttributesBuilder;
     }
+
 
     public function setExtra(any _extra) returns (SubjectAccessReviewSpecBuilderAuthorizationV1) {
         self.io_k8s_api_authorization_v1_subjectaccessreviewspec.extra = _extra;
@@ -18930,11 +16839,11 @@ public type SubjectAccessReviewSpecBuilderAuthorizationV1 object {
 public type PersistentVolumeClaimBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeClaim io_k8s_api_core_v1_persistentvolumeclaim;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public PersistentVolumeClaimSpecBuilderCoreV1? specBuilder;
+    public PersistentVolumeClaimSpecBuilderCoreV1 specBuilder;
 
-    public PersistentVolumeClaimStatusBuilderCoreV1? statusBuilder;
+    public PersistentVolumeClaimStatusBuilderCoreV1 statusBuilder;
 
     public new() {
         io_k8s_api_core_v1_persistentvolumeclaim = new;
@@ -19009,42 +16918,21 @@ public type PersistentVolumeClaimBuilderCoreV1 object {
     public function withMetadataPersistentVolumeClaimCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecPersistentVolumeClaimCoreV1() returns PersistentVolumeClaimSpecBuilderCoreV1 {
         self.specBuilder = new PersistentVolumeClaimSpecBuilderCoreV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            PersistentVolumeClaimSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusPersistentVolumeClaimCoreV1() returns PersistentVolumeClaimStatusBuilderCoreV1 {
         self.statusBuilder = new PersistentVolumeClaimStatusBuilderCoreV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            PersistentVolumeClaimStatusBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (PersistentVolumeClaimBuilderCoreV1) {
         self.io_k8s_api_core_v1_persistentvolumeclaim.apiVersion = _apiVersion;
@@ -19062,7 +16950,7 @@ public type ServiceAccountListBuilderCoreV1 object {
     public io_k8s_api_core_v1_ServiceAccountList io_k8s_api_core_v1_serviceaccountlist;
     public ServiceAccountBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_serviceaccountlist = new;
@@ -19077,16 +16965,9 @@ public type ServiceAccountListBuilderCoreV1 object {
     public function withMetadataServiceAccountListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsServiceAccountListCoreV1() returns ServiceAccountBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ServiceAccountBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -19107,7 +16988,7 @@ public type ServiceAccountListBuilderCoreV1 object {
 public type SecretBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Secret io_k8s_api_core_v1_secret;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_secret = new;
@@ -19137,16 +17018,9 @@ public type SecretBuilderCoreV1 object {
     public function withMetadataSecretCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (SecretBuilderCoreV1) {
         self.io_k8s_api_core_v1_secret.apiVersion = _apiVersion;
@@ -19177,11 +17051,11 @@ public type SecretBuilderCoreV1 object {
 public type DaemonSetBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DaemonSet io_k8s_api_extensions_v1beta1_daemonset;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public DaemonSetSpecBuilderExtensionsV1beta1? specBuilder;
+    public DaemonSetSpecBuilderExtensionsV1beta1 specBuilder;
 
-    public DaemonSetStatusBuilderExtensionsV1beta1? statusBuilder;
+    public DaemonSetStatusBuilderExtensionsV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_daemonset = new;
@@ -19211,42 +17085,21 @@ public type DaemonSetBuilderExtensionsV1beta1 object {
     public function withMetadataDaemonSetExtensionsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecDaemonSetExtensionsV1beta1() returns DaemonSetSpecBuilderExtensionsV1beta1 {
         self.specBuilder = new DaemonSetSpecBuilderExtensionsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            DaemonSetSpecBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusDaemonSetExtensionsV1beta1() returns DaemonSetStatusBuilderExtensionsV1beta1 {
         self.statusBuilder = new DaemonSetStatusBuilderExtensionsV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            DaemonSetStatusBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (DaemonSetBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_daemonset.apiVersion = _apiVersion;
@@ -19319,7 +17172,7 @@ public type PersistentVolumeClaimListBuilderCoreV1 object {
     public io_k8s_api_core_v1_PersistentVolumeClaimList io_k8s_api_core_v1_persistentvolumeclaimlist;
     public PersistentVolumeClaimBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_persistentvolumeclaimlist = new;
@@ -19334,16 +17187,9 @@ public type PersistentVolumeClaimListBuilderCoreV1 object {
     public function withMetadataPersistentVolumeClaimListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsPersistentVolumeClaimListCoreV1() returns PersistentVolumeClaimBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PersistentVolumeClaimBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -19364,7 +17210,7 @@ public type PersistentVolumeClaimListBuilderCoreV1 object {
 public type IngressRuleBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IngressRule io_k8s_api_extensions_v1beta1_ingressrule;
-    public HTTPIngressRuleValueBuilderExtensionsV1beta1? httpBuilder;
+    public HTTPIngressRuleValueBuilderExtensionsV1beta1 httpBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_ingressrule = new;
@@ -19394,16 +17240,9 @@ public type IngressRuleBuilderExtensionsV1beta1 object {
     public function withHttpIngressRuleExtensionsV1beta1() returns HTTPIngressRuleValueBuilderExtensionsV1beta1 {
         self.httpBuilder = new HTTPIngressRuleValueBuilderExtensionsV1beta1();
         self.httpBuilder.init(self);
-        match (self.httpBuilder) {
-            HTTPIngressRuleValueBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return httpBuilder;
     }
+
 
     public function setHost(string _host) returns (IngressRuleBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_ingressrule.host = _host;
@@ -19467,7 +17306,7 @@ public type ComponentStatusBuilderCoreV1 object {
     public io_k8s_api_core_v1_ComponentStatus io_k8s_api_core_v1_componentstatus;
     public ComponentConditionBuilderCoreV1[] conditionsBuilder;
 
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_componentstatus = new;
@@ -19497,16 +17336,9 @@ public type ComponentStatusBuilderCoreV1 object {
     public function withMetadataComponentStatusCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withConditionsComponentStatusCoreV1() returns ComponentConditionBuilderCoreV1 {
         self.conditionsBuilder[lengthof conditionsBuilder] = new ComponentConditionBuilderCoreV1();
         self.conditionsBuilder[(lengthof conditionsBuilder) - 1].init(self);
@@ -19675,7 +17507,7 @@ public type CustomResourceDefinitionListBuilderApiextensionsV1beta1 object {
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionlist;
     public CustomResourceDefinitionBuilderApiextensionsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionlist = new;
@@ -19691,16 +17523,9 @@ public type CustomResourceDefinitionListBuilderApiextensionsV1beta1 object {
     public function withMetadataCustomResourceDefinitionListApiextensionsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsCustomResourceDefinitionListApiextensionsV1beta1() returns
                                                                                     CustomResourceDefinitionBuilderApiextensionsV1beta1
     {
@@ -19825,9 +17650,9 @@ public type TolerationBuilderCoreV1 object {
 public type LifecycleBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Lifecycle io_k8s_api_core_v1_lifecycle;
-    public HandlerBuilderCoreV1? postStartBuilder;
+    public HandlerBuilderCoreV1 postStartBuilder;
 
-    public HandlerBuilderCoreV1? preStopBuilder;
+    public HandlerBuilderCoreV1 preStopBuilder;
 
     public new() {
         io_k8s_api_core_v1_lifecycle = new;
@@ -19857,29 +17682,15 @@ public type LifecycleBuilderCoreV1 object {
     public function withPostStartLifecycleCoreV1() returns HandlerBuilderCoreV1 {
         self.postStartBuilder = new HandlerBuilderCoreV1();
         self.postStartBuilder.init(self);
-        match (self.postStartBuilder) {
-            HandlerBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return postStartBuilder;
     }
+
     public function withPreStopLifecycleCoreV1() returns HandlerBuilderCoreV1 {
         self.preStopBuilder = new HandlerBuilderCoreV1();
         self.preStopBuilder.init(self);
-        match (self.preStopBuilder) {
-            HandlerBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return preStopBuilder;
     }
+
 };
 
 public type StatusCauseBuilderMetaV1 object {
@@ -20141,11 +17952,11 @@ public type ExecActionBuilderCoreV1 object {
 public type ReplicaSetBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_ReplicaSet io_k8s_api_apps_v1_replicaset;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ReplicaSetSpecBuilderAppsV1? specBuilder;
+    public ReplicaSetSpecBuilderAppsV1 specBuilder;
 
-    public ReplicaSetStatusBuilderAppsV1? statusBuilder;
+    public ReplicaSetStatusBuilderAppsV1 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1_replicaset = new;
@@ -20175,42 +17986,21 @@ public type ReplicaSetBuilderAppsV1 object {
     public function withMetadataReplicaSetAppsV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecReplicaSetAppsV1() returns ReplicaSetSpecBuilderAppsV1 {
         self.specBuilder = new ReplicaSetSpecBuilderAppsV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            ReplicaSetSpecBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusReplicaSetAppsV1() returns ReplicaSetStatusBuilderAppsV1 {
         self.statusBuilder = new ReplicaSetStatusBuilderAppsV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            ReplicaSetStatusBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ReplicaSetBuilderAppsV1) {
         self.io_k8s_api_apps_v1_replicaset.apiVersion = _apiVersion;
@@ -20430,11 +18220,11 @@ public type IDRangeBuilderPolicyV1beta1 object {
 public type DaemonSetSpecBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DaemonSetSpec io_k8s_api_apps_v1beta2_daemonsetspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
-    public DaemonSetUpdateStrategyBuilderAppsV1beta2? updateStrategyBuilder;
+    public DaemonSetUpdateStrategyBuilderAppsV1beta2 updateStrategyBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_daemonsetspec = new;
@@ -20464,42 +18254,21 @@ public type DaemonSetSpecBuilderAppsV1beta2 object {
     public function withSelectorDaemonSetSpecAppsV1beta2() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withTemplateDaemonSetSpecAppsV1beta2() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
     public function withUpdateStrategyDaemonSetSpecAppsV1beta2() returns DaemonSetUpdateStrategyBuilderAppsV1beta2 {
         self.updateStrategyBuilder = new DaemonSetUpdateStrategyBuilderAppsV1beta2();
         self.updateStrategyBuilder.init(self);
-        match (self.updateStrategyBuilder) {
-            DaemonSetUpdateStrategyBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return updateStrategyBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (DaemonSetSpecBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_daemonsetspec.minReadySeconds = _minReadySeconds;
@@ -20517,7 +18286,7 @@ public type DeploymentListBuilderExtensionsV1beta1 object {
     public io_k8s_api_extensions_v1beta1_DeploymentList io_k8s_api_extensions_v1beta1_deploymentlist;
     public DeploymentBuilderExtensionsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_deploymentlist = new;
@@ -20532,16 +18301,9 @@ public type DeploymentListBuilderExtensionsV1beta1 object {
     public function withMetadataDeploymentListExtensionsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsDeploymentListExtensionsV1beta1() returns DeploymentBuilderExtensionsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderExtensionsV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -20607,11 +18369,11 @@ public type SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 object {
 public type DeploymentBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_Deployment io_k8s_api_extensions_v1beta1_deployment;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public DeploymentSpecBuilderExtensionsV1beta1? specBuilder;
+    public DeploymentSpecBuilderExtensionsV1beta1 specBuilder;
 
-    public DeploymentStatusBuilderExtensionsV1beta1? statusBuilder;
+    public DeploymentStatusBuilderExtensionsV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_deployment = new;
@@ -20641,42 +18403,21 @@ public type DeploymentBuilderExtensionsV1beta1 object {
     public function withMetadataDeploymentExtensionsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecDeploymentExtensionsV1beta1() returns DeploymentSpecBuilderExtensionsV1beta1 {
         self.specBuilder = new DeploymentSpecBuilderExtensionsV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            DeploymentSpecBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusDeploymentExtensionsV1beta1() returns DeploymentStatusBuilderExtensionsV1beta1 {
         self.statusBuilder = new DeploymentStatusBuilderExtensionsV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            DeploymentStatusBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (DeploymentBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_deployment.apiVersion = _apiVersion;
@@ -20750,7 +18491,7 @@ public type SecretListBuilderCoreV1 object {
     public io_k8s_api_core_v1_SecretList io_k8s_api_core_v1_secretlist;
     public SecretBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_secretlist = new;
@@ -20765,16 +18506,9 @@ public type SecretListBuilderCoreV1 object {
     public function withMetadataSecretListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsSecretListCoreV1() returns SecretBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new SecretBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -20912,11 +18646,11 @@ public type HTTPHeaderBuilderCoreV1 object {
 public type ReplicaSetBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_ReplicaSet io_k8s_api_apps_v1beta2_replicaset;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ReplicaSetSpecBuilderAppsV1beta2? specBuilder;
+    public ReplicaSetSpecBuilderAppsV1beta2 specBuilder;
 
-    public ReplicaSetStatusBuilderAppsV1beta2? statusBuilder;
+    public ReplicaSetStatusBuilderAppsV1beta2 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_replicaset = new;
@@ -20946,42 +18680,21 @@ public type ReplicaSetBuilderAppsV1beta2 object {
     public function withMetadataReplicaSetAppsV1beta2() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecReplicaSetAppsV1beta2() returns ReplicaSetSpecBuilderAppsV1beta2 {
         self.specBuilder = new ReplicaSetSpecBuilderAppsV1beta2();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            ReplicaSetSpecBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusReplicaSetAppsV1beta2() returns ReplicaSetStatusBuilderAppsV1beta2 {
         self.statusBuilder = new ReplicaSetStatusBuilderAppsV1beta2();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            ReplicaSetStatusBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ReplicaSetBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_replicaset.apiVersion = _apiVersion;
@@ -20997,7 +18710,7 @@ public type ReplicaSetBuilderAppsV1beta2 object {
 public type PodSecurityContextBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodSecurityContext io_k8s_api_core_v1_podsecuritycontext;
-    public SELinuxOptionsBuilderCoreV1? seLinuxOptionsBuilder;
+    public SELinuxOptionsBuilderCoreV1 seLinuxOptionsBuilder;
 
     public new() {
         io_k8s_api_core_v1_podsecuritycontext = new;
@@ -21027,16 +18740,9 @@ public type PodSecurityContextBuilderCoreV1 object {
     public function withSeLinuxOptionsPodSecurityContextCoreV1() returns SELinuxOptionsBuilderCoreV1 {
         self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1();
         self.seLinuxOptionsBuilder.init(self);
-        match (self.seLinuxOptionsBuilder) {
-            SELinuxOptionsBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return seLinuxOptionsBuilder;
     }
+
 
     public function setFsGroup(int _fsGroup) returns (PodSecurityContextBuilderCoreV1) {
         self.io_k8s_api_core_v1_podsecuritycontext.fsGroup = _fsGroup;
@@ -21072,7 +18778,7 @@ public type PodSecurityContextBuilderCoreV1 object {
 public type IngressSpecBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IngressSpec io_k8s_api_extensions_v1beta1_ingressspec;
-    public IngressBackendBuilderExtensionsV1beta1? backendBuilder;
+    public IngressBackendBuilderExtensionsV1beta1 backendBuilder;
 
     public IngressRuleBuilderExtensionsV1beta1[] rulesBuilder;
 
@@ -21106,16 +18812,9 @@ public type IngressSpecBuilderExtensionsV1beta1 object {
     public function withBackendIngressSpecExtensionsV1beta1() returns IngressBackendBuilderExtensionsV1beta1 {
         self.backendBuilder = new IngressBackendBuilderExtensionsV1beta1();
         self.backendBuilder.init(self);
-        match (self.backendBuilder) {
-            IngressBackendBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return backendBuilder;
     }
+
     public function withRulesIngressSpecExtensionsV1beta1() returns IngressRuleBuilderExtensionsV1beta1 {
         self.rulesBuilder[lengthof rulesBuilder] = new IngressRuleBuilderExtensionsV1beta1();
         self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
@@ -21133,7 +18832,7 @@ public type CronJobListBuilderBatchV1beta1 object {
     public io_k8s_api_batch_v1beta1_CronJobList io_k8s_api_batch_v1beta1_cronjoblist;
     public CronJobBuilderBatchV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_batch_v1beta1_cronjoblist = new;
@@ -21148,16 +18847,9 @@ public type CronJobListBuilderBatchV1beta1 object {
     public function withMetadataCronJobListBatchV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsCronJobListBatchV1beta1() returns CronJobBuilderBatchV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new CronJobBuilderBatchV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -21227,7 +18919,7 @@ public type RoleListBuilderRbacV1beta1 object {
     public io_k8s_api_rbac_v1beta1_RoleList io_k8s_api_rbac_v1beta1_rolelist;
     public RoleBuilderRbacV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_rbac_v1beta1_rolelist = new;
@@ -21242,16 +18934,9 @@ public type RoleListBuilderRbacV1beta1 object {
     public function withMetadataRoleListRbacV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsRoleListRbacV1beta1() returns RoleBuilderRbacV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new RoleBuilderRbacV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -21422,7 +19107,7 @@ public type ServiceAccountBuilderCoreV1 object {
     public io_k8s_api_core_v1_ServiceAccount io_k8s_api_core_v1_serviceaccount;
     public LocalObjectReferenceBuilderCoreV1[] imagePullSecretsBuilder;
 
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public ObjectReferenceBuilderCoreV1[] secretsBuilder;
 
@@ -21454,16 +19139,9 @@ public type ServiceAccountBuilderCoreV1 object {
     public function withMetadataServiceAccountCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withImagePullSecretsServiceAccountCoreV1() returns LocalObjectReferenceBuilderCoreV1 {
         self.imagePullSecretsBuilder[lengthof imagePullSecretsBuilder] = new LocalObjectReferenceBuilderCoreV1();
         self.imagePullSecretsBuilder[(lengthof imagePullSecretsBuilder) - 1].init(self);
@@ -21574,7 +19252,7 @@ public type ServiceReferenceBuilderApiregistrationV1beta1 object {
 public type ISCSIVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ISCSIVolumeSource io_k8s_api_core_v1_iscsivolumesource;
-    public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
+    public LocalObjectReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_iscsivolumesource = new;
@@ -21604,16 +19282,9 @@ public type ISCSIVolumeSourceBuilderCoreV1 object {
     public function withSecretRefISCSIVolumeSourceCoreV1() returns LocalObjectReferenceBuilderCoreV1 {
         self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            LocalObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setChapAuthDiscovery(boolean _chapAuthDiscovery) returns (ISCSIVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_iscsivolumesource.chapAuthDiscovery = _chapAuthDiscovery;
@@ -21780,9 +19451,9 @@ public type NetworkPolicyPortBuilderNetworkingV1 object {
 public type RoleBindingBuilderRbacV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_RoleBinding io_k8s_api_rbac_v1_rolebinding;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public RoleRefBuilderRbacV1? roleRefBuilder;
+    public RoleRefBuilderRbacV1 roleRefBuilder;
 
     public SubjectBuilderRbacV1[] subjectsBuilder;
 
@@ -21814,29 +19485,15 @@ public type RoleBindingBuilderRbacV1 object {
     public function withMetadataRoleBindingRbacV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withRoleRefRoleBindingRbacV1() returns RoleRefBuilderRbacV1 {
         self.roleRefBuilder = new RoleRefBuilderRbacV1();
         self.roleRefBuilder.init(self);
-        match (self.roleRefBuilder) {
-            RoleRefBuilderRbacV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return roleRefBuilder;
     }
+
     public function withSubjectsRoleBindingRbacV1() returns SubjectBuilderRbacV1 {
         self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1();
         self.subjectsBuilder[(lengthof subjectsBuilder) - 1].init(self);
@@ -22383,7 +20040,7 @@ public type ClusterRoleListBuilderRbacV1beta1 object {
     public io_k8s_api_rbac_v1beta1_ClusterRoleList io_k8s_api_rbac_v1beta1_clusterrolelist;
     public ClusterRoleBuilderRbacV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_rbac_v1beta1_clusterrolelist = new;
@@ -22398,16 +20055,9 @@ public type ClusterRoleListBuilderRbacV1beta1 object {
     public function withMetadataClusterRoleListRbacV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsClusterRoleListRbacV1beta1() returns ClusterRoleBuilderRbacV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBuilderRbacV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -22429,7 +20079,7 @@ public type ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 ob
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_ValidatingWebhookConfiguration
     io_k8s_api_admissionregistration_v1beta1_validatingwebhookconfiguration;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public WebhookBuilderAdmissionregistrationV1beta1[] webhooksBuilder;
 
@@ -22464,16 +20114,9 @@ public type ValidatingWebhookConfigurationBuilderAdmissionregistrationV1beta1 ob
     {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withWebhooksValidatingWebhookConfigurationAdmissionregistrationV1beta1() returns
                                                                                                  WebhookBuilderAdmissionregistrationV1beta1
     {
@@ -22606,7 +20249,7 @@ public type UserInfoBuilderAuthenticationV1 object {
 public type ResourceFieldSelectorBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ResourceFieldSelector io_k8s_api_core_v1_resourcefieldselector;
-    public QuantityBuilderApiResource? divisorBuilder;
+    public QuantityBuilderApiResource divisorBuilder;
 
     public new() {
         io_k8s_api_core_v1_resourcefieldselector = new;
@@ -22651,16 +20294,9 @@ public type ResourceFieldSelectorBuilderCoreV1 object {
     public function withDivisorResourceFieldSelectorCoreV1() returns QuantityBuilderApiResource {
         self.divisorBuilder = new QuantityBuilderApiResource();
         self.divisorBuilder.init(self);
-        match (self.divisorBuilder) {
-            QuantityBuilderApiResource builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return divisorBuilder;
     }
+
 
     public function setContainerName(string _containerName) returns (ResourceFieldSelectorBuilderCoreV1) {
         self.io_k8s_api_core_v1_resourcefieldselector.containerName = _containerName;
@@ -22713,7 +20349,7 @@ public type ReplicaSetListBuilderExtensionsV1beta1 object {
     public io_k8s_api_extensions_v1beta1_ReplicaSetList io_k8s_api_extensions_v1beta1_replicasetlist;
     public ReplicaSetBuilderExtensionsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_replicasetlist = new;
@@ -22728,16 +20364,9 @@ public type ReplicaSetListBuilderExtensionsV1beta1 object {
     public function withMetadataReplicaSetListExtensionsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsReplicaSetListExtensionsV1beta1() returns ReplicaSetBuilderExtensionsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ReplicaSetBuilderExtensionsV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -22899,11 +20528,11 @@ public type DeploymentConditionBuilderAppsV1beta2 object {
 public type TokenReviewBuilderAuthenticationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authentication_v1beta1_TokenReview io_k8s_api_authentication_v1beta1_tokenreview;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public TokenReviewSpecBuilderAuthenticationV1beta1? specBuilder;
+    public TokenReviewSpecBuilderAuthenticationV1beta1 specBuilder;
 
-    public TokenReviewStatusBuilderAuthenticationV1beta1? statusBuilder;
+    public TokenReviewStatusBuilderAuthenticationV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_authentication_v1beta1_tokenreview = new;
@@ -22918,42 +20547,21 @@ public type TokenReviewBuilderAuthenticationV1beta1 object {
     public function withMetadataTokenReviewAuthenticationV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecTokenReviewAuthenticationV1beta1() returns TokenReviewSpecBuilderAuthenticationV1beta1 {
         self.specBuilder = new TokenReviewSpecBuilderAuthenticationV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            TokenReviewSpecBuilderAuthenticationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusTokenReviewAuthenticationV1beta1() returns TokenReviewStatusBuilderAuthenticationV1beta1 {
         self.statusBuilder = new TokenReviewStatusBuilderAuthenticationV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            TokenReviewStatusBuilderAuthenticationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (TokenReviewBuilderAuthenticationV1beta1) {
         self.io_k8s_api_authentication_v1beta1_tokenreview.apiVersion = _apiVersion;
@@ -23026,7 +20634,7 @@ public type VolumeErrorBuilderStorageV1beta1 object {
 public type StatefulSetUpdateStrategyBuilderAppsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_StatefulSetUpdateStrategy io_k8s_api_apps_v1beta1_statefulsetupdatestrategy;
-    public RollingUpdateStatefulSetStrategyBuilderAppsV1beta1? rollingUpdateBuilder;
+    public RollingUpdateStatefulSetStrategyBuilderAppsV1beta1 rollingUpdateBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_statefulsetupdatestrategy = new;
@@ -23058,16 +20666,9 @@ public type StatefulSetUpdateStrategyBuilderAppsV1beta1 object {
     {
         self.rollingUpdateBuilder = new RollingUpdateStatefulSetStrategyBuilderAppsV1beta1();
         self.rollingUpdateBuilder.init(self);
-        match (self.rollingUpdateBuilder) {
-            RollingUpdateStatefulSetStrategyBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollingUpdateBuilder;
     }
+
 
     public function set_type(string __type) returns (StatefulSetUpdateStrategyBuilderAppsV1beta1) {
         self.io_k8s_api_apps_v1beta1_statefulsetupdatestrategy._type = __type;
@@ -23214,9 +20815,9 @@ public type RollbackConfigBuilderAppsV1beta1 object {
 public type WebhookBuilderAdmissionregistrationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_Webhook io_k8s_api_admissionregistration_v1beta1_webhook;
-    public WebhookClientConfigBuilderAdmissionregistrationV1beta1? clientConfigBuilder;
+    public WebhookClientConfigBuilderAdmissionregistrationV1beta1 clientConfigBuilder;
 
-    public LabelSelectorBuilderMetaV1? namespaceSelectorBuilder;
+    public LabelSelectorBuilderMetaV1 namespaceSelectorBuilder;
 
     public RuleWithOperationsBuilderAdmissionregistrationV1beta1[] rulesBuilder;
 
@@ -23267,29 +20868,15 @@ public type WebhookBuilderAdmissionregistrationV1beta1 object {
     {
         self.clientConfigBuilder = new WebhookClientConfigBuilderAdmissionregistrationV1beta1();
         self.clientConfigBuilder.init(self);
-        match (self.clientConfigBuilder) {
-            WebhookClientConfigBuilderAdmissionregistrationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return clientConfigBuilder;
     }
+
     public function withNamespaceSelectorWebhookAdmissionregistrationV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.namespaceSelectorBuilder = new LabelSelectorBuilderMetaV1();
         self.namespaceSelectorBuilder.init(self);
-        match (self.namespaceSelectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return namespaceSelectorBuilder;
     }
+
     public function withRulesWebhookAdmissionregistrationV1beta1() returns
                                                                        RuleWithOperationsBuilderAdmissionregistrationV1beta1
     {
@@ -23606,9 +21193,9 @@ public type SubjectAccessReviewStatusBuilderAuthorizationV1 object {
 public type ClusterRoleBindingBuilderRbacV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_ClusterRoleBinding io_k8s_api_rbac_v1_clusterrolebinding;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public RoleRefBuilderRbacV1? roleRefBuilder;
+    public RoleRefBuilderRbacV1 roleRefBuilder;
 
     public SubjectBuilderRbacV1[] subjectsBuilder;
 
@@ -23640,29 +21227,15 @@ public type ClusterRoleBindingBuilderRbacV1 object {
     public function withMetadataClusterRoleBindingRbacV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withRoleRefClusterRoleBindingRbacV1() returns RoleRefBuilderRbacV1 {
         self.roleRefBuilder = new RoleRefBuilderRbacV1();
         self.roleRefBuilder.init(self);
-        match (self.roleRefBuilder) {
-            RoleRefBuilderRbacV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return roleRefBuilder;
     }
+
     public function withSubjectsClusterRoleBindingRbacV1() returns SubjectBuilderRbacV1 {
         self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1();
         self.subjectsBuilder[(lengthof subjectsBuilder) - 1].init(self);
@@ -23685,7 +21258,7 @@ public type NetworkPolicyListBuilderNetworkingV1 object {
     public io_k8s_api_networking_v1_NetworkPolicyList io_k8s_api_networking_v1_networkpolicylist;
     public NetworkPolicyBuilderNetworkingV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_networking_v1_networkpolicylist = new;
@@ -23700,16 +21273,9 @@ public type NetworkPolicyListBuilderNetworkingV1 object {
     public function withMetadataNetworkPolicyListNetworkingV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsNetworkPolicyListNetworkingV1() returns NetworkPolicyBuilderNetworkingV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new NetworkPolicyBuilderNetworkingV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -23734,17 +21300,17 @@ public type ContainerBuilderCoreV1 object {
 
     public EnvFromSourceBuilderCoreV1[] envFromBuilder;
 
-    public LifecycleBuilderCoreV1? lifecycleBuilder;
+    public LifecycleBuilderCoreV1 lifecycleBuilder;
 
-    public ProbeBuilderCoreV1? livenessProbeBuilder;
+    public ProbeBuilderCoreV1 livenessProbeBuilder;
 
     public ContainerPortBuilderCoreV1[] portsBuilder;
 
-    public ProbeBuilderCoreV1? readinessProbeBuilder;
+    public ProbeBuilderCoreV1 readinessProbeBuilder;
 
-    public ResourceRequirementsBuilderCoreV1? resourcesBuilder;
+    public ResourceRequirementsBuilderCoreV1 resourcesBuilder;
 
-    public SecurityContextBuilderCoreV1? securityContextBuilder;
+    public SecurityContextBuilderCoreV1 securityContextBuilder;
 
     public VolumeDeviceBuilderCoreV1[] volumeDevicesBuilder;
 
@@ -23793,68 +21359,33 @@ public type ContainerBuilderCoreV1 object {
     public function withLifecycleContainerCoreV1() returns LifecycleBuilderCoreV1 {
         self.lifecycleBuilder = new LifecycleBuilderCoreV1();
         self.lifecycleBuilder.init(self);
-        match (self.lifecycleBuilder) {
-            LifecycleBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return lifecycleBuilder;
     }
+
     public function withLivenessProbeContainerCoreV1() returns ProbeBuilderCoreV1 {
         self.livenessProbeBuilder = new ProbeBuilderCoreV1();
         self.livenessProbeBuilder.init(self);
-        match (self.livenessProbeBuilder) {
-            ProbeBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return livenessProbeBuilder;
     }
+
     public function withReadinessProbeContainerCoreV1() returns ProbeBuilderCoreV1 {
         self.readinessProbeBuilder = new ProbeBuilderCoreV1();
         self.readinessProbeBuilder.init(self);
-        match (self.readinessProbeBuilder) {
-            ProbeBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return readinessProbeBuilder;
     }
+
     public function withResourcesContainerCoreV1() returns ResourceRequirementsBuilderCoreV1 {
         self.resourcesBuilder = new ResourceRequirementsBuilderCoreV1();
         self.resourcesBuilder.init(self);
-        match (self.resourcesBuilder) {
-            ResourceRequirementsBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return resourcesBuilder;
     }
+
     public function withSecurityContextContainerCoreV1() returns SecurityContextBuilderCoreV1 {
         self.securityContextBuilder = new SecurityContextBuilderCoreV1();
         self.securityContextBuilder.init(self);
-        match (self.securityContextBuilder) {
-            SecurityContextBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return securityContextBuilder;
     }
+
     public function withEnvContainerCoreV1() returns EnvVarBuilderCoreV1 {
         self.envBuilder[lengthof envBuilder] = new EnvVarBuilderCoreV1();
         self.envBuilder[(lengthof envBuilder) - 1].init(self);
@@ -23948,7 +21479,7 @@ public type ContainerBuilderCoreV1 object {
 public type DeploymentStrategyBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_DeploymentStrategy io_k8s_api_apps_v1beta2_deploymentstrategy;
-    public RollingUpdateDeploymentBuilderAppsV1beta2? rollingUpdateBuilder;
+    public RollingUpdateDeploymentBuilderAppsV1beta2 rollingUpdateBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_deploymentstrategy = new;
@@ -23978,16 +21509,9 @@ public type DeploymentStrategyBuilderAppsV1beta2 object {
     public function withRollingUpdateDeploymentStrategyAppsV1beta2() returns RollingUpdateDeploymentBuilderAppsV1beta2 {
         self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderAppsV1beta2();
         self.rollingUpdateBuilder.init(self);
-        match (self.rollingUpdateBuilder) {
-            RollingUpdateDeploymentBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollingUpdateBuilder;
     }
+
 
     public function set_type(string __type) returns (DeploymentStrategyBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_deploymentstrategy._type = __type;
@@ -23998,9 +21522,9 @@ public type DeploymentStrategyBuilderAppsV1beta2 object {
 public type JobTemplateSpecBuilderBatchV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1beta1_JobTemplateSpec io_k8s_api_batch_v1beta1_jobtemplatespec;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public JobSpecBuilderBatchV1? specBuilder;
+    public JobSpecBuilderBatchV1 specBuilder;
 
     public new() {
         io_k8s_api_batch_v1beta1_jobtemplatespec = new;
@@ -24030,37 +21554,23 @@ public type JobTemplateSpecBuilderBatchV1beta1 object {
     public function withMetadataJobTemplateSpecBatchV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecJobTemplateSpecBatchV1beta1() returns JobSpecBuilderBatchV1 {
         self.specBuilder = new JobSpecBuilderBatchV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            JobSpecBuilderBatchV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
 };
 
 public type ControllerRevisionBuilderAppsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_ControllerRevision io_k8s_api_apps_v1beta1_controllerrevision;
-    public RawExtensionBuilderPkgRuntime? dataBuilder;
+    public RawExtensionBuilderPkgRuntime dataBuilder;
 
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_controllerrevision = new;
@@ -24090,29 +21600,15 @@ public type ControllerRevisionBuilderAppsV1beta1 object {
     public function withDataControllerRevisionAppsV1beta1() returns RawExtensionBuilderPkgRuntime {
         self.dataBuilder = new RawExtensionBuilderPkgRuntime();
         self.dataBuilder.init(self);
-        match (self.dataBuilder) {
-            RawExtensionBuilderPkgRuntime builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return dataBuilder;
     }
+
     public function withMetadataControllerRevisionAppsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ControllerRevisionBuilderAppsV1beta1) {
         self.io_k8s_api_apps_v1beta1_controllerrevision.apiVersion = _apiVersion;
@@ -24133,13 +21629,13 @@ public type ControllerRevisionBuilderAppsV1beta1 object {
 public type DeploymentSpecBuilderAppsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_DeploymentSpec io_k8s_api_apps_v1beta1_deploymentspec;
-    public RollbackConfigBuilderAppsV1beta1? rollbackToBuilder;
+    public RollbackConfigBuilderAppsV1beta1 rollbackToBuilder;
 
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public DeploymentStrategyBuilderAppsV1beta1? strategyBuilder;
+    public DeploymentStrategyBuilderAppsV1beta1 strategyBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_deploymentspec = new;
@@ -24169,55 +21665,27 @@ public type DeploymentSpecBuilderAppsV1beta1 object {
     public function withRollbackToDeploymentSpecAppsV1beta1() returns RollbackConfigBuilderAppsV1beta1 {
         self.rollbackToBuilder = new RollbackConfigBuilderAppsV1beta1();
         self.rollbackToBuilder.init(self);
-        match (self.rollbackToBuilder) {
-            RollbackConfigBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollbackToBuilder;
     }
+
     public function withSelectorDeploymentSpecAppsV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withStrategyDeploymentSpecAppsV1beta1() returns DeploymentStrategyBuilderAppsV1beta1 {
         self.strategyBuilder = new DeploymentStrategyBuilderAppsV1beta1();
         self.strategyBuilder.init(self);
-        match (self.strategyBuilder) {
-            DeploymentStrategyBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return strategyBuilder;
     }
+
     public function withTemplateDeploymentSpecAppsV1beta1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (DeploymentSpecBuilderAppsV1beta1) {
         self.io_k8s_api_apps_v1beta1_deploymentspec.minReadySeconds = _minReadySeconds;
@@ -24346,7 +21814,7 @@ public type SELinuxOptionsBuilderCoreV1 object {
 public type DeploymentStrategyBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_DeploymentStrategy io_k8s_api_extensions_v1beta1_deploymentstrategy;
-    public RollingUpdateDeploymentBuilderExtensionsV1beta1? rollingUpdateBuilder;
+    public RollingUpdateDeploymentBuilderExtensionsV1beta1 rollingUpdateBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_deploymentstrategy = new;
@@ -24378,16 +21846,9 @@ public type DeploymentStrategyBuilderExtensionsV1beta1 object {
     {
         self.rollingUpdateBuilder = new RollingUpdateDeploymentBuilderExtensionsV1beta1();
         self.rollingUpdateBuilder.init(self);
-        match (self.rollingUpdateBuilder) {
-            RollingUpdateDeploymentBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollingUpdateBuilder;
     }
+
 
     public function set_type(string __type) returns (DeploymentStrategyBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_deploymentstrategy._type = __type;
@@ -24398,9 +21859,9 @@ public type DeploymentStrategyBuilderExtensionsV1beta1 object {
 public type PersistentVolumeClaimSpecBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeClaimSpec io_k8s_api_core_v1_persistentvolumeclaimspec;
-    public ResourceRequirementsBuilderCoreV1? resourcesBuilder;
+    public ResourceRequirementsBuilderCoreV1 resourcesBuilder;
 
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
     public new() {
         io_k8s_api_core_v1_persistentvolumeclaimspec = new;
@@ -24430,29 +21891,15 @@ public type PersistentVolumeClaimSpecBuilderCoreV1 object {
     public function withResourcesPersistentVolumeClaimSpecCoreV1() returns ResourceRequirementsBuilderCoreV1 {
         self.resourcesBuilder = new ResourceRequirementsBuilderCoreV1();
         self.resourcesBuilder.init(self);
-        match (self.resourcesBuilder) {
-            ResourceRequirementsBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return resourcesBuilder;
     }
+
     public function withSelectorPersistentVolumeClaimSpecCoreV1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
 
     public function setAccessModes(string[] _accessModes) returns (PersistentVolumeClaimSpecBuilderCoreV1) {
         self.io_k8s_api_core_v1_persistentvolumeclaimspec.accessModes = _accessModes;
@@ -24701,7 +22148,7 @@ public type IngressBackendBuilderExtensionsV1beta1 object {
 public type SELinuxStrategyOptionsBuilderPolicyV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_SELinuxStrategyOptions io_k8s_api_policy_v1beta1_selinuxstrategyoptions;
-    public SELinuxOptionsBuilderCoreV1? seLinuxOptionsBuilder;
+    public SELinuxOptionsBuilderCoreV1 seLinuxOptionsBuilder;
 
     public new() {
         io_k8s_api_policy_v1beta1_selinuxstrategyoptions = new;
@@ -24731,16 +22178,9 @@ public type SELinuxStrategyOptionsBuilderPolicyV1beta1 object {
     public function withSeLinuxOptionsSELinuxStrategyOptionsPolicyV1beta1() returns SELinuxOptionsBuilderCoreV1 {
         self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1();
         self.seLinuxOptionsBuilder.init(self);
-        match (self.seLinuxOptionsBuilder) {
-            SELinuxOptionsBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return seLinuxOptionsBuilder;
     }
+
 
     public function setRule(string _rule) returns (SELinuxStrategyOptionsBuilderPolicyV1beta1) {
         self.io_k8s_api_policy_v1beta1_selinuxstrategyoptions.rule = _rule;
@@ -24751,7 +22191,7 @@ public type SELinuxStrategyOptionsBuilderPolicyV1beta1 object {
 public type EndpointsBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Endpoints io_k8s_api_core_v1_endpoints;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public EndpointSubsetBuilderCoreV1[] subsetsBuilder;
 
@@ -24783,16 +22223,9 @@ public type EndpointsBuilderCoreV1 object {
     public function withMetadataEndpointsCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSubsetsEndpointsCoreV1() returns EndpointSubsetBuilderCoreV1 {
         self.subsetsBuilder[lengthof subsetsBuilder] = new EndpointSubsetBuilderCoreV1();
         self.subsetsBuilder[(lengthof subsetsBuilder) - 1].init(self);
@@ -25242,7 +22675,7 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV2beta1 object {
     io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerlist;
     public HorizontalPodAutoscalerBuilderAutoscalingV2beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerlist = new;
@@ -25257,16 +22690,9 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV2beta1 object {
     public function withMetadataHorizontalPodAutoscalerListAutoscalingV2beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsHorizontalPodAutoscalerListAutoscalingV2beta1() returns
                                                                                  HorizontalPodAutoscalerBuilderAutoscalingV2beta1
     {
@@ -25291,7 +22717,7 @@ public type EventListBuilderCoreV1 object {
     public io_k8s_api_core_v1_EventList io_k8s_api_core_v1_eventlist;
     public EventBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_eventlist = new;
@@ -25306,16 +22732,9 @@ public type EventListBuilderCoreV1 object {
     public function withMetadataEventListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsEventListCoreV1() returns EventBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new EventBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -25382,7 +22801,7 @@ public type CrossVersionObjectReferenceBuilderAutoscalingV1 object {
 public type CephFSVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_CephFSVolumeSource io_k8s_api_core_v1_cephfsvolumesource;
-    public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
+    public LocalObjectReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_cephfsvolumesource = new;
@@ -25412,16 +22831,9 @@ public type CephFSVolumeSourceBuilderCoreV1 object {
     public function withSecretRefCephFSVolumeSourceCoreV1() returns LocalObjectReferenceBuilderCoreV1 {
         self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            LocalObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setMonitors(string[] _monitors) returns (CephFSVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_cephfsvolumesource.monitors = _monitors;
@@ -25457,7 +22869,7 @@ public type CephFSVolumeSourceBuilderCoreV1 object {
 public type CephFSPersistentVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_CephFSPersistentVolumeSource io_k8s_api_core_v1_cephfspersistentvolumesource;
-    public SecretReferenceBuilderCoreV1? secretRefBuilder;
+    public SecretReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_cephfspersistentvolumesource = new;
@@ -25487,16 +22899,9 @@ public type CephFSPersistentVolumeSourceBuilderCoreV1 object {
     public function withSecretRefCephFSPersistentVolumeSourceCoreV1() returns SecretReferenceBuilderCoreV1 {
         self.secretRefBuilder = new SecretReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            SecretReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setMonitors(string[] _monitors) returns (CephFSPersistentVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_cephfspersistentvolumesource.monitors = _monitors;
@@ -25649,11 +23054,11 @@ public type JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1 object {
 public type PodBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Pod io_k8s_api_core_v1_pod;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public PodSpecBuilderCoreV1? specBuilder;
+    public PodSpecBuilderCoreV1 specBuilder;
 
-    public PodStatusBuilderCoreV1? statusBuilder;
+    public PodStatusBuilderCoreV1 statusBuilder;
 
     public new() {
         io_k8s_api_core_v1_pod = new;
@@ -25683,42 +23088,21 @@ public type PodBuilderCoreV1 object {
     public function withMetadataPodCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecPodCoreV1() returns PodSpecBuilderCoreV1 {
         self.specBuilder = new PodSpecBuilderCoreV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            PodSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusPodCoreV1() returns PodStatusBuilderCoreV1 {
         self.statusBuilder = new PodStatusBuilderCoreV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            PodStatusBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (PodBuilderCoreV1) {
         self.io_k8s_api_core_v1_pod.apiVersion = _apiVersion;
@@ -25734,9 +23118,9 @@ public type PodBuilderCoreV1 object {
 public type ClusterRoleBindingBuilderRbacV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1beta1_ClusterRoleBinding io_k8s_api_rbac_v1beta1_clusterrolebinding;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public RoleRefBuilderRbacV1beta1? roleRefBuilder;
+    public RoleRefBuilderRbacV1beta1 roleRefBuilder;
 
     public SubjectBuilderRbacV1beta1[] subjectsBuilder;
 
@@ -25768,29 +23152,15 @@ public type ClusterRoleBindingBuilderRbacV1beta1 object {
     public function withMetadataClusterRoleBindingRbacV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withRoleRefClusterRoleBindingRbacV1beta1() returns RoleRefBuilderRbacV1beta1 {
         self.roleRefBuilder = new RoleRefBuilderRbacV1beta1();
         self.roleRefBuilder.init(self);
-        match (self.roleRefBuilder) {
-            RoleRefBuilderRbacV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return roleRefBuilder;
     }
+
     public function withSubjectsClusterRoleBindingRbacV1beta1() returns SubjectBuilderRbacV1beta1 {
         self.subjectsBuilder[lengthof subjectsBuilder] = new SubjectBuilderRbacV1beta1();
         self.subjectsBuilder[(lengthof subjectsBuilder) - 1].init(self);
@@ -25875,7 +23245,7 @@ public type RoleBindingListBuilderRbacV1beta1 object {
     public io_k8s_api_rbac_v1beta1_RoleBindingList io_k8s_api_rbac_v1beta1_rolebindinglist;
     public RoleBindingBuilderRbacV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_rbac_v1beta1_rolebindinglist = new;
@@ -25890,16 +23260,9 @@ public type RoleBindingListBuilderRbacV1beta1 object {
     public function withMetadataRoleBindingListRbacV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsRoleBindingListRbacV1beta1() returns RoleBindingBuilderRbacV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new RoleBindingBuilderRbacV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -25920,11 +23283,11 @@ public type RoleBindingListBuilderRbacV1beta1 object {
 public type LocalSubjectAccessReviewBuilderAuthorizationV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_LocalSubjectAccessReview io_k8s_api_authorization_v1_localsubjectaccessreview;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public SubjectAccessReviewSpecBuilderAuthorizationV1? specBuilder;
+    public SubjectAccessReviewSpecBuilderAuthorizationV1 specBuilder;
 
-    public SubjectAccessReviewStatusBuilderAuthorizationV1? statusBuilder;
+    public SubjectAccessReviewStatusBuilderAuthorizationV1 statusBuilder;
 
     public new() {
         io_k8s_api_authorization_v1_localsubjectaccessreview = new;
@@ -25939,46 +23302,25 @@ public type LocalSubjectAccessReviewBuilderAuthorizationV1 object {
     public function withMetadataLocalSubjectAccessReviewAuthorizationV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecLocalSubjectAccessReviewAuthorizationV1() returns
                                                                           SubjectAccessReviewSpecBuilderAuthorizationV1
     {
         self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            SubjectAccessReviewSpecBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusLocalSubjectAccessReviewAuthorizationV1() returns
                                                                             SubjectAccessReviewStatusBuilderAuthorizationV1
     {
         self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            SubjectAccessReviewStatusBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (LocalSubjectAccessReviewBuilderAuthorizationV1) {
         self.io_k8s_api_authorization_v1_localsubjectaccessreview.apiVersion = _apiVersion;
@@ -26167,7 +23509,7 @@ public type APIServiceListBuilderApiregistrationV1 object {
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicelist;
     public APIServiceBuilderApiregistrationV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservicelist = new;
@@ -26182,16 +23524,9 @@ public type APIServiceListBuilderApiregistrationV1 object {
     public function withMetadataAPIServiceListApiregistrationV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsAPIServiceListApiregistrationV1() returns APIServiceBuilderApiregistrationV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new APIServiceBuilderApiregistrationV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -26212,7 +23547,7 @@ public type APIServiceListBuilderApiregistrationV1 object {
 public type CronJobSpecBuilderBatchV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1beta1_CronJobSpec io_k8s_api_batch_v1beta1_cronjobspec;
-    public JobTemplateSpecBuilderBatchV1beta1? jobTemplateBuilder;
+    public JobTemplateSpecBuilderBatchV1beta1 jobTemplateBuilder;
 
     public new() {
         io_k8s_api_batch_v1beta1_cronjobspec = new;
@@ -26242,16 +23577,9 @@ public type CronJobSpecBuilderBatchV1beta1 object {
     public function withJobTemplateCronJobSpecBatchV1beta1() returns JobTemplateSpecBuilderBatchV1beta1 {
         self.jobTemplateBuilder = new JobTemplateSpecBuilderBatchV1beta1();
         self.jobTemplateBuilder.init(self);
-        match (self.jobTemplateBuilder) {
-            JobTemplateSpecBuilderBatchV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return jobTemplateBuilder;
     }
+
 
     public function setConcurrencyPolicy(string _concurrencyPolicy) returns (CronJobSpecBuilderBatchV1beta1) {
         self.io_k8s_api_batch_v1beta1_cronjobspec.concurrencyPolicy = _concurrencyPolicy;
@@ -26288,7 +23616,7 @@ public type CronJobSpecBuilderBatchV1beta1 object {
 public type FlexVolumeSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_FlexVolumeSource io_k8s_api_core_v1_flexvolumesource;
-    public LocalObjectReferenceBuilderCoreV1? secretRefBuilder;
+    public LocalObjectReferenceBuilderCoreV1 secretRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_flexvolumesource = new;
@@ -26318,16 +23646,9 @@ public type FlexVolumeSourceBuilderCoreV1 object {
     public function withSecretRefFlexVolumeSourceCoreV1() returns LocalObjectReferenceBuilderCoreV1 {
         self.secretRefBuilder = new LocalObjectReferenceBuilderCoreV1();
         self.secretRefBuilder.init(self);
-        match (self.secretRefBuilder) {
-            LocalObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretRefBuilder;
     }
+
 
     public function setDriver(string _driver) returns (FlexVolumeSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_flexvolumesource.driver = _driver;
@@ -26570,9 +23891,9 @@ public type EventSeriesBuilderCoreV1 object {
 public type PodTemplateBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodTemplate io_k8s_api_core_v1_podtemplate;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
     public new() {
         io_k8s_api_core_v1_podtemplate = new;
@@ -26602,29 +23923,15 @@ public type PodTemplateBuilderCoreV1 object {
     public function withMetadataPodTemplateCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withTemplatePodTemplateCoreV1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (PodTemplateBuilderCoreV1) {
         self.io_k8s_api_core_v1_podtemplate.apiVersion = _apiVersion;
@@ -26640,9 +23947,9 @@ public type PodTemplateBuilderCoreV1 object {
 public type ControllerRevisionBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_ControllerRevision io_k8s_api_apps_v1_controllerrevision;
-    public RawExtensionBuilderPkgRuntime? dataBuilder;
+    public RawExtensionBuilderPkgRuntime dataBuilder;
 
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1_controllerrevision = new;
@@ -26672,29 +23979,15 @@ public type ControllerRevisionBuilderAppsV1 object {
     public function withDataControllerRevisionAppsV1() returns RawExtensionBuilderPkgRuntime {
         self.dataBuilder = new RawExtensionBuilderPkgRuntime();
         self.dataBuilder.init(self);
-        match (self.dataBuilder) {
-            RawExtensionBuilderPkgRuntime builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return dataBuilder;
     }
+
     public function withMetadataControllerRevisionAppsV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ControllerRevisionBuilderAppsV1) {
         self.io_k8s_api_apps_v1_controllerrevision.apiVersion = _apiVersion;
@@ -26715,11 +24008,11 @@ public type ControllerRevisionBuilderAppsV1 object {
 public type DaemonSetSpecBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_DaemonSetSpec io_k8s_api_apps_v1_daemonsetspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
-    public DaemonSetUpdateStrategyBuilderAppsV1? updateStrategyBuilder;
+    public DaemonSetUpdateStrategyBuilderAppsV1 updateStrategyBuilder;
 
     public new() {
         io_k8s_api_apps_v1_daemonsetspec = new;
@@ -26749,42 +24042,21 @@ public type DaemonSetSpecBuilderAppsV1 object {
     public function withSelectorDaemonSetSpecAppsV1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
     public function withTemplateDaemonSetSpecAppsV1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
     public function withUpdateStrategyDaemonSetSpecAppsV1() returns DaemonSetUpdateStrategyBuilderAppsV1 {
         self.updateStrategyBuilder = new DaemonSetUpdateStrategyBuilderAppsV1();
         self.updateStrategyBuilder.init(self);
-        match (self.updateStrategyBuilder) {
-            DaemonSetUpdateStrategyBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return updateStrategyBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (DaemonSetSpecBuilderAppsV1) {
         self.io_k8s_api_apps_v1_daemonsetspec.minReadySeconds = _minReadySeconds;
@@ -26904,9 +24176,9 @@ public type ScaleStatusBuilderAppsV1beta1 object {
 public type DownwardAPIVolumeFileBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_DownwardAPIVolumeFile io_k8s_api_core_v1_downwardapivolumefile;
-    public ObjectFieldSelectorBuilderCoreV1? fieldRefBuilder;
+    public ObjectFieldSelectorBuilderCoreV1 fieldRefBuilder;
 
-    public ResourceFieldSelectorBuilderCoreV1? resourceFieldRefBuilder;
+    public ResourceFieldSelectorBuilderCoreV1 resourceFieldRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_downwardapivolumefile = new;
@@ -26951,29 +24223,15 @@ public type DownwardAPIVolumeFileBuilderCoreV1 object {
     public function withFieldRefDownwardAPIVolumeFileCoreV1() returns ObjectFieldSelectorBuilderCoreV1 {
         self.fieldRefBuilder = new ObjectFieldSelectorBuilderCoreV1();
         self.fieldRefBuilder.init(self);
-        match (self.fieldRefBuilder) {
-            ObjectFieldSelectorBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return fieldRefBuilder;
     }
+
     public function withResourceFieldRefDownwardAPIVolumeFileCoreV1() returns ResourceFieldSelectorBuilderCoreV1 {
         self.resourceFieldRefBuilder = new ResourceFieldSelectorBuilderCoreV1();
         self.resourceFieldRefBuilder.init(self);
-        match (self.resourceFieldRefBuilder) {
-            ResourceFieldSelectorBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return resourceFieldRefBuilder;
     }
+
 
     public function setMode(int _mode) returns (DownwardAPIVolumeFileBuilderCoreV1) {
         self.io_k8s_api_core_v1_downwardapivolumefile.mode = _mode;
@@ -26990,7 +24248,7 @@ public type CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_CustomResourceDefinitionStatus
     io_k8s_apiextensions_apiserver_pkg_apis_apiextensions_v1beta1_customresourcedefinitionstatus;
-    public CustomResourceDefinitionNamesBuilderApiextensionsV1beta1? acceptedNamesBuilder;
+    public CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 acceptedNamesBuilder;
 
     public CustomResourceDefinitionConditionBuilderApiextensionsV1beta1[] conditionsBuilder;
 
@@ -27026,16 +24284,9 @@ public type CustomResourceDefinitionStatusBuilderApiextensionsV1beta1 object {
     {
         self.acceptedNamesBuilder = new CustomResourceDefinitionNamesBuilderApiextensionsV1beta1();
         self.acceptedNamesBuilder.init(self);
-        match (self.acceptedNamesBuilder) {
-            CustomResourceDefinitionNamesBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return acceptedNamesBuilder;
     }
+
     public function withConditionsCustomResourceDefinitionStatusApiextensionsV1beta1() returns
                                                                                            CustomResourceDefinitionConditionBuilderApiextensionsV1beta1
     {
@@ -27125,7 +24376,7 @@ public type ServiceSpecBuilderCoreV1 object {
     public io_k8s_api_core_v1_ServiceSpec io_k8s_api_core_v1_servicespec;
     public ServicePortBuilderCoreV1[] portsBuilder;
 
-    public SessionAffinityConfigBuilderCoreV1? sessionAffinityConfigBuilder;
+    public SessionAffinityConfigBuilderCoreV1 sessionAffinityConfigBuilder;
 
     public new() {
         io_k8s_api_core_v1_servicespec = new;
@@ -27155,16 +24406,9 @@ public type ServiceSpecBuilderCoreV1 object {
     public function withSessionAffinityConfigServiceSpecCoreV1() returns SessionAffinityConfigBuilderCoreV1 {
         self.sessionAffinityConfigBuilder = new SessionAffinityConfigBuilderCoreV1();
         self.sessionAffinityConfigBuilder.init(self);
-        match (self.sessionAffinityConfigBuilder) {
-            SessionAffinityConfigBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return sessionAffinityConfigBuilder;
     }
+
     public function withPortsServiceSpecCoreV1() returns ServicePortBuilderCoreV1 {
         self.portsBuilder[lengthof portsBuilder] = new ServicePortBuilderCoreV1();
         self.portsBuilder[(lengthof portsBuilder) - 1].init(self);
@@ -27240,7 +24484,7 @@ public type ServiceSpecBuilderCoreV1 object {
 public type HorizontalPodAutoscalerSpecBuilderAutoscalingV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_autoscaling_v1_HorizontalPodAutoscalerSpec io_k8s_api_autoscaling_v1_horizontalpodautoscalerspec;
-    public CrossVersionObjectReferenceBuilderAutoscalingV1? scaleTargetRefBuilder;
+    public CrossVersionObjectReferenceBuilderAutoscalingV1 scaleTargetRefBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v1_horizontalpodautoscalerspec = new;
@@ -27273,16 +24517,9 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV1 object {
     {
         self.scaleTargetRefBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV1();
         self.scaleTargetRefBuilder.init(self);
-        match (self.scaleTargetRefBuilder) {
-            CrossVersionObjectReferenceBuilderAutoscalingV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return scaleTargetRefBuilder;
     }
+
 
     public function setMaxReplicas(int _maxReplicas) returns (HorizontalPodAutoscalerSpecBuilderAutoscalingV1) {
         self.io_k8s_api_autoscaling_v1_horizontalpodautoscalerspec.maxReplicas = _maxReplicas;
@@ -27305,7 +24542,7 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV1 object {
 public type DeleteOptionsBuilderMetaV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_apimachinery_pkg_apis_meta_v1_DeleteOptions io_k8s_apimachinery_pkg_apis_meta_v1_deleteoptions;
-    public PreconditionsBuilderMetaV1? preconditionsBuilder;
+    public PreconditionsBuilderMetaV1 preconditionsBuilder;
 
     public new() {
         io_k8s_apimachinery_pkg_apis_meta_v1_deleteoptions = new;
@@ -27335,16 +24572,9 @@ public type DeleteOptionsBuilderMetaV1 object {
     public function withPreconditionsDeleteOptionsMetaV1() returns PreconditionsBuilderMetaV1 {
         self.preconditionsBuilder = new PreconditionsBuilderMetaV1();
         self.preconditionsBuilder.init(self);
-        match (self.preconditionsBuilder) {
-            PreconditionsBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return preconditionsBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (DeleteOptionsBuilderMetaV1) {
         self.io_k8s_apimachinery_pkg_apis_meta_v1_deleteoptions.apiVersion = _apiVersion;
@@ -27408,7 +24638,7 @@ public type CustomResourceSubresourceStatusBuilderApiextensionsV1beta1 object {
 public type RoleBuilderRbacV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_rbac_v1_Role io_k8s_api_rbac_v1_role;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public PolicyRuleBuilderRbacV1[] rulesBuilder;
 
@@ -27440,16 +24670,9 @@ public type RoleBuilderRbacV1 object {
     public function withMetadataRoleRbacV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withRulesRoleRbacV1() returns PolicyRuleBuilderRbacV1 {
         self.rulesBuilder[lengthof rulesBuilder] = new PolicyRuleBuilderRbacV1();
         self.rulesBuilder[(lengthof rulesBuilder) - 1].init(self);
@@ -27470,11 +24693,11 @@ public type RoleBuilderRbacV1 object {
 public type PersistentVolumeBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolume io_k8s_api_core_v1_persistentvolume;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public PersistentVolumeSpecBuilderCoreV1? specBuilder;
+    public PersistentVolumeSpecBuilderCoreV1 specBuilder;
 
-    public PersistentVolumeStatusBuilderCoreV1? statusBuilder;
+    public PersistentVolumeStatusBuilderCoreV1 statusBuilder;
 
     public new() {
         io_k8s_api_core_v1_persistentvolume = new;
@@ -27504,42 +24727,21 @@ public type PersistentVolumeBuilderCoreV1 object {
     public function withMetadataPersistentVolumeCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecPersistentVolumeCoreV1() returns PersistentVolumeSpecBuilderCoreV1 {
         self.specBuilder = new PersistentVolumeSpecBuilderCoreV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            PersistentVolumeSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusPersistentVolumeCoreV1() returns PersistentVolumeStatusBuilderCoreV1 {
         self.statusBuilder = new PersistentVolumeStatusBuilderCoreV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            PersistentVolumeStatusBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (PersistentVolumeBuilderCoreV1) {
         self.io_k8s_api_core_v1_persistentvolume.apiVersion = _apiVersion;
@@ -27600,11 +24802,11 @@ public type PersistentVolumeStatusBuilderCoreV1 object {
 public type ContainerStateBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ContainerState io_k8s_api_core_v1_containerstate;
-    public ContainerStateRunningBuilderCoreV1? runningBuilder;
+    public ContainerStateRunningBuilderCoreV1 runningBuilder;
 
-    public ContainerStateTerminatedBuilderCoreV1? terminatedBuilder;
+    public ContainerStateTerminatedBuilderCoreV1 terminatedBuilder;
 
-    public ContainerStateWaitingBuilderCoreV1? waitingBuilder;
+    public ContainerStateWaitingBuilderCoreV1 waitingBuilder;
 
     public new() {
         io_k8s_api_core_v1_containerstate = new;
@@ -27649,52 +24851,31 @@ public type ContainerStateBuilderCoreV1 object {
     public function withRunningContainerStateCoreV1() returns ContainerStateRunningBuilderCoreV1 {
         self.runningBuilder = new ContainerStateRunningBuilderCoreV1();
         self.runningBuilder.init(self);
-        match (self.runningBuilder) {
-            ContainerStateRunningBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return runningBuilder;
     }
+
     public function withTerminatedContainerStateCoreV1() returns ContainerStateTerminatedBuilderCoreV1 {
         self.terminatedBuilder = new ContainerStateTerminatedBuilderCoreV1();
         self.terminatedBuilder.init(self);
-        match (self.terminatedBuilder) {
-            ContainerStateTerminatedBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return terminatedBuilder;
     }
+
     public function withWaitingContainerStateCoreV1() returns ContainerStateWaitingBuilderCoreV1 {
         self.waitingBuilder = new ContainerStateWaitingBuilderCoreV1();
         self.waitingBuilder.init(self);
-        match (self.waitingBuilder) {
-            ContainerStateWaitingBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return waitingBuilder;
     }
+
 };
 
 public type StatefulSetBuilderAppsV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1_StatefulSet io_k8s_api_apps_v1_statefulset;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public StatefulSetSpecBuilderAppsV1? specBuilder;
+    public StatefulSetSpecBuilderAppsV1 specBuilder;
 
-    public StatefulSetStatusBuilderAppsV1? statusBuilder;
+    public StatefulSetStatusBuilderAppsV1 statusBuilder;
 
     public new() {
         io_k8s_api_apps_v1_statefulset = new;
@@ -27724,42 +24905,21 @@ public type StatefulSetBuilderAppsV1 object {
     public function withMetadataStatefulSetAppsV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecStatefulSetAppsV1() returns StatefulSetSpecBuilderAppsV1 {
         self.specBuilder = new StatefulSetSpecBuilderAppsV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            StatefulSetSpecBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusStatefulSetAppsV1() returns StatefulSetStatusBuilderAppsV1 {
         self.statusBuilder = new StatefulSetStatusBuilderAppsV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            StatefulSetStatusBuilderAppsV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (StatefulSetBuilderAppsV1) {
         self.io_k8s_api_apps_v1_statefulset.apiVersion = _apiVersion;
@@ -27810,11 +24970,11 @@ public type ScaleSpecBuilderAppsV1beta1 object {
 public type NetworkPolicyPeerBuilderNetworkingV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_networking_v1_NetworkPolicyPeer io_k8s_api_networking_v1_networkpolicypeer;
-    public IPBlockBuilderNetworkingV1? ipBlockBuilder;
+    public IPBlockBuilderNetworkingV1 ipBlockBuilder;
 
-    public LabelSelectorBuilderMetaV1? namespaceSelectorBuilder;
+    public LabelSelectorBuilderMetaV1 namespaceSelectorBuilder;
 
-    public LabelSelectorBuilderMetaV1? podSelectorBuilder;
+    public LabelSelectorBuilderMetaV1 podSelectorBuilder;
 
     public new() {
         io_k8s_api_networking_v1_networkpolicypeer = new;
@@ -27860,52 +25020,31 @@ public type NetworkPolicyPeerBuilderNetworkingV1 object {
     public function withIpBlockNetworkPolicyPeerNetworkingV1() returns IPBlockBuilderNetworkingV1 {
         self.ipBlockBuilder = new IPBlockBuilderNetworkingV1();
         self.ipBlockBuilder.init(self);
-        match (self.ipBlockBuilder) {
-            IPBlockBuilderNetworkingV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return ipBlockBuilder;
     }
+
     public function withNamespaceSelectorNetworkPolicyPeerNetworkingV1() returns LabelSelectorBuilderMetaV1 {
         self.namespaceSelectorBuilder = new LabelSelectorBuilderMetaV1();
         self.namespaceSelectorBuilder.init(self);
-        match (self.namespaceSelectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return namespaceSelectorBuilder;
     }
+
     public function withPodSelectorNetworkPolicyPeerNetworkingV1() returns LabelSelectorBuilderMetaV1 {
         self.podSelectorBuilder = new LabelSelectorBuilderMetaV1();
         self.podSelectorBuilder.init(self);
-        match (self.podSelectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return podSelectorBuilder;
     }
+
 };
 
 public type JobBuilderBatchV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_batch_v1_Job io_k8s_api_batch_v1_job;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public JobSpecBuilderBatchV1? specBuilder;
+    public JobSpecBuilderBatchV1 specBuilder;
 
-    public JobStatusBuilderBatchV1? statusBuilder;
+    public JobStatusBuilderBatchV1 statusBuilder;
 
     public new() {
         io_k8s_api_batch_v1_job = new;
@@ -27935,42 +25074,21 @@ public type JobBuilderBatchV1 object {
     public function withMetadataJobBatchV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecJobBatchV1() returns JobSpecBuilderBatchV1 {
         self.specBuilder = new JobSpecBuilderBatchV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            JobSpecBuilderBatchV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusJobBatchV1() returns JobStatusBuilderBatchV1 {
         self.statusBuilder = new JobStatusBuilderBatchV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            JobStatusBuilderBatchV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (JobBuilderBatchV1) {
         self.io_k8s_api_batch_v1_job.apiVersion = _apiVersion;
@@ -28026,11 +25144,11 @@ public type RollingUpdateDeploymentBuilderAppsV1beta2 object {
 public type ServiceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Service io_k8s_api_core_v1_service;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ServiceSpecBuilderCoreV1? specBuilder;
+    public ServiceSpecBuilderCoreV1 specBuilder;
 
-    public ServiceStatusBuilderCoreV1? statusBuilder;
+    public ServiceStatusBuilderCoreV1 statusBuilder;
 
     public new() {
         io_k8s_api_core_v1_service = new;
@@ -28060,42 +25178,21 @@ public type ServiceBuilderCoreV1 object {
     public function withMetadataServiceCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecServiceCoreV1() returns ServiceSpecBuilderCoreV1 {
         self.specBuilder = new ServiceSpecBuilderCoreV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            ServiceSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusServiceCoreV1() returns ServiceStatusBuilderCoreV1 {
         self.statusBuilder = new ServiceStatusBuilderCoreV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            ServiceStatusBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ServiceBuilderCoreV1) {
         self.io_k8s_api_core_v1_service.apiVersion = _apiVersion;
@@ -28112,11 +25209,11 @@ public type APIServiceBuilderApiregistrationV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_APIService
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservice;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public APIServiceSpecBuilderApiregistrationV1? specBuilder;
+    public APIServiceSpecBuilderApiregistrationV1 specBuilder;
 
-    public APIServiceStatusBuilderApiregistrationV1? statusBuilder;
+    public APIServiceStatusBuilderApiregistrationV1 statusBuilder;
 
     public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservice = new;
@@ -28146,42 +25243,21 @@ public type APIServiceBuilderApiregistrationV1 object {
     public function withMetadataAPIServiceApiregistrationV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecAPIServiceApiregistrationV1() returns APIServiceSpecBuilderApiregistrationV1 {
         self.specBuilder = new APIServiceSpecBuilderApiregistrationV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            APIServiceSpecBuilderApiregistrationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusAPIServiceApiregistrationV1() returns APIServiceStatusBuilderApiregistrationV1 {
         self.statusBuilder = new APIServiceStatusBuilderApiregistrationV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            APIServiceStatusBuilderApiregistrationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (APIServiceBuilderApiregistrationV1) {
         self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1_apiservice.apiVersion = _apiVersion;
@@ -28318,9 +25394,9 @@ public type DeploymentConditionBuilderAppsV1beta1 object {
 public type ContainerStatusBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ContainerStatus io_k8s_api_core_v1_containerstatus;
-    public ContainerStateBuilderCoreV1? lastStateBuilder;
+    public ContainerStateBuilderCoreV1 lastStateBuilder;
 
-    public ContainerStateBuilderCoreV1? stateBuilder;
+    public ContainerStateBuilderCoreV1 stateBuilder;
 
     public new() {
         io_k8s_api_core_v1_containerstatus = new;
@@ -28365,29 +25441,15 @@ public type ContainerStatusBuilderCoreV1 object {
     public function withLastStateContainerStatusCoreV1() returns ContainerStateBuilderCoreV1 {
         self.lastStateBuilder = new ContainerStateBuilderCoreV1();
         self.lastStateBuilder.init(self);
-        match (self.lastStateBuilder) {
-            ContainerStateBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return lastStateBuilder;
     }
+
     public function withStateContainerStatusCoreV1() returns ContainerStateBuilderCoreV1 {
         self.stateBuilder = new ContainerStateBuilderCoreV1();
         self.stateBuilder.init(self);
-        match (self.stateBuilder) {
-            ContainerStateBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return stateBuilder;
     }
+
 
     public function setContainerID(string _containerID) returns (ContainerStatusBuilderCoreV1) {
         self.io_k8s_api_core_v1_containerstatus.containerID = _containerID;
@@ -28423,7 +25485,7 @@ public type ContainerStatusBuilderCoreV1 object {
 public type WeightedPodAffinityTermBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_WeightedPodAffinityTerm io_k8s_api_core_v1_weightedpodaffinityterm;
-    public PodAffinityTermBuilderCoreV1? podAffinityTermBuilder;
+    public PodAffinityTermBuilderCoreV1 podAffinityTermBuilder;
 
     public new() {
         io_k8s_api_core_v1_weightedpodaffinityterm = new;
@@ -28470,16 +25532,9 @@ public type WeightedPodAffinityTermBuilderCoreV1 object {
     public function withPodAffinityTermWeightedPodAffinityTermCoreV1() returns PodAffinityTermBuilderCoreV1 {
         self.podAffinityTermBuilder = new PodAffinityTermBuilderCoreV1();
         self.podAffinityTermBuilder.init(self);
-        match (self.podAffinityTermBuilder) {
-            PodAffinityTermBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return podAffinityTermBuilder;
     }
+
 
     public function setWeight(int _weight) returns (WeightedPodAffinityTermBuilderCoreV1) {
         self.io_k8s_api_core_v1_weightedpodaffinityterm.weight = _weight;
@@ -28492,7 +25547,7 @@ public type IngressListBuilderExtensionsV1beta1 object {
     public io_k8s_api_extensions_v1beta1_IngressList io_k8s_api_extensions_v1beta1_ingresslist;
     public IngressBuilderExtensionsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_ingresslist = new;
@@ -28507,16 +25562,9 @@ public type IngressListBuilderExtensionsV1beta1 object {
     public function withMetadataIngressListExtensionsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsIngressListExtensionsV1beta1() returns IngressBuilderExtensionsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new IngressBuilderExtensionsV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -28755,7 +25803,7 @@ public type PodSecurityPolicyListBuilderExtensionsV1beta1 object {
     public io_k8s_api_extensions_v1beta1_PodSecurityPolicyList io_k8s_api_extensions_v1beta1_podsecuritypolicylist;
     public PodSecurityPolicyBuilderExtensionsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_podsecuritypolicylist = new;
@@ -28770,16 +25818,9 @@ public type PodSecurityPolicyListBuilderExtensionsV1beta1 object {
     public function withMetadataPodSecurityPolicyListExtensionsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsPodSecurityPolicyListExtensionsV1beta1() returns PodSecurityPolicyBuilderExtensionsV1beta1
     {
         self.itemsBuilder[lengthof itemsBuilder] = new PodSecurityPolicyBuilderExtensionsV1beta1();
@@ -28893,11 +25934,11 @@ public type RollingUpdateStatefulSetStrategyBuilderAppsV1beta1 object {
 public type NetworkPolicyPeerBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_NetworkPolicyPeer io_k8s_api_extensions_v1beta1_networkpolicypeer;
-    public IPBlockBuilderExtensionsV1beta1? ipBlockBuilder;
+    public IPBlockBuilderExtensionsV1beta1 ipBlockBuilder;
 
-    public LabelSelectorBuilderMetaV1? namespaceSelectorBuilder;
+    public LabelSelectorBuilderMetaV1 namespaceSelectorBuilder;
 
-    public LabelSelectorBuilderMetaV1? podSelectorBuilder;
+    public LabelSelectorBuilderMetaV1 podSelectorBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_networkpolicypeer = new;
@@ -28944,42 +25985,21 @@ public type NetworkPolicyPeerBuilderExtensionsV1beta1 object {
     public function withIpBlockNetworkPolicyPeerExtensionsV1beta1() returns IPBlockBuilderExtensionsV1beta1 {
         self.ipBlockBuilder = new IPBlockBuilderExtensionsV1beta1();
         self.ipBlockBuilder.init(self);
-        match (self.ipBlockBuilder) {
-            IPBlockBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return ipBlockBuilder;
     }
+
     public function withNamespaceSelectorNetworkPolicyPeerExtensionsV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.namespaceSelectorBuilder = new LabelSelectorBuilderMetaV1();
         self.namespaceSelectorBuilder.init(self);
-        match (self.namespaceSelectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return namespaceSelectorBuilder;
     }
+
     public function withPodSelectorNetworkPolicyPeerExtensionsV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.podSelectorBuilder = new LabelSelectorBuilderMetaV1();
         self.podSelectorBuilder.init(self);
-        match (self.podSelectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return podSelectorBuilder;
     }
+
 };
 
 public type VsphereVirtualDiskVolumeSourceBuilderCoreV1 object {
@@ -30128,7 +27148,7 @@ public type ServiceListBuilderCoreV1 object {
     public io_k8s_api_core_v1_ServiceList io_k8s_api_core_v1_servicelist;
     public ServiceBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_servicelist = new;
@@ -30143,16 +27163,9 @@ public type ServiceListBuilderCoreV1 object {
     public function withMetadataServiceListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsServiceListCoreV1() returns ServiceBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ServiceBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -30260,11 +27273,11 @@ public type ResourceQuotaStatusBuilderCoreV1 object {
 public type SubjectAccessReviewBuilderAuthorizationV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SubjectAccessReview io_k8s_api_authorization_v1_subjectaccessreview;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public SubjectAccessReviewSpecBuilderAuthorizationV1? specBuilder;
+    public SubjectAccessReviewSpecBuilderAuthorizationV1 specBuilder;
 
-    public SubjectAccessReviewStatusBuilderAuthorizationV1? statusBuilder;
+    public SubjectAccessReviewStatusBuilderAuthorizationV1 statusBuilder;
 
     public new() {
         io_k8s_api_authorization_v1_subjectaccessreview = new;
@@ -30279,43 +27292,22 @@ public type SubjectAccessReviewBuilderAuthorizationV1 object {
     public function withMetadataSubjectAccessReviewAuthorizationV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecSubjectAccessReviewAuthorizationV1() returns SubjectAccessReviewSpecBuilderAuthorizationV1 {
         self.specBuilder = new SubjectAccessReviewSpecBuilderAuthorizationV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            SubjectAccessReviewSpecBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusSubjectAccessReviewAuthorizationV1() returns
                                                                        SubjectAccessReviewStatusBuilderAuthorizationV1 {
         self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            SubjectAccessReviewStatusBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (SubjectAccessReviewBuilderAuthorizationV1) {
         self.io_k8s_api_authorization_v1_subjectaccessreview.apiVersion = _apiVersion;
@@ -30331,7 +27323,7 @@ public type SubjectAccessReviewBuilderAuthorizationV1 object {
 public type IngressStatusBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_IngressStatus io_k8s_api_extensions_v1beta1_ingressstatus;
-    public LoadBalancerStatusBuilderCoreV1? loadBalancerBuilder;
+    public LoadBalancerStatusBuilderCoreV1 loadBalancerBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_ingressstatus = new;
@@ -30361,22 +27353,15 @@ public type IngressStatusBuilderExtensionsV1beta1 object {
     public function withLoadBalancerIngressStatusExtensionsV1beta1() returns LoadBalancerStatusBuilderCoreV1 {
         self.loadBalancerBuilder = new LoadBalancerStatusBuilderCoreV1();
         self.loadBalancerBuilder.init(self);
-        match (self.loadBalancerBuilder) {
-            LoadBalancerStatusBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return loadBalancerBuilder;
     }
+
 };
 
 public type DeploymentRollbackBuilderAppsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta1_DeploymentRollback io_k8s_api_apps_v1beta1_deploymentrollback;
-    public RollbackConfigBuilderAppsV1beta1? rollbackToBuilder;
+    public RollbackConfigBuilderAppsV1beta1 rollbackToBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_deploymentrollback = new;
@@ -30391,16 +27376,9 @@ public type DeploymentRollbackBuilderAppsV1beta1 object {
     public function withRollbackToDeploymentRollbackAppsV1beta1() returns RollbackConfigBuilderAppsV1beta1 {
         self.rollbackToBuilder = new RollbackConfigBuilderAppsV1beta1();
         self.rollbackToBuilder.init(self);
-        match (self.rollbackToBuilder) {
-            RollbackConfigBuilderAppsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollbackToBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (DeploymentRollbackBuilderAppsV1beta1) {
         self.io_k8s_api_apps_v1beta1_deploymentrollback.apiVersion = _apiVersion;
@@ -30428,7 +27406,7 @@ public type EndpointsListBuilderCoreV1 object {
     public io_k8s_api_core_v1_EndpointsList io_k8s_api_core_v1_endpointslist;
     public EndpointsBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_endpointslist = new;
@@ -30443,16 +27421,9 @@ public type EndpointsListBuilderCoreV1 object {
     public function withMetadataEndpointsListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsEndpointsListCoreV1() returns EndpointsBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new EndpointsBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -30473,15 +27444,15 @@ public type EndpointsListBuilderCoreV1 object {
 public type EventBuilderEventsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_events_v1beta1_Event io_k8s_api_events_v1beta1_event;
-    public EventSourceBuilderCoreV1? deprecatedSourceBuilder;
+    public EventSourceBuilderCoreV1 deprecatedSourceBuilder;
 
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ObjectReferenceBuilderCoreV1? regardingBuilder;
+    public ObjectReferenceBuilderCoreV1 regardingBuilder;
 
-    public ObjectReferenceBuilderCoreV1? relatedBuilder;
+    public ObjectReferenceBuilderCoreV1 relatedBuilder;
 
-    public EventSeriesBuilderEventsV1beta1? seriesBuilder;
+    public EventSeriesBuilderEventsV1beta1 seriesBuilder;
 
     public new() {
         io_k8s_api_events_v1beta1_event = new;
@@ -30511,68 +27482,33 @@ public type EventBuilderEventsV1beta1 object {
     public function withDeprecatedSourceEventEventsV1beta1() returns EventSourceBuilderCoreV1 {
         self.deprecatedSourceBuilder = new EventSourceBuilderCoreV1();
         self.deprecatedSourceBuilder.init(self);
-        match (self.deprecatedSourceBuilder) {
-            EventSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return deprecatedSourceBuilder;
     }
+
     public function withMetadataEventEventsV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withRegardingEventEventsV1beta1() returns ObjectReferenceBuilderCoreV1 {
         self.regardingBuilder = new ObjectReferenceBuilderCoreV1();
         self.regardingBuilder.init(self);
-        match (self.regardingBuilder) {
-            ObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return regardingBuilder;
     }
+
     public function withRelatedEventEventsV1beta1() returns ObjectReferenceBuilderCoreV1 {
         self.relatedBuilder = new ObjectReferenceBuilderCoreV1();
         self.relatedBuilder.init(self);
-        match (self.relatedBuilder) {
-            ObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return relatedBuilder;
     }
+
     public function withSeriesEventEventsV1beta1() returns EventSeriesBuilderEventsV1beta1 {
         self.seriesBuilder = new EventSeriesBuilderEventsV1beta1();
         self.seriesBuilder.init(self);
-        match (self.seriesBuilder) {
-            EventSeriesBuilderEventsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return seriesBuilder;
     }
+
 
     public function setAction(string _action) returns (EventBuilderEventsV1beta1) {
         self.io_k8s_api_events_v1beta1_event.action = _action;
@@ -30643,7 +27579,7 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 object {
     io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerspec;
     public MetricSpecBuilderAutoscalingV2beta1[] metricsBuilder;
 
-    public CrossVersionObjectReferenceBuilderAutoscalingV2beta1? scaleTargetRefBuilder;
+    public CrossVersionObjectReferenceBuilderAutoscalingV2beta1 scaleTargetRefBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v2beta1_horizontalpodautoscalerspec = new;
@@ -30676,16 +27612,9 @@ public type HorizontalPodAutoscalerSpecBuilderAutoscalingV2beta1 object {
     {
         self.scaleTargetRefBuilder = new CrossVersionObjectReferenceBuilderAutoscalingV2beta1();
         self.scaleTargetRefBuilder.init(self);
-        match (self.scaleTargetRefBuilder) {
-            CrossVersionObjectReferenceBuilderAutoscalingV2beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return scaleTargetRefBuilder;
     }
+
     public function withMetricsHorizontalPodAutoscalerSpecAutoscalingV2beta1() returns
                                                                                    MetricSpecBuilderAutoscalingV2beta1 {
         self.metricsBuilder[lengthof metricsBuilder] = new MetricSpecBuilderAutoscalingV2beta1();
@@ -30913,11 +27842,11 @@ public type KeyToPathBuilderCoreV1 object {
 public type SelfSubjectAccessReviewBuilderAuthorizationV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_authorization_v1_SelfSubjectAccessReview io_k8s_api_authorization_v1_selfsubjectaccessreview;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public SelfSubjectAccessReviewSpecBuilderAuthorizationV1? specBuilder;
+    public SelfSubjectAccessReviewSpecBuilderAuthorizationV1 specBuilder;
 
-    public SubjectAccessReviewStatusBuilderAuthorizationV1? statusBuilder;
+    public SubjectAccessReviewStatusBuilderAuthorizationV1 statusBuilder;
 
     public new() {
         io_k8s_api_authorization_v1_selfsubjectaccessreview = new;
@@ -30932,46 +27861,25 @@ public type SelfSubjectAccessReviewBuilderAuthorizationV1 object {
     public function withMetadataSelfSubjectAccessReviewAuthorizationV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecSelfSubjectAccessReviewAuthorizationV1() returns
                                                                          SelfSubjectAccessReviewSpecBuilderAuthorizationV1
     {
         self.specBuilder = new SelfSubjectAccessReviewSpecBuilderAuthorizationV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            SelfSubjectAccessReviewSpecBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusSelfSubjectAccessReviewAuthorizationV1() returns
                                                                            SubjectAccessReviewStatusBuilderAuthorizationV1
     {
         self.statusBuilder = new SubjectAccessReviewStatusBuilderAuthorizationV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            SubjectAccessReviewStatusBuilderAuthorizationV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (SelfSubjectAccessReviewBuilderAuthorizationV1) {
         self.io_k8s_api_authorization_v1_selfsubjectaccessreview.apiVersion = _apiVersion;
@@ -31179,7 +28087,7 @@ public type NodeAffinityBuilderCoreV1 object {
     public io_k8s_api_core_v1_NodeAffinity io_k8s_api_core_v1_nodeaffinity;
     public PreferredSchedulingTermBuilderCoreV1[] preferredDuringSchedulingIgnoredDuringExecutionBuilder;
 
-    public NodeSelectorBuilderCoreV1? requiredDuringSchedulingIgnoredDuringExecutionBuilder;
+    public NodeSelectorBuilderCoreV1 requiredDuringSchedulingIgnoredDuringExecutionBuilder;
 
     public new() {
         io_k8s_api_core_v1_nodeaffinity = new;
@@ -31211,16 +28119,9 @@ public type NodeAffinityBuilderCoreV1 object {
     {
         self.requiredDuringSchedulingIgnoredDuringExecutionBuilder = new NodeSelectorBuilderCoreV1();
         self.requiredDuringSchedulingIgnoredDuringExecutionBuilder.init(self);
-        match (self.requiredDuringSchedulingIgnoredDuringExecutionBuilder) {
-            NodeSelectorBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return requiredDuringSchedulingIgnoredDuringExecutionBuilder;
     }
+
     public function withPreferredDuringSchedulingIgnoredDuringExecutionNodeAffinityCoreV1() returns
                                                                                                 PreferredSchedulingTermBuilderCoreV1
     {
@@ -31423,7 +28324,7 @@ public type SecretReferenceBuilderCoreV1 object {
 public type EndpointAddressBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_EndpointAddress io_k8s_api_core_v1_endpointaddress;
-    public ObjectReferenceBuilderCoreV1? targetRefBuilder;
+    public ObjectReferenceBuilderCoreV1 targetRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_endpointaddress = new;
@@ -31468,16 +28369,9 @@ public type EndpointAddressBuilderCoreV1 object {
     public function withTargetRefEndpointAddressCoreV1() returns ObjectReferenceBuilderCoreV1 {
         self.targetRefBuilder = new ObjectReferenceBuilderCoreV1();
         self.targetRefBuilder.init(self);
-        match (self.targetRefBuilder) {
-            ObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return targetRefBuilder;
     }
+
 
     public function setHostname(string _hostname) returns (EndpointAddressBuilderCoreV1) {
         self.io_k8s_api_core_v1_endpointaddress.hostname = _hostname;
@@ -31675,11 +28569,11 @@ public type NodeSelectorTermBuilderCoreV1 object {
 public type VolumeProjectionBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_VolumeProjection io_k8s_api_core_v1_volumeprojection;
-    public ConfigMapProjectionBuilderCoreV1? configMapBuilder;
+    public ConfigMapProjectionBuilderCoreV1 configMapBuilder;
 
-    public DownwardAPIProjectionBuilderCoreV1? downwardAPIBuilder;
+    public DownwardAPIProjectionBuilderCoreV1 downwardAPIBuilder;
 
-    public SecretProjectionBuilderCoreV1? secretBuilder;
+    public SecretProjectionBuilderCoreV1 secretBuilder;
 
     public new() {
         io_k8s_api_core_v1_volumeprojection = new;
@@ -31709,42 +28603,21 @@ public type VolumeProjectionBuilderCoreV1 object {
     public function withConfigMapVolumeProjectionCoreV1() returns ConfigMapProjectionBuilderCoreV1 {
         self.configMapBuilder = new ConfigMapProjectionBuilderCoreV1();
         self.configMapBuilder.init(self);
-        match (self.configMapBuilder) {
-            ConfigMapProjectionBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return configMapBuilder;
     }
+
     public function withDownwardAPIVolumeProjectionCoreV1() returns DownwardAPIProjectionBuilderCoreV1 {
         self.downwardAPIBuilder = new DownwardAPIProjectionBuilderCoreV1();
         self.downwardAPIBuilder.init(self);
-        match (self.downwardAPIBuilder) {
-            DownwardAPIProjectionBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return downwardAPIBuilder;
     }
+
     public function withSecretVolumeProjectionCoreV1() returns SecretProjectionBuilderCoreV1 {
         self.secretBuilder = new SecretProjectionBuilderCoreV1();
         self.secretBuilder.init(self);
-        match (self.secretBuilder) {
-            SecretProjectionBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return secretBuilder;
     }
+
 };
 
 public type DaemonSetListBuilderExtensionsV1beta1 object {
@@ -31752,7 +28625,7 @@ public type DaemonSetListBuilderExtensionsV1beta1 object {
     public io_k8s_api_extensions_v1beta1_DaemonSetList io_k8s_api_extensions_v1beta1_daemonsetlist;
     public DaemonSetBuilderExtensionsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_daemonsetlist = new;
@@ -31767,16 +28640,9 @@ public type DaemonSetListBuilderExtensionsV1beta1 object {
     public function withMetadataDaemonSetListExtensionsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsDaemonSetListExtensionsV1beta1() returns DaemonSetBuilderExtensionsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DaemonSetBuilderExtensionsV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -31797,7 +28663,7 @@ public type DaemonSetListBuilderExtensionsV1beta1 object {
 public type HTTPIngressPathBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_HTTPIngressPath io_k8s_api_extensions_v1beta1_httpingresspath;
-    public IngressBackendBuilderExtensionsV1beta1? backendBuilder;
+    public IngressBackendBuilderExtensionsV1beta1 backendBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_httpingresspath = new;
@@ -31828,16 +28694,9 @@ public type HTTPIngressPathBuilderExtensionsV1beta1 object {
     public function withBackendHTTPIngressPathExtensionsV1beta1() returns IngressBackendBuilderExtensionsV1beta1 {
         self.backendBuilder = new IngressBackendBuilderExtensionsV1beta1();
         self.backendBuilder.init(self);
-        match (self.backendBuilder) {
-            IngressBackendBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return backendBuilder;
     }
+
 
     public function setPath(string _path) returns (HTTPIngressPathBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_httpingresspath.path = _path;
@@ -31848,7 +28707,7 @@ public type HTTPIngressPathBuilderExtensionsV1beta1 object {
 public type PodDisruptionBudgetSpecBuilderPolicyV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_PodDisruptionBudgetSpec io_k8s_api_policy_v1beta1_poddisruptionbudgetspec;
-    public LabelSelectorBuilderMetaV1? selectorBuilder;
+    public LabelSelectorBuilderMetaV1 selectorBuilder;
 
     public new() {
         io_k8s_api_policy_v1beta1_poddisruptionbudgetspec = new;
@@ -31878,16 +28737,9 @@ public type PodDisruptionBudgetSpecBuilderPolicyV1beta1 object {
     public function withSelectorPodDisruptionBudgetSpecPolicyV1beta1() returns LabelSelectorBuilderMetaV1 {
         self.selectorBuilder = new LabelSelectorBuilderMetaV1();
         self.selectorBuilder.init(self);
-        match (self.selectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return selectorBuilder;
     }
+
 
     public function setMaxUnavailable(int|string _maxUnavailable) returns (PodDisruptionBudgetSpecBuilderPolicyV1beta1)
     {
@@ -31906,7 +28758,7 @@ public type DeploymentListBuilderAppsV1beta1 object {
     public io_k8s_api_apps_v1beta1_DeploymentList io_k8s_api_apps_v1beta1_deploymentlist;
     public DeploymentBuilderAppsV1beta1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta1_deploymentlist = new;
@@ -31921,16 +28773,9 @@ public type DeploymentListBuilderAppsV1beta1 object {
     public function withMetadataDeploymentListAppsV1beta1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsDeploymentListAppsV1beta1() returns DeploymentBuilderAppsV1beta1 {
         self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1beta1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -31951,11 +28796,11 @@ public type DeploymentListBuilderAppsV1beta1 object {
 public type NodeBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Node io_k8s_api_core_v1_node;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public NodeSpecBuilderCoreV1? specBuilder;
+    public NodeSpecBuilderCoreV1 specBuilder;
 
-    public NodeStatusBuilderCoreV1? statusBuilder;
+    public NodeStatusBuilderCoreV1 statusBuilder;
 
     public new() {
         io_k8s_api_core_v1_node = new;
@@ -31985,42 +28830,21 @@ public type NodeBuilderCoreV1 object {
     public function withMetadataNodeCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecNodeCoreV1() returns NodeSpecBuilderCoreV1 {
         self.specBuilder = new NodeSpecBuilderCoreV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            NodeSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusNodeCoreV1() returns NodeStatusBuilderCoreV1 {
         self.statusBuilder = new NodeStatusBuilderCoreV1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            NodeStatusBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (NodeBuilderCoreV1) {
         self.io_k8s_api_core_v1_node.apiVersion = _apiVersion;
@@ -32127,13 +28951,13 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
 
     public JSONSchemaPropsBuilderApiextensionsV1beta1[] anyOfBuilder;
 
-    public JSONBuilderApiextensionsV1beta1? defaultBuilder;
+    public JSONBuilderApiextensionsV1beta1 defaultBuilder;
 
     public JSONBuilderApiextensionsV1beta1[] enumBuilder;
 
-    public JSONBuilderApiextensionsV1beta1? exampleBuilder;
+    public JSONBuilderApiextensionsV1beta1 exampleBuilder;
 
-    public ExternalDocumentationBuilderApiextensionsV1beta1? externalDocsBuilder;
+    public ExternalDocumentationBuilderApiextensionsV1beta1 externalDocsBuilder;
 
     public JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1? itemsBuilder;
 
@@ -32324,43 +29148,20 @@ public type JSONSchemaPropsBuilderApiextensionsV1beta1 object {
     public function withDefaultJSONSchemaPropsApiextensionsV1beta1() returns JSONBuilderApiextensionsV1beta1 {
         self.defaultBuilder = new JSONBuilderApiextensionsV1beta1();
         self.defaultBuilder.init(self);
-        match (self.defaultBuilder) {
-            JSONBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return defaultBuilder;
     }
+
     public function withExampleJSONSchemaPropsApiextensionsV1beta1() returns JSONBuilderApiextensionsV1beta1 {
         self.exampleBuilder = new JSONBuilderApiextensionsV1beta1();
         self.exampleBuilder.init(self);
-        match (self.exampleBuilder) {
-            JSONBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return exampleBuilder;
     }
     public function withExternalDocsJSONSchemaPropsApiextensionsV1beta1() returns
                                                                               ExternalDocumentationBuilderApiextensionsV1beta1
     {
         self.externalDocsBuilder = new ExternalDocumentationBuilderApiextensionsV1beta1();
         self.externalDocsBuilder.init(self);
-        match (self.externalDocsBuilder) {
-            ExternalDocumentationBuilderApiextensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return externalDocsBuilder;
     }
     public function withItemsJSONSchemaPropsApiextensionsV1beta1() returns
                                                                        JSONSchemaPropsOrArrayBuilderApiextensionsV1beta1
@@ -32554,7 +29355,7 @@ public type DeploymentListBuilderAppsV1beta2 object {
     public io_k8s_api_apps_v1beta2_DeploymentList io_k8s_api_apps_v1beta2_deploymentlist;
     public DeploymentBuilderAppsV1beta2[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_deploymentlist = new;
@@ -32569,16 +29370,9 @@ public type DeploymentListBuilderAppsV1beta2 object {
     public function withMetadataDeploymentListAppsV1beta2() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsDeploymentListAppsV1beta2() returns DeploymentBuilderAppsV1beta2 {
         self.itemsBuilder[lengthof itemsBuilder] = new DeploymentBuilderAppsV1beta2();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -32696,7 +29490,7 @@ public type PodTemplateListBuilderCoreV1 object {
     public io_k8s_api_core_v1_PodTemplateList io_k8s_api_core_v1_podtemplatelist;
     public PodTemplateBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_podtemplatelist = new;
@@ -32711,16 +29505,9 @@ public type PodTemplateListBuilderCoreV1 object {
     public function withMetadataPodTemplateListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsPodTemplateListCoreV1() returns PodTemplateBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new PodTemplateBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -32815,11 +29602,11 @@ public type CertificateSigningRequestBuilderCertificatesV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_certificates_v1beta1_CertificateSigningRequest
     io_k8s_api_certificates_v1beta1_certificatesigningrequest;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public CertificateSigningRequestSpecBuilderCertificatesV1beta1? specBuilder;
+    public CertificateSigningRequestSpecBuilderCertificatesV1beta1 specBuilder;
 
-    public CertificateSigningRequestStatusBuilderCertificatesV1beta1? statusBuilder;
+    public CertificateSigningRequestStatusBuilderCertificatesV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_certificates_v1beta1_certificatesigningrequest = new;
@@ -32850,46 +29637,25 @@ public type CertificateSigningRequestBuilderCertificatesV1beta1 object {
     public function withMetadataCertificateSigningRequestCertificatesV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecCertificateSigningRequestCertificatesV1beta1() returns
                                                                                CertificateSigningRequestSpecBuilderCertificatesV1beta1
     {
         self.specBuilder = new CertificateSigningRequestSpecBuilderCertificatesV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            CertificateSigningRequestSpecBuilderCertificatesV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusCertificateSigningRequestCertificatesV1beta1() returns
                                                                                  CertificateSigningRequestStatusBuilderCertificatesV1beta1
     {
         self.statusBuilder = new CertificateSigningRequestStatusBuilderCertificatesV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            CertificateSigningRequestStatusBuilderCertificatesV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (CertificateSigningRequestBuilderCertificatesV1beta1) {
         self.io_k8s_api_certificates_v1beta1_certificatesigningrequest.apiVersion = _apiVersion;
@@ -32905,11 +29671,11 @@ public type CertificateSigningRequestBuilderCertificatesV1beta1 object {
 public type HandlerBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Handler io_k8s_api_core_v1_handler;
-    public ExecActionBuilderCoreV1? execBuilder;
+    public ExecActionBuilderCoreV1 execBuilder;
 
-    public HTTPGetActionBuilderCoreV1? httpGetBuilder;
+    public HTTPGetActionBuilderCoreV1 httpGetBuilder;
 
-    public TCPSocketActionBuilderCoreV1? tcpSocketBuilder;
+    public TCPSocketActionBuilderCoreV1 tcpSocketBuilder;
 
     public new() {
         io_k8s_api_core_v1_handler = new;
@@ -32954,50 +29720,29 @@ public type HandlerBuilderCoreV1 object {
     public function withExecHandlerCoreV1() returns ExecActionBuilderCoreV1 {
         self.execBuilder = new ExecActionBuilderCoreV1();
         self.execBuilder.init(self);
-        match (self.execBuilder) {
-            ExecActionBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return execBuilder;
     }
+
     public function withHttpGetHandlerCoreV1() returns HTTPGetActionBuilderCoreV1 {
         self.httpGetBuilder = new HTTPGetActionBuilderCoreV1();
         self.httpGetBuilder.init(self);
-        match (self.httpGetBuilder) {
-            HTTPGetActionBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return httpGetBuilder;
     }
+
     public function withTcpSocketHandlerCoreV1() returns TCPSocketActionBuilderCoreV1 {
         self.tcpSocketBuilder = new TCPSocketActionBuilderCoreV1();
         self.tcpSocketBuilder.init(self);
-        match (self.tcpSocketBuilder) {
-            TCPSocketActionBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return tcpSocketBuilder;
     }
+
 };
 
 public type BindingBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_Binding io_k8s_api_core_v1_binding;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public ObjectReferenceBuilderCoreV1? targetBuilder;
+    public ObjectReferenceBuilderCoreV1 targetBuilder;
 
     public new() {
         io_k8s_api_core_v1_binding = new;
@@ -33012,29 +29757,15 @@ public type BindingBuilderCoreV1 object {
     public function withMetadataBindingCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withTargetBindingCoreV1() returns ObjectReferenceBuilderCoreV1 {
         self.targetBuilder = new ObjectReferenceBuilderCoreV1();
         self.targetBuilder.init(self);
-        match (self.targetBuilder) {
-            ObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return targetBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (BindingBuilderCoreV1) {
         self.io_k8s_api_core_v1_binding.apiVersion = _apiVersion;
@@ -33050,53 +29781,53 @@ public type BindingBuilderCoreV1 object {
 public type PersistentVolumeSpecBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PersistentVolumeSpec io_k8s_api_core_v1_persistentvolumespec;
-    public AWSElasticBlockStoreVolumeSourceBuilderCoreV1? awsElasticBlockStoreBuilder;
+    public AWSElasticBlockStoreVolumeSourceBuilderCoreV1 awsElasticBlockStoreBuilder;
 
-    public AzureDiskVolumeSourceBuilderCoreV1? azureDiskBuilder;
+    public AzureDiskVolumeSourceBuilderCoreV1 azureDiskBuilder;
 
-    public AzureFilePersistentVolumeSourceBuilderCoreV1? azureFileBuilder;
+    public AzureFilePersistentVolumeSourceBuilderCoreV1 azureFileBuilder;
 
-    public CephFSPersistentVolumeSourceBuilderCoreV1? cephfsBuilder;
+    public CephFSPersistentVolumeSourceBuilderCoreV1 cephfsBuilder;
 
-    public CinderVolumeSourceBuilderCoreV1? cinderBuilder;
+    public CinderVolumeSourceBuilderCoreV1 cinderBuilder;
 
-    public ObjectReferenceBuilderCoreV1? claimRefBuilder;
+    public ObjectReferenceBuilderCoreV1 claimRefBuilder;
 
-    public CSIPersistentVolumeSourceBuilderCoreV1? csiBuilder;
+    public CSIPersistentVolumeSourceBuilderCoreV1 csiBuilder;
 
-    public FCVolumeSourceBuilderCoreV1? fcBuilder;
+    public FCVolumeSourceBuilderCoreV1 fcBuilder;
 
-    public FlexPersistentVolumeSourceBuilderCoreV1? flexVolumeBuilder;
+    public FlexPersistentVolumeSourceBuilderCoreV1 flexVolumeBuilder;
 
-    public FlockerVolumeSourceBuilderCoreV1? flockerBuilder;
+    public FlockerVolumeSourceBuilderCoreV1 flockerBuilder;
 
-    public GCEPersistentDiskVolumeSourceBuilderCoreV1? gcePersistentDiskBuilder;
+    public GCEPersistentDiskVolumeSourceBuilderCoreV1 gcePersistentDiskBuilder;
 
-    public GlusterfsVolumeSourceBuilderCoreV1? glusterfsBuilder;
+    public GlusterfsVolumeSourceBuilderCoreV1 glusterfsBuilder;
 
-    public HostPathVolumeSourceBuilderCoreV1? hostPathBuilder;
+    public HostPathVolumeSourceBuilderCoreV1 hostPathBuilder;
 
-    public ISCSIPersistentVolumeSourceBuilderCoreV1? iscsiBuilder;
+    public ISCSIPersistentVolumeSourceBuilderCoreV1 iscsiBuilder;
 
-    public LocalVolumeSourceBuilderCoreV1? localBuilder;
+    public LocalVolumeSourceBuilderCoreV1 localBuilder;
 
-    public NFSVolumeSourceBuilderCoreV1? nfsBuilder;
+    public NFSVolumeSourceBuilderCoreV1 nfsBuilder;
 
-    public VolumeNodeAffinityBuilderCoreV1? nodeAffinityBuilder;
+    public VolumeNodeAffinityBuilderCoreV1 nodeAffinityBuilder;
 
-    public PhotonPersistentDiskVolumeSourceBuilderCoreV1? photonPersistentDiskBuilder;
+    public PhotonPersistentDiskVolumeSourceBuilderCoreV1 photonPersistentDiskBuilder;
 
-    public PortworxVolumeSourceBuilderCoreV1? portworxVolumeBuilder;
+    public PortworxVolumeSourceBuilderCoreV1 portworxVolumeBuilder;
 
-    public QuobyteVolumeSourceBuilderCoreV1? quobyteBuilder;
+    public QuobyteVolumeSourceBuilderCoreV1 quobyteBuilder;
 
-    public RBDPersistentVolumeSourceBuilderCoreV1? rbdBuilder;
+    public RBDPersistentVolumeSourceBuilderCoreV1 rbdBuilder;
 
-    public ScaleIOPersistentVolumeSourceBuilderCoreV1? scaleIOBuilder;
+    public ScaleIOPersistentVolumeSourceBuilderCoreV1 scaleIOBuilder;
 
-    public StorageOSPersistentVolumeSourceBuilderCoreV1? storageosBuilder;
+    public StorageOSPersistentVolumeSourceBuilderCoreV1 storageosBuilder;
 
-    public VsphereVirtualDiskVolumeSourceBuilderCoreV1? vsphereVolumeBuilder;
+    public VsphereVirtualDiskVolumeSourceBuilderCoreV1 vsphereVolumeBuilder;
 
     public new() {
         io_k8s_api_core_v1_persistentvolumespec = new;
@@ -33128,318 +29859,150 @@ public type PersistentVolumeSpecBuilderCoreV1 object {
     {
         self.awsElasticBlockStoreBuilder = new AWSElasticBlockStoreVolumeSourceBuilderCoreV1();
         self.awsElasticBlockStoreBuilder.init(self);
-        match (self.awsElasticBlockStoreBuilder) {
-            AWSElasticBlockStoreVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return awsElasticBlockStoreBuilder;
     }
+
     public function withAzureDiskPersistentVolumeSpecCoreV1() returns AzureDiskVolumeSourceBuilderCoreV1 {
         self.azureDiskBuilder = new AzureDiskVolumeSourceBuilderCoreV1();
         self.azureDiskBuilder.init(self);
-        match (self.azureDiskBuilder) {
-            AzureDiskVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return azureDiskBuilder;
     }
+
     public function withAzureFilePersistentVolumeSpecCoreV1() returns AzureFilePersistentVolumeSourceBuilderCoreV1 {
         self.azureFileBuilder = new AzureFilePersistentVolumeSourceBuilderCoreV1();
         self.azureFileBuilder.init(self);
-        match (self.azureFileBuilder) {
-            AzureFilePersistentVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return azureFileBuilder;
     }
+
     public function withCephfsPersistentVolumeSpecCoreV1() returns CephFSPersistentVolumeSourceBuilderCoreV1 {
         self.cephfsBuilder = new CephFSPersistentVolumeSourceBuilderCoreV1();
         self.cephfsBuilder.init(self);
-        match (self.cephfsBuilder) {
-            CephFSPersistentVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return cephfsBuilder;
     }
+
     public function withCinderPersistentVolumeSpecCoreV1() returns CinderVolumeSourceBuilderCoreV1 {
         self.cinderBuilder = new CinderVolumeSourceBuilderCoreV1();
         self.cinderBuilder.init(self);
-        match (self.cinderBuilder) {
-            CinderVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return cinderBuilder;
     }
+
     public function withClaimRefPersistentVolumeSpecCoreV1() returns ObjectReferenceBuilderCoreV1 {
         self.claimRefBuilder = new ObjectReferenceBuilderCoreV1();
         self.claimRefBuilder.init(self);
-        match (self.claimRefBuilder) {
-            ObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return claimRefBuilder;
     }
+
     public function withCsiPersistentVolumeSpecCoreV1() returns CSIPersistentVolumeSourceBuilderCoreV1 {
         self.csiBuilder = new CSIPersistentVolumeSourceBuilderCoreV1();
         self.csiBuilder.init(self);
-        match (self.csiBuilder) {
-            CSIPersistentVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return csiBuilder;
     }
+
     public function withFcPersistentVolumeSpecCoreV1() returns FCVolumeSourceBuilderCoreV1 {
         self.fcBuilder = new FCVolumeSourceBuilderCoreV1();
         self.fcBuilder.init(self);
-        match (self.fcBuilder) {
-            FCVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return fcBuilder;
     }
+
     public function withFlexVolumePersistentVolumeSpecCoreV1() returns FlexPersistentVolumeSourceBuilderCoreV1 {
         self.flexVolumeBuilder = new FlexPersistentVolumeSourceBuilderCoreV1();
         self.flexVolumeBuilder.init(self);
-        match (self.flexVolumeBuilder) {
-            FlexPersistentVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return flexVolumeBuilder;
     }
+
     public function withFlockerPersistentVolumeSpecCoreV1() returns FlockerVolumeSourceBuilderCoreV1 {
         self.flockerBuilder = new FlockerVolumeSourceBuilderCoreV1();
         self.flockerBuilder.init(self);
-        match (self.flockerBuilder) {
-            FlockerVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return flockerBuilder;
     }
+
     public function withGcePersistentDiskPersistentVolumeSpecCoreV1() returns GCEPersistentDiskVolumeSourceBuilderCoreV1
     {
         self.gcePersistentDiskBuilder = new GCEPersistentDiskVolumeSourceBuilderCoreV1();
         self.gcePersistentDiskBuilder.init(self);
-        match (self.gcePersistentDiskBuilder) {
-            GCEPersistentDiskVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return gcePersistentDiskBuilder;
     }
+
     public function withGlusterfsPersistentVolumeSpecCoreV1() returns GlusterfsVolumeSourceBuilderCoreV1 {
         self.glusterfsBuilder = new GlusterfsVolumeSourceBuilderCoreV1();
         self.glusterfsBuilder.init(self);
-        match (self.glusterfsBuilder) {
-            GlusterfsVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return glusterfsBuilder;
     }
+
     public function withHostPathPersistentVolumeSpecCoreV1() returns HostPathVolumeSourceBuilderCoreV1 {
         self.hostPathBuilder = new HostPathVolumeSourceBuilderCoreV1();
         self.hostPathBuilder.init(self);
-        match (self.hostPathBuilder) {
-            HostPathVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return hostPathBuilder;
     }
+
     public function withIscsiPersistentVolumeSpecCoreV1() returns ISCSIPersistentVolumeSourceBuilderCoreV1 {
         self.iscsiBuilder = new ISCSIPersistentVolumeSourceBuilderCoreV1();
         self.iscsiBuilder.init(self);
-        match (self.iscsiBuilder) {
-            ISCSIPersistentVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return iscsiBuilder;
     }
+
     public function withLocalPersistentVolumeSpecCoreV1() returns LocalVolumeSourceBuilderCoreV1 {
         self.localBuilder = new LocalVolumeSourceBuilderCoreV1();
         self.localBuilder.init(self);
-        match (self.localBuilder) {
-            LocalVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return localBuilder;
     }
+
     public function withNfsPersistentVolumeSpecCoreV1() returns NFSVolumeSourceBuilderCoreV1 {
         self.nfsBuilder = new NFSVolumeSourceBuilderCoreV1();
         self.nfsBuilder.init(self);
-        match (self.nfsBuilder) {
-            NFSVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nfsBuilder;
     }
+
     public function withNodeAffinityPersistentVolumeSpecCoreV1() returns VolumeNodeAffinityBuilderCoreV1 {
         self.nodeAffinityBuilder = new VolumeNodeAffinityBuilderCoreV1();
         self.nodeAffinityBuilder.init(self);
-        match (self.nodeAffinityBuilder) {
-            VolumeNodeAffinityBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return nodeAffinityBuilder;
     }
+
     public function withPhotonPersistentDiskPersistentVolumeSpecCoreV1() returns
                                                                              PhotonPersistentDiskVolumeSourceBuilderCoreV1
     {
         self.photonPersistentDiskBuilder = new PhotonPersistentDiskVolumeSourceBuilderCoreV1();
         self.photonPersistentDiskBuilder.init(self);
-        match (self.photonPersistentDiskBuilder) {
-            PhotonPersistentDiskVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return photonPersistentDiskBuilder;
     }
+
     public function withPortworxVolumePersistentVolumeSpecCoreV1() returns PortworxVolumeSourceBuilderCoreV1 {
         self.portworxVolumeBuilder = new PortworxVolumeSourceBuilderCoreV1();
         self.portworxVolumeBuilder.init(self);
-        match (self.portworxVolumeBuilder) {
-            PortworxVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return portworxVolumeBuilder;
     }
+
     public function withQuobytePersistentVolumeSpecCoreV1() returns QuobyteVolumeSourceBuilderCoreV1 {
         self.quobyteBuilder = new QuobyteVolumeSourceBuilderCoreV1();
         self.quobyteBuilder.init(self);
-        match (self.quobyteBuilder) {
-            QuobyteVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return quobyteBuilder;
     }
+
     public function withRbdPersistentVolumeSpecCoreV1() returns RBDPersistentVolumeSourceBuilderCoreV1 {
         self.rbdBuilder = new RBDPersistentVolumeSourceBuilderCoreV1();
         self.rbdBuilder.init(self);
-        match (self.rbdBuilder) {
-            RBDPersistentVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rbdBuilder;
     }
+
     public function withScaleIOPersistentVolumeSpecCoreV1() returns ScaleIOPersistentVolumeSourceBuilderCoreV1 {
         self.scaleIOBuilder = new ScaleIOPersistentVolumeSourceBuilderCoreV1();
         self.scaleIOBuilder.init(self);
-        match (self.scaleIOBuilder) {
-            ScaleIOPersistentVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return scaleIOBuilder;
     }
+
     public function withStorageosPersistentVolumeSpecCoreV1() returns StorageOSPersistentVolumeSourceBuilderCoreV1 {
         self.storageosBuilder = new StorageOSPersistentVolumeSourceBuilderCoreV1();
         self.storageosBuilder.init(self);
-        match (self.storageosBuilder) {
-            StorageOSPersistentVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return storageosBuilder;
     }
+
     public function withVsphereVolumePersistentVolumeSpecCoreV1() returns VsphereVirtualDiskVolumeSourceBuilderCoreV1 {
         self.vsphereVolumeBuilder = new VsphereVirtualDiskVolumeSourceBuilderCoreV1();
         self.vsphereVolumeBuilder.init(self);
-        match (self.vsphereVolumeBuilder) {
-            VsphereVirtualDiskVolumeSourceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return vsphereVolumeBuilder;
     }
+
 
     public function setAccessModes(string[] _accessModes) returns (PersistentVolumeSpecBuilderCoreV1) {
         self.io_k8s_api_core_v1_persistentvolumespec.accessModes = _accessModes;
@@ -33578,7 +30141,7 @@ public type SecretEnvSourceBuilderCoreV1 object {
 public type SELinuxStrategyOptionsBuilderExtensionsV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_extensions_v1beta1_SELinuxStrategyOptions io_k8s_api_extensions_v1beta1_selinuxstrategyoptions;
-    public SELinuxOptionsBuilderCoreV1? seLinuxOptionsBuilder;
+    public SELinuxOptionsBuilderCoreV1 seLinuxOptionsBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_selinuxstrategyoptions = new;
@@ -33609,16 +30172,9 @@ public type SELinuxStrategyOptionsBuilderExtensionsV1beta1 object {
     public function withSeLinuxOptionsSELinuxStrategyOptionsExtensionsV1beta1() returns SELinuxOptionsBuilderCoreV1 {
         self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1();
         self.seLinuxOptionsBuilder.init(self);
-        match (self.seLinuxOptionsBuilder) {
-            SELinuxOptionsBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return seLinuxOptionsBuilder;
     }
+
 
     public function setRule(string _rule) returns (SELinuxStrategyOptionsBuilderExtensionsV1beta1) {
         self.io_k8s_api_extensions_v1beta1_selinuxstrategyoptions.rule = _rule;
@@ -33664,9 +30220,9 @@ public type NamespaceStatusBuilderCoreV1 object {
 public type SecurityContextBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_SecurityContext io_k8s_api_core_v1_securitycontext;
-    public CapabilitiesBuilderCoreV1? capabilitiesBuilder;
+    public CapabilitiesBuilderCoreV1 capabilitiesBuilder;
 
-    public SELinuxOptionsBuilderCoreV1? seLinuxOptionsBuilder;
+    public SELinuxOptionsBuilderCoreV1 seLinuxOptionsBuilder;
 
     public new() {
         io_k8s_api_core_v1_securitycontext = new;
@@ -33696,29 +30252,15 @@ public type SecurityContextBuilderCoreV1 object {
     public function withCapabilitiesSecurityContextCoreV1() returns CapabilitiesBuilderCoreV1 {
         self.capabilitiesBuilder = new CapabilitiesBuilderCoreV1();
         self.capabilitiesBuilder.init(self);
-        match (self.capabilitiesBuilder) {
-            CapabilitiesBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return capabilitiesBuilder;
     }
+
     public function withSeLinuxOptionsSecurityContextCoreV1() returns SELinuxOptionsBuilderCoreV1 {
         self.seLinuxOptionsBuilder = new SELinuxOptionsBuilderCoreV1();
         self.seLinuxOptionsBuilder.init(self);
-        match (self.seLinuxOptionsBuilder) {
-            SELinuxOptionsBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return seLinuxOptionsBuilder;
     }
+
 
     public function setAllowPrivilegeEscalation(boolean _allowPrivilegeEscalation) returns (SecurityContextBuilderCoreV1
                 ) {
@@ -33896,7 +30438,7 @@ public type WebhookClientConfigBuilderAdmissionregistrationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_admissionregistration_v1beta1_WebhookClientConfig
     io_k8s_api_admissionregistration_v1beta1_webhookclientconfig;
-    public ServiceReferenceBuilderAdmissionregistrationV1beta1? _serviceBuilder;
+    public ServiceReferenceBuilderAdmissionregistrationV1beta1 _serviceBuilder;
 
     public new() {
         io_k8s_api_admissionregistration_v1beta1_webhookclientconfig = new;
@@ -33929,16 +30471,9 @@ public type WebhookClientConfigBuilderAdmissionregistrationV1beta1 object {
     {
         self._serviceBuilder = new ServiceReferenceBuilderAdmissionregistrationV1beta1();
         self._serviceBuilder.init(self);
-        match (self._serviceBuilder) {
-            ServiceReferenceBuilderAdmissionregistrationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return _serviceBuilder;
     }
+
 
     public function setCaBundle(string _caBundle) returns (WebhookClientConfigBuilderAdmissionregistrationV1beta1) {
         self.io_k8s_api_admissionregistration_v1beta1_webhookclientconfig.caBundle = _caBundle;
@@ -34010,7 +30545,7 @@ public type ResourceQuotaListBuilderCoreV1 object {
     public io_k8s_api_core_v1_ResourceQuotaList io_k8s_api_core_v1_resourcequotalist;
     public ResourceQuotaBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_resourcequotalist = new;
@@ -34025,16 +30560,9 @@ public type ResourceQuotaListBuilderCoreV1 object {
     public function withMetadataResourceQuotaListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsResourceQuotaListCoreV1() returns ResourceQuotaBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ResourceQuotaBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -34055,7 +30583,7 @@ public type ResourceQuotaListBuilderCoreV1 object {
 public type NodeDaemonEndpointsBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeDaemonEndpoints io_k8s_api_core_v1_nodedaemonendpoints;
-    public DaemonEndpointBuilderCoreV1? kubeletEndpointBuilder;
+    public DaemonEndpointBuilderCoreV1 kubeletEndpointBuilder;
 
     public new() {
         io_k8s_api_core_v1_nodedaemonendpoints = new;
@@ -34085,16 +30613,9 @@ public type NodeDaemonEndpointsBuilderCoreV1 object {
     public function withKubeletEndpointNodeDaemonEndpointsCoreV1() returns DaemonEndpointBuilderCoreV1 {
         self.kubeletEndpointBuilder = new DaemonEndpointBuilderCoreV1();
         self.kubeletEndpointBuilder.init(self);
-        match (self.kubeletEndpointBuilder) {
-            DaemonEndpointBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return kubeletEndpointBuilder;
     }
+
 };
 
 public type TaintBuilderCoreV1 object {
@@ -34150,7 +30671,7 @@ public type TaintBuilderCoreV1 object {
 public type ReplicationControllerSpecBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ReplicationControllerSpec io_k8s_api_core_v1_replicationcontrollerspec;
-    public PodTemplateSpecBuilderCoreV1? templateBuilder;
+    public PodTemplateSpecBuilderCoreV1 templateBuilder;
 
     public new() {
         io_k8s_api_core_v1_replicationcontrollerspec = new;
@@ -34180,16 +30701,9 @@ public type ReplicationControllerSpecBuilderCoreV1 object {
     public function withTemplateReplicationControllerSpecCoreV1() returns PodTemplateSpecBuilderCoreV1 {
         self.templateBuilder = new PodTemplateSpecBuilderCoreV1();
         self.templateBuilder.init(self);
-        match (self.templateBuilder) {
-            PodTemplateSpecBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return templateBuilder;
     }
+
 
     public function setMinReadySeconds(int _minReadySeconds) returns (ReplicationControllerSpecBuilderCoreV1) {
         self.io_k8s_api_core_v1_replicationcontrollerspec.minReadySeconds = _minReadySeconds;
@@ -34212,7 +30726,7 @@ public type NamespaceListBuilderCoreV1 object {
     public io_k8s_api_core_v1_NamespaceList io_k8s_api_core_v1_namespacelist;
     public NamespaceBuilderCoreV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_namespacelist = new;
@@ -34227,16 +30741,9 @@ public type NamespaceListBuilderCoreV1 object {
     public function withMetadataNamespaceListCoreV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsNamespaceListCoreV1() returns NamespaceBuilderCoreV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new NamespaceBuilderCoreV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -34301,7 +30808,7 @@ public type RunAsUserStrategyOptionsBuilderExtensionsV1beta1 object {
 public type ConfigMapBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_ConfigMap io_k8s_api_core_v1_configmap;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_core_v1_configmap = new;
@@ -34331,16 +30838,9 @@ public type ConfigMapBuilderCoreV1 object {
     public function withMetadataConfigMapCoreV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (ConfigMapBuilderCoreV1) {
         self.io_k8s_api_core_v1_configmap.apiVersion = _apiVersion;
@@ -34368,7 +30868,7 @@ public type ClusterRoleBindingListBuilderRbacV1 object {
     public io_k8s_api_rbac_v1_ClusterRoleBindingList io_k8s_api_rbac_v1_clusterrolebindinglist;
     public ClusterRoleBindingBuilderRbacV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_rbac_v1_clusterrolebindinglist = new;
@@ -34383,16 +30883,9 @@ public type ClusterRoleBindingListBuilderRbacV1 object {
     public function withMetadataClusterRoleBindingListRbacV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsClusterRoleBindingListRbacV1() returns ClusterRoleBindingBuilderRbacV1 {
         self.itemsBuilder[lengthof itemsBuilder] = new ClusterRoleBindingBuilderRbacV1();
         self.itemsBuilder[(lengthof itemsBuilder) - 1].init(self);
@@ -34413,7 +30906,7 @@ public type ClusterRoleBindingListBuilderRbacV1 object {
 public type PreferredSchedulingTermBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PreferredSchedulingTerm io_k8s_api_core_v1_preferredschedulingterm;
-    public NodeSelectorTermBuilderCoreV1? preferenceBuilder;
+    public NodeSelectorTermBuilderCoreV1 preferenceBuilder;
 
     public new() {
         io_k8s_api_core_v1_preferredschedulingterm = new;
@@ -34444,16 +30937,9 @@ public type PreferredSchedulingTermBuilderCoreV1 object {
     public function withPreferencePreferredSchedulingTermCoreV1() returns NodeSelectorTermBuilderCoreV1 {
         self.preferenceBuilder = new NodeSelectorTermBuilderCoreV1();
         self.preferenceBuilder.init(self);
-        match (self.preferenceBuilder) {
-            NodeSelectorTermBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return preferenceBuilder;
     }
+
 
     public function setWeight(int _weight) returns (PreferredSchedulingTermBuilderCoreV1) {
         self.io_k8s_api_core_v1_preferredschedulingterm.weight = _weight;
@@ -34464,7 +30950,7 @@ public type PreferredSchedulingTermBuilderCoreV1 object {
 public type PodAffinityTermBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_PodAffinityTerm io_k8s_api_core_v1_podaffinityterm;
-    public LabelSelectorBuilderMetaV1? labelSelectorBuilder;
+    public LabelSelectorBuilderMetaV1 labelSelectorBuilder;
 
     public new() {
         io_k8s_api_core_v1_podaffinityterm = new;
@@ -34526,16 +31012,9 @@ public type PodAffinityTermBuilderCoreV1 object {
     public function withLabelSelectorPodAffinityTermCoreV1() returns LabelSelectorBuilderMetaV1 {
         self.labelSelectorBuilder = new LabelSelectorBuilderMetaV1();
         self.labelSelectorBuilder.init(self);
-        match (self.labelSelectorBuilder) {
-            LabelSelectorBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return labelSelectorBuilder;
     }
+
 
     public function setNamespaces(string[] _namespaces) returns (PodAffinityTermBuilderCoreV1) {
         self.io_k8s_api_core_v1_podaffinityterm.namespaces = _namespaces;
@@ -34591,7 +31070,7 @@ public type ScaleSpecBuilderExtensionsV1beta1 object {
 public type StatefulSetUpdateStrategyBuilderAppsV1beta2 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_apps_v1beta2_StatefulSetUpdateStrategy io_k8s_api_apps_v1beta2_statefulsetupdatestrategy;
-    public RollingUpdateStatefulSetStrategyBuilderAppsV1beta2? rollingUpdateBuilder;
+    public RollingUpdateStatefulSetStrategyBuilderAppsV1beta2 rollingUpdateBuilder;
 
     public new() {
         io_k8s_api_apps_v1beta2_statefulsetupdatestrategy = new;
@@ -34623,16 +31102,9 @@ public type StatefulSetUpdateStrategyBuilderAppsV1beta2 object {
     {
         self.rollingUpdateBuilder = new RollingUpdateStatefulSetStrategyBuilderAppsV1beta2();
         self.rollingUpdateBuilder.init(self);
-        match (self.rollingUpdateBuilder) {
-            RollingUpdateStatefulSetStrategyBuilderAppsV1beta2 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return rollingUpdateBuilder;
     }
+
 
     public function set_type(string __type) returns (StatefulSetUpdateStrategyBuilderAppsV1beta2) {
         self.io_k8s_api_apps_v1beta2_statefulsetupdatestrategy._type = __type;
@@ -34643,11 +31115,11 @@ public type StatefulSetUpdateStrategyBuilderAppsV1beta2 object {
 public type PodDisruptionBudgetBuilderPolicyV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_policy_v1beta1_PodDisruptionBudget io_k8s_api_policy_v1beta1_poddisruptionbudget;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public PodDisruptionBudgetSpecBuilderPolicyV1beta1? specBuilder;
+    public PodDisruptionBudgetSpecBuilderPolicyV1beta1 specBuilder;
 
-    public PodDisruptionBudgetStatusBuilderPolicyV1beta1? statusBuilder;
+    public PodDisruptionBudgetStatusBuilderPolicyV1beta1 statusBuilder;
 
     public new() {
         io_k8s_api_policy_v1beta1_poddisruptionbudget = new;
@@ -34678,42 +31150,21 @@ public type PodDisruptionBudgetBuilderPolicyV1beta1 object {
     public function withMetadataPodDisruptionBudgetPolicyV1beta1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecPodDisruptionBudgetPolicyV1beta1() returns PodDisruptionBudgetSpecBuilderPolicyV1beta1 {
         self.specBuilder = new PodDisruptionBudgetSpecBuilderPolicyV1beta1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            PodDisruptionBudgetSpecBuilderPolicyV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
     public function withStatusPodDisruptionBudgetPolicyV1beta1() returns PodDisruptionBudgetStatusBuilderPolicyV1beta1 {
         self.statusBuilder = new PodDisruptionBudgetStatusBuilderPolicyV1beta1();
         self.statusBuilder.init(self);
-        match (self.statusBuilder) {
-            PodDisruptionBudgetStatusBuilderPolicyV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return statusBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (PodDisruptionBudgetBuilderPolicyV1beta1) {
         self.io_k8s_api_policy_v1beta1_poddisruptionbudget.apiVersion = _apiVersion;
@@ -34729,7 +31180,7 @@ public type PodDisruptionBudgetBuilderPolicyV1beta1 object {
 public type NodeConfigSourceBuilderCoreV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_core_v1_NodeConfigSource io_k8s_api_core_v1_nodeconfigsource;
-    public ObjectReferenceBuilderCoreV1? configMapRefBuilder;
+    public ObjectReferenceBuilderCoreV1 configMapRefBuilder;
 
     public new() {
         io_k8s_api_core_v1_nodeconfigsource = new;
@@ -34759,16 +31210,9 @@ public type NodeConfigSourceBuilderCoreV1 object {
     public function withConfigMapRefNodeConfigSourceCoreV1() returns ObjectReferenceBuilderCoreV1 {
         self.configMapRefBuilder = new ObjectReferenceBuilderCoreV1();
         self.configMapRefBuilder.init(self);
-        match (self.configMapRefBuilder) {
-            ObjectReferenceBuilderCoreV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return configMapRefBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (NodeConfigSourceBuilderCoreV1) {
         self.io_k8s_api_core_v1_nodeconfigsource.apiVersion = _apiVersion;
@@ -34840,15 +31284,15 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
 
     public AllowedHostPathBuilderExtensionsV1beta1[] allowedHostPathsBuilder;
 
-    public FSGroupStrategyOptionsBuilderExtensionsV1beta1? fsGroupBuilder;
+    public FSGroupStrategyOptionsBuilderExtensionsV1beta1 fsGroupBuilder;
 
     public HostPortRangeBuilderExtensionsV1beta1[] hostPortsBuilder;
 
-    public RunAsUserStrategyOptionsBuilderExtensionsV1beta1? runAsUserBuilder;
+    public RunAsUserStrategyOptionsBuilderExtensionsV1beta1 runAsUserBuilder;
 
-    public SELinuxStrategyOptionsBuilderExtensionsV1beta1? seLinuxBuilder;
+    public SELinuxStrategyOptionsBuilderExtensionsV1beta1 seLinuxBuilder;
 
-    public SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1? supplementalGroupsBuilder;
+    public SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 supplementalGroupsBuilder;
 
     public new() {
         io_k8s_api_extensions_v1beta1_podsecuritypolicyspec = new;
@@ -34880,61 +31324,33 @@ public type PodSecurityPolicySpecBuilderExtensionsV1beta1 object {
     {
         self.fsGroupBuilder = new FSGroupStrategyOptionsBuilderExtensionsV1beta1();
         self.fsGroupBuilder.init(self);
-        match (self.fsGroupBuilder) {
-            FSGroupStrategyOptionsBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return fsGroupBuilder;
     }
+
     public function withRunAsUserPodSecurityPolicySpecExtensionsV1beta1() returns
                                                                               RunAsUserStrategyOptionsBuilderExtensionsV1beta1
     {
         self.runAsUserBuilder = new RunAsUserStrategyOptionsBuilderExtensionsV1beta1();
         self.runAsUserBuilder.init(self);
-        match (self.runAsUserBuilder) {
-            RunAsUserStrategyOptionsBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return runAsUserBuilder;
     }
+
     public function withSeLinuxPodSecurityPolicySpecExtensionsV1beta1() returns
                                                                             SELinuxStrategyOptionsBuilderExtensionsV1beta1
     {
         self.seLinuxBuilder = new SELinuxStrategyOptionsBuilderExtensionsV1beta1();
         self.seLinuxBuilder.init(self);
-        match (self.seLinuxBuilder) {
-            SELinuxStrategyOptionsBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return seLinuxBuilder;
     }
+
     public function withSupplementalGroupsPodSecurityPolicySpecExtensionsV1beta1() returns
                                                                                        SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1
     {
         self.supplementalGroupsBuilder = new SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1();
         self.supplementalGroupsBuilder.init(self);
-        match (self.supplementalGroupsBuilder) {
-            SupplementalGroupsStrategyOptionsBuilderExtensionsV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return supplementalGroupsBuilder;
     }
+
     public function withAllowedFlexVolumesPodSecurityPolicySpecExtensionsV1beta1() returns
                                                                                        AllowedFlexVolumeBuilderExtensionsV1beta1
     {
@@ -35081,7 +31497,7 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV1 object {
     public io_k8s_api_autoscaling_v1_HorizontalPodAutoscalerList io_k8s_api_autoscaling_v1_horizontalpodautoscalerlist;
     public HorizontalPodAutoscalerBuilderAutoscalingV1[] itemsBuilder;
 
-    public ListMetaBuilderMetaV1? metadataBuilder;
+    public ListMetaBuilderMetaV1 metadataBuilder;
 
     public new() {
         io_k8s_api_autoscaling_v1_horizontalpodautoscalerlist = new;
@@ -35096,16 +31512,9 @@ public type HorizontalPodAutoscalerListBuilderAutoscalingV1 object {
     public function withMetadataHorizontalPodAutoscalerListAutoscalingV1() returns ListMetaBuilderMetaV1 {
         self.metadataBuilder = new ListMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ListMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withItemsHorizontalPodAutoscalerListAutoscalingV1() returns
                                                                             HorizontalPodAutoscalerBuilderAutoscalingV1
     {
@@ -35171,7 +31580,7 @@ public type APIServiceSpecBuilderApiregistrationV1beta1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_APIServiceSpec
     io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicespec;
-    public ServiceReferenceBuilderApiregistrationV1beta1? _serviceBuilder;
+    public ServiceReferenceBuilderApiregistrationV1beta1 _serviceBuilder;
 
     public new() {
         io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicespec = new;
@@ -35203,16 +31612,9 @@ public type APIServiceSpecBuilderApiregistrationV1beta1 object {
     {
         self._serviceBuilder = new ServiceReferenceBuilderApiregistrationV1beta1();
         self._serviceBuilder.init(self);
-        match (self._serviceBuilder) {
-            ServiceReferenceBuilderApiregistrationV1beta1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return _serviceBuilder;
     }
+
 
     public function setCaBundle(string _caBundle) returns (APIServiceSpecBuilderApiregistrationV1beta1) {
         self.io_k8s_kube_aggregator_pkg_apis_apiregistration_v1beta1_apiservicespec.caBundle = _caBundle;
@@ -35252,9 +31654,9 @@ public type APIServiceSpecBuilderApiregistrationV1beta1 object {
 public type NetworkPolicyBuilderNetworkingV1 object {
     public FluentBuilder? fluentBuilder;
     public io_k8s_api_networking_v1_NetworkPolicy io_k8s_api_networking_v1_networkpolicy;
-    public ObjectMetaBuilderMetaV1? metadataBuilder;
+    public ObjectMetaBuilderMetaV1 metadataBuilder;
 
-    public NetworkPolicySpecBuilderNetworkingV1? specBuilder;
+    public NetworkPolicySpecBuilderNetworkingV1 specBuilder;
 
     public new() {
         io_k8s_api_networking_v1_networkpolicy = new;
@@ -35284,29 +31686,15 @@ public type NetworkPolicyBuilderNetworkingV1 object {
     public function withMetadataNetworkPolicyNetworkingV1() returns ObjectMetaBuilderMetaV1 {
         self.metadataBuilder = new ObjectMetaBuilderMetaV1();
         self.metadataBuilder.init(self);
-        match (self.metadataBuilder) {
-            ObjectMetaBuilderMetaV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return metadataBuilder;
     }
+
     public function withSpecNetworkPolicyNetworkingV1() returns NetworkPolicySpecBuilderNetworkingV1 {
         self.specBuilder = new NetworkPolicySpecBuilderNetworkingV1();
         self.specBuilder.init(self);
-        match (self.specBuilder) {
-            NetworkPolicySpecBuilderNetworkingV1 builder => {
-                return builder;
-            }
-            () err => {
-                error e = {};
-                throw e;
-            }
-        }
+        return specBuilder;
     }
+
 
     public function setApiVersion(string _apiVersion) returns (NetworkPolicyBuilderNetworkingV1) {
         self.io_k8s_api_networking_v1_networkpolicy.apiVersion = _apiVersion;
