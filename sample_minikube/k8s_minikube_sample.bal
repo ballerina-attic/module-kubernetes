@@ -16,10 +16,13 @@ endpoint kubernetes:Client k8sEndpoint {
 
 function main(string... args) {
     // Create a k8s deployment
+    string k8sDeploymentName = "nginx-deployment";
+    string k8sServiceName = "nginx-service";
+
     kubernetes:Deployment deployment = new;
     deployment = deployment
     .setMetaData({
-            name: "nginx-deployment",
+            name: k8sDeploymentName,
             labels: { "app": "nginx" }
         })
     .addContainer({
@@ -36,7 +39,7 @@ function main(string... args) {
     kubernetes:Service serviceDef = new;
     serviceDef = serviceDef
     .setMetaData({
-            name: "nginx-service",
+            name: k8sServiceName,
             labels: { "app": "nginx" }
         })
     .setSpec({
@@ -62,10 +65,18 @@ function main(string... args) {
     io:println(response);
 
     io:println("--- Get Deployment ---");
-    var getResponse = k8sEndpoint->getDeployment("nginx-deployment");
+    kubernetes:Deployment getResponse = k8sEndpoint->getDeployment(k8sDeploymentName);
     io:println(getResponse);
 
     io:println("--- Delete Deployment ---");
-    var deleteResponse = k8sEndpoint->deleteDeployment("nginx-deployment");
+    var deleteResponse = k8sEndpoint->deleteDeployment(k8sDeploymentName);
     io:println(deleteResponse);
+
+    io:println("--- Get Service ---");
+    kubernetes:Service getService = k8sEndpoint->getService(k8sServiceName);
+    io:println(getService);
+
+    io:println("--- Delete Service ---");
+    var deleteService = k8sEndpoint->deleteService(k8sServiceName);
+    io:println(deleteService);
 }

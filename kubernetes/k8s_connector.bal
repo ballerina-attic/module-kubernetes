@@ -5,17 +5,23 @@ public type KubernetesConnector object {
     public string masterURL;
     public string namespace;
     public http:Client client;
-    public function getNodes();
+    public function getNodes() returns json;
     public function getEndpoints();
+
+    public function createDeployment(json deployment);
     public function getDeployments() returns Deployment[];
     public function getDeployment(string name) returns Deployment;
     public function deleteDeployment(string name) returns json;
-    public function createDeployment(json deployment);
+
     public function createService(json serviceJSON);
+    public function getServices() returns Service[];
+    public function getService(string name) returns Service;
+    public function deleteService(string name) returns json;
+
     public function apply(K8SHolder holder);
 };
 
-function KubernetesConnector::getNodes() {
+function KubernetesConnector::getNodes() returns json {
     endpoint http:Client httpClient = self.client;
     string requestPath = "/api/v1/nodes/";
 
@@ -24,11 +30,11 @@ function KubernetesConnector::getNodes() {
         http:Response httpResponse => {
             var jsonPayload = httpResponse.getJsonPayload();
             match jsonPayload {
-                json payload => io:println(payload);
-                error err => io:println(err);
+                json payload => return payload;
+                error err => throw err;
             }
         }
-        error err => io:println(err);
+        error err => throw err;
     }
 }
 
@@ -159,6 +165,84 @@ function KubernetesConnector::createService(json serviceJSON) {
             }
         }
         error err => io:println(err);
+    }
+}
+
+function KubernetesConnector::getServices() returns Service[] {
+    endpoint http:Client httpClient = self.client;
+    string requestPath = "/api/v1/namespaces/" + self.namespace + "/services/";
+
+    var response = httpClient->get(requestPath);
+    match response {
+        http:Response httpResponse => {
+            var jsonPayload = httpResponse.getJsonPayload();
+            match jsonPayload {
+                json payload => {
+                    return convertToServices(payload);
+                }
+                error err => {
+                    io:println(err);
+                    throw err;
+                }
+            }
+        }
+        error err => {
+            io:println(err);
+            throw err;
+        }
+
+    }
+}
+
+function KubernetesConnector::getService(string name) returns Service {
+    endpoint http:Client httpClient = self.client;
+    string requestPath = "/api/v1/namespaces/" + self.namespace + "/services/" + name;
+
+    var response = httpClient->get(requestPath);
+    match response {
+        http:Response httpResponse => {
+            var jsonPayload = httpResponse.getJsonPayload();
+            match jsonPayload {
+                json payload => {
+                    return convertToService(payload);
+                }
+                error err => {
+                    io:println(err);
+                    throw err;
+                }
+            }
+        }
+        error err => {
+            io:println(err);
+            throw err;
+        }
+
+    }
+}
+
+function KubernetesConnector::deleteService(string name) returns json {
+    endpoint http:Client httpClient = self.client;
+    string requestPath = "/api/v1/namespaces/" + self.namespace + "/services/" + name;
+
+    var response = httpClient->delete(requestPath, "");
+    match response {
+        http:Response httpResponse => {
+            var jsonPayload = httpResponse.getJsonPayload();
+            match jsonPayload {
+                json payload => {
+                    return payload;
+                }
+                error err => {
+                    io:println(err);
+                    throw err;
+                }
+            }
+        }
+        error err => {
+            io:println(err);
+            throw err;
+        }
+
     }
 }
 

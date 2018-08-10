@@ -1,3 +1,5 @@
+import ballerina/time;
+
 public type Deployment object {
     public string apiVersion = "apps/v1";
     private string kind = "Deployment";
@@ -60,6 +62,8 @@ public type ObjectMeta record {
     string[] ownerReferences;
     string name;
     string namespace = "default";
+    time:Time? creationTimestamp;
+    string selfLink;
 };
 
 public type DeploymentSpec record {
