@@ -5,7 +5,7 @@ import wso2/kubernetes;
 // Create the K8s endpoint
 endpoint kubernetes:Client k8sEndpoint {
     masterURL: config:getAsString("minikube.masterURL"),
-    sslConfig: {
+    authConfig: {
         keystorePath: config:getAsString("minikube.sslkeyStorePath"),
         keystorePassword: config:getAsString("minikube.sslkeyStorePassword")
     },

@@ -5,7 +5,7 @@ import wso2/kubernetes;
 // Create the k8s client endpoint to talk to the K8s cluster
 endpoint kubernetes:Client k8sEndpoint {
     masterURL: config:getAsString("gke.masterURL"),
-    basicAuthConfig: {
+    authConfig: {
         username: config:getAsString("gke.username"),
         password: config:getAsString("gke.password")
     },

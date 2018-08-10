@@ -2,7 +2,7 @@ import ballerina/test;
 
 endpoint Client k8sClient {
     masterURL: config:getAsString("minikube.masterURL"),
-    sslConfig: {
+    authConfig: {
         keystorePath: config:getAsString("minikube.sslkeyStorePath"),
         keystorePassword: config:getAsString("minikube.sslkeyStorePassword")
     },

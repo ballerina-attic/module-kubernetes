@@ -21,9 +21,7 @@ public type MutualSSLConfig record {
 public type KubernetesConnectorConfiguration record {
     string masterURL;
     string namespace;
-    BasicAuthConfig basicAuthConfig;
-    OAuthConfig oauthConfig;
-    MutualSSLConfig sslConfig;
+    BasicAuthConfig|OAuthConfig|MutualSSLConfig authConfig;
     string trustStorePath;
     string trustStorePassword;
     http:ClientEndpointConfig clientConfig;
@@ -57,62 +55,37 @@ function Client::init(KubernetesConnectorConfiguration config) {
         };
     }
     http:AuthConfig authConfig = {};
-    //match (config.authConfig){
-    //    BasicAuthConfig authconfig => {
-    //        authConfig =
-    //        {
-    //            scheme: http:BASIC_AUTH,
-    //            username: authConfig.username,
-    //            password: authConfig.password
-    //        };
-    //    }
-    //    OAuthConfig authconfig => {
-    //        authConfig = {
-    //            scheme: http:OAUTH2,
-    //            accessToken: authConfig.accessToken
-    //        };
-    //
-    //    }
-    //    MutualSSLConfig authconfig => {
-    //        config.clientConfig.secureSocket = {
-    //            keyStore: {
-    //                path: <string> authConfig.keystorePath,
-    //                password: <string>authConfig.keystorePassword
-    //            }
-    //        };
-    //    }
-    //}
-    if (config.basicAuthConfig.username.length() > 0){
-        authConfig =
-        {
-            scheme: http:BASIC_AUTH,
-            username: config.basicAuthConfig.username,
-            password: config.basicAuthConfig.password
-        };
-    } else if (config.oauthConfig.accessToken.length() > 0){
-        authConfig = {
-            scheme: http:OAUTH2,
-            accessToken: config.oauthConfig.accessToken
-        };
-    } else {
-        config.clientConfig.secureSocket = {
-            trustStore: {
-                path: config.trustStorePath,
-                password: config.trustStorePassword
-            },
-            keyStore: {
-                path: config.sslConfig.keystorePath,
-                password: config.sslConfig.keystorePassword
-            },
-            protocol: { name: "TLS" },
-            ciphers: ["TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA"]
-        };
-        //config.clientConfig.secureSocket.keyStore = {
-        //    path: authConfig.keystorePath,
-        //    password: authConfig.keystorePassword
-        //};
-    }
+    match (config.authConfig){
+        BasicAuthConfig basicAuthConfig => {
+            authConfig =
+            {
+                scheme: http:BASIC_AUTH,
+                username: basicAuthConfig.username,
+                password: basicAuthConfig.password
+            };
+        }
+        OAuthConfig oAuthConfig => {
+            authConfig = {
+                scheme: http:OAUTH2,
+                accessToken: oAuthConfig.accessToken
+            };
 
+        }
+        MutualSSLConfig mutualSSLConfig => {
+            config.clientConfig.secureSocket = {
+                trustStore: {
+                    path: config.trustStorePath,
+                    password: config.trustStorePassword
+                },
+                keyStore: {
+                    path: mutualSSLConfig.keystorePath,
+                    password: mutualSSLConfig.keystorePassword
+                },
+                protocol: { name: "TLS" },
+                ciphers: ["TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA"]
+            };
+        }
+    }
     config.clientConfig.auth = authConfig;
     self.k8sconnector.client.init(config.clientConfig);
 }
