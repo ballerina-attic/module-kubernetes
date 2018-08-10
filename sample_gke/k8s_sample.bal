@@ -2,6 +2,7 @@ import ballerina/io;
 import ballerina/config;
 import wso2/kubernetes;
 
+// Create the k8s client endpoint to talk to the K8s cluster
 endpoint kubernetes:Client k8sEndpoint {
     masterURL: config:getAsString("gke.masterURL"),
     basicAuthConfig: {
@@ -14,7 +15,7 @@ endpoint kubernetes:Client k8sEndpoint {
 };
 
 function main(string... args) {
-    //create Deployment object
+    // Create the k8s endpoint object
     kubernetes:Deployment deployment = new;
     deployment = deployment
     .setMetaData({
@@ -30,11 +31,10 @@ function main(string... args) {
         })
     .setReplicaCount(2)
     .addMatchLabels("app", "nginx");
-    io:println(deployment.toJSON());
 
-
-    kubernetes:Service serviceDef = new;
-    serviceDef = serviceDef
+    // Create the k8s service object
+    kubernetes:Service nginxService = new;
+    nginxService = nginxService
     .setMetaData({
             name: "nginx-service",
             labels: { "app": "nginx" }
@@ -49,13 +49,14 @@ function main(string... args) {
                 name: "http"
             }]
         });
-    io:println(serviceDef.toJSON());
 
-    //Add deployment object to holder
+    // Add K8s objects to the holder
     kubernetes:K8SHolder holder = new;
     holder.addDeployment(deployment);
-    holder.addService(serviceDef);
-    //Deploy k8s holder
+    holder.addService(nginxService);
+
+    // Deploy the k8s objects in the cluster
+    io:println("--- Response from Kubernetes API ---");
     var response = k8sEndpoint->apply(holder);
     io:println(response);
 }

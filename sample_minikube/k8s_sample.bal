@@ -2,6 +2,7 @@ import ballerina/io;
 import ballerina/config;
 import wso2/kubernetes;
 
+// Create the K8s endpoint
 endpoint kubernetes:Client k8sEndpoint {
     masterURL: config:getAsString("minikube.masterURL"),
     sslConfig: {
@@ -14,7 +15,7 @@ endpoint kubernetes:Client k8sEndpoint {
 };
 
 function main(string... args) {
-    //create Deployment object
+    // Create a k8s deployment
     kubernetes:Deployment deployment = new;
     deployment = deployment
     .setMetaData({
@@ -30,9 +31,8 @@ function main(string... args) {
         })
     .setReplicaCount(3)
     .addMatchLabels("app", "nginx");
-    io:println(deployment.toJSON());
 
-
+    // Create a k8s service
     kubernetes:Service serviceDef = new;
     serviceDef = serviceDef
     .setMetaData({
@@ -49,15 +49,14 @@ function main(string... args) {
                 name: "http"
             }]
         });
-    io:println(serviceDef.toJSON());
 
-    //Add deployment object to holder
+    // Add the K8s objects to holder
     kubernetes:K8SHolder holder = new;
     holder.addDeployment(deployment);
     holder.addService(serviceDef);
 
-    //Deploy k8s holder
     io:println("--- Response from Kubernetes API ---");
+    // Deploy the k8s objects in the cluster
     var response = k8sEndpoint->apply(holder);
     io:println(response);
 }
