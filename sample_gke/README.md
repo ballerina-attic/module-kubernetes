@@ -1,34 +1,28 @@
-# Kubernetes Connector
+## Running the Kubernetes connector on a Google Kubernetes Engine K8s cluster 
 
-Ballerina connector for Kubernetes.
+### Pre-requisites
+1. Setup a k8s cluster in Google Kubernetes Engine (https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster)
+2. Obtain the username and password to connect to the cluster
 
-# Package Overview
+3. Create a truststore with the cluster public certificate
+```bash
+    keytool -import -alias cluster-minikube -file ~/.minikube/apiserver.crt -keystore trustore.jks
+    keytool -importkeystore -srckeystore trustore.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore trustore.p12
+``` 
 
-The Kubernetes connector allows you to create and manage Kubernetes resources in a Kubernetes cluster programatically 
-without writing YAML files for each operation.   
 
-**Supported Operations**
+#### Configuring credentials and keystore information in ballerina.conf file
+```toml
+trustStorePath="~/ballerina/trustore.p12"
+trustStorePassword="ballerina"
 
-The `wso2/kubernetes` package currently supports managing below Kubernetes resources in a cluster.
-1. Deployments
-2. Services
-3. Ingress
+[gke]
+masterURL="https://35.193.187.46"
+username="username"
+password="password"
+```
 
-**Supported Authentication Mechanisms**
-
-The Kubernetes connector supports the below authentication mechanisms which can used to connect to your Kubernetes 
-cluster. You can chose the relevant authentication mechanism supported by your K8s Provider.
-* Basic Auth
-* OAuth2
-* Mutual SSL
-
-## Compatibility
-|                          |    Version     |
-|:------------------------:|:--------------:|
-| Ballerina Language       | 0.981.1        |
-| Kubernetes API Version   | 1.10.0 or above |
-
-## Example
+#### Creating a K8s deployment in Google K8s Engine (GKE)
 ```ballerina
 import ballerina/io;
 import ballerina/config;
@@ -74,8 +68,3 @@ function main(string... args) {
     io:println(response);
 }
 ```
-
-## Samples
-1. Deploying a Kubernetes deployment in Minikube
-2. Deploying a Kubernetes deployment in GKE    
-
