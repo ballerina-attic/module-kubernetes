@@ -37,13 +37,15 @@ public type Service object {
 
 public type ServiceSpec record {
     map selector;
+    string sessionAffinity;
     string serviceType;
+    string clusterIp;
     string[] externalIPs;
     string[] loadBalancerSourceRanges;
-    Port[] ports;
+    ServicePort[] ports;
 };
 
-public type Port record{
+public type ServicePort record{
     string name;
     int port;
     int targetPort;

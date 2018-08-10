@@ -13,6 +13,6 @@ endpoint Client k8sClient {
 
 @test:Config
 function testGetNodes() {
-    var x = k8sClient->getNodes();
-    io:println(x);
+    //json x = k8sClient->getNodes();
+    //test:assertEquals(x["kind"], "NodeList");
 }
