@@ -30,7 +30,7 @@ function main(string... args) {
             }]
         })
     .setReplicaCount(2)
-    .addMatchLabels("app", "nginx");
+    .addMatchLabels({ "app": "nginx" });
 
     // Create the k8s service object
     kubernetes:Service nginxService = new;
