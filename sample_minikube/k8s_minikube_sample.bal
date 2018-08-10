@@ -55,8 +55,17 @@ function main(string... args) {
     holder.addDeployment(deployment);
     holder.addService(serviceDef);
 
+    //Deploy k8s holder
     io:println("--- Response from Kubernetes API ---");
     // Deploy the k8s objects in the cluster
     var response = k8sEndpoint->apply(holder);
     io:println(response);
+
+    io:println("--- Get Deployment ---");
+    var getResponse = k8sEndpoint->getDeployment("nginx-deployment");
+    io:println(getResponse);
+
+    io:println("--- Delete Deployment ---");
+    var deleteResponse = k8sEndpoint->deleteDeployment("nginx-deployment");
+    io:println(deleteResponse);
 }
