@@ -34,12 +34,10 @@ public type Service object {
     }
 };
 
-
 public type ServiceSpec record {
     map selector;
     string sessionAffinity;
-    string serviceType;
-    string clusterIp;
+    string ^"type";
     string[] externalIPs;
     string[] loadBalancerSourceRanges;
     ServicePort[] ports;
