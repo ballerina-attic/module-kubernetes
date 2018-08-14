@@ -159,7 +159,6 @@ function KubernetesConnector::createDeployment(json deployment) {
 function KubernetesConnector::createService(json serviceJSON) {
     endpoint http:Client httpClient = self.client;
     string requestPath = "/api/" + serviceJSON.apiVersion.toString() + "/namespaces/" + self.namespace + "/services/";
-
     var response = httpClient->post(requestPath, serviceJSON);
     match response {
         http:Response httpResponse => {
