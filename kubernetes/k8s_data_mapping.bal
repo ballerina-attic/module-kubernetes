@@ -79,3 +79,28 @@ public function convertToService(json serviceJSON) returns Service {
     k8sService = k8sService.setSpec(spec);
     return k8sService;
 }
+
+public function convertToIngresses(json ingressesJSON) returns Ingress[] {
+    Ingress[] ingresses;
+    foreach ingressJSON in ingressesJSON.items{
+        Ingress ingress = convertToIngress(ingressJSON);
+        ingresses[lengthof ingresses] = ingress;
+    }
+    return ingresses;
+}
+
+public function convertToIngress(json ingressJSON) returns Ingress {
+    Ingress k8sIngress = new;
+
+    k8sIngress = k8sIngress
+    .setMetaData({
+            name: check <string>ingressJSON.metadata.name,
+            labels: check <map>ingressJSON.metadata.labels,
+            namespace: check <string>ingressJSON.metadata.namespace,
+            annotations: check <map>ingressJSON.metadata.annotations
+        });
+
+    IngressSpec spec = check <IngressSpec>ingressJSON.spec;
+    k8sIngress = k8sIngress.setSpec(spec);
+    return k8sIngress;
+}

@@ -33,7 +33,7 @@ function main(string... args) {
             }]
         })
     .setReplicaCount(3)
-    .addMatchLabels({"app":"nginx"});
+    .addMatchLabels({ "app": "nginx" });
 
     // Create a k8s service
     kubernetes:Service serviceDef = new;
@@ -53,10 +53,36 @@ function main(string... args) {
             }]
         });
 
-    // Add the K8s objects to holder
+    kubernetes:Ingress ingress = new;
+    ingress = ingress.setMetaData({
+            name: k8sServiceName + "-" + "ingress",
+            annotations: {
+                "nginx.ingress.kubernetes.io/ssl-passthrough": "true",
+                "kubernetes.io/ingress.class": "nginx",
+                "nginx.ingress.kubernetes.io/rewrite-target": "/burger"
+            },
+            labels: {
+                "app": "nginx-ingress"
+            }
+        }).addIngressRule({
+            host: "burger.com",
+            http: {
+                paths: [{
+                    backend: {
+                        serviceName: "burger-backend",
+                        servicePort: 9090
+                    },
+                    path: "/"
+                }
+                ]
+            }
+        });
+
+    //Add the K8s objects to holder
     kubernetes:K8SHolder holder = new;
     holder.addDeployment(deployment);
     holder.addService(serviceDef);
+    holder.addIngress(ingress);
 
     //Deploy k8s holder
     io:println("--- Response from Kubernetes API ---");
@@ -79,4 +105,14 @@ function main(string... args) {
     io:println("--- Delete Service ---");
     var deleteService = k8sEndpoint->deleteService(k8sServiceName);
     io:println(deleteService);
+
+    io:println("--- Get Ingress ---");
+    kubernetes:Ingress getIngress = k8sEndpoint->getIngress("nginx-service-ingress");
+    io:println(getIngress);
+
+    io:println("--- Delete Ingress ---");
+    var deleteIngress = k8sEndpoint->deleteIngress("nginx-service-ingress");
+    io:println(deleteIngress);
+
+
 }
