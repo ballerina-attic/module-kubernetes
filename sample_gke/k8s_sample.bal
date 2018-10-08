@@ -14,7 +14,7 @@ endpoint kubernetes:Client k8sEndpoint {
     trustStorePassword: config:getAsString("trustStorePassword")
 };
 
-function main(string... args) {
+public function main(string... args) {
     // Create the k8s endpoint object
     kubernetes:Deployment deployment = new;
     deployment = deployment
